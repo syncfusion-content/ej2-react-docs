@@ -19,7 +19,7 @@ The Rich Text Editor component allows you to create and edit content, returning 
 
 Rich Text Editor is a WYSIWYG editing control for formatting the word content as HTML.
 
-HTML editing is the default mode of the Rich Text Editor. In this mode, you can format content using the available toolbar commands, and the editor will return valid HTML markup. To explicitly set this mode, set the [editorMode](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#editormode) property as `HTML`.
+HTML editing is the default mode of the Rich Text Editor. In this mode, you can format content using the available toolbar commands, and the editor will return valid HTML markup. To explicitly set this mode, set the [editorMode](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/index-default#editormode) property as `HTML`.
 
 > To create Rich Text Editor with HTML editing feature, inject the `HtmlEditor` module to the RTE using the `RichTextEditor.Inject(HtmlEditor)` method.
 
@@ -53,11 +53,11 @@ HTML editing is the default mode of the Rich Text Editor. In this mode, you can 
 
 The IFrame editor mode enables content editing within an iframe, isolating styles from the main page.
 
-For more details, refer to the [Iframe Editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/iframe) documentation.
+For more details, refer to the [Iframe Editor](https://ej2.syncfusion.com/react/documentation/rich-text-editor/editor-types/iframe) documentation.
 
 ## Markdown editor
 
-To create or edit content in Markdown format, set the [editorMode](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#editormode) property as **Markdown**, to create or edit the content and apply formatting to view markdown formatted content.
+To create or edit content in Markdown format, set the [editorMode](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/index-default#editormode) property as **Markdown**, to create or edit the content and apply formatting to view markdown formatted content.
 
 The third-party library such as `Marked` or any other library is used to convert markdown into HTML content.
 

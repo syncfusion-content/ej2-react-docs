@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Label filtering in React Pivotview component | Syncfusion
-description: Learn here all about Label filtering in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to apply label filtering in the Syncfusion React Pivot Table to filter row and column members based on text conditions and string comparisons.
 control: Label filtering 
 platform: ej2-react
 documentation: ug

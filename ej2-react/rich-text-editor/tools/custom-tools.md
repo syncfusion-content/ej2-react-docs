@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Custom Toolbar Items in React Rich Text Editor Component
 
-The React Syncfusion Rich Text Editor allows you to customize the toolbar using the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarSettings) property. You can add custom commands with text, icons, or HTML templates and define their position in the toolbar.
+The React Syncfusion Rich Text Editor allows you to customize the toolbar using the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/index-default#toolbarSettings) property. You can add custom commands with text, icons, or HTML templates and define their position in the toolbar.
 
 ## Adding a custom command  
 
@@ -18,7 +18,7 @@ This example demonstrates how to add a custom “Ω” command to the toolbar fo
 
 ### Custom toolbar configuration
 
-To add a custom tool with a tooltip, define it in the [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) field of the `toolbarSettings` property.
+To add a custom tool with a tooltip, define it in the [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarsettings#items) field of the `toolbarSettings` property.
 
 ```javascript
 {
@@ -62,6 +62,6 @@ To add a custom tool with a tooltip, define it in the [items](https://ej2.syncfu
 
 ## Enabling and disabling toolbar items
 
-You can use the [enableToolbarItem](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#enabletoolbaritem) and [disableToolbarItem](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#disabletoolbaritem) methods to control the state of toolbar items. This methods takes a single item or an array of [items](#available-toolbar-items) as parameter.
+You can use the [enableToolbarItem](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/index-default#enabletoolbaritem) and [disableToolbarItem](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/index-default#disabletoolbaritem) methods to control the state of toolbar items. This methods takes a single item or an array of [items](#available-toolbar-items) as parameter.
 
 > You can add the command name `Custom` to disable the custom toolbar items on source code view and other quick toolbar operations.

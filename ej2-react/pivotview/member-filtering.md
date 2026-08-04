@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Member filtering in React Pivotview component | Syncfusion
-description: Learn here all about Member filtering in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to apply member filtering in the Syncfusion React Pivot Table to include or exclude specific field members from rows and columns in the pivot view.
 control: Member filtering 
 platform: ej2-react
 documentation: ug

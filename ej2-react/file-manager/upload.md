@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Upload in React File Manager component | Syncfusion
-description: Learn how to use the Upload feature in Syncfusion React File Manager, with configuration details, usage guidance, and practical examples.
-control: Upload 
+title: Upload in React File Manager | Syncfusion
+description: Learn how to upload files in the React File Manager with chunk uploads, directory uploads, and drag-and-drop support.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Upload in React File Manager component
+# Upload in React File Manager
 
 The [React File Manager](https://www.syncfusion.com/react-components/react-file-manager) component provides a [uploadSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/uploadsettings) property with various options to customize how files are uploaded, including controlling file size, restricting file types, checking for excessively large and empty files, and enabling chunk uploads.
 

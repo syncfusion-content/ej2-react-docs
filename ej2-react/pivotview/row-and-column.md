@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row and column in React Pivot Table component | Syncfusion
-description: Learn here all about Row and column in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to configure row and column settings in the Syncfusion React Pivot Table to control field placement, width, height, and layout behavior.
 control: Row and column 
 platform: ej2-react
 documentation: ug

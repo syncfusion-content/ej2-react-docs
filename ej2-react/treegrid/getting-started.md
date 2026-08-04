@@ -161,4 +161,4 @@ N> Looking for the full React Tree Grid component overview, features, pricing, a
 
 ## See Also
 
-* [Grid Feature Modules](./module)
+* [Tree Grid Feature Modules](./module)

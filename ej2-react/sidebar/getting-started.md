@@ -12,23 +12,6 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple Sidebar component and configure its core functionalities in a React application.
 
-## Dependencies
-
-The following dependencies are required to use the Sidebar component in an application.
-
-```javascript
-|-- @syncfusion/ej2-react-navigations
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-navigations
-        |-- @syncfusion/ej2-inputs
-            |-- @syncfusion/ej2-splitbuttons
-        |-- @syncfusion/ej2-lists
-        |-- @syncfusion/ej2-popups
-            |-- @syncfusion/ej2-buttons
-```
-
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
@@ -119,6 +102,7 @@ The `SidebarComponent` tag renders a panel for primary content placed aside from
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
+
 import { SidebarComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from 'react';
 import './App.css';
@@ -139,26 +123,19 @@ function App() {
     );
 }
 export default App;
+
 {% endhighlight %}
 {% endtabs %}
 
 ## Run the application
 
-To run the project, use the following command:
+Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
 
-{% tabs %}
-{% highlight bash tabtitle="npm" %}
-
+```bash
 npm run dev
+```
 
-{% endhighlight %}
-{% highlight bash tabtitle="yarn" %}
-
-yarn run dev
-
-{% endhighlight %}
-{% endtabs %}
-
+The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/sidebar/default-cs1" %}
 

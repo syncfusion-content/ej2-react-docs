@@ -12,22 +12,6 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple Context Menu and configure its core functionalities in a React application.
 
-## Dependencies
-
-The following dependencies are required to use the Context Menu component:
-
-```javascript
-|-- @syncfusion/ej2-react-navigations
-    |-- @syncfusion/ej2-react-base
-    |-- @syncfusion/ej2-navigations
-        |-- @syncfusion/ej2-base
-        |-- @syncfusion/ej2-data
-        |-- @syncfusion/ej2-inputs
-        |-- @syncfusion/ej2-lists
-        |-- @syncfusion/ej2-popups
-            |-- @syncfusion/ej2-buttons
-```
-
 ## Prerequisites
 
 [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)

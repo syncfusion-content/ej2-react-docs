@@ -14,9 +14,9 @@ The Emoji Picker is a tool that simplifies adding emojis or emoticons to text co
 
 ## Configuring emoji picker tool in the toolbar
 
-Add the `EmojiPicker` tool to the Rich Text Editor toolbar using the [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#toolbarsettings) property.
+Add the `EmojiPicker` tool to the Rich Text Editor toolbar using the [toolbarSettings.items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/index-default#toolbarsettings) property.
 
-By default, a predefined set of emojis is configured. However, these icons can be customized according to specific needs by using the  [emojiPickerSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/#emojipickersettings) property.
+By default, a predefined set of emojis is configured. However, these icons can be customized according to specific needs by using the  [emojiPickerSettings](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/index-default#emojipickersettings) property.
 
 ```ts
 import { RichTextEditorComponent, Inject, Toolbar, HtmlEditor, Image, QuickToolbar, Link, EmojiPicker } from '@syncfusion/ej2-react-richtexteditor';
@@ -106,11 +106,11 @@ export default App;
 
 ```
 
-Additionally, you have the option to customize the icons of toolbar items using the [iconCss](https://helpej2.syncfusion.com/react/documentation/api/rich-text-editor/emojiIconsSet/#iconcss) and [code](https://helpej2.syncfusion.com/react/documentation/api/rich-text-editor/emojiIconsSet/#code) properties. The `iconCss` property applies a custom CSS class to style the category icon, while the `code` property enables you to specify the Unicode character code for the icon.
+Additionally, you have the option to customize the icons of toolbar items using the [iconCss](https://helpej2.syncfusion.com/react/documentation/api/rich-text-editor/emojiiconsset#iconcss) and [code](https://helpej2.syncfusion.com/react/documentation/api/rich-text-editor/emojiiconsset#code) properties. The `iconCss` property applies a custom CSS class to style the category icon, while the `code` property enables you to specify the Unicode character code for the icon.
 
 When both `iconCSS` and `code` properties are provided, the `iconCSS` property takes precedence in determining the appearance of the toolbar item icon.
 
-Additionally, you have the option to enhance the user experience by implementing a filtering feature for efficiently managing a large dataset of emojis. By setting the [showSearchBox](https://helpej2.syncfusion.com/react/documentation/api/rich-text-editor/emojiSettings/#showSearchBox) property to `true` (which is the default value), users will be able to utilize a search box to filter the displayed emojis according to their preferences.
+Additionally, you have the option to enhance the user experience by implementing a filtering feature for efficiently managing a large dataset of emojis. By setting the [showSearchBox](https://helpej2.syncfusion.com/react/documentation/api/rich-text-editor/emojisettings#showSearchBox) property to `true` (which is the default value), users will be able to utilize a search box to filter the displayed emojis according to their preferences.
 
 The following example demonstrates how to add the Emoji Picker tool to the Rich Text Editor.
 

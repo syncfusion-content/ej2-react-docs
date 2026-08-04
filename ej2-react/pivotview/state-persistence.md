@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State persistence in React Pivotview component | Syncfusion
-description: Learn here all about State persistence in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to enable state persistence in the Syncfusion React Pivot Table to retain the report layout, filters, and settings across browser sessions.
 control: State persistence 
 platform: ej2-react
 documentation: ug

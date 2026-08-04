@@ -1,9 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { GanttComponent } from '@syncfusion/ej2-react-gantt';
-import { data } from './datasource';
+
 function App() {
-    let ganttInstance;
     const taskFields = {
         id: 'TaskID',
         name: 'TaskName',
@@ -11,24 +10,19 @@ function App() {
         endDate: 'EndDate',
         duration: 'Duration',
         progress: 'Progress',
-        dependency: 'Predecessor',
         parentID: 'ParentId',
-        resourceInfo: 'resources'
     };
-    function emptyRecordTemplate() {
+    const splitterSettings = {
+        columnIndex: 3
+    };
+    const emptyRecordTemplate = () => {
         return (
-            <div className="emptyRecordTemplate">
-                <span>There is no data available to display at the moment.</span>
-            </div>
+            <span>There is no data available to display at the moment.</span>
         );
-    }
-    function load(args) {
-        if (ganttInstance) {
-            ganttInstance.treeGrid.grid.emptyRecordTemplate = emptyRecordTemplate;
-        }
-    }
+    };
+   
     return (<div className="control-section">
-        <GanttComponent dataSource={data} taskFields={taskFields} height='450px' load={load} ref={gantt => ganttInstance = gantt!}>
+        <GanttComponent dataSource={[]} taskFields={taskFields}  emptyRecordTemplate={emptyRecordTemplate} height='450px' splitterSettings={splitterSettings} >
         </GanttComponent>
     </div>);
 };

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tool bar in React Pivot Table component | Syncfusion
-description: Learn here all about Tool bar in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to use and customize the toolbar in the Syncfusion React Pivot Table for quick access to export, filter, grouping, and report management options.
 platform: ej2-react
 control: Tool bar
 documentation: ug

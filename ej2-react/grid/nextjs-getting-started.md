@@ -20,8 +20,8 @@ This section provides a step-by-step guide for creating a Next.js application an
 
 Before starting with Next.js, ensure the following prerequisites are met:
 
-* [Node.js 18.17.0](https://nodejs.org/en) or later (LTS recommended)
-* Compatible with macOS, Windows, and Linux
+* [Node.js 18.17.0](https://nodejs.org/en) or later (LTS recommended).
+* Compatible with macOS, Windows, and Linux.
 
 ## Create a Next.js application
 

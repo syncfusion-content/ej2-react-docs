@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React Pivotview component | Syncfusion
-description:  Checkout and learn about Getting started with React Pivotview component of Syncfusion Essential JS 2 and more details.
+description: Learn how to set up and integrate the Syncfusion React PivotView component in a React application using Vite, including data binding and field configuration.
 control: Getting started 
 platform: ej2-react
 documentation: ug

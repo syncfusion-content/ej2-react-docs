@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Views in React File Manager component | Syncfusion
-description: Learn how to use Views in Syncfusion React File Manager, with configuration options, usage guidance, and practical examples for effective file management. 
-control: Views 
+title: Views in React File Manager | Syncfusion
+description: Learn how to switch between Large Icons and Details views in the React File Manager for flexible file browsing.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Views in React File Manager component
+# Views in React File Manager
 
 View is the section where the files and folders are displayed for the user to browse. The [view](https://ej2.syncfusion.com/react/documentation/api/file-manager/index-default#view) API can also be used to change the initial view of the File Manager.
 

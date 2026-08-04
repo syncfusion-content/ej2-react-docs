@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport, Selection } from '@syncfusion/ej2-react-gantt';
+import { GanttComponent, ColumnsDirective, ColumnDirective, Inject, Toolbar, PdfExport } from '@syncfusion/ej2-react-gantt';
 import { TaskFieldsModel, ToolbarItem, PdfExportProperties } from '@syncfusion/ej2-react-gantt';
 import { editingData } from './datasource';
 
@@ -21,10 +21,10 @@ function App() {
 
     const toolbarClick = (args: any): void => {
         if (args.item.id === 'ganttDefault_pdfexport') {
-            const name = (document.getElementById('name') as HTMLInputElement).value || '';
-            const email = (document.getElementById('email') as HTMLInputElement).value || '';
-            const message = (document.getElementById('message') as HTMLTextAreaElement).value || '';
-            const headerText = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+            const name: string = (document.getElementById('name') as HTMLInputElement).value || '';
+            const email: string  = (document.getElementById('email') as HTMLInputElement).value || '';
+            const message: string  = (document.getElementById('message') as HTMLTextAreaElement).value || '';
+            const headerText: string  = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
             const exportProperties: PdfExportProperties = {
                 header: {
                     fromTop: 100,
@@ -89,7 +89,7 @@ function App() {
                         <ColumnDirective field="Duration" />
                         <ColumnDirective field="Progress" />
                     </ColumnsDirective>
-                    <Inject services={[Toolbar, PdfExport, Selection]} />
+                    <Inject services={[Toolbar, PdfExport]} />
                 </GanttComponent>
             </div>
         </div>

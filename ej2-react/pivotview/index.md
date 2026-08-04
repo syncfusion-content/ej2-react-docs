@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Index in React Pivotview component | Syncfusion
-description: Learn here all about Index in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Explore the Syncfusion React Pivot Table component documentation index covering all features such as data binding, filtering, grouping, export, and more.
 control: Index 
 platform: ej2-react
 documentation: ug

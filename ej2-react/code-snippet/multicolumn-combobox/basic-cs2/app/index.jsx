@@ -27,7 +27,7 @@ function App() {
     { "EmpID": 1018, "Name": "Grace", "Designation": "Developer", "Country": "Australia" },
     { "EmpID": 1019, "Name": "Olivia", "Designation": "Team Lead", "Country": "Ireland" },
     { "EmpID": 1020, "Name": "James", "Designation": "Developer", "Country": "China" },
-];
+  ];
   // maps the appropriate column to fields property
   const fields = { text: 'Name', value: 'EmpID' };
   // set placeholder to multicolumn ComboBox input element

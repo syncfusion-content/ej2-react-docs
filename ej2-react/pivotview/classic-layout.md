@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Classic layout in React Pivotview component | Syncfusion
-description: Learn here all about Classic layout in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to use the classic tabular layout in the Syncfusion React Pivot Table to display row fields side by side in separate columns for easier data analysis.
 control: Classic Layout
 platform: ej2-react
 documentation: ug

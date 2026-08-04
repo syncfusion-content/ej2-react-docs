@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Markdown Editor Component
 
-The Syncfusion React Markdown Editor is a web-based editor that enables users to create, edit, and format Markdown content with features such as table support and structured content formatting. This section explains the steps required to create a simple Markdown Editor and demonstrate the basic usage of the Markdown Editor component in a React environment.
+The Syncfusion React Markdown Editor is a web-based editor that enables users to create, edit, and format Markdown content with features such as table support and structured content formatting. This section explains you the steps required to create a simple Markdown Editor and demonstrate the basic usage of the Markdown Editor component in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview)
 
@@ -133,4 +133,4 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Markdown Editor is di
 
 * [Accessibility in Markdown Editor](./accessibility)
 * [Keyboard support in Markdown Editor](./keyboard-support)
-* [Globalization in Rich Text Editor](rich-text-editor/globalization)
+* [Globalization in Rich Text Editor](../rich-text-editor/globalization)

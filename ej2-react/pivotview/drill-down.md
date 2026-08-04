@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drill down in React Pivot Table component | Syncfusion
-description: Learn here all about Drill down in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to expand and collapse row and column members using drill down in the Syncfusion React Pivot Table for hierarchical data exploration.
 control: Drill down
 platform: ej2-react
 documentation: ug

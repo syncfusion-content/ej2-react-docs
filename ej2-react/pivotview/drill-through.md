@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drill through in React Pivot Table component | Syncfusion
-description: Learn here all about Drill through in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to use the drill through feature in the Syncfusion React Pivot Table to view the raw records behind any aggregated value cell on click.
 control: Drill through 
 platform: ej2-react
 documentation: ug

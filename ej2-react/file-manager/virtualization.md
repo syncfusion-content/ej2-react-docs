@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Virtualization in React File Manager component | Syncfusion
-description: Learn here all about Virtualization in React File Manager component of Syncfusion Essential JS 2 and more.
-control: Virtualization 
+title: Virtualization in React File Manager | Syncfusion
+description: Learn how to enable virtualization in the React File Manager for dynamically loading large folders in Details and Large Icons views without performance loss.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtualization in React File Manager component
+# Virtualization in React File Manager
 
 File Manager's UI virtualization allows you for the dynamic loading of a large number of directories and files in both the detailsView and largeIconsView without degrading its performance.
 

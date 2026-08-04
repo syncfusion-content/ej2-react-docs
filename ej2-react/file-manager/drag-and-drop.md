@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drag and drop in React File Manager component | Syncfusion
-description: Learn here all about Drag and drop in React File Manager component of Syncfusion Essential JS 2 and more.
-control: Drag and drop 
+title: Drag and Drop in React File Manager | Syncfusion
+description: Learn how to enable drag and drop in the React File Manager to move or upload files between folders using built-in drag events.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in React File Manager component
+# Drag and Drop in React File Manager
 
 The File Manager allows files or folders to be moved from one folder to another by using the  [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/file-manager#allowdraganddrop) property. It also supports uploading a file by dragging it from Windows Explorer to  File Manager component. You can enable or disable this support by using the [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/file-manager#allowdraganddrop) property of File Manager.
 

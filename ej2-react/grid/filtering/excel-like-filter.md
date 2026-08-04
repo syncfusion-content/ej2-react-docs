@@ -63,7 +63,7 @@ The checkbox list supports search functionality: typing in the search box filter
 
  {% previewsample "page.domainurl/code-snippet/grid/check-box-filter-cs1" %}
 
- ## Filter modes
+## Filter modes
  
 The Grid `Excel` and `CheckBox` filtering features support two modes, `Default` and `Immediate`. In `Default` mode, filter changes are applied only after clicking the "Filter" or "OK" button in the filter dialog, which is the default behavior. In `Immediate` mode, filters are applied automatically when filter items are checked or unchecked in the filter dialog.
  

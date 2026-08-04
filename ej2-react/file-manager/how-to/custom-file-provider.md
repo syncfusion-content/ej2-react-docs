@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Implement custom service in React File Manager | Syncfusion
-description: Learn here all about implementation own service provider in React File Manager component of Syncfusion Essential JS 2 and more.
-control: Implement own service provider
+title: Implement a custom file provider in React File Manager | Syncfusion
+description: Learn how to implement a custom file provider in the React File Manager using Node.js with Azure Blob Storage as the data source.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create the custom file provider using Node.js
+# How to implement a custom file provider in React File Manager
 
 Here we manipulate the Azure Blob Storage to supply the necessary data for the File Manager. We achieve this by utilizing Node.js to fetch the required data from the Azure blob storage.
 

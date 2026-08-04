@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Defer update in React Pivotview component | Syncfusion
-description: Learn here all about Defer update in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to use the defer update feature in the Syncfusion React Pivot Table to delay pivot recalculation until the user explicitly applies changes.
 control: Defer update 
 platform: ej2-react
 documentation: ug

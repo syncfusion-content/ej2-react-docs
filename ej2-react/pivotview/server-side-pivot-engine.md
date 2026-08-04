@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Server side pivot engine in React Pivot Table component | Syncfusion
-description: Learn here all about Server side pivot engine in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to connect the Syncfusion React Pivot Table to a server-side pivot engine for processing large datasets externally with optimized performance.
 platform: ej2-react
 control: Server side pivot engine 
 documentation: ug

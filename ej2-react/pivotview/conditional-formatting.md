@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Conditional formatting in React Pivotview component | Syncfusion
-description: Learn here all about Conditional formatting in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to apply conditional formatting in the Syncfusion React Pivot Table to highlight cells based on specific conditions using custom styles and rules.
 control: Conditional formatting 
 platform: ej2-react
 documentation: ug

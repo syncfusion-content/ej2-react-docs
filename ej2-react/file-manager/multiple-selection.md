@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple selection in React File Manager component | Syncfusion
-description: Learn here all about Multiple selection in React File Manager component of Syncfusion Essential JS 2 and more.
-control: Multiple selection 
+title: Multiple Selection in React File Manager | Syncfusion
+description: Learn how to enable multiple selection in the React File Manager using Ctrl/Shift keys and checkboxes to select many files at once.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple selection in React File Manager component
+# Multiple Selection in React File Manager
 
 The File Manager allows you to select multiple files by enabling the [allowMultiSelection](https://ej2.syncfusion.com/react/documentation/api/file-manager#allowmultiselection) property (enabled by default). The multiple selection can be done by pressing the `Ctrl` key or `Shift` key and selecting the files. The check box can also be used to do multiple selection. `Ctrl + A` can be used to select all files in the current directory. The [fileSelect](https://ej2.syncfusion.com/react/documentation/api/file-manager#fileselect) event will be triggered when the items of File Manager component is selected or unselected.
 

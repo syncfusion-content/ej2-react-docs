@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grid customization in React Pivotview component | Syncfusion
-description: Learn here all about Grid customization in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to customize the grid in the Syncfusion React Pivot Table component including column width, row height, cell templates, and appearance settings.
 control: Grid customization 
 platform: ej2-react
 documentation: ug

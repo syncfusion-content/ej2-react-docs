@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Value filtering in React Pivotview component | Syncfusion
-description: Learn here all about Value filtering in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to apply value filtering in the Syncfusion React Pivot Table to display only row and column members that meet specified numeric value conditions.
 control: Value filtering 
 platform: ej2-react
 documentation: ug

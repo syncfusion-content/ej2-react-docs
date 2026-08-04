@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in React Pivot Table component | Syncfusion
-description: Learn here all about Filtering in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to filter data in the Syncfusion React Pivot Table component using member, label, and value filtering options for focused data analysis.
 platform: ej2-react
 control: Filtering
 documentation: ug

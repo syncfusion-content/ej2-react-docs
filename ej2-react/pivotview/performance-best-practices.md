@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance tips for React Pivot Table component | Syncfusion
-description: Checkout and learn here all about best practices to improve the performance of the Syncfusion React Pivot Table component and much more.
+description: Learn the best practices and performance optimization tips for the Syncfusion React Pivot Table component when working with large datasets and complex configurations.
 platform: ej2-react
 control: Performance best practices
 publishingplatform: ##Platform_Name##

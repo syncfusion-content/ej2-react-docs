@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Access control in React File Manager component | Syncfusion
-description: Learn here all about Access control in React File Manager component of Syncfusion Essential JS 2 and more.
-control: Access control 
+title: Access Control in React File Manager | Syncfusion
+description: Learn how to configure access control in the React File Manager with role-based permissions and restricted file operations.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Access control in React File Manager component
+# Access Control in React File Manager
 
 The [React File Manager](https://www.syncfusion.com/react-components/react-file-manager) allows you to define access permissions for folders and files using a set of access rules to user(s).
 
