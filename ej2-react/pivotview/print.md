@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in React Pivotview component | Syncfusion
-description: Learn here all about Print in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to print the Syncfusion React Pivot Table component directly from the browser with options to customize the print layout and visible content.
 platform: ej2-react
 control: Print 
 documentation: ug

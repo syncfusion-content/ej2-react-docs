@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aggregation in React Pivot Table component | Syncfusion
-description: Learn here all about Aggregation in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to use aggregation types in the Syncfusion React Pivot Table to perform calculations on grouped values such as Sum, Count, Average, and more.
 control: Aggregation
 platform: ej2-react
 documentation: ug

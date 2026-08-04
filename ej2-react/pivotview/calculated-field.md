@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Calculated field in React Pivot Table component | Syncfusion
-description: Learn here all about Calculated field in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to create and use calculated fields in the Syncfusion React Pivot Table using custom formulas and arithmetic operations on existing data source fields.
 control: Calculated field
 platform: ej2-react 
 documentation: ug

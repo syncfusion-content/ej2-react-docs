@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtual scrolling in React Pivot Table component | Syncfusion
-description: Learn here all about Virtual scrolling in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to enable virtual scrolling in the Syncfusion React Pivot Table to efficiently render large datasets by loading rows and columns on demand.
 control: Virtual scrolling 
 platform: ej2-react
 documentation: ug

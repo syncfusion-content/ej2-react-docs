@@ -100,7 +100,7 @@ The required styles for the Image Editor component are imported in the **src/App
 
 ## Adding Image Editor component
 
-Now, you can add the React ImageEditor component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the ImageEditor with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/image-editor/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
+Now, you can add the React ImageEditor component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

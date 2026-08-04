@@ -80,5 +80,3 @@ The available chart modules are
 | [`MultiLevelLabel`](https://helpej2.syncfusion.com/react/documentation/api/chart/multiLevelLabels)| Inject this module to use the multi level label feature.|
 
 These modules should be injected into the `modules` section of the root `NgModule` or into a standalone component that requires the feature.
-
-N> Looking for the full React Charts component overview, features, pricing, and documentation? Visit the [React Charts](https://www.syncfusion.com/react-components/react-charts) page.

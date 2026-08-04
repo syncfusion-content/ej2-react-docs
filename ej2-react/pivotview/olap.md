@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OLAP in React Pivot Table component | Syncfusion
-description: Learn here all about OLAP in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to connect and use OLAP data sources with the Syncfusion React Pivot Table component to analyze multidimensional cube data with MDX queries.
 control: OLAP 
 platform: ej2-react
 documentation: ug

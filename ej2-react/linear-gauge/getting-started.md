@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Linear Gauge
+# Getting Started with React Linear Gauge Component
 
 This section explains the steps required to create a simple React Linear Gauge component and demonstrate its basic usage in a React environment.
 
@@ -19,9 +19,6 @@ To get started quickly with React Linear Gauge, you can watch this video:
 ## Prerequisites
 
 Before getting started, ensure that your development environment meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
-
-- Basic knowledge of React and TypeScript (recommended)
-- A code editor like Visual Studio Code
 
 ## Dependencies
 
@@ -36,148 +33,78 @@ The following list shows the minimum dependencies required to use the Linear Gau
 |-- @syncfusion/ej2-react-base
 ```
 
-## Setup for local development
+## Set up a development environment
 
-Easily set up a React application using [Vite](https://vitejs.dev/guide), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application quickly, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
 
-To create a new React application, run the following command.
+> As an alternative, you can create a React application using [`create-react-app`](https://github.com/facebook/create-react-app). For detailed instructions, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app).
 
-```bash
-npm create vite@latest my-app
+To create a new React application, run one of the following commands based on your preferred language:
+
+**React with JavaScript**
+
 ```
-
-This command will prompt you for a few settings for the new project, such as selecting a framework and a variant. Use the `--template` flag shown below to skip these prompts.
-
-To set up a React application in a TypeScript environment, run the following commands.
-
-```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm install
-npm run dev
-```
-
-To set up a React application in a JavaScript environment, run the following commands.
-
-```bash
 npm create vite@latest my-app -- --template react
-cd my-app
-npm install
-npm run dev
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> React Linear Gauge packages
+**React with TypeScript**
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. To install the Linear Gauge component, use the following command.
+```
+npm create vite@latest my-app -- --template react-ts
+```
+
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **ESLint**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
+
+```
+cd my-app
+```
+
+## Install the Syncfusion® React Linear Gauge Package
+
+All Syncfusion Essential® JS 2 packages are available in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
+
+Install the React Linear Gauge package using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-lineargauge
 ```
-## Adding Linear Gauge component
 
-The React Linear Gauge component can be added to the application by following these steps. Add the Linear Gauge component to the `src/App.tsx` (or `src/App.jsx`) file using the following code.
+## Add the Linear Gauge Component to the Project
+
+Replace the contents of `src/App.tsx` (or `src/App.jsx` for JavaScript) with the following code to render a   Linear Gauge component.
 
 {% tabs %}
-{% highlight jsx tabtitle="app.jsx" %}
-
-import { LinearGaugeComponent } from '@syncfusion/ej2-react-lineargauge';
-import * as React from 'react';
-
-function App() {
-    return <LinearGaugeComponent></LinearGaugeComponent>
-}
-export default App;
-
-{% endhighlight %}
 {% highlight tsx tabtitle="app.tsx" %}
 
 import { LinearGaugeComponent } from '@syncfusion/ej2-react-lineargauge';
 import * as React from 'react';
 
 function App() {
-    return <LinearGaugeComponent></LinearGaugeComponent>
+    return <LinearGaugeComponent id="linear-gauge"></LinearGaugeComponent>
 }
 export default App;
 
 {% endhighlight %}
 {% endtabs %}
 
-Make sure your `src/main.tsx` (or `src/main.jsx`) file renders the `App` component inside an element with `id="container"`. A minimal example is shown below.
+## Inject Required Modules
 
-{% tabs %}
-{% highlight jsx tabtitle="main.jsx" %}
+Linear Gauge features are delivered as separate modules and must be explicitly injected. The `Inject` component accepts a `services` array that registers the modules required by the Linear Gauge component. Injecting only the modules you need helps reduce the application bundle size.
 
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import App from './App';
+In this example, the `GaugeTooltip` module is injected to enable tooltip functionality in the Linear Gauge.
 
-const root = ReactDOM.createRoot(document.getElementById('container'));
-root.render(<App />);
+* `GaugeTooltip` - Inject this module into the `services` array to enable tooltips.
 
-{% endhighlight %}
-{% highlight tsx tabtitle="main.tsx" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import App from './App';
-
-const root = ReactDOM.createRoot(document.getElementById('container'));
-root.render(<App />);
-
-{% endhighlight %}
-{% endtabs %}
-
-## Module Injection
-
-React Linear Gauge component features are segregated into individual feature-wise modules. To use a particular feature, you need to inject its feature service in the `App`. The relevant feature service names and descriptions are listed below.
-
-* `Annotations` - Inject this module to use the annotation feature.
-* `GaugeTooltip` - Inject this module to use the tooltip feature.
-
-These modules should be injected into the Linear Gauge using the `Inject` directive.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-
-import { LinearGaugeComponent, Annotations, GaugeTooltip, Inject } from '@syncfusion/ej2-react-lineargauge';
-import * as React from 'react';
-
-function App() {
-    return (
-        <LinearGaugeComponent>
-            <Inject services={[Annotations, GaugeTooltip]} />
-        </LinearGaugeComponent>
-    );
-}
-export default App;
-
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-
-import { LinearGaugeComponent, Annotations, GaugeTooltip, Inject } from '@syncfusion/ej2-react-lineargauge';
-import * as React from 'react';
-
-function App() {
-    return (
-        <LinearGaugeComponent>
-            <Inject services={[Annotations, GaugeTooltip]} />
-        </LinearGaugeComponent>
-    );
-}
-export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-## Run the application
-
-Run the `npm run dev` command in the terminal to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
-
-```bash
-npm run dev
-```
-
-The output appears as follows.
+Import the required modules from the Linear Gauge package and register them through the `Inject` component as shown below.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -188,7 +115,15 @@ The output appears as follows.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs4" %}
+{% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs4" %}
+
+## Run the application
+
+Run the application using the following command:
+
+```bash
+npm run dev
+```
 
 ## Troubleshooting
 
@@ -197,7 +132,8 @@ The output appears as follows.
 
 ## See also
 
-* [Linear Gauge Axis Customization](axis.md)
-* [Linear Gauge Pointers](pointers.md)
-* [Linear Gauge Ranges](ranges.md)
-* [Linear Gauge Annotations](annotations.md)
+* [Linear Gauge Axis Customization](axis)
+* [Linear Gauge Pointers](pointers)
+* [Linear Gauge Ranges](ranges)
+* [Linear Gauge Annotations](annotations)
+* [Linear Gauge API Reference](https://ej2.syncfusion.com/react/documentation/api/linear-gauge)

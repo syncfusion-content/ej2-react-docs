@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in React Pivotview component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn about accessibility support in the Syncfusion React PivotView, including WCAG 2.2, Section 508, keyboard navigation, and screen reader compliance.
 control: Accessibility 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to in React Pivotview component | Syncfusion
-description: Learn here all about How to in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Explore how-to guides for the Syncfusion React Pivot Table component covering common customization, integration, and configuration scenarios with code examples.
 control: How to 
 platform: ej2-react
 documentation: ug

@@ -100,7 +100,7 @@ The required styles for the Dialog component are imported in the **src/App.css**
 
 ## Adding Dialog component
 
-Now, you can add the React Dialog component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the Dialog with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
+Now, you can add the React Dialog component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
  
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

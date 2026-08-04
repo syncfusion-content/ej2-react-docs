@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show hide totals in React Pivot Table component | Syncfusion
-description: Learn here all about Show hide totals in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to show or hide grand totals and subtotals in the Syncfusion React Pivot Table for rows, columns, or both to control summary visibility.
 control: Show hide totals 
 platform: ej2-react
 documentation: ug

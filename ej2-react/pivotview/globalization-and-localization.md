@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in React Pivot Table component | Syncfusion
-description: Learn here all about Globalization and localization in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to enable globalization and localization in the Syncfusion React Pivot Table to support multiple cultures, date formats, and translated UI labels.
 control: Globalization and localization
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with React Pivot Table in Next.js | Syncfusion
-description: Check out and learn here all about how to add and use the Syncfusion React Pivot Table component in a Next.js application.
+description: Learn how to set up and integrate the Syncfusion React Pivot Table component in a Next.js application with step-by-step instructions and code examples.
 control: Next.js
 platform: ej2-react
 documentation: ug

@@ -1,13 +1,12 @@
 ---
 layout: post
-title: React Diagram getting started with Next.js | Syncfusion
-description: Check out and learn here all about how to use the Syncfusion React UI components in the Next.js project.
+title: React Diagram getting started with Next.js | Syncfusion®
+description: Check out and learn here all about how to use the Syncfusion® React UI components in the Next.js project.
 control: Next.js
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
 
 # Getting Started with React Diagram Component in Next.js
 

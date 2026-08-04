@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Switching older themes style in React Pivotview component | Syncfusion
-description: Learn here all about Switching older themes style in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to switch to older theme styles in the Syncfusion React Pivot Table component to maintain visual consistency with previous Syncfusion theme versions.
 control: Switching older themes style 
 platform: ej2-react
 documentation: ug

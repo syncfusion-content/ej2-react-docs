@@ -16,10 +16,6 @@ This section describes the steps to create a simple Range Navigator and demonstr
 
 Before getting started, ensure that your development environment meets the [system requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement). That page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
 
-- Node.js 18 or later.
-- A modern code editor such as Visual Studio Code.
-
-
 ## Dependencies
 
 When you install `@syncfusion/ej2-react-charts`, the following peer dependencies are installed automatically:
@@ -37,102 +33,54 @@ When you install `@syncfusion/ej2-react-charts`, the following peer dependencies
 
 ```
 
-## Installation and configuration
+## Set up a development environment
 
-To easily set up a React application, use the Vite CLI (`npm create vite`), which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application quickly, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide). Vite sets up the environment using JavaScript and optimizes applications for production.
 
-> **Note:** To create a React application using `create-react-app` instead, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+> As an alternative, you can create a React application using [`create-react-app`](https://github.com/facebook/create-react-app). For detailed instructions, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app).
 
-To create a new React application, run the following command. The command will prompt you for a few settings, such as selecting a framework and a variant.
+To create a new React application, run one of the following commands based on your preferred language:
 
-```bash
-npm create vite@latest my-app
+**React with JavaScript**
+
+```
+npm create vite@latest my-app -- --template react
 ```
 
-For reference, the interactive prompt looks like this:
+**React with TypeScript**
 
-![Vite CLI framework and variant selection prompt](../images/Initial-setup.jpg)
-
-You can also skip the interactive prompts by passing the template flag directly. Pick the template that matches your preferred language and run the matching block:
-
-{% tabs %}
-{% highlight bash tabtitle="TypeScript" %}
-
+```
 npm create vite@latest my-app -- --template react-ts
+```
+
+During the setup process, the CLI will prompt you for a few configuration options. Select the following:
+
+- **Which linter to use?** → **ESLint**
+- **Install with npm and start now?** → **Yes**
+
+Selecting **Yes** automatically installs the project dependencies and starts the development server.
+
+After verifying that the application starts successfully, terminate the development server in the terminal and proceed to the next step.
+
+Then, navigate to the project directory:
+
+```
 cd my-app
-npm install
+```
 
-{% endhighlight %}
-{% highlight bash tabtitle="JavaScript" %}
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> React Range Navigator package
 
-npm create vite@latest my-app -- --template react
-cd my-app
-npm install
+All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. 
 
-{% endhighlight %}
-{% endtabs %}
-
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Range Navigator package
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. To install the Range Navigator package, run the following command from the project folder:
+To install the Range Navigator package, run the following command from the project folder:
 
 ```bash
 npm install @syncfusion/ej2-react-charts
 ```
 
-> `@syncfusion/ej2-react-charts` includes the Range Navigator component along with the rest of the chart components, and automatically pulls in the peer dependencies listed in the [Dependencies](#dependencies) section above.
+## Add the Range Navigator to the project
 
-## Add Range Navigator to the project
-
-The Range Navigator's root component is `RangeNavigatorComponent`. Open `src/App.tsx` (or `src/App.jsx` for the JavaScript template) and replace its contents with the following code.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-
-import { RangeNavigatorComponent } from "@syncfusion/ej2-react-charts";
-import * as React from "react";
-
-function App() {
-  return (<RangeNavigatorComponent></RangeNavigatorComponent>);
-}
-export default App;
-
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-
-import { RangeNavigatorComponent } from "@syncfusion/ej2-react-charts";
-import * as React from "react";
-
-function App() {
-  return (<RangeNavigatorComponent></RangeNavigatorComponent>);
-}
-export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-Then, update `src/main.tsx` (or `src/main.jsx`) to mount the App component using React 18's [`createRoot`](https://react.dev/reference/react-dom/client/createRoot) API.
-
-```ts
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
-import "./index.css";
-
-createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-```
-
-Now run the `npm run dev` command in the console to start the development server. This command compiles your code and serves the application locally, opening it in the browser.
-
-```bash
-npm run dev
-```
-
-The below example shows a basic Range Navigator.
+Open the application entry file (`src/App.jsx` or `src/App.tsx`) and the Range Navigator component using the following code.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -145,7 +93,7 @@ The below example shows a basic Range Navigator.
 
 {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs17" %}
 
-## Module injection
+## Inject Required Modules
 
 The Range Navigator is segregated into individual feature-wise modules. To use a particular feature, you need to inject its feature service in the `services` of the `Inject` component. The following services are commonly used to extend the Range Navigator's basic functionality.
 
@@ -153,7 +101,7 @@ The Range Navigator is segregated into individual feature-wise modules. To use a
 * `DateTime` - Inject this module in to `services` to use the DateTime axis.
 * `RangeTooltip` - Inject this module in to `services` to use the tooltip feature.
 
-Import the modules from the chart package and inject them into the `services` section of the Range Navigator component as follows.
+Import the required module from the Chart package and register it through the `Inject` component as shown below.
 
 ```javascript
 import { RangeNavigatorComponent, AreaSeries, DateTime, RangeTooltip, Inject } from "@syncfusion/ej2-react-charts";
@@ -161,7 +109,7 @@ import * as React from "react";
 
 function App() {
   return (
-    <RangeNavigatorComponent id="charts">
+    <RangeNavigatorComponent id="range-navigator">
       <Inject services={[AreaSeries, DateTime, RangeTooltip]} />
     </RangeNavigatorComponent>
   );
@@ -185,7 +133,15 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs18" %}
+{% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs38" %}
+
+## Run the application
+
+Run the application using the following command:
+
+```bash
+npm run dev
+```
 
 ## Troubleshooting
 
@@ -219,15 +175,16 @@ Use the following guidance to resolve common issues when getting started with th
 
 Explore the following related topics:
 
-- [Selecting Range](./selecting-range)
-- [Lightweight](./lightweight)
-- [Series Types](./series-types)
-- [Types of Data](./data)
-- [Period Selector](./period-selector)
-- [Labels](./labels)
-- [Grid and Tick Lines](./grid-tick)
-- [Customization](./customization)
-- [Tooltip](./tool-tip)
-- [RTL](./r-t-l)
-- [Export and Print](./export-print)
-- [Accessibility](./accessibility)
+* [Selecting Range](./selecting-range)
+* [Lightweight](./lightweight)
+* [Series Types](./series-types)
+* [Types of Data](./data)
+* [Period Selector](./period-selector)
+* [Labels](./labels)
+* [Grid and Tick Lines](./grid-tick)
+* [Customization](./customization)
+* [Tooltip](./tool-tip)
+* [RTL](./r-t-l)
+* [Export and Print](./export-print)
+* [Accessibility](./accessibility)
+* [Range Navigator API reference](https://ej2.syncfusion.com/react/documentation/api/range-navigator)

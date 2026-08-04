@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pivot Chart in React Pivot Table Component | Syncfusion
-description: Learn here all about Pivot Chart in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to integrate and configure Pivot Chart in the Syncfusion React Pivot Table to visualize pivot data as bar, line, pie, and other chart types.
 platform: ej2-react
 control: Pivot Chart
 documentation: ug

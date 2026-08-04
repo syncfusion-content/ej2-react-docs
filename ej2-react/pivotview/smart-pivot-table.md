@@ -5,6 +5,7 @@ description: Configure a Syncfusion React Pivot Table with validated natural-lan
 platform: ej2-react
 control: Pivot Table
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Smart AI with Syncfusion React Pivot Table

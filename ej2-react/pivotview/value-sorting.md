@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Value sorting in React Pivotview component | Syncfusion
-description: Learn here all about Value sorting in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to sort data by value fields in the Syncfusion React Pivot Table to order rows or columns based on aggregated numeric values in ascending or descending order.
 control: Value sorting 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data binding in React Pivot Table component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to bind local JSON, remote, and other data sources to the Syncfusion React Pivot Table component for effective data visualization and analysis.
 control: Data binding 
 platform: ej2-react
 documentation: ug

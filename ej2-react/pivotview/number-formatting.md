@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Number formatting in React Pivot Table component | Syncfusion
-description: Learn here all about Number formatting in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to apply number formatting in the Syncfusion React Pivot Table to display value fields with custom currency, percentage, and decimal formats.
 control: Number formatting 
 platform: ej2-react
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel export in React Pivot Table component | Syncfusion
-description: Learn here all about Excel export in Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+description: Learn how to export the Syncfusion React Pivot Table data to Excel format with options to customize the exported file's appearance and content.
 control: Excel export
 platform: ej2-react
 documentation: ug

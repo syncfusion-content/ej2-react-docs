@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tool tip in React Pivotview component | Syncfusion
-description: Learn here all about Tool tip in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to enable and customize tooltips in the Syncfusion React Pivot Table to display additional information when hovering over value cells and headers.
 control: Tool tip 
 platform: ej2-react
 documentation: ug

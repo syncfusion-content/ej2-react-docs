@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Css customization in React Pivotview component | Syncfusion
-description: Learn here all about Css customization in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+description: Learn how to customize the appearance of the Syncfusion React Pivot Table component using CSS styles to modify cell, header, and layout styling.
 control: Css customization 
 platform: ej2-react
 documentation: ug
