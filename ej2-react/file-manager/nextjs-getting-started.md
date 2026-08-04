@@ -1,8 +1,8 @@
 ---
 layout: post
-title: React getting started with Next.js | Syncfusion
-description: Check out and learn here all about how to use the Syncfusion React UI components in the Next.js project.
-control: Next.js
+title: Getting Started with React File Manager in Next.js | Syncfusion
+description: Learn how to set up the React File Manager in a Next.js project with step-by-step installation, configuration, and core feature examples.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

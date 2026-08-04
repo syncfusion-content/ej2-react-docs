@@ -1,14 +1,14 @@
 ---
 layout: post
-title: FlatData in React File Manager component | Syncfusion
-description: Learn here all about FlatData in React File Manager component of Syncfusion Essential JS 2 and more.
+title: Flat Data in React File Manager | Syncfusion
+description: Learn how to load flat JSON data in the React File Manager without a service provider, using local data structures to render folders and files.
 platform: ej2-react
-control: FlatData 
+control: File Manager
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rendering Flat JSON Data in the React File Manager Component
+# Flat Data in React File Manager
 
 The File Manager uses a flat data JSON as an array of objects for rendering, eliminating the need to define [ajaxSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/index-default#ajaxsettings) url. To load a folder data as an array of objects, use the File Manager component's [fileSystemData](https://ej2.syncfusion.com/react/documentation/api/file-manager/index-default#filesystemdata) property with a type of [fileData](https://ej2.syncfusion.com/react/documentation/api/file-manager/filedata) interface. This means you no longer need to use a separate service provider, as you can integrate services like Google, Amazon, Azure, and others directly into your code using the File Manager's action events.
 

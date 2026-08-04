@@ -1,14 +1,14 @@
 ---
 layout: post
-title: User interface in React File Manager component | Syncfusion
-description: Learn here all about User interface in React File Manager component of Syncfusion Essential JS 2 and more.
-control: User interface 
+title: User Interface in React File Manager | Syncfusion
+description: Learn how to use the React File Manager UI with view, toolbar, breadcrumb, context menu, and navigation pane modules for file browsing.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User interface in React File Manager component
+# User Interface in React File Manager
 
 The File Manager UI is comprised of several sections like view, toolbar, breadcrumb, context menu, and so on. The UI of the File Manager is enhanced with injectable modules like `Details View` for browsing files and folders in a grid, `Navigation Pane` for folder navigation, and `Toolbar` for file operations. The File Manager with all feature modules have the following sections in its UI.
 

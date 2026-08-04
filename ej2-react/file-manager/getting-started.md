@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React File Manager component | Syncfusion
-description: Check out and learn about getting started with React File Manager component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+title: Getting Started with React File Manager | Syncfusion
+description: Learn how to get started with the React File Manager and explore setup, configuration, and core feature examples.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React File Manager Component
+# Getting Started with React File Manager
 
 This section explains how to create and configure the **File Manager** component in a React application.
 
@@ -201,6 +201,8 @@ Then add the following CSS reference to the **src/App.css** file:
 
 {% endhighlight %}
 {% endtabs %}
+
+To reference `App.css` in the application, import it into the `src/App.tsx` file. Also, remove any unnecessary styles from `src/index.css` and `src/App.css`, as they may affect the File Manager component UI.
 
 > **Note:** If you want to use combined component styles, make use of the [Custom Resource Generator (CRG)](https://crg.syncfusion.com) in your application.
 

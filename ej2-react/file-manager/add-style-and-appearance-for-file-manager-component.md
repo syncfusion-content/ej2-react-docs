@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style Customize in React File Manager control | Syncfusion
-description: Learn here all about How to add style and appearance in React File Manager control of Syncfusion Essential JS 2 and more.
-platform:  ej2-react
+title: Style and Appearance in React File Manager | Syncfusion
+description: Learn how to customize the appearance of the React File Manager by overriding CSS selectors for the navigation pane, layout, and toolbar.
 control: File Manager
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to customize style and appearance in React File Manager
+# Style and Appearance in React File Manager
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

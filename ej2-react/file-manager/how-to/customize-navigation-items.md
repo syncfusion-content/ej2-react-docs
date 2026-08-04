@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Navigation Pane in React File Manager component | Syncfusion
-description: Learn here all about Customize the Navigation Pane in React File Manager component of Syncfusion Essential JS 2 and more.
-control: Customize the Navigation Pane 
+title: Customize the navigation pane in React File Manager | Syncfusion
+description: Learn how to customize the navigation pane in the React File Manager by templating each folder node to show extra metadata or custom icons.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Navigation Pane in React File Manager Component
+# How to customize the navigation pane in React File Manager
 
 The navigation pane in the File Manager Component displays the folder hierarchy in a tree-like structure. You can customize the layout of each folder node in the navigation pane using the `navigationPaneTemplate` property. This allows you to modify the appearance of folders based on your application's requirements.
 

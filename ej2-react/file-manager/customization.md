@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React File Manager component | Syncfusion
-description: Learn here all about Customization in React File Manager component of Syncfusion Essential JS 2 and more.
-control: Customization 
+title: Customization in React File Manager | Syncfusion
+description: Learn how to customize the React File Manager context menu, toolbar, navigation pane, upload, and tooltip using built-in APIs.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React File Manager component
+# Customization in React File Manager
 
 The File Manager component allows customizing its functionalities like, context menu, searching, uploading, toolbar using APIs. Given below are some of the functionalities that can be customized in the File Manager,
 

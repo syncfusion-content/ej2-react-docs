@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React File Manager component | Syncfusion
-description: Learn here all about Accessibility in React File Manager component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in React File Manager | Syncfusion
+description: Learn about the accessibility support in the React File Manager, including WCAG 2.2, Section 508, ADA, and WAI-ARIA role compliance.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React File Manager component
+# Accessibility in React File Manager
 
 The File Manager component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

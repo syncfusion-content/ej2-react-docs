@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Perform custom sorting in React File Manager component | Syncfusion
-description: Learn here all about How to perform custom sorting in React File Manager component of Syncfusion Essential JS 2 and more.
-control: Perform custom sorting 
+title: Perform custom sorting in React File Manager | Syncfusion
+description: Learn how to perform custom sorting in the React File Manager for the Large Icons view and Details view columns, with examples for natural sorting.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform custom sorting in React File Manager component
+# How to perform custom sorting in React File Manager
 
 The File Manager component provides a way to customize the default sort action for the LargeIconsView by defining the [sortComparer](https://ej2.syncfusion.com/react/documentation/api/file-manager#sortcomparer) property and for sorting individual columns in the DetailsView by defining the [sortComparer](https://ej2.syncfusion.com/react/documentation/api/file-manager/column#sortcomparer) property in the [columns](https://ej2.syncfusion.com/react/documentation/api/file-manager/column) property.
 

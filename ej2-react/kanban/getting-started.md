@@ -72,7 +72,7 @@ npm install @syncfusion/ej2-react-kanban
 
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> Kanban component can be applied using CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
-Install the **Tailwdind 3** theme package using the following command:
+Install the **Tailwind 3** theme package using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: File operations in React File Manager component | Syncfusion
-description: Learn here all about File operations in React File Manager component of Syncfusion Essential JS 2 and more.
-control: File operations 
+title: File Operations in React File Manager | Syncfusion
+description: Learn how to perform file operations in the React File Manager, including read, create, delete, rename, copy, move, upload, and download.
+control: File Manager
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File operations in React File Manager component
+# File Operations in React File Manager
 
 The File Manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the File Manager component.  Additionally, previewing of image files is also provided in the File Manager component.
 
