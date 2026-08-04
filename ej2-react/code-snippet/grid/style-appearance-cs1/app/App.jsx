@@ -6,7 +6,7 @@ function App() {
     const pageOptions = {
         pageSize: 8
     };
-    return <GridComponent dataSource={data} allowPaging={true} pageSettings={pageOptions} allowSelection={false} height={310}>
+    return <GridComponent dataSource={data} allowPaging={true} pageSettings={pageOptions} allowSelection={false} height={300}>
     <ColumnsDirective>
       <ColumnDirective field='OrderID' headerText='Order ID' type='number' isPrimaryKey={true} textAlign="Right" width='100'/>
       <ColumnDirective field='CustomerID' headerText='Customer ID' type='string' width='120'/>
