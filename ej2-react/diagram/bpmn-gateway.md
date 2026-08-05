@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BPMN Gateway in React Diagram Component | Syncfusion®
-description: Learn how to create and configure BPMN gateways in Syncfusion React Diagram Component to control process flows with various gateway types.
+title: BPMN Gateway in React Diagram | Syncfusion®
+description: Insert BPMN gateways in the React Diagram to split or merge process flows using Exclusive, Parallel, Inclusive, and Event-based decision types.
 control: Bpmn Gateway 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# BPMN Gateway in React Diagram Component
+# BPMN Gateway in React Diagram
 
 ## Overview
 

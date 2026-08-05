@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shapes in React Diagram Component | Syncfusion®
-description: Learn to create and customize text, image, HTML, native, basic, path, and flow shapes in the Syncfusion React Diagram Component with examples.
+title: Shapes in React Diagram | Syncfusion®
+description: Add Text, Image, HTML, Native SVG, Basic, Path, and Flow shapes to the React Diagram to build rich, interactive node visuals.
 control: Shapes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Different Types of Shapes in React Diagram Component
+# Shapes in React Diagram
 
 The React Diagram component provides comprehensive support for adding various types of nodes to create rich, interactive diagrams. Shapes serve as the fundamental building blocks for representing data, processes, and visual elements in your diagrams.
 

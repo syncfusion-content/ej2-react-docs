@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearence of a nodes in React Diagram component | Syncfusion®
-description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Node Customization in React Diagram | Syncfusion®
+description: Apply consistent defaults across every node in the React Diagram through a defaults callback to centralize size, style, and shape settings.
 control: Appearence of nodes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance of Nodes in React Diagram Component
+# Node Customization in React Diagram
 
 To customize the appearance and position of nodes in the React Diagram component, refer to the video link below.
 

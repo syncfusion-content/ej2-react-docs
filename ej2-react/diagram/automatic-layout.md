@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Automatic layout in React Diagram Component | Syncfusion®
-description: Learn here all about Automatic layout in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Automatic Layout in React Diagram | Syncfusion®
+description: Auto-arrange nodes in the React Diagram with built-in layouts: hierarchical, complex hierarchical, organizational, flowchart, mind map, radial, and symmetric.
 control: Automatic layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Automatic Layout in React Diagram Component
+# Automatic Layout in React Diagram
 
 The Diagram component provides comprehensive support for automatically arranging nodes in the diagram area through various layout algorithms. These automatic layouts help organize complex diagrams by positioning nodes and connectors according to predefined patterns and relationships, eliminating the need for manual positioning,To enable automatic layout in the React Diagram component, configure the `layout` property of the diagram.
 

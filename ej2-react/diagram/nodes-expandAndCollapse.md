@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Expand and collapse nodes in React Diagram component | Syncfusion®
-description: Learn how to implement expand and collapse functionality for nodes in Syncfusion® React Diagram component with customizable icons and states.
+title: Expand and Collapse Nodes in React Diagram | Syncfusion®
+description: Show or hide hierarchical children in the React Diagram by configuring expand/collapse icons on parent nodes for interactive tree navigation.
 control: Expand and collapse of nodes
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Expand and Collapse Nodes in React Diagram Component
+# Expand and Collapse Nodes in React Diagram
 
 The React Diagram component provides built-in support for expanding and collapsing nodes, enabling users to create hierarchical views where child nodes can be hidden or shown dynamically. This functionality is particularly useful for organizational charts, mind maps, and tree structures where managing visual complexity is essential.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Nodes in React Diagram component | Syncfusion®
-description: Learn here all about Nodes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Node Positioning in React Diagram | Syncfusion®
+description: Position React Diagram nodes precisely with offset coordinates and the pivot property to control whether offset is measured from center or corner.
 control: Nodes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Positioning a Node in in React Diagram Component
+# Node Positioning in React Diagram
 
 To customize the position of nodes in the React Diagram component, refer to the video link below.
 

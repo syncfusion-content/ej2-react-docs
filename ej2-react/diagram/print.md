@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in React Diagram Component | Syncfusion®
-description: Check out and learn about getting started with print in React Diagram Component of Syncfusion Essential® JS 2 and more details.
+title: Print in React Diagram | Syncfusion®
+description: Print the current React Diagram to produce a high-quality paper copy with customizable region, scale, page size, and orientation options.
 control: Print
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in React Diagram Component
+# Print in React Diagram
 
 The React Diagram component provides comprehensive printing capabilities that allow users to generate high-quality printed outputs of their diagrams. The [`print`](https://ej2.syncfusion.com/react/documentation/api/diagram#print) method enables printing the diagram as an image with extensive customization options for different printing scenarios.
 

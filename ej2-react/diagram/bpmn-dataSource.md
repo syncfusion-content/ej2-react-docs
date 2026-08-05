@@ -1,14 +1,14 @@
 ---
 layout: post
-title: BPMN DataSource in React Diagram Component | Syncfusion®
-description: Learn how to create and configure BPMN data source shapes in Syncfusion® React Diagram Component for business process modeling.
+title: BPMN Data Source in React Diagram | Syncfusion®
+description: Add BPMN data source shapes to the React Diagram to represent databases, files, and other repositories that business processes read from or write to.
 control: Bpmn DataSource 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Data Source in React Diagram Component
+# BPMN Data Source in React Diagram
 
 ## Overview
 

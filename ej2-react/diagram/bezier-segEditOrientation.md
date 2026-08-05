@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bezier Segment edit in React Diagram Component | Syncfusion®
-description: Learn to configure Bezier segment orientation in Syncfusion React Diagram Component for custom curved connectors.
+title: Bezier Segment Edit Orientation in React Diagram | Syncfusion®
+description: Set the segment edit orientation in the React Diagram to Bidirectional or Freeform, constraining how users drag bezier intermediate points.
 control: Bezier Segment edit orientation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bezier Segment Edit Orientation
+# Bezier Segment Edit Orientation in React Diagram
 
 Bezier connectors in diagrams provide smooth, curved connections between nodes with customizable control points. The segment edit orientation feature allows interactive modification of bezier connector segments to achieve the desired visual flow and connection paths.
 

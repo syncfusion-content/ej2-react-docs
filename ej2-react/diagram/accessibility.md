@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Diagram Component | Syncfusion®
-description: Learn here all about Accessibility in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Accessibility in React Diagram | Syncfusion®
+description: Review the WAI-ARIA and Section 508 compliance matrix for the React Diagram, including screen reader, color contrast, and keyboard navigation support.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Diagram Component
+# Accessibility in React Diagram
 
 The Diagram component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, which provide information about elements in a document for assistive technologies such as screen readers.
 

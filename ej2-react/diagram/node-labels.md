@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Node Labels in React Diagram component | Syncfusion®
-description: Learn how to position and align annotations on nodes using offset, horizontalAlignment, and verticalAlignment in Syncfusion® React Diagram Component.
+title: Node Labels in React Diagram | Syncfusion®
+description: Position React Diagram node annotations precisely with fractional offset, alignment, and margin for exact placement inside node bounds.
 control: Node Labels 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Node Annotations in React Diagram Component
+# Node Labels in React Diagram
 
 The React Diagram component allows precise customization of node annotations (also called labels) for positioning and appearance. Node annotations can be aligned relative to node boundaries using four key positioning properties that work together to provide comprehensive control over annotation placement.
 

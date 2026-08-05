@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Connector Customization in React Diagram Component | Syncfusion®
-description: Learn how to customize connector properties such as decorator shapes, styles, and gradient effects in the Syncfusion React Diagram Component.
+title: Connector Customization in React Diagram | Syncfusion®
+description: Customize React Diagram connectors with source/target decorator shapes, custom SVG path data, padding, corner radius, and bridging effects.
 control: Connector customization
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connector Customization
+# Connector Customization in React Diagram
 
 The Diagram component provides extensive customization options for connectors, allowing developers to modify visual appearance, behavior, and interaction properties. This guide covers decorator shapes, styling options, spacing controls, bridging effects, and advanced connector features.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Diagram - MySQL Server | Syncfusion
-description: Learn how to integrate the Syncfusion React Diagram with a MySQL database using LINQ2DB and an ASP.NET Core Web.
+title: MySQL Server in React Diagram | Syncfusion
+description: Bind the React Diagram to MySQL via LINQ2DB and an ASP.NET Core Web API to render an organizational chart from relational data.
 platform: ej2-react
 control: diagram
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting MySQL Server to Syncfusion® React Diagram using LINQ2DB
+# MySQL Server in React Diagram
 
 This guide explains how to load and visualize organizational chart data stored in a MySQL database using the Syncfusion® React Diagram component. It demonstrates how to configure MySQL, create the required database schema, expose the data through an ASP.NET Core Web API, and bind the API response to a React application to render an organizational chart.
 

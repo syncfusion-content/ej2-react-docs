@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label Events in React Diagram component | Syncfusion®
-description: Learn about annotation events in Syncfusion React Diagram component including keyDown, keyUp, doubleClick, textEdit, and selectionChange events with examples.
+title: Label Events in React Diagram | Syncfusion®
+description: Listen for React Diagram annotation events including KeyDown, KeyUp, DoubleClick, TextEdit, and SelectionChange to drive custom edit-mode behavior.
 control: Label Events
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handling Annotation Events in Diagram Component
+# Label Events in React Diagram
 
 Annotations in React Diagram components are text labels that can be added to nodes and connectors to provide additional information. When users interact with these annotations, various events are triggered that allow developers to customize behavior and respond to user actions.
 

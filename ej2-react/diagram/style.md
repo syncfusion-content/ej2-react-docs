@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Diagram Component | Syncfusion®
-description: Learn here all about Style in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Style in React Diagram | Syncfusion®
+description: Override React Diagram CSS for connector endpoint handles, selection indicators, user-handle icons, and other interactive controls to match your theme.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Diagram Component
+# Style in React Diagram
 
 The React Diagram component provides extensive styling capabilities through CSS classes. This guide demonstrates how to customize various visual elements including connector handles, selection indicators, and interactive controls using CSS overrides.
 

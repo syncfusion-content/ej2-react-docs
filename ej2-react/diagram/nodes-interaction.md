@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Nodes in React Diagram component | Syncfusion®
-description: Learn about interactive node operations in Syncfusion React Diagram component including selection, dragging, resizing, and rotation.
+title: Node Interaction in React Diagram | Syncfusion®
+description: Select, drag, resize, rotate, and flip React Diagram nodes interactively or programmatically through built-in selection and transformation methods.
 control: Nodes interaction
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Node Interaction in React Diagram Component
+# Node Interaction in React Diagram
 
 The React Diagram component provides comprehensive support for interactive node operations, enabling users to select, drag, resize, rotate, and flip nodes through both mouse interactions and programmatic methods. These interactions form the foundation of dynamic diagram editing capabilities.
 

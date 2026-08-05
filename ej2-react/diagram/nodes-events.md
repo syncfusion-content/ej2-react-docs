@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events of node interaction in React Diagram component | Syncfusion®
-description: Learn about node interaction events in Syncfusion React Diagram including click, selection, position, size, rotate, property and collection events.
+title: Node Events in React Diagram | Syncfusion®
+description: Handle React Diagram node events such as click, selection change, position change, size change, rotation, drag, drop, and property updates.
 control: Events of node
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Node Interaction Events in React Diagram Component
+# Node Events in React Diagram
 
 The React Diagram component provides comprehensive event support for node interactions, allowing developers to respond to user actions and customize behavior during various interaction scenarios. These events are triggered when users interact with nodes through clicking, dragging, resizing, rotating, and other operations.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Layers in React Diagram Component | Syncfusion®
-description: Learn here all about Layers in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Layers in React Diagram | Syncfusion®
+description: Organize React Diagram elements into named layers to bulk-toggle visibility, lock interaction, and store custom metadata per group.
 control: Layers 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Layers in React Diagram Component
+# Layers in React Diagram
 
 **Layers** provide a powerful organizational system for managing diagram elements by grouping related shapes into named categories. This functionality enables developers to build complex diagrams with selective viewing, interaction control, and bulk property management across multiple elements simultaneously.
 

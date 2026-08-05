@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Flowchart layout in React Diagram Component | Syncfusion®
-description: Learn here all about Flowchart layout in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Flowchart Layout in React Diagram | Syncfusion®
+description: Render standard flowchart symbols in the React Diagram using Terminator, Process, Decision, Document, and Data shapes connected by directional arrows.
 control: Flowchart layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Flowchart Layout in React Diagram Component
+# Flowchart Layout in React Diagram
 
 The flowchart layout provides a visual representation of processes, workflows, systems, or algorithms in a diagrammatic format. It uses various symbols to depict different actions, with arrows connecting these symbols to indicate the flow or direction of the process. Flowcharts are Essential<sup style="font-size:70%">&reg;</sup> tools for illustrating step-by-step sequences, making complex processes easier to understand and communicate.
 

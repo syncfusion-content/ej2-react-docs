@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Nodes in React Diagram Component | Syncfusion®
-description: Learn here all about Nodes in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Nodes in React Diagram | Syncfusion®
+description: Create diagram nodes in the React Diagram by defining shape, size, position, and unique IDs and adding them to the nodes collection.
 control: Nodes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Nodes in React Diagram Component
+# Nodes in React Diagram
 
 Nodes are graphical objects that visually represent entities, processes, data flow, or any business logic within diagrams. They serve as the fundamental building blocks for creating flowcharts, organizational charts, network diagrams, and other visual representations. Each node can be customized with different shapes, sizes, colors, and interactive behaviors to suit specific diagram requirements.
 

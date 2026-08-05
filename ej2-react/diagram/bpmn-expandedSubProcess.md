@@ -1,14 +1,14 @@
 ---
 layout: post
-title: BPMN Expanded SubProcess in React Diagram component | Syncfusion®
-description: Learn how to create and manage BPMN expanded subprocess shapes with child processes in Syncfusion® React Diagram component of Syncfusion Essential® JS 2.
+title: BPMN Expanded SubProcess in React Diagram | Syncfusion®
+description: Use expanded BPMN subprocesses in the React Diagram to display internal child activities directly and let users drop new nodes into the container.
 control: Bpmn Expanded subProcess 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Expanded SubProcess
+# BPMN Expanded SubProcess in React Diagram
 
 ## Overview
 

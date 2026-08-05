@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tools in React Diagram Component | Syncfusion®
-description: Learn how to use drawing tools, selection tools, and pan tools in Syncfusion® React Diagram Component for interactive diagram creation and navigation.
+title: Tools in React Diagram | Syncfusion®
+description: Switch the React Diagram tool between Select, Pan, and Draw to let users click, navigate, or create nodes, connectors, and free-hand shapes at runtime.
 control: Tools 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tools in React Diagram Component
+# Tools in React Diagram
 
 The React Diagram component provides a comprehensive set of interactive tools that enable users to create, modify, and navigate diagrams efficiently. These tools facilitate real-time interaction with diagram elements through mouse and keyboard operations.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ports positioning in React Diagram Component | Syncfusion®
-description: Learn how to position ports on nodes in  Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Port Positioning in React Diagram | Syncfusion®
+description: Position React Diagram node ports with fractional offset values, alignment, and margin for exact slot placement on node boundaries.
 control: Ports 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Port positioning in React Diagram Component
+# Port Positioning in React Diagram
 
 The React Diagram component provides flexible options for positioning ports on nodes. Ports can be precisely positioned using offset coordinates, alignment properties, and margin values to create professional diagram layouts that meet specific design requirements.
 

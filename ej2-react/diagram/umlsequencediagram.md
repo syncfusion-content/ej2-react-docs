@@ -1,14 +1,14 @@
 ---
 layout: post
-title: UmlSequenceDiagram in React Diagram Component | Syncfusion®
-description: Learn how to create and customize UML sequence diagrams in Syncfusion® React Diagram Component with participants, messages, activation boxes, and fragments.
+title: UML Sequence Diagram in React Diagram | Syncfusion®
+description: Visualize object interactions over time in the React Diagram with UML Sequence Diagrams — participants, message arrows, activation boxes, and combined fragments.
 control: UmlSequenceDiagram 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# UML Sequence Diagram in React Diagram Component
+# UML Sequence Diagram in React Diagram
 A UML sequence diagram is a type of interaction diagram that visualizes how objects communicate with each other over time. These diagrams show the sequence of messages exchanged between participants, making them essential for understanding system interactions, API workflows, and process flows.
 
 The Syncfusion® React Diagram component provides comprehensive support for creating and visualizing UML sequence diagrams through the [`UmlSequenceDiagramModel`](https://ej2.syncfusion.com/react/documentation/api/diagram/UmlSequenceDiagramModel). This specialized model enables the creation of sequence diagrams with proper UML notation and automated layout capabilities.

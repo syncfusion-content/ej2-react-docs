@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customizing layout in React Diagram Component | Syncfusion®
-description: Learn here all about Customizing layout in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Layout Customization in React Diagram | Syncfusion®
+description: Tune React Diagram layout orientation, spacing, alignment, and bounds for hierarchical, organizational, and tree-based automatic layouts.
 control: Customizing layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing layout in React Diagram Component
+# Layout Customization in React Diagram
 
 The React Diagram component provides extensive customization options for automatic layouts, allowing developers to control orientation, spacing, alignment, bounds, and visual behavior. These properties enable fine-tuned positioning and appearance of nodes within hierarchical, organizational, and tree-based diagrams.
 

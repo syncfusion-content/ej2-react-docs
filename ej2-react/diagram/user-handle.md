@@ -1,14 +1,14 @@
 ---
 layout: post
-title: User handle in React Diagram Component | Syncfusion®
-description: Learn here all about User handle in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: User Handle in React Diagram | Syncfusion®
+description: Add User Handles to selected React Diagram nodes and connectors so users can clone, delete, or link with one-click custom SVG icon buttons.
 control: User handle 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User Handle in React Diagram Component
+# User Handle in React Diagram
 
 User handles are interactive UI elements that provide quick access to frequently used commands around selected diagram elements. They appear as customizable icons positioned around nodes and connectors, enabling users to perform actions like cloning, deleting, or editing without accessing traditional menus or toolbars.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Diagram Component | Syncfusion®
-description: Learn how to get started with the Syncfusion® React Diagram component, explore its elements, and create a simple diagram.
+title: Getting Started with React Diagram | Syncfusion®
+description: Learn how to get started with the Syncfusion React Diagram control. Explore setup, features, examples, and customization options.
 control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Diagram Component
+# Getting Started with React Diagram
 
 This section explains how to create a React application from scratch and build a simple diagram using the Syncfusion® React Diagram component.
 

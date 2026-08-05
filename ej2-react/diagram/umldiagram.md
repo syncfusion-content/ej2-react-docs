@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Umldiagram in React Diagram Component | Syncfusion®
-description: Learn how to create and customize UML Class and Activity diagrams in Syncfusion® React Diagram Component with comprehensive examples and API references.
+title: UML Diagram in React Diagram | Syncfusion®
+description: Model software in the React Diagram with UML Class and Activity diagram shapes — class attributes, methods, lifelines, and decisions — for object-oriented design.
 control: Umldiagram 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# UML Diagrams in React Diagram Component
+# UML Diagram in React Diagram
 
 This guide demonstrates how to create and customize UML (Unified Modeling Language) diagrams using the Syncfusion React Diagram component. You'll learn to build UML Class diagrams for object-oriented system modeling and UML Activity diagrams for workflow visualization.
 

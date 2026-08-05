@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Diagram Component | Syncfusion®
-description: Learn here all about Data binding in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Data Binding in React Diagram | Syncfusion®
+description: Populate React Diagram nodes and connectors from local JSON or remote DataManager using ID/parentId mapping to build data-driven visualizations.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data Binding in React Diagram Component
+# Data Binding in React Diagram
 
 The React Diagram component supports data binding to populate nodes and connectors from external data sources. This feature enables dynamic diagram creation based on structured data, making it ideal for visualizing organizational charts, flowcharts, and hierarchical data structures.
 

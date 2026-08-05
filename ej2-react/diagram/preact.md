@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Preact Getting Started with React Diagram Component | Syncfusion®
-description: Check out and learn about getting started with the Preact Framework and React Diagram Component of Syncfusion Essential® JS 2 and more details.
+title: Preact Getting Started with React Diagram | Syncfusion®
+description: Set up the Syncfusion React Diagram inside a Preact 10.19+ project with alias resolution to use the same component in lighter-weight Preact apps.
 control: Preact
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Diagram Component in the Preact Framework
+# Preact Getting Started with React Diagram
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Diagram component.
 

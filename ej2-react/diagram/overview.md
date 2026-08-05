@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview in React Diagram component | Syncfusion®
-description: Learn how to implement and use the Overview component in Syncfusion® React Diagram for navigation, zooming, and panning in large diagrams.
+title: Overview in React Diagram | Syncfusion®
+description: Add the React Diagram Overview (mini-map) panel for one-click navigation, panning, and zoom-to-area in large canvases through a small reference control.
 control: Overview 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview Component in React Diagram Component
+# Overview in React Diagram
 
 The Overview component provides a miniature preview of the entire diagram content, enabling efficient navigation and viewport management for large diagrams. This component displays a scaled-down version of the diagram with a highlighted rectangle representing the current viewport, allowing users to quickly navigate to specific areas without manual zooming and panning.
 

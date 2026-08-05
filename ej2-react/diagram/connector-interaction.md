@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Connector Interaction in React Diagram Component | Syncfusion®
-description: Explore how to interact with connectors in the Syncfusion React Diagram Component, including selection, dragging, endpoint manipulation, and flipping.
+title: Connector Interaction in React Diagram | Syncfusion®
+description: Select, drag, edit endpoints, flip, and modify segments on React Diagram connectors interactively using both mouse gestures and runtime methods.
 control: Connector Interaction
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connector Interaction in EJ2 React Diagram Component
+# Connector Interaction in React Diagram
 
 Connectors in the React Diagram component support various interaction capabilities including selection, dragging, endpoint manipulation, segment editing, and flipping operations. These interactions enable users to dynamically modify connector behavior and appearance within the diagram.
 

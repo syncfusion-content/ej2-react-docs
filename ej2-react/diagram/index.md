@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in React Diagram component | Syncfusion®
-description: Learn here all about Index in Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+title: Index in React Diagram | Syncfusion®
+description: Discover the Syncfusion React Diagram feature set: nodes, connectors, groups, ports, labels, symbol palette, clipboard, undo/redo, serialization, snapping, and gridlines.
 control: Index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Diagram component
+# Index in React Diagram
 
 The Diagram control creates rich `Visio` like applications. Its Framework comprises of many Elements that helps you to create an application easily. The rich feature set of the Diagram control includes Snapping, Guidelines, Grid lines, Serialization and Zooming.
 All diagram elements are rendered using Scalable Vector Graphics (SVG).

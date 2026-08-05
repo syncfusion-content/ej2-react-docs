@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bezier Connectors in React Diagram Component | Syncfusion®
-description: Learn to create, edit, and customize Bezier connectors in the Syncfusion React Diagram. Master smooth, interactive, and precise curved connections.
+title: Bezier Connectors in React Diagram | Syncfusion®
+description: Create curved Bezier connectors in the React Diagram with control-point and vector-based segment shapes, plus interactive editing of the curve.
 control: Connectors 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bezier Connectors in Diagram Component
+# Bezier Connectors in React Diagram
 
 Bezier segments create curved paths whose shape can be configured using either control points or vectors.
 

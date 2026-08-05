@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Complex hierarchical layout in React Diagram component | Syncfusion®
-description: Learn how to arrange nodes with multiple parent relationships using complex hierarchical tree layout in Syncfusion® React Diagram Component.
+title: Complex Hierarchical Tree Layout in React Diagram | Syncfusion®
+description: Use the ComplexHierarchicalTree layout in the React Diagram to arrange nodes with multiple parents for matrix organizations and dotted-line reporting.
 control: Complex hierarchical tree layout
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Complex Hierarchical Tree Layout in React Diagram Component
+# Complex Hierarchical Tree Layout in React Diagram
 
 Complex hierarchical tree layout arranges nodes in a tree-like structure where child nodes can have multiple parent nodes, creating interconnected relationships beyond traditional single-parent hierarchies. This layout type is ideal for organizational charts with dotted-line relationships, project dependencies, or any structure where entities report to multiple authorities. This layout extends the standard hierarchical tree layout to support these complex relationships.
 

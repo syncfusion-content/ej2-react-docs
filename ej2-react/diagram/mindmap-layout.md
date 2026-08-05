@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mind-map layout in React Diagram Component | Syncfusion®
-description: Learn here all about Mind-map layout in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Mind Map Layout in React Diagram | Syncfusion®
+description: Build mind map diagrams in the React Diagram with horizontal or vertical branch orientation radiating from a central root concept.
 control: Mind-map layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Mind Map layout in React Diagram Component
+# Mind Map Layout in React Diagram
 
 A mind map is a powerful visualization technique that organizes information around a central concept, with related topics branching outward in a tree-like structure. This layout is particularly useful for brainstorming, knowledge mapping, and hierarchical data representation. The React Diagram component supports mind map layouts through the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#type) property, which should be set to **MindMap**.
 

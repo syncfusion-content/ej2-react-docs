@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export in React Diagram Component | Syncfusion®
-description: Learn here all about Export in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Export in React Diagram | Syncfusion®
+description: Export the React Diagram to JPG, PNG, or SVG using the export API to save diagrams, documentation, or print-ready output programmatically.
 control: Export 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in React Diagram Component
+# Export in React Diagram
 
 The React Diagram component provides comprehensive support for exporting diagram content as image files (JPG, PNG) or vector graphics (SVG). This functionality enables users to save diagrams for documentation, presentations, or further processing. The [`exportDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram#exportdiagram) method serves as the primary interface for all export operations.
 

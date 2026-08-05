@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Org-chart layout in React Diagram Component | Syncfusion®
-description: Learn here all about Org-chart layout in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Organizational Chart Layout in React Diagram | Syncfusion®
+description: Render an organizational chart layout in the React Diagram; bind nodes and connectors from a data source or define them manually for hierarchies.
 control: Org-chart layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organizational Chart Layout in React Diagram Component
+# Organizational Chart Layout in React Diagram
 
 An organizational chart is a diagram that displays the hierarchical structure of an organization, showing reporting relationships and roles within the company. The React Diagram component provides specialized support for creating professional organizational charts through automatic layout algorithms. To create an organizational chart, set the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#type) of layout should be set as an **OrganizationalChart**.
 

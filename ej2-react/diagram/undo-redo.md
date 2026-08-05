@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Undo redo in React Diagram Component | Syncfusion®
-description: Learn how to implement undo and redo functionality with history management in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Undo and Redo in React Diagram | Syncfusion®
+description: Track and reverse React Diagram edits through history support; users invoke undo and redo with keyboard shortcuts or programmatic methods.
 control: Undo redo 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Undo and Redo in React Diagram Component
+# Undo and Redo in React Diagram
 
 The React Diagram component automatically tracks all user interactions and programmatic changes, providing robust undo and redo functionality. This feature enables users to reverse or restore actions, making diagram editing more intuitive and error-tolerant.
 
