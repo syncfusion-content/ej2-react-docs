@@ -1,14 +1,14 @@
 ---
 layout: post
-title: State persistence in React Pivotview component | Syncfusion
-description: Learn how to enable state persistence in the Syncfusion React Pivot Table to retain the report layout, filters, and settings across browser sessions.
-control: State persistence 
+title: State persistence in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table retains the current report, filters, and expanded state across browser refreshes using enablePersistence.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State persistence in React Pivot Table component
+# State persistence in React Pivot Table
 
 State persistence enables users to automatically retain the entire configuration of the Pivot Table component in the browser's local storage (cookies). This includes the current layout, field arrangements, sorting, applied filters, and the expanded or collapsed states of fields. By enabling the [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enablepersistence) property in the Pivot Table component, all these interactive states and settings are saved automatically. As a result, users can refresh the browser or navigate to different pages and return at any time, knowing that all modified report settings will be retained—ensuring a seamless and uninterrupted data analysis experience.
 

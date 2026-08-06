@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid – Create Routing Example | Syncfusion
-description: React Grid provides routing sample patterns, state preservation techniques, routing integration examples, and guidance for route-driven grid scenarios.
+title: React Grid Routing Integration | Syncfusion
+description: Learn how to integrate React Data Grid with React routing using navigation, route configuration, and component-based grid views.
 control: Create a Routing sample
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Routing sample in React Grid Component
+# Routing Integration in React Data Grid
 
 React Router is a popular routing library for building single-page applications (SPAs) in React. It enables seamless navigation between different views or components based on the URL, without requiring full page reloads.
 

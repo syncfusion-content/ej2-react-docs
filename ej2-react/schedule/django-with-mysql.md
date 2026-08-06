@@ -1,14 +1,14 @@
 ---
 layout: post
 title: React Scheduler with Django REST Framework | Syncfusion
-description: Integrate Syncfusion React Scheduler with MySQL and Django REST Framework to perform seamless CRUD operations.
-control: Schedule 
+description: Learn how to integrate the Syncfusion React Scheduler with MySQL and Django REST Framework to perform seamless CRUD operations.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion React Scheduler with Django REST Framework (DRF)
+# React Scheduler with Django REST Framework
 
 The Syncfusion [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) combined with Django REST Framework and MySQL provides a robust, scalable data‑driven application architecture. The Syncfusion React Scheduler delivers a rich, high‑performance client‑side experience.
 
@@ -130,7 +130,7 @@ This step updates the file to establish the MySQL connection and enable essentia
 
 4. Configure middleware:
 
-    Middleware processes incoming requests.
+    Middleware processes incoming requests before reaching your views.
 
     [settings.py]
 
@@ -145,7 +145,8 @@ This step updates the file to establish the MySQL connection and enable essentia
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
     ```
-    > Place "CORS" middleware near the top so preflight requests are handled correctly.
+
+    > **Important:** Place the "CORS" middleware near the top of the list to ensure preflight requests are handled correctly before other middleware processes them.
 
 5. Enable "CORS" for the React development server:
 
@@ -158,7 +159,8 @@ This step updates the file to establish the MySQL connection and enable essentia
         "http://localhost:5173",
     ]
     ```
-    This prevents cross‑origin access errors while the frontend calls backend APIs during development.
+
+    > **Note:** This configuration prevents cross‑origin access errors while the frontend calls backend APIs during development. Adjust the port number if your React app uses a different development server port.
 
 ### Step 3: Define models
 
@@ -443,7 +445,21 @@ This response format ensures seamless interaction between the React Scheduler an
 
     export default App;
     ```
-    
+
+## Testing the integration
+
+Before running the full application, verify that the Django backend and React frontend can communicate properly.
+
+**Verification Steps:**
+
+1. **Verify Django server is running** - Navigate to `http://127.0.0.1:8000/Home/GetData` in your browser. It should return a JSON array of schedule events (initially empty if no data is inserted).
+
+2. **Verify React development server is running** - The React app should be accessible at `http://localhost:5173`. Check the browser console for any CORS or network errors.
+
+3. **Check the Network tab** - Open browser Developer Tools (F12) and navigate to the Network tab. Trigger a Scheduler action (like creating an event) and verify that the request is sent to the Django backend with a 200/201 status.
+
+    > **Troubleshooting:** If you see CORS errors, verify that the `CORS_ALLOWED_ORIGINS` in Django settings includes your React development server URL.
+
 ## Performing CRUD operations
 
 The Scheduler Application provides full CRUD (Create, Read, Update, Delete) capabilities for managing scheduling data. Users can create new schedule entries, modify existing records, or remove events. All operations are processed through the application’s interface and are reliably persisted to the backend database via Django REST Framework (DRF), ensuring accurate and up‑to‑date scheduling information across the system.
@@ -475,6 +491,8 @@ def UpdateData(request):
 - When a user creates a new event in the Scheduler, it posts a payload that includes an added array with one or more new event objects.
 - On the server, each object in added is validated by ScheduleEventsSerializer and saved inside a transaction to ensure consistency.
 - After creation, the endpoint returns the latest event list, allowing the Scheduler to immediately show the server‑authoritative data (including any database defaults).
+
+> **Tip:** The `added` array is generated automatically by the Scheduler whenever a user creates a new event. The backend validates the data and returns the updated full list of events.
 
 **Below image shows the inserted data passed to the DRF:**
 
@@ -508,9 +526,11 @@ def UpdateData(request):
 
 **Explanation:**
 
-- The endpoint locates the target event by its primary key Id.
+- The endpoint locates the target event by its primary key `Id`.
 - The serializer validates the new values and writes changes atomically within the same transaction as inserts.
 - The endpoint returns the refreshed dataset so the Scheduler remains synchronized with server data.
+
+> **Note:** Only the fields that have been modified are included in the `changed` array, allowing for efficient partial updates.
 
 **Below image shows the updated data passed to the DRF:**
 
@@ -539,9 +559,11 @@ def UpdateData(request):
 
 **Explanation**:
 
-- The Scheduler posts a deleted array with one or more items containing the identifier Id.
+- The Scheduler posts a `deleted` array with one or more items containing the identifier `Id`.
 - The endpoint deletes each matching event inside the same transaction, ensuring the operation is consistent with any other changes posted together.
 - After deletion, the endpoint returns the updated event list for immediate UI refresh.
+
+> **Warning:** Delete operations cannot be undone. Ensure proper validation and user confirmation before removing events from the database.
 
 **Below image shows the deleted key passed to the DRF:**
 
@@ -583,3 +605,13 @@ This guide walks through the following key areas:
 5. Run the Django and React applications locally for development. [🔗](#running-the-application) 
 
 The application now offers a reliable, scalable solution for managing scheduler events with a robust Django REST API on MySQL and a Syncfusion React Scheduler front end.
+
+## See also
+
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler)
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule)
+* [DataManager Documentation](https://ej2.syncfusion.com/react/documentation/data/getting-started)
+* [Django REST Framework Official Docs](https://www.django-rest-framework.org/)
+* [CRUD Operations Guide](https://ej2.syncfusion.com/react/documentation/schedule/crud-actions)
+* [Scheduler Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview)
+* [GitHub Sample Repository](https://github.com/SyncfusionExamples/react-scheduler-crud-django-mysql)

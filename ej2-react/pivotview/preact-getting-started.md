@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Pivot Table in Preact | Syncfusion
-description: Set up React Pivot Table in Preact. Lightweight framework alternative, step-by-step guide, npm install, CSS, full features, code examples.
-control: Preact
+title: Getting Started with React Pivot Table in Preact | Syncfusion
+description: Learn how to get started with the React Pivot Table in a Preact application. Explore setup, features, examples, and customization options.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Pivot Table in Preact
+# Getting Started with React Pivot Table in Preact
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table component.
 

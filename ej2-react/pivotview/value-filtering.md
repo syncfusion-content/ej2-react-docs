@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value filtering in React Pivotview component | Syncfusion
-description: Learn how to apply value filtering in the Syncfusion React Pivot Table to display only row and column members that meet specified numeric value conditions.
-control: Value filtering 
+title: Value filtering in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table applies value filtering on row and column members using numeric conditions such as greater than, less than, or between.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value filtering in React Pivotview component
+# Value filtering in React Pivot Table
 
 Value filtering allows you to perform filtering operation to be performed based on the aggregate values. For example, to show the data where the total sum of units sold for each country exceeds 2000, apply a value filter **2000** with filter operator **GreaterThan** on the country field.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: React Pivot Table - Web API Adaptor | Syncfusion
+title: Web API adaptor in React Pivot Table | Syncfusion
 platform: ej2-react
 component: Pivot Table
-description: React Pivot Table Web API adaptor connects ASP.NET Web API endpoints to the Pivot Table, mapping requests and handling server-side data operations.
-control: WebApiAdaptor
+description: Learn how the React Pivot Table binds to ASP.NET Web API endpoints through the WebApiAdaptor, which supports OData-style query parameters.
+control: Pivot Table
 keywords: Adaptors, webapiadaptor, remotedata 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# ASP.NET Web API Remote Data Binding in React Pivot Table
+# Web API adaptor in React Pivot Table
 
 The [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/webapi-adaptor) connects the React Pivot Table with ASP.NET Web API endpoints that support OData-style querying. Since it is derived from the `ODataAdaptor`, the Web API must accept OData-formatted query parameters.
 

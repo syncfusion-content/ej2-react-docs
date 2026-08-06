@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Configure data grid options on editing mode in React | Syncfusion
-description: Learn here all about Configure data grid options on editing mode in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Configure data grid options on editing mode 
+title: How to configure data grid in editing mode in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to configure data grid options on editing mode in the React Pivot Table using the beginDrillThrough event.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure data grid options in editing mode in the React Pivot Table
+# How to configure data grid in editing mode in React Pivot Table
 
 The React Pivot Table component provides the ability to configure various data grid options when working with drill-through functionality in editing mode. When users double-click on value cells (cells containing aggregated data), the component displays the underlying raw data in a drill-through grid popup. The [`beginDrillThrough`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#begindrillthrough) event allows users to access and configure grid features such as sorting, grouping, and filtering before displaying the drill-through grid popup.
 

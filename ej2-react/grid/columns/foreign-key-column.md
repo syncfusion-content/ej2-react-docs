@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Foreign Key Column | Syncfusion
-description: React Grid foreign key column supports mapping related data and binding local or remote sources to display associated values in grid cells. 
+title: React Grid Foreign Key Column | Syncfusion
+description: Learn how to use foreign key columns in React Data Grid to map related data, display associated values, and bind local or remote data sources.
 control: Foreign key column 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Foreign key column in React Grid component
+# Foreign Key Column in React Data Grid
 
 The foreign key column in the React Data Grid component displays related data from a foreign key data source. This feature enables representation of foreign key relationships between data sources, displaying meaningful values instead of raw key identifiers.
 

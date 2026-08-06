@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - Next.js Backend | Syncfusion.
-description: Integrate Syncfusion React Grid with routing and Next.js backend to perform CRUD operations seamlessly.
+title: React Grid Data Binding using Next.js Backend | Syncfusion
+description: Learn how to integrate React Data Grid with a Next.js backend to handle routing, remote data operations, and CRUD functionality efficiently.
 platform: ej2-react
 control: grid
 keywords: custom data binding, next.js, remote data, crud, routing
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Building a Next.js Application with Syncfusion React Grid and Routing
+# Next.js Backend Integration in React Data Grid
 
 [Next.js](https://nextjs.org/) is a powerful React framework designed for building full-stack web applications. It includes built‑in features such as server‑side rendering, automatic code splitting, intuitive routing, and API routes, providing a solid foundation for developing modern, high‑performance applications.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Selection | Syncfusion
-description: React Grid selection provides a complete overview of selection modes, APIs, and configuration to control selection lifecycle and UI feedback.
-control: Selection 
+title: React Grid Selection | Syncfusion
+description: Learn how to use selection in React Data Grid with row, cell, and column selection modes, selection APIs, keyboard interactions, and selection events.
+control: Selection
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in React Grid Component
+# Selection in React Data Grid
 
 Selection in the Grid component provides interactive selection of specific cells, rows, or columns within the grid. Selection can be performed through mouse clicks, arrow keys (up, down, left, and right), or touch. This functionality highlights and allows manipulation or actions on specific cells, rows, or columns within the grid.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - GraphQL Adaptor | Syncfusion
-description: React Grid GraphQL adaptor supports using GraphQL endpoints, mapping queries, and configuring operations to fetch, sort, and page data from GraphQL servers.
+title: React Grid Bind Data with GraphQLAdaptor | Syncfusion
+description: Learn how to use GraphQLAdaptor in React Data Grid to bind GraphQL data, execute queries and mutations, and perform CRUD operations.
 control: GraphQL Adaptor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
  
-# GraphQL in Remote Data Binding in Syncfusion React Components
+# GraphQL Data Binding in React Data Grid
  
 The React Data Grid provides seamless integration with GraphQL services, enabling modern, efficient data operations through a flexible query language. This comprehensive guide demonstrates configuring and using GraphQL with the React Data Grid to perform server-side operations including querying, mutations, filtering, sorting, paging, and complete CRUD functionality.
  

@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Performance tips for React Pivot Table component | Syncfusion
-description: Learn the best practices and performance optimization tips for the Syncfusion React Pivot Table component when working with large datasets and complex configurations.
+title: Performance best practices in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table handles large datasets and complex reports with performance tips like virtual scrolling, paging, and data compression.
 platform: ej2-react
-control: Performance best practices
-publishingplatform: ##Platform_Name##
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Best practices to improve the performance of the Pivot Table
+# Performance best practices in React Pivot Table
 
 Performance optimization is crucial when working with large datasets in the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table). This documentation provides some best practices to empower your data analysis and enhance the user experience.
 

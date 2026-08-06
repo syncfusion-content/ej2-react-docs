@@ -1,42 +1,91 @@
 ---
 layout: post
-title: Module injection in React Schedule component | Syncfusion
-description: Learn here all about Module injection in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Module injection 
+title: Module Injection in React Scheduler | Syncfusion
+description: Learn how to import and inject modules in the Syncfusion React Scheduler to enable specific views, features, and editor options.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Module injection in React Schedule component
+# Module Injection in React Scheduler
 
-The crucial step on creating a Scheduler with required views, is to import and inject the required modules. The modules that are available on Scheduler to work with its related functionalities are as follows.
+A crucial step to creating a Scheduler with required views is to import and inject the required modules into your application. Module injection enables only the necessary functionalities, optimizing the application's bundle size and performance. The Scheduler provides multiple specialized modules for different view types and features.
 
-* `Day` - Inject this module to work with day view.
-* `Week` - Inject this module to work with week view.
-* `WorkWeek` - Inject this module to work with work week view.
-* `Month` - Inject this module to work with month view.
-* `Year` - Inject this module to work with year view.
-* `Agenda` - Inject this module to work with agenda view.
-* `MonthAgenda` - Inject this module to work with month agenda view.
-* `TimelineViews` - Inject this module to work with timeline day, timeline week, and timeline work week views.
-* `TimelineMonth` - Inject this module to work with timeline month view.
-* `TimelineYear` - Inject this module to work with timeline year view.
-* `DragAndDrop` - Inject this module to allow drag and drop of appointments on Scheduler.
-* `Resize` - Inject this module for enabling the resize functionality of appointments on Scheduler.
+> **Important:** Only the modules you explicitly inject will be loaded. Attempting to use a view without injecting its corresponding module will result in a script error and the Scheduler will not render.
+
+## Available modules
+
+| Module | View Types | Purpose |
+|--------|-----------|---------|
+| `Day` | Day | Display single day with hourly time slots |
+| `Week` | Week | Display 7-day week view with hourly slots |
+| `WorkWeek` | Work Week | Display 5-day work week (Mon-Fri) view |
+| `Month` | Month | Display calendar month view |
+| `Year` | Year | Display entire year in month grid layout |
+| `Agenda` | Agenda | Display list view of upcoming appointments |
+| `MonthAgenda` | Month Agenda | Display month calendar with agenda list below |
+| `TimelineViews` | Timeline Day, Week, Work Week | Display horizontal timeline views with resources |
+| `TimelineMonth` | Timeline Month | Display month with horizontal timeline format |
+| `TimelineYear` | Timeline Year | Display year with horizontal timeline format |
+| `DragAndDrop` | All Views | Enable drag and drop functionality for appointments |
+| `Resize` | All Views | Enable resize functionality for appointments |
+
+> **Tip:** Use `TimelineViews` module to support all three timeline view options (Day, Week, Work Week). Module injection is modular—inject only the modules your application requires.
+
+## Importing modules
+
+First, import the required modules from the `@syncfusion/ej2-react-schedule` package in your component file:
+
+```ts
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, MonthAgenda, Inject } from '@syncfusion/ej2-react-schedule';
+```
 
 ## Module injection
 
-The required modules should be injected into the Scheduler using the `Inject` method of Schedule within the `app.ts` file as shown below. On doing so, only the injected module functionalities will be loaded and can be worked with Scheduler.
+The required modules should be injected into the Scheduler using the `Inject` component within your React component. Only the injected module functionalities will be loaded and can be worked with the Scheduler.
 
-`[src/app.tsx]`
+**Example - Basic View Modules:**
 
-```ts
-
-<Inject services={[Day, Week, WorkWeek, Month, Agenda, MonthAgenda ]} />
-
+```tsx
+<ScheduleComponent currentView='Week'>
+    <Inject services={[Day, Week, WorkWeek, Month, Agenda, MonthAgenda]} />
+</ScheduleComponent>
 ```
 
-**Note:** If a Scheduler [`currentView`](https://ej2.syncfusion.com/react/documentation/api/schedule#currentview) is set to any one of the available views without injecting that respective view module, then a script error will occur and the Scheduler will not render.
+**Example - Timeline Views with Interaction Modules:**
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/schedule/overview) to knows how to present and manipulate data.
+```tsx
+<ScheduleComponent currentView='TimelineDay'>
+    <Inject services={[TimelineViews, TimelineMonth, DragAndDrop, Resize]} />
+</ScheduleComponent>
+```
+
+> **Important:** If a Scheduler [`currentView`](https://ej2.syncfusion.com/react/documentation/api/schedule#currentview) is set to any view without injecting that respective view module, a script error will occur and the Scheduler will not render. Always ensure the module for your `currentView` is included in the `Inject` services array.
+
+## Common module combinations
+
+**Standard Views (Most Common):**
+```tsx
+<Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+```
+
+**Timeline-Based Applications:**
+```tsx
+<Inject services={[TimelineViews, TimelineMonth, TimelineYear, DragAndDrop, Resize]} />
+```
+
+**Full-Featured Application:**
+```tsx
+<Inject services={[Day, Week, WorkWeek, Month, Year, Agenda, MonthAgenda, TimelineViews, TimelineMonth, TimelineYear, DragAndDrop, Resize]} />
+```
+
+## See also
+
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) - Component homepage
+* [Scheduler Views Documentation](./views.md) - View types and configuration
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule) - Complete module API reference
+* [Drag and Drop Interactions](./scheduler-interactions.md#drag-and-drop) - Enable drag and drop functionality
+* [Getting Started Guide](./getting-started.md) - Scheduler setup and initialization
+* [React Scheduler Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) - Interactive examples with different modules
+* [Essential JS 2 Documentation](https://ej2.syncfusion.com/react/documentation/introduction) - Framework documentation

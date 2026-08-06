@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Getting started with React Schedule and MongoDB | Syncfusion
-description: Checkout and learn about Getting started with React Schedule component of Syncfusion Essential JS 2 with MongoDB.
+title: Getting Started with React Scheduler and MongoDB | Syncfusion
+description: Learn how to integrate the Syncfusion React Scheduler with a MongoDB backend to perform CRUD operations in a React application.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Syncfusion React Scheduler and MongoDB
+# Getting Started with React Scheduler and MongoDB
 
-The [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) combined with MongoDB provides a robust, scalable, and flexible data-driven application architecture suitable for modern event-management systems.
+The [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) combined with MongoDB provides a robust, scalable, and flexible data-driven architecture for modern event-management systems. This integration enables real-time CRUD operations, persistent event storage, and a clean separation between the UI and backend services.
 
 MongoDB's schema-less design seamlessly supports complex scheduling data, making it ideal for storing events, resources, recurrence rules, and user-specific calendar configurations.
+
+> **Tip:** Use MongoDB when your scheduling data structure may evolve over time or needs to support different event fields across multiple calendar workflows.
 
 ## What is MongoDB?
 
@@ -28,6 +30,8 @@ This integration enables full CRUD (Create, Read, Update, Delete) operations for
 
 Users can create, edit, and delete appointments in the Scheduler UI, with all changes persisted in MongoDB.
 
+> **Important:** The backend must return event records in a format that the Scheduler can deserialize, especially for `StartTime` and `EndTime` fields. Date conversion on the server is required before saving and after reading.
+
 ## Prerequisites
 
 Before getting started, ensure the following prerequisites are met:
@@ -38,32 +42,48 @@ Required for optimal performance and full compatibility with MongoDB Node.js Dri
 * **MongoDB (Latest Stable Version)**   
 Required for storing and retrieving application data. Supports both local installation and MongoDB Atlas.
 
+> **Note:** You can use either a local MongoDB instance or MongoDB Atlas. If you use Atlas, update the connection string in the server configuration accordingly.
+
 ## Architecture Diagram
+
+The following diagram shows how the React Scheduler communicates with the Node.js server and MongoDB database:
+
 ![Architecture Diagram](./images/react-mongodb-architecture.png)
 
-## Database Setup 
+> **Tip:** Keep the UI, API layer, and database responsibilities separate. This makes the application easier to maintain and scale.
+
+## Database setup
+
 Follow the steps below to set up the MongoDB database for the application:
 
 1. Download the MongoDB Community Edition from the official website: [MongoDB](https://www.mongodb.com/try/download/community)
-
-2. Install MongoDB by following the platform‑specific installation instructions (Windows / macOS / Linux).
-
+2. Install MongoDB by following the platform-specific installation instructions for Windows, macOS, or Linux.
 3. Launch MongoDB Compass after successful installation.
+4. Open MongoDB Compass and connect using the default connection string: `mongodb://localhost:27017`
 
-4. Open MongoDB Compass and connect the default connection string: `mongodb://localhost:27017`
-![mongodb-connection](./images/react-mongodb-connection.png)
-*Image illustrating the MongoDB connection string*
+   ![mongodb-connection](./images/react-mongodb-connection.png)
 
-5. Create a new Database `mydb` and a Collection `ScheduleData` in default connection string.
-![mongodb-database-collection](./images/react-mongodb-database-collection.png)
-*Image illustrating the MongoDB database & collection*
+   *Image illustrating the MongoDB connection string*
+
+5. Create a new database named `mydb` and a collection named `ScheduleData` in the default connection.
+
+   ![mongodb-database-collection](./images/react-mongodb-database-collection.png)
+
+   *Image illustrating the MongoDB database and collection*
 
 6. Confirm that MongoDB Compass shows the database in the connected state, as illustrated in the screenshot.
-![mongodb-connectivity](./images/react-mongodb-connectivity.png)
-*Image illustrating the MongoDB connectivity*
+
+   ![mongodb-connectivity](./images/react-mongodb-connectivity.png)
+
+   *Image illustrating the MongoDB connectivity*
+
+> **Important:** Use the same database and collection names in your backend server code. A mismatch between MongoDB Compass and the server configuration will prevent data from loading correctly.
 
 ## Create a React Application
-To create a new `React` application, use the Vite build tool, which provides faster startup, hot reload, and better performance for modern React applications.
+
+To create a new `React` application, use the Vite build tool, which provides faster startup, hot reload, and better performance for modern React applications. Vite is recommended for this sample because it offers a lightweight development experience and modern build output.
+
+> **Tip:** If you already have a React application, you can skip the project scaffolding step and proceed directly to the Scheduler integration.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -150,8 +170,10 @@ cd react-app
 
 ## Create a Server Application
 
+The server layer is responsible for handling API requests and communicating with MongoDB. It runs separately from the React application and exposes endpoints for Scheduler data operations.
+
 ### Step 1: Install required libraries
-To set up the backend for the application, Install the required packages and make a new directory for server in the React project folder `react-app/` itself.
+To set up the backend for the application, install the required packages and create a new directory for the server inside the React project folder `react-app/`.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -163,7 +185,9 @@ npm install express mongodb cors
 
 * Express – A minimal and flexible web framework used to build API endpoints
 * MongoDB (Node.js Driver) – The official MongoDB driver that allows your server to communicate with the database
-* CORS – A package that enables your application (running on a different port) to access the server’s API
+* CORS – A package that enables your application, running on a different port, to access the server's API
+
+> **Note:** Installing these packages in the React project root keeps the backend sample simple for demonstration purposes. In a production app, you may want to separate client and server into different repositories or folders.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -282,7 +306,8 @@ To enable running the Node.js backend directly from the React project’s root, 
 {% endtabs %}
 
 ## Integrating Syncfusion React Scheduler
-This section integrates [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) to the above created application.
+
+This section integrates [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) into the application created above. The Scheduler uses `DataManager` to communicate with the backend and synchronize event data with MongoDB.
 
 ### Step 1: Install required libraries
 Install the required [Syncfusion React Scheduler package](https://www.npmjs.com/package/@syncfusion/ej2-react-schedule) by the following command.
@@ -365,7 +390,7 @@ export default class App extends React.Component<{}, {}> {
 {% endtabs %}
 
 ### Step 4: Perform CRUD operations using Syncfusion's DataManager URL Adaptor
-This connects the scheduler to your backend through REST endpoints and enables create, read, update, and delete from the UI.
+This connects the Scheduler to your backend through REST endpoints and enables create, read, update, and delete operations from the UI. The `UrlAdaptor` sends standard HTTP requests to the server and keeps the Scheduler synchronized with MongoDB.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -426,9 +451,7 @@ export default class App extends React.Component<{}, {}> {
 
 ## Run the Application
 
-**Note**:  
-If your project’s package.json contains **"type": "module"**, remove it before running the server.  
-This project uses CommonJS (require), not ES modules—keeping "type": "module" will cause Node.js to throw a “require is not defined in ES module scope” error.
+> **Important:** If your project's `package.json` contains `"type": "module"`, remove it before running the server. This sample uses CommonJS (`require`), not ES modules. Keeping `"type": "module"` will cause Node.js to throw a `require is not defined in ES module scope` error.
 
 ### Step 1: Start the backend server
 From the project directory `react-app/`, start the backend server.
@@ -470,24 +493,39 @@ You can now create, read, update, and delete events directly in the **Syncfusion
 All changes will be reflected in the connected **MongoDB** database in real time.
 
 ## Output Preview
+
+The following screenshots show the Scheduler UI and the corresponding MongoDB records after CRUD operations:
+
 **Syncfusion React Scheduler**
 ![FrontEnd React Scheduler](./images/react-mongodb-scheduler-output.png)
-*Image illustrating the Syncfusion React Scheduler* 
+*Image illustrating the Syncfusion React Scheduler*
 
 **Syncfusion React Scheduler Events in MongoDB**
 ![Backend DB Records](./images/react-mongodb-db-output.png)
-*Image illustrating the Syncfusion React Scheduler Events in MongoDB* 
+*Image illustrating the Syncfusion React Scheduler Events in MongoDB*
+
+> **Tip:** Verify both the Scheduler UI and the MongoDB collection after testing create, update, and delete actions to confirm that data is synchronized correctly.
 
 ## Common Pitfalls & Solutions
 
-1. **CORS issues (blocked by CORS):** Ensure app.use(cors(...)) is registered before routes and that origin matches your React dev URL. Set credentials: true only if you send cookies/Authorization and then also configure DataManager to send them. 
+1. **CORS issues (blocked by CORS):** Ensure `app.use(cors(...))` is registered before routes and that the `origin` matches your React development URL. Set `credentials: true` only if you send cookies or authorization headers, and configure `DataManager` accordingly.
 
-2. **Dates stored as strings:** Convert StartTime/EndTime to Date objects on the server before inserting/updating. Otherwise, Scheduler rendering/timezone math may be off.
+2. **Dates stored as strings:** Convert `StartTime` and `EndTime` to `Date` objects on the server before inserting or updating. Otherwise, Scheduler rendering and timezone calculations may be incorrect.
 
-3. **Immutable _id error on updates:** Delete _id from payload before calling updateOne. The MongoDB driver does not allow changing _id.
+3. **Immutable `_id` error on updates:** Delete `_id` from the payload before calling `updateOne`. MongoDB does not allow changing the `_id` field.
 
-4. **Missing CSS → broken layout:** Import all required CSS bundles for EJ2 controls; otherwise the editor/pickers won’t render correctly.
+4. **Missing CSS → broken layout:** Import all required CSS bundles for EJ2 controls; otherwise, the editor and picker controls will not render correctly.
+
+> **Note:** If events are not appearing after a save, check the browser network tab and server console for request or parsing errors first.
 
 <br>
 
 > Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/ej2-react-scheduler-with-mongodb)
+
+## See also
+
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) - Component homepage
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule) - Complete API documentation
+* [DataManager Documentation](https://ej2.syncfusion.com/react/documentation/schedule/data-binding#binding-remote-data) - Remote data operations
+* [MongoDB Documentation](https://www.mongodb.com/docs/) - Database reference   
+* [React Scheduler Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) - Interactive examples

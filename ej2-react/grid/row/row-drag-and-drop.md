@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Row Drag and Drop | Syncfusion
-description: React Grid row drag and drop explains enabling row reorder, drag behavior, drop targets, and handling events to update underlying data accordingly.
+title: React Grid Row Drag and Drop | Syncfusion
+description: Learn how to implement row drag and drop in React Data Grid using Syncfusion. Reorder rows, configure drop targets, and handle drag events efficiently..
 control: Row drag and drop 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row Drag and Drop in React Grid Component
+# Row Drag and Drop in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides built-in support for seamless row drag and drop functionality. This feature enables effortless row rearrangement within the grid by dragging and dropping rows to new positions. Additionally, rows can be transferred between grids, as well as dragged and dropped to custom components, providing powerful flexibility for complex data management scenarios.
 

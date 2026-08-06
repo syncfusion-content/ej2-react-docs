@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dimensions in React Schedule component | Syncfusion
-description: Learn here all about Dimensions in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Scheduler Dimensions in React Scheduler | Syncfusion
+description: Learn how to set the height and width of the Syncfusion React Scheduler using pixel, percentage, or auto values for responsive layouts.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dimensions in React Schedule component
+# Dimensions in React Scheduler
 
 Scheduler dimensions refer to the height and width of the entire layout and support three types of values:
 
@@ -18,7 +18,9 @@ Scheduler dimensions refer to the height and width of the entire layout and supp
 
 ## Auto height and width
 
-When the [height](https://ej2.syncfusion.com/react/documentation/api/schedule#height) and [width](https://ej2.syncfusion.com/react/documentation/api/schedule#width) of the Scheduler are set to `auto`, it will try as hard as possible to keep an element the same width as its parent container. In other words, the parent container that holds Scheduler, it's width/height will be the sum of its children. By default, Scheduler is assigned with `auto` values for both height and width properties.
+When the [height](https://ej2.syncfusion.com/react/documentation/api/schedule#height) and [width](https://ej2.syncfusion.com/react/documentation/api/schedule#width) of the Scheduler are set to `auto`, it will adapt to fit the parent container's dimensions. The Scheduler's width and height will be the sum of its children elements, ensuring responsive layout behavior.
+
+> **Note:** By default, the Scheduler is assigned with `auto` values for both height and width properties, making it responsive to its parent container.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,7 +38,9 @@ When the [height](https://ej2.syncfusion.com/react/documentation/api/schedule#he
 
 ## Height and width in pixels
 
-The Scheduler height and width will render exactly as per the given pixel values. You can provide pixel values as numbers (for example, `500`) or as strings with a `px` suffix (for example, `'500px'`).
+The Scheduler height and width will render exactly as per the given pixel values.
+
+> **Note:** Pixel values can be provided either as numbers (for example, `500`) or as strings with a `px` suffix (for example, `'500px'`).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -54,7 +58,9 @@ The Scheduler height and width will render exactly as per the given pixel values
 
 ## Height and width in percentages
 
-When the height and width of the Scheduler are given as percentage, it will make the Scheduler as wide as the parent container.
+When the height and width of the Scheduler are specified as percentages, the Scheduler will scale proportionally to the parent container's dimensions.
+
+> **Tip:** Percentage-based dimensions are useful for responsive designs that need to adapt to different screen sizes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -70,8 +76,10 @@ When the height and width of the Scheduler are given as percentage, it will make
         
 {% previewsample "page.domainurl/code-snippet/schedule/events-cs45" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.
+## See also
 
-## See Also
-
-* [How to Change Scheduler Cell Dimensions](./cell-customization#setting-cell-dimensions-in-all-views)
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler)
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule)
+* [Cell Customization Guide](./cell-customization)
+* [Setting Cell Dimensions in All Views](./cell-customization#setting-cell-dimensions-in-all-views)
+* [Scheduler Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview)

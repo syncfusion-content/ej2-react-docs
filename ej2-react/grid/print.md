@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Print | Syncfusion
-description: React Grid print covers preparing grid content for printing, applying print‑specific styles, and configuring options to produce clear, printer‑friendly output.
+title: React Grid Print | Syncfusion
+description: Learn how to print React Data Grid content with print customization options, formatted layouts, and print-ready output for grid data.
 control: Print 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in React Grid Component
+# Print in React Data Grid
 
 The printing feature in React Data Grid generates a printable representation of the grid for offline access or documentation. Enable printing via the grid's toolbar or by calling the [print](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#print) method.
 

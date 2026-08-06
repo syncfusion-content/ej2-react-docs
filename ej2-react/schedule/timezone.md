@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Timezone in React Schedule component | Syncfusion
-description: Learn here all about Timezone in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Timezone in React Scheduler | Syncfusion
+description: Learn how to render appointments in different time zones in the Syncfusion React Scheduler for global users and cross-region scheduling.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timezone support in React Schedule component
+# Timezone in React Scheduler
 
-The Scheduler component uses the current system timezone by default. To schedule events according to a different timezone, use the [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule#timezone) property. In addition to applying a specific timezone at the Scheduler level, individual appointments can have their own timezones using the [`startTimezone`](https://helpej2.syncfusion.com/react/documentation/api/schedule/field#starttimezone) and [`endTimezone`](https://helpej2.syncfusion.com/react/documentation/api/schedule/field#endtimezone) properties within the event fields collection.
+The Scheduler uses the current system timezone by default. To schedule events in a different timezone, use the [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule#timezone) property. You can also assign timezones to individual appointments with the [`startTimezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#starttimezone) and [`endTimezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#endtimezone) properties in the event fields collection.
 
-> Note: The **timezone** property applies only to appointment processing and the current time indicator.
+> **Note:** The `timezone` property applies only to appointment processing and the current time indicator.
+
+> **Tip:** Use a shared Scheduler timezone when all users should see the same schedule time.
 
 ## Understanding date manipulation in JavaScript
 
@@ -20,9 +22,9 @@ The `new Date()` constructor in JavaScript returns the exact current date with t
 
 ## Scheduler without a specific timezone
 
-When the Scheduler's `timezone` property is not set, appointments are displayed based on the client system's timezone. As a result, the same appointment may appear with different start and end times to users in different timezones.
+When the Scheduler's `timezone` property is not set, appointments are displayed based on the client system's timezone. As a result, the same appointment may appear with different start and end times for users in different timezones.
 
-The following code example displays an appointment from 9:00 AM to 10:00 AM when you open the Scheduler from any of the timezone. This is because, we are providing the start and end time enclosing with `new Date()` which works based on the client browser's timezone.
+The following example displays an appointment from 9:00 AM to 10:00 AM when the Scheduler is opened from any timezone. This is because the start and end values are provided using `new Date()`, which follows the client browser's timezone.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,7 +42,9 @@ The following code example displays an appointment from 9:00 AM to 10:00 AM when
 
 ## Set a specific timezone for the Scheduler
 
-When a timezone is set through the [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule#timezone) property, appointments are displayed according to the Scheduler's timezone, regardless of the user's system timezone. In the following example, appointments are shown in Eastern Time (UTC -05:00).
+When you set the [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule#timezone) property, appointments are displayed according to the Scheduler's timezone regardless of the user's system timezone. In the following example, appointments are shown in Eastern Time (UTC -05:00).
+
+> **Note:** Use this approach when all users should view the schedule in the same timezone.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -56,9 +60,11 @@ When a timezone is set through the [`timezone`](https://ej2.syncfusion.com/react
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs29" %}
 
-## Display events on same time everywhere with no time difference
+## Display events at the same time everywhere with no time difference
 
-Setting [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule#timezone) to UTC for Scheduler will display the appointments on same time as in the database for all the users in different time zone.
+Setting [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule#timezone) to UTC displays appointments at the same time as stored in the database for all users, regardless of their local timezone.
+
+> **Tip:** UTC is useful when you want every user to see identical appointment times.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -76,7 +82,9 @@ Setting [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule
 
 ## Assign specific timezones to events
 
-It is possible to set different timezone for Scheduler events by setting [`startTimezone`](https://helpej2.syncfusion.com/react/documentation/api/schedule/field#starttimezone) and [`endTimezone`](https://helpej2.syncfusion.com/react/documentation/api/schedule/field#endtimezone) properties within the [`eventSettings`](https://helpej2.syncfusion.com/react/documentation/api/schedule/eventSettings) option. It allows each appointment to maintain different timezone and displays on Scheduler with appropriate time differences.
+You can set different timezones for Scheduler events by using the [`startTimezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#starttimezone) and [`endTimezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#endtimezone) properties within the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings) option. This allows each appointment to maintain its own timezone and display with the correct time difference.
+
+> **Note:** Event-level timezones are useful when appointments are created in different regions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -92,9 +100,11 @@ It is possible to set different timezone for Scheduler events by setting [`start
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs31" %}
 
-## Add or remove timezone names to/from the timezone collection
+## Add or remove timezone names to or from the timezone collection
 
-Instead of displaying all the timezone names within the timezone collection (more than 200 are displayed on the editor window timezone fields by default), you can customize the timezone collection at application end as shown in the following example.
+Instead of displaying all timezone names in the timezone collection, you can customize the collection at the application level. By default, more than 200 names are shown in the editor window timezone fields.
+
+> **Tip:** Limiting the list can make the editor easier to use for your users.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -118,8 +128,8 @@ Calculates the difference, in minutes, between the specified UTC date and a targ
 
 | Parameters | Type | Description |
 |------------|------|-------------|
-| Date | Date | UTC time as date object.|
-| Timezone | String | Timezone.|
+| Date | Date | UTC time as date object. |
+| Timezone | String | Target timezone. |
 
 Returns `number`
 
@@ -133,13 +143,13 @@ Returns `number`
 
 ### convert
 
-This method is used to convert the passed date from one timezone to another timezone.
+This method converts the passed date from one timezone to another.
 
 | Parameters | Type | Description |
 |------------|------|-------------|
-| Date | Date | UTC time as date object.|
-| fromOffset | number/string | Timezone from which date need to be converted.|
-| toOffset | number/string | Timezone to which date need to be converted.|
+| Date | Date | UTC time as date object. |
+| fromOffset | number/string | Timezone from which the date needs to be converted. |
+| toOffset | number/string | Timezone to which the date needs to be converted. |
 
 Returns `Date`
 
@@ -159,8 +169,8 @@ Adds the time difference between the specified UTC date and a target timezone to
 
 | Parameters | Type | Description |
 |------------|------|-------------|
-| Date | Date | UTC time as a date object.|
-| Timezone | String | Timezone.|
+| Date | Date | UTC time as a date object. |
+| Timezone | String | Target timezone. |
 
 Returns `Date`
 
@@ -174,12 +184,12 @@ Returns `Date`
 
 ### remove
 
-This method is used to remove the time difference between passed UTC date and timezone.
+This method removes the time difference between the passed UTC date and a timezone.
 
 | Parameters | Type | Description |
 |------------|------|-------------|
-| Date | Date | UTC as date object.|
-| Timezone | String | Timezone.|
+| Date | Date | UTC as date object. |
+| Timezone | String | Target timezone. |
 
 Returns `Date`
 
@@ -197,7 +207,7 @@ Removes the local timezone offset from the given date.
 
 | Parameters | Type | Description |
 |------------|------|-------------|
-| Date | Date | UTC as date object.|
+| Date | Date | UTC as date object. |
 
 Returns `Date`
 
@@ -209,4 +219,9 @@ Returns `Date`
     console.log(convertedDate); //2018-12-05T15:25:11.000Z
 ```
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/bootstrap5/schedule/overview) to knows how to present and manipulate data.
+## See also
+
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) - Component homepage
+* [Time Scale Configuration](https://ej2.syncfusion.com/react/documentation/schedule/timescale) - Time grid settings
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule) - Complete API documentation
+* [Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) - Interactive Scheduler demos

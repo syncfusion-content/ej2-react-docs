@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Selection Style | Syncfusion
-description: React Grid selection style customizes visuals and templates for selected rows, cells, and columns, ensuring consistent and intuitive selection.
+title: React Grid Selection Customization | Syncfusion
+description: Learn how to customize selection styles in React Data Grid for selected rows, cells, and columns using CSS and selection templates.
 control: Selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection Customization in React Grid Component
+# Selection Style in React Data Grid
 
 The appearance of selection in the React Data Grid component can be customized using CSS. Here are examples for customizing the row selection background, cell selection background, and column selection background.
 

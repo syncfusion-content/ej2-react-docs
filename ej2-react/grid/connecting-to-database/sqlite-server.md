@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid connected to SQLite Data | Syncfusion
-description: Bind SQLite data to Syncfusion React Grid using Entity Framework with complete CRUD, filtering, sorting and advanced data operations.
+title: React Grid SQLite Data Binding | Syncfusion
+description: Learn how to connect React Data Grid to SQLite using EF Core, perform CRUD operations, and enable filtering, sorting, and advanced data management.
 platform: ej2-react
 control: grid
 keywords: adaptors, customadaptor, urladaptor, sqlite, remotedata
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting SQLite Data to React Grid using EF Core
+# SQLite Data Binding in React Data Grid
 
 The React Data Grid supports binding data from a SQLite database using Entity Framework Core (EF Core). This approach provides a lightweight, server less database solution ideal for mobile applications, desktop applications, and small-to-medium scale web applications.
 

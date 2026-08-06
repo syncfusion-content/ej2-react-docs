@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Context Menu | Syncfusion
-description: React Grid context menu supports, adding custom actions, and managing events to enhance interactions for rows and cells.
+title: React Grid Context Menu | Syncfusion
+description: Learn how to use Context Menu in React Data Grid with default items, custom actions, event handling, and options to prevent menu items.
 control: Context menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context Menu in React Grid Component
+# Context Menu in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component includes a context menu that appears on right-click anywhere within the grid. The context menu provides quick access to actions such as sorting, filtering, and editing without navigating away from the grid.
 

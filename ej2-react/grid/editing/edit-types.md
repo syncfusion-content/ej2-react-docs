@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Edit Types | Syncfusion
-description: React Grid edit types supports various editor options, configuration for each type, and examples that help select appropriate editors for column data.
+title: React Grid Edit Types | Syncfusion
+description: Learn how to configure edit types in React Data Grid, choose appropriate cell editors, customize editing behavior, and manage column editing efficiently.
 control: Edit types 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Edit Types in React Grid Component
+# Edit Types in React Data Grid
 
 The React Grid component in Syncfusion<sup style="font-size:70%">&reg;</sup> provides powerful edit types that enable seamless customization of the editing behavior for different column types. These edit types deliver flexibility in handling diverse data types, enhance the editing experience, and provide efficient solutions for different editing scenarios.
 

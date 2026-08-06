@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Column Autofit | Syncfusion
-description: React Grid column autofit supports automatically sizing columns to content and offers configuration options to improve readability and overall layout.
+title: React Grid Column AutoFit | Syncfusion
+description: Learn how to use React Grid Column AutoFit to automatically resize columns based on content using methods and improve grid readability.
 control: AutoFit Columns
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# AutoFit Columns in React Grid Component
+# AutoFit Columns in React Data Grid
 
 The AutoFit feature in the React Data Grid allows columns to automatically adjust their widths based on the maximum content width within each column. This ensures that all cell values are fully visible without truncation or wrapping.
 

@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Getting started with SharePoint and React Scheduler | Syncfusion
-description: Learn all about integrating Syncfusion Essential JS 2 React Schedule component in SharePoint, and much more, here.
+title: Getting Started with React Scheduler and SharePoint | Syncfusion
+description: Learn how to integrate the Syncfusion React Scheduler into a SharePoint Framework app to manage appointments in SharePoint.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Scheduler in SharePoint Framework
+# Getting Started with React Scheduler and SharePoint
 
 This article provides a step-by-step guide for setting up a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) project and integrating the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
 
-SharePoint Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
+SharePoint Framework (SPFx) is a modern client-side development model provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams.
+
+> **Tip:** Use this guide when you want to host the React Scheduler inside a SharePoint web part.
 
 ## Prerequisites
 
@@ -22,15 +24,15 @@ SharePoint Framework (SPFx) is a development model and framework provided by Mic
 
 ## Set up the SharePoint project
 
-Create a new SPFx project using the following command,
+Create a new SPFx project by running the following command:
 
-**Step 1:** To initiate the creation of a new [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) project, use the following command:
+**Step 1:** To start a new [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) project, run:
 
 ```bash
 yo @microsoft/sharepoint
 ```
 
-**Step 2:** Specify the name of the project as `my-project` and the name of the WebPart as `App` for this article. You will be prompted with a series of configuration questions as shown below:
+**Step 2:** Use `my-project` as the project name and `App` as the Web Part name for this article. You will be prompted with configuration questions similar to the following:
 
 ```bash
 Let's create a new Microsoft 365 solution.
@@ -41,13 +43,15 @@ Add new Web part to solution my-project.
 ? Which template would you like to use? React
 ```
 
-**Step 3:** To establish trust for the certificate in the development environment, execute the following command:
+**Step 3:** To trust the development certificate, run:
 
 ```bash
 heft trust-dev-cert
 ```
 
-With these steps complete, your `my-project` SharePoint Framework solution is ready for Syncfusion<sup style="font-size:70%">&reg;</sup> component integration.
+After these steps, your `my-project` SPFx solution is ready for Syncfusion<sup style="font-size:70%">&reg;</sup> component integration.
+
+> **Important:** Make sure your SPFx environment is configured correctly before you proceed with package installation.
 
 ## Add React Schedule packages
 
@@ -57,9 +61,12 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are av
 npm install @syncfusion/ej2-react-schedule --save
 ```
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-Themes for Syncfusion® React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more detail.
 
-This example demonstrates importing the `Bootstrap` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/`:
+Themes for Syncfusion React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more details.
+
+This example demonstrates importing the `Bootstrap` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/`.
+
+> **Note:** Import only the CSS files required by the Syncfusion components used in your SPFx solution.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -98,9 +105,9 @@ Update the TypeScript configuration `tsconfig.json` to map Syncfusion package pa
 
 ## Add React Schedule component
 
-Follow the below steps to add the component,
+Follow these steps to add the component.
 
-**Step 1:** In the `App.tsx` file inside the `~/src/webparts/app/components` folder, Render the Syncfusion React Schedule component:
+**Step 1:** In the `App.tsx` file inside the `~/src/webparts/app/components` folder, render the Syncfusion React Schedule component:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -122,7 +129,7 @@ export default class App extends React.Component<IAppProps> {
 {% endhighlight %}
 {% endtabs %}
   
-**Step 2:** Populating events to the Syncfusion React Scheduler:
+**Step 2:** Populate events in the React Scheduler:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -202,7 +209,7 @@ public render(): React.ReactElement<IAppProps> {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps:
+The following summarized code combines the previous steps:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -300,8 +307,9 @@ export default class App extends React.Component<IAppProps> {
 {% endhighlight %}
 {% endtabs %}
 
-## Set up Tenant Domain for SPFx
-The following configuration ensures that your SPFx solution loads the SharePoint Workbench for your specific tenant. Replace {tenantDomain} with your actual SharePoint tenant domain.
+## Set up Tenant domain for SPFx
+
+The following configuration ensures that your SPFx solution loads the SharePoint Workbench for your tenant. Replace {tenantDomain} with your actual SharePoint tenant domain.
 
 `config/serve.json`
 ```bash
@@ -313,6 +321,8 @@ The following configuration ensures that your SPFx solution loads the SharePoint
 }
 ```
 
+> **Note:** Update the tenant domain before running the SPFx workbench locally.
+
 ## Run the project
 
 To run the project, use the following command:
@@ -321,14 +331,14 @@ To run the project, use the following command:
 heft start
 ```
 
-The output will appear as follows:
+The output appears as follows:
 
 ![Scheduler Component](./images/react-sharepoint-output.png)
 
-> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-integrate-Syncfusion-React-Scheduler-with-Sharepoint.git)
+> **Tip:** You can review the complete sample in this [GitHub repository](https://github.com/SyncfusionExamples/How-to-integrate-Syncfusion-React-Scheduler-with-Sharepoint.git).
 
 ## See also
 
-* [React Schedule component](https://www.syncfusion.com/react-components/react-scheduler)
-* [Getting Started with the React Schedule component](https://ej2.syncfusion.com/react/documentation/schedule/getting-started)
-* [Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI component](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
+* [React Schedule component](https://www.syncfusion.com/react-components/react-scheduler) - Component homepage
+* [Getting Started with the React Schedule component](https://ej2.syncfusion.com/react/documentation/schedule/getting-started) - Basic setup guide
+* [Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI component](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start) - Quick start guide

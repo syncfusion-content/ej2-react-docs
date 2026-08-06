@@ -1,23 +1,27 @@
 ---
 layout: post
-title: Getting Started with Preact and React Schedule Component | Syncfusion
-description: Check out and learn about getting started with the Preact Framework and React Schedule Component of Syncfusion Essential JS 2 and more details.
-control: Preact
+title: Getting Started with React Scheduler and Preact | Syncfusion
+description: Learn how to get started with the Syncfusion React Scheduler in a Preact application, exploring setup, configuration, and basic usage.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Schedule Component in Preact Framework
+# Getting Started with React Scheduler and Preact
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler). The sample demonstrates how to use Syncfusion Scheduler components in a lightweight Preact application with minimal configuration.
 
-`Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
+`Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors.
+
+> **Tip:** Preact is a good fit when you want React-like APIs with a smaller runtime footprint.
 
 ## Prerequisites
 
 - [System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components](../system-requirement) — Node.js and npm are required
 - An HTML file with an `id="app"` element where the Preact app will be rendered (this is typically created automatically by the Preact initialization)
+
+> **Important:** Ensure the root element exists before rendering the Preact application. If the target element is missing, the Scheduler will not mount correctly.
 
 ## Set up the Preact project
 
@@ -34,6 +38,8 @@ yarn init preact
 ```
 
 Using one of the above commands will lead you to set up additional configurations for the project, as below:
+
+> **Note:** The prompts shown below may vary slightly depending on the Preact CLI version.
 
 ### Project name
 
@@ -92,9 +98,11 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule Package
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). 
+Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react).
 
 This article uses the [React Schedule component](https://www.syncfusion.com/react-components/react-scheduler) as an example. Install the `@syncfusion/ej2-react-schedule` package using the following command:
+
+> **Important:** Install the Scheduler package inside the Preact project directory so the module resolves correctly at build time.
 
 ```bash
 npm install @syncfusion/ej2-react-schedule --save
@@ -111,6 +119,8 @@ yarn add @syncfusion/ej2-react-schedule
 Themes for Syncfusion<sup style="font-size:70%">&reg;</sup> React Schedule component can be applied with CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
 This guide uses the **Tailwind 3** theme. Install the theme package using the following command:
+
+> **Tip:** Keep the theme package version aligned with your Syncfusion component version to avoid styling mismatches.
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -138,7 +148,9 @@ Follow the below steps to add the Schedule component to your Preact project:
 
 ### Import Schedule Components
 
-In the src/index.jsx file, import the necessary Schedule components and create the Schedule component with sample data:
+In the `src/index.jsx` file, import the necessary Schedule components and create the Schedule component with sample data:
+
+> **Note:** If you want to display custom appointments, bind a data source and define the appropriate `eventSettings` configuration.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -178,10 +190,15 @@ yarn run dev
 
 The development server will start and the application will be accessible in your browser (typically at `http://localhost:8080` or `http://localhost:5173` depending on your Preact version). You should see the Schedule component rendering with the sample event as follows:
 
+> **Tip:** If the application does not render, verify the root element ID, theme import path, and component imports first.
+
 ![preact](./images/preact.png)
 
 > Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-integrate-Syncfusion-React-Scheduler-with-Preact)
 
 ## See also
 
-[Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start)
+* [Getting Started with the Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Component](../getting-started/quick-start) - Main React setup guide
+* [Module injection](./module-injection.md) - Configure Scheduler modules
+* [Views](./views.md) - View options and behavior
+* [Resources](./resources.md) - Resource grouping examples

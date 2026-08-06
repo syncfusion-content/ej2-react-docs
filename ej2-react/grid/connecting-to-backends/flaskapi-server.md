@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Flask API Backend | Syncfusion.
-description: Integrate Syncfusion React Grid with Flask backend to enable server‑side data operations and seamless CRUD functionality.
+title: React Grid Data Integration with Flask API Backend | Syncfusion
+description: Learn how to integrate React Data Grid with a Flask API backend for server-side data handling, remote operations, and CRUD functionality.
 control: Custom Binding
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting the React Grid with Flask API
+# Flask API Backend Integration in React Data Grid
 
 [Flask](https://flask.palletsprojects.com/en/stable/) is a lightweight and flexible Python web application framework that provides a simple set of features for building REST APIs quickly. Flask follows a traditional REST API approach with multiple endpoints for different data operations.
 

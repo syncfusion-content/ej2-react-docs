@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Set different work hours in React Schedule component | Syncfusion
-description: Learn here all about Set different work hours in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Set Different Working Hours per Day in React Scheduler | Syncfusion
+description: Learn how to set different work hours for specific days in the Syncfusion React Scheduler to match varied team schedules.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set different work hours in React Schedule component
+# Set Different Working Hours on Different Days in React Scheduler
 
-By default, the work hours of the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) are highlighted based on the start and end values provided in the [`workHours`](https://ej2.syncfusion.com/react/documentation/api/schedule#workhours) property, which remains the same for all days. To highlight different work hours range for specific days, use the[`setWorkHours`](https://ej2.syncfusion.com/react/documentation/api/schedule#setworkhours) method.
+By default, the work hours of the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) are highlighted based on the start and end values provided in the [`workHours`](https://ej2.syncfusion.com/react/documentation/api/schedule#workhours) property, which remains the same for all days. To highlight different work-hour ranges for specific days, use the [`setWorkHours`](https://ej2.syncfusion.com/react/documentation/api/schedule#setworkhours) method.
 
-You can pass date object/ multiple date objects collection as first argument and start and end time need to be added as work hours should be passed as second and third arguments respectively. In the following code example, on button click 11:00 AM to 08:00 PM of 15th and 17th February has been added in work hours.
+You can pass a date object or a collection of date objects as the first argument, and pass the start and end times as the second and third arguments respectively. In the following code example, clicking the button adds work hours from 11:00 AM to 8:00 PM on 15 and 17 February.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: React Data Grid Getting Started (Quick Setup Guide) | Syncfusion
-description: Learn how to install and configure the Syncfusion React Data Grid. Set up a new React app and enable paging, sorting, filtering, and grouping.
+description: Learn how to install and configure the React Data Grid. Set up a new React app and enable paging, sorting, filtering, and grouping.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Data Grid
+# Getting Started with React Data Grid Component
 
 This section explains the steps required to create a simple [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component and demonstrate its basic usage in a React environment.
 

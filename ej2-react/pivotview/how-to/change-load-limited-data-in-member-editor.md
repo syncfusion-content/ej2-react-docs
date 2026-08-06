@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change load limited data in member editor in React | Syncfusion
-description: Learn here all about Change load limited data in member editor in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Change load limited data in member editor 
+title: How to limit member editor data in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to limit data loaded in the member editor of the React Pivot Table using maxNodeLimitInMemberEditor.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change load limited data in member editor in React
+# How to limit member editor data in React Pivot Table
 
 ## Overview
 

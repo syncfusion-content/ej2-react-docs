@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Timescale in React Schedule component | Syncfusion
-description: Learn here all about Timescale in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Timescale Customization in React Scheduler | Syncfusion
+description: Learn how to customize the time slots in the Syncfusion React Scheduler to set the duration, interval, and slot count per row.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timescale in React Schedule component
+# Timescale Customization in React Scheduler
 
-Time slots are the cells displayed in the Day, Week, and Work Week views of the Scheduler (in vertical views on the leftmost position and in timeline views at the top). The [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule#timescale) property lets you control the duration of these slots. It includes these sub-options:
+Time slots are the cells displayed in the Day, Week, and Work Week views of the Scheduler. In vertical views, they appear on the leftmost side, and in timeline views, they appear at the top. The [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule#timescale) property lets you control the duration of these slots. It includes the following sub-options:
 
-* [`enable`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#enable) - When set to `true`, allows the Scheduler to display the appointments accurately against the exact time duration. If set to `false`, all the appointments of a day will be displayed one below the other with no grid lines displayed. Its default value is `true`.
-* [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#interval) – Defines the time duration on which the time axis to be displayed either in 1 hour or 30 minutes interval and so on. It accepts the values in minutes and defaults to 60.
-* [`slotCount`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#slotcount) – Decides the number of slot count to be split for the specified time interval duration. It defaults to 2, thus displaying two slots to represent an hour(each slot depicting 30 minutes duration).
+* [`enable`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#enable) - When set to `true`, the Scheduler displays appointments against the exact time duration. When set to `false`, appointments for a day are displayed one below another, and grid lines are hidden. The default value is `true`.
+* [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#interval) - Defines the time interval for the time axis, such as 1 hour or 30 minutes. The value is in minutes and defaults to 60.
+* [`slotCount`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#slotcount) - Specifies how many slots are split within the given interval. It defaults to 2, so an hour is shown using two slots of 30 minutes each.
 
->Note: The upper limit for rendering slots within a single day, utilizing the **interval** and **slotCount** properties of the **timeScale**, stands at 1000. This constraint aligns with the maximum **colspan** value permissible for the **table** element, also capped at 1000. This particular restriction is relevant exclusively to the `TimelineDay`, `TimelineWeek` and `TimelineWorkWeek` views.
+> **Note:** The maximum number of slots that can be rendered in a single day is 1000. This limit is based on the maximum `colspan` value supported by the HTML table element. This restriction applies only to the `TimelineDay`, `TimelineWeek`, and `TimelineWorkWeek` views.
+
+> **Tip:** Use a smaller interval and higher slot count when you need finer time granularity.
 
 ## Setting different time slot duration
 
@@ -40,8 +42,10 @@ The [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/tim
 
 The [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale) property provides template options for custom rendering:
 
-* [`majorSlotTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#majorslottemplate) - The template option to be applied for major time slots. Here, the template accepts either the string or HTMLElement as template design and then the parsed design is displayed onto the time cells. The time details can be accessed within this template.
-* [`minorSlotTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#minorslottemplate) - The template option to be applied for minor time slots. Here, the template accepts either the string or HTMLElement as template design and then the parsed design is displayed onto the time cells. The time details can be accessed within this template.
+* [`majorSlotTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#majorslottemplate) - Applies a template to major time slots. The template can be a string or an HTMLElement, and the rendered content is displayed inside the time cells. Time details are available within the template.
+* [`minorSlotTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#minorslottemplate) - Applies a template to minor time slots. The template can be a string or an HTMLElement, and the rendered content is displayed inside the time cells. Time details are available within the template.
+
+> **Tip:** Use templates when you need to display custom labels, icons, or formatting in the time grid.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,7 +63,7 @@ The [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule/ti
 
 ## Hide the timescale
 
-The grid lines which indicates the exact time duration can be enabled or disabled on the Scheduler, by setting `true` or `false` to the `enable` option within the [`timeScale`](https://helpej2.syncfusion.com/react/documentation/api/schedule#timescale) property. It's default value is `true`.
+You can enable or disable the grid lines that indicate the exact time duration in the Scheduler by setting the `enable` option within the [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule#timescale) property to `true` or `false`. The default value is `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -77,7 +81,9 @@ The grid lines which indicates the exact time duration can be enabled or disable
 
 ## Highlighting current date and time
 
-By default, Scheduler indicates current date with a highlighted date header on all views, as well as marks accurately the system's current time on specific views such as Day, Week, Work Week, Timeline Day, Timeline Week and Timeline Work Week views. To stop highlighting the current time indicator on Scheduler views, set `false` to the [`showTimeIndicator`](https://helpej2.syncfusion.com/react/documentation/api/schedule#showtimeindicator) property which defaults to `true`.
+By default, the Scheduler highlights the current date header in all views and shows the system time indicator in Day, Week, Work Week, Timeline Day, Timeline Week, and Timeline Work Week views. To hide the current time indicator, set the [`showTimeIndicator`](https://ej2.syncfusion.com/react/documentation/api/schedule#showtimeindicator) property to `false`. The default value is `true`.
+
+> **Note:** The time indicator is shown only in views that display a time grid.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -93,4 +99,8 @@ By default, Scheduler indicates current date with a highlighted date header on a
         
 {% previewsample "page.domainurl/code-snippet/schedule/timescale-cs4" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+## See also
+
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) - Component homepage
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule) - Complete API documentation
+* [Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) - Interactive Scheduler demos

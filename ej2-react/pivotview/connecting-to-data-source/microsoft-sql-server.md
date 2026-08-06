@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Microsoft SQL Server Data Binding in React Pivot Table | Syncfusion
-description: Learn how to bind Microsoft SQL Server Database data in the Syncfusion React Pivot Table component of Syncfusion Essential JS 2 and more.
+title: Microsoft SQL Server data binding in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table retrieves data from a SQL Server database through a Web API controller and binds it as the pivot data source.
 platform: ej2-react
-control: Microsoft SQL Server Data Binding
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Microsoft SQL Server in EJ2 React Pivot Table Component
+# Microsoft SQL Server data binding in React Pivot Table
 
 This section describes how to retrieve data from SQL Server database using [Microsoft SqlClient](https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient?view=dotnet-plat-ext-7.0) and bind it to the Pivot Table via a Web API controller.
 

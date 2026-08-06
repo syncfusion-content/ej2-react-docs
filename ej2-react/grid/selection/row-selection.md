@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Row selection | Syncfusion
-description: React Grid row selection explains single and multi-row selection modes, keyboard behaviors, and events to handle selection changes.
+title: React Grid Row Selection | Syncfusion
+description: Learn how to select single or multiple rows in React Data Grid with selection modes, keyboard interactions, selection APIs, and row selection events.
 control: Row selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row Selection in React Grid Component
+# Row Selection in React Data Grid
 
 Row selection in the Grid component provides interactive selection of specific rows or ranges of rows within the grid. Row selection can be performed effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when highlighting, manipulating, or performing actions on specific rows within the grid.
 

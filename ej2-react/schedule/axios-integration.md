@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Schedule and Axios | Syncfusion
-description: Checkout and learn about Getting started with React Schedule component of Syncfusion Essential JS 2 using Axios.
+title: Getting Started with React Scheduler and Axios | Syncfusion
+description: Learn how to integrate the Syncfusion React Scheduler with Axios to perform CRUD operations against an ASP.NET Core API.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion React Scheduler with ASP.NET Core API using Axios
+# Getting Started with React Scheduler and Axios
 
 This section provides a step-by-step guide for setting up a React application and integrating the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) component with an ASP.NET Core Web API backend (using EF Core and SQL Server) through Axios.
 
@@ -33,17 +33,23 @@ With this setup, Axios sends all Scheduler actions to the ASP.NET Core backend, 
 
 Before getting started with the application, ensure the following prerequisites are met:
 
-* **Node.js ≥ 18.x (LTS Recommended)**   
-Required for running and managing the React application, providing stable support for modern JavaScript tooling.
+### Required
+* **Node.js ≥ 18.x** — Required for running the React application with modern JavaScript tooling.  
+  **Verify:** `node --version`
 
-* **.NET 10 SDK (ASP.NET Core 10 Web API)**
-Required to build and run the ASP.NET Core 10 backend that integrates with the Syncfusion® React Scheduler.
+* **.NET 10 SDK** — Required to build and run the ASP.NET Core 10 backend.  
+  **Verify:** `dotnet --version`
 
-* **SQL Server 2022 / SQL Server LocalDB (MSSQLLocalDB)**  
-Required for storing and retrieving event data. LocalDB is recommended during development for lightweight, file‑based database access.
+* **SQL Server 2022 / SQL Server LocalDB (MSSQLLocalDB)** — Required for storing event data.  
+  **Verify:** `sqllocaldb info` (should show "MSSQLLocalDB")  
+  **Note:** If not installed, download SQL Server Express with LocalDB from [Microsoft](https://www.microsoft.com/en-in/sql-server/sql-server-downloads)
 
-* **Axios ≥ 1.x (Installed in React)**  
-Required for making REST API calls between the React front end and the ASP.NET Core 10 Web API backend.
+* **Axios ≥ 1.x** — Required for REST API calls. Installed via npm in section 2.1.
+
+### Recommended
+* **Visual Studio Code** or **Visual Studio 2022** — For development and debugging
+* **SQL Server Management Studio (SSMS)** — Optional, for database inspection
+* **Postman** — Optional, for testing API endpoints independently
 
 ## Architecture Overview
 
@@ -73,22 +79,29 @@ Provides the backend service that exposes the REST endpoints used by the Syncfus
 
 ### 1.1 Create project & install required packages
 
-Creates an ASP.NET Core Web API project and adds the required packages for Swagger and Entity Framework Core.
+Creates an ASP.NET Core Web API project and adds required packages for Swagger and Entity Framework Core.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
 dotnet new webapi -n ScheduleApi   
 cd ScheduleApi   
-//Swagger UI (needed explicitly for .NET 9+)   
+// Swagger UI (required for .NET 10)
 dotnet add package Swashbuckle.AspNetCore   
-//EF Core SQL Server provider (if not present)   
+// EF Core SQL Server provider
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer   
-//EF Core tools are used from CLI (install globally if needed)   
-dotnet add package Microsoft.EntityFrameworkCore.Tools   
+// EF Core CLI tools
+dotnet add package Microsoft.EntityFrameworkCore.Tools
 
 {% endhighlight %}
 {% endtabs %}
+
+**Verify installation:**
+```bash
+dotnet list package
+```
+
+You should see the three packages listed in the output.
 
 ### 1.2 Add the connection string in `appsettings.json`
 
@@ -265,19 +278,27 @@ public class ScheduleController(AppDbContext db) : ControllerBase
 
 ### 1.6 Apply database migrations
 
-Creates and applies Entity Framework Core migrations to generate the database schema and supports producing an idempotent SQL script for production deployment.
+Creates and applies Entity Framework Core migrations to generate the database schema.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-//from ScheduleApi folder   
+// Run from ScheduleApi folder
 dotnet ef migrations add InitialCreate   
 dotnet ef database update   
 
 {% endhighlight %}
 {% endtabs %}
 
-For **production**, generate an **idempotent SQL script** and apply via deployment (don’t auto‑migrate on startup):
+**Common Migration Issues:**
+
+| Issue | Solution |
+|-------|----------|
+| "Unable to locate the factory method for type DbContextOptions" | Ensure AppDbContext is registered in Program.cs and uses correct namespace |
+| "Cannot connect to LocalDB" | Verify SQL Server LocalDB is running: `sqllocaldb start MSSQLLocalDB` |
+| "Database already exists" | Migration applies only new changes; existing db is updated automatically |
+
+**For Production**, generate an idempotent SQL script (can be safely re-run without side effects):
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -286,6 +307,8 @@ dotnet ef migrations script --idempotent -o migrate.sql
 
 {% endhighlight %}
 {% endtabs %}
+
+Apply the SQL script manually via your deployment pipeline instead of auto-migrating.
 
 ## 2. Frontend – React + Syncfusion React Scheduler + Axios
 
@@ -301,10 +324,17 @@ Creates a React application using Vite and installs the Syncfusion Scheduler and
 npm create vite@latest react-scheduler-axios -- --template react   
 cd react-scheduler-axios   
 npm i   
-npm i @syncfusion/ej2-react-schedule axios   
+npm i @syncfusion/ej2-react-schedule axios
 
 {% endhighlight %}
 {% endtabs %}
+
+**Verify installation:**
+```bash
+npm list @syncfusion/ej2-react-schedule axios
+```
+
+Both packages should appear with version numbers in the output. **Required versions:** React ≥ 18.x, Axios ≥ 1.x
 
 ### 2.2 Add the required Syncfusion styles
 

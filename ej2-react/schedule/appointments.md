@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appointments in React Schedule component | Syncfusion
-description: Learn here all about Appointments in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Appointments in React Scheduler | Syncfusion
+description: Learn how to create and manage appointments in the Syncfusion React Scheduler, including normal, all-day, spanned, and recurring events.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appointments in React Schedule component
+# Appointments in React Scheduler
 
 Appointments represent scheduled items for a specific time period within the Scheduler. Appointments can be created for various time ranges, with each appointment categorized according to its duration and recurrence. The Scheduler categorizes events as follows:
 
@@ -56,12 +56,18 @@ Represents an appointment that is created for an entire day such as holiday even
 
 Use CSS customization to hide all-day row appointments in the Scheduler UI.
 
-```ts
-    <style>
-        .e-schedule .e-date-header-wrap .e-schedule-table thead {
-           display: none;
-        }
-    </style>
+```css
+.e-schedule .e-all-day-row {
+    display: none;
+}
+```
+
+Alternatively, if you want to hide the entire all-day header:
+
+```css
+.e-schedule .e-date-header-wrap .e-schedule-table thead {
+    display: none;
+}
 ```
 
 ## Expanding all-day appointments view on load
@@ -118,9 +124,15 @@ The following example illustrates creating a recurring event using a specific re
 
 ### Adding exceptions
 
-To exclude specific instances from a recurrence series, add the exception dates to the [`recurrenceException`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#recurrenceexception) field in ISO date time format without hyphens.
+To exclude specific instances from a recurrence series, add exception dates to the [`recurrenceException`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#recurrenceexception) field in UTC format.
 
-For example, 22nd February 2026 can be represented as 20260222. Also, the time part being represented in UTC format needs to add "Z" after the time portion with no space. "07:30:00 UTC" is therefore represented as "073000Z".
+**Date-Time Format:** `YYYYMMDDTHHmmssZ`
+
+**Format Rules:**
+- Date portion: No hyphens (e.g., February 22, 2026 = `20260222`)
+- Time portion: UTC format with "Z" suffix (e.g., 07:30:00 UTC = `073000Z`)
+- Complete example: `20260222T073000Z`
+- Multiple exceptions: Comma-separated (e.g., `20260222T073000Z,20260223T100000Z`)
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -258,7 +270,7 @@ The built-in validation support has been added by default for recurring appointm
 |-------|---------|
 | The recurrence pattern is not valid. | This alert will raise, when the selected recurrence rule value is not a valid one. For example, when you try to select the end date value (using `Until` option) for a recurring event, which occurs before the start date, an alert will popup out saying that the chosen pattern is invalid. |
 | The changes made to specific instances of this series will be cancelled and those events will match the series again. | This alert will raise, when you try to edit the whole series, whose occurrence might have been already edited. For example, If there are five occurrences and one of the occurrence is already edited. Now, when you try to edit the entire series, you will get this validation alert. |
-| The duration of the event must be shorter than how frequently it occurs. Shorten the duration, or change the recurrence pattern in the recurrence event editor. | This validation will occur, if the event duration is longer than the selected frequency. For example, if you create a recurring appointment with two days duration in `Daily` frequency with no intervals set to it, you may get this alert. |
+| The duration of the event must be shorter than how frequently it occurs. Shorten the duration, or change the recurrence pattern in the recurrence event editor. | This validation occurs when event duration exceeds the recurrence interval. For example, a 2-day event with daily (1-day) recurrence would trigger this. **Solution:** Make the event duration shorter than the recurrence interval, or increase the recurrence interval (e.g., every 3 days). |
 | Some months have fewer than the selected date. For these months, the occurrence will fall on the last date of the month. | When you try to create a recurring appointment on 31st of every month, where few months won’t have 31 days and in this scenario, you will get this alert. |
 | Two occurrences of the same event cannot occur on the same day. | This validation will occur, when you try to edit or move any single occurrence to some other date, where another occurrence of the same event is already present. |
 
@@ -272,22 +284,22 @@ The Scheduler's dataSource usually holds the event instances, where each of the 
 
 The built-in fields available on Scheduler event object are as follows.
 
-| Field name | Description |
-|-------|---------|
-| id | The [`id`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#id) field needs to be defined as mandatory and this field usually assigns a unique ID value to each of the events.|
-| subject | The [`subject`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#subject) field is optional, and usually assigns the summary text to each of the events.|
-| startTime | The [`startTime`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#starttime) field defines the start time of an event and it is mandatory to provide it for any of the valid event objects.|
-| endTime | The [`endTime`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#endtime) field defines the end time of an event and it is mandatory to provide the end time for any of the valid event objects.|
-| startTimezone | It maps the [`startTimezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#starttimezone) field from the dataSource and usually accepts the valid IANA timezone names. It is assumed that the value provided for this field is taken into consideration while processing the [`startTime`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#starttime)  field. When this field is not mapped with any timezone names, then the events will be processed based on the timezone assigned to the Scheduler.|
-| endTimezone | It maps the  [`endTimezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#endtimezone) field from the dataSource and usually accepts the valid IANA timezone names. It is assumed that the value provided for this field is taken into consideration while processing the [`endTime`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#endtime) field. When this field is not mapped with any timezone names, then the events will be processed based on the timezone assigned to the Scheduler.|
-| location | It maps the [`location`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#location) field from the dataSource and the location text value will be displayed over the events.|
-| description | It maps the [`description`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#description) field from the dataSource and denotes the event description which is optional.|
-| isAllDay | The [`isAllDay`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#isallday) field is mapped from the dataSource and is used to denote whether an event is created for an entire day or for specific time alone. Usually, an event with [`isAllDay`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#isallday) field set to true will be considered as an all-day event. |
-| recurrenceID | It maps the [`recurrenceID`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#recurrenceid) field from dataSource and usually holds the ID value of the parent recurrence event. This field is applicable only for the edited occurrence events.|
-| recurrenceRule | It maps the [`recurrenceRule`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#recurrencerule) field from dataSource and holds the recurrence rule value in a string format. Also, it uniquely identifies whether the event belongs to a recurring type or normal ones. |
-| recurrenceException | It maps the [`recurrenceException`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#recurrenceexception) field from dataSource and is used to hold the collection of exception dates, on which the recurring occurrences needs to be excluded. The [`recurrenceException`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#recurrenceexception) should be specified in UTC format. |
-| isReadonly | It maps the [`isReadonly`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#isreadonly) field from dataSource. It is mainly used to make specific appointments as readonly when set to `true`. |
-| isBlock | It maps the [`isBlock`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#isblock) field from dataSource. It is used to block the particular time ranges in the Scheduler and prevents the event creation on those time slots. |  
+| Field name | Required | Description |
+|-------|---------|---------|
+| id | Yes | The [`id`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#id) field assigns a unique ID to each event. Required for all CRUD operations.|
+| subject | No | The [`subject`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#subject) field assigns the summary text to each event. Optional but recommended.|
+| startTime | Yes | The [`startTime`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#starttime) field defines when an event begins. Required for all valid event objects.|
+| endTime | Yes | The [`endTime`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#endtime) field defines when an event ends. Required for all valid event objects.|
+| startTimezone | No | The [`startTimezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#starttimezone) field accepts valid IANA timezone names and overrides the Scheduler's timezone for the event's start time. Example: "America/New_York". If not provided, the Scheduler's timezone is used.|
+| endTimezone | No | The [`endTimezone`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#endtimezone) field accepts valid IANA timezone names and overrides the Scheduler's timezone for the event's end time. Example: "Europe/London". If not provided, the Scheduler's timezone is used.|
+| location | No | The [`location`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#location) field stores the event location and is displayed on the appointment.|
+| description | No | The [`description`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#description) field stores event details and is optional.|
+| isAllDay | No | The [`isAllDay`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#isallday) field (boolean) marks an event as an all-day appointment. Set to `true` for full-day events (e.g., holidays).|
+| recurrenceID | No | The [`recurrenceID`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#recurrenceid) field links an edited event occurrence to its parent recurring event. Only used for modified instances in a series.|
+| recurrenceRule | No | The [`recurrenceRule`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#recurrencerule) field holds an iCalendar-formatted string (e.g., "FREQ=DAILY;INTERVAL=1;COUNT=5") that defines recurrence pattern.|
+| recurrenceException | No | The [`recurrenceException`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#recurrenceexception) field stores exception dates (in UTC format without hyphens, e.g., "20260222") to exclude from a recurring series.|
+| isReadonly | No | The [`isReadonly`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#isreadonly) field (boolean) prevents editing of an appointment when set to `true`.|
+| isBlock | No | The [`isBlock`](https://ej2.syncfusion.com/react/documentation/api/schedule/field#isblock) field (boolean) blocks time slots and prevents new events from being created in those time ranges. Often used for unavailable/busy times.|  
 
 ### Binding different field names
 
@@ -332,7 +344,7 @@ In following example, the Subject field in event editor will display its appropr
 
 ## Adding Custom fields
 
-In addition to default fields, you can add any number of custom fields to Scheduler appointments. For example, the code below adds **Status** and **Priority**. Custom fields don't need to be mapped in [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings), but can be accessed for internal processing or application logic.
+In addition to default fields, you can add any number of custom fields to Scheduler appointments. For example, the code below adds **Status** and **Priority**. Custom fields don't need to be mapped in [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -345,11 +357,48 @@ In addition to default fields, you can add any number of custom fields to Schedu
 
 {% previewsample "page.domainurl/code-snippet/schedule/events-cs10" %}
 
+### Accessing custom fields
+
+Custom fields can be accessed in various event handlers and templates:
+
+**In event handlers:**
+```typescript
+scheduleRef.current.eventSettings.onActionBegin = (args: ActionEventArgs) => {
+  if (args.data) {
+    const customFieldValue = args.data.Status; // Access custom field
+    console.log('Status:', customFieldValue);
+  }
+};
+```
+
+**In templates (event templates, tooltips):**
+```typescript
+// Custom fields are available in the event object passed to template functions
+const eventTemplate = (props: any) => (
+  <div>
+    <span>{props.Subject}</span>
+    <span>{props.Status}</span> {/* Custom field */}
+  </div>
+);
+```
+
+**In resource grouping and custom rendering:**
+Custom fields are available on all event objects obtained from the dataSource and can be used for sorting, filtering, or custom UI rendering.
+
 ## Customize the order of the overlapping events
 
-By default, the Scheduler will render the overlapping events based on the start and end time. Now we can customize the order of the overlapping events based on the custom fields by using the [sortComparer](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#sortcomparer) property grouped under the [eventSettings](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings) property.
+By default, the Scheduler renders overlapping events based on their start and end times. You can customize the rendering order by using the [sortComparer](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#sortcomparer) property in [eventSettings](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings).
 
-The following code example shows how to sort the appointments based on the custom field as follows.
+**sortComparer Function Signature:**
+```typescript
+sortComparer(event1: any, event2: any): number
+```
+Returns: 
+- Negative number if event1 should be rendered before event2
+- Positive number if event1 should be rendered after event2
+- 0 if they have equal priority
+
+The following code example shows how to sort appointments based on a custom field (e.g., Priority):
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -364,11 +413,14 @@ The following code example shows how to sort the appointments based on the custo
 
 ## Preventing Overlapping Events
 
-By default, the Scheduler displays overlapping events according to their start and end times. To prevent overlapping, you can set the [`allowOverlap`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowoverlap) property to `false`.
+By default, the Scheduler displays overlapping events according to their start and end times. To prevent overlapping, set the [`allowOverlap`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowoverlap) property to `false`.
 
-When this property is set to `false`, any new or updated events that overlap with existing ones will trigger an overlap alert. The overlapping events will be collected in the [`overlapEvents`](https://ej2.syncfusion.com/react/documentation/api/schedule/popupOpenEventArgs#overlapevents) within the [`PopupOpenEventArgs`](https://ej2.syncfusion.com/react/documentation/api/schedule/popupOpenEventArgs).
+When `allowOverlap` is `false`:
+- New or updated events that conflict with existing ones trigger an overlap alert
+- Overlapping events are accessible via [`overlapEvents`](https://ej2.syncfusion.com/react/documentation/api/schedule/popupOpenEventArgs#overlapevents) in [`PopupOpenEventArgs`](https://ej2.syncfusion.com/react/documentation/api/schedule/popupOpenEventArgs)
+- The Scheduler uses specific logic to handle conflicts (see behavior below)
 
-When the allowOverlap property is set to `false`, the Scheduler behaves as follows:
+### Scheduler behavior with allowOverlap set to false
 
 **Initial Load Behavior:**  Upon initial loading, the Scheduler prioritizes non-overlapping events based on their duration and all-day status. Events with longer durations and those marked as all-day receive higher priority to ensure there are no overlaps.
 
@@ -391,13 +443,22 @@ The following code example demonstrates how to enable the [`allowOverlap`](https
 
 {% previewsample "page.domainurl/code-snippet/schedule/events-cs51" %}
 
-**Limitations**
+### Limitations
 
-The [`allowOverlap`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowoverlap) property checks for event overlaps only within the currently visible date range. Events scheduled outside the rendered date range are not included in the overlap check by default.
+The [`allowOverlap`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowoverlap) property has the following limitation:
 
-If you need to check for overlaps with events outside the visible date range, you can leverage the [`promise`](https://ej2.syncfusion.com/react/documentation/api/schedule/actionEventArgs#promise) field within the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/schedule#actionbegin) event to validate all events before proceeding. By implementing a custom validation method inside the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/schedule#actionbegin) event, you can assign the result (a boolean) to the [`promise`](https://ej2.syncfusion.com/react/documentation/api/schedule/actionEventArgs#promise) field. If the result is `true`, the action (e.g., adding or saving the event) will proceed; if `false`, the action will be blocked.
+**Visible date range limitation:** By default, overlap checks only apply to events within the currently visible date range. Events outside the rendered date range are not checked for conflicts.
 
-Additionally, you can use the public method [`openOverlapAlert`](https://ej2.syncfusion.com/react/documentation/api/schedule#openoverlapalert) to show an alert popup whenever an overlap occurs and the result is `false`.
+**Workaround - Check overlaps across all events:**
+
+To validate overlaps across the entire dataset (not just visible range), implement custom validation using the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/schedule#actionbegin) event:
+
+1. Access all events in the dataSource
+2. Implement overlap logic in the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/schedule#actionbegin) event
+3. Assign the validation result (boolean) to the [`promise`](https://ej2.syncfusion.com/react/documentation/api/schedule/actionEventArgs#promise) field
+   - `true` = proceed with action
+   - `false` = block the action
+4. Optionally use [`openOverlapAlert`](https://ej2.syncfusion.com/react/documentation/api/schedule#openoverlapalert) to display alert popup
 
 The following code example demonstrates how to check for overlaps when an event is added. If an overlap is found, the event won't be added, and an alert will be shown.
 
@@ -414,13 +475,25 @@ The following code example demonstrates how to check for overlaps when an event 
 
 ## Drag and drop appointments
 
-Reschedule appointments by dragging and dropping them. Inject the `DragAndDrop` module and set [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowdraganddrop) to `true`. In mobile mode, you can drag and drop the events by tap holding an event and dropping them on to the desired location.
+Reschedule appointments by dragging and dropping them. To enable drag and drop:
+
+1. **Inject the `DragAndDrop` module** in your Scheduler component:
+   ```typescript
+   import { Inject, DragAndDrop } from '@syncfusion/ej2-react-schedule';
+   // In component: <Inject services={[DragAndDrop, ...otherServices]} />
+   ```
+
+2. **Set the property** [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowdraganddrop) to `true`
+
+On mobile devices, tap and hold an event, then drag it to the desired location.
 
 Learn more about dragging external items and advanced drag/resize options in this video:
 
 {% youtube "https://www.youtube.com/watch?v=lk-P4YV8xaw" %}
 
-> Drag and drop is supported in all Scheduler views except Agenda, Month-Agenda, and Year View.
+> **Drag and drop support by view:**
+> - **Supported:** Day, Week, Work Week, Timeline Day, Timeline Week, Timeline Month, Month
+> - **Not supported:** Agenda, Month-Agenda, Year View
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -435,11 +508,15 @@ Learn more about dragging external items and advanced drag/resize options in thi
 
 ### Drag and drop multiple appointments
 
-We can drag and drop multiple appointments by enabling the [`allowMultiDrag`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowmultidrag) property. We can select multiple appointments by holding the CTRL key. Once the events are selected, we can leave the CTRL key and start dragging the event.
+To drag and drop multiple appointments:
 
-We can also drag multiple events from one resource to another resource. In this case, if all the selected events are in the different resources, then all the events should be moved to the single resource that is related to the target event.
+1. **Enable multiple drag:** Set [`allowMultiDrag`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowmultidrag) to `true`
+2. **Select events:** Hold **Ctrl** (Windows/Linux) or **Cmd** (Mac) and click events to select multiple
+3. **Drag:** Release Ctrl/Cmd and drag the selected events to a new location
 
->Note: Multiple event drag is not supported on mobile devices.
+**Multi-resource drag:** When dragging multiple events from different resources to a single resource, all events move to the target resource.
+
+> **Limitation:** Multiple event drag is not supported on mobile devices.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -546,7 +623,7 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 
 {% previewsample "page.domainurl/code-snippet/schedule/events-cs19" %}
 
-### Drag and drop items from external source
+### Drag and drop items from an external source
 
 It is possible to drag and drop the unplanned items from any of the external source into the Scheduler, by manually saving those dropped item as a new appointment data through [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#addevent) method of Scheduler.
 

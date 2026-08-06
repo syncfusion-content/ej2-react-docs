@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Cell Editing | Syncfusion
-description: React Grid cell editing provides streamlined edit workflows, server integration examples, and reliable strategies for saving updates.
+title: React Grid Cell Editing | Syncfusion
+description: Learn how to edit grid cells in React Data Grid, customize editing workflows, validate input, manage updates, and control editing behavior.
 control: Cell editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell editing in React Grid Component
+# Cell Editing in React Data Grid
 
 Cell editing provides a streamlined way to update individual cell values directly within the grid. Cell editing is designed for quick, inline modifications, making data entry and corrections more efficient. This approach ensures that changes are applied seamlessly to large datasets while maintaining consistency with the Grid’s overall editing experience.
  

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - PostgreSQL Server | Syncfusion
-description: React Grid PostgreSQL Server integration provides backend connectivity with PostgreSQL for streamlined data retrieval, updates, and full server‑side operations.
+title: React Grid PostgreSQL Server Data Binding | Syncfusion
+description: Learn how to connect React Data Grid to PostgreSQL Server, bind data through API services, and perform efficient CRUD operations.
 platform: ej2-react
 control: grid
 keywords: adaptors, customadaptor, urladaptor, postgresql, remotedata
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting PostgreSQL Server data to Syncfusion React Grid
+# PostgreSQL Server Data Binding in React Data Grid
 
 This section describes how to connect and retrieve data from a PostgreSQL Server database using [Npgsql EntityFrameworkCore PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) and bind it to the Syncfusion React Grid.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Frequently asked questions in React Schedule component | Syncfusion
-description: Learn here all about Frequently asked questions in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Frequently Asked Questions in React Scheduler | Syncfusion
+description: Find answers to common questions and solutions to frequent issues when working with the Syncfusion React Scheduler control.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently asked questions in React Schedule component
+# Frequently Asked Questions in React Scheduler
 
 In this article, you can find some frequently asked questions and corresponding solutions while getting hands-on experience with the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
 
@@ -18,11 +18,11 @@ In this article, you can find some frequently asked questions and corresponding 
 
 ![Maximum call stack size exceeded](./images/max-call-stack-size.png)
 
-**Solution:**
+**Root Cause:** The error occurs when Scheduler views are not imported or injected into the project.
 
-This error occurs when a scheduler views that were not imported into the project. You can resolve this issue by importing the required view modules.
+**Solution:** Import and inject the required view modules. For example, if you're using the `Day` view without injecting its module, add the corresponding service to the `Inject` component.
 
-In the below code, `Day` option is used without injecting, So, it throws the above error. You can resolve this problem by simply injecting the day module in below code.
+> **Note:** The example below shows the correct way to use the `Day` view with proper module injection to avoid the "Maximum call stack size exceeded" error.
 
 
 
@@ -67,18 +67,22 @@ render(<TimelineView />, document.getElementById('sample'));
 
 ## Grouping with empty resources
 
-Grouping without providing any resource data will throw the following problems.
+**Problem Description:** When grouping is enabled without providing resource data, the following issues occur:
 
-* Normal (vertical) views are rendered, but you are not able to perform CRUD operations
-* Timeline views do not render and display an empty scheduler table.
+- **Normal (vertical) views** - Render but CRUD operations fail
+- **Timeline views** - Do not render; displays empty scheduler table
 
-To avoid this, do not enable grouping when no resources are defined.
+**Solution:** Do not enable grouping when no resources are defined in your Scheduler configuration.
+
+> **Important:** Always ensure resource data is properly configured before enabling the grouping feature.
 
 ## Not providing e-field in editor template
 
-**Error:** When using a custom editor template, the `e-field` attribute value is missing in the input elements.
+**Problem:** When using a custom editor template, the `e-field` attribute is missing from input elements, causing data binding failures.
 
-**Solution:** The `e-field` attribute is mandatory for each form element in the editor template. Please refer [here](https://ej2.syncfusion.com/react/documentation/schedule/editor-template#customizing-event-editor-using-template) for more info.
+**Solution:** The `e-field` attribute is mandatory for each form element in the editor template to enable proper data binding.
+
+> **Important:** Every input control in your custom editor template must include the `e-field` attribute matching the corresponding event property name. Refer to the [Editor Template Customization Guide](https://ej2.syncfusion.com/react/documentation/schedule/editor-template#customizing-event-editor-using-template) for detailed examples.
 
 ## Missing CSS reference
 
@@ -86,11 +90,13 @@ To avoid this, do not enable grouping when no resources are defined.
 
   ![Missing CSS reference](./images/missing-css-reference.png)
 
-**Solution:**
+**Problem:** The Scheduler component does not render properly when CSS stylesheets are not included in the project.
 
-The above problem occurs when missing CSS references for the scheduler in a project. You can resolve this issue by providing proper CSS for the scheduler.
+**Solution:** Include the appropriate Syncfusion CSS stylesheet in your HTML file's `<head>` section. You can either use CDN links or local CSS files.
 
-```
+> **Tip:** Use one of the available Syncfusion themes: `material.css`, `bootstrap.css`, `fabric.css`, `highcontrast.css`, or `tailwind.css`.
+
+```html
 <html>
 <head>
     <title>Syncfusion React Sample</title>
@@ -100,42 +106,48 @@ The above problem occurs when missing CSS references for the scheduler in a proj
     <meta name="description" content="Syncfusion React UI Components" />
     <meta name="author" content="Syncfusion" />
 
-      <! –– scheduler CSS is referred from this link ––>
+    <!-- Include Scheduler CSS from CDN -->
     <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
 
 </head>
 
 <body class="material">
-    <div id='sample'>
+    <div id='sample'></div>
 </body>
 </html>
 ```
 
 ## QuickInfoTemplate at bottom
 
-When using the [`quickInfoTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#quickinfotemplates) in scheduler, sometimes quickinfo popup not shown fully at the bottom area of scheduler. You can resolve this by using [`cellClick`](https://ej2.syncfusion.com/react/documentation/api/schedule#cellclick) and [`eventClick`](https://ej2.syncfusion.com/react/documentation/api/schedule#eventclick) events and below code snippet.
+**Problem:** When using [`quickInfoTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#quickinfotemplates), the quick info popup may not display fully at the bottom area of the Scheduler.
 
-```ts
-   constructor() {
-    super(...arguments);
-    this.eventAdded = false;
-   }
-   .
-   .
-  onClick(args) {
-    if (!this.eventAdded) {
-      let popupInstance = document.querySelector('.e-quick-popup-wrapper').ej2_instances[0];
-      popupInstance.open = () => {
-        popupInstance.refreshPosition();
-      };
-      this.eventAdded = true;
-    }
+**Solution:** Use the [`cellClick`](https://ej2.syncfusion.com/react/documentation/api/schedule#cellclick) and [`eventClick`](https://ej2.syncfusion.com/react/documentation/api/schedule#eventclick) events to refresh the popup position. This ensures the popup is repositioned when clicked.
+
+```tsx
+constructor() {
+  super(...arguments);
+  this.eventAdded = false;
+}
+
+onClick(args) {
+  if (!this.eventAdded) {
+    let popupInstance = document.querySelector('.e-quick-popup-wrapper').ej2_instances[0];
+    popupInstance.open = () => {
+      popupInstance.refreshPosition();
+    };
+    this.eventAdded = true;
   }
-  .
-  .
-  .
-<ScheduleComponent id="schedule" cellClick={this.onClick.bind(this)} eventClick={this.onClick.bind(this)}>
+}
+
+// Add this to your ScheduleComponent JSX:
+<ScheduleComponent 
+  id="schedule" 
+  cellClick={this.onClick.bind(this)} 
+  eventClick={this.onClick.bind(this)}
+>
 ```
+
+> **Tip:** The `refreshPosition()` method recalculates the popup's position based on available viewport space, ensuring it displays correctly even near boundaries.
 
 ## Not importing culture files while using localization
 
@@ -143,19 +155,27 @@ When using the [`quickInfoTemplate`](https://ej2.syncfusion.com/react/documentat
 
 ![Locale import issue](./images/locale-import-issue.png)
 
- While using [`locale`](https://ej2.syncfusion.com/react/documentation/schedule/localization) in scheduler, not importing the required culture files properly throws the problem.
+**Problem:** When using [`locale`](https://ej2.syncfusion.com/react/documentation/schedule/localization), missing or incorrectly imported culture files prevent proper localization from functioning.
 
-**Solution:** Properly add and import the culture files(numberingSystems, timeZoneNames, loadCldr, L10n etc.,) in your project will resolve the problem.
+**Solution:** Import all required CLDR (Common Locale Data Repository) files and initialize localization using the `loadCldr()` and `L10n.load()` functions.
 
-```ts
+**Required CLDR files to import:**
+- `numbers.json` - Number formatting for the locale
+- `timeZoneNames.json` - Timezone information
+- `ca-gregorian.json` - Calendar data
+- `numberingSystems.json` - Numbering system data
+
+```tsx
 import { loadCldr, L10n } from '@syncfusion/ej2-base';
 import enNumberData from '@syncfusion/ej2-cldr-data/main/en-GB/numbers.json';
 import entimeZoneData from '@syncfusion/ej2-cldr-data/main/en-GB/timeZoneNames.json';
 import enGregorian from '@syncfusion/ej2-cldr-data/main/en-GB/ca-gregorian.json';
 import enNumberingSystem from '@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json';
 
+// Step 1: Load CLDR data
 loadCldr(enNumberData, entimeZoneData, enGregorian, enNumberingSystem);
 
+// Step 2: Configure locale-specific strings
 L10n.load({
   'en-GB': {
     schedule: {
@@ -163,8 +183,19 @@ L10n.load({
       week: 'Week',
       workWeek: 'Work Week',
       month: 'Month'
-      }
     }
-  });
-
+  }
+});
 ```
+
+## See also
+
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler)
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule)
+* [Editor Template Customization](https://ej2.syncfusion.com/react/documentation/schedule/editor-template)
+* [Scheduler Localization Guide](https://ej2.syncfusion.com/react/documentation/schedule/localization)
+* [Quick Popup Template](https://ej2.syncfusion.com/react/documentation/api/schedule#quickinfotemplates)
+* [Scheduler Event Grouping](https://ej2.syncfusion.com/react/documentation/schedule/resources)
+* [Scheduler Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview)
+
+> **Important:** Always load CLDR data before rendering the Scheduler component with localization. Missing files will cause localization to fail silently.

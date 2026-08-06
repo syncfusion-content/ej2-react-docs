@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Show quick info template in React Schedule component | Syncfusion
-description: Learn here all about Show quick info template in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Show Quick Info Template in React Scheduler | Syncfusion
+description: Learn how to customize the Quick Info popup in the Syncfusion React Scheduler using a template to change its appearance and content.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show quick info template in React Schedule component
+# Quick Info Template in React Scheduler
 
-This demo showcases the quick popups for cells and appointments using customized templates.
+This demo shows how to customize the quick info popups for cells and appointments using templates.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

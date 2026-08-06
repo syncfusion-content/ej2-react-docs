@@ -1,24 +1,26 @@
 ---
 layout: post
-title:  React Scheduler with Vite and JavaScript | Syncfusion
-description:  Checkout and learn about Getting started with React Schedule component of Syncfusion Essential JS 2 using Vite and JavaScript
+title: Getting Started with React Scheduler and Vite | Syncfusion
+description: Learn how to get started with the Syncfusion React Scheduler using Vite and JavaScript, exploring setup, configuration, and basic usage.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion® React Scheduler using Vite and JavaScript
+# Getting Started with React Scheduler and Vite
 
-This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/guide/) project with JavaScript and integrating [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
+This article explains how to set up a [Vite](https://vite.dev/guide/) project with JavaScript and integrate [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
 
-Vite is a fast, modern build tool and development server optimized for projects using technologies such as ES modules, TypeScript, JSX, and CSS modules. Its development server leverages native ES modules in modern browsers, providing rapid project startup and efficient feedback during development.
+Vite is a fast, modern build tool and development server optimized for projects that use ES modules, TypeScript, JSX, and CSS modules. Its development server leverages native ES modules in modern browsers, which provides quick startup and fast feedback during development.
 
 ## Prerequisites
+
 [System requirements for Syncfusion® React UI components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Set up the Vite project
-To create a new `Vite` project, use one of the commands that are specific to either NPM or Yarn.
+
+To create a new Vite project, use one of the commands specific to NPM or Yarn.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -33,9 +35,9 @@ yarn create vite
 {% endhighlight %}
 {% endtabs %}
 
-Using one of the above commands will lead you to set up additional configurations for the project as below:
+Using either command starts the project setup flow with the following configurations:
 
-**Step 1: Define the project name** - You can specify the name of the project directly. Let’s specify the name of the project as **react-app** for this article.
+**Step 1: Define the project name** - Specify the project name directly. This article uses **react-app**.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -45,7 +47,7 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2: Select the framework** - Select `React` as the framework. This will create a React project.
+**Step 2: Select the framework** - Select `React` as the framework.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -55,7 +57,7 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Choose the framework variant** - Select `JavaScript` as the framework variant to build this Vite project using JavaScript.
+**Step 3: Choose the framework variant** - Select `JavaScript` as the framework variant.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -66,7 +68,7 @@ Using one of the above commands will lead you to set up additional configuration
 {% endtabs %}
 
 
-**Step 4:** If prompted for experimental options, choose according to your needs. In this guide, **No** option is selected.
+**Step 4:** If prompted for experimental options, choose according to your needs. This guide selects **No**.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -76,7 +78,7 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-**Step 5:** When asked whether to install dependencies and start now, choose “Yes” to install and run immediately, or “No” to install later and run the dev server manually.
+**Step 5:** When asked whether to install dependencies and start now, choose **Yes** to install and run immediately, or **No** to install later and start the dev server manually.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -86,11 +88,11 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-After executing the above commands, the application will be available at: `http://localhost:5173`
+After the setup completes, the application is available at `http://localhost:5173`.
 
 ## Add Syncfusion® React Scheduler packages
 
-Syncfusion® React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion® React Schedule component in the project, install the corresponding npm package [Syncfusion React Scheduler Package](https://www.npmjs.com/package/@syncfusion/ej2-react-schedule) by the command given below.
+Syncfusion® React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use the Syncfusion® React Schedule component in the project, install the corresponding package [@syncfusion/ej2-react-schedule](https://www.npmjs.com/package/@syncfusion/ej2-react-schedule) by using one of the following commands.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -106,7 +108,8 @@ yarn add @syncfusion/ej2-react-schedule
 {% endtabs %}
 
 ## Import Syncfusion® CSS styles
-In this example, the material theme styles for the Scheduler and its dependencies are imported in the `src/App.css`.
+
+In this example, the Material theme styles for the Scheduler and its dependencies are imported in `src/App.css`.
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -123,10 +126,11 @@ In this example, the material theme styles for the Scheduler and its dependencie
 {% endhighlight %}
 {% endtabs %}
 
-> The order of importing CSS styles should be in line with its dependency graph.
+> **Note:** Import CSS styles in the same order as their dependency graph.
 
 ## Add Syncfusion® React Schedule component
-In the `src/App.jsx` file, use the following code snippet to render the Syncfusion React Schedule component and import `App.css` to apply styles to the Scheduler.
+
+In `src/App.jsx`, use the following code snippet to render the Syncfusion React Schedule component and import `App.css` to apply styles.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -136,9 +140,9 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@
 
 const App = () => {
 
-	return (<ScheduleComponent>
-	  	<Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
-	</ScheduleComponent>);
+  return (<ScheduleComponent>
+    <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+  </ScheduleComponent>);
 
 };
 export default App;
@@ -146,13 +150,13 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
         
-> Above demo will display the empty scheduler.
+> **Note:** The preceding demo displays an empty Scheduler.
 
 ## Populating appointments
 
-To populate the empty Scheduler with appointments, bind the event data to it by assigning the `dataSource` property either with valid JSON data or else with remote URL, from where the data will be fetched.
+To populate the empty Scheduler with appointments, bind event data to it by assigning the `dataSource` property with either local JSON data or a remote URL.
 
-Here, the local JSON data is assigned to Scheduler's dataSource.
+Here, local JSON data is assigned to the Scheduler `dataSource`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -194,10 +198,10 @@ const App = () => {
       },
     ];
 
-    const eventSettings = { dataSource: data }
+    const eventSettings = { dataSource: data };
 
     return (<ScheduleComponent height='550px' selectedDate={new Date(2026, 1, 2)} currentView='Day' eventSettings={eventSettings} >
-      	<Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+      <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
     </ScheduleComponent>);
 
 };
@@ -207,6 +211,7 @@ export default App;
 {% endtabs %}
 
 ## Run the project
+
 To run the project, use the following command:
 
 {% tabs %}
@@ -224,8 +229,9 @@ yarn run dev
 
 
 ## Output Preview
+
 **Syncfusion React Scheduler**
 ![React Scheduler](./images/react-vite-js-output.png)
 *Image illustrating the Syncfusion React Scheduler* 
 
-> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-integrate-Syncfusion-React-Scheduler-with-Vite)
+> You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-integrate-Syncfusion-React-Scheduler-with-Vite).

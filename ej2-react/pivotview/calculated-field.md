@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Calculated field in React Pivot Table component | Syncfusion
-description: Learn how to create and use calculated fields in the Syncfusion React Pivot Table using custom formulas and arithmetic operations on existing data source fields.
-control: Calculated field
-platform: ej2-react 
+title: Calculated field in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table calculates new value fields at runtime using custom formulas, arithmetic operators, and the calculatedFieldSettings property.
+control: Pivot Table
+platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Calculated field in React Pivot Table component
+# Calculated field in React Pivot Table
 
 The calculated field feature enables users to create custom value fields using mathematical formulas and existing fields from their data source. Users can perform complex calculations with basic arithmetic operators and seamlessly integrate these custom fields into their pivot table for enhanced data visualization and reporting.
 

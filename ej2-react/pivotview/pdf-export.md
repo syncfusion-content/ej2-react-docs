@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pdf export in React Pivot Table component | Syncfusion
-description: Learn how to export the Syncfusion React Pivot Table data to PDF format with options to customize page orientation, size, and cell styling in the export.
-control: Pdf export
+title: PDF export in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table exports pivot data to PDF using the PdfExport module, with options to customize page size, orientation, and styling.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF export in React Pivot Table component
+# PDF export in React Pivot Table
 
 The React Pivot Table allows exporting pivot table data as a PDF document. To enable PDF export, inject the `PDFExport` module into the Pivot Table and set the [`allowPdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#allowpdfexport) property to **true**. Once enabled, use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method to generate and download the PDF file.
 

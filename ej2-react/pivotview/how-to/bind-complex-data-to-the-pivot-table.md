@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Complex JSON to flat JSON in React Pivotview component | Syncfusion
-description: Learn here all about how to convert complex JSON to flat JSON and assign it to the pivot table in Syncfusion React of Syncfusion Essential JS 2 and more.
+title: How to convert complex JSON to flat JSON in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to convert complex JSON to flat JSON in the React Pivot Table and assign it as the data source.
 platform: ej2-react
-control: Convert complex JSON to flat JSON and assign it to the pivot table 
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 <!-- markdownlint-disable MD009 -->
 
-# Complex JSON to flat JSON in React Pivotview component
+# How to convert complex JSON to flat JSON in React Pivot Table
 
 ## Overview
 

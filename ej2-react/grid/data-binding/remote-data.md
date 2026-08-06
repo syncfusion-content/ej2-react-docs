@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Remote Data | Syncfusion
-description: React Grid provides remote data binding options, adaptor configuration, server operations, and guidance for reliable server‑side data handling.
+title: React Grid Remote Data Binding | Syncfusion
+description: Learn how to bind remote data sources in React Data Grid using adaptors, configure server-side operations, and manage data efficiently.
 control: Remote data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote Data in React Grid component
+# Remote Data Binding in React Data Grid
 
 In React Grid component, binding remote data is a fundamental aspect that enhances the efficiency of data interaction. This process involves assigning the service data, represented as an instance of `DataManager`, to the `dataSource` property of the React Grid component. By doing so, seamless interaction with a remote data source is enabled, achieved by specifying the endpoint URL where the data is hosted.
 

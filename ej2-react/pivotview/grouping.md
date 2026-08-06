@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in React Pivot Table component | Syncfusion
-description: Learn how to group date, number, and string fields in the Syncfusion React Pivot Table component to organize and summarize data into meaningful categories.
+title: Grouping in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table groups date, number, and string fields into categories such as years, quarters, and value ranges for easier analysis.
 platform: ej2-react
-control: Grouping
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in React Pivot Table component
+# Grouping in React Pivot Table
 
 > This feature is applicable only for the relational data source.
 

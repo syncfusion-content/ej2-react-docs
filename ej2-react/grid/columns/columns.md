@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Columns | Syncfusion
-description: React Grid columns provides a complete guide to defining columns, types, widths, templates, and behaviors to model tabular data effectively.
+title: React Grid Columns | Syncfusion
+description: Learn how to define and configure columns in React Data Grid, including column types, widths, templates, and behaviors for effective data presentation.
 control: Columns 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Columns in React Grid Component
+# Columns in React Data Grid
 
 In Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, columns are the fundamental building blocks that display data from a data source. Each column maps to a specific field in the data source and is responsible for rendering values in the required format. For example, a dataset containing customer details such as "ID", "Name", "Email", and "Purchase Date" will present each field as an individual column in the Grid.
 

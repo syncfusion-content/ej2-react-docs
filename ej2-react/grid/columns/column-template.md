@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Column Template | Syncfusion
-description: React Grid column template supports creating custom cell content, editors, and formatting to render complex UI elements within grid columns.
+title: React Grid Column Template| Syncfusion
+description: Learn how to create custom column templates in React Data Grid to render rich cell content, editors, formatting, and interactive UI elements.
 control: Column template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column template in React Grid component
+# Column Template in React Data Grid
 
 The React Data Grid provides a [template](https://ej2.syncfusion.com/react/documentation/api/grid/column#template) option for displaying custom elements in a column instead of the field value. This is useful for displaying images, buttons, or other custom content within a column.
 

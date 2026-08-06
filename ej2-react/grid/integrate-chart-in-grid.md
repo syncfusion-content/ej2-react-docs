@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Integrate Chart in Grid | Syncfusion
-description: React Grid integrate chart in grid supports embedding charts within cells or detail sections, mapping data, and configuring options for combined visualizations.
+title: React Grid Integrate Chart in Grid | Syncfusion
+description: Learn how to integrate charts in React Data Grid by embedding charts in cells or detail views to visualize and analyze data effectively.
 control: Integrate Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Chart in Syncfusion React Grid
+# Integrate Chart in React Data Grid
 
 Grid and Chart integration in Syncfusion<sup style="font-size:70%">&reg;</sup> enables visualizing tabular data by linking the grid with a chart. Selected data can be rendered interactively as bar, line, or pie charts via the [ContextMenu](https://ej2.syncfusion.com/react/documentation/grid/context-menu) feature. This integration is suitable for dashboards, reporting tools, and other data-driven applications where tabular and visual representations improve analysis and decision making.
 

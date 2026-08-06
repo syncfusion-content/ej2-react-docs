@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Template editing | Syncfusion
-description: React Grid inline editing enables direct row edits, auto updates, conditional control, CRUD actions, confirmations, and flexible add/delete.
+title: React Grid Custom Template Editing | Syncfusion
+description: Learn how to use inline and dialog template editing in React Data Grid to customize edit forms, capture user input, and manage CRUD operations efficiently.
 control: Template editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template Editing in React Grid Component
+# Custom Template Editing in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component supports template editing, providing a powerful and flexible way to customize the appearance and behavior of cells during editing. React templates enable defining the structure and content of cells within the grid.
 

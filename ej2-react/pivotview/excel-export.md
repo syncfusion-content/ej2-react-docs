@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Excel export in React Pivot Table component | Syncfusion
-description: Learn how to export the Syncfusion React Pivot Table data to Excel format with options to customize the exported file's appearance and content.
-control: Excel export
+title: Excel export in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table exports pivot data to Excel and CSV using the ExcelExport module, with options to customize file and cell appearance.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel export in React Pivot Table component
+# Excel export in React Pivot Table
 
 The Pivot Table component supports exporting pivot data to **Excel** and **CSV** file formats. This enables data sharing and analysis in spreadsheet applications such as Microsoft Excel, Google Sheets, and more. To enable the export functionality, inject the `ExcelExport` module into the Pivot Table and set the [`allowExcelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#allowexcelexport) property to **true**.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Searching | Syncfusion
-description: React Grid searching covers built‑in search functionality, configuration options, case sensitivity, and examples to find and highlight data across the grid.
+title: React Grid Searching | Syncfusion
+description: Learn how to search data in React Data Grid with built-in search functionality, search configuration options, case sensitivity, and result highlighting.
 control: Searching 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Searching in React Grid Component
+# Searching in React Data Grid
 
 The Syncfusion React Grid includes a powerful built-in searching feature that enables efficient filtering of grid records based on search criteria. This feature allows quick discovery of specific data within large datasets. Whether the application works with small or large datasets, the search feature provides a seamless solution for locating relevant records instantly.
 

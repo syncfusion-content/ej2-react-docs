@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart based on pivot table selection in React | Syncfusion
-description: Learn here all about Chart based on pivot table selection in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Chart based on pivot table selection 
+title: How to render a chart on cell selection in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to render a chart from cell selection in the React Pivot Table using the cellSelected event.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart based on pivot table selection in React Pivotview component
+# How to render a chart on cell selection in React Pivot Table
 
 The React Pivot Table component supports creating charts based on cell selections within the pivot table. This customization allows charts to be plotted dynamically using data from selected cells, providing visual representation of specific data segments.
 

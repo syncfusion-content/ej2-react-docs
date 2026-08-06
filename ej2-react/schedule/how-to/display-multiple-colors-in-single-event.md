@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Multi-Color Events of React Schedule | Syncfusion
-description: Learn here all about rendering an event with multiple colors in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Show Multiple Colors in Single Event in React Scheduler | Syncfusion
+description: Learn how to render a single appointment with multiple colors in the Syncfusion React Scheduler using a custom event template.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multi-Color events in React Schedule component
+# Multi-Color events in React Scheduler
 
-In [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) we can display the multiple colors within a single event. This can be achieved by using the `template` option available within the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings) property. Here, we've used `SubCount` as an additional field. The SubCount field contains the background color and height values. Based on these values, events will be divided into different colors.
+In the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler), you can display multiple colors within a single event. This is achieved by using the `template` option within the [`eventSettings`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings) property. In this example, `SubCount` is used as an additional field. The `SubCount` field contains the background color and height values. Based on these values, events are divided into different colors.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

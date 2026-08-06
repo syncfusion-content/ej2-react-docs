@@ -1,18 +1,22 @@
 ---
 layout: post
-title: Localization in React Schedule component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Localization in React Scheduler | Syncfusion
+description: Learn how to localize the Syncfusion React Scheduler to adapt to different languages, cultures, time formats, and RTL mode.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Scheduler
+# Globalization and Localization in React Scheduler
 
-The Scheduler supports multiple date-time formats and cultures, enabling global usage and meeting diverse regional requirements.
+The Scheduler supports multiple date-time formats and cultures, enabling global usage and meeting diverse regional requirements. This section covers how to configure the Scheduler for different languages, locales, and regional settings.
 
-You can adapt the Scheduler to different languages by parsing and formatting dates or numbers ([`Internationalization`](https://ej2.syncfusion.com/documentation/common/internationalization)), and by adding culture-specific customization and translations for text ([`Localization`](https://ej2.syncfusion.com/documentation/common/localization)).
+You can adapt the Scheduler to different languages by:
+1. Parsing and formatting dates or numbers using **Internationalization** ([`Internationalization`](https://ej2.syncfusion.com/documentation/common/internationalization))
+2. Adding culture-specific customization and translations for text using **Localization** ([`Localization`](https://ej2.syncfusion.com/documentation/common/localization))
+
+> **Tip:** Internationalization (i18n) handles date/time/number formatting, while Localization (L10n) handles text translations. Both are needed for true multilingual support.
 
 ## Globalization
 
@@ -20,33 +24,45 @@ The Internationalization library provides support for formatting and parsing num
 
 By default, the Scheduler follows the English culture (`en-US`). To use a different culture, follow these steps:
 
-* Install the `ej2-cldr-data` package using the Syncfusion<sup style="font-size:70%">&reg;</sup> npm package:
+> **Important:** The Internationalization library uses CLDR (Common Locale Data Repository) data, which is an international standard for locale-specific formatting. This ensures consistent behavior across all locales.
 
-  ```
-  npm install @syncfusion/ej2-cldr-data --save
-  ```
+**Step 1: Install the CLDR Data Package**
+
+Install the `ej2-cldr-data` package using the Syncfusion<sup style="font-size:70%">&reg;</sup> npm package:
+
+```bash
+npm install @syncfusion/ej2-cldr-data --save
+```
 
 Once installed, the culture-specific JSON data can be found under `\node_modules\@syncfusion\ej2-cldr-data`.
 
-* Import the required cultures into the `app.ts` file as shown below:
+> **Note:** This package contains CLDR data for all supported locales. The package size is significant, so installation may take a few moments.
 
-    1. numberingSystems.json
-    2. ca-gregorian.json
-    3. numbers.json
-    4. timeZoneNames.json
+**Step 2: Import Required CLDR JSON Data**
 
-   ```ts
-    // Import loadCldr from ej2-base
-    import { loadCldr } from '@syncfusion/ej2-base';
-    import frNumberData from '@syncfusion/ej2-cldr-data/main/fr-CH/numbers.json';
-    import frTimeZoneData from '@syncfusion/ej2-cldr-data/main/fr-CH/timeZoneNames.json';
-    import frGregorian from '@syncfusion/ej2-cldr-data/main/fr-CH/ca-gregorian.json';
-    import frNumberingSystem from '@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json';
+Import the required culture-specific JSON data into your `app.ts` file. You need to import these files for each locale:
 
-    loadCldr(frNumberData, frTimeZoneData, frGregorian, frNumberingSystem);
-  ```
+| File | Purpose |
+|------|---------|
+| `numberingSystems.json` | Numbering system data |
+| `ca-gregorian.json` | Gregorian calendar data |
+| `numbers.json` | Number formatting data |
+| `timeZoneNames.json` | Timezone name data |
 
-* Set the culture in the Scheduler using the `locale` property.
+```ts
+// Import loadCldr from ej2-base
+import { loadCldr } from '@syncfusion/ej2-base';
+import frNumberData from '@syncfusion/ej2-cldr-data/main/fr-CH/numbers.json';
+import frTimeZoneData from '@syncfusion/ej2-cldr-data/main/fr-CH/timeZoneNames.json';
+import frGregorian from '@syncfusion/ej2-cldr-data/main/fr-CH/ca-gregorian.json';
+import frNumberingSystem from '@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json';
+
+loadCldr(frNumberData, frTimeZoneData, frGregorian, frNumberingSystem);
+```
+
+**Step 3: Set the Culture**
+
+Set the culture in the Scheduler using the `locale` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -64,9 +80,17 @@ Once installed, the culture-specific JSON data can be found under `\node_modules
 
 For more information about globalization, refer to the [Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) section.
 
+> **Tip:** When loading CLDR data, ensure all required JSON files are imported in the correct order. Missing any CLDR file may result in incomplete formatting for dates, numbers, or timezones.
+
 ## Localizing static Scheduler text
 
-The [Localization](https://ej2.syncfusion.com/documentation/common/localization) library enables displaying all static text, date content, and time modes of the Scheduler in the localized language. To achieve this, set the `locale` property of the Scheduler and define translations for static words using the `load` method.
+The [Localization](https://ej2.syncfusion.com/documentation/common/localization) library enables displaying all static text, date content, and time modes of the Scheduler in the localized language. To achieve this:
+
+1. Set the `locale` property of the Scheduler
+2. Define translations for static words using the `load` method
+3. Provide translations for both Scheduler and Recurrence Editor text
+
+> **Important:** Localization is independent of Internationalization. You must configure both for complete multilingual support with proper date/time formatting and translated UI text.
 
 For example, the following code defines French translations for all static words used in the Scheduler:
 
@@ -84,7 +108,9 @@ For example, the following code defines French translations for all static words
         
 {% previewsample "page.domainurl/code-snippet/schedule/localization-cs2" %}
 
-The localized words for static text used in the Scheduler and Recurrence Editor can be found in the following code. Static text for all cultures is available [`here`](https://github.com/syncfusion/ej2-locale).
+The localized words for static text used in the Scheduler and Recurrence Editor can be found in the following code. Static text for all cultures is available in the GitHub repository: [`ej2-locale`](https://github.com/syncfusion/ej2-locale).
+
+> **Tip:** You can use the pre-built locale files from the ej2-locale repository instead of manually defining all translations. Simply import the required locale file for your language.
 
 ```ts
 L10n.load({
@@ -216,6 +242,17 @@ L10n.load({
 
 The Scheduler supports all valid date formats. By default, it follows the universal format `MM/dd/yyyy`. If the [`dateFormat`](https://ej2.syncfusion.com/react/documentation/api/schedule#dateformat) property is not specified, the Scheduler uses the format based on the assigned locale. Since the default locale is `en-US`, the Scheduler follows the `MM/dd/yyyy` pattern.
 
+**Common date formats:**
+
+| Format | Example | Description |
+|--------|---------|-------------|
+| `MM/dd/yyyy` | 08/15/2024 | Month/Day/Year (US format) |
+| `dd/MM/yyyy` | 15/08/2024 | Day/Month/Year (EU format) |
+| `yyyy-MM-dd` | 2024-08-15 | ISO format |
+| `dd-MMM-yyyy` | 15-Aug-2024 | Day-Month(abbreviated)-Year |
+
+> **Tip:** Using locale-aware date formats ensures consistent display across different regions. The `dateFormat` property overrides the locale's default format.
+
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/schedule/local-data-cs19/app/index.jsx %}
@@ -232,7 +269,18 @@ The Scheduler supports all valid date formats. By default, it follows the univer
 
 ## Setting the time format
 
-Time formats is a way of representing the time value in different string formats in the Scheduler. By default, the time mode of the Scheduler can be either 12 or 24 hours format which is completely based on the `locale` set to the Scheduler. Since the default `locale` value of the Scheduler is en-US, the time mode will be set to 12 hours format automatically. You can also customize the format by using the [`timeFormat`](https://ej2.syncfusion.com/react/documentation/api/schedule#timeformat) property. To know more about the time format standards, refer to the [Date and Time Format](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-formats) section.
+Time format is a way of representing the time value in different string formats in the Scheduler. By default, the time mode of the Scheduler can be either 12 or 24 hours format, which is completely based on the `locale` set to the Scheduler. Since the default `locale` value of the Scheduler is `en-US`, the time mode will be set to 12-hour format automatically. You can also customize the format by using the [`timeFormat`](https://ej2.syncfusion.com/react/documentation/api/schedule#timeformat) property.
+
+**Time format examples:**
+
+| Format | Example | Description |
+|--------|---------|-------------|
+| `hh:mm a` | 02:30 PM | 12-hour format with AM/PM |
+| `HH:mm` | 14:30 | 24-hour format |
+| `hh:mm:ss a` | 02:30:45 PM | 12-hour with seconds |
+| `HH:mm:ss` | 14:30:45 | 24-hour with seconds |
+
+To know more about the time format standards, refer to the [Date and Time Format](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-formats) section.
 
 The following example demonstrates the Scheduler in 24-hour format:
 
@@ -250,13 +298,22 @@ The following example demonstrates the Scheduler in 24-hour format:
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs20" %}
 
-> Note: The [`timeFormat`](https://ej2.syncfusion.com/react/documentation/api/schedule#timeformat) property only accepts valid time formats.
+> **Important:** The [`timeFormat`](https://ej2.syncfusion.com/react/documentation/api/schedule#timeformat) property only accepts valid time formats. Invalid format strings will be ignored and the locale's default format will be used instead.
 
 ## First day of the week
 
-The first day of the week can be set in the Scheduler using the `firstDayOfWeek` property. This ensures the Scheduler starts with the specified day.
+The first day of the week can be set in the Scheduler using the `firstDayOfWeek` property. This ensures the Scheduler starts with the specified day, allowing proper alignment with regional conventions.
 
-> Sunday is denoted as 0, Monday as 1, Tuesday as 2, and so on.
+**Day numbering:**
+
+| Day | Number | Day | Number |
+|-----|--------|-----|--------|
+| Sunday | 0 | Thursday | 4 |
+| Monday | 1 | Friday | 5 |
+| Tuesday | 2 | Saturday | 6 |
+| Wednesday | 3 | | |
+
+> **Tip:** Different locales have different conventions for the first day of the week. For example, in the US and many other countries, Sunday is the first day, while in Europe and other regions, Monday is typically the first day.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -274,7 +331,15 @@ The first day of the week can be set in the Scheduler using the `firstDayOfWeek`
 
 ## Displaying Scheduler in RTL mode
 
-The Scheduler layout and behavior can be changed to follow RTL (Right-to-Left) conventions by setting [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/schedule#enablertl) to `true`. This displays the Scheduler layout from right to left. The default value is `false`.
+The Scheduler layout and behavior can be changed to follow RTL (Right-to-Left) conventions by setting [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/schedule#enablertl) to `true`. This displays the Scheduler layout from right to left, including all UI elements, text direction, and navigation controls. The default value is `false`.
+
+**RTL support includes:**
+- Right-to-left text direction for RTL languages
+- Mirrored layout and control positioning
+- Proper alignment of navigation buttons and menus
+- RTL-aware date and time displays
+
+> **Note:** RTL mode is automatically applied when using RTL locales like Arabic (ar) or Hebrew (he). You can also manually enable RTL for any locale if needed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -290,8 +355,11 @@ The Scheduler layout and behavior can be changed to follow RTL (Right-to-Left) c
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs22" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.
+## See also
 
-## See Also
-
-* [How to change first day of the week in the Scheduler](./working-days#setting-start-day-of-the-week)
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) - Component homepage
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule) - Complete API documentation
+* [Localization Library Documentation](https://ej2.syncfusion.com/documentation/common/localization) - Text translation configuration
+* [Working Days Configuration](./working-days.md#setting-start-day-of-the-week) - Set first day of the week
+* [Timezone Documentation](./timezone.md) - Handle timezone conversions
+* [React Scheduler Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) - Interactive demos with different locales

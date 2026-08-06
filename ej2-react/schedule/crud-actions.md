@@ -1,14 +1,14 @@
 ---
 layout: post
-title: CRUD actions in React Schedule component | Syncfusion
-description: Learn here all about CRUD actions in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: CRUD Actions in React Scheduler | Syncfusion
+description: Learn how to add, edit, and delete appointments in the Syncfusion React Scheduler using the editor window and drag-and-resize actions.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# CRUD actions in React Schedule component
+# CRUD Actions in React Scheduler
 
 Appointments, also known as events, are central to the Scheduler component, allowing users to manage and interact with scheduling data. These appointments can be added, edited, or deleted through the editor window, drag and drop, or resize actions.
 
@@ -23,9 +23,13 @@ Different types of appointments such as normal, all-day, spanned, or recurring e
 
 The default editor window opens by double-clicking on Scheduler cells. It offers various event options such as Subject, Location, Start and End time, All-day status, Timezone, Description, and recurrence settings. These fields enable users to provide detailed event information. After filling out the form, click the `Save` button to add the appointment.
 
-In case, if you want to simply provide the Subject alone for appointments, just single click on the required cells which will open the quick popup expecting you to enter subject alone and save it. You can also select multiple cells and press `Enter` key to open the quick popup for selected time range and save the appointment for that time range.
+### Quick event creation
 
-In case, if you need to add some other additional fields to the editor window, then you can opt for [custom editor window](./editor-template#customizing-event-editor-using-template) which allows you to include fields as per your application needs. If you need to add just one or two [additional fields to the existing default editor window](./editor-template#add-additional-fields-to-the-default-editor), you can do so by defining it manually and then appending it to the editor window.
+Single-click on a cell to open the quick popup for entering just the Subject. Alternatively, select multiple cells and press `Enter` to create an appointment spanning the selected time range.
+
+### Custom editor window
+
+For additional fields, use the [custom editor window](./editor-template#customizing-event-editor-using-template) to include fields as needed. To add just one or two fields to the default editor, refer to [adding additional fields](./editor-template#add-additional-fields-to-the-default-editor).
 
 ### Creation using addEvent method
 
@@ -125,7 +129,7 @@ Appointments of any type such as normal, all-day, spanned, or recurring—can be
 
 You can open the default editor window filled with appointment details by double clicking on the required events. It gets pre-filled with event options such as Subject, Location, Start and End time, All-day, timezone, description and other recurrence options, from which you can edit the desired field values and, then enter the `Save` button to update it.
 
-> Appointments can also be quickly edited by single-clicking to open the quick info popup, where `Edit` opens the editor and `Delete` triggers a confirmation prompt.
+> **Note:** Appointments can also be quickly edited by single-clicking to open the quick info popup, where `Edit` opens the editor and `Delete` triggers a confirmation prompt.
 
 ### Updating using saveEvent method
 
@@ -213,7 +217,7 @@ Recurring appointments can be edited as a single occurrence or as an entire seri
 
 Therefore, when a single occurrence is edited from a recurring event, the batch action takes place by allowing both the `Add` and `Edit` action requests to take place together.
 
-> In case, if you edit an existing edited occurrence of a recurring event, only those edited occurrence which present in the database as an individual event object will get updated. In this case, `update` action alone takes place on the edited occurrence object on the database.
+> **Note:** If you edit an existing modified occurrence of a recurring event, only that occurrence (which exists as an individual event object in the database) will be updated. The `update` action takes place on the edited occurrence object alone.
 
 ```ts
 if (param.action == "insert" || (param.action == "batch" && param.added != null)) // this block of code will execute while inserting the appointments
@@ -386,7 +390,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 }
 ```
 
-> For more details about handling recurrence exceptions, see [Adding exceptions](./appointments#adding-exceptions) topic.
+> **Note:** For more details about handling recurrence exceptions, see [Adding exceptions](./appointments#adding-exceptions).
 
 ### Restricting edit action based on specific criteria
 
@@ -497,7 +501,7 @@ The recurring events can be deleted in either of the following two ways.
 
 Therefore, when a single occurrence is deleted from a recurring event, the `update` action takes place on the parent recurring event as shown in the following code example.
 
-> In case, if you delete an existing edited occurrence of a recurring event, only those edited occurrence which present in the database as an individual event object will get removed. In this case, `delete` action takes place instead of `update` action and the parent recurring event object remains same with no changes.
+> **Note:** If you delete an existing modified occurrence of a recurring event, only that occurrence (which exists as an individual event object) will be removed. The `delete` action takes place instead of `update`, and the parent recurring event remains unchanged.
 
 ```ts
 if (param.action == "update" || (param.action == "batch" && param.changed != null)) // this block of code will execute while updating the appointment
@@ -604,7 +608,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 
 When you drag and drop a normal event on the Scheduler, the event editing action takes place. When a recurring event is drag and dropped on a desired time range, the batch action explained in `Editing a single occurrence` process will takes place - thus allowing both the `Add` and `Edit` action to take place together.
 
-> By default, when you drag a recurring instance, only the occurrence of the event gets edited and not a whole series.
+> **Note:** By default, when you drag a recurring instance, only that occurrence gets edited, not the entire series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -624,7 +628,7 @@ When you drag and drop a normal event on the Scheduler, the event editing action
 
 When you resize a normal event on the Scheduler, the event editing action takes place. When a recurring event is resized to a new desired time, the batch action explained in `Editing a single occurrence` process will takes place - thus allowing both the `Add` and `Edit` action to take place together.
 
-> By default, when you resize a recurring instance, only the occurrence of the event gets edited and not a whole series.
+> **Note:** By default, when you resize a recurring instance, only that occurrence gets edited, not the entire series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -640,4 +644,9 @@ When you resize a normal event on the Scheduler, the event editing action takes 
         
 {% previewsample "page.domainurl/code-snippet/schedule/events-cs42" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.
+## See also
+
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler)
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule)
+* [Appointments and Events](https://ej2.syncfusion.com/react/documentation/schedule/appointments)
+* [Scheduler Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid + SQL Server + Django REST Framework | Syncfusion
-description: Integrate Syncfusion React Grid with Microsoft SQL Server and Django REST Framework to perform seamless CRUD operations.
+title: React Grid with Django REST Framework | Syncfusion
+description: Learn how to integrate React Data Grid with SQL Server and Django REST Framework to process POST requests and perform seamless CRUD operations.
 platform: ej2-react
 control: grid
 keywords: adaptors, urladaptor, mssql, remotedata 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion React Grid with Django REST Binding POST Request Data
+# Django REST Framework Integration in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) combined with Django REST Framework and Microsoft SQL Server provides a robust, scalable data‑driven application architecture. The React Data Grid delivers a rich, high‑performance client‑side experience with advanced features like paging, sorting, filtering, searching and CRUD operations.
 

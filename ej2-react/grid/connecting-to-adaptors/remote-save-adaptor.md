@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - Remote Save Adaptor | Syncfusion
-description: React Grid remote save adaptor describes server-side save workflows, configuring remote operations, and how to persist edits to backend services.
+title: React Grid Bind Data with RemoteSaveAdaptor | Syncfusion
+description: Learn how to use hybrid data binding in React Data Grid to perform data operations locally while handling CRUD actions on the server.
 platform: ej2-react
 control: grid
 keywords: RemoteSaveAdaptor, client-side operations, hybrid adaptor, local filtering, server CRUD
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hybrid Data Binding in Syncfusion React Grid
+# Hybrid Data Binding in React Data Grid
 
 The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) in the React Data Grid provides a hybrid approach to data management that combines the best of both client-side and server-side processing. The adaptor fetches the complete dataset from the server once, and then executes operations such as filtering, sorting, paging, searching, and grouping locally in the browser without additional server requests. Only CRUD operations (Create, Update, Delete) communicate with the server to persist data changes. It reduces server load and network latency while keeping data persistence secure.
 

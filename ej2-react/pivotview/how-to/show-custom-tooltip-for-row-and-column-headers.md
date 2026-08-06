@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show tooltips for row/column headers in React Pivot Table | Syncfusion
-description: Learn here all about Show tooltip for row and column headers in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+title: How to add custom tooltips to headers in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to add custom tooltips to headers in the React Pivot Table using the tooltipText event.
 platform: ej2-react
-control: Show tooltip for row and column headers 
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show tooltip for row and column headers in React Pivot Table component
+# How to add custom tooltips to headers in React Pivot Table
 
 You can display custom tooltips for row and column headers to provide additional context and information. This approach enhances the user experience by showing detailed field information when hovering over header cells in the pivot table.
 

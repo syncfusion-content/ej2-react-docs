@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Local Data Binding | Syncfusion
-description: Local data binding enables the React Grid to work with in-memory datasets, as well as fetch and display data from remote services through external requests.
+title: React Grid Local Data Binding | Syncfusion
+description: Learn how to bind local data sources and in-memory datasets in React Data Grid, enable dynamic updates, and efficiently manage displayed data.
 control: Local data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Local data in React Grid component
+# Local Data Binding in React Data Grid
 
 The React Data Grid provides a straightforward way to bind local data, such as arrays or JSON objects, to the grid component. This feature allows data to be displayed and manipulated within the grid without the need for external server calls, making it particularly useful for scenarios involving static or locally stored data.
 

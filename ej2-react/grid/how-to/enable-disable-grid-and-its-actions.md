@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid – Enable or Disable Actions | Syncfusion
-description: React Grid provides options and API examples to enable or disable actions, configure behavior, and control grid interactions.
+title: React Grid Enable or Disable Actions | Syncfusion
+description: Learn how to enable or disable React Data Grid and its actions using CSS and event handling to control user interaction dynamically.
 control: Enable disable grid and its actions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or disable grid and its actions in React Grid component
+# Enable or Disable Grid Actions in React Data Grid
 
 Enabling or disabling the React Data Grid and its actions is essential for managing interaction based on application state. This approach enhances usability and ensures controlled access to grid operations.
 

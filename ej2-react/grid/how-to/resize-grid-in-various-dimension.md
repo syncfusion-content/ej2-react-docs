@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Resize Various Dimensions | Syncfusion
-description: React Grid resize guide explains resizing behavior, responsive sizing strategies, and examples to adjust grid dimensions dynamically.
+title: React Grid Dynamic Resizing | Syncfusion
+description: Learn how to resize Angular Data Grid dynamically by adjusting parent container dimensions and managing grid width and height responsively.
 platform: ej2-react
 control: Resize the grid in various dimension 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize the grid in various dimension in React Grid Component
+# Grid Resizing in React Data Grid
 
 The React Data Grid supports dynamic resizing to enhance data presentation across different layouts. The grid can be resized by adjusting the dimensions of its parent container.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Editor template in React Schedule component | Syncfusion
-description: Learn here all about Editor template in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Editor Window Customization in React Scheduler | Syncfusion
+description: Learn how to customize the editor window and quick pop-up in the Syncfusion React Scheduler to match your data and design needs.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editor template in React Schedule component
+# Editor Window Customization in React Scheduler
 
 The Scheduler uses popups and dialogs to display notifications and provides a detailed event editor window to simplify appointment creation and editing. You can customize this editor window, its fields, and apply validations as needed.
 
@@ -18,7 +18,7 @@ The editor window usually opens on the Scheduler, when a cell or event is double
 
 In mobile devices, you can open the detailed editor window in edit mode by clicking the edit icon on the popup, that opens on single tapping an event. You can also open it in add mode by single tapping a cell, which will display a `+` indication, clicking on it again will open the editor window.
 
-> You can prevent the editor window from opening by rendering Scheduler in a [`readonly`](https://ej2.syncfusion.com/react/documentation/api/schedule#readonly) mode or by doing code customization within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event.
+> **Note:** You can prevent the editor window from opening by rendering the Scheduler in [`readonly`](https://ej2.syncfusion.com/react/documentation/api/schedule#readonly) mode or by implementing code customization within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event.
 
 ### How to change the editor window header title and text of footer buttons
 
@@ -58,7 +58,9 @@ To change the default labels such as Subject, Location and other field names in 
 
 ### Field validation
 
-It is possible to validate the required fields of the editor window from client-side before submitting it, by adding appropriate validation rules to each field. The appointment fields have been extended to accept both `string` and `object` type values. To perform validations, it is necessary to specify object values for the event fields.
+To ensure data quality, you can validate required fields in the editor window on the client-side before submission by adding validation rules to each field.
+
+> **Important:** The appointment fields accept both `string` and `object` type values. To perform validations, specify `object` values for the event fields instead of simple strings.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -74,11 +76,16 @@ It is possible to validate the required fields of the editor window from client-
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs10" %}
 
-> Applicable validation rules can be referred from [form validation](https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules) documentation.
+> **Tip:** For a comprehensive list of available validation rules, refer to the [Form Validation](https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules) documentation.
 
 ### Add additional fields to the default editor
 
-The additional fields can be added to the default event editor by making use of the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event which gets triggered before the event editor opens on the Scheduler. The [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) is a client-side event that triggers before any of the generic popups opens on the Scheduler. The additional field (any of the form elements) should be added with a common class name `e-field`, so as to handle and process those additional data along with the default event object. In the following example, an additional field `Event Type` has been added to the default event editor and its value is processed accordingly.
+To extend the default event editor with custom fields, use the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event, which triggers before the editor opens on the Scheduler.
+
+**Key Requirements:**
+- The additional field (any form element) must have the class name `e-field` to enable automatic processing
+- This ensures the custom field data is handled along with the default event object
+- In the following example, an `Event Type` field has been added and its value is processed with the event data
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -96,7 +103,9 @@ The additional fields can be added to the default event editor by making use of 
 
 ### Customizing the default time duration in editor window
 
-In default event editor window, start and end time duration are processed based on the `interval` value set within the [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule#timescale) property. By default, [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#interval) value is set to 30, and therefore the start/end time duration within the event editor will be in a 30 minutes time difference. You can change this duration value by changing the [`duration`](https://ej2.syncfusion.com/react/documentation/api/schedule/popupOpenEventArgs#duration) option within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event as shown in the following code example.
+By default, the start and end time duration in the event editor are based on the `interval` value set in the [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule#timescale) property.
+
+> **Note:** The default [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#interval) value is `30` minutes. To customize this duration, modify the [`duration`](https://ej2.syncfusion.com/react/documentation/api/schedule/popupOpenEventArgs#duration) option in the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -164,13 +173,16 @@ By default, the timezone collections in the editor window have been loaded with 
 
 ## Customizing event editor using template
 
-The event editor window can be customized by making use of the [`editorTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#editortemplate) option. Here, the custom window design is built with the required fields using the script template and its type should be of **text/x-template**.
+The event editor window can be fully customized using the [`editorTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#editortemplate) option. This allows you to design a custom editor with required fields using script templates of type **text/x-template**.
 
-Each field defined within template should contain the **e-field** class, so as to allow the processing of those field values internally. The ID of this customized script template section is assigned to the [`editorTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#editortemplate) option, so that these customized fields will be replaced onto the default editor window.
+**Template Requirements:**
+- Each field must have the **e-field** class for internal processing
+- Assign the template ID to the [`editorTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule#editortemplate) option
+- Custom fields will replace the default editor window
 
->Note: **e-field** class only applicable for **DropDownList**, **DateTimePicker**, **MultiSelect**, **DatePicker**, **CheckBox** and **TextBox** components. Since we have processed the field values internally for the above mentioned components.
+> **Note:** The **e-field** class is applicable only for **DropDownList**, **DateTimePicker**, **MultiSelect**, **DatePicker**, **CheckBox**, and **TextBox** components. These components have built-in field processing support.
 
-As we are using our Syncfusion<sup style="font-size:70%">&reg;</sup> sub-components within our editor using template in the following example, the custom defined form elements needs to be configured as required Syncfusion<sup style="font-size:70%">&reg;</sup> components such as **DropDownList** and **DateTimePicker** within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event. This particular step can be skipped, if the user needs to simply use the usual form elements.
+> **Important:** When using Syncfusion<sup style="font-size:70%">&reg;</sup> sub-components in custom templates, configure them as required Syncfusion<sup style="font-size:70%">&reg;</sup> components (e.g., **DropDownList**, **DateTimePicker**) within the [`popupOpen`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupopen) event. This step can be skipped if using standard HTML form elements.
 
 Learn how to customize the event editor window using templates from this video:
 
@@ -266,9 +278,9 @@ The following example applies validation to the status field in a custom editor 
 
 ### How to save the customized event editor using template
 
-The **e-field** class is not added to each field defined within the template, so you should allow to set those field values externally by using the [`popupClose`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupclose) event.
+When custom fields in your template do not have the **e-field** class, you must handle field values externally using the [`popupClose`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupclose) event.
 
-Note: You can allow to retrieve the data only on the `save` and `delete` option. Data cannot be retrieved on the `close` and `cancel` options in the editor window.
+> **Important:** Data can only be retrieved when users click `save` or `delete`. Data is not retrieved when they click `close` or `cancel` in the editor window. Plan your custom field handling accordingly.
 
 The following code example shows how to save the customized event editor using a template by the [`popupClose`](https://ej2.syncfusion.com/react/documentation/api/schedule#popupclose) event.
 
@@ -302,11 +314,14 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 
 ## Quick popups
 
-The quick info popups are the ones that gets opened, when a cell or appointment is single clicked on the desktop mode. On single clicking a cell, you can simply provide a subject and save it. Also, while single clicking on an event, a popup will be displayed where you can get the overview of the event information. You can also edit or delete those events through the options available in it.
+Quick info popups appear when users single-click a cell or event on desktop mode. They provide a lightweight way to:
+- Add a quick event by providing a subject and saving it (on cell click)
+- View event overview information (on event click)
+- Edit or delete events through available options
 
 To disable quick info popups, set [`showQuickInfo`](https://ej2.syncfusion.com/react/documentation/api/schedule#showquickinfo) to `false`.
 
-> Quick popups on cell single-click are not supported on mobile devices.
+> **Note:** Quick popups on cell single-click are not supported on mobile devices. Mobile users must use the detailed editor window instead.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -324,7 +339,12 @@ To disable quick info popups, set [`showQuickInfo`](https://ej2.syncfusion.com/r
 
 ### How to open QuickInfo popup on multiple cell selection
 
-By default the `QuickInfo` popup will open on single click of the cell. To open the quick info popup on multiple cell selection, you need to select the cells and press `enter` key. You can open this popup immediately after multiple cell selection by setting up `true` to `quickInfoOnSelectionEnd`[`quickInfoOnSelectionEnd`](https://ej2.syncfusion.com/react/documentation/api/schedule#quickinfoonselectionend) property where as its default value is `false`.
+By default, the `QuickInfo` popup opens on single cell click. To open it after multiple cell selection:
+
+1. Select the desired cells
+2. Press `Enter` key
+
+Alternatively, you can automatically open the quick info popup immediately after multiple cell selection by setting [`quickInfoOnSelectionEnd`](https://ej2.syncfusion.com/react/documentation/api/schedule#quickinfoonselectionend) to `true` (default is `false`).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -356,7 +376,9 @@ L10n.load({
 
 ### Customizing quick popups
 
-The look and feel of the built-in quick popup window, which opens when single clicked on the cells or appointments can be customized by making use of the [`quickInfoTemplates`](https://helpej2.syncfusion.com/react/documentation/api/schedule/quickInfoTemplates) property of the Scheduler. There are 3 sub-options available to customize them easily,
+The appearance and behavior of quick popup windows can be customized using the [`quickInfoTemplates`](https://ej2.syncfusion.com/react/documentation/api/schedule/quickInfoTemplates) property of the Scheduler.
+
+> **Tip:** The `quickInfoTemplates` property provides multiple sub-options to customize quick popups for different scenarios (cell click, event click, responsive view). Refer to the API documentation for all available template options.
 
 * header - Accepts the template design that customizes the header part of the quick popup.
 * content - Accepts the template design that customizes the content part of the quick popup.
@@ -510,4 +532,12 @@ You can close the quick info popup in scheduler by using the [closeQuickInfoPopu
         
 {% previewsample "page.domainurl/code-snippet/schedule/editor-cs17" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.
+## See also
+
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler)
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule)
+* [Event Templates](https://ej2.syncfusion.com/react/documentation/schedule/editor-template)
+* [Quick Info Templates](https://ej2.syncfusion.com/react/documentation/api/schedule/quickInfoTemplates)
+* [CRUD Actions Guide](https://ej2.syncfusion.com/react/documentation/schedule/crud-actions)
+* [Form Validation Documentation](https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules)
+* [Scheduler Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview)

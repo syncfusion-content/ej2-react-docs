@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Export table and chart into the same document in React | Syncfusion
-description: Learn here all about how to export table and chart into the same document using toolbar in Syncfusion React of Syncfusion Essential JS 2 and more.
+title: How to export table and chart together in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to export table and chart into the same document in the React Pivot Table using the pdfExport method.
 platform: ej2-react
-control: Export table and chart into the same document using toolbar 
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 <!-- markdownlint-disable MD009 -->
 
-# Export table and chart into the same document using toolbar in React
+# How to export table and chart together in React Pivot Table
 
 By default, when the [displayOption.view](https://ej2.syncfusion.com/react/documentation/api/pivotview/displayoptionmodel#view) property is set to **Both** in the Pivot Table, the export functionality exports either the table or the chart to the PDF document based on the current value of the [displayOption.primary](https://ej2.syncfusion.com/react/documentation/api/pivotview/displayoptionmodel#primary) property. However, to export both the table and the chart into the same PDF document simultaneously, use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method during the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event.
 

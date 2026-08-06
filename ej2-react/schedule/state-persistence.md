@@ -1,20 +1,22 @@
 ---
 layout: post
-title: State persistence in React Schedule component | Syncfusion
-description: Learn here all about State persistence in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: State Persistence in React Scheduler | Syncfusion
+description: Learn how to enable state persistence in the Syncfusion React Scheduler to retain current view, selected date, and scroll position.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State persistence in React Schedule component
+# State Persistence in React Scheduler
 
-State persistence allows the Scheduler to retain the [`currentView`](https://ej2.syncfusion.com/react/documentation/api/schedule#currentview), [`selectedDate`](https://ej2.syncfusion.com/react/documentation/api/schedule#selecteddate) and scroll position values in the [`localStorage`](https://www.w3schools.com/html/html5_webstorage.asp#) for state maintenance even if the browser is refreshed or you navigate to another page. This behavior is enabled through the [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/schedule#enablepersistence) property, which is disabled by default. When set to `true`, the Scheduler's `currentView`, `selectedDate` and scroll position values are preserved after a page refresh.
+State persistence allows the Scheduler to retain the [`currentView`](https://ej2.syncfusion.com/react/documentation/api/schedule#currentview), [`selectedDate`](https://ej2.syncfusion.com/react/documentation/api/schedule#selecteddate), and scroll position values in [`localStorage`](https://www.w3schools.com/html/html5_webstorage.asp#) so the state remains available after a browser refresh or navigation to another page. This behavior is enabled through the [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/schedule#enablepersistence) property, which is disabled by default. When set to `true`, the Scheduler preserves the `currentView`, `selectedDate`, and scroll position values after a page refresh.
 
-> **Note**: The Scheduler `id` is required to enable state persistence.
+> **Note:** The Scheduler `id` is required to enable state persistence.
 
-The following sample demonstrates how to set state persistence of the Scheduler component.
+> **Tip:** Use persistence when you want users to return to the same view and date after reloading the page.
+
+The following sample demonstrates how to enable state persistence in the Scheduler component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,4 +32,8 @@ The following sample demonstrates how to set state persistence of the Scheduler 
         
 {% previewsample "page.domainurl/code-snippet/schedule/local-data-cs26" %}
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
+## See also
+
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) - Component homepage
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule) - Complete API documentation
+* [Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) - Interactive Scheduler demos

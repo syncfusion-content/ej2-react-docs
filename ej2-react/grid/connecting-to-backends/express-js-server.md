@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Express.js Backend Server | Syncfusion.
-description: Integrate Syncfusion React Grid with Express.js backend to enable server‑side data operations and seamless CRUD functionality.
+title: React Grid Data Binding using Express.js Server | Syncfusion
+description: Learn how to integrate React Data Grid with an Express.js backend server for server-side data handling, CRUD operations, and scalable data management.
 control: UrlAdaptor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting the React Grid with Express.js Server
+# Express.js Server Integration in React Data Grid
 
 [Express.js](https://expressjs.com/) is a lightweight and flexible Node.js web application framework that provides a simple set of features for building REST APIs quickly. Express.js follows a traditional REST API approach with multiple endpoints for different data operations.
 

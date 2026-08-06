@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to in React Pivotview component | Syncfusion
-description: Explore how-to guides for the Syncfusion React Pivot Table component covering common customization, integration, and configuration scenarios with code examples.
-control: How to 
+title: How to in React Pivot Table | Syncfusion
+description: Explore how-to guides for the React Pivot Table covering common customization, integration, and configuration scenarios with code examples.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to in React Pivotview component
+# How to in React Pivot Table
 
 ## Member Editor
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Excel Like Filter | Syncfusion
-description: React Grid Excel-like filter enables multi‑condition filtering, checkbox lists, search, choice limits, remote data binding, and template-based customization.
+title: React Grid Excel Like Filter | Syncfusion
+description: Learn how to use Excel Like Filter in React Data Grid with multi-condition filtering, checkbox lists, search, remote data binding, and template customization.
 control: Excel like filter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel like filter in React Grid component
+# Excel Like Filter in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component offers an Excel-like filter feature, providing a familiar and user-friendly interface for filtering data within the grid. Excel-like filter displays a dialog with a checkbox list, search box, and sorting options, similar to Microsoft Excel's filter. This filtering type simplifies complex filtering operations on specific columns, allowing for quick data location and manipulation. Excel-like filtering is especially useful when dealing with large datasets and columns containing distinct categorical values (such as status, category, country, or department names).
 

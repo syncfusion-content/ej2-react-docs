@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Hybrid Data Binding in React Pivot Table | Syncfusion"
+title: "Remote save adaptor in React Pivot Table | Syncfusion"
 component: "Pivot Table"
 platform: ej2-react
-description: "Connect a REST API to the React Pivot Table with RemoteSaveAdaptor and explore remote data binding and CRUD."
-control: RemoteSaveAdaptor Data Binding
+description: "Learn how the React Pivot Table combines client-side data loading with server-side persistence through the RemoteSaveAdaptor for hybrid data binding."
+control: Pivot Table
 documentation: ug
 ---
 
-# Hybrid Data Binding in Syncfusion React Pivot Table
+# Remote save adaptor in React Pivot Table
 
 The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) in the React Pivot Table provides a hybrid approach to data management that combines the best of both client-side and server-side processing. It fetches the complete dataset from the server. CRUD operations (Create, Update, Delete) communicate with the server to persist data changes. It reduces server load and network latency while keeping data persistence secure.
 

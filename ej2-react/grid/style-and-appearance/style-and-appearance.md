@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Data Grid - Style and Appearance | Syncfusion
-description: React Data Grid style and appearance provides a consolidated guide to theming, CSS customization, and style tokens to match application design.
+title: React Grid Style and Appearance | Syncfusion
+description: Learn how to customize the style and appearance of React Data Grid with built-in themes, CSS customization, theme packages, and design configuration.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in Syncfusion® React Data Grid
+# Style and Appearance in React Data Grid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Data Grid provides flexible styling and appearance customization options to align with your application's design requirements. You can choose from a wide range of built-in themes, customize visual elements using CSS, and create consistent experiences through theme-based styling.
 

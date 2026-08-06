@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Paging Style | Syncfusion
-description: React Grid paging style supports visual customization and template options for the pager UI, page size controls, and styling to match application themes.
+title: React Grid Paging Customization | Syncfusion
+description: Learn how to customize paging styles in React Data Grid with pager templates, page size controls, layout options, and pager UI customization.
 control: Paging 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paging Customization in React Grid Component
+# Paging Style in React Data Grid
 
 The appearance of the paging elements in the React Data Grid component can be customized using CSS. Here are examples for customizing the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and the pager current page numeric element.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Clipboard | Syncfusion
-description: React Grid clipboard supports copying and pasting rows or cells, handling formats, integrating with external apps, and configuring clipboard behavior.
+title: React Grid Clipboard | Syncfusion
+description: Learn how to use clipboard features in React Data Grid, including copy, paste, autofill, keyboard shortcuts, and clipboard data operations.
 control: Clipboard 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clipboard in React Grid Component
+# Clipboard in React Data Grid
 
 The clipboard feature in the React Data Grid enables copying selected rows or cells to the system clipboard for use in other applications. The grid supports keyboard shortcuts for quick copy operations.
 

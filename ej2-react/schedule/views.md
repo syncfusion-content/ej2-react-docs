@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Views in React Schedule component | Syncfusion
-description: Learn here all about Views in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Views in React Scheduler | Syncfusion
+description: Learn about the available views in the Syncfusion React Scheduler, including day, week, month, agenda, and timeline view modes and customizations.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Views in React Schedule Component
+# Views in React Scheduler
 
-The Scheduler includes a wide variety of view modes, each with unique configuration options. By default, `Week` view is the active view. The available built-in view modes are listed below:
+The Scheduler includes multiple view modes, each with unique configuration options. By default, the `Week` view is active. The built-in views are listed below:
 
 * Day
 * Week
-* Work week
+* Work Week
 * Month
 * Year
 * Agenda
@@ -25,17 +25,19 @@ The Scheduler includes a wide variety of view modes, each with unique configurat
 * Timeline Month
 * Timeline Year
 
-To navigate between views and dates, use the navigation options on the Scheduler header bar. The active view is highlighted by default, and its date range is displayed on the left. Clicking the date range opens a calendar popup to easily select a different date.
+To navigate between views and dates, use the navigation options in the Scheduler header bar. The active view is highlighted, and its date range is shown on the left. Clicking the date range opens a calendar popup so you can select a different date.
 
-Learn how to customize each individual view of the React Scheduler with different settings by watching this video:
+Learn how to customize each Scheduler view with different settings by watching this video:
 
 {% youtube "https://www.youtube.com/watch?v=EhoLFF7kwX0" %}
 
-> By default, the Scheduler is configured with Day, Week, Work Week, Month, and Agenda views. Other views, such as Timeline views, can be enabled by injecting their specific modules.
+> **Note:** By default, the Scheduler is configured with Day, Week, Work Week, Month, and Agenda views. Timeline views must be enabled by injecting their specific modules.
+
+> **Tip:** Use the `views` property when you need different settings for different view modes.
 
 ## Setting a specific view on the Scheduler
 
-The Scheduler displays the `Week` view by default. To change the active view, set the [`currentView`](https://helpej2.syncfusion.com/react/documentation/api/schedule#currentview) property to the desired view name. The applicable view names that the Scheduler accepts are as follows:
+The Scheduler displays the `Week` view by default. To change the active view, set the [`currentView`](https://ej2.syncfusion.com/react/documentation/api/schedule#currentview) property to the desired view name. The applicable view names that the Scheduler accepts are as follows:
 
 * Day
 * Week
@@ -88,33 +90,33 @@ The next example shows how to configure two views with different settings. Here,
 
 ## View-specific configuration
 
-Each view can be configured with its own set of properties. To apply view-specific settings, define the desired properties within the corresponding `ViewDirective` tag inside the `views` collection. The available fields for each view option are:
+Each view can be configured with its own set of properties. To apply view-specific settings, define the required properties within the corresponding `ViewDirective` tag inside the `views` collection. The available fields for each view option are:
 
 | Property | Type | Description | Applicable Views |
 |----------|------|-------------|------------------|
-| [`option`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#option) | View | It accepts the Scheduler view name, based on which we can define its related properties. The view names can be `Day`, `Week` and so on. | All views.|
-| [`isSelected`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#isselected) | Boolean | It acts similar to the `currentView` property and defines the active view of the Scheduler.| All views. |
-| [`dateFormat`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#dateformat) | Date | By default, Scheduler follows the date format as per the default culture assigned to it. When it is defined under specific view, only those assigned views follows this date format. | All views. |
-| [`readonly`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#readonly) | Boolean | When set to `true`, prevents the CRUD actions on the respective view under where it is defined. | All views. |
-| [`resourceHeaderTemplate`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#resourceheadertemplate) | String | The template option which is used to customize the resource header cells on the Scheduler. It gets applied only on the views, wherever it is defined.| All views. |
-| [`dateHeaderTemplate`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#dayheadertemplate) | String | The template option which is used to customize the date header cells and is applied only on the views, wherever it is defined. | All views. |
-| [`eventTemplate`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#eventtemplate) | String | The template option to customize the events background. It will get applied to the events of the view to which it is currently being defined. | All views. |
-| [`showWeekend`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#showweekend) | Boolean | When set to `false`, it hides the weekend days of a week from the views on which it is defined.| All views. |
-| [`group`](https://helpej2.syncfusion.com/react/documentation/api/schedule/group) | GroupModel | Allows to set different resource grouping options on all available Scheduler view modes. | All views. |
-| [`cellTemplate`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#celltemplate) | String | The template option to customize the work cells of the Scheduler and is applied only on the views, on which it is defined. | Applicable on all views except Agenda view. |
-| [`workDays`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#workdays) | Number[] | It is used to set the working days on the Scheduler views. | Applicable on all views except Agenda view. |
-| [`displayName`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#displayname) | String | When a particular view is customized to display with different intervals, this property allows the user to set different display name for each of the views. | Applicable on all views except Agenda and Month Agenda. |
-| [`interval`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#interval) | Number | It allows to customize the default Scheduler views with different set of days, weeks, work weeks or months on the applicable view type. | Applicable on all views except Agenda and Month Agenda. |
-| [`startHour`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#starthour) | String | It is used to specify the start hour, from which the Scheduler should be displayed. It accepts the time string in a short skeleton format and also, hides the time beyond the specified start time. | Applicable on Day, Week, Work Week, Timeline Day, Timeline Week and Timeline Work Week views. |
-| [`endHour`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#endhour) | String | It is used to specify the end hour, at which the Scheduler ends. It accepts the time string in a short skeleton format. | Applicable on Day, Week, Work Week, Timeline Day, Timeline Week, and Timeline Work Week views. |
-| [`timeScale`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#timescale) | TimeScaleModel | Allows to set different timescale configuration on each applicable view modes. | Applicable on Day, Week, Work Week, Timeline Day, Timeline Week, and Timeline Work Week views. |
-| `showWeekNumber`[`showWeekNumber`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#showweeknumber) | Boolean | When set to `true`, shows the week number on the respective weeks.| Applicable on Day, Week, Work Week, and Month views. |
-|  [`allowVirtualScrolling`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#allowvirtualscrolling) | Boolean | It is used to enable or disable the virtual scrolling functionality. | Applicable on Agenda and Timeline views. |
-| [`headerRows`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#headerrows) | HeaderRowsModel | Allows defining the custom header rows on timeline views of the Scheduler to display the year, month, week, date and hour label as an individual row. | Applicable only on all timeline views. |
+| [`option`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#option) | View | Accepts the Scheduler view name, such as `Day` or `Week`, and is used to define the related properties. | All views |
+| [`isSelected`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#isselected) | Boolean | Acts like `currentView` and defines the active view of the Scheduler. | All views |
+| [`dateFormat`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#dateformat) | Date | Uses the default culture date format unless a specific view overrides it. | All views |
+| [`readonly`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#readonly) | Boolean | Prevents CRUD actions in the view where it is defined. | All views |
+| [`resourceHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#resourceheadertemplate) | String | Customizes resource header cells in the views where it is defined. | All views |
+| [`dateHeaderTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#dayheadertemplate) | String | Customizes date header cells in the views where it is defined. | All views |
+| [`eventTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#eventtemplate) | String | Customizes the event appearance in the selected view. | All views |
+| [`showWeekend`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#showweekend) | Boolean | Hides weekend days from the views where it is defined when set to `false`. | All views |
+| [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group) | GroupModel | Configures resource grouping for Scheduler views. | All views |
+| [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#celltemplate) | String | Customizes work cells in the views where it is defined. | All views except Agenda |
+| [`workDays`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#workdays) | Number[] | Sets the working days for the Scheduler view. | All views except Agenda |
+| [`displayName`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#displayname) | String | Sets a custom label for a view that uses different intervals. | All views except Agenda and Month Agenda |
+| [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#interval) | Number | Customizes the number of days, weeks, work weeks, or months shown in the view. | All views except Agenda and Month Agenda |
+| [`startHour`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#starthour) | String | Sets the start time from which the Scheduler is displayed. | Day, Week, Work Week, Timeline Day, Timeline Week, and Timeline Work Week |
+| [`endHour`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#endhour) | String | Sets the end time at which the Scheduler ends. | Day, Week, Work Week, Timeline Day, Timeline Week, and Timeline Work Week |
+| [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#timescale) | TimeScaleModel | Configures the time scale for applicable views. | Day, Week, Work Week, Timeline Day, Timeline Week, and Timeline Work Week |
+| [`showWeekNumber`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#showweeknumber) | Boolean | Shows the week number when set to `true`. | Day, Week, Work Week, and Month |
+| [`allowVirtualScrolling`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#allowvirtualscrolling) | Boolean | Enables or disables virtual scrolling. | Agenda and Timeline views |
+| [`headerRows`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#headerrows) | HeaderRowsModel | Defines custom header rows for timeline views. | Timeline views only |
 
 ### Day view
 
-The Day view displays a single day by default. You can configure it to show multiple days by setting the [`interval`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#interval) property within the corresponding `ViewDirective`. Any of the properties defined above can be applied to the Day view as shown in the following example.
+The Day view displays a single day by default. You can configure it to show multiple days by setting the [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#interval) property within the corresponding `ViewDirective`. Any of the properties defined above can be applied to the Day view as shown in the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -130,11 +132,11 @@ The Day view displays a single day by default. You can configure it to show mult
         
 {% previewsample "page.domainurl/code-snippet/schedule/views-cs9" %}
 
-> All the properties defined in the table are applicable to the Day view except [`allowVirtualScrolling`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#allowvirtualscrolling) and [`headerRows`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#headerrows).
+> **Note:** All the properties defined in the table are applicable to the Day view except [`allowVirtualScrolling`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#allowvirtualscrolling) and [`headerRows`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#headerrows).
 
 ### Week view
 
-The Week view displays a count of 7 days (from Sunday to Saturday) with all its related appointments. The first day of the week can be changed using the [`firstDayOfWeek`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#firstdayofweek) which accepts the integer (Sunday=0, Monday=1, Tuesday=2 and so on) value. You can navigate to a particular date in day view from the week view by clicking on the appropriate dates on the date header bar.
+The Week view displays 7 days by default, from Sunday to Saturday, with all related appointments. You can change the first day of the week using the [`firstDayOfWeek`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#firstdayofweek) property, which accepts an integer value such as Sunday = 0, Monday = 1, Tuesday = 2, and so on. You can navigate to a specific date in the Day view from the Week view by clicking the appropriate date in the date header bar.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -152,7 +154,7 @@ The Week view displays a count of 7 days (from Sunday to Saturday) with all its 
 
 ### Work Week view
 
-The Work week view displays only the working days of a week (count of 5 days) and its associated appointments. It is possible to customize the working days on the work week view by using the [`workDays`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#workdays) property which accepts an array of integer values (such as Sunday=0, Monday=1, Tuesday=2 and so on). By default, it displays from Monday to Friday (5 days). You can also navigate to a particular date in the day view from the work week view by clicking on the appropriate dates in the date header bar.
+The Work Week view displays only the working days of a week and their associated appointments. You can customize the working days using the [`workDays`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#workdays) property, which accepts an array of integer values such as Sunday = 0, Monday = 1, Tuesday = 2, and so on. By default, the view displays Monday through Friday. You can also navigate to a specific date in the Day view from the Work Week view by clicking the appropriate date in the header bar.
 
 The following code example demonstrates how to customize the resource header cells for only the `Work Week` view.
 
@@ -170,15 +172,15 @@ The following code example demonstrates how to customize the resource header cel
         
 {% previewsample "page.domainurl/code-snippet/schedule/views-cs11" %}
 
-> The Day, Week, and Work Week views can display all-day appointments in a separate row with an expand/collapse option.
+> **Note:** The Day, Week, and Work Week views can display all-day appointments in a separate row with an expand/collapse option.
 
 ### Month view
 
-The Month view displays all the days of a particular month with their corresponding appointments. You can navigate to the Day view of a particular date by clicking on its date number in the month cell.
+The Month view displays all the days of a particular month with their corresponding appointments. You can navigate to the Day view for a specific date by clicking the date number in the month cell.
 
-By default, when you try to create an appointment through Month view, it is considered as created for an entire day. You can explicitly change this behavior by unchecking the `All-day` option from editor window, so that it defaults to the start time duration as 9.00 AM and end time as 9.30 AM.
+By default, appointments created in Month view are treated as all-day appointments. You can change this behavior by clearing the `All-day` option in the editor window so that the appointment uses the default time range of 9:00 AM to 9:30 AM.
 
-You can also have the `+ more` text indicator on each day cell of a Month view, clicking on which will allows you to view the hidden appointments of a day.
+You can also display the `+ more` text indicator in each day cell of the Month view. Clicking it shows the hidden appointments for that day.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -196,9 +198,9 @@ You can also have the `+ more` text indicator on each day cell of a Month view, 
 
 ### Year view
 
-A Year view displays all the days of a particular year with months and all its related appointments. You can navigate to a particular date in the day view by clicking on the appropriate date text on the year cells.
+A Year view displays all the days of a particular year grouped by month along with related appointments. You can navigate to a specific date in the Day view by clicking the appropriate date text in the year cells.
 
-The Year view supports both `Horizontal` and `Vertical` orientations, which can be configured using the `orientation` property within the [`views`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#orientation) definition.
+The Year view supports both `Horizontal` and `Vertical` orientations, which can be configured using the `orientation` property within the [`views`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#orientation) definition.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -214,11 +216,11 @@ The Year view supports both `Horizontal` and `Vertical` orientations, which can 
         
 {% previewsample "page.domainurl/code-snippet/schedule/views-cs13" %}
 
-> The Year view has built-in module support, presenting all months of a year in a calendar format where dates with appointments are highlighted.
+> **Note:** The Year view has built-in module support and highlights dates that contain appointments.
 
 ### Agenda view
 
-The Agenda view lists appointments in a grid-like format, showing the next 7 days by default. This duration can be customized with the [`agendaDaysCount`](https://helpej2.syncfusion.com/react/documentation/api/schedule#agendadayscount) property. It supports virtual scrolling when the [`allowVirtualScrolling`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#allowvirtualscrolling) property is enabled. Additionally, the [`hideEmptyAgendaDays`](https://helpej2.syncfusion.com/vue/documentation/api/schedule#hideemptyagendadays) property can be used to hide days that have no appointments.
+The Agenda view lists appointments in a grid-like format and shows the next 7 days by default. You can change this duration with the [`agendaDaysCount`](https://ej2.syncfusion.com/react/documentation/api/schedule#agendadayscount) property. It supports virtual scrolling when the [`allowVirtualScrolling`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#allowvirtualscrolling) property is enabled. In addition, the [`hideEmptyAgendaDays`](https://ej2.syncfusion.com/react/documentation/api/schedule#hideemptyagendadays) property hides days that do not have appointments.
 
 The following code example shows how to customize the display of events specifically for the Agenda view.
 
@@ -236,13 +238,13 @@ The following code example shows how to customize the display of events specific
         
 {% previewsample "page.domainurl/code-snippet/schedule/views-cs14" %}
 
-> For the Agenda view, it is mandatory to set a specific height (in pixels) for the Scheduler component.
+> **Important:** The Agenda view requires a specific height value in pixels for the Scheduler component.
 
 ### Month Agenda view
 
-The Month Agenda view combines a month calendar with an agenda list. Clicking a date in the calendar displays that day's appointments in the list below. Dates containing appointments are marked with a dot indicator.
+The Month Agenda view combines a month calendar with an agenda list. Clicking a date in the calendar displays that day's appointments in the list below. Dates that contain appointments are marked with a dot indicator.
 
-The following code example shows how to hide weekend days and modify the working days list exclusively for the `MonthAgenda` view.
+The following code example shows how to hide weekend days and modify the working days list only for the `MonthAgenda` view.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -260,9 +262,9 @@ The following code example shows how to hide weekend days and modify the working
 
 ### Timeline views – Day, Week, Work Week
 
-Similar to the day view, it shows a single day with all its appointments where the time slots are displayed horizontally. By default, the cell height adjusts as per the height set to Scheduler. When the number of appointments exceeds the visible area of the cells, the `+ more` text indicator will be displayed at the bottom to denote the presence of few more appointments in that time range.
+Timeline Day, Timeline Week, and Timeline Work Week display time slots horizontally. By default, cell height adjusts based on the Scheduler height. When the number of appointments exceeds the visible area, the `+ more` indicator appears at the bottom to show that additional appointments exist in that time range.
 
-To use Timeline Day, Timeline Week, and Timeline Work Week views, you must import and inject the `TimelineViews` module from the `ej2-react-schedule` package.
+To use Timeline Day, Timeline Week, and Timeline Work Week views, import and inject the `TimelineViews` module from the `ej2-react-schedule` package.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -310,11 +312,11 @@ The following code example shows how to display the Timeline Work Week view.
         
 {% previewsample "page.domainurl/code-snippet/schedule/views-cs18" %}
 
-> Clicking on dates in the header of Timeline Day, Week, and Work Week views navigates to the Agenda view for that day.
+> **Note:** Clicking dates in the header of Timeline Day, Timeline Week, and Timeline Work Week views navigates to the Agenda view for that day.
 
 ### Timeline Month view
 
-A Timeline Month view displays the current month days along with its appointments. To make use of the timeline Month view on Scheduler, import and inject `TimelineMonth` module from the `ej2-react-schedule` package.
+A Timeline Month view displays the current month days along with their appointments. To use the Timeline Month view, import and inject the `TimelineMonth` module from the `ej2-react-schedule` package.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -330,11 +332,11 @@ A Timeline Month view displays the current month days along with its appointment
         
 {% previewsample "page.domainurl/code-snippet/schedule/views-cs19" %}
 
-> Clicking a date in the header of the Timeline Month view navigates to the Timeline Day view.
+> **Note:** Clicking a date in the header of the Timeline Month view navigates to the Timeline Day view.
 
 ### Timeline Year view
 
-In Timeline Year view, each row depicts a single resource. Whereas in the vertical view, each resource is grouped parallelly as columns. Here, the resource grouping follows the tree-view like hierarchical grouping structure and can contain any level of child resources.
+In Timeline Year view, each row represents a single resource. In the vertical view, resources are grouped as columns. Timeline Year view follows a tree-like hierarchical grouping structure and can contain multiple levels of child resources.
 
 To use the Timeline Year view, import and inject the `TimelineYear` module from the `ej2-react-schedule` package.
 
@@ -372,7 +374,7 @@ The following example shows how to group resources in the Timeline Year view. Ev
 
 #### Auto row height
 
-Timeline Year view supports Auto row height. When the feature [`rowAutoHeight`](https://helpej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) is enabled, the row height gets auto-adjusted based on the number of overlapping events occupied in the same time range. If you disable the Auto row height, you have the `+ more` text indicator on each day cell of a Timeline Year view, clicking on which will allow you to view the hidden appointments of a day.
+Timeline Year view supports auto row height. When the [`rowAutoHeight`](https://ej2.syncfusion.com/react/documentation/api/schedule#rowautoheight) feature is enabled, row height adjusts automatically based on the number of overlapping events in the same time range. If you disable auto row height, the `+ more` indicator appears in each day cell, and clicking it shows the hidden appointments for that day.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -390,9 +392,9 @@ Timeline Year view supports Auto row height. When the feature [`rowAutoHeight`](
 
 ## Extending view intervals
 
-It is possible to customize the display of default number of days on different Scheduler view modes. For example, a day view can be extended to display 3 days by setting the [`interval`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#interval) option as 3 for the `Day` option within the `ViewDirective` as depicted in the following code example. In the same way, you can also display 2 weeks by setting interval 2 for the `Week` option.
+You can customize the default number of days shown in different Scheduler view modes. For example, you can extend a Day view to display 3 days by setting the [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#interval) option to 3 for the `Day` option within the `ViewDirective`. In the same way, you can display 2 weeks by setting the interval to 2 for the `Week` option.
 
-You can provide the alternative display name for such customized views on the Scheduler header bar, by setting the appropriate [`displayName`](https://helpej2.syncfusion.com/react/documentation/api/schedule/views#displayname) property.
+You can provide an alternate display name for customized views in the Scheduler header bar by setting the [`displayName`](https://ej2.syncfusion.com/react/documentation/api/schedule/views#displayname) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -408,10 +410,10 @@ You can provide the alternative display name for such customized views on the Sc
         
 {% previewsample "page.domainurl/code-snippet/schedule/views-cs21" %}
 
-> View intervals can be extended on all Scheduler view modes except Agenda and Month-Agenda.
+> **Note:** View intervals can be extended in all Scheduler view modes except Agenda and Month-Agenda.
 
-## See Also
+## See also
 
 * [How to restrict view navigation while clicking on dates](./how-to/prevent-date-navigation)
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to learn how to present and manipulate data.
+> You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for a quick overview of its capabilities. You can also explore the [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to learn how to present and manipulate data.

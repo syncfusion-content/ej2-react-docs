@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid – Customizable Column Templates | Syncfusion
-description: React Grid provides template helper usage, rendering examples, and guidance to incorporate helper functions within templates safely and efficiently.
+title: React Grid Custom Column Templates | Syncfusion
+description: Learn how to create custom column templates in React Data Grid using helper functions, template loops, and dynamic rendering for customized cell content.
 platform: ej2-react
 control: Use custom helper inside the loop with templates 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Displaying Custom Templates in React Grid component
+# Custom Column Templates in React Data Grid
 
 The React Data Grid supports using custom helper functions inside a column's [template](https://ej2.syncfusion.com/react/documentation/api/grid/columnmodel#template), allowing the creation of complex, dynamic UI elements.
 

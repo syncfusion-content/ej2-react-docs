@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Add custom aggregation type to the menu in React | Syncfusion
-description: Learn here all about how to add custom aggregation type to the menu in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+title: How to add a custom aggregation in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to add a custom aggregation type to the menu in the React Pivot Table through the aggregation menu.
 platform: ej2-react
-control: Add custom aggregation type to the menu 
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 <!-- markdownlint-disable MD009 -->
 
-# Add custom aggregation type to the menu in React Pivotview component
+# How to add a custom aggregation in React Pivot Table
 
 The React Pivot Table component allows you to extend its functionality by adding custom aggregation types to the built-in aggregation menu. This enables you to implement specific calculation methods beyond the standard options like Sum, Average, Min, and Max.
 

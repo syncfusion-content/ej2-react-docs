@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Apply conditional formatting for row or column in React | Syncfusion
-description: Learn here all about Apply conditional formatting for specific row or column in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Apply conditional formatting for specific row or column 
+title: How to format a row or column in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to apply conditional formatting to a specific row or column in the React Pivot Table.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Apply conditional formatting for specific row or column in React
+# How to format a row or column in React Pivot Table
 
 Conditional formatting allows you to visually highlight important data and identify patterns in your React Pivot Table by applying formatting to specific rows or columns based on certain conditions. This feature helps to emphasize particular data values that meet defined criteria.
 

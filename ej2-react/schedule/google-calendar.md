@@ -1,27 +1,36 @@
 ---
 layout: post
 title: Integrating React Scheduler with Google Calendar | Syncfusion
-description: This documentation provides a step-by-step guide for integrating EJ2 React Scheduler with the Google Calendar API using OAuth Credentials.
+description: Learn how to integrate the Syncfusion React Scheduler with the Google Calendar API using OAuth credentials and a step-by-step flow.
 platform: ej2-react
 control: Scheduler
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Google Calendar API Integration with Syncfusion React Scheduler
+# Integrating React Scheduler with Google Calendar
 
 This integration allows users to manage their Google Calendar events directly within the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler). Changes made in the Scheduler are synced to Google Calendar, and existing Google events are displayed in the Scheduler interface.
 
 ## Prerequisites
-- **Node.js & React tool:** Must be installed on your local machine to create, manage, and run the React application.
-- **Google Account:** Required to access the Google Cloud Console to enable APIs and generate OAuth 2.0 credentials.
 
-## High-level flow
+Before integrating Google Calendar with the React Scheduler, ensure you have:
 
-1. Scheduler displays events using data from Google Calendar.
-2. The app uses Google Identity Services (GIS) to obtain short-lived access tokens.
-3. CRUD operations from Scheduler are converted into Google Calendar API calls.
-4. After each successful operation, reload events from Google.
+- **Node.js and npm** - Version 14+ installed on your local machine for React project creation and management
+- **Google Account** - Required to access Google Cloud Console and create OAuth 2.0 credentials
+- **Basic React knowledge** - Familiarity with React components, state management, and hooks
+- **Text Editor or IDE** - Any code editor (VS Code recommended) for project development
+
+## Integration flow overview
+
+The integration follows this sequence:
+
+1. **Event Display** - Scheduler displays events loaded from your Google Calendar
+2. **Authentication** - App uses Google Identity Services (GIS) to obtain OAuth access tokens
+3. **CRUD Mapping** - Any create/update/delete operations in Scheduler are converted to Google Calendar API calls
+4. **Synchronization** - After each operation, events are reloaded from Google Calendar to keep data in sync
+
+> **Important:** This integration uses OAuth 2.0 authentication. Users must authorize the application to access their Google Calendar data.
 
 
 ## Create Google Cloud credentials
@@ -41,34 +50,43 @@ This integration allows users to manage their Google Calendar events directly wi
 ### Step 4: Add Test Users
 - Navigate to **APIs & Services** → **Audience** → Add mail in **Test User** → Click **Save**.
 
-### Step 5: Generate Credentials
-- Navigate to **APIs & Services** → **Credentials** → Click **Create Credentials** → **OAuth client ID**.
-- Set Application Type to **Web application**.
-- Add `http://localhost:4200` to **Authorized JavaScript origins**.
-- **Note**: Copy the generated **Client ID** for your configuration.
+### Step 5: Generate OAuth Credentials
+- Navigate to **APIs & Services** → **Credentials** → Click **Create Credentials** → **OAuth client ID**
+- Set Application Type to **Web application**
+- Add `http://localhost:3000` to **Authorized JavaScript origins** (for React development server)
+- For production, add your actual domain URL
+
+> **Important:** Copy and save the generated **Client ID** immediately. You'll need it to configure your React application.
 
 
-## Create React project and install required packages
+## Create React project and install packages
 
+**Step 1:** Create a new React application:
 ```bash
 npx create-react-app sf-react-gcal
 cd sf-react-gcal
+```
+
+**Step 2:** Install the Syncfusion Scheduler component:
+```bash
 npm install @syncfusion/ej2-react-schedule
 ```
 
-> If you use Yarn, replace `npm install` with `yarn add`.
+> **Tip:** If you prefer Yarn, replace `npm install` with `yarn add` in all commands.
 
-## Add Google Identity script
+## Add Google identity services script
 
- Add the GIS script in the `<head>` section of `public/index.html` file:
+The Google Identity Services (GIS) library handles OAuth authentication. Add the following script to the `<head>` section of your `public/index.html` file:
 
 ```html
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 ```
 
-## Add the Syncfusion CSS References
+> **Note:** The `async defer` attributes ensure the script loads asynchronously without blocking page rendering.
 
-Edit `src/App.js` file.
+## Add Syncfusion CSS references
+
+Import the required Syncfusion CSS stylesheets in your `src/App.js` file:
 
 ```css
 import '@syncfusion/ej2-base/styles/tailwind3.css';
@@ -83,7 +101,10 @@ import '@syncfusion/ej2-react-schedule/styles/tailwind3.css';
 ```
 
 ## Configuring the Syncfusion React Scheduler Component
-1. Adding the **Syncfusion React Scheduler** in `src/Scheduler/schedule.js` and replace your **Client-id** and **Calendar-id**.
+
+### 1. Create the Scheduler Component
+
+Create a new file `src/Scheduler/schedule.js` with the **Syncfusion React Scheduler** component. Replace the placeholder values with your actual **Client ID** and **Calendar ID**:
     ```js
     import React from 'react';
     import {
@@ -160,8 +181,13 @@ import '@syncfusion/ej2-react-schedule/styles/tailwind3.css';
     }
 
     export default Schedule;
-    ``` 
-2. Authorization of your **Google Calendar** with the **Syncfusion React Scheduler** on the `src/Scheduler/schedule.js` file in **Schedule** class.
+    ```
+
+> **Important:** Replace `'YOUR CLIENT_ID'` with your actual Google OAuth Client ID from Step 5 of the credentials setup. Use `'primary'` for your default Google Calendar or replace with a specific calendar ID.
+
+### 2. Add Google OAuth authorization
+
+Add the authorization logic to the **Schedule** class in `src/Scheduler/schedule.js`:
     ```js
     componentDidMount() {
         const ready = () =>
@@ -200,7 +226,11 @@ import '@syncfusion/ej2-react-schedule/styles/tailwind3.css';
       };
     ```
 
-3. Performing **CRUD** operations and mapping it with the **Google Calendar** in the `src/Schedule/schedule.js` file inside the **Schedule** class.
+> **Tip:** The `componentDidMount` method polls for the Google Identity Services library availability. This ensures the GIS script has loaded before attempting to use it.
+
+### 3. Add CRUD Operation handling
+
+Handle create, update, and delete operations in the **Schedule** class. Add this code to `src/Scheduler/schedule.js`:
     ```js
     onActionBegin = async (args) => {
         const { token } = this.state;
@@ -271,7 +301,12 @@ import '@syncfusion/ej2-react-schedule/styles/tailwind3.css';
         }
       };
       ```
-4. **All-Day Event** Conversions for **Syncfusion React Scheduler** to **Google Calendar**.
+
+> **Note:** The `args.cancel = true` prevents the default Scheduler update. Instead, the operation is sent to Google Calendar API, and events are reloaded to reflect the API response.
+
+### 4. Add date conversion utilities
+
+Google Calendar uses different date formats for all-day and timed events. Add these utility functions to handle conversions:
     ```js
     function parseDateOnlyToLocal(dateStr) {
       const [y, m, d] = (dateStr || '').split('-').map(Number);
@@ -285,8 +320,11 @@ import '@syncfusion/ej2-react-schedule/styles/tailwind3.css';
     }
     ```
 
-## Mapping the Google Calendar and Syncfusion React Scheduler
-1. Mapping the data from **Google Calendar** to **Syncfusion React Scheduler** in the `src/Schedule/schedule.js` file.
+## Data mapping: Google Calendar ↔ Syncfusion React Scheduler
+
+### 1. Map Google Calendar Data to Scheduler
+
+Convert events from Google Calendar API format to Scheduler format. Add this function to `src/Scheduler/schedule.js`:
     ```js
     function mapGoogleToScheduler(items) {
       return (items || [])
@@ -324,7 +362,12 @@ import '@syncfusion/ej2-react-schedule/styles/tailwind3.css';
         .filter(Boolean);
     }
     ```
-2. Mapping the data from **Syncfusion React Scheduler** to **Google Calendar** in the `src/Schedule/schedule.js` file.
+
+> **Important:** The mapping handles both all-day events (which use date-only format) and timed events (which use datetime format) correctly.
+
+### 2. Map Scheduler Data to Google Calendar
+
+Convert events from Scheduler format to Google Calendar API format. Add this function to `src/Scheduler/schedule.js`:
     ```js
     function toGoogleEventResource(app) {
       if (app.IsAllDay) {
@@ -370,7 +413,11 @@ import '@syncfusion/ej2-react-schedule/styles/tailwind3.css';
     }
     ```
 
-3. Loading the events to the **Syncfusion Scheduler** from the **Google Calendar** in the `src/Schedule/schedule.js` file using **Schedule** class.
+> **Tip:** Recurring events are preserved by including the `RecurrenceRule` (RRULE) in the Google Calendar API request.
+
+### 3. Load Google Calendar Events
+
+Fetch all events from Google Calendar and update the Scheduler. Add this method to the **Schedule** class in `src/Scheduler/schedule.js`:
     ```js
     loadEvents = async () => {
         const { token } = this.state;
@@ -397,14 +444,18 @@ import '@syncfusion/ej2-react-schedule/styles/tailwind3.css';
       };
     ```
 ## Rendering the Scheduler in the App Component
-Render the Scheduler in the Main App `app.js`
-```ts
+
+Update your main `App.js` file to render the Schedule component:
+
+```tsx
 import React from 'react';
-import Schedule from './Schedule/schedule'
+import Schedule from './Scheduler/schedule';
 
 function App() {
   return (
-    <Schedule></Schedule>
+    <div className="App">
+      <Schedule />
+    </div>
   );
 }
 
@@ -412,15 +463,51 @@ export default App;
 ```
 
 ## Running the Application
+
+Start the development server:
+
 ```bash
 npm start
 ```
 
+The application will open at `http://localhost:3000`.
+
 ## Output
+
 ![image](images/google-calendar-output.png)
-> For additional help, see the [Google Calendar Integration sample on GitHub](https://github.com/SyncfusionExamples/react-scheduler-crud-google-calendar)
+
+The Scheduler will now display your Google Calendar events and allow you to create, update, and delete events directly.
 
 ## Testing and verification
 
-- Use `npm start` to run locally: `http://localhost:3000`.
-- Verify OAuth consent and that `http://localhost:3000` appears in Authorized JavaScript origins.
+**Before testing, verify:**
+- ✅ Your Client ID is correctly configured in `schedule.js`
+- ✅ `http://localhost:3000` is added to Authorized JavaScript origins in Google Cloud Console
+- ✅ Google Calendar API is enabled in your Google Cloud project
+- ✅ The GIS script has loaded (check browser console for errors)
+
+**To test the integration:**
+
+1. Click **"Authorize & Load"** button
+2. Authenticate with your Google account
+3. Verify your Google Calendar events appear in the Scheduler
+4. Create a new event in the Scheduler - it should sync to Google Calendar
+5. Edit or delete events and confirm changes sync to Google Calendar
+
+> **Troubleshooting:** If events don't load, check the browser console (F12) for API errors. Common issues include incorrect Client ID, missing API permissions, or origin URL mismatch.
+
+## Additional resources
+
+* [Google Calendar Integration Sample on GitHub](https://github.com/SyncfusionExamples/react-scheduler-crud-google-calendar) - Complete working example
+* [Google Identity Services Documentation](https://developers.google.com/identity/protocols/oauth2)
+* [Google Calendar API Documentation](https://developers.google.com/calendar/api)
+
+## See also
+
+* [Syncfusion React Scheduler](https://www.syncfusion.com/react-components/react-scheduler)
+* [Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule)
+* [Data Binding Methods](./data-binding.md)
+* [CRUD Operations](./crud-actions.md)
+* [Scheduler Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview)
+* [SharePoint Integration](./sharepoint.md)
+* [Getting Started Guide](./getting-started.md)

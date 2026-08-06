@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Css customization in React Pivotview component | Syncfusion
-description: Learn how to customize the appearance of the Syncfusion React Pivot Table component using CSS styles to modify cell, header, and layout styling.
-control: Css customization 
+title: CSS customization in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table exposes CSS classes for styling row headers, column headers, value cells, field list, and grouping bar areas.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# CSS customization in React Pivot Table component
+# CSS customization in React Pivot Table
 
 The React Pivot Table component provides extensive CSS customization options, allowing users to modify the visual appearance and layout of various pivot table elements. This includes styling row headers, column headers, value cells, summary cells, Field List components, and Grouping Bar areas to match application themes and design requirements.
 

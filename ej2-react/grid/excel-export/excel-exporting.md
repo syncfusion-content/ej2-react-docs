@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Excel Exporting | Syncfusion
-description: React Grid enables Excel export of grid data, creating workbooks and downloadable spreadsheets with customizable export settings.
+title: React Grid Excel Export | Syncfusion
+description: Learn how to export React Data Grid data to Excel, create downloadable workbooks, and customize export settings for spreadsheets.
 control: Excel exporting 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel Export in React Grid Component
+# Excel Export in React Data Grid
 
 The Excel export feature in the React Grid component enables exporting Grid data to Excel or CSV documents. This capability is helpful when sharing or analyzing data in spreadsheet format is required.
 

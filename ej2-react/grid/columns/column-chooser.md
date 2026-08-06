@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Column Chooser | Syncfusion
-description: React Grid column chooser supports dynamic column visibility, a customizable chooser UI, and options to persist selected visibility preferences.
+title: React Grid Column Chooser | Syncfusion
+description: Learn how to show, hide, and manage column visibility in React Data Grid using the Column Chooser for a customizable view.
 control: Column chooser 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Chooser in React Grid component
+# Column Chooser in React Data Grid
 
 The React Data Grid includes a built-in Column Chooser feature that allows columns to be shown or hidden through a simple dialog with checkboxes.
 

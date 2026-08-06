@@ -1,17 +1,19 @@
 ---
 layout: post
-title: React schedule getting started with Next.js | Syncfusion
-description: Checkout and learn about Getting started with React Schedule component of Syncfusion Essential JS 2 in the Next.js project.
-control: Next.js
+title: Getting Started with React Scheduler and Next.js | Syncfusion
+description: Learn how to get started with the Syncfusion React Scheduler in a Next.js project, exploring setup, configuration, and basic usage.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 
-# Next.js Application Using Syncfusion® React Components
+# Getting Started with React Scheduler and Next.js
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Schedule](https://www.syncfusion.com/react-components/react-scheduler) component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Schedule](https://www.syncfusion.com/react-components/react-scheduler) component. The sample uses the App Router, client components, and resource-based scheduling to demonstrate a modern Next.js integration.
+
+> **Tip:** Use this pattern when you need server-side rendering for the page shell but client-side rendering for the Scheduler itself.
 
 ## Prerequisites
 
@@ -24,9 +26,11 @@ Before getting started with the Next.js application, ensure the following prereq
 
 The application is compatible with macOS, Windows, and Linux operating systems.
 
+> **Important:** The Scheduler depends on browser APIs, so the component must be rendered in a client component using the `'use client'` directive.
+
 ## Create a Next.js application
 
-To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
+To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn. The `create-next-app` wizard guides you through the initial project setup and generates the application structure.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -43,9 +47,11 @@ yarn create next-app
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-> The exact prompts vary between major versions of `create-next-app`. The example below reflects Next.js 14+.
+> **Note:** The exact prompts vary between major versions of `create-next-app`. The example below reflects Next.js 14+.
 
 1. Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-schedule`.
+
+> **Tip:** Choose a project name that matches your repository or deployment target to simplify environment setup later.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -88,6 +94,8 @@ The application is ready to run with default settings. Now, let's add Syncfusion
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available on [npmjs.com](https://www.npmjs.com/search?q=ej2-react). This example uses the [React Schedule component](https://www.syncfusion.com/react-components/react-scheduler), so navigate into the project directory and run one of the following commands:
 
+> **Important:** Install the package in the project directory before importing the Scheduler component. Missing package installation will result in unresolved import errors.
+
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
@@ -97,8 +105,7 @@ npm install @syncfusion/ej2-react-schedule --save
 {% endhighlight %}
 {% highlight bash tabtitle="YARN" %}
 
-cd ej2-nextjs-schedule{% endhighlight %}
-{% highlight bash tabtitle="YARN" %}
+cd ej2-nextjs-schedule
 
 yarn add @syncfusion/ej2-react-schedule
 
@@ -110,6 +117,8 @@ yarn add @syncfusion/ej2-react-schedule
 Themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React Schedule component can be applied with CSS files provided through [npm theme packages](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme). For available themes, refer to the [Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
 Install the **Tailwind 3** theme package using the following command:
+
+> **Note:** If you use a different Syncfusion theme package, update the import path to match that theme's stylesheet location.
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -129,11 +138,15 @@ Then add the following CSS reference to the **src/app/globals.css** file:
 
 Follow the steps below to add the React Schedule component to the Next.js project. The Schedule component relies on browser-only APIs, so the page must be rendered as a client component using the `'use client'` directive.
 
+> **Important:** In Next.js App Router projects, the page component that renders the Scheduler must begin with `'use client'`. This ensures the component is rendered only on the client side.
+
 ### 1. Create the data source
 
-Before adding the Schedule component to your markup, create a `datasource.tsx` file inside the **src/app/** folder and add the Schedule data.
+Before adding the Schedule component to your markup, create a `datasource.tsx` file inside the **src/app/** folder and add the Schedule data. Keeping the data source in a separate file makes the page component easier to read and maintain.
 
 The example below uses a typed `Appointment` interface. Each record requires `Id`, `Subject`, `StartTime`, and `EndTime` (the last two being `Date` instances). The `ProjectId` and `TaskId` fields are used for resource grouping, which is configured in the next step.
+
+> **Tip:** Ensure `StartTime` and `EndTime` are created as actual `Date` objects. String values will not work correctly with the Scheduler's date rendering and interactions.
 
 {% tabs %}
 {% highlight ts tabtitle="datasource.tsx" %}
@@ -238,6 +251,8 @@ The example below does the following:
 * Defines two resources (`Projects` and `Categories`) bound to the `ProjectId` and `TaskId` fields in the data source. See [resources.md](./resources.md) for details on resource configuration.
 * Uses the `group` prop to group appointments by resource.
 
+> **Note:** Resource-based grouping is useful when appointments must be categorized by team, project, department, or any other business dimension.
+
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
 
@@ -305,6 +320,8 @@ yarn run dev
 
 Once the dev server is running, open `http://localhost:3000` in your browser to view the Schedule.
 
+> **Tip:** If the page does not render correctly, check the browser console for missing imports, invalid `Date` values, or server-side rendering warnings.
+
 To learn more about the functionality of the Schedule component, refer to the [Schedule documentation](https://ej2.syncfusion.com/react/documentation/schedule/getting-started).
 
 ## Troubleshooting
@@ -314,9 +331,11 @@ To learn more about the functionality of the Schedule component, refer to the [S
 * **A view (Week/Month/Agenda) is missing** — verify the corresponding module is included in `Inject services` and that a matching `ViewDirective` is declared.
 * **Server-rendering errors** — the Schedule component depends on browser APIs; the containing page must be a client component (`'use client'`).
 
+> **Important:** When adding new views or resources, update both the `ViewsDirective` and the `Inject` services array so the UI and module configuration stay in sync.
+
 ## See also
 
-* [Module injection](./module-injection.md)
-* [Resources](./resources.md)
-* [Views](./views.md)
-* [Appointments and event data handling](./appointments.md)
+* [Module injection](./module-injection.md) - View and feature module setup
+* [Resources](./resources.md) - Configure grouped resources
+* [Views](./views.md) - View types and behavior
+* [Appointments and event data handling](./appointments.md) - Work with scheduler data

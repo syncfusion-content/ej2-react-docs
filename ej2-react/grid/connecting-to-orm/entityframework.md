@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - SQL Server via EF Core | Syncfusion
-description: Bind SQL Server data to Syncfusion React Grid using Entity Framework Core with complete CRUD and data operations using UrlAdaptor and CustomAdaptor patterns.
+title: React Grid Bind Data with Entity Framework Core | Syncfusion
+description: Learn how to bind SQL Server data to React Data Grid using Entity Framework Core, perform CRUD operations, and implement adaptor patterns.
 platform: ej2-react
 control: grid
 keywords: adaptors, urladaptor, customadaptor, remotedata, entityframework, sql
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting SQL Server to Syncfusion React Grid Using Entity Framework
+# SQL Server Entity Framework Core Integration in React Data Grid
 
 The React Data Grid supports binding data from a SQL Server database. This documentation demonstrates integrating SQL Server with React Data Grid using **Entity Framework Core (EF Core)** for data operations with both `UrlAdaptor` and `CustomAdaptor` approaches.
 
