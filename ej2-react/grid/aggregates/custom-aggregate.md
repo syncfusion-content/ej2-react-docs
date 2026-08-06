@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Custom Aggregate | Syncfusion
-description: React Grid custom aggregate enables defining custom aggregate functions, applying them to columns, and displaying computed summaries.
+title: React Grid Custom Aggregate | Syncfusion
+description: Learn how to create custom aggregate functions in React Data Grid to calculate and display custom summary values in aggregate rows.
 control: Custom aggregate 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom Aggregate in React Grid Component
+# Custom Aggregate in React Data Grid
 
 The React Data Grid supports custom aggregate functions for scenarios where built-in options do not meet specific requirements. This allows for tailored logic to compute aggregate values.
 

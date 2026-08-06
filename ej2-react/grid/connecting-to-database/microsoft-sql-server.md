@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - Microsoft SQL Server | Syncfusion
-description: React Grid Microsoft SQL Server integration supports using SQL Server queries and backend patterns to supply, manage, and update grid data.
+title: React Grid Microsoft SQL Server Integration | Syncfusion
+description: Learn how to connect React Data Grid to Microsoft SQL Server using ASP.NET Core Web API, execute SQL queries, and manage data efficiently.
 control: grid
 keywords: adaptors, customadaptor, microsoftSQL, remotedata  
 platform: ej2-react
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting SQL Server to React Grid Using ASP.NET Core Web API
+# Microsoft SQL Server Integration in React Data Grid
 
 The React Data Grid supports binding data from a Microsoft SQL Server database through an ASP.NET Core Web API using ADO.NET SqlClient. This modern architecture provides a secure and scalable alternative to accessing the database directly from the client, while enabling efficient server‑side processing for paging, sorting, and filtering. By leveraging React for the UI and ASP.NET Core with SqlClient for data access, applications maintain a clear separation between presentation and data layers and retain full control over SQL Server interactions.
 

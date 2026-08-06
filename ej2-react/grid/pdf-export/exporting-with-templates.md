@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Exporting templates | Syncfusion
-description: React Grid PDF exporting with templates describes using templates to customize PDF layout, headers, and cell formatting when exporting grid data.
+title: React Grid PDF Export Templates | Syncfusion
+description: Learn how to export React Data Grid into PDF using templates, including column, detail, and caption templates with custom formatting, images, and links
 control: Exporting grid with templates
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting with Templates in React Grid Component
+# PDF Export Templates in React Data Grid
 
 The React Grid component allows exporting column, detail, and caption templates to PDF documents. Exported templates can include images, hyperlinks, and customized text formatting.
 

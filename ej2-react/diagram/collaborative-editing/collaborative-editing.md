@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in Syncfusion React Diagram | Syncfusion
-description: Checkout and learn to set up real-time collaborative editing in Syncfusion React Diagram using WebSocket and Redis.
+title: Collaborative Editing in React Diagram | Syncfusion
+description: Enable real-time, multi-user Collaborative Editing in the React Diagram by connecting the React app to an ASP.NET Core SignalR hub and Redis backplane.
 control: Diagram
 documentation: ug
 platform: ej2-react
 domainurl: ##DomainURL##
 ---
 
-# Collaborative editing in React Diagram
+# Collaborative Editing in React Diagram
 
 Collaborative editing enables multiple users to edit diagrams simultaneously in real-time, providing a seamless collaborative experience in React applications.
 

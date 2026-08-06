@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Frozen in React Grid component | Syncfusion
-description: Learn here all about Frozen in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid Frozen | Syncfusion
+description: Learn how to freeze and pin rows and columns in React Data Grid to keep important data visible while scrolling and configure freeze directions.
 control: Frozen 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frozen in React Grid component
+# Frozen in React Data Grid
 
 Frozen rows and columns provides an option to make rows and columns always visible in the top and left side of the grid while scrolling.
 

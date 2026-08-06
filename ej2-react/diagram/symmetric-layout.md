@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Symmetric layout in React Diagram Component | Syncfusion®
-description: Learn here all about Symmetric layout in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Symmetric Layout in React Diagram | Syncfusion®
+description: Use the Symmetric force-directed layout in the React Diagram to balance node placement via spring attraction and repulsion forces for organic graphs.
 control: Symmetric layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Symmetric Layout in React Diagram Component
+# Symmetric Layout in React Diagram
 
 The symmetric layout is a force-directed algorithm that positions nodes by simulating physical forces between them. Nodes are repositioned iteratively by moving them closer together or pushing them further apart until the system reaches an equilibrium state, creating a balanced and visually appealing arrangement.
 

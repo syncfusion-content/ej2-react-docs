@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Filtering | Syncfusion
-description: React Grid filtering provides a comprehensive guide to available filter types, configuration, server filtering, and UI options for data refinement.
+title: React Grid Filtering | Syncfusion
+description: Learn how to use filtering in React Data Grid with filter types, server filtering, expression operators, and UI options for refined data results.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in React Grid component
+# Filtering in React Data Grid
 
 Filtering is a powerful feature in the React DataGrid component that enables selective viewing of data based on specific criteria. It allows narrowing down large datasets to focus on relevant information, thereby enhancing data analysis and decision-making.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Connectors in React Diagram Component | Syncfusion®
-description: Explore the various types of connectors available in the Syncfusion React Diagram Component and learn how to create, customize, and manage them.
+title: Connectors in React Diagram | Syncfusion®
+description: Create React Diagram connectors between nodes, points, or ports by setting sourcePoint and targetPoint, then building the path from one or more segments.
 control: Connectors 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connectors in React Diagram Component
+# Connectors in React Diagram
 
 Connectors are objects used to create links between two points, nodes, or ports to represent relationships between them. They provide visual connections that help illustrate data flow, process sequences, hierarchical relationships, and other logical connections in diagrams.
 

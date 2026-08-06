@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Serialization in React Diagram Component | Syncfusion®
-description: Learn here all about Serialization in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Serialization in React Diagram | Syncfusion®
+description: Save the React Diagram to a JSON string and restore it later for persistence, template reuse, and Mermaid syntax import and export.
 control: Serialization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save and Load Diagrams in React Diagram Component
+# Serialization in React Diagram
 
 **Serialization** is the process of converting the diagram's current state into a storage format that can be saved and later restored. This feature ensures that all diagram elements, including nodes, connectors, and their configurations, persist across application sessions.
 

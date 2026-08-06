@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Connector Labels in React Diagram component | Syncfusion®
-description: Learn how to add, position, and customize connector annotations in Syncfusion® React Diagram Component.
+title: Connector Labels in React Diagram | Syncfusion®
+description: Place text annotations along React Diagram connector paths with offset, alignment, displacement, segment angle, and margin controls for precise labeling.
 control: Connector Labels 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connector Annotations in React Diagram Component
+# Connector Labels in React Diagram
 
 Connector annotations are text labels that can be positioned along connector paths to provide descriptive information or context. These annotations offer flexible positioning and styling options to enhance diagram readability and communication.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Connector ports in React Diagram Component | Syncfusion®
-description: Learn how to create connector ports, configure alignment and displacement, and establish port-to-port connections in Syncfusion® React Diagram Component.
+title: Connector Port in React Diagram | Syncfusion®
+description: Define connector port drop points in the React Diagram so other connectors can attach mid-path through alignment and displacement for precision.
 control: Ports 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Using Connector Ports in React Diagram Component
+# Connector Port in React Diagram
 
 Connector ports serve as connection points along connectors, enabling other connectors to attach at specific locations rather than just the endpoints. This guide covers creating connector ports, configuring their alignment and displacement, and establishing port-to-port connections.
 

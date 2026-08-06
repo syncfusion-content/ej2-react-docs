@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Compatibility for React Data Grid component | Syncfusion
-description: Learn about security features and best practices for the Syncfusion Essential JS 2 React Data Grid, including protection against common web vulnerabilities.
+title: React Grid Security | Syncfusion
+description: Learn how to secure React Data Grid applications against XSS, CSP, CSRF, and injection attacks using recommended security practices and configurations.
 control: Security
 platform: ej2-react
 documentation: ug

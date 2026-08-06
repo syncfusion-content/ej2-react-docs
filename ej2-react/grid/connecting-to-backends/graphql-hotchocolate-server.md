@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - HotChocolate GraphQL Backend | Syncfusion
-description: Integrate Syncfusion React Grid with ASP.NET Core and HotChocolate GraphQL backend to perform CRUD operations seamlessly.
+title: React Data Grid HotChocolate GraphQL Integration | Syncfusion
+description: Learn how to integrate React Data Grid with an ASP.NET Core HotChocolate GraphQL backend to execute queries, mutations, and CRUD operations.
 control: GraphQL Adaptor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Grid with HotChocolate GraphQL Backend
+# HotChocolate GraphQL Backend Integration in React Data Grid
 
 [GraphQL](https://graphql.org/learn/introduction) is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
@@ -835,7 +835,7 @@ public bool DeleteOrder(int orderID)
 
 The backend configuration is now complete. The next step is to create the React frontend and integrate it with the HotChocolate GraphQL API.
 
-## Integrating React Grid with HotChocolate GraphQL
+## Integrating Syncfusion React Grid with HotChocolate GraphQL
 
 After configuring the HotChocolate GraphQL backend, the next step is to set up the React frontend and integrate it with the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component using the `GraphQLAdaptor`.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Filtering Style | Syncfusion
-description: React Grid filtering style customizes filter UI appearance and templates, including filter bars, menus, and Excel-like filtering components.
+title: React Grid Filtering Customization | Syncfusion
+description: Learn how to customize filtering styles in React Data Grid with filter bars, filter menus, Excel-like filtering, templates, and filter UI appearance.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter Customization in React Grid Component
+# Filtering Style in React Data Grid
 
 The appearance of filtering elements in the React Data Grid component can be customized using CSS. Below are examples for customizing various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and excel filter dialog number filters.
 

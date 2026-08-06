@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Virtual Scrolling | Syncfusion
-description: React Grid virtual scrolling explains viewport rendering, row virtualization techniques, and configuration to handle very large datasets efficiently.
+title: React Grid Virtual Scrolling | Syncfusion
+description: Learn how to use virtual scrolling and row virtualization in React Data Grid to efficiently render large datasets and improve scrolling performance.
 platform: ej2-react
 control: Virtual scroll 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtual Scrolling in React Grid Component
+# Virtual Scrolling in React Data Grid
 
 The virtual scrolling feature in the React Data Grid seamlessly handles and displays large amounts of data without performance degradation. It improves the rendering process by loading only the visible rows in the grid viewport, rather than rendering the entire dataset at once. This powerful capability is essential when dealing with datasets that contain thousands of records.
 

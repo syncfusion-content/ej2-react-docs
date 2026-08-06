@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Straight Connectors in React Diagram Component | Syncfusion®
-description: Learn here all about Straight Connector Segments in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Straight Connectors in React Diagram | Syncfusion®
+description: Render straight-line connector segments in the React Diagram by setting the segment type and endpoint coordinates for clean, direct node-to-node links.
 control: Straight 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Straight Connector Segments
+# Straight Connectors in React Diagram
 
 Straight connector segments create direct linear connections between two points in a diagram. These segments are the simplest form of connector routing, providing the shortest path between nodes or connection points. Straight segments are ideal when you need clean, unobstructed connections without intermediate directional changes.
 

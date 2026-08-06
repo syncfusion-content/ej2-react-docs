@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label filtering in React Pivotview component | Syncfusion
-description: Learn how to apply label filtering in the Syncfusion React Pivot Table to filter row and column members based on text conditions and string comparisons.
-control: Label filtering 
+title: Label filtering in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table applies label filtering on row and column members using text conditions such as equals, contains, and begins with.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Label filtering in React Pivotview component
+# Label filtering in React Pivot Table
 
 Label filtering allows you to view the pivot table with particular records of a field based on headers. Label filtering can be enabled by setting the `allowLabelFilter` property to **true**. The following are the three different types of available label filtering:
 

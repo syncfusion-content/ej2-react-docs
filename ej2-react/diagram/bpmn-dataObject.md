@@ -1,21 +1,21 @@
 ---
 layout: post
-title: BPMN DataObject in React Diagram Component | Syncfusion®
-description: Learn how to create and configure BPMN data objects including input, output, and collection types in Syncfusion® React Diagram Component.
+title: BPMN Data Object in React Diagram | Syncfusion®
+description: Visualize process data with BPMN data object nodes in the React Diagram using the Input, Output, and Collection types to show inputs and results.
 control: Bpmn DataObject 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Data Object in React Diagram Component
- 
+# BPMN Data Object in React Diagram
+
 ## Overview
 
 A BPMN data object represents information that flows through a business process. Data objects can represent data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. In business process modeling, data objects help visualize how information moves through different process activities.
 
 ## Creating Data Objects
-To create a BPMN data object in the [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component, set the shape type as [`data object`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnDataObject). The [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmndataobject#type) property determines whether the data object represents input data, output data, or a collection of data items.
+To create a BPMN data object in the React Diagram component, set the shape type as [`data object`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnDataObject). The [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnDataObject#type) property determines whether the data object represents input data, output data, or a collection of data items.
 
 ### Basic Data Object Configuration
 

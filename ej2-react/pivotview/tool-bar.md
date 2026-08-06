@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool bar in React Pivot Table component | Syncfusion
-description: Learn how to use and customize the toolbar in the Syncfusion React Pivot Table for quick access to export, filter, grouping, and report management options.
+title: Toolbar in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table exposes a toolbar for switching between table and chart views, exporting, conditional formatting, and report management.
 platform: ej2-react
-control: Tool bar
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool bar in React Pivot Table component
+# Toolbar in React Pivot Table
 
 The toolbar in the React Pivot Table component provides easy access to commonly used features, such as switching between a pivot table and a pivot chart, changing chart types, applying conditional formatting, exporting data, and more. To enable the toolbar, set the [`showToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#showtoolbar) property to **true**. Additionally, the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#toolbar) property accepts a collection of built-in toolbar options, allowing users to interact with the Pivot Table efficiently at runtime.
 

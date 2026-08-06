@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Row Template | Syncfusion
-description: React Grid row template explains customizing full row rendering with templates, advanced layout options, and examples for complex row UIs.
+title: React Grid Row Template | Syncfusion
+description: Customize row layouts in React Data Grid with Syncfusion row templates. Create rich row designs, display custom content, and enhance data presentation.
 control: Row template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row Template in React Grid Component
+# Row Template in React Data Grid
 
 The row template feature in Grid allows customization of the appearance and layout of rows. This feature displays custom content such as images, buttons, or other controls within the rows.
 

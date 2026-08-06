@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - URL Adaptor | Syncfusion
-description: React Grid URL adaptor explains standard REST integration, query string formats, and configuration for CRUD operations against URL endpoints.
+title: React Grid Bind Data with UrlAdaptor | Syncfusion
+description: Learn how to bind remote data from custom REST APIs in React Data Grid and perform data operations and CRUD actions.
 control: Url Adaptor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom REST API Remote Data Binding in Syncfusion React Components
+# Custom REST API Remote Data Binding in React Data Grid
 
 The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager streamlines connecting the React Grid to REST API endpoints by managing request and response handling for remote data operations. It automatically converts Grid actions such as filtering, sorting, paging, and CRUD into HTTP POST requests and processes the server’s JSON response, enabling smooth remote data binding without custom request logic.
 

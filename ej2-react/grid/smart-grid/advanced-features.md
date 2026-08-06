@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Advanced Features | Syncfusion
-description: React Grid advanced features covers enhancements and extensions available in Smart Grid, demonstrating advanced behaviors and integrated features.
+title: React Grid AI Advanced Features | Syncfusion
+description: Learn how to use AI-powered features in React Data Grid including predictive analysis, anomaly detection, and semantic filtering.
 control: Smart Grid 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Experience Smart AI in Syncfusion React Grid
+# Advanced AI Features in React Data Grid
 
 Easily integrate Syncfusion EJ2 React Grid with AI models (e.g., **OpenAI GPT-4o-mini**, **Azure OpenAI**) to enable predictive analysis, anomaly detection, and semantic filtering via natural language or data-driven prompts. This toolkit transforms your grid into an intelligent data explorer, predicting future values, spotting irregularities, and enabling semantic searches without exact keywords.
 

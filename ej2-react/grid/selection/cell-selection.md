@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Cell selection | Syncfusion
-description: React Grid cell selection covers selecting single or multiple cells, selection APIs, and keyboard interactions for fine-grained selection control.
+title: React Grid Cell Selection | Syncfusion
+description: Learn how to select single or multiple cells in React Data Grid using selection APIs, keyboard interactions, and advanced cell selection options.
 control: Cell selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell Selection in React Grid Component
+# Cell Selection in React Data Grid
 
 Cell selection in the Grid component allows interactive selection of specific cells or ranges of cells within the grid. Selection can be performed through mouse clicks or arrow keys (up, down, left, and right). This functionality allows highlighting, manipulating, or performing actions on specific cells within the grid.
 

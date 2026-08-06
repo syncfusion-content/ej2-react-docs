@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Page settings in React Diagram Component | Syncfusion®
-description: Learn here all about Page settings in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Page Settings in React Diagram | Syncfusion®
+description: Configure the React Diagram page dimensions, background, margin, and orientation, with optional multiple pages, page breaks, and fit options.
 control: Page settings 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page Settings in React Diagram Component
+# Page Settings in React Diagram
 
 Page settings allow customization of the appearance, size, and orientation of the diagram page.
 

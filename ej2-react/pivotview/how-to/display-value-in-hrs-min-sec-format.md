@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Display string value to pivot table values in React | Syncfusion
-description: Learn here all about how to display string value to pivot table values in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+title: How to display a custom string in value cells in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to display a custom string in value cells in the React Pivot Table using the aggregateCellInfo event.
 platform: ej2-react
-control: Display string value to pivot table values 
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 <!-- markdownlint-disable MD009 -->
 
-# Display string values in React Pivot Table cells
+# How to display a custom string in value cells in React Pivot Table
 
 The Pivot Table allows users to display custom string values in value cells by using the [`aggregateCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#aggregatecellinfo) event. This is useful when you need to format numeric values into readable strings, such as converting seconds to time format or applying custom formatting rules.
 

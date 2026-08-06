@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Prevent the grid refresh in react state change in React Grid component | Syncfusion
-description: Learn here all about Prevent the grid refresh in react state change in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid Prevent Refresh on State Change | Syncfusion
+description: Learn how to prevent React Data Grid refresh on state changes in class components using shouldComponentUpdate to preserve grid state and improve performance.
 control: Prevent the grid refresh in react state change 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent Grid Refresh on State Change in React (Class Component)
+# Prevent Grid Refresh on State Change in React Data Grid
 
 By default, React class components automatically re-render whenever their state changes. This behavior also affects the Grid component, forcing it to refresh and discard its previous state. To prevent unnecessary re-rendering, you can override the `shouldComponentUpdate` method and control when the Grid should update.
 

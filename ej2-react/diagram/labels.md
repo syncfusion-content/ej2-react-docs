@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Labels in React Diagram component | Syncfusion®
-description: Learn how to create, add, update, and remove labels on nodes and connectors in Syncfusion® React Diagram Component.
+title: Labels in React Diagram | Syncfusion®
+description: Add one or many text labels to any React Diagram node or connector and edit them at runtime via the annotations collection on the element.
 control: Labels 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Labels in React Diagram Component
+# Labels in React Diagram
 
 [`Annotation`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel) is a block of text that can be displayed over a node or connector. Annotations are used to textually represent an object with a string that can be edited at runtime. Multiple annotations can be added to a node or connector.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - MySQL Server | Syncfusion
-description: React Grid MySQL Server integration supports backend connectivity with MySQL and provides query patterns for data operations and grid data management.
+title: React Grid MySQL Server Integration | Syncfusion
+description: Learn how to connect React Data Grid to MySQL Server using LINQ2DB, execute database queries, and manage grid data efficiently.
 platform: ej2-react
 control: grid
 keywords: adaptors, customadaptor, urladaptor, mysql, remotedata 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting MySQL server to Syncfusion React Grid Using LINQ2DB
+# MySQL Server Integration in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports binding data from a MySQL database. This documentation demonstrates integrating MySQL with React Data Grid using LINQ2DB (Light-weight ORM) for data operations with the use of `CustomAdaptor` to build a Transaction Management Application.
 
@@ -368,9 +368,9 @@ app.Run();
 
 The services are now successfully registered and the application is ready to handle requests.
 
-## Integrating React Grid
+## Integrating Syncfusion React Grid
 
-The React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with MySQL database.
+The Syncfusion React Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with MySQL database.
 
 ### Step 1: Creating the React client application
 
@@ -444,7 +444,7 @@ export default App;
 
 ### Step 4: Implement the CustomAdaptor
 
-The React Grid can bind data from a **MySQL Server** database using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
+The Syncfusion React Grid can bind data from a **MySQL Server** database using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
 
 The `CustomAdaptor` (client-side) is a bridge between the React Grid and the ASP.NET Core backend. It extends the `UrlAdaptor` and handles all data operation requests by constructing HTTP POST calls to corresponding server endpoints. When the Grid performs operations like reading, searching, filtering, sorting, paging, and CRUD operations, the CustomAdaptor intercepts these actions and formats them into HTTP requests. These requests are sent to the ASP.NET Core Web API controller on the server, which processes the `DataManagerRequest` using LINQ2DB to query the MySQL database and return the results.
 

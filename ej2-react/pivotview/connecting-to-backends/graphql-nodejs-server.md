@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Pivot Table - Node.js GraphQL Backend | Syncfusion
-description: Integrate Syncfusion React Pivot Table with a Node.js GraphQL backend to retrieve and analyze data efficiently.
-control: GraphQL Adaptor
+title: Node.js GraphQL backend in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table integrates with a Node.js GraphQL backend through the GraphQLAdaptor for selective data fetching.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connect React Pivot Table to a Node.js GraphQL Backend
+# Node.js GraphQL backend in React Pivot Table
 
 [GraphQL](https://graphql.org/learn/introduction) is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
@@ -188,7 +188,7 @@ The GraphQL schema acts as a blueprint for the GraphQL API. It defines what data
 
 2. Define the **Product** type to represent the product data structure.
 
-```graphql
+```
 # Product type
 type Product {
   ProductID: String!
@@ -203,7 +203,7 @@ The **Product** type contains the fields available in the sample data source.
 
 3. Define the **ReturnType** type to return the product data along with the total record count.
 
-```graphql
+```
 # Response type
 type ReturnType {
   result: [Product!]!
@@ -218,7 +218,7 @@ type ReturnType {
 
 The `params` field is a JSON string containing the serialized `DataManager` request options used by the adaptor. In this sample, it is optional because the server returns the in-memory data set directly.
 
-```graphql
+```
 # DataManager input
 input DataManagerInput {
   params: String
@@ -227,7 +227,7 @@ input DataManagerInput {
 
 5. Define the **Query** type to expose the operations used to retrieve product data from the GraphQL server.
 
-```graphql
+```
 type Query {
   getProducts(datamanager: DataManagerInput): ReturnType!
 }
@@ -305,7 +305,7 @@ Run the following query to verify that the GraphQL server is returning product d
 
 **Test query example:**
 
-```graphql
+```
 query {
   getProducts {
     count
@@ -496,7 +496,7 @@ This mapping helps the adaptor identify and extract the required data from the G
 
 The `query` property specifies the GraphQL query that is sent to the server.
 
-```graphql
+```
 query getProducts($datamanager: DataManagerInput) {
   getProducts(datamanager: $datamanager) {
     count
@@ -568,7 +568,7 @@ The schema must include:
 
 2. Add the **ProductInput** type.
 
-```graphql
+```
 # Product input (for mutations)
 input ProductInput {
   ProductID: String!
@@ -581,7 +581,7 @@ input ProductInput {
 
 3. Add the following **Mutation** type definitions.
 
-```graphql
+```
 type Mutation {
   createProduct(value: ProductInput!): Product!
   updateProduct(key: String!, keyColumn: String, value: ProductInput!): Product

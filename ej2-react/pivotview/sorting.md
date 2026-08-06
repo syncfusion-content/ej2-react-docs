@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in React Pivot Table component | Syncfusion
-description: Learn how to sort row and column members in the Syncfusion React Pivot Table component in ascending, descending, or custom order for better data presentation.
+title: Sorting in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table sorts row and column members in ascending, descending, or custom order using the sortSettings property.
 platform: ej2-react
-control: Sorting 
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in React Pivot Table Component
+# Sorting in React Pivot Table
 
 To have a quick glance on how to sort data in the React Pivot Table, watch this video:
 

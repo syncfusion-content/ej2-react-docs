@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Web Method Adaptor | Syncfusion
-description: React Grid web method adaptor supports calling server web methods, adapting responses, and configuring interactions with legacy backend endpoints.
+title: React Grid Bind Data with WebMethodAdaptor | Syncfusion
+description: Learn how to use WebMethodAdaptor in React Data Grid to bind remote data, execute CRUD operations, and integrate web methods efficiently.
 control: WebMethod Adaptor 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote Data Binding with Custom REST API using WebMethod
+# Remote Data Binding with REST API using WebMethod in React Data Grid
 
 The `WebMethodAdaptor` in React Data Grid facilitates data binding from remote services using web methods. This powerful feature enables efficient communication between the client-side application and the server. The `WebMethodAdaptor`, like the `URLAdaptor`, sends query parameters encapsulated within an object named `value`. Within this `value` object, various datamanager properties such as `requiresCounts`, `skip`, `take`, `sorted`, and `where` queries are included.
  

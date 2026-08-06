@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in React Pivotview component | Syncfusion
-description: Explore the Syncfusion React Pivot Table component documentation index covering all features such as data binding, filtering, grouping, export, and more.
-control: Index 
+title: About Syncfusion React Pivot Table Component | Syncfusion
+description: Learn what the React Pivot Table is, see its key features, and find links to the most common customization options.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Pivotview component
+# About Syncfusion React Pivot Table Component.
 
 The **Pivot Table** component is an easily configurable and presentation-quality business control. It allows to create multi-dimensional views using pivot data source for analyzing and satisfying the needs of business user.
 

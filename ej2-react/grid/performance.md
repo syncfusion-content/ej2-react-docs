@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Performance | Syncfusion
-description: React Grid performance covers best practices, virtualization, efficient data operations, and techniques to improve rendering speed with large datasets.
+title: React Grid Performance | Syncfusion
+description: Learn how to optimize React Data Grid performance with virtualization, paging, efficient data operations, and best practices for large datasets.
 platform: ej2-react
 control: DataGrid
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Performance tips for React DataGrid Component
+# Performance Tips for React Data Grid
 
 This article is a comprehensive guide on improving the loading performance of the React DataGrid, especially when dealing with large datasets along with large number of columns. It provides valuable insights into the steps that need to be followed to bind a large data source without experiencing any performance degradations. By offering detailed explanations and actionable tips, this resource aims to empower readers with the knowledge and best practices necessary to optimize the performance of the React DataGrid during data binding, ensuring a smooth and efficient user experience.
 

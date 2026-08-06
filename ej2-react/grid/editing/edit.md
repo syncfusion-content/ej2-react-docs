@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Editing | Syncfusion
-description: React Grid editing enables features, actions, modes, toolbar configs, column rules, templates, confirmations, and external CRUD workflows.
+title: React Grid Editing | Syncfusion
+description: Learn how to configure editing in React Data Grid, customize edit modes, apply validation rules, use templates, and manage CRUD workflows efficiently.
 control: Edit 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editing in React Grid Component
+# Editing in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component includes built-in editing features for creating, reading, updating, and deleting data directly in the grid. This eliminates the need for separate forms and allows data modification within a single interface. The grid editing provides powerful options through multiple edit modes, customizable triggers, and flexible data handling.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Column Spanning | Syncfusion
-description: React Grid column spanning supports merging header or cell columns, configuration for colspan behavior, and customization for complex multi-column layouts.
+title: React Grid Column Spanning | Syncfusion
+description: Learn how to merge cells using column spanning in React Data Grid, configure colspan behavior, and build complex multi-column layouts.
 control: Column spanning
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column spanning in React Grid component
+# Column Spanning in React Data Grid
 
 Column spanning merges adjacent cells with identical values horizontally, producing a cleaner and more structured layout. This feature reduces duplication in consecutive cells, highlights grouped information, and improves readability by presenting related data in a compact form. Reports and tabular views become easier to interpret when repetitive values are visually combined into a single spanned cell.
 

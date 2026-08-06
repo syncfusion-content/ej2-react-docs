@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Column Menu | Syncfusion
-description: React Grid column menu describes configuring column menus, adding actions like sorting and filtering, and customizing menu items and icons.
+title: React Grid Column Menu | Syncfusion
+description: Learn how to configure and customize the column menu in React Data Grid, including sorting, filtering, menu items, and column-specific actions.
 control: Column menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column menu in the React Grid component
+# Column Menu in React Data Grid
 
 The React Data Grid provides a built-in column menu that offers quick access to essential column operations, such as sorting, grouping, filtering, column chooser, and autofit. This menu appears when the menu icon in a column header is clicked, enabling streamlined interaction with grid data. The column menu can be enabled by setting the [showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/grid#showcolumnmenu) property to `true` in the Grid configuration and injecting the `ColumnMenu` module.
 

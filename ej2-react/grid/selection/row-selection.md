@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Row selection | Syncfusion
-description: React Grid row selection explains single and multi-row selection modes, keyboard behaviors, and events to handle selection changes.
+title: React Grid Row Selection | Syncfusion
+description: Learn how to select single or multiple rows in React Data Grid with selection modes, keyboard interactions, selection APIs, and row selection events.
 control: Row selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row Selection in React Grid Component
+# Row Selection in React Data Grid
 
 Row selection in the Grid component provides interactive selection of specific rows or ranges of rows within the grid. Row selection can be performed effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when highlighting, manipulating, or performing actions on specific rows within the grid.
 
@@ -784,7 +784,7 @@ In the following example, row selection is canceled when the value of "Customer 
 
 ## Pass selected records to server using AJAX
 
-The React Grid enables selecting multiple or single records and sending them to the server using AJAX requests. This feature is useful for scenarios where processing or manipulating selected data on the server side is required.
+The Syncfusion React Grid enables selecting multiple or single records and sending them to the server using AJAX requests. This feature is useful for scenarios where processing or manipulating selected data on the server side is required.
 
 To achieve passing selected records to the server using AJAX requests in the grid, follow these steps:
 
@@ -1008,7 +1008,7 @@ The following screenshot shows passing of selected records to the server:
 
 ## Pass selected records to server using FETCH
 
-The React Grid enables selecting multiple or single records and sending them to the server using Fetch requests. This feature is useful for scenarios where processing or manipulating selected data on the server side is required.
+The Syncfusion React Grid enables selecting multiple or single records and sending them to the server using Fetch requests. This feature is useful for scenarios where processing or manipulating selected data on the server side is required.
 
 To achieve passing selected records to the server using Fetch requests in the grid, follow these steps:
 

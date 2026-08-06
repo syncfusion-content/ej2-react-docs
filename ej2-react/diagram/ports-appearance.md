@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ports appearance in React Diagram Component | Syncfusion®
-description: Learn how to customize port appearance, visibility, shapes, and constraints in Syncfusion® React Diagram Component for enhanced visual design.
+title: Port Appearance in React Diagram | Syncfusion®
+description: Style React Diagram ports with stroke color, width, fill, opacity, and size, and toggle port visibility per connector and interaction needs.
 control: Ports 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Port Appearance in React Diagram Component
+# Port Appearance in React Diagram
 
 ## Overview
 

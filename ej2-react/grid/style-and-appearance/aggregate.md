@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Aggregate Style | Syncfusion
-description: React Grid aggregate style explains styling and templates for aggregate rows and cells, customization options to match application design.
+title: React Grid Aggregate Customization | Syncfusion
+description: Learn how to customize aggregate styles in React Data Grid with aggregate rows, cells, templates, and visual formatting options.
 control: Aggregate 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Aggregate Customization in React Grid Component
+# Aggregate Style in React Data Grid
 
 The appearance of aggregate elements in the React Data Grid component can be customized using CSS. Below are examples for customizing the aggregate root element and the aggregate cell elements.
 

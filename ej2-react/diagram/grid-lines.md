@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grid lines in React Diagram Component | Syncfusion®
-description: Learn here all about Grid lines in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Grid Lines in React Diagram | Syncfusion®
+description: Enable gridlines and snapping in the React Diagram so nodes and connectors align precisely to the visible grid through snap settings configuration.
 control: Grid lines 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grid Lines in EJ2 React Diagram Component
+# Grid Lines in React Diagram
 
 Gridlines are crisscross lines drawn in diagram pages like the lines on traditional graph paper. They help position diagram elements precisely on the diagram page and provide visual reference points for accurate layout design.
 

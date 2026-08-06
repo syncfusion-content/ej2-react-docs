@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Apply conditional hyper link for row or column in React | Syncfusion
-description: Learn here all about Apply condition based hyper link for specific row or column in Syncfusion React of Syncfusion Essential JS 2 and more.
-control: Apply condition based hyper link for specific row or column 
+title: How to apply a condition-based hyperlink in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to apply a condition-based hyperlink in the React Pivot Table using conditionalSettings in hyperlinkSettings.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Apply condition based hyper link for specific row or column in React
+# How to apply a condition-based hyperlink in React Pivot Table
 
 In the Pivot Table, you can display hyperlinks in specific rows or columns by setting up certain conditions. This can be done using the [`conditionalSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/hyperlinkSettingsModel/#conditionalsettings) property, which is available within the [`hyperlinkSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/hyperlinkSettings/) object.
 

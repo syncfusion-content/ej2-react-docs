@@ -1,16 +1,16 @@
 ---
 layout: post
-title: React Grid - Custom Adaptor | Syncfusion
-description: React Grid custom adaptor explains creating a custom data adaptor to transform requests and responses, enabling custom backends and behaviors.
+title: React Grid Bind Data with Custom Remote Data Binding | Syncfusion
+description: Learn how to bind remote data with custom rules in React Data Grid, customize data operations, and manage CRUD actions.
 control: Custom Adaptor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom Remote Data Binding in React Grid
+# Custom Remote Data Binding in React Data Grid
 
-The `CustomAdaptor` in the React Data Grid is a powerful extension mechanism that **customizes any existing adaptor** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, `CustomAdaptor` extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
+The Custom adaptor in the React Data Grid is a powerful extension mechanism that **customizes any existing adaptor** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, custom adaptor extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
 
 For detailed guidance, refer to the [DataManager CustomAdaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/custom-adaptor), which explains the usage of custom adaptors in depth. For complete server-side setup and advanced implementation details, see the [DataManager ODataV4Adaptor documentation](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor), covering endpoint configuration, query handling, and recommended practices for integrating OData V4 services.
 
@@ -62,7 +62,7 @@ createRoot(document.getElementById('root')).render(
 
 ### Step 3: Create React Grid component with CustomAdaptor
 
-Integrating a `CustomAdaptor` with the React Data Grid requires configuring the `DataManager` as the communication bridge between the Grid component and the backend data source. The `CustomAdaptor` serves as a powerful customization layer that provides complete control over how data operations—such as filtering, sorting, paging, and querying—are processed and transmitted to the server.
+Integrating a Custom adaptor with the React Data Grid requires configuring the `DataManager` as the communication bridge between the Grid component and the backend data source. The Custom adaptor serves as a powerful customization layer that provides complete control over how data operations—such as filtering, sorting, paging, and querying—are processed and transmitted to the server.
 
 #### Step 3.1: Creating an Extended ODataV4Adaptor:
 
@@ -92,7 +92,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager provides built�
 {% highlight js tabtitle="CustomAdaptor.ts" %}
 import { setValue } from '@syncfusion/ej2-base';
 import { DataManager, ODataV4Adaptor, Query, } from '@syncfusion/ej2-data';
-export class SerialNoAdaptor extends ODataV4Adaptor {
+export class CustomAdaptor extends ODataV4Adaptor {
     public processResponse() {
         let i = 0;
         const original: any = super.processResponse.apply(this, arguments as any);
@@ -474,7 +474,7 @@ The Grid has now been successfully created with full functionality, including pa
 
 ## CRUD Operations
 
-CRUD (Create, Read, Update, Delete) operations using a `CustomAdaptor` are handled by setting up the Grid for editing and employing the sample **OrdersController** in the server application. This controller manages standard HTTP requests such as `GET`, `POST`, `PATCH`, and `DELETE` to support complete data modification processes.
+CRUD (Create, Read, Update, Delete) operations using a custom adaptor are handled by setting up the Grid for editing and employing the sample **OrdersController** in the server application. This controller manages standard HTTP requests such as `GET`, `POST`, `PATCH`, and `DELETE` to support complete data modification processes.
 
 To enable CRUD operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component within a React application, the following steps outline the required setup:
 
@@ -629,4 +629,4 @@ A complete, working sample implementation is available in the [GitHub](https://g
 - [Hybrid data binding](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
 - [RESTful CRUD Operations in ASP.NET WebForms](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/web-method-adaptor)
 - [Connect to OdataV4 services](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor)
-- [GraphQL Integration for React Grids](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)
+- [GraphQL Integration for Syncfusion React Grids](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor)

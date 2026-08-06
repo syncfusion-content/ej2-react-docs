@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Edit Types | Syncfusion
-description: React Grid edit types supports various editor options, configuration for each type, and examples that help select appropriate editors for column data.
+title: React Grid Edit Types | Syncfusion
+description: Learn how to configure edit types in React Data Grid, choose appropriate cell editors, customize editing behavior, and manage column editing efficiently.
 control: Edit types 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Edit Types in React Grid Component
+# Edit Types in React Data Grid
 
 The React Grid component in Syncfusion<sup style="font-size:70%">&reg;</sup> provides powerful edit types that enable seamless customization of the editing behavior for different column types. These edit types deliver flexibility in handling diverse data types, enhance the editing experience, and provide efficient solutions for different editing scenarios.
 
@@ -676,7 +676,7 @@ To utilize the custom cell editor template feature, implement these four essenti
 
 ### Render AutoComplete in edit form
 
-The React Grid allows rendering the [AutoComplete](../../auto-complete/getting-started) within the edit form by using the cell edit template feature. This feature enables selection of values from a predefined list during the editing of a specific column. It is especially valuable for providing a dropdown-like auto-suggestion and input assistance for data entry in the grid's columns.
+The Syncfusion React Grid allows rendering the [AutoComplete](../../auto-complete/getting-started) within the edit form by using the cell edit template feature. This feature enables selection of values from a predefined list during the editing of a specific column. It is especially valuable for providing a dropdown-like auto-suggestion and input assistance for data entry in the grid's columns.
 
 Define the cell edit template for the column using the [edit](https://ej2.syncfusion.com/react/documentation/api/grid/column#edit) property. This property specifies the necessary functions for creating, reading, and writing the AutoComplete into the specific column.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip in React Diagram Component | Syncfusion®
-description: Learn here all about Tooltip in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Tooltip in React Diagram | Syncfusion®
+description: Show size, position, and rotation tooltips on the React Diagram during node drag, resize, and rotate, or attach custom mouse-hover tooltips.
 control: Tooltip 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in EJ2 React Diagram Component
+# Tooltip in React Diagram
 
 <!-- markdownlint-disable MD010 -->
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customizing loading indicator in React | Syncfusion
-description: Learn here all about Customizing loading indicator in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Customizing loading indicator 
+title: How to customize the loading indicator in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to customize the loading indicator in the React Pivot Table using the spinnerTemplate property.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing the loading indicator in the React Pivot Table component
+# How to customize the loading indicator in React Pivot Table
 
 The Pivot Table displays a loading indicator during data processing operations such as filtering, sorting, and aggregation calculations. The default loading spinner can be customized to match application design requirements using the [`spinnerTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#spinnertemplate) property.
 

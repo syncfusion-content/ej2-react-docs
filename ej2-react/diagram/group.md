@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Group in React Diagram Component | Syncfusion®
-description: Learn here all about Group in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Group in React Diagram | Syncfusion®
+description: Cluster nodes, sub-groups, and connectors into a React Diagram Group node that can be transformed or ungrouped while preserving individual child edits.
 control: Group 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Group in React Diagram Component
+# Group in React Diagram
 Groups enable developers to cluster multiple nodes and connectors into a single manageable element, acting as a container that maintains relationships between child elements while allowing both collective and individual manipulation. This powerful feature streamlines complex diagram management by treating related elements as cohesive units while preserving the ability to edit individual components when needed.
 
 ## Create Group

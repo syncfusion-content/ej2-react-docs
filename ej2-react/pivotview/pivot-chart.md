@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pivot Chart in React Pivot Table Component | Syncfusion
-description: Learn how to integrate and configure Pivot Chart in the Syncfusion React Pivot Table to visualize pivot data as bar, line, pie, and other chart types.
+title: Pivot Chart in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table visualizes aggregated values with a Pivot Chart that supports bar, line, pie, and other chart types, with drill and export.
 platform: ej2-react
-control: Pivot Chart
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pivot Chart in React Pivot Table Component
+# Pivot Chart in React Pivot Table
 
 The Pivot Chart in the Syncfusion React Pivot Table component helps users visualize aggregated values in a clear and graphical format. It provides essential options like drill down and drill up operations, over 15 chart types, and various display settings for series, axes, legends, export, print, and tooltips. The main purpose of the Pivot Chart is to present Pivot Table data in a way that is easy to understand and interact with.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Toolbar Style | Syncfusion
-description: React Grid toolbar style explains styling toolbar items, templates, and layout options to present actionable controls consistently.
+title: React Grid Toolbar Style | Syncfusion
+description: Learn how to customize toolbar styles in React Data Grid with toolbar items, templates, layout options, and CSS-based styling.
 control: Toolbar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar Customization in React Grid Component
+# Toolbar Style in React Data Grid
 
 The appearance of the toolbar in the React Data Grid component can be customized using CSS. Here are examples for customizing the toolbar root element and toolbar button element.
 

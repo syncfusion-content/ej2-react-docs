@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Constraints in React Diagram Component | Syncfusion®
-description: Learn here all about Constraints in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Constraints in React Diagram | Syncfusion®
+description: Enable or disable React Diagram, node, and connector behaviors with flagged-enum constraints controlled via Bitwise operators at the API or UI level.
 control: Constraints 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Constraints in React Diagram Component
+# Constraints in React Diagram
 
 Constraints enable or disable specific behaviors of diagrams, nodes, and connectors. These constraints are implemented as flagged enumerations, allowing multiple behaviors to be controlled simultaneously using Bitwise operators (`&, |, ~, <<, etc.`).
 

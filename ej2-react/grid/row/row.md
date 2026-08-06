@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Row | Syncfusion
-description: React Grid row covers row-level configuration, events, selection, and behaviors to control presentation, styling, interaction, and customization of grid rows.
+title: React Grid Row | Syncfusion
+description: Learn how to configure and customize rows in React Data Grid using Syncfusion. Manage row events, selection, styling, and interaction capabilities.
 control: Row 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row in React Grid Component
+# Row in React Data Grid
 
 Each row typically represents a single record or item from a data source. Rows in a grid are used to present data in a tabular format. Each row displays a set of values representing the fields of an individual data record. Rows allow interaction with the data in the grid. Rows can be selected, edited, sorted, filtered, and configured to trigger events based on actions.
 

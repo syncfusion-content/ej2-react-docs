@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Check box selection | Syncfusion
-description: React Grid check box selection explains enabling checkbox columns, select-all behavior, and integration with selection APIs to manage multi-select scenarios.
+title: React Grid Checkbox Selection | Syncfusion
+description: Learn how to enable checkbox selection in React Data Grid with checkbox columns, select-all functionality, selection APIs, and multiple selection support.
 control: Check box selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check box Selection in React Grid Component
+# Checkbox Selection in React Data Grid
 
 Checkbox selection provides functionality to select multiple grid records through checkboxes in each row. This selection method allows efficient bulk operations on selected records within the grid.
 

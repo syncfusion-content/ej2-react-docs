@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Swim lane in React Diagram Component | Syncfusion®
-description: Learn how to add, configure, and customize swimlane shapes in the symbol palette of Syncfusion® React Diagram Component.
+title: Swimlane Palette in React Diagram | Syncfusion®
+description: Add pre-built Swimlane and Phase shapes to the React Diagram Symbol Palette for fast drag-and-drop assembly of process diagrams.
 control: Swim lane in symbol palette 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
- 
-# Swimlane in Symbol Palette
 
-The [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component provides comprehensive support for adding swimlane shapes and phases to the symbol palette. Swimlanes help organize process flows by grouping related activities into lanes, making complex diagrams more readable and structured.
+# Swimlane Palette in React Diagram
+
+The React Diagram component provides comprehensive support for adding swimlane shapes and phases to the symbol palette. Swimlanes help organize process flows by grouping related activities into lanes, making complex diagrams more readable and structured.
 
 ## Add Swimlane to Palette
 

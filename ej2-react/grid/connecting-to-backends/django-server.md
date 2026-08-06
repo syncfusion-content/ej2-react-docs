@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid + SQL Server + Django REST Framework | Syncfusion
-description: Integrate Syncfusion React Grid with Microsoft SQL Server and Django REST Framework to perform seamless CRUD operations.
+title: React Grid with Django REST Framework | Syncfusion
+description: Learn how to integrate React Data Grid with SQL Server and Django REST Framework to process POST requests and perform seamless CRUD operations.
 platform: ej2-react
 control: grid
 keywords: adaptors, urladaptor, mssql, remotedata 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Grid with Django REST Binding POST Request Data
+# Django REST Framework Integration in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) combined with Django REST Framework and Microsoft SQL Server provides a robust, scalable data‑driven application architecture. The React Data Grid delivers a rich, high‑performance client‑side experience with advanced features like paging, sorting, filtering, searching and CRUD operations.
 
@@ -45,7 +45,7 @@ The [React Data Grid](https://www.syncfusion.com/react-components/react-data-gri
 
 ## Setting up the Django REST Framework for Microsoft SQL database
 
-The Django REST Framework backend serves as the core data service, managing API requests that provide the data powering the React Grid.
+The Django REST Framework backend serves as the core data service, managing API requests that provide the data powering the Syncfusion React Grid.
 
 ### Step 1: Set up the Django REST Framework server and install required packages
 
@@ -381,7 +381,7 @@ class BookLendingViewSet(viewsets.ModelViewSet):
 > A detailed breakdown of DataManager payloads mapping to Django operations (filtering, sorting, paging, searching, selection, and CRUD) will be explained in the [Data Operations](#perform-data-operations) & [CRUD](#performing-crud-operations) section.
 
 
-## Integrate React Grid with Django REST Framework (POST Request)
+## Integrate Syncfusion React Grid with Django REST Framework (POST Request)
 
 The React Data Grid is a robust, high‑performance component built to efficiently display, manage, and manipulate large datasets. It provides advanced features such as sorting, filtering, and paging. Follow these steps to render the grid and integrate it with a Django backend.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: BPMN Activity in React Diagram Component | Syncfusion®
-description: Learn about BPMN activity shapes including tasks, subprocesses, loops, compensation, and boundaries in Syncfusion® React Diagram Component.
+title: BPMN Activity in React Diagram | Syncfusion®
+description: Model business process work as BPMN Task and Subprocess activities in the React Diagram, with user, service, and message task subtypes plus loop markers.
 control: Bpmn Activity 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Activity in React Diagram Component
+# BPMN Activity in React Diagram
 
 ## Overview
 

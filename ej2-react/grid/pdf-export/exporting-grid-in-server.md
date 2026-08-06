@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid – PDF Server Export | Syncfusion
-description: React Grid PDF server export covers server‑side PDF generation, API endpoints, and efficient large grid export without relying on client‑side processing.
+title: React Grid Server-Side PDF Export | Syncfusion
+description: Learn how to export React Data Grid data using server-side PDF generation, API endpoints, and efficient export processing for large datasets.
 control: Exporting grid in server 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Performing Server Side PDF Export in the React Grid
+# Server dependencies in React Data Grid
 
 The Grid component provides the ability to export grid data to a PDF document on the server side using the Grid server export library. Server-side PDF export operations provide additional security and flexibility. Enabling server-side PDF exporting requires configuring server dependencies and implementing the necessary server configuration.
 

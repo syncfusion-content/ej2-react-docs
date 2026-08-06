@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  React Grid - Column Rendering | Syncfusion
-description: React Grid column rendering allows custom cell and header layouts, templates, and flexible options for complex content and interactive elements.
+title: React Grid Column Rendering | Syncfusion
+description: Learn how to customize column rendering in React Data Grid using cell templates, header templates, and flexible layouts for rich data presentation.
 control: Columns
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Rendering in React Grid Component
+# Column Rendering in React Data Grid
 
 Columns in the React Data Grid define the structure and presentation of data. This section outlines manual, automatic, and dynamic rendering approaches to ensure clarity and flexibility in grid design.
 

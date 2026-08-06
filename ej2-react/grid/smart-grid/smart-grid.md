@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Smart Grid | Syncfusion
-description: React Grid Smart Grid adds intelligent features that automate tasks, boost efficiency, and offer configuration options for enabling smart behaviors.
+title: React Grid Smart AI | Syncfusion
+description: Learn how to use Smart AI in React Data Grid to perform filtering, sorting, grouping, and paging through natural language commands using LLM integration.
 control: Smart Grid 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Smart AI with Syncfusion React Grid
+# Smart AI in React Data Grid
 
 The AI Toolkit integrates natural language interaction into the EJ2 React Grid. By connecting the grid to a Large Language Model (LLM) such as **OpenAI GPT‑4o‑mini**, users can execute grid operations such as filtering, sorting, grouping, and pagination through simple text commands. Examples of grid operations:
 
@@ -123,7 +123,7 @@ Convert the following natural language query into a JSON object representing Syn
     - sort/group/filter only by available columns.
     - Include a "message" field describing the interpreted query action and expected behavior.
     - Handled actions: paging, filtering, sorting, grouping.
-    - If the action is not handled by this schema, need to clearly explain the action not handled in this schema and how to achieve it in React Grid. Dont explain the JSON structure.
+    - If the action is not handled by this schema, need to clearly explain the action not handled in this schema and how to achieve it in Syncfusion React Grid. Dont explain the JSON structure.
     User Input: ${text}
 ```
 

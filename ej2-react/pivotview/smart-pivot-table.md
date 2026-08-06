@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Smart AI with Syncfusion React Pivot Table | Syncfusion
-description: Configure a Syncfusion React Pivot Table with validated natural-language actions using AI AssistView and a secure server.
+title: Smart Pivot Table in React | Syncfusion
+description: Learn how the React Pivot Table works with AI AssistView to apply validated natural-language actions that change exactly one report setting at a time.
 platform: ej2-react
 control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Smart AI with Syncfusion React Pivot Table
+# Smart Pivot Table in React
 
 The Syncfusion React Pivot Table can be integrated with the React AI AssistView to let users configure reports with natural-language commands. Users can filter, sort, summarize, reorganize, format, and visualize a report while the field list, grouping bar, toolbar, and chart controls remain available.
 
@@ -147,7 +147,7 @@ createRoot(document.getElementById('root')!).render(<App />);
 
 Create `assistive-pivot/.env.example`:
 
-```env
+```bash
 VITE_API_BASE_URL=http://localhost:3000
 VITE_SYNCFUSION_LICENSE_KEY=
 VITE_ACCESS_TOKEN=
@@ -508,7 +508,7 @@ The reducer must reject missing measures or fields and must never accept `dataSo
 
 Create `server/.env.example`, then copy it to `server/.env` for local development:
 
-```env
+```bash
 PORT=3000
 NODE_ENV=development
 CORS_ORIGIN=http://localhost:5173,http://127.0.0.1:5173

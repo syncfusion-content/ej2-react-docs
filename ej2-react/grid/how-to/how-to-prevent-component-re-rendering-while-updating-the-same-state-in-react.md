@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid – Prevent Unnecessary Re-render | Syncfusion
-description: React Grid rendering optimization explains strategies to avoid unnecessary re‑renders, using memoization and key patterns to improve performance and efficiency.
+title: React Grid Prevent Unnecessary Re-Rendering | Syncfusion
+description: Learn how to optimize React Data Grid rendering with useCallback, useEffect, and memoization techniques to prevent re-renders and improve performance.
 control: Prevent React Component Re-Rendering on Same State Update
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent React Component Re-Rendering on Same State Update
+# Prevent Unnecessary Re-Rendering in React Data Grid
 
 React components re-render whenever state is updated, even if the new value is identical to the previous one. To enhance performance and avoid unnecessary re-renders, React provides hooks such as `useCallback` and `useEffect` that help control when updates should trigger re-renders.
 

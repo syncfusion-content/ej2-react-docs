@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize number date and time values in React | Syncfusion
-description: Learn here all about Customize number date and time values in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Customize number date and time values 
+title: How to customize number and date values in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to customize number and date values in the React Pivot Table using formatSettings and culture.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize number, date, and time values in React Pivot Table component
+# How to customize number and date values in React Pivot Table
 
 You can format the number, date, and time values for each field using the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#formatsettings) option under [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings). This configuration is applied during component initialization to ensure consistent data presentation across the pivot table.
 

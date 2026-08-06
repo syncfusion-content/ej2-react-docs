@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Select cells and get selection info in React Pivotview | Syncfusion
-description: Learn here all about Perform cell selection and get selected cells information in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Perform cell selection and get selected cells information 
+title: How to get selected cell information in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to get selected cell information in the React Pivot Table using the cellSelected event.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Select cells and get selection info in React Pivotview component
+# How to get selected cell information in React Pivot Table
 
 The React Pivot Table component allows users to select cells or rows by enabling the [allowSelection](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/#allowselection) property in the [gridSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/) configuration. Once enabled, users can highlight selected cells using a mouse click or arrow keys. This guide explains how to configure selection modes, types, and handle the [cellSelected](https://ej2.syncfusion.com/react/documentation/api/pivotview/#cellselected) event to retrieve selected cell information.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Excel Exporting Templates | Syncfusion
-description: React Grid Excel export with templates customizes cell content and layout using column, detail, and caption templates with images, links, and formatting.
+title: React Grid Excel Export Templates | Syncfusion
+description: Learn how to export React Data Grid into Excel using templates, including column, detail, and caption templates with custom formatting, images, and links.
 control: Exporting grid with templates
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting with Templates
+# Excel Export Templates in React Data Grid
 
 The Grid offers powerful export capabilities that preserve column, detail, and caption templates in Excel documents. Templates enable rich content rendering including images, hyperlinks, and customized text. Column templates customize individual cell content, detail templates display nested hierarchical data, and caption templates customize group headers for enhanced presentation.
 

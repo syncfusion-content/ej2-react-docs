@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Pivotview component | Syncfusion
-description: Learn how to migrate from the EJ1 PivotView API to the Syncfusion React EJ2 Pivot Table component with updated properties, methods, and event mappings.
-control: Ej1 api migration 
+title: EJ1 API migration in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table maps properties, methods, and events from Essential JS 1 PivotGrid to the EJ2 Pivot Table component.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Pivotview component
+# EJ1 API migration in React Pivot Table
 
 This article describes the API migration process of pivot table component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Reactive Aggregate | Syncfusion
-description: React Grid reactive aggregate supports live aggregate updates during editing or data changes, ensuring summaries always represent the current grid state.
+title: React Grid Reactive Aggregate | Syncfusion
+description: Learn how to use reactive aggregates in React Data Grid to automatically update summary values when data is edited, added, or removed.
 control: Reactive aggregate 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Reactive Aggregate in React Grid Component
+# Reactive Aggregate in React Data Grid
 
 The React Data Grid supports reactive aggregates, which automatically recalculate and update aggregate values in real time whenever the data changes.
 

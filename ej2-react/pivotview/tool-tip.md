@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool tip in React Pivotview component | Syncfusion
-description: Learn how to enable and customize tooltips in the Syncfusion React Pivot Table to display additional information when hovering over value cells and headers.
-control: Tool tip 
+title: Tooltip in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table shows contextual tooltips on value cells and headers, with the showTooltip property to enable or disable them.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in React Pivot Table Component
+# Tooltip in React Pivot Table
 
 The tooltip displays contextual information when users hover over value cells in the pivot table. It can be enabled or disabled by setting the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showtooltip) property to **true** or **false**. By default, tooltip is enabled in the pivot table and shows the cell value along with row and column header information.
 

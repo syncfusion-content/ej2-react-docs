@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Switching older themes style in React Pivotview component | Syncfusion
-description: Learn how to switch to older theme styles in the Syncfusion React Pivot Table component to maintain visual consistency with previous Syncfusion theme versions.
-control: Switching older themes style 
+title: Switching older themes style in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table reverts to the pre-Volume 1 2020 theme by overriding CSS and adjusting the row height for older layouts.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD009 -->
 
-# Switching older themes style in React Pivotview component
+# Switching older themes style in React Pivot Table
 
 From Volume 1, 2020 onwards Syncfusion<sup style="font-size:70%">&reg;</sup> has revised the theming and layout of the Pivot Table. So, to inherit the older theme style and layout please do the necessary changes in CSS and pivot table height.
 

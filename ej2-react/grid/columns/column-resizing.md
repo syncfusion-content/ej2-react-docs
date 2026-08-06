@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Column Resizing | Syncfusion
-description: React Grid column resizing enables manual and automatic width adjustments, multiple resize modes, and control over user or programmatic changes.
+title: React Grid Column Resizing | Syncfusion
+description: Learn how to resize columns in React Data Grid with manual and automatic width adjustments, resize modes, and programmatic resizing options.
 control: Column resizing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column resizing in React Grid Component
+# Column Resizing in React Data Grid
 
 Column resizing in the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component allows adjusting column widths dynamically to fit content and improve data readability. This feature provides flexibility in customizing the grid layout based on data requirements and screen size.
 

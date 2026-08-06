@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Entity Relationship Diagram in React Diagram Component | Syncfusion®
+title: Entity Relationship Diagram in React Diagram | Syncfusion®
 platform: ej2-react
-description: Learn how to create and customize Entity Relationship Diagrams in the Syncfusion® React Diagram component of Syncfusion Essential® JS 2 and more.
+description: Build database Entity Relationship Diagrams in React Diagram with entity nodes, field rows, and relationship connectors via ErShapeModel and ErConnectorShapeModel.
 control: ERDiagram
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 
-# Entity Relationship Diagrams in React Diagram Component
+# Entity Relationship Diagram in React Diagram
 
 An Entity Relationship (ER) diagram is a visual representation of a database structure. It displays entities (such as tables), their attributes (such as columns), and the relationships between those entities. In the Syncfusion® React Diagram component, ER diagrams can be created by configuring nodes with [ErShapeModel](https://ej2.syncfusion.com/react/documentation/api/diagram/erShapeModel) and connectors with [ErConnectorShapeModel](https://ej2.syncfusion.com/react/documentation/api/diagram/erConnectorShapeModel).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize empty value cells in React Pivotview component | Syncfusion
-description: Learn here all about Customize empty value cells in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Customize empty value cells 
+title: How to customize empty value cells in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to customize empty value cells in the React Pivot Table with custom text and styling.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize empty value cells in React Pivotview component
+# How to customize empty value cells in React Pivot Table
 
 When working with pivot table, certain combinations of row and column headers may not have corresponding data values, resulting in empty cells. The React Pivot Table component allows you to display custom text in these empty cells instead of leaving them blank, thereby improving the visual presentation and enhancing the user experience of your pivot table.
 

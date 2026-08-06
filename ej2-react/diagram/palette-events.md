@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Symbol Palette Events in EJ2 React Diagram Component | Syncfusion®
-description: Learn here all about Symbol palette events in Syncfusion® React Diagram Component including drag-drop events, palette expansion, and selection change events.
+title: Symbol Palette Events in React Diagram | Syncfusion®
+description: Subscribe to React Diagram Symbol Palette events for drag, drop, expand, and selection changes to react on user actions during symbol placement.
 platform: ej2-react
 control: Symbol palette 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Symbol Palette Events in EJ2 React Diagram Component
+# Symbol Palette Events in React Diagram
 
 The Symbol Palette component provides several events that trigger during user interactions such as dragging symbols, expanding palettes, and changing selections. These events enable developers to customize behavior, provide visual feedback, and implement custom logic during symbol palette operations.
 
