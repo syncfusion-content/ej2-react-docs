@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integrate D3.js with React Pivot Table | Syncfusion
-description: Learn how to use D3.js with the Syncfusion React Pivot Table and keep custom visualizations synchronized with pivot report changes.
-control: Integrate Pivot Table with D3.js
+title: How to integrate D3.js with React Pivot Table | Syncfusion
+description: Step-by-step example showing how to integrate D3.js with the React Pivot Table to render custom visualizations that stay in sync with pivot report changes.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate D3.js with React Pivot Table
+# How to integrate D3.js with React Pivot Table
 
 The Syncfusion React Pivot Table can act as an interactive aggregation layer for a custom [D3.js](https://d3js.org/) visualization. When users rearrange fields, filter members, sort values, or expand and collapse members, the Pivot Table recalculates its values and the D3 visualization can render the updated result.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Orthogonal connectors in React Diagram Component | Syncfusion®
-description: Learn to create, customize, and edit orthogonal connectors in Syncfusion React Diagram Component with segment editing and custom styling.
+title: Orthogonal Connectors in React Diagram | Syncfusion®
+description: Create orthogonal connectors in the React Diagram whose segments stay perpendicular, with editable length and direction for structured flowcharts.
 control: Orthogonal 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Orthogonal Connectors in React Diagram Component
+# Orthogonal Connectors in React Diagram
 
 Orthogonal connectors use segments that are always perpendicular to each other, which is ideal for creating structured layouts in flowcharts or organizational charts.
 

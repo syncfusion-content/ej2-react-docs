@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in React Pivotview component | Syncfusion
-description: Learn how to print the Syncfusion React Pivot Table component directly from the browser with options to customize the print layout and visible content.
+title: Print in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table prints pivot table and pivot chart content directly from the browser with options to control the print layout.
 platform: ej2-react
-control: Print 
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in React Pivotview component
+# Print in React Pivot Table
 
 The React Pivot Table component supports print functionality, allowing users to print the current state of the pivot table or pivot chart. This feature enables users to generate hard copies of pivot table reports for convenient review and data sharing.
 

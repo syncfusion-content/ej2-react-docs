@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Toolbar | Syncfusion
-description: React Grid toolbar provides default buttons, configuration options, and examples for common operations like adding records, exporting data, and searching.
+title: React Grid Toolbar | Syncfusion
+description: Learn how to use the toolbar in React Data Grid with built-in actions, custom toolbar items, data export, search, and editing operations.
 control: Toolbar
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar in React Grid Component
+# Toolbar in React Data Grid
 
 The toolbar in the React Data Grid component offers several general use cases to enhance data manipulation and overall experience. Actions such as adding, editing, and deleting records within the grid can be performed, providing efficient data manipulation capabilities. The toolbar also facilitates data export and import functionality, allowing users to generate downloadable files in formats like Excel, CSV, or PDF.
 

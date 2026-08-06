@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Summary customization in React Pivotview component | Syncfusion
-description: Learn how to customize summary rows and columns in the Syncfusion React Pivot Table to control the display and calculation of grand totals and subtotals.
-control: Summary customization 
+title: Summary customization in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table customizes summary rows and columns to control the display and calculation of grand totals and subtotals.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Summary customization in React Pivotview component
+# Summary customization in React Pivot Table
 
 ## Show or hide grand totals
 

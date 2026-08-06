@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Bind REST API data to React Pivot Table with UrlAdaptor | Syncfusion"
+title: "URL adaptor in React Pivot Table | Syncfusion"
 component: "Pivot Table"
 platform: ej2-react
-description: "Connect a REST API to the React Pivot Table with UrlAdaptor and explore remote data binding and CRUD."
-control: UrlAdaptor Data Binding
+description: "Learn how the React Pivot Table connects to a REST API through the UrlAdaptor for remote data binding and CRUD."
+control: Pivot Table
 documentation: ug
 ---
 
-# Bind REST API data to Syncfusion React Pivot Table using UrlAdaptor
+# URL adaptor in React Pivot Table
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table supports binding remote data through the [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor) of the Syncfusion<sup style="font-size:70%">&reg;</sup> React [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). The [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor) connects the Pivot Table with REST API endpoints, manages communication between the Pivot Table and the server and handles requests and responses for remote data operations. It converts Pivot Table actions such as CRUD operations into HTTP POST requests and processes the server's JSON response. This enables remote data binding without the need to write custom request-handling logic and provides a clean separation between the React UI and backend services.
 

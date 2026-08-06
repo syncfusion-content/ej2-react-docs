@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label Interaction in React Diagram component | Syncfusion®
-description: Learn how to enable interactive label features in Syncfusion® React Diagram including selection, dragging, rotation, resizing, editing, and drag limits.
+title: Label Interaction in React Diagram | Syncfusion®
+description: Enable label interaction on React Diagram nodes and connectors for select, drag, rotate, resize, and edit operations at runtime.
 control: Label Interaction
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interactive Label Features
+# Label Interaction in React Diagram
 
 The Diagram component allows labels to be interactive through selecting, dragging, rotating, and resizing operations. Label interaction is disabled by default. Enable label interaction using the `constraints` property of the label. You can also control specific interaction types by enabling individual constraints for selecting, dragging, rotating, or resizing. The following code demonstrates how to enable interactive mode.
 

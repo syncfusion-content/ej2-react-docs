@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Pivot Table - ODataV4 Adaptor | Syncfusion
-description: React Pivot Table ODataV4 adaptor connects ASP.NET Web API endpoints to the Pivot Table, mapping requests and handling server-side data operations.
-control: ODataV4 Adaptor
+title: ODataV4 adaptor in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table binds to OData V4 services through the ODataV4Adaptor, which converts CRUD operations into OData-compliant requests.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# OData Remote Data Binding in Syncfusion React Pivot Table
+# ODataV4 adaptor in React Pivot Table
 
 The [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the React Pivot Table and OData V4 services by handling OData‑formatted request and response processing. It converts Pivot Table CRUD operations into OData V4-compliant requests and sends them to the server. The adaptor also parses the structured OData V4 JSON response, extracting the result set and count values, ensuring smooth remote data binding for the Pivot Table without custom query or response logic.
 

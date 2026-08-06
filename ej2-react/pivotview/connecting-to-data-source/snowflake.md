@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Snowflake Data Binding in React Pivot Table component | Syncfusion"
+title: "Snowflake data binding in React Pivot Table | Syncfusion"
 component: "Pivot Table"
 platform: ej2-react
-description: "Learn how to bind data from a Snowflake database in the Syncfusion React Pivot Table of Syncfusion Essential JS 2 and more."
-control: Snowflake Data Binding
+description: "Learn how the React Pivot Table retrieves data from a Snowflake database through a Web API controller and binds it as the pivot data source."
+control: Pivot Table
 documentation: ug
 ---
 
-# Snowflake in EJ2 React Pivot Table Component
+# Snowflake data binding in React Pivot Table
 
 This guide explains how to retrieve data from a Snowflake database using the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data/) library and bind it to the Pivot Table through a Web API controller.
 

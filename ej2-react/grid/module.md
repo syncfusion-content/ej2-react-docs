@@ -1,16 +1,16 @@
 ---
 layout: post
-title: React Grid - Modules | Syncfusion
-description: React Grid module explains the modular architecture, available modules, and how to import and configure them so applications load only needed features.
+title: React Grid Modules and Feature Injection | Syncfusion
+description: Learn how to configure React Data Grid modules and services for paging, sorting, filtering, grouping, editing, and export features.
 control: Module 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Modules in React Grid component
+# Modules in React Data Grid
 
-React Grid modules help optimize your application’s bundle size by including only the features you need. To enable a specific Grid feature, import and inject the corresponding Feature Module into your Grid configuration. The available Grid Feature Modules include:
+Syncfusion React Grid modules help optimize your application’s bundle size by including only the features you need. To enable a specific Grid feature, import and inject the corresponding Feature Module into your Grid configuration. The available Grid Feature Modules include:
 
 | Feature | Module | Description |
 |--------|--------|-------------|

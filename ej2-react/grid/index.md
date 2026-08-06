@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in React Grid component | Syncfusion
-description: Learn here all about Index in Syncfusion React Grid component of Syncfusion Essential JS 2 and more.
+title: React Grid Overview | Syncfusion
+description: Learn how to use React Data Grid to display and manage tabular data with data binding, paging, sorting, filtering, searching, grouping, editing, and templates.
 control: Index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Grid component
+# Overview of React Data Grid
 
 The Grid component is used to display and manipulate tabular data with configuration options to control the way the data is presented and manipulated.
 It will pull data from a data source, such as array of JavaScript objects, `OData web services`, or `DataManager` and binding data fields to columns.

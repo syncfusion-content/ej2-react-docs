@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Virtualization in React Diagram Component | Syncfusion®
-description: Learn here all about Virtualization in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Virtualization in React Diagram | Syncfusion®
+description: Enable Virtualization in the React Diagram to render only the in-viewport nodes and connectors, keeping large diagrams fast and memory-light.
 control: Virtualization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtualization in React Diagram Component
+# Virtualization in React Diagram
 
 Virtualization is a performance optimization technique that significantly improves diagram rendering and interaction speed, particularly when working with large-scale diagrams containing hundreds or thousands of nodes and connectors.
 

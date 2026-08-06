@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Ports positioning in React Diagram Component | Syncfusion®
-description: Learn how to position ports on nodes in  Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Port Positioning in React Diagram | Syncfusion®
+description: Position React Diagram node ports with fractional offset values, alignment, and margin for exact slot placement on node boundaries.
 control: Ports 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
- 
-# Port positioning in React Diagram Component
 
-The [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) component provides flexible options for positioning ports on nodes. Ports can be precisely positioned using offset coordinates, alignment properties, and margin values to create professional diagram layouts that meet specific design requirements.
+# Port Positioning in React Diagram
+
+The React Diagram component provides flexible options for positioning ports on nodes. Ports can be precisely positioned using offset coordinates, alignment properties, and margin values to create professional diagram layouts that meet specific design requirements.
 
 ## Understanding Port Offset Positioning
 
@@ -24,15 +24,15 @@ The following table demonstrates port positioning with different offset values:
 
 | Offset values | Output |
 | -------- | -------- |
-| (0,0) | ![Port offset 0,0](images/port0-0.png) |
-| (0,0.5) | ![Port offset 0,0.5](images/port0-0.5.png) |
-| (0,1) | ![Port offset 0,1](images/port0-1.png) |
-| (0.5,0) | ![Port offset 0.5,0](images/port0.5-0.png) |
-| (0.5,0.5) |![Port offset 0.5,0.5](images/port0.5-0.5.png) |
-| (0.5,1) | ![Port offset 0.5,1](images/port0.5-1.png) |
-| (1,0) | ![Port offset 1,0](images/port1-0.png) |
-| (1,0.5) | ![Port offset 1,0.5](images/port1-0.5.png) |
-| (1,1) | ![Port offset 1,1](images/port1-1.png) |
+| (0,0) | ![Port offset (0,0)](images/port0-0.png) |
+| (0,0.5) | ![Port offset (0,0.5)](images/port0-0.5.png) |
+| (0,1) | ![Port offset (0,1)](images/port0-1.png) |
+| (0.5,0) | ![Port offset (0.5,0)](images/port0.5-0.png) |
+| (0.5,0.5) |![Port offset (0.5,0.5)](images/port0.5-0.5.png) |
+| (0.5,1) | ![Port offset (0.5,1)](images/port0.5-1.png) |
+| (1,0) | ![Port offset (1,0)](images/port1-0.png) |
+| (1,0.5) | ![Port offset (1,0.5)](images/port1-0.5.png) |
+| (1,1) | ![Port offset (1,1)](images/port1-1.png) |
 
 ## Horizontal and Vertical Alignment Options
 

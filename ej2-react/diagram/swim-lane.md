@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Swim lane in React Diagram Component | Syncfusion®
-description: Learn here all about Swim lane in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Swimlane in React Diagram | Syncfusion®
+description: Create horizontal or vertical Swimlane nodes in the React Diagram to visualize cross-functional business processes grouped by department or role.
 control: Swim lane 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Swim lane in React Diagram Component
+# Swimlane in React Diagram
 
 Swimlanes are specialized diagram nodes that visualize business processes by organizing activities into distinct lanes or sections. Each lane typically represents a department, role, or responsibility area, making it easy to understand who is responsible for each step in a process. Swimlanes are particularly useful for workflow documentation, process mapping, and cross-functional process analysis.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Empty Record Template | Syncfusion
-description: React Grid empty record template enables customization patterns, examples, and guidance to show meaningful messages and actions when no data exists.
+title: React Grid Empty Record Template | Syncfusion
+description: Learn how to customize the empty record template in React Data Grid to display custom messages, images, or actions when no data is available.
 control: Customize the Empty Record Template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the Empty Record Template in React Grid Component
+# Empty Record Template in React Data Grid
 
 The empty record template allows custom content such as images, text, or components to be displayed when the grid has no data, replacing the default "No records to display" message.
 

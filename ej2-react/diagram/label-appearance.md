@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label Appearance in React Diagram component | Syncfusion®
-description: Learn how to customize label appearance including fonts, colors, alignment, and text styling in Syncfusion® React Diagram Component.
+title: Label Appearance in React Diagram | Syncfusion®
+description: Style React Diagram labels with font, color, fill, stroke, opacity, bold, italic, and text-decoration for any text annotation.
 control: Label Appearance
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing Label Appearance in React Diagram Component
+# Label Appearance in React Diagram
 
 ## Overview
 

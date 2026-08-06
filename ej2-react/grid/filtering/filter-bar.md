@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Filter Bar | Syncfusion
-description: React Grid filter bar enables filtering with expression operators, configurable modes, column settings, custom templates, and active filter status display.
+title: React Grid Filter Bar | Syncfusion
+description: Learn how to use Filter Bar in React Data Grid with expression operators, configurable modes, column settings, custom templates, and filter status display.
 control: Filter bar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter Bar in React Grid Component
+# Filter Bar in React Data Grid
 
 The filter bar feature provides a row of input fields directly below the grid headers, enabling instant data filtering. Each column displays an input field where filter criteria can be entered, and the grid updates immediately to show matching results.
 

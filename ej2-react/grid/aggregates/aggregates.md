@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Aggregates | Syncfusion
-description: React Grid provides column aggregate functions, footer and group summaries, custom aggregate calculations, and formatting options.
+title: React Grid Aggregates | Syncfusion
+description: Learn how to use aggregates in React Data Grid to display column summaries, footer and group aggregates, and create custom aggregate calculations.
 control: Aggregates 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Aggregates in React Grid Component
+# Aggregates in React Data Grid
 
 The Aggregates feature in React Data Grid provides built-in calculations such as sum, average, count, minimum, and maximum for specific columns. The results can be displayed in different sections of the grid.
 
@@ -161,7 +161,7 @@ The aggregate type `Sum` by default displays the raw value (e.g., "1234.56") in 
 
 ## Built-in aggregate types
 
-The React Grid supports the following built-in aggregate types that can be specified in the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#type) property:
+The Syncfusion React Grid supports the following built-in aggregate types that can be specified in the [type](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#type) property:
 
 - `Sum`: Calculates the total of all values in the column.
 - `Average`: Calculates the mean of all values.

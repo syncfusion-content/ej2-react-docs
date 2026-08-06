@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Symbol palette in React Diagram Component | Syncfusion®
-description: Learn here all about Symbol palette in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Symbol Palette in React Diagram | Syncfusion®
+description: Show a draggable Symbol Palette beside the React Diagram so users can drop reusable nodes, connectors, and groups onto the canvas.
 control: Symbol palette 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Symbol Palette in React Diagram Component
+# Symbol Palette in React Diagram
 The [`symbolPalette`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette)  is a gallery of reusable symbols and diagram elements that can be dragged and dropped on the diagram surface multiple times. It provides an efficient way to organize and access frequently used nodes, connectors, and groups, streamlining the diagram creation process.
 ## Create Symbol Palette
 The [`width`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#height) properties of the symbol palette allows to define the size of the symbol palette.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Commands in React Diagram Component | Syncfusion®
-description: Learn here all about Commands in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Commands in React Diagram | Syncfusion®
+description: Run alignment, distribute, sizing, clipboard, grouping, z-order, zoom, nudge, fit-to-page, and undo-redo commands programmatically in the React Diagram.
 control: Commands 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Commands in React Diagram Component
+# Commands in React Diagram
 
 <!-- markdownlint-disable MD010 -->
 

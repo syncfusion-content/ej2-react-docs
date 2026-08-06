@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Editing Style | Syncfusion
-description: React Grid editing style supports customizing editor appearance and adjusting layouts to enhance the overall edit mode experience.
+title: React Grid Editing Customization | Syncfusion
+description: Learn how to customize editing styles in React Data Grid with editor appearance, edit layouts, form elements, and editing UI customization.
 control: Editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editing Customization in React Grid Component
+# Editing Style in React Data Grid
 
 The appearance of editing-related elements in the React Data Grid component can be customized using CSS. Below are examples for customizing various editing-related elements.
 

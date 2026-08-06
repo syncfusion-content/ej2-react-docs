@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Sorting | Syncfusion
-description: React Grid sorting explains single and multi-column sorting, custom comparers, and UI options to control sort behavior and indicator rendering.
+title: React Grid Sorting | Syncfusion
+description: Learn how to configure sorting in React Data Grid with single and multi-column sorting, custom comparers, sorting indicators, and sorting behavior options.
 control: Sorting 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
  
-# Sorting in React Grid Component
+# Sorting in React Data Grid
 
 The Grid component provides built-in support for sorting data-bound columns in ascending or descending order.
 

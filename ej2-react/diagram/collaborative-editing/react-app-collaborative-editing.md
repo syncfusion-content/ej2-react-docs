@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing Configuration in React Diagram | Syncfusion
-description: Checkout and learn to configure SignalR and Redis for real-time collaborative editing in Syncfusion React Diagram.
+title: SignalR Hub Configuration in React Diagram | Syncfusion
+description: Wire up a SignalR client in a React app to enable live collaborative editing in the React Diagram, syncing node and connector changes across users.
 control: Diagram
 documentation: ug
 platform: ej2-react
 domainurl: ##DomainURL##
 ---
 
-# SignalR hub configuration in React application
+# SignalR Hub Configuration in React Diagram
 
 ## Overview
 

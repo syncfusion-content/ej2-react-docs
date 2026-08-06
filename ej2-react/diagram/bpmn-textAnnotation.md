@@ -1,14 +1,14 @@
 ---
 layout: post
-title: BPMN Text Annotation in React Diagram Component | Syncfusion®
-description: Learn how to create, configure, and manage BPMN text annotations in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: BPMN Text Annotation in React Diagram | Syncfusion®
+description: Attach BPMN text annotations to any target shape in the React Diagram; annotations follow the target on move and can be dragged to another node.
 control: Bpmn Text annotation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# BPMN Text Annotation in React Diagram Component
+# BPMN Text Annotation in React Diagram
 
 ## Overview
 

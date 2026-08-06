@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save and Load Report through the Toolbar in React | Syncfusion
-description: Learn how to save and load reports through custom toolbar options in the Syncfusion React Pivotview component.
-control: Tool bar
+title: Save and load report in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table exports the current report to JSON and reloads it later through custom toolbar options.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export and import reports as JSON through custom toolbar options
+# Save and load report in React Pivot Table
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Pivot Table component allows users to save and restore report settings (also known as [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings)) through custom toolbar options. This functionality simplifies report management by allowing users to export settings as a JSON file and import them later to restore the Pivot Table configuration.
 

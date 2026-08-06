@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scroll settings in React Diagram Component | Syncfusion®
-description: Learn here all about Scroll settings in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Scroll Settings in React Diagram | Syncfusion®
+description: Customize scroll behavior in the React Diagram by setting scroll offsets, zoom limits, padding, canAutoScroll, and an optional scrollable area boundary.
 control: Scroll settings 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scroll Settings in React Diagram Component
+# Scroll Settings in React Diagram
 
 The diagram component provides comprehensive scrolling capabilities through both vertical and horizontal scrollbars, as well as mouse wheel navigation. The diagram's [`scrollSettings`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel) enable developers to monitor the current scroll status, viewport dimensions, zoom levels, and programmatically control diagram navigation. These settings are essential for managing large diagrams and providing smooth user interaction experiences.
 

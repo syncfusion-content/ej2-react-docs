@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Connector Events in React Diagram Component | Syncfusion®
-description: Learn about connector events in Syncfusion® React Diagram Component, including click, selection, position, connection, and segment events with examples.
+title: Connector Events in React Diagram | Syncfusion®
+description: Handle React Diagram connector events for click, selection change, position change, connection change, and segment collection updates in code.
 control: Connector Events
 platform: ej2-react
 documentation: ug

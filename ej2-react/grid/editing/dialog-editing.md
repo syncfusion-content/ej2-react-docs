@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React Grid - Dialog Editing | Syncfusion
+title: React Grid Dialog Editing | Syncfusion
 description: React Grid dialog editing opens record editors in modal dialogs, supports templates, enforces validation, and manages single-record save workflows.
 control: Dialog editing 
 platform: ej2-react

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Container in React Diagram Component | Syncfusion®
-description: Learn here all about Container in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Container in React Diagram | Syncfusion®
+description: Group related shapes into a React Diagram Container node with a header, child management, and automatic boundary sizing for organized composite layouts.
 control: Container 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Container in React Diagram Component
+# Container in React Diagram
 
 A Container is a specialized node that groups logically related shapes within a visible boundary. Unlike regular groups, containers automatically manage child elements while maintaining individual element properties. Common use cases include organizing related components in flowcharts, creating swimlanes in process diagrams, and building composite UI layouts.
 

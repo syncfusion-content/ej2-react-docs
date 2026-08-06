@@ -1,15 +1,15 @@
 ---
 layout: post
-title: React Pivot Table with WebMethod Adaptor for REST API | Syncfusion
+title: Web method adaptor in React Pivot Table | Syncfusion
 component: Pivot Table
-description: React Pivot Table web method adaptor supports calling server web methods, adapting responses, and configuring interactions with legacy backend endpoints.
-control: WebMethod Adaptor 
+description: Learn how the React Pivot Table calls server-side web methods through the WebMethodAdaptor for remote data operations.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bind Custom REST API data to React Pivot Table using WebMethod Adaptor
+# Web method adaptor in React Pivot Table
 
 The [WebMethodAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor) enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to communicate with remote services using web methods. It functions similarly to [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor) but with a key difference: it wraps all operation parameters (CRUD operations) inside a special `value` object before sending them to the server.
 

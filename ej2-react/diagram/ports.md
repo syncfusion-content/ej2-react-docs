@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ports in React Diagram Component | Syncfusion®
-description: Learn here all about Ports in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Ports in React Diagram | Syncfusion®
+description: Add fixed connection points to React Diagram nodes with Ports so connectors stay attached to specific points during moves, rotates, and resizes.
 control: Ports 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ports in React Diagram Component
+# Ports in React Diagram
 
 Ports are specialized connection points on nodes that provide precise control over where connectors attach. Unlike node-to-node connections that automatically adjust their attachment points, ports maintain fixed connection locations even when nodes are moved, rotated, or resized. This makes ports essential for creating stable, predictable diagram layouts and professional flowcharts.
 

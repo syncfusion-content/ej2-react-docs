@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Custom Toolbar | Syncfusion
-description: React Grid toolbar items support built-in and custom actions, layout customization, and event handling for an adaptable and effective toolbar.
+title: React Grid Custom Toolbar | Syncfusion
+description: Learn how to create a custom toolbar in React Data Grid with templates, custom components, interactive controls, and custom toolbar actions.
 control: Custom Toolbar
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom Toolbar in React Grid Component
+# Custom Toolbar in React Data Grid
 
 Custom toolbar in React Data Grid enables the creation of a customized toolbar layout and functionality to match specific application requirements. This is achieved by utilizing the [toolbarTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#toolbartemplate) property, which provides comprehensive customization options for the toolbar layout and styling. Define a custom template for the toolbar and handle the actions of the toolbar items in the [clicked](https://ej2.syncfusion.com/react/documentation/api/toolbar/index-default#clicked) event.
 

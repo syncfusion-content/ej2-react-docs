@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Footer Aggregate | Syncfusion
-description: React Grid footer aggregate enables setting footer values, applying formatting, and combining multiple aggregates for each column.
+title: React Grid Footer Aggregate | Syncfusion
+description: Learn how to display and format footer aggregate values in React Data Grid, apply summary calculations, and combine multiple aggregates.
 control: Footer aggregate 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Footer Aggregate in React Grid Component
+# Footer Aggregate in React Data Grid
 
 The React Data Grid supports calculating and displaying aggregate values in the footer cells. These footer aggregates are computed from all rows in the grid. The [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/aggregateColumn#footertemplate) property can be used to customize how the aggregate values are rendered in the footer cells, allowing formatted text or custom layouts to be displayed.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Toolbar Items | Syncfusion
-description: React Grid custom toolbar offers full layout and appearance control with templates, enabling integration of custom components and interactive behaviors.
+title: React Grid Toolbar Items | Syncfusion
+description: Learn how to use toolbar items in React Data Grid with built-in actions, custom toolbar items, templates, export options, and search functionality.
 control: Toolbar Items
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar items in React Grid Component
+# Toolbar Items in React Data Grid
 
 The React Data Grid includes a customizable toolbar positioned above the grid for accessing various actions and functionalities. Both built-in and custom toolbar items can be added to meet specific application requirements.
 
@@ -305,7 +305,7 @@ export default App;
 
 ## Add custom components to the Grid toolbar using template
 
-The React Grid provides the flexibility to customize its toolbar by embedding custom components using the [template](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel#template) property of the [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel). Custom UI elements such as buttons, dropdowns, or input controls can be added directly into the toolbar, alongside built-in actions like `Add`, `Edit`, and `Delete` to enhance user interaction and provide seamless integration with Grid operations.
+The Syncfusion React Grid provides the flexibility to customize its toolbar by embedding custom components using the [template](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel#template) property of the [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel). Custom UI elements such as buttons, dropdowns, or input controls can be added directly into the toolbar, alongside built-in actions like `Add`, `Edit`, and `Delete` to enhance user interaction and provide seamless integration with Grid operations.
 
 In the following example, an [AutoComplete](https://ej2.syncfusion.com/react/documentation/auto-complete/getting-started) is defined as a custom toolbar item using the `template` property. This property is assigned a function that returns a JSX element. The `AutoComplete` is populated with unique "Ship City" values from the grid's data. When a value is selected from the `AutoComplete`, the Grid is filtered to show only the records that match the selected city. Once the Grid is rendered, the custom `AutoComplete` appears as part of the toolbar, allowing interaction with both standard and custom toolbar elements.
 

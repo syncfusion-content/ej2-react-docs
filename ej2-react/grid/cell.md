@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Cell | Syncfusion
-description: React Grid offers cell rendering, editing options, and APIs to customize content, formatting, and interactive behavior within each cell.
+title: React Grid Cells | Syncfusion
+description: Learn how to customize React Data Grid cells with HTML content, text wrapping, cell styling, clip modes, tooltips, and grid line configuration.
 control: Cell
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell in React Grid Component
+# Cells in React Data Grid
 
 A cell in the React Data Grid component represents the smallest unit of data within the grid. Each cell corresponds to the intersection of a row and a column, and it is responsible for displaying the value associated with that specific row-column combination. Cells can display plain text, formatted values, or fully customized content, making them highly flexible for presenting structured data in a grid layout.
 

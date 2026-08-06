@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid – Cordova Export Support | Syncfusion
-description: React Grid Cordova export explains techniques to export grid data from hybrid Cordova apps, handling files and platform constraints for mobile exports.
+title: React Grid Cordova Export Support | Syncfusion
+description: Learn how to export React Data Grid data in Cordova applications using Blob streams, Excel and PDF export events, and mobile-friendly file handling.
 platform: ej2-react
 control: Exporting grid in cordova application 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cordova Grid Export in React Grid Component
+# Cordova Export in React Data Grid
 
 Exporting the React Data Grid in a Cordova application is useful when data needs to be generated and saved as Excel or PDF files for reporting or offline access. Since Cordova does not support direct file downloads, exporting must be handled through Blob streams. This is achieved by using the grid's export methods along with the export-complete events to access the generated Blob.
 

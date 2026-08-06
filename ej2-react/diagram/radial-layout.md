@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Radial tree layout in React Diagram Component | Syncfusion®
-description: Learn here all about Radial tree layout in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Radial Tree Layout in React Diagram | Syncfusion®
+description: Use the RadialTree layout in the React Diagram to position a central root with child nodes arranged in concentric rings for org charts and concept maps.
 control: Radial tree layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Radial Tree Layout in React Diagram Component
+# Radial Tree Layout in React Diagram
 
 A radial tree layout is a specialized diagram that presents hierarchical information with a central node at the core, surrounded by branches extending outward in a circular, tree-like structure. This layout is particularly effective for visualizing organizational charts, family trees, mind maps, and network relationships where understanding the relationship distance from a central concept is important.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "MongoDB Data Binding in React Pivot Table component | Syncfusion"
+title: "MongoDB data binding in React Pivot Table | Syncfusion"
 component: "Pivot Table"
 platform: ej2-react
-description: "Learn how to bind data from a MongoDB Database in the Syncfusion React Pivot Table of Syncfusion Essential JS 2 and more."
-control: MongoDB Data Binding
+description: "Learn how the React Pivot Table retrieves data from a MongoDB database through a Web API controller and binds it as the pivot data source."
+control: Pivot Table
 documentation: ug
 ---
 
-# MongoDB in EJ2 React Pivot Table Component
+# MongoDB data binding in React Pivot Table
 
 This guide explains how to retrieve data from a MongoDB database using the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) and [MongoDB.Bson](https://www.nuget.org/packages/MongoDB.Bson) libraries and bind it to the Pivot Table through a Web API controller.
 

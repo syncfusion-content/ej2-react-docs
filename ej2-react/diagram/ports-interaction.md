@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Ports interaction in React Diagram Component | Syncfusion®
-description: Learn about ports interaction in Syncfusion® React Diagram Component including drawing connectors, drag functionality, and events.
+title: Port Interaction in React Diagram | Syncfusion®
+description: Draw new React Diagram connectors from a node port by enabling the draw port constraint, with drag, tooltip, and event hooks.
 control: Ports 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
- 
-# Interactive Port Features in React Diagram Component
 
-Ports in [React Diagram](https://www.syncfusion.com/diagram-sdk/react-diagram) components support various interactive features that enhance user workflow and diagram creation efficiency. This guide covers drawing connectors from ports, drag functionality, automatic port creation, tooltips, and event handling.
+# Port Interaction in React Diagram
+
+Ports in React Diagram components support various interactive features that enhance user workflow and diagram creation efficiency. This guide covers drawing connectors from ports, drag functionality, automatic port creation, tooltips, and event handling.
 
 ## Draw Connector from Port
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: SignalR Hub for Real-Time Collaboration in React Diagram | Syncfusion
-description: Checkout and learn to implement SignalR hub services with Redis for real-time collaborative editing in Syncfusion React Diagram.
+title: SignalR Hub Services in React Diagram | Syncfusion
+description: Configure ASP.NET Core SignalR with Redis as a backplane to broadcast diagram updates to all connected clients for real-time collaboration.
 control: Diagram
 documentation: ug
 platform: ej2-react
 domainurl: ##DomainURL##
 ---
 
-# SignalR hub configuration for collaborative editing
+# SignalR Hub Services in React Diagram
 
 ## Overview
 

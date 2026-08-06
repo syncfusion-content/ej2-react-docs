@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Data Grid - SharePoint | Syncfusion
-description: React Data Grid SharePoint integration connects the data grid to SharePoint lists, supports auth, and provides data access methods for SharePoint apps.
+title: React Data Grid SharePoint | Syncfusion
+description: Learn how to use React Data Grid in SharePoint Framework (SPFx) applications, connect to SharePoint data, and configure grid integration.
 control: SharePoint 
 platform: ej2-react
 documentation: ug

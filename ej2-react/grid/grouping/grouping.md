@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Grouping | Syncfusion
-description: React Grid grouping enables configurable settings, initial grouping, aggregates, drop‑area control, reorderable columns, and expand/collapse.
+title: React Grid Grouping | Syncfusion
+description: Learn how to use grouping in React Data Grid with configurable settings, aggregates, drop area control, reorderable columns, and expand or collapse options.
 control: Grouping 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in React Grid Component
+# Grouping in React Data Grid
 
 The grouping feature in the React Data Grid enables data to be organized into a hierarchical structure, allowing records to be expanded and collapsed for improved readability and analysis.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hyper link in React Pivot Table component | Syncfusion
-description: Learn how to add hyperlinks to row headers, column headers, and value cells in the Syncfusion React Pivot Table for interactive navigation and drill-through.
-control: Hyper link 
+title: Hyperlink in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table adds hyperlinks to row, column, and value cells through hyperlinkSettings for interactive navigation and drill-through.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hyper link in React Pivot Table component
+# Hyperlink in React Pivot Table
 
 The Pivot Table component provides built-in support for displaying hyperlinks within individual cells. This feature allows users to link data in specific cells, enhancing interactivity and navigation.
 

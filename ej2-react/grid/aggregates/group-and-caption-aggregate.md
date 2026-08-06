@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Group and Caption Aggregate | Syncfusion
-description: React Grid group and caption aggregate covers computing aggregates for groups, displaying captions, and customizing group summaries and formats.
+title: React Grid Group and Caption Aggregates | Syncfusion
+description: Learn how to compute and display group and caption aggregates in React Data Grid, including group summaries, captions, and aggregate formatting.
 control: Group and caption aggregate 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Group and Caption Aggregate in React Grid Component
+# Group and Caption Aggregates in React Data Grid
 
 Group footer and caption aggregates display summary values calculated from the records within each group.
 

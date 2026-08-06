@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Apply custom style to pivot cells in React | Syncfusion
-description: Learn here all about Apply custom style to pivot cells in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
+title: How to apply custom styles to pivot cells in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to apply custom styles to pivot cells in the React Pivot Table using event handlers.
 platform: ej2-react
-control: Apply custom style to pivot cells 
+control: Pivot Table
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Apply custom style to pivot cells in React Pivotview component
+# How to apply custom styles to pivot cells in React Pivot Table
 
 The React Pivot Table component allows you to alter the appearance of pivot cells using event handlers. This guide demonstrates how to apply custom styling to specific cells in your pivot table.
 

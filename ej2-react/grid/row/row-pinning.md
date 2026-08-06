@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Row Pinning | Syncfusion
-description: React Grid row pinning supports fixing rows at the top and handling interactions such as paging, selection, filtering, sorting, CRUD operations.
+title: React Grid Row Pinning | Syncfusion
+description: Learn how to pin rows in React Data Grid using Syncfusion. Keep important rows fixed at the top while supporting data operations.
 control: Row Pinning 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row Pinning in React Grid Component
+# Row Pinning in React Data Grid
 
 The React Data Grid provides support for pinning specific rows at the top, ensuring important information stays visible during vertical scrolling. This feature is useful when certain rows must remain accessible for quick reference or priority viewing, regardless of user interactions.
 

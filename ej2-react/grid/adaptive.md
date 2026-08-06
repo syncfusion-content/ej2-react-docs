@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Adaptive | Syncfusion
-description: React Grid adaptive explains responsive behavior, layout adjustments, and configuration to optimize grid usability on mobile and small screens with examples.
+title: React Grid Adaptive UI Customization | Syncfusion
+description: Learn how to customize adaptive UI in React Data Grid with responsive dialogs, vertical row rendering, mobile-friendly layouts, and small-screen optimization.
 control: Adaptive 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adaptive in React Grid Component
+# Adaptive UI in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the grid row elements in the vertical direction.
 
@@ -344,3 +344,5 @@ export default App;
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/adaptive-cs1" %}
+
+N> Looking for the full responsive React Data Grid component overview, features, pricing, and documentation? Visit the [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) page.

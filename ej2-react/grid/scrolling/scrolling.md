@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Scrolling | Syncfusion
-description: React Grid scrolling covers scroll behavior, dimension settings, responsive layouts, sticky headers, auto-scrolling, and dual-scrollbar configuration.
+title: React Grid Scrolling | Syncfusion
+description: Learn how to configure scrolling in React Data Grid, including scroll behavior, responsive layouts, sticky headers, auto-scrolling, and scrollbar settings.
 platform: ej2-react
 control: Scrolling 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling in React Grid Component
+# Scrolling in React Data Grid
 
 The scrolling feature in the React Grid component enables seamless navigation through content extending beyond the visible grid area. Scrollbars automatically appear when content exceeds the grid dimensions configured via the [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) and [width](https://ej2.syncfusion.com/react/documentation/api/grid#width) properties.
 

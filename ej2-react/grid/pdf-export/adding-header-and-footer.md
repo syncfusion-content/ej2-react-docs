@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Adding Header And Footer | Syncfusion
-description: React Grid PDF export header and footer explains adding custom headers/footers to exported PDFs, templates, and styling options for printed output.
+title: React Grid Adding Header and Footer | Syncfusion
+description: Learn how to add custom headers and footers in React Data Grid PDF export, customize content, apply templates, and format exported documents.
 control: Adding header and footer 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding Header and Footer in React Grid Component
+# Adding Header and Footer in React Data Grid
 
 The React Data Grid enables customized header and footer sections to be added in exported PDF documents. This feature supports custom text, page numbers, lines, page size configuration, and orientation changes for header and footer sections.
 

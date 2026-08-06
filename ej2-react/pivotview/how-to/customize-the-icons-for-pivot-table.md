@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the icons for pivot table in React | Syncfusion
-description: Learn here all about Customize the icons for pivot table in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Customize the icons for pivot table 
+title: How to customize pivot table icons in React Pivot Table | Syncfusion
+description: Step-by-step example showing how to customize the icons for pivot table in the React Pivot Table by overriding CSS classes with custom Unicode.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the icons within the React Pivot Table component
+# How to customize pivot table icons in React Pivot Table
 
 The React Pivot Table component supports the customization of various icons across its interface. This includes icons for the field list, expand/collapse actions, and other interactive elements. You can customize these icons by overriding the default CSS classes with custom Unicode values.
 

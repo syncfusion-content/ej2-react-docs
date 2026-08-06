@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Filter Menu | Syncfusion
-description: React Grid filter menu enables column‑specific filter dialogs, custom components, operator customization, multi‑value filtering, and granular filtering control.
+title: React Grid Filter Menu | Syncfusion
+description: Learn how to use Filter Menu in React Data Grid with configurable dialogs, custom components, operator options, and multi-value filtering.
 control: Filter menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter menu in React Grid Component
+# Filter Menu in React Data Grid
 
 The filter menu in the React Grid component provides a dialog-based filtering interface that appears when clicking the filter icon in column headers. This menu displays dropdown operators (such as equals, contains, startswith) and an input field for entering filter values, giving precise control over how data is filtered.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Grouping Style | Syncfusion
-description: React Grid grouping style covers visual customization of group headers, captions, and aggregates to present grouped data consistently.
+title: React Grid Grouping Customization | Syncfusion
+description: Learn how to customize grouping styles in React Data Grid with group headers, captions, aggregates, and group area appearance.
 control: Grouping 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping Customization in React Grid Component
+# Grouping Style in React Data Grid
 
 The appearance of grouping elements in the React Data Grid component can be customized using CSS. Here are examples for customizing the group header, group expand/collapse icons, group caption row, and grouping indent cell.
 

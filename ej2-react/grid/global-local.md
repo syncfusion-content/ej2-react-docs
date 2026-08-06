@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Global and Local | Syncfusion
-description: React Grid global and local settings define component-level and app-wide configuration, localization, and scope control to ensure consistent grid behavior.
+title: React Grid Globalization and Localization | Syncfusion
+description: Learn how to use globalization in React Data Grid with localization, internationalization, culture switching, RTL support, and locale-specific formatting.
 control: Global local 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Grid Component
+# Globalization in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides a Globalization feature (global and local) that enhances application accessibility for people from different regions and language backgrounds. Data can be displayed in preferred languages and formats, improving the overall user experience.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Node.js GraphQL Backend | Syncfusion.
-description: Integrate Syncfusion React Grid with Node.js and GraphQL backend to perform CRUD operations seamlessly.
+title: React Grid Data Bind with HotChocolate GraphQL Backend | Syncfusion
+description: Learn how to integrate React Data Grid with an ASP.NET Core HotChocolate GraphQL backend to execute queries, mutations, and CRUD operations.
 control: GraphQL Adaptor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting the Syncfusion React Grid with GraphQL backend in Node.js
+# HotChocolate GraphQL Backend Integration in React Data Grid
 
 [GraphQL](https://graphql.org/learn/introduction/) is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
@@ -45,7 +45,7 @@ domainurl: ##DomainURL##
 
 ## Setting up the GraphQL backend using Node.js
 
-The GraphQL backend acts as the central data service, handling queries and mutations that power the React Grid.
+The GraphQL backend acts as the central data service, handling queries and mutations that power the Syncfusion React Grid.
 
 ### Step 1: Create the GraphQL server and install required packages
 

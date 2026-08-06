@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid - SQL Server via EF Core | Syncfusion
-description: Bind SQL Server data to Syncfusion React Grid using Entity Framework Core with complete CRUD and data operations using UrlAdaptor and CustomAdaptor patterns.
+title: React Grid Bind Data with Entity Framework Core | Syncfusion
+description: Learn how to bind SQL Server data to React Data Grid using Entity Framework Core, perform CRUD operations, and implement adaptor patterns.
 platform: ej2-react
 control: grid
 keywords: adaptors, urladaptor, customadaptor, remotedata, entityframework, sql
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting SQL Server to Syncfusion React Grid Using Entity Framework
+# SQL Server Entity Framework Core Integration in React Data Grid
 
 The React Data Grid supports binding data from a SQL Server database. This documentation demonstrates integrating SQL Server with React Data Grid using **Entity Framework Core (EF Core)** for data operations with both `UrlAdaptor` and `CustomAdaptor` approaches.
 
@@ -531,7 +531,7 @@ export default App;
 
 ### Step 4: Implement the CustomAdaptor
 
-The React Grid can bind data from a **SQL Server** database using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
+The Syncfusion React Grid can bind data from a **SQL Server** database using [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) and set the `adaptor` property to `CustomAdaptor` for scenarios that require full control over data operations.
 
 The `CustomAdaptor` (client-side) is a bridge between the React Grid and the ASP.NET Core backend. It extends the `UrlAdaptor` and handles all data operation requests by constructing HTTP POST calls to corresponding server endpoints. When the Grid performs operations like reading, searching, filtering, sorting, paging, and CRUD operations, the CustomAdaptor intercepts these actions and formats them into HTTP requests. These requests are sent to the ASP.NET Core Web API controller on the server, which processes the `DataManagerRequest` using Entity Framework Core to query the SQL Server database and return the results.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Column selection | Syncfusion
-description: React Grid column selection supports selecting entire columns, configuration options, and examples for applying operations or styling to selected columns.
+title: React Grid Column Selection | Syncfusion
+description: Learn how to select columns in React Data Grid with selection APIs, column-level selection, keyboard interactions, and advanced column selection options.
 control: Column selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Selection in React Grid Component
+# Column Selection in React Data Grid
 
 Column selection in the Grid allows selecting one or more columns by clicking the column header or using keyboard navigation. This feature is useful for highlighting, manipulating, or performing actions on specific columns within the Grid. Press <kbd>Esc</kbd> to clear the current column selection.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show field list when React Pivot Table is empty | Syncfusion
-description: Learn here all about Show field list when pivot table empty in Syncfusion React Pivotview component of Syncfusion Essential JS 2 and more.
-control: Show field list when pivot table empty 
+title: How to show the field list for empty pivot tables | Syncfusion
+description: Step-by-step example showing how to show the field list for an empty pivot table in React by handling the dataBound event.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show field list for empty React Pivot Table component
+# How to show the field list for empty pivot tables
 
 When there are no fields configured in a pivot table's row, column, value, and filter axes, the field list can be automatically displayed to help users configure the pivot table. This is particularly useful in scenarios where users start with an empty pivot configuration and need immediate access to available fields for setup. To achieve this functionality, use the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#databound) event and call the `onShowFieldList` method as demonstrated below.
 

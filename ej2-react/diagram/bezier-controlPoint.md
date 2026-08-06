@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bezier Control Points in React Diagram Component | Syncfusion®
-description: Learn how to interact with bezier control points, configure smoothness settings, and control visibility in Syncfusion® React Diagram Component.
+title: Bezier Control Points Interaction in React Diagram | Syncfusion®
+description: Configure bezier smoothness modes and control-point visibility in the React Diagram to keep adjacent curve handles symmetric or independent during editing.
 control: Bezier control points interaction
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bezier Control Points Interaction
+# Bezier Control Points Interaction in React Diagram
 
 Bezier control points determine the curvature and shape of bezier connector segments in React Diagram components. These interactive handles allow users to modify connector paths dynamically while maintaining visual consistency across multiple segments.
 

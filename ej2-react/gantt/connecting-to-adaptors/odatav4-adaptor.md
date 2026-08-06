@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# OData Remote Data Binding in React Gantt
+# OData Remote Data Binding in Syncfusion React Gantt
 
 The [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) and OData v4 services by translating the Gantt's task data requests and update actions into OData‑formatted requests and by interpreting OData responses. Use this adaptor when backend exposes OData v4 endpoints and require standardized query capabilities with server-side processing. ODataV4Adaptor is intended specifically for OData-compliant services and is not required for standard REST or custom web-method endpoints.
 

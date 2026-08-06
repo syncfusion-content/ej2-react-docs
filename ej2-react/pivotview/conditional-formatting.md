@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Conditional formatting in React Pivotview component | Syncfusion
-description: Learn how to apply conditional formatting in the Syncfusion React Pivot Table to highlight cells based on specific conditions using custom styles and rules.
-control: Conditional formatting 
+title: Conditional formatting in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table highlights value cells by applying conditional formatting with custom background color, font, and rules.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Conditional formatting in React Pivot Table component
+# Conditional formatting in React Pivot Table
 
 The conditional formatting feature enables users to customize the appearance of Pivot Table value cells by modifying background color, font color, font family, and font size based on specific conditions. This powerful visualization feature helps highlight important value cells and makes them stand out in the Pivot Table.
 

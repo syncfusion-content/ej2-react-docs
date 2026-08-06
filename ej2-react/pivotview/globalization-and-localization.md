@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React Pivot Table component | Syncfusion
-description: Learn how to enable globalization and localization in the Syncfusion React Pivot Table to support multiple cultures, date formats, and translated UI labels.
-control: Globalization and localization
+title: Globalization in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table supports globalization and localization for culture-specific number, date, and currency formats, plus translated UI strings.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization and localization in React Pivot Table component
+# Globalization and localization in React Pivot Table
 
 The Pivot Table helps users view and interact with data in their own language and regional format. This means users from different countries can easily read and understand the data because dates, numbers, and words are shown in a way that feels familiar to them.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Grid Custom Binding with SQL Server and Django REST | Syncfusion
-description: Integrate Syncfusion React Grid with SQL Server and Django REST Framework using Custom Binding for server-driven paging, sorting, filtering, and CRUD.
+title: React Grid Custom Binding with Django REST Framework | Syncfusion
+description: Learn how to integrate React Data Grid with Django REST Framework using custom binding for server-side paging, sorting, filtering, and CRUD operations.
 platform: ej2-react
 control: grid
 keywords: custom binding, mssql, remotedata, django rest framework, syncfusion react grid
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Grid with Django REST Framework
+# Custom Binding with Django REST Framework in React Data Grid
 
 This guide explains connecting the React Data Grid to a **Django REST Framework (DRF)** backend with **Custom Binding**. Custom Binding provides full control over the Grid’s communication with the server: the Grid raises events for data operations (paging, sorting, filtering, searching) and CRUD,  client code calls DRF endpoints, and DRF returns standardized results.
 
@@ -785,7 +785,7 @@ interface Predicate {
 
 The client service bridges Syncfusion<sup style="font-size:70%">&reg;</sup> Grid Custom Binding with DRF’s REST API and query parameter conventions.
 
-### Step 6: Integrate React Grid with custom binding
+### Step 6: Integrate Syncfusion React Grid with custom binding
 
 The React Data Grid custom databinding feature integrates with the Django REST API through event-driven calls. Grid actions (paging, sorting, filtering, searching) are sent via **dataStateChange**, and CRUD is sent via **dataSourceChanged**. The client uses the shared **apiClient** service (created in the previous step) to translate Grid state into DRF query parameters and to call REST endpoints.
 

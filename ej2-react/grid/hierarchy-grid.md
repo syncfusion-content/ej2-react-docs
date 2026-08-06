@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Hierarchy Grid | Syncfusion
-description: React Grid hierarchy view enables nested grids, parent‑child relationships, and data binding to create structured hierarchical layouts.
+title: React Grid Hierarchy Grid | Syncfusion
+description: earn how to create hierarchy grids in React Data Grid with parent-child relationships, nested child grids, hierarchical data binding, and expandable rows.
 control: Hierarchy grid 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hierarchy Grid in React Grid Component
+# Hierarchy Grid in React Data Grid
 
 The Hierarchy Grid in the React Data Grid is designed to display hierarchical or nested data structures within a tabular layout. It enables the representation of parent-child relationships by allowing rows to be expanded or collapsed, revealing related child records beneath their corresponding parent rows.
 

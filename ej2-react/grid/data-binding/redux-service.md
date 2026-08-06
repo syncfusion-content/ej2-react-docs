@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Redux Service | Syncfusion
-description: React Grid offers Redux integration with actions, reducers, state synchronization methods, and techniques to maintain grid state across the application.
+title: React Grid Redux Service | Syncfusion
+description: Learn how to integrate Redux with React Data Grid using actions, reducers, state synchronization, and CRUD operations for centralized state management.
 control: Redux service 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redux service in React Grid Component
+# Redux Service in React Data Grid
 
 The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides support for integrating data from a Redux service using the [observable binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/data-binding#custom-binding) feature. This allows the grid component to connect to the [Redux](https://react-redux.js.org/introduction/getting-started) store and perform various data operations such as sorting, filtering, paging, and CRUD actions. This section explains the process of enabling and integrating the Redux service with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
 

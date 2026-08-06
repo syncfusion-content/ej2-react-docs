@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Symbol Palette customization in EJ2 React Diagram Component | Syncfusion®
-description: Learn here all about Symbol palette customization in React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Symbol Palette Customization in React Diagram | Syncfusion®
+description: Customize the React Diagram Symbol Palette with header title, expanded state, icon, animation, and per-palette height and symbol size controls.
 platform: ej2-react
 control: Symbol palette 
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Symbol Palette customization in React Diagram Component
+# Symbol Palette Customization in React Diagram
 
 ## Customize the Palette Header
 

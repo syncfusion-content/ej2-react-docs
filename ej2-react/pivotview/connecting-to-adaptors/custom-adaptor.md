@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Pivot Table - Custom Adaptor | Syncfusion
-description: React Pivot Table custom adaptor explains creating a custom data adaptor to transform requests and responses, enabling custom backends and behaviors.
-control: Custom Adaptor
+title: Custom adaptor in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table extends existing adaptors through the Custom Adaptor to transform requests and responses for custom backends.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom Remote Data Binding in Syncfusion React Pivot Table
+# Custom adaptor in React Pivot Table
 
 The Custom Adaptor is a powerful extension mechanism that **customizes any existing adaptors** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, the Custom Adaptor extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
 

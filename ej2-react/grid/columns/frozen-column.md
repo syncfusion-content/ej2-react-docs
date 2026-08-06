@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Frozen Column | Syncfusion
-description: React Grid frozen column keeps key fields visible while scrolling, offering flexible configuration to sync with scrollable content.
+title: React Grid Column Pinning | Syncfusion
+description: Learn how to freeze and pin columns in React Data Grid to keep important fields visible while scrolling and synchronize frozen content.
 control: Column pinning (Frozen)
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Pinning (Frozen) in React Grid component
+# Column Pinning in React Data Grid
 
 The React Data Grid provides a column pinning (freezing) feature that keeps "selected columns" visible while scrolling across large datasets. This improves readability by ensuring that important information remains accessible, even when working with wide tables.
 

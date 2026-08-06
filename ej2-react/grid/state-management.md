@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - State Management | Syncfusion
-description: React Grid state management describes preserving grid state, serializing settings, and integrating with external state stores like Redux for consistent UX.
+title: React Grid State Management | Syncfusion
+description: Learn how to manage and persist React Data Grid state with serialization, state restoration, and integration with external state stores such as Redux.
 control: State management 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State Management in React Grid Component
+# State Management in React Data Grid
 
 State management in the React Grid component enables maintaining the grid's state across browser refreshes and during navigation within the same browser session. This capability helps retain the grid's configuration and data after a page reload.
 
@@ -163,7 +163,7 @@ When [enablePersistence](https://ej2.syncfusion.com/react/documentation/api/grid
 
 ## Observable binding with state persistence
 
-The React Grid supports state persistence with observable binding, ensuring the grid retains state across sessions. This is useful for real-time data updates or asynchronous data sources while preserving interactions such as sorting, filtering, paging, and grouping.
+The Syncfusion React Grid supports state persistence with observable binding, ensuring the grid retains state across sessions. This is useful for real-time data updates or asynchronous data sources while preserving interactions such as sorting, filtering, paging, and grouping.
 
 Implementing state persistence with observables requires manual handling of the initial query state. This involves:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "MySQL Data Binding in React Pivot Table component | Syncfusion"
+title: "MySQL data binding in React Pivot Table | Syncfusion"
 component: "Pivot Table"
 platform: ej2-react
-description: "Learn how to bind data from a MySQL database in the Syncfusion React Pivot Table of Syncfusion Essential JS 2 and more."
-control: MySQL Data Binding
+description: "Learn how the React Pivot Table retrieves data from a MySQL database through a Web API controller and binds it as the pivot data source."
+control: Pivot Table
 documentation: ug
 ---
 
-# MySQL in EJ2 React Pivot Table Component
+# MySQL data binding in React Pivot Table
 
 This guide explains how to retrieve data from a MySQL database using the [MySqlClient](https://mysqlclient.readthedocs.io/) library and bind it to the Pivot Table through a Web API controller.
 

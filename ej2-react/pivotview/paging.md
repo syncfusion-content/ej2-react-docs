@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paging in React Pivot Table component | Syncfusion
-description: Learn how to use paging in the Syncfusion React Pivot Table to navigate large datasets efficiently by dividing rows and columns into separate pages.
-control: Paging
+title: Paging in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table paginates rows and columns using pageSettings to navigate large datasets efficiently.
+control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paging in React Pivot Table component
+# Paging in React Pivot Table
 
 The paging feature in the Pivot Table component is designed to handle large datasets efficiently by dividing the data into manageable pages. This prevents performance issues associated with rendering large amounts of data at once, allowing users to navigate through rows and columns page by page.
 

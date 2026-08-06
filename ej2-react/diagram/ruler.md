@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ruler in React Diagram Component | Syncfusion®
-description: Learn here all about Ruler in Syncfusion® React Diagram Component of Syncfusion Essential® JS 2 and more.
+title: Ruler in React Diagram | Syncfusion®
+description: Show horizontal and vertical Rulers in the React Diagram to measure element positions and align shapes precisely on the canvas.
 control: Ruler 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ruler in React Diagram Component
+# Ruler in React Diagram
 
 The ruler provides horizontal and vertical guides for measuring in the diagram control. It can be used to measure diagram objects, indicate positions, and align diagram elements, making it especially useful for creating scale models. The ruler also includes a position indicator that displays the precise location of the mouse cursor on the diagram canvas, with the default color of the position indicator marker being red.
 

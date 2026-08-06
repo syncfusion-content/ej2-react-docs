@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Grid - Header Style | Syncfusion
-description: React Grid header style supports customizing header appearance, templates, and interactive elements such as icons and menus for column headers.
+title: React Grid Header Customization | Syncfusion
+description: Learn how to customize header styles in React Data Grid with header templates, icons, and interactive header elements.
 control: Header 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header in React Grid Component
+# Header Style in React Data Grid
 
 The appearance of the header elements in the React Data Grid component can be customized using CSS. Here are examples for customizing the grid header, header cell, and header cell div element.
 
