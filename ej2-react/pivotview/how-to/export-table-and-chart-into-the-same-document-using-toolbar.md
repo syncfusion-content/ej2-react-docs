@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to export table and chart together in React Pivot Table | Syncfusion
-description: Step-by-step example showing how to export table and chart into the same document in the React Pivot Table using the pdfExport method.
+title: How to export Pivot Table and Chart to a PDF document | Syncfusion
+description: Step-by-step example showing how to export the table and the chart into the same PDF document in the React Pivot Table using the pdfExport method.
 platform: ej2-react
 control: Pivot Table
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD009 -->
 
-# How to export table and chart together in React Pivot Table
+# How to export Pivot Table and Chart to a PDF document
 
 By default, when the [displayOption.view](https://ej2.syncfusion.com/react/documentation/api/pivotview/displayoptionmodel#view) property is set to **Both** in the Pivot Table, the export functionality exports either the table or the chart to the PDF document based on the current value of the [displayOption.primary](https://ej2.syncfusion.com/react/documentation/api/pivotview/displayoptionmodel#primary) property. However, to export both the table and the chart into the same PDF document simultaneously, use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method during the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event.
 
@@ -20,9 +20,10 @@ This approach is particularly useful when users need comprehensive reports that 
 
 Follow these steps to enable combined table and chart export:
 
-1. **Configure the Pivot Table** with both table and chart display options.
-2. **Handle the actionBegin event** to intercept the default export action.
-3. **Call the pdfExport method** with the `exportBothTableAndChart` parameter set to **true**.
+1. **Configure the Pivot Table** with both table and chart display options by setting [`displayOption.view`](https://ej2.syncfusion.com/react/documentation/api/pivotview/displayOptionModel#view) to **Both**.
+2. **Inject the `PDFExport` module** using `<Inject services={[PDFExport]} />` so the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method is available.
+3. **Handle the actionBegin event** to intercept the default export action.
+4. **Call the pdfExport method** with the `exportBothTableAndChart` parameter set to **true**.
 
 ## Code example
 

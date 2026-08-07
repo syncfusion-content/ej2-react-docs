@@ -188,14 +188,13 @@ export default function Home() {
         filterSettings={filterSettings}
       >
         <ColumnsDirective>
-          <ColumnDirective field="OrderID" width="100" textAlign="Right" />
+          <ColumnDirective field="OrderID" width="100" />
           <ColumnDirective field="CustomerID" width="100" />
-          <ColumnDirective field="EmployeeID" width="100" textAlign="Right" />
+          <ColumnDirective field="EmployeeID" width="100" />
           <ColumnDirective
             field="Freight"
             width="100"
             format="C2"
-            textAlign="Right"
           />
           <ColumnDirective field="ShipCountry" width="100" />
         </ColumnsDirective>
@@ -229,7 +228,7 @@ yarn run dev
 
 The Output will appears follows,
 
-![nextjs](./images/nextjs-output.png)
+![nextjs](./images/output-nextjs.png)
 
 To learn more about the functionality of the Grid component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/grid/getting-started#module-injection).
 

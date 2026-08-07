@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to change the minimum height in React Pivot Table
+# How to change the minimum height of the React Pivot Table
 
 The `minHeight` property allows you to set the minimum height for the React Pivot Table component. By default, the component maintains a minimum height of **300px**. This property ensures the component remains visible and functional even when the container height is smaller than the specified minimum value.
 
