@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Customization in React Maps component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Customization 
+title: Customization in React Maps | Syncfusion
+description: Learn how to customize React Maps appearance, including size, title, theme, container styling, shape properties, and projection type for any layout.
+control: Customization
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Maps component
+# Customization in React Maps
 
 The Maps component provides various options to customize its appearance, including size, title, theme, container styling, shape properties, and projection type. This section explains how to configure these customization options.
 

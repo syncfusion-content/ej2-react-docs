@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Column menu in React TreeGrid | Syncfusion
-description: Learn here all about Column menu in Syncfusion React TreeGrid of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Column Menu | Syncfusion
+description: Learn how to use the column menu in React TreeGrid for sorting, filtering, column visibility, and other column actions.
 control: Column menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column menu in React TreeGrid
+# Column Menu in React TreeGrid
 
-The column menu provides built-in actions such as sorting, filtering, and autofit. A menu with these actions appears when the column menu icon is clicked. Enable the column menu by setting the [showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/treegrid/#showcolumnmenu) property to true.
+The column menu provides built-in actions such as sorting, filtering, and autofit. A menu with these actions appears when the column menu icon is clicked. Enable the column menu by setting the [showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/treegrid#showcolumnmenu) property to true.
 
 To use the column menu, inject the **ColumnMenu** module in the TreeGrid.
 
@@ -22,7 +22,7 @@ The default items are listed below.
 | **SortDescending** | Sorts the current column in descending order. |
 | **AutoFit** | Fits the current column to the widest cell content. |
 | **AutoFitAll** | Fits all columns to their widest cell content. |
-| **Filter** | Displays the filter UI defined by [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings/#type). |
+| **Filter** | Displays the filter UI defined by [filterSettings.type](https://ej2.syncfusion.com/react/documentation/api/treegrid/filterSettings#type). |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -35,7 +35,7 @@ The default items are listed below.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs2" %}
 
-> Disable the column menu for a specific column by setting [columns.showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#showcolumnmenu) to **false**.
+> Disable the column menu for a specific column by setting [columns.showColumnMenu](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#showcolumnmenu) to **false**.
 
 ## Customize the icon for column menu
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Perform treegrid actions by keyboard short cut keys in React Treegrid component | Syncfusion
-description: Learn here all about Perform treegrid actions by keyboard short cut keys in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Keyboard Shortcuts | Syncfusion
+description: Learn how to perform React TreeGrid actions using keyboard shortcuts to improve navigation, editing, and overall productivity.
 control: Perform treegrid actions by keyboard short cut keys 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform treegrid actions by keyboard short cut keys in React Treegrid component
+# Keyboard Shortcuts for TreeGrid Actions in React TreeGrid
 
 Using keyboard shortcuts, TreeGrid performs navigation and actions.
 

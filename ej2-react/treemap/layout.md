@@ -1,16 +1,16 @@
 ﻿---
 layout: post
-title: Layout in React Treemap component | Syncfusion
-description: Learn here all about Layout in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Layout in React TreeMap | Syncfusion
+description: Learn how to render the Syncfusion React TreeMap with Squarified, SliceAndDiceVertical, SliceAndDiceHorizontal, or SliceAndDiceAuto layouts.
 control: Layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Layout in React Treemap component
+# Layout in React TreeMap
 
-Determine the visual representation of nodes belonging to all the TreeMap levels using the [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/treemap/#layouttype) property.
+Determine the visual representation of nodes belonging to all the TreeMap levels using the [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/treemap#layouttype) property.
 
 ## Types of layout
 

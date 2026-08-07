@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Gauge print and export in React Circular gauge component | Syncfusion
-description: Learn here all about Gauge print and export in Syncfusion React Circular gauge component of Syncfusion Essential JS 2 and more.
+title: Print and Export in React Circular Gauge | Syncfusion
+description: Print the React Circular Gauge or export it as image or PDF files using the Print and Export modules with allowPrint, allowImageExport, and allowPdfExport.
 control: Gauge print and export 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Gauge print and export in React Circular gauge component
+# Print and Export in React Circular Gauge
 
 ## Print
 

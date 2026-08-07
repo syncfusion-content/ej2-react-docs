@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row drag and drop in React TreeGrid component | Syncfusion
-description: Learn here all about Row drag and drop in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Row Drag and Drop | Syncfusion
+description: Learn here all about Row drag and drop in React TreeGrid of Essential JS 2 and more.
 control: Row drag and drop 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row drag and drop in React TreeGrid
+# Row Drag and Drop in React TreeGrid
 
 TreeGrid rows can be reordered or dropped into another TreeGrid or custom control by setting [allowRowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowrowdraganddrop) to true.
 

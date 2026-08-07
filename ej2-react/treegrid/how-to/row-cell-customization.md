@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row cell customization in React TreeGrid | Syncfusion
-description: Learn here all about Row cell customization in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Row Cell Customization | Syncfusion
+description: Learn how to customize rows and cells in the React TreeGrid using queryCellInfo and rowDataBound events.
 control: Row cell customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row cell customization in React TreeGrid
+# Row Cell Customization in React TreeGrid
 
 Customize rows and cells by using the TreeGrid events [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) and [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowdatabound).
 

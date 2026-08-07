@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range band in React Sparkline component | Syncfusion
-description: Learn here all about Range band in Syncfusion React Sparkline component of Syncfusion Essential JS 2 and more.
+title: Range Band in React Sparkline | Syncfusion
+description: Highlight specific y-axis value regions in the Syncfusion React Sparkline using one or multiple range bands with custom start, end, color, and opacity.
 control: Range band 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range band in React Sparkline component
+# Range Band in React Sparkline
 
 This section explains how to customize the sparkline with multiple range bands.
 

@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Print in React Maps component | Syncfusion
-description: Learn here all about Print in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Print 
+title: Print and Export in React Maps | Syncfusion
+description: Learn how to print and export React Maps directly from the browser by injecting the Print module and enabling the allowPrint property.
+control: Print
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in React Maps component
+# Print and Export in React Maps
 
 ## Print
 

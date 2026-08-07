@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Columns in React TreeGrid component | Syncfusion
-description: Learn here all about Columns in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Columns | Syncfusion
+description: Learn how to configure and customize columns in React TreeGrid, including column types, visibility, templates, and formatting options.
 control: Columns 
 platform: ej2-react
 documentation: ug

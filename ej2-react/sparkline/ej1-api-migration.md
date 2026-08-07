@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Sparkline component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Sparkline component of Syncfusion Essential JS 2 and more.
+title: Migration from Essential JS 1 in React Sparkline | Syncfusion
+description: Map Essential JS 1 Syncfusion React Sparkline properties, methods, and events to their Essential JS 2 equivalents for quick API migration.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Sparkline component
+# Migration from Essential JS 1 in React Sparkline
 
 This article describes the API migration process of Accordion component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

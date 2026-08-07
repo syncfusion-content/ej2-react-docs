@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Internationalization in React Treemap component | Syncfusion
-description: Learn here all about Internationalization in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Internationalization in React TreeMap | Syncfusion
+description: Learn how to globalize data labels and tooltips in the Syncfusion React TreeMap using the format property and locale support.
 control: Internationalization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Internationalization in React Treemap component
+# Internationalization in React TreeMap
 
 The TreeMap control supports internationalization for the following elements:
 
@@ -21,7 +21,7 @@ For more information about number and date formatter, refer to [`internationaliz
 
 ## Globalization
 
-Globalization is the process of designing and developing a component that works in different cultures/locales. Internationalization library is used to globalize number, date, and time values in the TreeMap control using the [`format`](https://ej2.syncfusion.com/react/documentation/api/treemap/#format) property in the TreeMap.
+Globalization is the process of designing and developing a component that works in different cultures/locales. Internationalization library is used to globalize number, date, and time values in the TreeMap control using the [`format`](https://ej2.syncfusion.com/react/documentation/api/treemap#format) property in the TreeMap.
 
 **Numeric format**
 

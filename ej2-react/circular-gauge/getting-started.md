@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Circular Gauge component | Syncfusion
-description: Check out and learn about getting started with the React Circular Gauge component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Circular Gauge | Syncfusion
+description: Learn how to get started with the Syncfusion React Circular Gauge control, including setup, dependencies, module registration, and a quick start sample.
 control: Getting Started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Circular Gauge component
+# Getting Started with React Circular Gauge
 
 This section explains the steps required to create a simple React Circular Gauge component and demonstrate its basic usage in a React environment.
 

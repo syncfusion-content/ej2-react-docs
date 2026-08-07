@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React Circular gauge getting started with Next.js | Syncfusion
-description: Check out and learn here all about about how to use the Syncfusion React UI components in the Next.js project.
+title: Getting Started with Next.js and React Circular Gauge | Syncfusion
+description: Set up a Next.js app and integrate the Syncfusion React Circular Gauge with a step-by-step guide on prerequisites, package install, and configuration.
 control: Next.js
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Getting Started with Next.js and React Circular Gauge
 
 This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Circular Gauge component.
 

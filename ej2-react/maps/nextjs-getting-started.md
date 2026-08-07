@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React getting started with Next.js | Syncfusion
-description: Check out and learn here all about how to use the Syncfusion React UI components in the Next.js project.
+title: Getting Started with Next.js in React Maps | Syncfusion
+description: Learn how to set up a Next.js application and integrate the Syncfusion React Maps component using a step-by-step walkthrough and npm package install.
 control: Next.js
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Creating a Next.js Application Using Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Getting Started with Next.js in React Maps
 
 This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Maps component.
 

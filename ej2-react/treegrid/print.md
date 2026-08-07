@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print in React TreeGrid | Syncfusion
-description: Learn here all about Print in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Print | Syncfusion
+description: Learn how to print React TreeGrid, including toolbar integration, page setup, column visibility settings, and print customization options.
 control: Print
 platform: ej2-react
 documentation: ug

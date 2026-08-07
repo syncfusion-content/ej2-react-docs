@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the Empty Record Template in React TreeGrid | Syncfusion
-description: Learn here all about Customize the Empty Record Template in Syncfusion React TreeGrid of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Empty Record Template | Syncfusion
+description: Learn how to customize the empty record template in React TreeGrid to display custom messages, images, and content when no records are available.
 control: Customize the Empty Record Template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the empty record template in React TreeGrid
+# Empty Record Template in React TreeGrid
 
 The empty record template feature in the TreeGrid allows custom content such as images, text, or other components when the TreeGrid does not contain any records to display. This feature replaces the default message of **No records to display** typically shown in the TreeGrid.
 

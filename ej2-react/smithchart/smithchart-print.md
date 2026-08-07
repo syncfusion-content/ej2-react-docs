@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Smithchart print in React Smithchart component | Syncfusion
-description: Learn here all about Smithchart print in Syncfusion React Smithchart component of Syncfusion Essential JS 2 and more.
+title: Print and Export in React Smithchart | Syncfusion
+description: Print the React Smithchart from the browser or export it to JPEG, PNG, SVG, or PDF using built-in print and export methods.
 control: Smithchart print 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Smithchart print in React Smithchart component
+# Print and Export in React Smithchart
 
 ## Print
 

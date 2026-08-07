@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: User interactions in React Maps component | Syncfusion
-description: Learn here all about User interactions in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: User interactions 
+title: User Interactions in React Maps | Syncfusion
+description: Learn how to enable zooming, panning, and other user interactions in React Maps using zoomSettings for in-depth map exploration.
+control: User interactions
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User interactions in React Maps component
+# User Interactions in React Maps
 
 ## Zooming
 

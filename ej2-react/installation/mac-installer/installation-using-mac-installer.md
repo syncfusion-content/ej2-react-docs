@@ -8,9 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac Installer
+# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) Mac Installer
 
-## Resolving Security Warnings on macOS Catalina or Later
+The Mac distribution is provided as a `.dmg` disk image. Installation consists of mounting the DMG and dragging the Syncfusion application into the **Applications** folder.
+
+## Resolving security warnings on macOS Catalina or later
 
 When running the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac Installer on macOS Catalina or later, you may encounter the following security alert:
 
@@ -27,7 +29,7 @@ If this alert appears, follow these steps:
 
 4. If macOS still prevents the installer from opening, open **System Preferences > Security & Privacy > General**, locate the blocked app message, and click **Open Anyway**. Then repeat step 3.
 
-## Step-by-Step Installation
+## Step-by-step installation
 
 Follow the steps below to install the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer:
 
@@ -59,18 +61,36 @@ Follow the steps below to install the Essential Studio<sup style="font-size:70%"
 
    > The installed application remains in your Applications folder and is not affected by ejecting or deleting the DMG file.
 
-## License Key Registration in Samples
+## License key registration in samples
 
 After installation, a license key is required to run the demo source included in the Mac installer. For instructions on registering the license key for JavaScript - EJ2, refer to the following topics:
 
 * [Register Syncfusion<sup style="font-size:70%">&reg;</sup> License key in the project](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-project)
 * [Register the license key using the npx command](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration#register-syncfusion-license-key-using-the-npx-command)
 
-## System Requirements
+## System requirements
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer is compatible with:
 
-* macOS 10.13 (High Sierra) or later
-* Node.js 14.x or later (LTS recommended) (for running demos and using npm packages)
+* macOS 10.13 (High Sierra) or later, including Apple Silicon (M1/M2/M3) devices
+* Node.js 18.x or later (LTS recommended), required for running demos and using npm packages
+* At least 4 GB of free disk space for the installer and installed content
 
-For the latest system requirements, refer to the [Syncfusion system requirements documentation](https://ej2.syncfusion.com/react/documentation/system-requirements).
+For the latest system requirements, refer to the [Syncfusion system requirements documentation](https://ej2.syncfusion.com/react/documentation/system-requirement).
+
+## Uninstalling the Mac installer
+
+To remove the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac installer:
+
+1. Open the **Applications** folder in Finder.
+2. Drag the **Syncfusion** application to the **Trash**, or right-click and select **Move to Trash**.
+3. Empty the **Trash** to complete the uninstallation.
+
+The application bundle in Applications is self-contained; there are no additional files to remove.
+
+## Next steps
+
+After installation, refer to the following resources to get started:
+
+* [Syncfusion React Sample Browser](https://ej2.syncfusion.com/react/demos/) — online demos of all components
+* [Syncfusion NPM registration](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration) — register the license key for NPM-based projects

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in React Linear Gauge component | Syncfusion
-description: Learn here all about animation in the Syncfusion React Linear Gauge component of Syncfusion Essential JS 2 and more.
+title: Animation in React Linear Gauge | Syncfusion
+description: Animate the React Linear Gauge elements sequentially, including axis, ticks, labels, ranges, pointers, and annotations, using animationDuration.
 control: Linear Gauge 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in React Linear Gauge component
+# Animation in React Linear Gauge
 
 All of the elements in the Linear Gauge, such as the axis lines, ticks, labels, ranges, pointers, and annotations, can be animated sequentially by using the [animationDuration](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#animationduration) property. The animation for the Linear Gauge is enabled when the `animationDuration` property is set to an appropriate value in milliseconds, providing a smooth rendering effect for the component. If the `animationDuration` property is set to **0**, which is the default value, the animation effect is disabled. If the animation is enabled, the component will behave in the following order.
 

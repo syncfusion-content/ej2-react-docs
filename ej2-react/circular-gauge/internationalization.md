@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Internationalization in React Circular Gauge component | Syncfusion
-description: Learn here all about Internationalization in Syncfusion React Circular Gauge component of Syncfusion Essential JS 2 and more.
+title: Internationalization in React Circular Gauge | Syncfusion
+description: Globalize the React Circular Gauge by localizing axis labels and tooltips with format strings, numeric and culture formatting, and per-locale number formats.
 control: Internationalization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Internationalization in React Circular Gauge component
+# Internationalization in React Circular Gauge
 
 Circular Gauge provides internationalization support for below elements.
 

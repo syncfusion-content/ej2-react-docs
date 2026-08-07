@@ -1,19 +1,19 @@
 ﻿---
 layout: post
-title: Methods in React Linear gauge component | Syncfusion
-description: Learn here all about Methods in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
+title: Methods in React Linear Gauge | Syncfusion
+description: Update the React Linear Gauge dynamically using setPointerValue, setAnnotationValue, and refresh methods to change state and re-render the component.
 control: Methods 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Methods in React Linear gauge component
+# Methods in React Linear Gauge
 
 The following methods are available in the Linear Gauge component.
 
 ## setPointerValue
 
-To change the pointer value dynamically, use the [`setPointerValue`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/#setpointervalue) method in the Linear Gauge component. The following are the arguments for this method.
+To change the pointer value dynamically, use the [`setPointerValue`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#setpointervalue) method in the Linear Gauge component. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -34,7 +34,7 @@ To change the pointer value dynamically, use the [`setPointerValue`](https://ej2
 
 ## setAnnotationValue
 
-To change the annotation content dynamically, use the [`setAnnotationValue`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/#setannotationvalue) method in the Linear Gauge component. The following are the arguments for this method.
+To change the annotation content dynamically, use the [`setAnnotationValue`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#setannotationvalue) method in the Linear Gauge component. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|

@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Pointers in React Linear Gauge Component | Syncfusion
-description: Learn here all about pointers in Syncfusion Essential React Linear Gauge component, its elements and more.
+title: Pointers in React Linear Gauge | Syncfusion
+description: Add marker or bar pointers to the React Linear Gauge to track axis values, with multiple pointers, animation, and gradient support.
 control: Pointers 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pointers in React Linear Gauge Component
+# Pointers in React Linear Gauge
 
 ## Setting the Pointer Value
 

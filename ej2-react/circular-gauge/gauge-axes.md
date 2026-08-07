@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Gauge axes in React Circular gauge component | Syncfusion
-description: Learn here all about Gauge axes in Syncfusion React Circular gauge component of Syncfusion Essential JS 2 and more.
+title: Axes in React Circular Gauge | Syncfusion
+description: Configure axes in the React Circular Gauge with lineStyle, background, major and minor ticks, labels, and multiple-axis support for richer visualizations.
 control: Gauge axes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Gauge axes in React Circular Gauge component
+# Axes in React Circular Gauge
 
 By default, gauge will be displayed with an axis. Each axis contains its own ranges, pointers and annotation.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drilldown in React Treemap component | Syncfusion
-description: Learn here all about Drilldown in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Drilldown in React TreeMap | Syncfusion
+description: Learn how to enable drill-down in the Syncfusion React TreeMap to navigate hierarchical data by clicking items.
 control: Drilldown 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drilldown in React Treemap component
+# Drilldown in React TreeMap
 
 The TreeMap supports drill-down to expose the hierarchy, achieved by clicking a node. If an item is clicked in the TreeMap, it will be moved to the next level or sub level hierarchy and returned back to the previous level by clicking the node.
 

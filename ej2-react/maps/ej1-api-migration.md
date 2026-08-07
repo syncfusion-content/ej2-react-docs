@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Ej1 api migration in React Maps component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Ej1 api migration 
+title: Ej1 Api Migration in React Maps | Syncfusion
+description: Learn how to migrate the Maps API from Essential JS 1 to Essential JS 2 in React, including updated properties, modules, and event patterns.
+control: Ej1 api migration
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 {% raw %}
 
-# Ej1 api migration in React Maps component
+# Ej1 Api Migration in React Maps
 
 This article describes the API migration process of Maps component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

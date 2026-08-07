@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Detail template in React TreeGrid component | Syncfusion
-description: Learn here all about Detail template in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Detail Template | Syncfusion
+description: Learn how to use detail templates in React TreeGrid to display expandable row content, nested data, and custom detail views.
 control: Detail template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Detail template in React TreeGrid 
+# Detail Template in React TreeGrid
 
 The detail template displays additional information for a row. When a parent row is expanded, its child rows expand along with their detail templates. The [detailTemplate](https://ej2.syncfusion.com/react/documentation/api/treegrid/#detailtemplate) property accepts either a template string or an HTML element ID.
 

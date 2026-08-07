@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Heatmap chart component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: EJ1 API Migration in React HeatMap Chart | Syncfusion
+description: Migrate Syncfusion React HeatMap Chart properties and events from Essential JS 1 to Essential JS 2, including data, palette, and legend APIs.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Heatmap chart component
+# EJ1 API Migration in React HeatMap Chart
 
 This article describes the API migration process of heat map component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

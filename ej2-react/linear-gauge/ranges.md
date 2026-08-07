@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Ranges in React Linear gauge component | Syncfusion
-description: Learn here all about Ranges in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
+title: Ranges in React Linear Gauge | Syncfusion
+description: Define value ranges on the React Linear Gauge axis with custom width, color, position, and linear or radial gradient fills.
 control: Ranges 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ranges in React Linear gauge component
+# Ranges in React Linear Gauge
 
 <!-- markdownlint-disable MD013 -->
 Range is the set of values in the axis. The range can be defined using the [`start`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/rangeModel#start) and [`end`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/rangeModel#end) properties in the [`RangeDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/rangeModel). Any number of ranges can be added to the Linear Gauge using the [`RangesDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/axisModel#ranges).

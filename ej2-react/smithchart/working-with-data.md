@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Working with data in React Smithchart component | Syncfusion
-description: Learn here all about Working with data in Syncfusion React Smithchart component of Syncfusion Essential JS 2 and more.
+title: Working With Data in React Smithchart | Syncfusion
+description: Bind resistance and reactance data to the React Smithchart using local JSON arrays as points or as a series data source.
 control: Working with data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Working with data in React Smithchart component
+# Working With Data in React Smithchart
 
 The Smith chart can visualize the data bound from local data. The data bound for the Smith chart should be an array of object and should contain the field resistance and rectangle. This data should be bound to points or data source in the Smith chart.
 

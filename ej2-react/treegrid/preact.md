@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Preact Getting Started with React Tree Grid Component | Syncfusion
-description: Check out and learn about getting started with the Preact Framework and React Tree Grid Component of Syncfusion Essential JS 2 and more details.
+title: React TreeGrid Preact | Syncfusion
+description: Learn how to use React TreeGrid in Preact applications with setup instructions, required configuration, and full grid feature support.
 control: Preact
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Tree Grid Component in the Preact Framework
+# Getting Started with React TreeGrid in Preact Framework
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Tree Grid component.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Column template in React TreeGrid component | Syncfusion
-description: Learn here all about Column template in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Column Template | Syncfusion
+description: Learn how to use column templates in React TreeGrid to display custom content, images, buttons, and formatted data in cells.
 control: Column template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column template in React TreeGrid component
+# Column Template in React TreeGrid
 
-The column [template](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#template) option renders custom content in place of a field value within a column.
+The column [template](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#template) option renders custom content in place of a field value within a column.
 
 Watch the following video to learn how to use templates for columns (including conditional templates) and headers in the TreeGrid.
 {% youtube "https://www.youtube.com/watch?v=o0rX1nkTINo" %}
@@ -26,7 +26,7 @@ Watch the following video to learn how to use templates for columns (including c
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs8" %}
 
-> The [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid/#querycellinfo) event is not supported for template columns. Instead, define logic within the column template function as described in the documentation (https://ej2.syncfusion.com/react/documentation/treegrid/columns/column-template#using-condition-template).
+> The [queryCellInfo](https://ej2.syncfusion.com/react/documentation/api/treegrid#querycellinfo) event is not supported for template columns. Instead, define logic within the column template function as described in the documentation (https://ej2.syncfusion.com/react/documentation/treegrid/columns/column-template#using-condition-template).
 
 ## Using condition template
 

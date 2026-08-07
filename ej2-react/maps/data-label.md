@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Data label in React Maps component | Syncfusion
-description: Learn here all about Data label in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Data label 
+title: Data Labels in React Maps | Syncfusion
+description: Learn how to display React Maps data labels for shape data or a bound data source, including labelPath configuration and visibility settings.
+control: Data label
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data label in React Maps component
+# Data Labels in React Maps
 
 Data labels display information about map shapes. Enable data labels by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel#visible) property of the [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/maps/dataLabelSettingsModel) to **true**.
 

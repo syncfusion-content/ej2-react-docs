@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Gauge legend in React Circular gauge component | Syncfusion
-description: Learn here all about Gauge legend in Syncfusion React Circular gauge component of Syncfusion Essential JS 2 and more.
+title: Legend in React Circular Gauge | Syncfusion
+description: Add and customize legends in the React Circular Gauge to identify range categories using position, alignment, shape, and other style options.
 control: Gauge legend 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Gauge legend in React Circular gauge component
+# Legend in React Circular Gauge
 
 Legend provides valuable information for interpreting what the circular gauge axis range displays, and they can be represented in various colors, shapes, and other identifiers based on the data. It gives a breakdown of what each symbol represents in the axis range of circular gauge.
 

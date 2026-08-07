@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Indent in React TreeGrid component | Syncfusion
-description: Learn here all about Indent in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Indent and Outdent | Syncfusion
+description: Learn how to indent and outdent rows in React TreeGrid to modify hierarchical relationships and manage parent-child records.
 control: Indent 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Indent in React TreeGrid
+# Indent and Outdent in React TreeGrid
 
 The indent and outdent feature changes the hierarchy level of rows in the TreeGrid. The indent action moves the selected row as the last child of its previous row, whereas the outdent action moves the selected row as a sibling of its parent row.
 

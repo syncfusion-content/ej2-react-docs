@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize cell elements in React Pivot Table
 
-You can customize each cell in the Pivot Table by using the [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#celltemplate) property. The [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#celltemplate) option accepts either an HTML string or the ID of an HTML element. You can use this to append extra HTML and show custom content or styles for every cell.
+You can customize each cell in the Pivot Table by using the [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview#celltemplate) property. The [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview#celltemplate) option accepts either an HTML string or the ID of an HTML element. You can use this to append extra HTML and show custom content or styles for every cell.
 
 ## Implementation example
 

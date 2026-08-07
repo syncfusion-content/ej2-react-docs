@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to set the drill-through edit type in React Pivot Table | Syncfusion
+title: How to set the drill-through edit type in Pivot Table | Syncfusion
 description: Step-by-step example showing how to set the drill-through cell edit type in the React Pivot Table using the drillThrough event.
 control: Pivot Table
 platform: ej2-react
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to set the drill-through edit type in React Pivot Table
+# How to set the drill-through edit type in Pivot Table
 
 The drill-through feature in the Pivot Table allows users to view the raw data behind aggregated values by opening a detailed grid dialog. When this dialog appears, you can customize the edit behavior of specific columns to provide appropriate input controls based on their data types.
 
-Using the [`drillThrough`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#drillthrough) event in the Pivot Table, you can define the edit type for any column in the drill-through grid. This is accomplished by checking the column name within the event handler and setting the appropriate edit type using the [`gridColumns.editType`](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) event argument.
+Using the [`drillThrough`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#drillthrough) event in the Pivot Table, you can define the edit type for any column in the drill-through grid. This is accomplished by checking the column name within the event handler and assigning the appropriate value to [`gridColumns.editType`](https://ej2.syncfusion.com/react/documentation/api/grid/column#edittype) on the column object exposed by the event arguments.
 
 ## Edit type options
 

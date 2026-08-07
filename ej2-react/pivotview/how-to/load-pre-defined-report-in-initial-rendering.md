@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to load a report as default in React Pivot Table | Syncfusion
-description: Step-by-step example showing how to load a report from the report list as default in the React Pivot Table using the dataBound event.
+title: How to load a saved report in Pivot Table on startup | Syncfusion
+description: Step-by-step example showing how to load a pre-defined report from a saved report collection on the initial render of the Pivot Table using the dataBound event.
 platform: ej2-react
 control: Pivot Table
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD009 -->
 
-# How to load a report as default in React Pivot Table
+# How to load a saved report in Pivot Table on startup
 
 By default, the Pivot Table displays with the report configuration defined in the component initialization. To load a specific report from a previously saved report collection during the initial rendering process, configure the desired report name within the [`dataBound`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#databound) event. This approach allows the Pivot Table to automatically apply the selected report's configuration, including field arrangements, filters, and formatting settings, as soon as the component completes its data binding process.
 

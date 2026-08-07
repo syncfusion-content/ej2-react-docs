@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom path in React Maps component | Syncfusion
-description: Learn here all about Custom path in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Custom path 
+title: How to add a custom path in React Maps | Syncfusion
+description: Learn how to build custom-path layouts in React Maps using normal geometry shapes, demonstrated with a bus seat selection example.
+control: Custom path
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom path in React Maps component
+# How to add a custom path in React Maps
 
 Maps component can be customized as the desired layout using the custom path map feature. Here, the Maps component has been showcased with normal geometry type shapes to represent the bus seat selection layout.
 

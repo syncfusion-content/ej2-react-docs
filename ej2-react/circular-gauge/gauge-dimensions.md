@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gauge dimensions in React Circular gauge component | Syncfusion
-description: Learn here all about Gauge dimensions in Syncfusion React Circular gauge component of Syncfusion Essential JS 2 and more.
+title: Dimensions in React Circular Gauge | Syncfusion
+description: Set the React Circular Gauge size via inline width and height, CSS, or container-based sizing for responsive layouts in pixels or percentages.
 control: Gauge dimensions 
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Gauge dimensions in React Circular gauge component
+# Dimensions in React Circular Gauge
 
 ## Size for Container
 

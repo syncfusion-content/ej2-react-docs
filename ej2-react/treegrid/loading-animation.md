@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Loading animation in React TreeGrid | Syncfusion
-description: Learn here all about Loading animation in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Loading Animation | Syncfusion
+description: Learn how to use loading animations in React TreeGrid, including spinner and shimmer indicators for improved loading experiences.
 control: Loading animation
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Loading animation in React TreeGrid
+# Loading Animation in React TreeGrid
 
 TreeGrid displays a loading indicator while data is fetched and bound during initial rendering, refresh operations, and after actions such as sorting or filtering.
 

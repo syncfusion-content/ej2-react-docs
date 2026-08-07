@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ribbon Items in React Ribbon component | Syncfusion
-description:  Checkout and learn about Items in Syncfusion React Ribbon component of Syncfusion Essential JS 2 and more.
+title: Items in React Ribbon | Syncfusion
+description: Learn how to add and configure built-in and custom items in the React Ribbon using item types like button, split button, drop-down, and more.
 control: Ribbon
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Items in the React Ribbon Component
+# Items in React Ribbon
 
 The Ribbon component renders various built-in items by defining them within the `RibbonItemsDirective` tag. Each item's functionality is determined by its `type` property, as defined in the [type](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonItemType) API. By default, an item's type is `Button`.
 

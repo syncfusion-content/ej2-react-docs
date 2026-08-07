@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable disable treegrid and its actions in React TreeGrid | Syncfusion
-description: Learn here all about Enable disable treegrid and its actions in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Enable or Disable Actions | Syncfusion
+description: Learn how to enable or disable the React TreeGrid and its actions using custom CSS to control user interaction.
 control: Enable disable treegrid and its actions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable disable treegrid and its actions in React TreeGrid
+# Enable or Disable TreeGrid Actions in React TreeGrid
 
 Enable or disable the TreeGrid and its actions by applying or removing corresponding CSS styles.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get row cell index in React TreeGrid | Syncfusion
-description: Learn here all about Get row cell index in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Row Cell Index | Syncfusion
+description: Learn how to get the specific row and cell index in the React TreeGrid using the rowSelected event and element attributes.
 control: Get row cell index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get row cell index in React TreeGrid
+# Get Row Cell Index in React TreeGrid
 
 Obtain the specific row and cell index in the TreeGrid by using the [rowSelected](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowselected) event. Retrieve the row index from the *aria-rowindex* attribute of the table row (tr) element and the column index from the **aria-colindex** attribute of the table cell (td) element.
 

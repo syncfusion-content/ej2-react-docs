@@ -1,20 +1,20 @@
 ﻿---
 layout: post
-title: Data binding in React Treemap component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React TreeMap | Syncfusion
+description: Learn how to bind flat or hierarchical data sources to the Syncfusion React TreeMap using the dataSource property.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Treemap component
+# Data Binding in React TreeMap
 
 The TreeMap control supports data binding using the dataSource property.
 
 ## Populate data
 
-The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treemap/#datasource) property accepts collection values as input. For example, a list of objects can be provided as input. Data can be given as either flat or hierarchical collection to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treemap/#datasource) property.
+The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treemap#datasource) property accepts collection values as input. For example, a list of objects can be provided as input. Data can be given as either flat or hierarchical collection to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treemap#datasource) property.
 
 <!-- markdownlint-disable MD036 -->
 

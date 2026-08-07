@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Axis customization in React Sparkline component | Syncfusion
-description: Learn here all about Axis customization in Syncfusion React Sparkline component of Syncfusion Essential JS 2 and more.
+title: Axis Customization in React Sparkline | Syncfusion
+description: Customize the Syncfusion React Sparkline axis with Numeric, Category, or DateTime value types, min/max bounds, line color, width, and dash array.
 control: Axis customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis customization in React Sparkline component
+# Axis Customization in React Sparkline
 
 You can customize axis value types and min and max values of the sparkline.
 

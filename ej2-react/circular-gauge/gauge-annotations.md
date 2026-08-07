@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Gauge annotations in React Circular gauge component | Syncfusion
-description: Learn here all about Gauge annotations in Syncfusion React Circular gauge component of Syncfusion Essential JS 2 and more.
+title: Annotations in React Circular Gauge | Syncfusion
+description: Mark specific areas in the React Circular Gauge with custom text, shapes, or images by adding the Annotations module and configuring annotation content.
 control: Gauge annotations 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Gauge annotations in React Circular gauge component
+# Annotations in React Circular Gauge
 
 Annotations are used to mark a specific area of interest in the gauge with texts, shapes or images.
 

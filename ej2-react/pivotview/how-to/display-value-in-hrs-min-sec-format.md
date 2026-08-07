@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to display a custom string in value cells in React Pivot Table | Syncfusion
-description: Step-by-step example showing how to display a custom string in value cells in the React Pivot Table using the aggregateCellInfo event.
+title: How to display values in HH:MM:SS in Pivot Table | Syncfusion
+description: Step-by-step example showing how to display numeric values as a custom time string in value cells of the React Pivot Table using the aggregateCellInfo event.
 platform: ej2-react
 control: Pivot Table
 documentation: ug
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD009 -->
 
-# How to display a custom string in value cells in React Pivot Table
+# How to display values in HH:MM:SS in Pivot Table
 
 The Pivot Table allows users to display custom string values in value cells by using the [`aggregateCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#aggregatecellinfo) event. This is useful when you need to format numeric values into readable strings, such as converting seconds to time format or applying custom formatting rules.
 
 ## Converting numeric values to time format
 
-The following example demonstrates how to convert numeric values in the **Sold** field to time format (HH:MM:SS) using the [`aggregateCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#aggregatecellinfo) event. The event provides access to cell data through [`args.cellSets`](https://helpej2.syncfusion.com/react/documentation/api/pivotview/aggregateeventargs#cellsets), allowing you to customize the display value based on the underlying data.
+The following example demonstrates how to convert numeric values in the **Sold** field to time format (HH:MM:SS) using the [`aggregateCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#aggregatecellinfo) event. The event provides access to cell data through [`args.cellSets`](https://ej2.syncfusion.com/react/documentation/api/pivotview/aggregateeventargs#cellsets), allowing you to customize the display value based on the underlying data.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
