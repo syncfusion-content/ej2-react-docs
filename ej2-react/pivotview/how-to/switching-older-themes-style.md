@@ -1,16 +1,16 @@
 ---
 layout: post
-title: How to switch to older themes style in React Pivot Table | Syncfusion
-description: Step-by-step example showing how to switch to older themes style in the React Pivot Table, with CSS overrides and row-height changes.
+title: How to switch to the older Pivot Table theme | Syncfusion
+description: Step-by-step example showing how to switch to the older theme style in the React Pivot Table, with CSS overrides and row-height changes.
 control: Pivot Table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to switch to older themes style in React Pivot Table
+# How to switch to the older Pivot Table theme
 
-Since Volume 1, 2020, Syncfusion<sup style="font-size:70%">&reg;</sup> has revised the theming and layout of the Pivot Table. If you prefer the appearance of the earlier theme, you can revert to it by making specific changes. This guide explains how to restore the older theme's style by modifying the CSS to adjust cell background colors and set the row height to match the previous layout.
+Since Volume 1, 2020, Syncfusion<sup style="font-size:70%">&reg;</sup> revised the theming and layout of the Pivot Table. If you prefer the appearance of the earlier theme, you can revert to it by making specific changes. This guide explains how to restore the older theme's style by modifying the CSS to adjust cell background colors and set the row height to match the previous layout.
 
 ## CSS Selectors
 
@@ -62,7 +62,7 @@ For the High Contrast theme, the following CSS is required:
 
 ## Adjusting Row Height
 
-In the current theme, the height of each Pivot Table row has been reduced to make the component more compact. Users can reset the height of the Pivot Table rows using the [`rowHeight`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#rowheight) property within [`gridSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#gridsettings). In the older theme, this property was typically set to 36 pixels for desktop layouts and 48 pixels for mobile layouts. To replicate the older theme style, reset the [`rowHeight`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel/#rowheight) accordingly.
+In the current theme, the height of each Pivot Table row has been reduced to make the component more compact. Users can reset the height of the Pivot Table rows using the [`rowHeight`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel#rowheight) property within [`gridSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#gridsettings). In the older theme, this property was typically set to 36 pixels for desktop layouts and 48 pixels for mobile layouts. To replicate the older theme style, reset the [`rowHeight`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettingsModel#rowheight) accordingly.
 
 The following code sample demonstrates how to replicate the older theme style:
 
