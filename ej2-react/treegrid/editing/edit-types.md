@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Edit types in React TreeGrid component | Syncfusion
-description: Learn here all about Edit types in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Edit Types | Syncfusion
+description: Learn how to use different edit types in React TreeGrid, including cell, row, batch, and dialog editing modes for managing data.
 control: Edit types 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Edit types in React TreeGrid
+# Edit Types in React TreeGrid
 
 ## Cell edit type and its params
 
-The [columns.editType](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#edittype) property customizes the editor used for a column. Set the edit type based on the column’s data type.
+The [columns.editType](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#edittype) property customizes the editor used for a column. Set the edit type based on the column’s data type.
 
 * `numericedit` - [NumericTextBox](../../numerictextbox) component for integer, double, and decimal types.
 * `defaultedit` - [TextBox](../../textbox) component for string type.
@@ -21,7 +21,7 @@ The [columns.editType](https://ej2.syncfusion.com/react/documentation/api/treegr
 * `datepickeredit` - [DatePicker](../../datepicker) component for date type.
 * `datetimepickeredit` - [DateTimePicker](../../datetimepicker) component for date and time type.
 
-Customize the editor model through [columns.edit.params](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#edit).
+Customize the editor model through [columns.edit.params](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#edit).
 
 The following table lists editor components and example params.
 

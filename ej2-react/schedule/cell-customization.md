@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cell customization in React Schedule component | Syncfusion
-description: Learn here all about Cell customization in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Cell Customization in React Scheduler | Syncfusion
+description: Learn how to customize work cells in the Syncfusion React Scheduler for vertical, timeline, and month views with custom content and styling.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell customization in React Schedule component
+# Cell Customization in React Scheduler
 
 The cells of the Scheduler can be customized using a template or the [`renderCell`](https://ej2.syncfusion.com/react/documentation/api/schedule#rendercell) event.
 

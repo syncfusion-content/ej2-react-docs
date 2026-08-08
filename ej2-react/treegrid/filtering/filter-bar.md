@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filter bar in React TreeGrid component | Syncfusion
-description: Learn here all about Filter bar in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Filter Bar | Syncfusion
+description: Learn how to use the filter bar in React TreeGrid, including column filtering, filter operators, and custom filter behavior.
 control: Filter bar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter bar in React TreeGrid
+# Filter Bar in React TreeGrid
 
 When [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowfiltering) is set to true, a filter bar row appears below the header to filter data. Records can be filtered using different expressions based on the column type.
 

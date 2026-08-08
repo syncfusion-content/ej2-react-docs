@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scheduler styling in React Schedule component | Syncfusion
-description: Learn here all about Scheduler styling in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Style and Appearance in React Scheduler | Syncfusion
+description: Learn how to style the Syncfusion React Scheduler by overriding default CSS classes and creating custom themes with Theme Studio.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scheduler styling in React Schedule component
+# Style and Appearance in React Scheduler
 
 To customize the Scheduler's appearance, override its default CSS. You can also create a custom theme using our [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=tailwind3). Below is a list of Scheduler CSS classes.
 

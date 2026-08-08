@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Local data in React TreeGrid component | Syncfusion
-description: Learn about local data binding in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Local Data | Syncfusion
+description: Learn to bind local data to React TreeGrid with support for hierarchical and self-referential (flat) data structures.
 control: Local data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Local data in React TreeGrid 
+# Local Data in React TreeGrid
 
 In local data binding, the datasource used to render the TreeGrid is retrieved locally within the same application.
 
@@ -17,13 +17,13 @@ Two types of data binding are supported by the TreeGrid:
 * Hierarchical datasource binding
 * Self-referential data binding (flat data)
 
-To bind local data to the TreeGrid, assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property. The local datasource can also be provided as an instance of the **DataManager**.
+To bind local data to the TreeGrid, assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treegrid#datasource) property. The local datasource can also be provided as an instance of the **DataManager**.
 
-> By default, **DataManager** uses the [JsonAdaptor](https://ej2.syncfusion.com/documentation/data/adaptors/#json-adaptor/) for local data binding.
+> By default, **DataManager** uses the [JsonAdaptor](https://ej2.syncfusion.com/documentation/data/adaptors#json-adaptor) for local data binding.
 
 ## Hierarchy datasource binding
 
-Use the [childMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#childmapping) property to map child records in a hierarchical datasource.
+Use the [childMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid#childmapping) property to map child records in a hierarchical datasource.
 
 The following example demonstrates how to bind hierarchical local data to the TreeGrid.
 
@@ -47,8 +47,8 @@ The following example demonstrates how to bind hierarchical local data to the Tr
 
 The TreeGrid can be rendered from self-referential data structures by providing two fields: an ID field and a parent ID field.
 
-* **ID Field**: Contains unique values that identify nodes. Assign its name to the [idMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#idmapping) property.
-* **Parent ID Field**: Contains values that indicate parent nodes. Assign its name to the [parentIdMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#parentidmapping) property.
+* **ID Field**: Contains unique values that identify nodes. Assign its name to the [idMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid#idmapping) property.
+* **Parent ID Field**: Contains values that indicate parent nodes. Assign its name to the [parentIdMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid#parentidmapping) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -86,9 +86,9 @@ primaryParent | References the primary parent data
 
 ## Immutable mode 
 
-Immutable mode in the Syncfusion TreeGrid optimizes re-rendering performance by leveraging object reference and [deep comparison](https://dmitripavlutin.com/how-to-compare-objects-in-javascript/#4-deep-equality). During TreeGrid actions, only added or modified rows are re-rendered, and unchanged rows are preserved.
+Immutable mode in the Syncfusion TreeGrid optimizes re-rendering performance by leveraging object reference and deep comparison. During TreeGrid actions, only added or modified rows are re-rendered, and unchanged rows are preserved.
 
-Enable this feature by setting the [`enableImmutableMode`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#enableimmutablemode) property to `true`.
+Enable this feature by setting the [`enableImmutableMode`](https://ej2.syncfusion.com/react/documentation/api/treegrid#enableimmutablemode) property to `true`.
 
 The following example demonstrates how to enable immutable mode in a React component:
 
@@ -109,7 +109,7 @@ The following example demonstrates how to enable immutable mode in a React compo
 
  {% previewsample "page.domainurl/code-snippet/treegrid/immutable-mode-cs1" %}
 
-> This feature uses the primary key value for data comparison. Ensure a column has [`isPrimaryKey`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#isprimarykey) set to `true`.
+> This feature uses the primary key value for data comparison. Ensure a column has [`isPrimaryKey`](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#isprimarykey) set to `true`.
 
 ### Limitations
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cell selection in React Treegrid component | Syncfusion
-description: Learn here all about Cell selection in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Cell Selection | Syncfusion
+description: Learn how to perform cell selection in the React TreeGrid, including selection modes, programmatic APIs, and retrieving selected cell indexes.
 control: Cell selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cell selection in React Treegrid component
+# Cell Selection in React TreeGrid
 
 Cells can be selected using mouse drag or arrow keys (Up, Down, Left, Right).
 

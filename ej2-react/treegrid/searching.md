@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Searching in React TreeGrid component | Syncfusion
-description: Learn here all about Searching in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Searching | Syncfusion
+description: Learn how to enable and customize searching in React TreeGrid, including search settings, operators, column-specific search, and advanced options.
 control: Searching 
 platform: ej2-react
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Working days in React Schedule component | Syncfusion
-description: Learn here all about Working days in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Working Days and Hours in React Scheduler | Syncfusion
+description: Learn how to set working days, working hours, time range, and first day of the week in the Syncfusion React Scheduler.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Working days in React Schedule component
+# Working Days and Hours in React Scheduler
 
 The Scheduler supports calendar-specific customizations, including:
 

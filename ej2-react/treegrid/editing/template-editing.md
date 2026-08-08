@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Template editing in React TreeGrid component | Syncfusion
-description: Learn here all about Template editing in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Template Editing | Syncfusion
+description: Learn how to use template editing in React TreeGrid to create custom edit forms with tailored layouts and controls.
 control: Template editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template editing in React TreeGrid component
+# Template Editing in React TreeGrid
 
 ## Dialog template
 
-Dialog template editing customizes the default dialog editing behavior. Using the dialog template, custom editors can be rendered by setting [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#mode) to **Dialog** and [template](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel/#template) to a SCRIPT element ID or an HTML string that defines the template.
+Dialog template editing customizes the default dialog editing behavior. Using the dialog template, custom editors can be rendered by setting [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel#mode) to **Dialog** and [template](https://ej2.syncfusion.com/react/documentation/api/treegrid/editSettingsModel#template) to a SCRIPT element ID or an HTML string that defines the template.
 
 Some scenarios require adding field editors that are not present in the column model. In such cases, the dialog template provides full control to extend the default edit dialog.
 
@@ -68,7 +68,7 @@ The following code example illustrates rendering the *taskID* textbox when a new
 
 ### Get value from editor
 
-Read, format, and update the current editor value in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionbegin) event when **requestType** is **save**.
+Read, format, and update the current editor value in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/treegrid#actionbegin) event when **requestType** is **save**.
 
 In the following code example, the *progress* value is formatted and updated.
 
@@ -86,7 +86,7 @@ In the following code example, the *progress* value is formatted and updated.
 
 ### Set focus to editor
 
-By default, the first input element in the dialog receives focus when the dialog opens. If the first input is disabled or hidden, move focus to a valid input in the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actioncomplete) event when **requestType** is *beginEdit*.
+By default, the first input element in the dialog receives focus when the dialog opens. If the first input is disabled or hidden, move focus to a valid input in the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid#actioncomplete) event when **requestType** is *beginEdit*.
 
 ```ts
 
@@ -103,7 +103,7 @@ By default, the first input element in the dialog receives focus when the dialog
 
 ### Adding validation rules for custom editors
 
-When additional fields not defined in the column model are used, add validation rules for them in the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actioncomplete) event.
+When additional fields not defined in the column model are used, add validation rules for them in the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/treegrid#actioncomplete) event.
 
 ```ts
 

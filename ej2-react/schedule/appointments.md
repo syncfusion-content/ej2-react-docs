@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appointments in React Schedule component | Syncfusion
-description: Learn here all about Appointments in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Appointments in React Scheduler | Syncfusion
+description: Learn how to create and manage appointments in the Syncfusion React Scheduler, including normal, all-day, spanned, and recurring events.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appointments in React Schedule component
+# Appointments in React Scheduler
 
 Appointments represent scheduled items for a specific time period within the Scheduler. Appointments can be created for various time ranges, with each appointment categorized according to its duration and recurrence. The Scheduler categorizes events as follows:
 

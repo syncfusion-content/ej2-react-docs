@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  React Scheduler with Vite and JavaScript | Syncfusion
-description:  Checkout and learn about Getting started with React Schedule component of Syncfusion Essential JS 2 using Vite and JavaScript
+title: Getting Started with React Scheduler and Vite | Syncfusion
+description: Learn how to get started with the Syncfusion React Scheduler using Vite and JavaScript, exploring setup, configuration, and basic usage.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion® React Scheduler using Vite and JavaScript
+# Getting Started with React Scheduler and Vite
 
 This article provides a step-by-step guide for setting up a [Vite](https://vite.dev/guide/) project with JavaScript and integrating [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
 

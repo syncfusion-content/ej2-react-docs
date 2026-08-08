@@ -1,14 +1,14 @@
 ---
 layout: post
-title: CRUD actions in React Schedule component | Syncfusion
-description: Learn here all about CRUD actions in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: CRUD Actions in React Scheduler | Syncfusion
+description: Learn how to add, edit, and delete appointments in the Syncfusion React Scheduler using the editor window and drag-and-resize actions.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# CRUD actions in React Schedule component
+# CRUD Actions in React Scheduler
 
 Appointments, also known as events, are central to the Scheduler component, allowing users to manage and interact with scheduling data. These appointments can be added, edited, or deleted through the editor window, drag and drop, or resize actions.
 

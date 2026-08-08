@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Column resizing in React TreeGrid | Syncfusion
-description: Learn here all about Column resizing in Syncfusion React TreeGrid of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Column Resizing | Syncfusion
+description: Learn how to resize columns in React TreeGrid, including column width adjustment, resizing modes, and auto-fit options.
 control: Column resizing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column resizing in React TreeGrid 
+# Column Resizing in React TreeGrid 
 
-Column width can be adjusted by clicking and dragging the right edge of a column header. While dragging, the column resizes immediately. Double-clicking the right edge of a column header automatically fits that column to the widest cell content. To enable column resizing, set the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowresizing) property to true.
+Column width can be adjusted by clicking and dragging the right edge of a column header. While dragging, the column resizes immediately. Double-clicking the right edge of a column header automatically fits that column to the widest cell content. To enable column resizing, set the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/treegrid#allowresizing) property to true.
 
 To use column resizing, inject the **Resize** module in the TreeGrid.
 
@@ -25,12 +25,12 @@ To use column resizing, inject the **Resize** module in the TreeGrid.
 
  {% previewsample "page.domainurl/code-snippet/treegrid/column-cs5" %}
 
-> Resizing can be disabled for a specific column by setting [columns.allowResizing](https://ej2.syncfusion.com/react/documentation/api/treegrid/columnModel/#allowresizing) to false.  
+> Resizing can be disabled for a specific column by setting [columns.allowResizing](https://ej2.syncfusion.com/react/documentation/api/treegrid/columnModel#allowresizing) to false.  
 > In RTL mode, drag the left edge of the header cell to resize the column.
 
 ## Min and max width
 
-Resizing can be constrained using [columns.minWidth](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#minwidth) and [columns.maxWidth](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#maxwidth).
+Resizing can be constrained using [columns.minWidth](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#minwidth) and [columns.maxWidth](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#maxwidth).
 
 In the following sample, minimum and maximum widths are defined for the **Duration** and **Task Name** columns.
 
@@ -47,7 +47,7 @@ In the following sample, minimum and maximum widths are defined for the **Durati
 
 ## Resize stacked column
 
-Stacked columns can be resized by dragging the right edge of the stacked header. While dragging, all child columns under the stacked header resize proportionally. To disable resizing for a particular stacked column, set [allowResizing](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#allowresizing) to **false** on the respective child columns.
+Stacked columns can be resized by dragging the right edge of the stacked header. While dragging, all child columns under the stacked header resize proportionally. To disable resizing for a particular stacked column, set [allowResizing](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#allowresizing) to **false** on the respective child columns.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

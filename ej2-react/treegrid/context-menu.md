@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Context menu in React TreeGrid | Syncfusion
-description: Learn here all about Context menu in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Context Menu | Syncfusion
+description: Learn how to customize the context menu in React TreeGrid, including custom items, dynamic enable/disable options, and API integration.
 control: Context menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Context menu in React TreeGrid
+# Context Menu in React TreeGrid
 
-The TreeGrid displays a context menu on right-click. Enable this feature by configuring default or custom items in the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/treegrid/#contextmenuitems) property.  
+The TreeGrid displays a context menu on right-click. Enable this feature by configuring default or custom items in the [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/treegrid#contextmenuitems) property.  
 To use the context menu, inject the **ContextMenu** module in the TreeGrid.
 
 The default items are listed below.
@@ -47,7 +47,7 @@ The default items are listed below.
 {% previewsample "page.domainurl/code-snippet/treegrid/contextmenu-cs1" %}
 
 ## Custom context menu items
-Custom context menu items can be defined by setting [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/treegrid/#contextmenuitems) as a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel/). Handle item actions in the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#contextmenuclick) event.
+Custom context menu items can be defined by setting [contextMenuItems](https://ej2.syncfusion.com/react/documentation/api/treegrid#contextmenuitems) as a collection of [contextMenuItemModel](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel). Handle item actions in the [contextMenuClick](https://ej2.syncfusion.com/react/documentation/api/treegrid#contextmenuclick) event.
 
 In the following sample, a context menu item is added for parent rows to expand or collapse child rows.
 
@@ -62,7 +62,7 @@ In the following sample, a context menu item is added for parent rows to expand 
 {% previewsample "page.domainurl/code-snippet/treegrid/contextmenu-cs2" %}
 
 ## Enable and disable context menu items dynamically
-Enable or disable context menu items using the [enableItems](https://ej2.syncfusion.com/documentation/api/menu/#enableitems) method within the [contextMenuOpen](https://ej2.syncfusion.com/documentation/api/treegrid/#contextmenuopen) event.
+Enable or disable context menu items using the [enableItems](https://ej2.syncfusion.com/documentation/api/menu#enableitems) method within the [contextMenuOpen](https://ej2.syncfusion.com/documentation/api/treegrid#contextmenuopen) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -74,5 +74,5 @@ Enable or disable context menu items using the [enableItems](https://ej2.syncfus
 {% endtabs %}
 {% previewsample "page.domainurl/code-snippet/treegrid/contextmenu-cs3" %}
 
-> Hide or show a context menu item for a specific area of the TreeGrid by configuring the [target](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel/#target)t) property.  
+> Hide or show a context menu item for a specific area of the TreeGrid by configuring the [target](https://ej2.syncfusion.com/react/documentation/api/grid/contextMenuItemModel#target)t) property.  
 > Refer to the [React TreeGrid](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for highlights. Explore the [React TreeGrid example](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to learn how to present and manipulate data.

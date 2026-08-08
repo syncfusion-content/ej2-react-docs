@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Recurrence editor in React Schedule component | Syncfusion
-description: Learn here all about Recurrence editor in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Recurrence Editor in React Scheduler | Syncfusion
+description: Learn how to use the Recurrence Editor in the Syncfusion React Scheduler to configure daily, weekly, monthly, and yearly recurrence rules.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Recurrence editor in React Schedule component
+# Recurrence Editor in React Scheduler
 
 The Recurrence editor is integrated into Scheduler's editor window by default, to process the recurrence rule generation for events. Apart from this, it can also be used as an individual component referring from the Scheduler repository to work with the recurrence related processes.
 
@@ -81,7 +81,7 @@ You can customize the recurrence editor to display only specific end options, su
 
 ## Accessing the recurrence rule string
 
-The recurrence rule is usually generated based on the options selected from the recurrence editor and also it follows the [`iCalendar`](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications. The generated recurrence rule string is a valid one to be used with the Scheduler eventâ€™s recurrence rule field.
+The recurrence rule is usually generated based on the options selected from the recurrence editor and also it follows the [`iCalendar`](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications. The generated recurrence rule string is a valid one to be used with the Scheduler event’s recurrence rule field.
 
 There is a `change` event available in recurrence editor, that triggers on every time the fields of recurrence editor tends to change. Within this event argument, you can access the generated recurrence value through the `value` option as shown in the following code example.
 

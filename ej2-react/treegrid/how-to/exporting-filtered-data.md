@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Exporting filtered data in React TreeGrid | Syncfusion
-description: Learn here all about Exporting filtered data in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Filtered Data Export | Syncfusion
+description: Learn how to export filtered data in the React TreeGrid, including specifying filtered results using PdfExportProperties for exporting.
 control: Exporting filtered data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting filtered data in React TreeGrid
+# Exporting Filtered Data in React TreeGrid
 
 Export filtered data by defining the resulting dataset in [PdfExportProperties.dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#datasource) before export.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dimensions in React Schedule component | Syncfusion
-description: Learn here all about Dimensions in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Scheduler Dimensions in React Scheduler | Syncfusion
+description: Learn how to set the height and width of the Syncfusion React Scheduler using pixel, percentage, or auto values for responsive layouts.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dimensions in React Schedule component
+# Dimensions in React Scheduler
 
 Scheduler dimensions refer to the height and width of the entire layout and support three types of values:
 

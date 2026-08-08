@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in React Schedule component | Syncfusion
-description: Learn here all about Index in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Index 
+title: About Syncfusion React Scheduler Component | Syncfusion
+description: Learn about the Syncfusion React Scheduler, an event calendar with 10 view modes, recurrence, drag-and-drop, and adaptive UI for modern apps.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Schedule component
+# About Syncfusion React Scheduler Component.
 
 The **Scheduler** component is an event calendar which facilitates user with the common Outlook-calendar features,
 thus allowing the users to plan and manage their events/appointments and its time in an efficient way.

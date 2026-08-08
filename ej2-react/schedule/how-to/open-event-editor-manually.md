@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open event editor manually in React Schedule component | Syncfusion
-description: Learn here all about Open event editor manually in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Open Editor Window Manually in React Scheduler | Syncfusion
+description: Learn how to open the event editor manually in the Syncfusion React Scheduler on cell or event click, including on a single click.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open event editor manually in React Schedule component
+# Open Editor Window Programmatically in React Scheduler
 
 ## Open Editor Window externally
 

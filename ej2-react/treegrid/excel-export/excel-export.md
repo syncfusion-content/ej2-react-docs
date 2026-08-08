@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Excel export in React TreeGrid | Syncfusion
-description: Learn here all about Excel export in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Excel Export | Syncfusion
+description: Learn how to export data from React TreeGrid to Excel, including export customization, selected records, and advanced export options.
 control: Excel export 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel export in React TreeGrid
+# Excel Export in React TreeGrid
 
-Excel export enables exporting TreeGrid data to an Excel document. Export by calling the [excelExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelexport) method. To enable Excel export in the TreeGrid, set [allowExcelExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#allowexcelexport) to **true**.
+Excel export enables exporting TreeGrid data to an Excel document. Export by calling the [excelExport](https://ej2.syncfusion.com/react/documentation/api/treegrid#excelexport) method. To enable Excel export in the TreeGrid, set [allowExcelExport](https://ej2.syncfusion.com/react/documentation/api/treegrid#allowexcelexport) to **true**.
 
 For Excel export, inject the **ExcelExport** module in the TreeGrid.
 
@@ -30,7 +30,7 @@ For a quick start with exporting functionalities, refer to the following video:
 
 ## Persist collapsed state
 
-Persist the collapsed state in the exported document by setting `isCollapsedStatePersist` to true in the `TreeGridExcelExportProperties` parameter of the [excelExport](https://ej2.syncfusion.com/react/documentation/api/treegrid/#excelexport) method.
+Persist the collapsed state in the exported document by setting `isCollapsedStatePersist` to true in the `TreeGridExcelExportProperties` parameter of the [excelExport](https://ej2.syncfusion.com/react/documentation/api/treegrid#excelexport) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -79,7 +79,7 @@ In the example, the `customAggregateFn` function computes the item count for a s
 
 Additional parameters can be sent to the server during export to include extra information or customize the export process.
 
-This can be achieved using the [query](https://ej2.syncfusion.com/react/documentation/api/treegrid/#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid/#toolbarclick) event. Within the `query` property, invoke the [addParams](https://ej2.syncfusion.com/documentation/api/data/query/#addparams) method to append parameters to the request.
+This can be achieved using the [query](https://ej2.syncfusion.com/react/documentation/api/treegrid#query) property and the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/treegrid#toolbarclick) event. Within the `query` property, invoke the [addParams](https://ej2.syncfusion.com/documentation/api/data/query#addparams) method to append parameters to the request.
 
 The following example demonstrates passing additional parameters during Excel export within the `toolbarClick` event. In this example, the parameter **recordcount** with value **12** is added using `addParams` and displayed as a message.
 

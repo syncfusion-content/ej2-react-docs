@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Infinite scroll in React TreeGrid | Syncfusion
-description: Learn here all about Infinite scroll in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Infinite Scroll | Syncfusion
+description: Learn how to enable and configure infinite scroll in the React TreeGrid for efficient large data handling, cache management, and best practices.
 control: Infinite scroll
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Infinite scroll in React TreeGrid
+# Infinite Scroll in React TreeGrid
 
 Infinite scrolling loads large data sets without degrading TreeGrid performance. This feature uses lazy loading, buffer data is fetched only when the scrollbar reaches the end of the scroller.
 To enable Infinite scrolling, set the `enableInfiniteScrolling` property to true and inject the **InfiniteScroll** module in the TreeGrid.

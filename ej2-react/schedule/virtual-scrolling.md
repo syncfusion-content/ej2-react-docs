@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Virtual scrolling in React Schedule component | Syncfusion
-description: Learn here all about Virtual scrolling in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: scheduler
+title: Virtual Scrolling in React Scheduler | Syncfusion
+description: Learn how to enable virtual scrolling in the Syncfusion React Scheduler timeline and agenda views to load resources and events on demand.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtual scrolling in React Schedule component
+# Virtual Scrolling in React Scheduler
 
 Virtual scrolling support in the Scheduler component enhances performance when working with a substantial number of resources and events. This feature allows large sets of resources and events to load dynamically in the timeline views as users scroll, resulting in a seamless user experience. Enable virtual scrolling by setting the [`allowVirtualScrolling`](https://ej2.syncfusion.com/react/documentation/api/schedule/viewsModel#allowvirtualscrolling) property to `true` within the specific timeline view settings. In the Agenda view, enable the same property in the agenda view configuration to allow virtual loading of events.
 

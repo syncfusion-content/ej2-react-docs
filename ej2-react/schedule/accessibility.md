@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Schedule component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Scheduler | Syncfusion
+description: Learn how the Syncfusion React Scheduler meets WAI-ARIA, WCAG 2.2, and Section 508 accessibility standards with screen reader and keyboard support.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Schedule component
+# Accessibility in React Scheduler
 
 The Scheduler has been designed based on the WAI-ARIA specifications, thus applying the appropriate ARIA roles, states, and properties for the Scheduler elements. It also includes built-in keyboard navigation support, enhancing usability for individuals using assistive technologies or relying solely on keyboard input. As per accessibility standards, navigated dates, views, and other interactive actions performed within the Scheduler are announced to users utilizing assistive technologies such as screen readers.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Module in React Treegrid | Syncfusion
-description: Learn here all about Module in Syncfusion React Tree Grid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Modules | Syncfusion
+description: Learn about module injection in React TreeGrid, including available feature modules, dependencies, and their purposes.
 control: Module 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Module in React Tree Grid Component
+# Modules in React TreeGrid
 
 Syncfusion React Tree Grid modules help optimize your application's bundle size by including only the features you need. To enable a specific Tree Grid feature, import and inject the corresponding Feature Module into your Tree Grid configuration. The available Tree Grid Feature Modules include:
 

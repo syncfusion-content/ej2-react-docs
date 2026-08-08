@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Complex data binding in React TreeGrid | Syncfusion
-description: Learn here all about Complex data binding in Syncfusion React TreeGrid of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Complex Data Binding | Syncfusion
+description: Learn how to use complex data binding in React TreeGrid with nested field mapping, dot notation, and hierarchical data display.
 control: Complex data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Complex data binding in React TreeGrid 
+# Complex Data Binding in React TreeGrid
 
-Complex data binding can be configured by specifying a nested field path using the dot (.) operator in the [column.field](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#field). 
+Complex data binding can be configured by specifying a nested field path using the dot (.) operator in the [column.field](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#field). 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

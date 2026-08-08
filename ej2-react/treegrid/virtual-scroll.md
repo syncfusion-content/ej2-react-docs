@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Virtual scroll in React TreeGrid | Syncfusion
-description: Learn here all about Virtual scroll in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Virtual Scrolling | Syncfusion
+description: Learn how to use virtual scrolling in React TreeGrid for large datasets, including row and column virtualization and performance optimization.
 control: Virtual scroll
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtual scroll in React TreeGrid
+# Virtual Scrolling in React TreeGrid
 
 TreeGrid loads large data sets without performance degradation. To enable virtualization, inject `VirtualScrollService` in the TreeGrid.
 

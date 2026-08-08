@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set different work hours in React Schedule component | Syncfusion
-description: Learn here all about Set different work hours in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Set Different Working Hours per Day in React Scheduler | Syncfusion
+description: Learn how to set different work hours for specific days in the Syncfusion React Scheduler to match varied team schedules.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set different work hours in React Schedule component
+# Set Different Working Hours on Different Days in React Scheduler
 
 By default, the work hours of the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) are highlighted based on the start and end values provided in the [`workHours`](https://ej2.syncfusion.com/react/documentation/api/schedule#workhours) property, which remains the same for all days. To highlight different work hours range for specific days, use the[`setWorkHours`](https://ej2.syncfusion.com/react/documentation/api/schedule#setworkhours) method.
 

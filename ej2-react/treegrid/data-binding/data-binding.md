@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Data binding in React TreeGrid | Syncfusion
-description: Learn about Data binding in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Data Binding | Syncfusion
+description: Learn about data binding in the React TreeGrid, covering local and remote data integration, expand state mapping, and best practices.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React TreeGrid
+# Data Binding in React TreeGrid
 
-The TreeGrid uses the **DataManager**, which supports both RESTful JSON data service binding and local JavaScript object array binding. The [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource/) property can be assigned an instance of [DataManager](https://ej2.syncfusion.com/documentation/data/data-binding/) or a JavaScript object array.
+The TreeGrid uses the **DataManager**, which supports both RESTful JSON data service binding and local JavaScript object array binding. The [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid#datasource) property can be assigned an instance of [DataManager](https://ej2.syncfusion.com/documentation/data/data-binding) or a JavaScript object array.
 
 It supports two kinds of data binding methods:
 * Local data
@@ -22,7 +22,7 @@ To get started quickly with data binding, watch this video:
 
 ## Binding with ajax
 
-Use the TreeGrid [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property to bind data returned from an external Fetch request. In the following example, data is fetched from the server using Fetch and then provided to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasource) property by using `onSuccess` event of the Fetch.
+Use the TreeGrid [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid#datasource) property to bind data returned from an external Fetch request. In the following example, data is fetched from the server using Fetch and then provided to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treegrid#datasource) property by using `onSuccess` event of the Fetch.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -39,7 +39,7 @@ Use the TreeGrid [dataSource](https://ej2.syncfusion.com/react/documentation/api
 
 ## Handling expandStateMapping
 
-To denote the expanded state of a parent row, define the TreeGrid [expandStateMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid/#expandstatemapping) property.
+To denote the expanded state of a parent row, define the TreeGrid [expandStateMapping](https://ej2.syncfusion.com/react/documentation/api/treegrid#expandstatemapping) property.
 
 The `expandStateMapping` property maps to a field in the datasource that indicates whether a parent record is expanded or collapsed and this is useful to renders parent row in expanded or collapsed state based on this mapping property value in datasource.
 
@@ -224,7 +224,7 @@ export default App;
 
 ### Handling child data
 
-Using the custom binding feature, child data can be loaded for a parent record according to custom logic. When a parent record is expanded, the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datastatechange) event is triggered. Assign the child data to the `childData` property of the `dataStateChange` event arguments. After assigning the child data, call the `childDataBind` method from the `dataStateChange` event arguments to indicate that the data is bound.
+Using the custom binding feature, child data can be loaded for a parent record according to custom logic. When a parent record is expanded, the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/treegrid#datastatechange) event is triggered. Assign the child data to the `childData` property of the `dataStateChange` event arguments. After assigning the child data, call the `childDataBind` method from the `dataStateChange` event arguments to indicate that the data is bound.
 
 > In this context, only parent records are assigned to the TreeGrid initially. The required child records are fetched in the `dataStateChange` event.
 
@@ -428,7 +428,7 @@ export default App;
 
 ### Performing CRUD actions
 
-The [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datasourcechanged) event is triggered when the grid data is updated. Perform the save operation based on the event arguments and call the `endEdit` method to indicate completion.
+The [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/treegrid#datasourcechanged) event is triggered when the grid data is updated. Perform the save operation based on the event arguments and call the `endEdit` method to indicate completion.
 
 ```ts
 
@@ -591,7 +591,7 @@ Footer aggregate values should be calculated and sent along with the `dataSource
 
 ### Provide excel filter datasource
 
-The [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/treegrid/#datastatechange) event is triggered with appropriate arguments when the Excel filter requests filter choice data. Resolve the Excel filter data by calling the `dataSource` resolver function from the state arguments, as shown below.
+The [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/treegrid#datastatechange) event is triggered with appropriate arguments when the Excel filter requests filter choice data. Resolve the Excel filter data by calling the `dataSource` resolver function from the state arguments, as shown below.
 
 ```ts
 

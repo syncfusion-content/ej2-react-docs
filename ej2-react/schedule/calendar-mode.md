@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Calendar mode in React Schedule component | Syncfusion
-description: Learn here all about Calendar mode in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Calendar Mode in React Scheduler | Syncfusion
+description: Learn how to render the Syncfusion React Scheduler in Gregorian and Islamic calendar modes to support different regional date formats.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Calendar mode in React Schedule component
+# Calendar Mode in React Scheduler
 
 The Scheduler supports two types of calendar modes:
 

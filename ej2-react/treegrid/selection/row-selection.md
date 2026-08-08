@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row selection in React TreeGrid component | Syncfusion
-description: Learn here all about Row selection in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Row Selection | Syncfusion
+description: Learn how to use row selection in React TreeGrid, including programmatic selection, selected records, row indexes, and persistent selection.
 control: Row selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row selection in React TreeGrid
+# Row Selection in React TreeGrid
 
 ## Select row at initial rendering
 
