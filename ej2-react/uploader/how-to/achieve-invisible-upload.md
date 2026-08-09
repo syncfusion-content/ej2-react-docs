@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Achieve invisible upload in React Uploader component | Syncfusion
-description: Learn here all about Achieve invisible upload in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to achieve invisible upload in React File Upload | Syncfusion
+description: Start uploading files immediately after selection in the React File Upload by calling the upload method inside the selected event handler.
 control: Achieve invisible upload 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Achieve invisible upload in React Uploader component
+# How to achieve invisible upload in React File Upload
 
 Invisible upload automatically initiates file upload immediately after file selection, without requiring a separate upload action. Enable this behavior by handling the selected event in the Uploader component. Refer to the following example.
 

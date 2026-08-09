@@ -1,14 +1,14 @@
 ---
 layout: post
-title: States in React Check box component | Syncfusion
-description: Learn here all about States in Syncfusion React Check box component of Syncfusion Essential JS 2 and more.
+title: States in React Checkbox | Syncfusion
+description: Use the three React Checkbox states: checked, unchecked, and indeterminate. The indeterminate state is set via property and is common in hierarchical lists.
 control: States 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# States in React Check box component
+# States in React Checkbox
 
 The CheckBox component supports three visual states:
 * Checked

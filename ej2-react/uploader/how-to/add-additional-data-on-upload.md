@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add additional data on upload in React Uploader component | Syncfusion
-description: Learn here all about Add additional data on upload in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to add additional data on upload in React File Upload | Syncfusion
+description: Send custom key-value metadata with each upload request in the React File Upload using the uploading event's customFormData argument.
 control: Add additional data on upload 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add additional data on upload in React Uploader component
+# How to add additional data on upload in React File Upload
 
 The Uploader component allows you to send additional metadata along with file uploads to the server. Use the [uploading](https://ej2.syncfusion.com/react/documentation/api/uploader/#uploading) event and its customFormData argument to attach custom key-value pairs to the upload request.
 

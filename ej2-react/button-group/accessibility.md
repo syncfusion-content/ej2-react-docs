@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React ButtonGroup component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React ButtonGroup component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Button Group | Syncfusion
+description: Learn how the React Button Group meets WCAG 2.2, Section 508, and ADA standards. Includes WAI-ARIA roles, keyboard interaction, and validation tools.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React ButtonGroup component
+# Accessibility in React Button Group
 
 The ButtonGroup component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

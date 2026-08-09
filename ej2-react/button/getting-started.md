@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Button component | Syncfusion
-description:  Checkout and learn about Getting started with React Button component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Button | Syncfusion
+description: Learn how to get started with the Syncfusion React Button control. Explore setup with Vite, package installation, CSS theme imports, and basic usage.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Button component
+# Getting Started with React Button
 
 This section explains the steps required to create a simple React Button component and demonstrate its basic usage in a React environment.
 

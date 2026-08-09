@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disabled Items in React DropDownList component | Syncfusion
-description: Learn here all about Disabled Items in Syncfusion React DropDownList component of Syncfusion Essential JS 2 and more.
+title: Disabled Items in React Dropdown List | Syncfusion
+description: Enable or disable individual React Dropdown List items by mapping the disabled field, calling disableItem, or disabling the whole component with enabled false.
 control: Disabled Items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disabled Items in React DropDownList component
+# Disabled Items in React Dropdown List
 
 The DropDownList supports enabling or disabling individual items as needed. Map the [disabled](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#fields) field from your data source to control item availability. Disabled items cannot be selected. Configure the disabled state mapping using the `fields.disabled` property.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header content in React Card component | Syncfusion
-description: Learn here all about Header content in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
+title: Header and Content in React Card | Syncfusion
+description: Add headers with title, subtitle, and images to Syncfusion React Card, plus structured body content using e-card-content blocks.
 control: Card 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header content in React Card component
+# Header and Content in React Card
 
 ## Header
 

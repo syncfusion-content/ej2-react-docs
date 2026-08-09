@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customized checkbox in React Check box component | Syncfusion
-description: Learn here all about Customized checkbox in Syncfusion React Check box component of Syncfusion Essential JS 2 and more.
+title: Customize in React Checkbox | Syncfusion
+description: Customize the React Checkbox look with custom CSS classes. Build variant styles for primary, success, warning, danger, and informational states.
 control: Customized checkbox 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customized checkbox in React Check box component
+# How to customize in React Checkbox
 
 ## Customize checkbox appearance
 

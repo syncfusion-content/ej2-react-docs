@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Timeline component | Syncfusion
-description:  Checkout and learn about Customization with Syncfusion React Timeline component of Syncfusion Essential JS 2 and more.
+title: Customization in React Timeline | Syncfusion
+description: Style Syncfusion React Timeline connectors, dots, borders, and spacing via common or individual CSS rules for distinctive event displays.
 control: Timeline
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in the React Timeline component
+# Customization in React Timeline
 
 The Timeline component offers extensive customization options for visual styling including dot appearance, connector lines, borders, spacing, and color schemes. This section demonstrates various approaches to customize Timeline items and create visually distinctive event displays.
 

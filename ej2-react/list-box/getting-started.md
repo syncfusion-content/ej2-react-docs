@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React ListBox component | Syncfusion
-description: Checkout and learn about Getting started with React ListBox component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React ListBox | Syncfusion
+description: Set up the Syncfusion React ListBox in a Vite project, install the npm package, configure the data source, and render your first selectable list.
 control: ListBox
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React ListBox component
+# Getting Started with React ListBox
 
 This section explains the steps required to create a simple React ListBox component and demonstrate its basic usage in a React environment.
 

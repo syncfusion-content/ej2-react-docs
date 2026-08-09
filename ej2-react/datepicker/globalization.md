@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React Datepicker component | Syncfusion
-description: Learn here all about Globalization in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Globalization in React DatePicker | Syncfusion
+description: Adapt the React DatePicker to global cultures with Internationalization, localization, and UNICODE CLDR JSON data.
 control: Globalization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Datepicker component
+# Globalization in React DatePicker
 
 Globalization enables components to support multiple languages and regional formats. This combines [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (parsing and formatting dates according to regional standards) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (translating text and applying culture-specific customizations).
 
@@ -184,7 +184,7 @@ The following example demonstrates the DatePicker in `German` culture.
 The DatePicker supports right-to-left functionality for languages like Arabic, Hebrew to displays the text in the right-to-left direction. Use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/datepicker#enablertl) property to set the RTL direction.
 
 The below code example demonstrates the DatePicker component in `Hebrew` culture and also explains how to set the localized text to the placeholder using [`load`](http://ej2.syncfusion.com/documentation/api/base/l10n#load) method of
-[L10n](http://ej2.syncfusion.com/documentation/api/base/l10n/) class.
+[L10n](http://ej2.syncfusion.com/documentation/api/base/l10n) class.
 
 `[Class-component]`
 

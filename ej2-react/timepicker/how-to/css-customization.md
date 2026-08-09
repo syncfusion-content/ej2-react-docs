@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Css customization in React Timepicker component | Syncfusion
-description: Learn here all about Css customization in Syncfusion React Timepicker component of Syncfusion Essential JS 2 and more.
+title: How to customize using CSS in React TimePicker | Syncfusion
+description: Apply a custom CSS class to the React TimePicker with the cssClass property to restyle the textbox, popup button, and list.
 control: Css customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# CSS customization in React Timepicker component
+# How to customize using CSS in React TimePicker
 
 The TimePicker component provides extensive CSS customization through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/timepicker#cssclass) property. Use this property to apply custom CSS classes that control the textbox, popup button, and popup list appearance.
 

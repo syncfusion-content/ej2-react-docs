@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Radio button component | Syncfusion
-description:  Checkout and learn about Getting started with React Radio button component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Radio Button | Syncfusion
+description: Learn how to get started with the Syncfusion React Radio Button control. Explore Vite setup, package installation, CSS themes, and basic usage.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React RadioButton component
+# Getting Started with React Radio Button
 
 This section explains the steps required to create a simple React RadioButton component and demonstrate its basic usage in a React environment.
 

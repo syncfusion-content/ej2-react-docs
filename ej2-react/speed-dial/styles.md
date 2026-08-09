@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles in React Speed dial component | Syncfusion
-description: Learn here all about Styles in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+title: Styles in React Speed Dial | Syncfusion
+description: Style the React Speed Dial with cssClass (primary, outline, info, success, warning, danger), open and close icons, and visible toggle.
 control: Styles 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in React Speed dial component
+# Styles in React Speed Dial
 
 Customize the SpeedDial component's appearance using various styling options and CSS classes. This section covers button customization, predefined styles, and advanced visual effects.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Incremental search in React Drop down list component | Syncfusion
-description: Learn here all about Incremental search in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to do incremental search in React Dropdown List | Syncfusion
+description: Use the built-in incremental search in the React Dropdown List by focusing the input and typing characters to jump through closely matched items in sequence.
 control: Incremental search 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Incremental search in React Drop down list component
+# How to do incremental search in React Dropdown List
 
 DropDownList supports incremental search by default. Focus the DropDownList and type characters to search for list items. Closely matched items are selected sequentially.
 

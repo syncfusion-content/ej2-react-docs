@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Check box component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Check box component of Syncfusion Essential JS 2 and more.
+title: Migration from Essential JS 1 in React Checkbox | Syncfusion
+description: Migrate the React Checkbox from Essential JS 1 to JS 2. Reference the property, method, and event API mapping for label, state, and styling changes.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Check box component
+# Migration from Essential JS 1 in React Checkbox
 
 This article describes the API migration process of the CheckBox component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

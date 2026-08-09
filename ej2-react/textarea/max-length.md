@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Maximum Length in React TextArea component | Syncfusion
-description: Limiting the maximum number of characters in the React TextArea component of Syncfusion Essential JS 2 and more details.
+title: Maximum Length in React TextArea | Syncfusion
+description: Cap React TextArea input by setting maxLength to prevent users from entering more than the allowed number of characters.
 control: Maximum Length
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Maximum Length in React TextArea Component
+# Maximum Length in React TextArea
 
 Enforce a maximum length limit using the [maxLength](https://ej2.syncfusion.com/react/documentation/api/textarea/#maxLength) property, which defines the maximum number of characters users can input. By setting this property, you control text length and prevent users from exceeding the specified limit.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create a block button in React Button component | Syncfusion
-description: Learn here all about Create a block button in Syncfusion React Button component of Syncfusion Essential JS 2 and more.
+title: How to create a block button in React Button | Syncfusion
+description: Create a full-width React Button by applying the e-block CSS class through the cssClass property to span the parent's width.
 control: Create a block button 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create a block button in React Button component
+# How to create a block button in React Button
 
 A block button spans the entire width of its parent element. To create a block button, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property to `e-block`.
 

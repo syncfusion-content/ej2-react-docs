@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Oracle data binding in React Pivot Table | Syncfusion"
-component: "Pivot Table"
+title: Oracle data binding in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table retrieves data from an Oracle database through a Web API controller and binds it as the pivot data source.
 platform: ej2-react
-description: "Learn how the React Pivot Table retrieves data from an Oracle database through a Web API controller and binds it as the pivot data source."
 control: Pivot Table
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Oracle data binding in React Pivot Table
@@ -33,46 +33,24 @@ To enable Oracle database connectivity:
 1. Under the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
 2. This controller facilitates data communication between the Oracle database and the Pivot Table.
 
-### Step 4: Connect to Oracle and Retrieve Data
-In the **PivotController.cs** file, use the [Oracle Managed Data Access](https://www.nuget.org/packages/Oracle.ManagedDataAccess) library to connect to an Oracle database and retrieve data for the Pivot Table.
+### Step 4: Connect to Oracle, Retrieve Data, and Serialize to JSON
+In the **PivotController.cs** file, use the [Oracle Managed Data Access](https://www.nuget.org/packages/Oracle.ManagedDataAccess) library to connect to an Oracle database, retrieve data, and return it as JSON for the Pivot Table.
 
-1. **Establish Connection**: Use **OracleConnection** with a valid connection string (e.g., `Data Source=localhost;User Id=myuser;Password=mypassword;`) to connect to the Oracle database.
+1. **Establish Connection**: Use **OracleConnection** with a valid connection string (e.g., `Data Source=localhost:1521/ORCLPDB1;User Id=hr;Password=hr_password;`) to connect to the Oracle database. The `Data Source` should use the EZ Connect format `host:port/service_name` or an alias defined in `tnsnames.ora`.
 2. **Query and Fetch Data**: Execute a SQL query (e.g., `SELECT * FROM EMPLOYEES`) using **OracleCommand** to retrieve data for the Pivot Table.
-3. **Structure the Data**: Use **OracleDataAdapter**'s **Fill** method to populate query results into a **DataTable** for JSON serialization.
+3. **Structure the Data**: Use **OracleDataAdapter**'s **Fill** method to populate query results into a **DataTable**.
+4. **Serialize to JSON**: Use **JsonConvert.SerializeObject** to convert the **DataTable** into a JSON string for the Pivot Table.
 
-```csharp
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using Oracle.ManagedDataAccess.Client;
-using System.Data;
+> **Schema dependency:** The pivot report below references the fields `DEPARTMENT_ID`, `EMPLOYEE_NAME`, `JOB`, `SALARY`, `EMPLOYEE_ID`, `CC_EMPLOYEES`, and `CC_TAX_PERCENTAGE`. These names do **not** all come from the standard `HR.EMPLOYEES` table queried above (`EMPLOYEE_NAME`, `CC_EMPLOYEES`, and `CC_TAX_PERCENTAGE` are not standard columns). Update the SQL query in the controller so its `SELECT` list matches the fields in the pivot report, for example:
 
-namespace MyWebService.Controllers
-{
-    [ApiController]
-    [Route("[controller]")]
-    public class PivotController : ControllerBase
-    {
-        private static DataTable FetchOracleResult()
-        {
-            // Replace with your own connection string.
-            string connectionString = "<Enter your valid connection string here>";
-            OracleConnection oracleConnection = new OracleConnection(connectionString);
-            oracleConnection.Open();
-            OracleCommand command = new OracleCommand("SELECT * FROM EMPLOYEES", oracleConnection);
-            OracleDataAdapter dataAdapter = new OracleDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-            oracleConnection.Close();
-            return dataTable;
-        }
-    }
-}
+```sql
+SELECT EMPLOYEE_ID, FIRST_NAME || ' ' || LAST_NAME AS EMPLOYEE_NAME,
+       JOB_ID AS JOB, SALARY, DEPARTMENT_ID,
+       1 AS CC_EMPLOYEES, 0 AS CC_TAX_PERCENTAGE
+FROM EMPLOYEES;
 ```
 
-### Step 5: Serialize Data to JSON
-In the **PivotController.cs** file, define a **Get** method that calls **FetchOracleResult** to retrieve data from the Oracle database as a **DataTable**. Then, use **JsonConvert.SerializeObject** from the **Newtonsoft.Json** library to convert the **DataTable** into JSON format. This JSON data will be used by the Pivot Table component.
-
-> Ensure the **Newtonsoft.Json** NuGet package is installed in your project to use **JsonConvert**.
+> **Oracle client note:** `Oracle.ManagedDataAccess` is a fully managed driver and does not require an Oracle Instant Client or `TNS_ADMIN` to be installed. For Oracle Cloud Autonomous Database, append `Wallet Location=...` and configure `OracleConfiguration.WalletLocation` in code or via `app.config`.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -109,12 +87,35 @@ namespace MyWebService.Controllers
 }
 ```
 
+### Step 5: Enable CORS in the Web API
+React (typically `http://localhost:3000` or `http://localhost:5173`) running on a different origin than the Web API will be blocked by CORS unless the API explicitly allows it. In **Program.cs**, register and apply a CORS policy:
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+        policy.WithOrigins("http://localhost:3000", "http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
+var app = builder.Build();
+
+app.UseCors("AllowReactApp"); // Must be called before MapControllers.
+app.MapControllers();
+
+app.Run();
+```
+
 ### Step 6: Run the Web API Service
 1. Build and run the application.
-2. The application will be hosted at `https://localhost:44346/` (the port number may vary based on your configuration).
+2. The application will be hosted at `https://localhost:7149/` by default (the port number is defined in **Properties/launchSettings.json** and may vary based on your configuration).
 
 ### Step 7: Access the JSON Data
-1. Access the Web API endpoint at `https://localhost:44346/Pivot` to view the JSON data retrieved from the Oracle database.
+1. Access the Web API endpoint at `https://localhost:7149/Pivot` to view the JSON data retrieved from the Oracle database.
 2. The browser will display the JSON data, as shown below.
 
 ![JSON data from the Web API endpoint](../images/oracle-code-web-app.png)
@@ -128,7 +129,7 @@ This section explains how to connect the Pivot Table component to an Oracle data
 2. Ensure your React project is configured with the necessary EJ2 Pivot Table dependencies.
 
 ### Step 2: Configure the Web API URL in the Pivot Table
-1. In the **App.tsx** (or **App.jsx**) file, map the Web API URL (`https://localhost:44346/Pivot`) to the Pivot Table using the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings).
+1. In the **App.tsx** (or **App.jsx**) file, map the Web API URL (`https://localhost:7149/Pivot`) to the Pivot Table using the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings).
 2. Below is the sample code to configure the Pivot Table to fetch data from the Web API:
 
 ```typescript
@@ -138,7 +139,7 @@ import './App.css';
 
 function App() {
     let dataSourceSettings = {
-        url: 'https://localhost:44346/Pivot'
+        url: 'https://localhost:7149/Pivot'
         // Additional configuration will be added in the next step
     };
 
@@ -163,7 +164,7 @@ import './App.css';
 
 function App() {
     let dataSourceSettings = {
-        url: 'https://localhost:44346/Pivot',
+        url: 'https://localhost:7149/Pivot',
         enableSorting: true,
         expandAll: false,
         columns: [

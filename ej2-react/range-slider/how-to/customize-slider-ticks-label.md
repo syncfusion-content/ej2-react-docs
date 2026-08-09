@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize ticks label in React Range Slider component | Syncfusion
-description: Learn here all about Customize Slider ticks label in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to customize the Slider ticks label in React Slider | Syncfusion
+description: Customize the React Slider tick labels by overriding the e-tick CSS class to display icons, units, or custom text per tick.
 control: Customize Slider ticks label 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Slider ticks label in React Range Slider component
+# How to customize the Slider ticks label in React Slider
 
 The Slider ticks can be customized using CSS by overriding Slider CSS classes. Ticks help identify the current value(s) of the Slider and include [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#largestep). By default, the Slider uses the `e-tick` class. You can override this class as needed to render customized ticks.
 

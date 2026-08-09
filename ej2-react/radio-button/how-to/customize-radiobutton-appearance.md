@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize radiobutton appearance in React Radio button component | Syncfusion
-description: Learn here all about Customize radiobutton appearance in Syncfusion React Radio button component of Syncfusion Essential JS 2 and more.
+title: Customize appearance in React Radio Button | Syncfusion
+description: Customize the React Radio Button look with custom CSS classes for primary, success, warning, danger, and info variants via the cssClass property.
 control: Customize radiobutton appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize radiobutton appearance in React Radio button component
+# How to customize appearance in React Radio Button
 
 Customize the RadioButton's visual appearance by applying custom CSS rules through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#cssclass) property. Define CSS classes targeting the RadioButton element, then apply them to change styling attributes like background color, border color, and size.
 

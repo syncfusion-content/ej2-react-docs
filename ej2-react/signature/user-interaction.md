@@ -1,14 +1,14 @@
 ---
 layout: post
-title: User interaction in React Signature component | Syncfusion
-description: Learn here all about User interaction in Syncfusion React Signature component of Syncfusion Essential JS 2 and more.
+title: User Interaction in React Signature | Syncfusion
+description: Add React Signature user interactions like undo, redo, clear, disabled, and readOnly for full control over the signature pad state.
 control: User interaction 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User interaction in React Signature component
+# User Interaction in React Signature
 
 The Signature component supports the following user interactions:
 

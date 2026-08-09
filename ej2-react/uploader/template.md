@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in React Uploader component | Syncfusion
-description: Learn here all about Template in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: Template in React File Upload | Syncfusion
+description: Customize the React File Upload's file list and action buttons with templates to change the default appearance and layout of the uploader.
 control: Template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in React Uploader component
+# Template in React File Upload
 
 You can customize the default appearance of the uploader using a template along with buttons.
 

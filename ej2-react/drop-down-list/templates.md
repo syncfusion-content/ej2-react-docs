@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in React Drop down list component | Syncfusion
-description: Learn here all about Templates in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Templates in React Dropdown List | Syncfusion
+description: Customize React Dropdown List list items, group titles, selected values, headers, and footers using itemTemplate, valueTemplate, groupTemplate, and related template properties.
 control: Templates 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React Drop down list component
+# Templates in React Dropdown List
 
 The DropDownList provides several options to customize list items, group titles, selected values, headers, and footer elements.
 

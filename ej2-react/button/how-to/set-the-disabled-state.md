@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the disabled state in React Button component | Syncfusion
-description: Learn here all about Set the disabled state in Syncfusion React Button component of Syncfusion Essential JS 2 and more.
+title: How to disable in React Button | Syncfusion
+description: Disable the React Button by setting the disabled property to true. The button becomes non-interactive and cannot receive focus or click events.
 control: Set the disabled state 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the disabled state in React Button component
+# How to disable in React Button
 
 Disable the Button component by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button#disabled) property to `true`. A disabled button is not interactive and cannot receive focus or trigger click events.
 

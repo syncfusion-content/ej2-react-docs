@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Calendar component | Syncfusion
-description: Learn here all about Customize the calendar day header in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: How to customize the day header in React Calendar | Syncfusion
+description: Customize the day name format in the React Calendar header using dayHeaderFormat with Short, Narrow, Abbreviated, or Wide.
 control: Customize the calendar day header 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the calendar day header in React Calendar component
+# How to customize the day header in React Calendar
 
 You can change the format of the day displayed in the header using the [`dayHeaderFormat`](https://ej2.syncfusion.com/react/documentation/api/calendar#dayheaderformat) property. By default, the format is `Short`.
 

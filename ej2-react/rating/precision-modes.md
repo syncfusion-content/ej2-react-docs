@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Precision Modes with React Rating component | Syncfusion
-description:  Learn here all about Precision Modes in Syncfusion React Rating component of Syncfusion Essential JS 2 and more.
+title: Precision Modes in React Rating | Syncfusion
+description: Choose React Rating precision modes such as Full, Half, or Quarter to allow users to select ratings with different granularity levels.
 control: Precision Modes
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Precision Modes in React Rating Component
+# Precision Modes in React Rating
 
 Set the [`precision`](https://ej2.syncfusion.com/react/documentation/api/rating/#precision) property to provide ratings with varying levels of precision.
 

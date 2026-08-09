@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the read only TextBox in React TextBox component | Syncfusion
-description: Learn here all about Set the read only TextBox in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: How to set the read-only TextBox in React TextBox | Syncfusion
+description: Make the React TextBox read-only by setting the readonly property to true so users can select and copy text without editing it.
 control: Set the read only TextBox 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the read-only TextBox in React TextBox component
+# How to set the read-only TextBox in React TextBox
 
 Prevent user input while allowing text selection and copying by setting the [readonly](https://ej2.syncfusion.com/react/documentation/api/textbox/#readonly) property to `true` on the TextBoxComponent. Read-only TextBoxes are useful for displaying static data or values that should not be modified directly by users.
 

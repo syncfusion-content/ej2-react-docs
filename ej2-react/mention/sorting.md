@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in React Mention component | Syncfusion
-description: Learn here all about Sorting in Syncfusion React Mention component of Syncfusion Essential JS 2 and more.
+title: Sorting in React Mention | Syncfusion
+description: Sort React Mention suggestion list items in Ascending, Descending, or None order using the sortOrder property.
 control: Sorting 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in React Mention component
+# Sorting in React Mention
 
 Sort the suggestion list items in a specific order using the [sortOrder](https://ej2.syncfusion.com/react/documentation/api/mention/#sortorder) property. Available options include `Ascending`, `Descending`, and `None`:
 

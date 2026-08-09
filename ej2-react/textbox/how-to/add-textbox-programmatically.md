@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add TextBox programmatically in React TextBox component | Syncfusion
-description: Learn here all about Add TextBox programmatically in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: How to add TextBox programmatically in React TextBox | Syncfusion
+description: Create a React TextBox dynamically at runtime by calling the createInput method from the ej2-inputs library.
 control: Add TextBox programmatically 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add TextBox programmatically in React TextBox component
+# How to add TextBox programmatically in React TextBox
 
 Create a TextBox component dynamically using the `createInput` method from the `ej2-inputs` library. This approach is useful when you need to generate form inputs programmatically or customize input behavior at runtime.
 

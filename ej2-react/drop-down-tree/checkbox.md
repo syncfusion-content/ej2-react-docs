@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Checkbox in React Dropdown Tree component | Syncfusion
-description: Learn here all about Checkbox in Syncfusion React Drop down tree component of Syncfusion Essential JS 2 and more.
+title: Checkbox in React Dropdown Tree | Syncfusion
+description: Enable multi-selection in React Dropdown Tree with checkboxes, including autoCheck for hierarchical parent-child sync and showSelectAll.
 control: Dropdown Tree
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Checkbox in React Dropdown Tree component
+# Checkbox in React Dropdown Tree
 
 The Dropdown Tree component allows you to check more than one item from the tree without affecting the UI's appearance by enabling the [`showCheckBox`](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#showcheckbox) property. When this property is enabled, checkbox appears before each item text in the popup, enabling multi-selection functionality where users can select multiple tree nodes simultaneously.
 

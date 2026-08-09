@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the spin buttons up and down arrow in React Numerictextbox component | Syncfusion
-description: Learn here all about Customize the spin buttons up and down arrow in Syncfusion React Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: How to customize the spin button arrow in React NumericTextBox | Syncfusion
+description: Replace the React NumericTextBox spin button icons by overriding the e-spin-up and e-spin-down CSS classes with custom Unicode.
 control: Customize the spin buttons up and down arrow 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the spin buttons up and down arrow in React NumericTextBox component
+# How to customize the spin button arrow in React NumericTextBox
 
 Replace the default increment and decrement icons with custom icons to match your application's design. The spin button icons are controlled by the `e-spin-up` and `e-spin-down` CSS classes, which you can override with custom styling.
 

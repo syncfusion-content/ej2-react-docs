@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable ripple for switch label in React Switch component | Syncfusion
-description: Learn here all about Enable ripple for switch label in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: How to enable ripple for label in React Switch | Syncfusion
+description: Add Material Design ripple effects to the React Switch label by implementing the rippleMouseHandler method for tactile visual feedback.
 control: Enable ripple for switch label 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable ripple for switch label in React Switch component
+# How to enable ripple for label in React Switch
 
 Add Material Design ripple animations to Switch labels by implementing the `rippleMouseHandler` method. Ripple effects provide visual feedback when users interact with labels, enhancing the tactile response and improving perceived interactivity in your user interface.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add confirm dialog to remove the files in React Uploader component | Syncfusion
-description: Learn here all about Add confirm dialog to remove the files in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to confirm before removing files in React File Upload | Syncfusion
+description: Show an EJ2 Dialog confirmation before removing files in the React File Upload by cancelling the removing event and resuming on user confirm.
 control: Add confirm dialog to remove the files 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add confirm dialog to remove the files in React Uploader component
+# How to confirm before removing files in React File Upload
 
 Prevent accidental file deletion by displaying a confirmation dialog before removing files from the Uploader. This example uses the EJ2 Dialog component to create a confirmation prompt that validates the user's intent before proceeding with file removal.
 

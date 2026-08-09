@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Splitter component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
+title: Migration from Essential JS 1 in React Splitter | Syncfusion
+description: Migrate Splitter code from Syncfusion Essential JS 1 to JS 2, mapping cssClass, height, orientation, pane settings, and event changes.
 control: Splitter
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Splitter component
+# Migration from Essential JS 1 in React Splitter
 
 This article describes the API migration process for the Splitter component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

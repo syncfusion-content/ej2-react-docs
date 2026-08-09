@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open a dialog on popup item click in React Drop down button component | Syncfusion
-description: Learn here all about Open a dialog on popup item click in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: Open dialog on popup click in React DropDownButton | Syncfusion
+description: Open a dialog on React DropDownButton item selection by handling the select event to trigger custom actions or modals.
 control: Open a dialog on popup item click 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open a dialog on popup item click in React Drop down button component
+# How to open dialog on popup item click in React DropDownButton
 
 Open a dialog when a user selects an item from the DropDownButton popup by handling the [`select`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#select) event. This allows you to trigger custom actions or modals based on user selection.
 

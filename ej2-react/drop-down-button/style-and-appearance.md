@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Drop down button component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: Style and appearance in React DropDownButton | Syncfusion
+description: Customize the React DropDownButton appearance with CSS classes for variants (primary, success, info, warning, danger), states, size, and popup.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Drop down button component
+# Style and appearance in React DropDownButton
 
 To modify the DropDownButton appearance, you need to override the default CSS of DropDownButton component. Please find the list of CSS classes and its corresponding section in DropDownButton. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

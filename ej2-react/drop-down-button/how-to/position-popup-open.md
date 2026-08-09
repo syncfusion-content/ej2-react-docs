@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position popup open in React Drop down button component | Syncfusion
-description: Learn here all about Position popup open in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to position popup in React DropDownButton | Syncfusion
+description: Reposition the React DropDownButton popup at custom coordinates by adjusting the top and left values in the open event handler.
 control: Position popup open 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position popup open in React Drop down button component
+# How to position popup in React DropDownButton
 
 Control the popup position by adjusting the `top` and `left` coordinates in the [`open`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#open) event. This allows you to position the dropdown popup at custom locations relative to the button or viewport.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Revealing Hidden Slider in React Range Slider component | Syncfusion
-description: Learn here all about Show Slider from hidden state in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to show Slider from hidden state in React Slider | Syncfusion
+description: Reveal a hidden React Slider on button click by toggling display and calling the refresh method to recompute its layout.
 control: Show Slider from hidden state 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show Slider from hidden state in React Range Slider component
+# How to show Slider from hidden state in React Slider
 
 This section demonstrates how to render the Slider component in a hidden state and make it visible on button click. You can initialize the Slider in a hidden state by setting its display property to `none`.
 

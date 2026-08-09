@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable rtl in React Button group component | Syncfusion
-description: Learn here all about Enable rtl in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
+title: How to enable RTL in React Button Group | Syncfusion
+description: Enable right-to-left layout in the React Button Group by adding the e-rtl class to the target element for RTL language support.
 control: Enable rtl 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable RTL in React Button group component
+# How to enable RTL in React Button Group
 
 The ButtonGroup component supports right-to-left (RTL) display for languages and locales that use RTL scripts. Enable RTL support by adding the `e-rtl` class to the target element.
 

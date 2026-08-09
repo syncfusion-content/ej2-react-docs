@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Formats in React Numerictextbox component | Syncfusion
-description: Learn here all about Formats in Syncfusion React Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Formats in React NumericTextBox | Syncfusion
+description: Format React NumericTextBox values with standard and custom numeric format strings for currency, percentage, and decimal display.
 control: Formats 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Formats in React NumericTextBox component
+# Formats in React NumericTextBox
 
 Format the display of numeric values in the NumericTextBox using the [`format`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#format) property. When the component loses focus, the value appears in the specified format. The NumericTextBox supports both [standard numeric format strings](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-numbers) (for common scenarios like currency and percentages) and [custom numeric format strings](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-number-formatting-and-parsing) (for specialized formatting needs).
 

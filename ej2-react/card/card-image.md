@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Card image in React Card component | Syncfusion
-description: Learn here all about Card image in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
+title: Card Image in React Card | Syncfusion
+description: Display full-width images, titles, and dividers inside a Syncfusion React Card using the e-card-image and e-card-separator classes.
 control: Card
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Card image in React Card component
+# Card Image in React Card
 
 ## Images
 

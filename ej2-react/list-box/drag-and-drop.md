@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drag and drop in React List box component | Syncfusion
-description: Learn here all about Drag and drop in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
-control: Drag and drop 
+title: Drag and Drop in React ListBox | Syncfusion
+description: Enable drag and drop in the React ListBox to reorder items within one list or move selected items between multiple lists, with dragStart, drag, and drop events.
+control: Drag and drop
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in React List box component
+# Drag and Drop in React ListBox
 
 The ListBox supports dragging individual items or groups of selected items within the same list box or between multiple list boxes.
 

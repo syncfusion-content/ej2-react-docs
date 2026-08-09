@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Color picker component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Color picker component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React Color Picker | Syncfusion
+description: Override the React Color Picker's default CSS classes to style the handler, palette, mode switcher, and slider preview controls.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Color picker component
+# Style and Appearance in React Color Picker
 
 To modify the ColorPicker appearance, override the component's default CSS. The following table lists CSS classes and their corresponding ColorPicker sections. You can also create a custom theme for the control using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

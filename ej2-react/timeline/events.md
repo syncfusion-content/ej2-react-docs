@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React Timeline component | Syncfusion
-description:  Checkout and learn about Events with Syncfusion React Timeline component of Syncfusion Essential JS 2 and more.
+title: Events in React Timeline | Syncfusion
+description: Handle Syncfusion React Timeline lifecycle events like created and beforeItemRender to react when items render or the component finishes.
 control: Timeline
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React Timeline component
+# Events in React Timeline
 
 This section describes the events exposed by the Timeline component and when they are triggered. The following events are available in the Timeline component.
 

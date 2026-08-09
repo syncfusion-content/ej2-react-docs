@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Modify data in React Drop down list component | Syncfusion
-description: Learn here all about Modify data in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to modify remote data before binding in React Dropdown List | Syncfusion
+description: Modify the result data from a remote source before the React Dropdown List binds it by handling the actionComplete event and replacing items in place.
 control: Modify data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Modify data in React Drop down list component
+# How to modify remote data before binding in React Dropdown List
 
 When binding a remote data source, use the [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#actioncomplete) event to modify the result data before passing it to the DropDownList.
 

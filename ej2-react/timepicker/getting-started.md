@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Timepicker component | Syncfusion
-description:  Checkout and learn about Getting started with React Timepicker component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React TimePicker | Syncfusion
+description: Set up the React TimePicker in a Vite or CRA project and let users pick a time from a popup or type it into the input.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React TimePicker component
+# Getting Started with React TimePicker
 
 This section explains the steps required to create a simple React TimePicker component and demonstrate its basic usage in a React environment.
 

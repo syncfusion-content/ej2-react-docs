@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Datepicker component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React DatePicker | Syncfusion
+description: Review the React DatePicker accessibility compliance for WCAG 2.2, Section 508, screen readers, RTL, and keyboard navigation.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Datepicker component
+# Accessibility in React DatePicker
 
 The DatePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -44,7 +44,7 @@ Web accessibility standards define practices to make web content and application
 
 The DatePicker component provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications through the following attributes applied to the input element: `aria-expanded`, `aria-disabled`, and `aria-activedescendant`. These attributes communicate the component's state and properties to assistive technologies, enabling disabled users to interact effectively with the DatePicker.
 
-For related information, refer to the Calendar component's [Accessibility](../calendar/accessibility/) section.
+For related information, refer to the Calendar component's [Accessibility](../calendar/accessibility) section.
 
 * **aria-expanded**: Indicates the state of a collapsible element (expanded or collapsed).
 

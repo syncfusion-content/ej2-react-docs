@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validate image on drop in React Uploader component | Syncfusion
-description: Learn here all about Validate image on drop in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to validate images on drop in React File Upload | Syncfusion
+description: Restrict drag-and-drop uploads to images in the React File Upload by filtering file types in the selected event, beyond allowedExtensions.
 control: Validate image on drop 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validate image on drop in React Uploader component
+# How to validate images on drop in React File Upload
 
 Restrict file uploads to image types only by setting **image/** to the [allowedExtensions](https://ej2.syncfusion.com/react/documentation/api/uploader/#allowedextensions) property.
 

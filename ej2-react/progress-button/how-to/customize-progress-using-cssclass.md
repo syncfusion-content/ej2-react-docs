@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize progress using cssclass in React Progress button component | Syncfusion
-description: Learn here all about Customize progress using cssclass in Syncfusion React Progress button component of Syncfusion Essential JS 2 and more.
+title: Customize progress in React Progress Button | Syncfusion
+description: Style the React Progress Button progress fill with built-in cssClass values: e-vertical, e-progress-top, or a custom class for reverse fill direction.
 control: Customize progress using cssclass 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize progress using cssClass in React Progress button component
+# How to customize progress with cssClass in React Progress Button
 
 Customize the progress bar appearance by applying CSS classes through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#cssClass) property. These built-in classes modify how the progress fills and displays within the button.
 

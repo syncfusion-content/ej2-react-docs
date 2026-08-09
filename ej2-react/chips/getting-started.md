@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Chips component | Syncfusion
-description:  Checkout and learn about Getting started with React Chips component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Chips | Syncfusion
+description: Learn how to get started with the Syncfusion React Chips control. Explore Vite setup, package installation, CSS themes, and basic usage.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Chips component
+# Getting Started with React Chips
 
 This section explains the steps required to create a simple React Chips component and demonstrate its basic usage in a React environment.
 

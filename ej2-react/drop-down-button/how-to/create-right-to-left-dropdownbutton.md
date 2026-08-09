@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create right to left dropdownbutton in React Drop down button component | Syncfusion
-description: Learn here all about Create right to left dropdownbutton in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to enable RTL in React DropDownButton | Syncfusion
+description: Enable right-to-left layout in the React DropDownButton by setting the enableRtl property to true for Arabic, Hebrew, and other RTL languages.
 control: Create right to left dropdownbutton 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create right to left dropdownbutton in React Drop down button component
+# How to enable RTL in React DropDownButton
 
 The DropDownButton component supports right-to-left (RTL) display for languages and locales that use RTL scripts. Enable RTL support by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#enablertl) property to `true`.
 

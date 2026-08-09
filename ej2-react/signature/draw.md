@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Draw in React Signature component | Syncfusion
-description: Learn here all about Draw in Syncfusion React Signature component of Syncfusion Essential JS 2 and more.
+title: Draw in React Signature | Syncfusion
+description: Use the React Signature draw method to render typed text as a styled signature with custom font family and font size parameters.
 control: Draw 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Draw in React Signature component
+# Draw in React Signature
 
 ## Draw
 

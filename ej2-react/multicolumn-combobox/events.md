@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about events with React MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: "Events in React MultiColumn ComboBox | Syncfusion"
+description: Handle user interactions in the React MultiColumn ComboBox with events like actionBegin, actionComplete, select, change, filtering, open, and close.
 platform: ej2-react
 control: MultiColumn Combobox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React MultiColumn ComboBox component
+# Events in React MultiColumn ComboBox
 
 This section describes the events triggered during appropriate actions on the MultiColumn ComboBox component. The following events are available:
 

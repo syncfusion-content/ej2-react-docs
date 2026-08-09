@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Snowflake data binding in React Pivot Table | Syncfusion"
-component: "Pivot Table"
+title: Snowflake data binding in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table retrieves data from a Snowflake database through a Web API controller and binds it as the pivot data source.
 platform: ej2-react
-description: "Learn how the React Pivot Table retrieves data from a Snowflake database through a Web API controller and binds it as the pivot data source."
 control: Pivot Table
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Snowflake data binding in React Pivot Table
@@ -33,12 +33,16 @@ To enable Snowflake database connectivity:
 1. Under the **Controllers** folder, create a new Web API controller named **PivotController.cs**.
 2. This controller facilitates data communication between the Snowflake database and the Pivot Table.
 
-### Step 4: Connect to Snowflake and Retrieve Data
-In the **PivotController.cs** file, use the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data/) library to connect to a Snowflake database and retrieve data for the Pivot Table.
+### Step 4: Connect to Snowflake, Retrieve Data, and Serialize to JSON
+In the **PivotController.cs** file, use the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data/) library to connect to a Snowflake database, retrieve data, and return it as JSON for the Pivot Table.
 
-1. **Establish Connection**: Use **SnowflakeDbConnection** with a valid connection string (e.g., `account=myaccount;user=myuser;password=mypassword;db=mydb;schema=myschema;`) to connect to the Snowflake database.
-2. **Query and Fetch Data**: Execute a SQL query (e.g., `SELECT * FROM CALL_CENTER`) using **SnowflakeDbDataAdapter** to retrieve data for the Pivot Table.
-3. **Structure the Data**: Use **SnowflakeDbDataAdapter**'s **Fill** method to populate query results into a **DataTable** for JSON serialization.
+1. **Establish Connection**: Use **SnowflakeDbConnection** with a valid connection string. Snowflake requires `account=`, `warehouse=`, `db=`, and `schema=`. Example: `account=myaccount;user=myuser;password=mypassword;db=SAMPLE_DB;schema=PUBLIC;warehouse=COMPUTE_WH;role=PUBLIC;`
+2. **Authentication:** Password authentication is shown above. For SSO, add `authenticator=externalbrowser`. For key-pair authentication, omit `password=` and add `authenticator=snowflake_jwt` plus `private_key_file=...` and `private_key_file_pwd=...`.
+3. **Query and Fetch Data**: Execute a SQL query using **SnowflakeDbDataAdapter** to retrieve data for the Pivot Table.
+4. **Structure the Data**: Use **SnowflakeDbDataAdapter**'s **Fill** method to populate query results into a **DataTable**.
+5. **Serialize to JSON**: Use **JsonConvert.SerializeObject** to convert the **DataTable** into a JSON string for the Pivot Table.
+
+> **Sample dataset:** The query below uses the `CALL_CENTER` table from Snowflake's `SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL` shared database. If your account does not have the sample data shared, replace the database/schema/table with your own.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -76,53 +80,37 @@ namespace MyWebService.Controllers
 }
 ```
 
-### Step 5: Serialize Data to JSON
-In the **PivotController.cs** file, define a **Get** method that calls **FetchSnowflakeResult** to retrieve data from the Snowflake database as a **DataTable**. Then, use **JsonConvert.SerializeObject** from the **Newtonsoft.Json** library to convert the **DataTable** into JSON format. This JSON data will be used by the Pivot Table component.
+> Ensure the **Newtonsoft.Json** NuGet package is installed in your project to use `JsonConvert`.
 
-> Ensure the **Newtonsoft.Json** NuGet package is installed in your project to use **JsonConvert**.
+### Step 5: Enable CORS in the Web API
+React (typically `http://localhost:3000` or `http://localhost:5173`) running on a different origin than the Web API will be blocked by CORS unless the API explicitly allows it. In **Program.cs**, register and apply a CORS policy:
 
 ```csharp
-using Microsoft.AspNetCore.Mvc;
-using Snowflake.Data.Client;
-using Newtonsoft.Json;
-using System.Data;
+var builder = WebApplication.CreateBuilder(args);
 
-namespace MyWebService.Controllers
+builder.Services.AddControllers();
+builder.Services.AddCors(options =>
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class PivotController : ControllerBase
-    {
-        [HttpGet(Name = "GetSnowflakeResult")]
-        public object Get()
-        {
-            return JsonConvert.SerializeObject(FetchSnowflakeResult());
-        }
+    options.AddPolicy("AllowReactApp", policy =>
+        policy.WithOrigins("http://localhost:3000", "http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
 
-        public static DataTable FetchSnowflakeResult()
-        {
-            using (SnowflakeDbConnection snowflakeConnection = new SnowflakeDbConnection())
-            {
-                // Replace with your own connection string.
-                snowflakeConnection.ConnectionString = "<Enter your valid connection string here>";
-                snowflakeConnection.Open();
-                SnowflakeDbDataAdapter adapter = new SnowflakeDbDataAdapter("select * from CALL_CENTER", snowflakeConnection);
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
-                snowflakeConnection.Close();
-                return dataTable;
-            }
-        }
-    }
-}
+var app = builder.Build();
+
+app.UseCors("AllowReactApp"); // Must be called before MapControllers.
+app.MapControllers();
+
+app.Run();
 ```
 
 ### Step 6: Run the Web API Service
 1. Build and run the application.
-2. The application will be hosted at `https://localhost:44378/` (the port number may vary based on your configuration).
+2. The application will be hosted at `https://localhost:7150/` by default (the port number is defined in **Properties/launchSettings.json** and may vary based on your configuration).
 
 ### Step 7: Access the JSON Data
-1. Access the Web API endpoint at `https://localhost:44378/Pivot` to view the JSON data retrieved from the Snowflake database.
+1. Access the Web API endpoint at `https://localhost:7150/Pivot` to view the JSON data retrieved from the Snowflake database.
 2. The browser will display the JSON data, as shown below.
 
 ![JSON data from the Web API endpoint](../images/snowflake-code-web-app.png)
@@ -136,7 +124,7 @@ This section explains how to connect the Pivot Table component to a Snowflake da
 2. Ensure your React project is configured with the necessary EJ2 Pivot Table dependencies.
 
 ### Step 2: Configure the Web API URL in the Pivot Table
-1. In the **App.tsx** (or **App.jsx**) file, map the Web API URL (`https://localhost:44378/Pivot`) to the Pivot Table using the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings).
+1. In the **App.tsx** (or **App.jsx**) file, map the Web API URL (`https://localhost:7150/Pivot`) to the Pivot Table using the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings).
 2. Below is the sample code to configure the Pivot Table to fetch data from the Web API:
 
 ```typescript
@@ -146,7 +134,7 @@ import './App.css';
 
 function App() {
     let dataSourceSettings = {
-        url: 'https://localhost:44378/Pivot'
+        url: 'https://localhost:7150/Pivot'
         // Additional configuration will be added in the next step
     };
 
@@ -171,7 +159,7 @@ import './App.css';
 
 function App() {
     let dataSourceSettings = {
-        url: 'https://localhost:44378/Pivot',
+        url: 'https://localhost:7150/Pivot',
         enableSorting: true,
         expandAll: false,
         columns: [

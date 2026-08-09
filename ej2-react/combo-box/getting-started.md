@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React ComboBox component | Syncfusion
-description: Checkout and learn about Getting started with React ComboBox component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React ComboBox | Syncfusion
+description: Step-by-step setup of the Syncfusion React ComboBox in a Vite project, including package install, CSS imports, and rendering a first suggestion list.
 control: ComboBox
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React ComboBox component
+# Getting Started with React ComboBox
 
 This section explains the steps required to create a simple React ComboBox component and demonstrate its basic usage in a React environment.
 
@@ -143,7 +143,7 @@ The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/combobox/basic-cs22" %}
 
-> Refer to the [React ComboBox](https://www.syncfusion.com/react-components/react-combobox) feature tour page for its groundbreaking feature representations. You can also explore our [React ComboBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/combo-box/default) that shows how to render the ComboBox in React.
+> You can also explore our [React ComboBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/combo-box/default) that shows how to render the ComboBox in React.
 
 ## See Also
 

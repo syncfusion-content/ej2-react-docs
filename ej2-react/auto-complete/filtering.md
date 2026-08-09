@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in React AutoComplete component | Syncfusion
-description: Learn here all about Filtering in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
+title: Filtering in React AutoComplete | Syncfusion
+description: Filter Syncfusion React AutoComplete suggestions as you type using allowFiltering, with StartsWith, EndsWith, or Contains match modes for string data.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in React AutoComplete component
+# Filtering in React AutoComplete
 
 The AutoComplete has built-in support for filtering the data items when [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#allowfiltering) is enabled. The filter operation starts as soon as you start typing characters in the component.
 

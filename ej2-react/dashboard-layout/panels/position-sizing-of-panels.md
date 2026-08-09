@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position and size in React Dashboard Layout component | Syncfusion
-description: Learn here all about Position sizing of panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
+title: Size and Position in React Dashboard Layout | Syncfusion
+description: Position and size Syncfusion React Dashboard Layout panels using row, col, sizeX, sizeY, and min or max bounds measured in grid cells.
 control: Dashboard Layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Panel positioning and sizing in React Dashboard Layout component
+# Size and Position in React Dashboard Layout
 
 Panels serve as the fundamental building blocks of the Dashboard Layout component, functioning as containers for data visualization and content presentation. The component provides comprehensive control over panel positioning and sizing through a flexible grid-based system that enables precise layout management and responsive design implementation.
 

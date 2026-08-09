@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons support in React Multi select component | Syncfusion
-description: Learn here all about Icons support in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: How to show icons in React MultiSelect Dropdown | Syncfusion
+description: Show list items with icons in the React MultiSelect Dropdown by mapping the iconCss data field, which renders a styled span inside each item for custom rendering.
 control: Icons support 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons support in React Multi select component
+# How to show icons in React MultiSelect Dropdown
 
 You can render **icons** to the list items by mapping the [iconCss](https://ej2.syncfusion.com/react/documentation/api/multi-select/#fields) &nbsp;field. This `iconCss` field create a span in the list item with mapped class name to allow styling as per your need.
 

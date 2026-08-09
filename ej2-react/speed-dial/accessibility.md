@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Speed dial component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Speed Dial | Syncfusion
+description: Learn how the React Speed Dial meets WCAG 2.2, Section 508, and ADA standards. Includes WAI-ARIA roles, keyboard interaction, and validation tools.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Speed dial component
+# Accessibility in React Speed Dial
 
 The Speed Dial component adheres to accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is usable by all users, including those using assistive technologies.
 

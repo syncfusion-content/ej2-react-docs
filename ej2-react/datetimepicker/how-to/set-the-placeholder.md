@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the placeholder in React Datetimepicker component | Syncfusion
-description: Learn here all about Set the placeholder in Syncfusion React Datetimepicker component of Syncfusion Essential JS 2 and more.
+title: How to set the placeholder in React DateTime Picker | Syncfusion
+description: Set a custom placeholder on the React DateTime Picker input with the placeholder property to hint at the date-time format.
 control: Set the placeholder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the placeholder in React Datetimepicker component
+# How to set the placeholder in React DateTime Picker
 
 The [`placeholder`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#placeholder) property displays hint text in the DateTimePicker input field when it is empty. This helps guide users on the expected date and time format or input requirement.
 

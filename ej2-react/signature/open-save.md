@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open save in React Signature component | Syncfusion
-description: Learn here all about Open save in Syncfusion React Signature component of Syncfusion Essential JS 2 and more.
+title: Open and Save in React Signature | Syncfusion
+description: Open pre-drawn signatures from base64 or URL using the load method, and save signatures as image, base64, or blob formats.
 control: Open save 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open save in React Signature component
+# Open and Save in React Signature
 
 The Signature component supports to open the signature by using hosted/online URL or base64. And it also supports various save options like image, base64, and blob.
 

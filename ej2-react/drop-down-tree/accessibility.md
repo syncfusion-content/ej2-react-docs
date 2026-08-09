@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Dropdown Tree component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Dropdown Tree component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Dropdown Tree | Syncfusion
+description: Configure the React Dropdown Tree for accessibility with WAI-ARIA roles, keyboard navigation, screen reader support, and WCAG 2.2 compliance.
 control: Dropdown Tree
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Dropdown Tree component
+# Accessibility in React Dropdown Tree
 
 The Dropdown Tree component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

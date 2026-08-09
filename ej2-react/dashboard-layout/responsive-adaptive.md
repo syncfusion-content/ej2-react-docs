@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Responsive adaptive in React Dashboard Layout component | Syncfusion
-description: Learn here all about Responsive adaptive in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
+title: Responsive and Adaptive Layout in React Dashboard Layout | Syncfusion
+description: Configure the Syncfusion React Dashboard Layout to auto-stack panels on small viewports, with custom breakpoints via mediaQuery.
 control: Dashboard Layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Responsive adaptive in React Dashboard Layout  component
+# Responsive and Adaptive Layout in React Dashboard Layout
 
 The React Dashboard Layout component includes built-in responsive behavior that automatically adapts panel layouts to the viewport. This accommodates various screen sizes without additional configuration for typical responsive dashboards.
 

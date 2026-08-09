@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set the disabled state in React Split button component | Syncfusion
-description: Learn here all about Set the disabled state in Syncfusion React Split button component of Syncfusion Essential JS 2 and more.
+title: How to disable in React Split Button | Syncfusion
+description: Disable the React Split Button by setting the disabled property to true. The button and arrow become inactive and grayed out.
 control: Set the disabled state 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the disabled state in React Split button component
+# How to disable in React Split Button
 
 Control SplitButton interactivity by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/split-button#disabled) property. Set this property to `true` to prevent user interaction, disable both button actions, and gray out the component to indicate its inactive state.
 

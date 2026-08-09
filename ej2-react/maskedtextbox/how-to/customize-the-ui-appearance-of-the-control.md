@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the ui appearance of the control in React Maskedtextbox component | Syncfusion
-description: Learn here all about Customize the ui appearance of the control in Syncfusion React Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: How to customize the UI in React MaskedTextBox | Syncfusion
+description: Customize the React MaskedTextBox appearance with a custom cssClass and matching styles to fit your application design.
 control: Customize the ui appearance of the control 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the UI appearance of the control in React Maskedtextbox component
+# How to customize the UI in React MaskedTextBox
 
 The MaskedTextBox appearance can be customized by adding a custom `cssClass` and enabling corresponding styles. The following example shows how to change the MaskedTextBox appearance.
 

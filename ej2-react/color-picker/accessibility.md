@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React ColorPicker component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React ColorPicker component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Color Picker | Syncfusion
+description: Review the React Color Picker's WCAG 2.2, Section 508, WAI-ARIA, keyboard navigation, and RTL accessibility compliance details.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React ColorPicker component
+# Accessibility in React Color Picker
 
 The ColorPicker component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and common WAI-ARIA roles used to evaluate accessibility.
 

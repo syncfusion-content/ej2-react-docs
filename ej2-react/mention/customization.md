@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Mention component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Mention component of Syncfusion Essential JS 2 and more.
+title: Customization in React Mention | Syncfusion
+description: Customize the React Mention popup size, trigger character, suffix text, mention-character visibility, and leading-space behavior.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Mention component
+# Customization in React Mention
 
 ## Show or hide mention character
 

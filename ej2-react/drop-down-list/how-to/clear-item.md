@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clear item in React Drop down list component | Syncfusion
-description: Learn here all about Clear item in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to clear item in React Dropdown List | Syncfusion
+description: Clear the React Dropdown List selection by clicking the showClearButton icon, or programmatically set the index, text, or value property to null.
 control: Clear item 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clear item in React Drop down list component
+# How to clear item in React Dropdown List
 
 Clear the selected item using one of two methods:
 

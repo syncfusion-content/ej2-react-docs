@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Switch component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Switch | Syncfusion
+description: Learn how the React Switch meets WCAG 2.2, Section 508, and ADA standards. Includes WAI-ARIA roles, keyboard interaction, and validation tools.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Switch component
+# Accessibility in React Switch
 
 The Switch component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

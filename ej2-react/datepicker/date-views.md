@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date views in React Datepicker component | Syncfusion
-description: Learn here all about Date views in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Start and Depth View in React DatePicker | Syncfusion
+description: Set the React DatePicker start and depth views to month, year, or decade to control how users navigate to a date.
 control: Date views 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date views in React Datepicker component
+# Start and Depth View in React DatePicker
 
 The DatePicker has the following predefined views that provides a flexible way to navigate back and forth to select the date.
 
@@ -84,4 +84,4 @@ The following example demonstrates how to create a DatePicker that allows users 
 
  {% previewsample "page.domainurl/code-snippet/datepicker/default-cs10" %}
 
-> To know more about Calendar views refer the Calendar's [Calendar Views](../calendar/calendar-views/) section.
+> To know more about Calendar views refer the Calendar's [Calendar Views](../calendar/calendar-views) section.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering data in React Mention component | Syncfusion
-description: Learn here all about Filtering data in Syncfusion React Mention component of Syncfusion Essential JS 2 and more.
+title: Filtering Data in React Mention | Syncfusion
+description: Filter React Mention suggestions with minLength, Contains/StartsWith/EndsWith match modes, allowSpaces, and suggestionCount.
 control: Filtering data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering data in React Mention component
+# Filtering Data in React Mention
 
 The Mention component has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the mention element.
 

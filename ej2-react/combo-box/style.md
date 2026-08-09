@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Combo box component | Syncfusion
-description: Learn here all about Style in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: Customization in React ComboBox | Syncfusion
+description: Style the Syncfusion React ComboBox wrapper, input field, dropdown icon, and focus state by overriding .e-ddl CSS classes to match your design requirements.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React ComboBox component
+# Customization in React ComboBox
 
 The following CSS classes and structures enable customization of the ComboBox appearance to match your design requirements.
 

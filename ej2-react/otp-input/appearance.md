@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in React OTP Input component | Syncfusion
-description: Learn here all about Appearance in Syncfusion React OTP Input component of Syncfusion Essential JS 2 and more.
+title: Appearance in React OTP Input | Syncfusion
+description: Customize the React OTP Input field count, size, and visual style with the length property and CSS for input and label elements.
 platform: ej2-react
 control: OTP Input 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in React OTP Input component
+# Appearance in React OTP Input
 
 You can also customize the appearance of OTP Input component.
 

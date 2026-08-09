@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value change in React Drop down list component | Syncfusion
-description: Learn here all about Value change in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to detect manual or programmatic value change in React Dropdown List | Syncfusion
+description: Detect whether a React Dropdown List value change was manual or programmatic in the change event by reading the isInteracted argument.
 control: Value change 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value change in React Drop down list component
+# How to detect manual or programmatic value change in React Dropdown List
 
 Determine whether a value change was triggered manually or programmatically using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#change) event. The `isInteracted` argument indicates the change source.
 

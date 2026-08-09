@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Migration from css TextBox to react TextBox in React TextBox component | Syncfusion
-description: Learn here all about Migration from css TextBox to react TextBox in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: Migration from CSS TextBox to React TextBox | Syncfusion
+description: Migrate from the legacy CSS-based TextBox to the React TextBox component using the property and class mapping reference table.
 control: Migration from css TextBox to react TextBox 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Migration from CSS TextBox to React TextBox component
+# Migration from CSS TextBox to React TextBox
 
 > From v16.3.21 onwards, the TextBox is available as a dedicated React component, enabling floating label functionality with significantly less code. For a complete list of properties, methods, and events, refer to the [API reference](https://ej2.syncfusion.com/react/documentation/api/textbox/).
 

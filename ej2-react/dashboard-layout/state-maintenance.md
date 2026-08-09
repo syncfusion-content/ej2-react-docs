@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save restore in React Dashboard Layout component | Syncfusion
-description: Learn here all about Save restore in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
+title: State Maintenance in React Dashboard Layout | Syncfusion
+description: Save and restore Syncfusion React Dashboard Layout panel configurations across sessions using the serialize public method.
 control: Dashboard Layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save and Restore Layout State in React Dashboard Layout Component
+# State Maintenance in React Dashboard Layout
 
 The Dashboard Layout component provides the ability to save the current layout configuration and restore it later, enabling users to persist preferred panel arrangements across sessions or create reusable dashboard templates.
 

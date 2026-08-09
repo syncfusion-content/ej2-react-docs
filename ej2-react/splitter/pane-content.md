@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pane content in React Splitter component | Syncfusion
-description: Learn here all about Pane content in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
+title: Pane Content in React Splitter | Syncfusion
+description: Render plain text, HTML, templates, or React UI components as content inside Syncfusion React Splitter panes using the content property.
 control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pane content in React Splitter component
+# Pane Content in React Splitter
 
 This guide explains how to use plain text, HTML markup, templates, or React UI components as content within the panes of the Syncfusion React Splitter.
 

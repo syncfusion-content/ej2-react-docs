@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize progressbar in React Uploader component | Syncfusion
-description: Learn here all about Customize progressbar in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to customize the progress bar in React File Upload | Syncfusion
+description: Customize the React File Upload's progress bar size, color, and background by overriding its default CSS classes.
 control: Customize progressbar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize progress bar in React Uploader component
+# How to customize the progress bar in React File Upload
 
 Customize the progress bar appearance—including size, color, and background—by overriding the default Uploader component styles. The following example demonstrates how to apply custom CSS to match your application theme.
 

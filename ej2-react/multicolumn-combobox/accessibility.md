@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React MultiColumn ComboBox component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React MultiColumn ComboBox component of Syncfusion Essential JS 2 and more.
+title: "Accessibility in React MultiColumn ComboBox | Syncfusion"
+description: Build inclusive React apps with the MultiColumn ComboBox, which meets WCAG 2.2, Section 508, and ADA standards, and includes ARIA attributes and full keyboard support.
 platform: ej2-react
 control: MultiColumn ComboBox 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React MultiColumn ComboBox component
+# Accessibility in React MultiColumn ComboBox
 
 The MultiColumn ComboBox component adheres to established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 

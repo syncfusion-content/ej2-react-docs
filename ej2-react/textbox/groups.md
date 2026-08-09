@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Groups in React TextBox component | Syncfusion
-description: Learn here all about Groups in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: Groups in React TextBox | Syncfusion
+description: Enhance the React TextBox with floating labels and prefix or suffix icons using the floatLabelType and cssClass for clear form inputs.
 control: Groups
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Groups in React TextBox component
+# Groups in React TextBox
 
 Create an enhanced TextBox with floating labels and icons to improve the visual clarity and user experience of your form inputs. The following sections explain the steps to implement these features.
 

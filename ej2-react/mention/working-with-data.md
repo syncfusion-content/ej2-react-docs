@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Working with data in React Mention component | Syncfusion
-description: Learn here all about Working with data in Syncfusion React Mention component of Syncfusion Essential JS 2 and more.
+title: Working with Data in React Mention | Syncfusion
+description: Bind local arrays of simple, JSON, or complex data and remote OData V4 / Web API sources to the React Mention.
 control: Working with data 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Working with data in React Mention component
+# Working with Data in React Mention
 
 The Mention loads data from local or remote sources using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/mention/#datasource) property. It supports both `array` and `DataManager` data types.
 

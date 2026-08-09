@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in React Multi select component | Syncfusion
-description: Learn here all about Filtering in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Filtering in React MultiSelect Dropdown | Syncfusion
+description: Filter React MultiSelect Dropdown items as you type with allowFiltering, custom filter types like contains, startsWith, and endsWith, case-sensitive matching, diacritics filtering, and debounce delay.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in React Multi select component
+# Filtering in React MultiSelect Dropdown
 
 The MultiSelect includes built-in filtering support when `allowFiltering` is enabled. Filtering begins immediately as you type characters in the input field.
 

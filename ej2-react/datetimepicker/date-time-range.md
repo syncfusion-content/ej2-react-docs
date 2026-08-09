@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date time range in React Datetimepicker component | Syncfusion
-description: Learn here all about Date time range in Syncfusion React Datetimepicker component of Syncfusion Essential JS 2 and more.
+title: DateTime Range in React DateTime Picker | Syncfusion
+description: Restrict the React DateTime Picker to a date and time window using the min and max properties with strictMode support.
 control: Date time range 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date time range in React Datetimepicker component
+# DateTime Range in React DateTime Picker
 
 ## DateTime Restriction
 

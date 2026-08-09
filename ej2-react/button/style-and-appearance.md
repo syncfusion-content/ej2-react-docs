@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Button component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Button component of Syncfusion Essential JS 2 and more.
+title: Style and appearance in React Button | Syncfusion
+description: Customize React Button appearance using CSS class overrides. Learn the available classes for base, hover, focus, active, and variant styling.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Button component
+# Style and appearance in React Button
 
 Customize the Button appearance by overriding its default CSS styles. The following table lists the CSS classes available for Button styling:
 

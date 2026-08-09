@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Multi select component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React MultiSelect Dropdown | Syncfusion
+description: Build accessible React MultiSelect Dropdown UIs with WAI-ARIA combobox roles, full keyboard navigation (arrow, page, alt, esc), and WCAG 2.2, Section 508, and ADA compliance.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Multi select component
+# Accessibility in React MultiSelect Dropdown
 
 The MultiSelect component is built according to `WAI-ARIA` specifications, incorporating WAI-ARIA roles, states, properties, and comprehensive keyboard support. The component provides complete keyboard navigation and ARIA accessibility, enabling users of assistive technologies and keyboard-only users to interact effectively.
 

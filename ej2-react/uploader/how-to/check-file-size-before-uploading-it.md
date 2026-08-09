@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Check file size before uploading it in React Uploader component | Syncfusion
-description: Learn here all about Check file size before uploading it in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to check file size before upload in React File Upload | Syncfusion
+description: Check each file's size before upload in the React File Upload using the uploading event and format bytes with the bytesToSize method.
 control: Check file size before uploading it 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check file size before uploading it in React Uploader component
+# How to check file size before upload in React File Upload
 
 Validate file sizes before upload by using the [uploading](https://ej2.syncfusion.com/react/documentation/api/uploader/#uploading) event. The file object contains the file size in bytes. Convert this size to user-friendly formats such as `KB` or `MB` using the [bytesToSize](https://ej2.syncfusion.com/react/documentation/api/uploader/#bytestosize) method.
 

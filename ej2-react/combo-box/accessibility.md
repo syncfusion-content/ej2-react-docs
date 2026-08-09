@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Combo box component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React ComboBox | Syncfusion
+description: Build accessible apps with the Syncfusion React ComboBox, which follows WAI-ARIA patterns, full keyboard navigation, and meets WCAG 2.2 and ADA standards.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Combo box component
+# Accessibility in React ComboBox
 
 The ComboBox component is built according to `WAI-ARIA` specifications, incorporating WAI-ARIA roles, states, properties, and comprehensive keyboard support. The component provides complete keyboard navigation and ARIA accessibility, enabling users of assistive technologies and keyboard-only users to interact effectively.
 

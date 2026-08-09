@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styling Modes in React OTP Input component | Syncfusion
-description:  Checkout and learn about Styling Modes with React OTP Input component of Syncfusion Essential JS 2 and more.
+title: Styling Modes in React OTP Input | Syncfusion
+description: Switch the React OTP Input visual variant between outlined, underlined, and filled styling modes using the stylingMode property.
 platform: ej2-react
 control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styling Modes in React OTP Input component
+# Styling Modes in React OTP Input
 
 Styling modes specify the visual variants for the OTP input fields. These modes allow you to customize the appearance of the OTP Input.
 

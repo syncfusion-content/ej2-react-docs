@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Color picker component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Color picker component of Syncfusion Essential JS 2 and more.
+title: EJ1 API Migration in React Color Picker | Syncfusion
+description: Migrate Color Picker code from Essential JS 1 to Essential JS 2 by mapping renamed properties like value, inline, cssClass, and disabled.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Color picker component
+# EJ1 API Migration in React Color Picker
 
 This article describes the API migration process of ColorPicker component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

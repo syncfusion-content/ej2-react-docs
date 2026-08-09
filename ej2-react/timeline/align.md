@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Alignment in React Timeline component | Syncfusion
-description:  Checkout and learn about Alignment with Syncfusion React Timeline component of Syncfusion Essential JS 2 and more.
+title: Alignment in React Timeline | Syncfusion
+description: Position Syncfusion React Timeline items using Before, After, Alternate, or AlternateReverse alignment for content and oppositeContent.
 control: Timeline
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Alignment in React Timeline component
+# Alignment in React Timeline
 
 The Timeline component allows you to control the positioning of content using the [align](https://ej2.syncfusion.com/react/documentation/api/timeline#align) property, which accepts values `Before`, `After`, `Alternate`, or `AlternateReverse`. When both content and oppositeContent are configured for an item `ItemDirective`, the oppositeContent will be displayed parallel to the main content, creating a balanced layout on opposite sides of the timeline.
 

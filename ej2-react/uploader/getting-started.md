@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Uploader component | Syncfusion
-description:  Checkout and learn about Getting started with React Uploader component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React File Upload | Syncfusion
+description: Learn how to get started with the Syncfusion React File Upload control. Explore setup, features, examples, and customization options.
 control: Uploader 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Uploader component
+# Getting Started with React File Upload
 
 This section explains the steps required to create a simple React Uploader component and demonstrate its basic usage in a React environment.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icon support in React AutoComplete component | Syncfusion
-description: Learn here all about Icon support in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
+title: How to show list items with icons in React AutoComplete | Syncfusion
+description: Add icons to Syncfusion React AutoComplete list items by mapping the iconCss field, which renders a styled span inside each suggestion.
 control: Icon support 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icon support in React AutoComplete component
+# How to show list items with icons in React AutoComplete
 
 You can render **icons** to the list items by mapping the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) field. This `iconCss` field creates a span in the list item with the mapped class name to allow styling according to your requirements.
 

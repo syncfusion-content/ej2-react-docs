@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about Data binding in React MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: "Data Binding in React MultiColumn ComboBox | Syncfusion"
+description: Bind the React MultiColumn ComboBox to local arrays or remote services like OData, Web API, and JSONP using the dataSource property and DataManager adaptors.
 platform: ej2-react
 control: MultiColumn Combobox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React MultiColumn ComboBox component
+# Data Binding in React MultiColumn ComboBox
 
 The MultiColumn ComboBox loads data from local or remote sources using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#datasource) property. It supports both `object arrays` and `DataManager` data types.
 

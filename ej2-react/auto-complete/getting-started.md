@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React AutoComplete component | Syncfusion
-description: Checkout and learn about Getting started with React AutoComplete component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React AutoComplete | Syncfusion
+description: Learn how to set up the Syncfusion React AutoComplete in a Vite project, install packages, and render your first suggestion list with sample components.
 control: AutoComplete
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React AutoComplete component
+# Getting Started with React AutoComplete
 
 This section explains the steps required to create a simple React AutoComplete component and demonstrate its basic usage in a React environment.
 
@@ -143,7 +143,7 @@ The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs4" %}
 
-> Refer to the [React AutoComplete](https://www.syncfusion.com/react-components/react-autocomplete) feature tour page for its groundbreaking feature representations. You can also explore our [React AutoComplete component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/auto-complete/default) that shows how to render the AutoComplete in React.
+> You can also explore our [React AutoComplete component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/auto-complete/default) that shows how to render the AutoComplete in React.
 
 ## See Also
 

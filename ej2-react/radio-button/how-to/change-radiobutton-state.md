@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change radiobutton state in React Radio button component | Syncfusion
-description: Learn here all about Change radiobutton state in Syncfusion React Radio button component of Syncfusion Essential JS 2 and more.
+title: How to change state in React Radio Button | Syncfusion
+description: Toggle the React Radio Button checked state programmatically via the checked property to display or hide the inner selection indicator.
 control: Change radiobutton state 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change radiobutton state in React Radio button component
+# How to change state in React Radio Button
 
 The RadioButton component has two visual states that indicate its selection status:
 * **Checked** - An inner circle appears inside the RadioButton, indicating it is selected

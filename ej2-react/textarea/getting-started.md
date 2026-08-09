@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started with React TextArea | Syncfusion
-description: Learn how to get started with the React TextArea component in Syncfusion Essential JS 2, including installation with Vite, configuration, and required styles.
+description: Set up a Vite-based React project, install the Syncfusion TextArea, and render a basic multiline input with rows, cols, and value.
 control: TextArea  
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React TextArea component
+# Getting Started with React TextArea
 
 This section explains the steps required to create a simple React TextArea component and demonstrate its basic usage in a React environment.
 

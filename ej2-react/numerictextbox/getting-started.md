@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Numerictextbox component | Syncfusion
-description:  Checkout and learn about Getting started with React Numerictextbox component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React NumericTextBox | Syncfusion
+description: Set up a Vite-based React project, install the Syncfusion NumericTextBox, and render a basic numeric input with format and validation.
 control: Numerictextbox
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React NumericTextBox component
+# Getting Started with React NumericTextBox
 
 This section explains the steps required to create a simple React NumericTextBox component and demonstrate its basic usage in a React environment.
 

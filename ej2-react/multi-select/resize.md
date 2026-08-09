@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resizing in React MultiSelect component | Syncfusion
-description: Learn here all about Popup Resizing in Syncfusion React MultiSelect component of Syncfusion Essential JS 2 and more.
+title: Resizing in React MultiSelect Dropdown | Syncfusion
+description: Enable dynamic popup resizing in the React MultiSelect Dropdown with the allowResize property, with the resized dimensions persisting across browser sessions.
 control: Resizing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resizing in React MultiSelect component
+# Resizing in React MultiSelect Dropdown
 
 Enable popup resizing in the MultiSelect component using the [AllowResize](https://ej2.syncfusion.com/react/documentation/api/multi-select/#allowresize) property. When enabled, users can dynamically adjust the popup size to improve visibility. Resized dimensions persist across sessions, providing a consistent user experience.
 

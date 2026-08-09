@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in React Uploader component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: Localization in React File Upload | Syncfusion
+description: Localize the React File Upload's static text such as Browse and Clear buttons, status messages, and drop area text using the L10n library.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Uploader component
+# Localization in React File Upload
 
 The localization library enables customization of the Uploader's static text content, including action button labels, file status messages, icon titles, tooltips, and drop area text. Define locale-specific text by creating a locale object and registering it with the L10n (localization) service.
 

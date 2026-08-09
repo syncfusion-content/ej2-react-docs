@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Maskedtextbox component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React MaskedTextBox | Syncfusion
+description: Review the React MaskedTextBox compliance with WCAG 2.2, Section 508, WAI-ARIA, and screen reader accessibility standards.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Maskedtextbox component
+# Accessibility in React MaskedTextBox
 
 The MaskedTextBox component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and common WAI-ARIA roles used to evaluate accessibility.
 

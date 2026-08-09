@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Labels with React Rating component | Syncfusion
-description:  Learn here all about Labels in Syncfusion React Rating component of Syncfusion Essential JS 2 and more.
+title: Labels in React Rating | Syncfusion
+description: Display the current numeric value next to the React Rating by enabling the showLabel property for a labeled star rating.
 control: Labels
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Labels in React Rating Component
+# Labels in React Rating
 
 Display a label showing the current rating value by setting the [`showLabel`](https://ej2.syncfusion.com/react/documentation/api/rating/#showlabel) property to `true`.
 

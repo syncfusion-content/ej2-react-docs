@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with React MultiColumn ComboBox component | Syncfusion
+title: "Getting Started with React MultiColumn ComboBox | Syncfusion"
 description:  Checkout and learn about Getting started with React MultiColumn ComboBox component of Syncfusion Essential JS 2 and more details.
 control: MultiColumn ComboBox 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React MultiColumn ComboBox component
+# Getting Started with React MultiColumn ComboBox
 
 This section explains the steps required to create a simple React MultiColumn ComboBox component and demonstrate its basic usage in a React environment.
 

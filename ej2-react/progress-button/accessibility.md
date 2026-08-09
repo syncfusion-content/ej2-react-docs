@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React ProgressButton component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React ProgressButton component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Progress Button | Syncfusion
+description: Learn how the React Progress Button meets WCAG 2.2, Section 508, and ADA standards. Includes WAI-ARIA roles, keyboard interaction, and validation tools.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React ProgressButton component
+# Accessibility in React Progress Button
 
 The ProgressButton component adheres to accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is usable by all users, including those using assistive technologies.
 

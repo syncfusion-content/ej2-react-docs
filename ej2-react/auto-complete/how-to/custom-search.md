@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom search in React AutoComplete component | Syncfusion
-description: Learn here all about Custom search in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
+title: How to custom search in React AutoComplete | Syncfusion
+description: Highlight matched characters in the Syncfusion React AutoComplete suggestion list using the highlight property and a custom e-highlight CSS class.
 control: Custom search 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom search in React AutoComplete component
+# How to custom search in React AutoComplete
 
 The AutoComplete has built-in support to highlight the searched characters on suggested list items when the [`highlight`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#highlight) property is enabled.
 

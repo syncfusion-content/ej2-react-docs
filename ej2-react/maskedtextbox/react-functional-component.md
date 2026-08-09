@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React functional component in React Maskedtextbox component | Syncfusion
-description: Learn here all about React functional component in Syncfusion React Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: Functional Component in React MaskedTextBox | Syncfusion
+description: Render the React MaskedTextBox in a functional component using React Hooks like useState, useEffect, useRef, and useReducer.
 control: React functional component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React functional component in React Maskedtextbox component
+# Functional Component in React MaskedTextBox
 
 This section explains how to render the MaskedTextBox component in a functional component using React Hooks. The following table lists the basic Hook methods:
 

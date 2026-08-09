@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Skip a month in calendar in React Calendar component | Syncfusion
-description: Learn here all about Skip a month in calendar in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: How to skip months in React Calendar | Syncfusion
+description: Skip a month in the React Calendar when users click the previous or next icon using the navigated event and NavigateTo method.
 control: Skip a month in calendar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Skip a month in calendar in React Calendar component
+# How to skip months in React Calendar
 
 The following example demonstrates how to skip a month in the Calendar when clicking the previous or next icon. This sample uses the [`navigated`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigated) event and the [`NavigateTo`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigateto) method.
 

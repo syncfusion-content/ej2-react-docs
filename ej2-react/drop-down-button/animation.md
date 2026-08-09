@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in React Drop down button component | Syncfusion
-description: Learn here all about Animation in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: Animation in React DropDownButton | Syncfusion
+description: Animate the React DropDownButton popup with the animationSettings property. Choose None, SlideDown, ZoomIn, or FadeIn for open and close.
 control: Animation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in React Drop down button component
+# Animation in React DropDownButton
 
 Customize the DropDownButton popup animation using the [`animationSettings`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#animationsettings) property. Choose from various animation effects to provide visual feedback when the popup opens and closes.
 

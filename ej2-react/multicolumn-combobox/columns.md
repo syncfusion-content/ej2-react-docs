@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Columns in React MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about columns with React MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: "Columns in React MultiColumn ComboBox | Syncfusion"
+description: Customize the React MultiColumn ComboBox popup with columns configured through field, header, width, text alignment, cell templates, and checkbox display options.
 platform: ej2-react
 control: MultiColumn Combobox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Columns in React MultiColumn ComboBox component
+# Columns in React MultiColumn ComboBox
 
 The [columns](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#columns) property specifies which data fields are displayed in the MultiColumn ComboBox.
 

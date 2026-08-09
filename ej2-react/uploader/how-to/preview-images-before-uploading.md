@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Preview images before uploading in React Uploader component | Syncfusion
-description: Learn here all about Preview images before uploading in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to preview images before upload in React File Upload | Syncfusion
+description: Show image previews before or after upload in the React File Upload by reading file data with FileReader in the selected or success events.
 control: Preview images before uploading 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Preview images before uploading in React Uploader component
+# How to preview images before upload in React File Upload
 
 Display image previews before upload to allow users to verify their selection, or after successful server upload for confirmation. Create previews by reading file data using the selected event (client-side preview) or the success event (post-upload preview). This improves user experience by providing visual feedback during the upload workflow.
 

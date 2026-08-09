@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiline in React TextBox component | Syncfusion
-description: Learn here all about Multiline in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: Multiline in React TextBox | Syncfusion
+description: Convert the React TextBox into a multi-line input for capturing addresses, descriptions, comments, or other long-form user content.
 control: Multiline 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiline in React TextBox component
+# Multiline in React TextBox
 
 Transform the TextBox into a multiline input control to capture multi-line text content such as addresses, descriptions, comments, or longer-form user feedback.
 

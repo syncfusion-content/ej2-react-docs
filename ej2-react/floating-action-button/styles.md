@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles in React Floating action button component | Syncfusion
-description: Learn here all about Styles in Syncfusion React Floating action button component of Syncfusion Essential JS 2 and more.
+title: Styles in React Floating Action Button | Syncfusion
+description: Apply predefined React Floating Action Button styles via cssClass. Use primary, outline, info, success, warning, or danger for semantic actions.
 control: Styles 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in React Floating action button component
+# Styles in React Floating Action Button
 
 This section explains the different styles of Floating Action Button.
 

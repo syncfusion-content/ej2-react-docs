@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Virtualization in React MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about Virtualization in React MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: "Virtualization in React MultiColumn ComboBox | Syncfusion"
+description: Render large React MultiColumn ComboBox datasets efficiently with virtualization, which reuses a fixed pool of DOM elements while you scroll the popup.
 platform: ej2-react
 control: MultiColumn Combobox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtualization in React MultiColumn ComboBox component
+# Virtualization in React MultiColumn ComboBox
 
 MultiColumn ComboBox virtualization is a technique used to efficiently render extensive lists of items while minimizing the impact on performance. This method is particularly advantageous when dealing with large datasets because it ensures that only a fixed number of DOM (Document Object Model) elements are created. When scrolling through the list, existing DOM elements are reused to display relevant data instead of generating new elements for each item. This recycling process is managed internally.
 

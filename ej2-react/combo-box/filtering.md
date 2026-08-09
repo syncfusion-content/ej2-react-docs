@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Filtering in React Combo box component | Syncfusion
-description: Learn here all about Filtering in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: Filtering in React ComboBox | Syncfusion
+description: Filter Syncfusion React ComboBox suggestions as you type using allowFiltering, with the filtering event and updateData method for custom data source filtering.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in React Combo box component
+# Filtering in React ComboBox
 
 The ComboBox includes built-in filtering support when `allowFiltering` is enabled. Filtering begins immediately as you type characters in the input field.
 
-To display filtered items in the popup, handle the [filtering](https://ej2.syncfusion.com/react/documentation/api/combo-box/#filtering--emittypefilteringeventargs) event to filter your data source and return results using the [updateData](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/filteringEventArgs/#updatedata) method.
+To display filtered items in the popup, handle the [filtering](https://ej2.syncfusion.com/react/documentation/api/combo-box#filtering--emittypefilteringeventargs) event to filter your data source and return results using the [updateData](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/filteringEventArgs#updatedata) method.
 
 The following example shows how to filter the data source and display results through the `updateData` method in the `filtering` event.
 
@@ -140,7 +140,7 @@ The following example shows how to perform case-sensitive filter.
 
 ## Diacritics Filtering
 
-The ComboBox supports diacritics filtering, which ignores [diacritics](https://en.wikipedia.org/wiki/Diacritic) to simplify filtering international character lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/combo-box/#ignoreaccent) property is enabled.
+The ComboBox supports diacritics filtering, which ignores [diacritics](https://en.wikipedia.org/wiki/Diacritic) to simplify filtering international character lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/combo-box#ignoreaccent) property is enabled.
 
 In the following example, data with diacritics is bound as the dataSource for the ComboBox.
 
@@ -172,7 +172,7 @@ In the following example, data with diacritics is bound as the dataSource for th
 
 ## Debounce delay
 
-You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/combo-box/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/combo-box#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 `[Class-component]`
 

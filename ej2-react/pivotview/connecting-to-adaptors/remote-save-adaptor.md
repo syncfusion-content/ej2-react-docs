@@ -1,14 +1,13 @@
 ---
 layout: post
-title: "Remote save adaptor in React Pivot Table | Syncfusion"
-component: "Pivot Table"
+title: "Remote Save Adaptor in React Pivot Table | Syncfusion"
 platform: ej2-react
 description: "Learn how the React Pivot Table combines client-side data loading with server-side persistence through the RemoteSaveAdaptor for hybrid data binding."
 control: Pivot Table
 documentation: ug
 ---
 
-# Remote save adaptor in React Pivot Table
+# Remote Save Adaptor in React Pivot Table
 
 The [RemoteSaveAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor) in the React Pivot Table provides a hybrid approach to data management that combines the best of both client-side and server-side processing. It fetches the complete dataset from the server. CRUD operations (Create, Update, Delete) communicate with the server to persist data changes. It reduces server load and network latency while keeping data persistence secure.
 
@@ -24,11 +23,12 @@ Ensure the following software and packages are installed before proceeding:
 | ------------------ | -------- | --------- |
 | Node.js | 18.x or later | Runtime for the React development server (Vite) |
 | React | 18.x or later | Build and run the React Pivot Table client (TypeScript/TSX) |
+| TypeScript | 5.x or later | Type-checks the `.tsx` client source used in this sample |
+| Vite | 5.x or later | Dev server and build tooling for the React client |
 | .NET SDK | 8.0 or later | Build and run ASP.NET Core Web API |
 | Visual Studio or Visual Studio Code | Latest | Configure the backend API service |
 | @syncfusion/ej2-react-pivotview | 34.1.29 or later | React Pivot Table component |
 | Microsoft.AspNetCore.Mvc.NewtonsoftJson | 8.0.x or later | Preserves original property casing during JSON serialization |
-| typescript / vite | Latest | TypeScript compilation and the Vite dev/build tooling for the client |
 
 ## Setting up the ASP.NET Core Backend API
 
@@ -114,6 +114,8 @@ The model class represents the structure of the data displayed in the Pivot Tabl
 {% tabs %}
 {% highlight cs tabtitle="OrdersDetails.cs" %}
 
+using System.ComponentModel.DataAnnotations; // Required for the [Key] attribute.
+
 namespace RemoteSaveAdaptor.Models
 {
   public class OrdersDetails
@@ -155,18 +157,18 @@ namespace RemoteSaveAdaptor.Models
       }
       return order;
     }
-    [Key]
+    [Key] // Marks OrderID as the primary key for CRUD operations.
     public int? OrderID { get; set; }
-    public string CustomerID { get; set; }
+    public string? CustomerID { get; set; }
     public int? EmployeeID { get; set; }
     public double? Freight { get; set; }
-    public string ShipCity { get; set; }
-    public bool Verified { get; set; }
-    public DateTime OrderDate { get; set; }
-    public string ShipName { get; set; }
-    public string ShipCountry { get; set; }
-    public DateTime ShippedDate { get; set; }
-    public string ShipAddress { get; set; }
+    public string? ShipCity { get; set; }
+    public bool? Verified { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public string? ShipName { get; set; }
+    public string? ShipCountry { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public string? ShipAddress { get; set; }
   }
 }
 
@@ -247,13 +249,9 @@ In ASP.NET Core, JSON results are returned in camelCase format by default. To ma
 ```cs
 using Newtonsoft.Json.Serialization;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-...
-...
+// Add to existing Program.cs (after AddControllers).
 // Configure JSON serialization (preserves property casing).
-builder.Services.AddMvc().AddNewtonsoftJson(options =>
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
   options.SerializerSettings.ContractResolver = new DefaultContractResolver();
 });
@@ -268,13 +266,7 @@ app.Run();
 CORS (Cross-Origin Resource Sharing) is a browser security feature that blocks web pages from making requests to a different domain or port. When the React frontend (for example, `https://localhost:3000`) and the ASP.NET Core backend (for example, `https://localhost:5001`) run on different ports, browsers block cross-origin requests by default. Configuring CORS in the backend tells the browser that the API is allowed to accept requests from the frontend origin, enabling the two services to communicate.
 
 ```cs
-using Newtonsoft.Json.Serialization;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-...
-...
+// Add to existing Program.cs (after JSON serialization).
 // Add CORS policy to allow frontend access.
 // WARNING: AllowAnyOrigin() is for development only. In production, restrict to your frontend domain.
 builder.Services.AddCors(options =>
@@ -286,15 +278,12 @@ builder.Services.AddCors(options =>
           .AllowAnyHeader();      // Allow any request headers.
   });
 });
-...
-...
 
-// Enable CORS middleware (must be before UseRouting).
+// ...
+// In the pipeline section (after builder.Build()):
+// Enable CORS middleware (must be before MapControllers).
 app.UseCors();
-
-// Map controller endpoints
 app.MapControllers();
-
 app.Run();
 ```
 
@@ -317,6 +306,42 @@ var app = builder.Build();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
+```
+
+#### Complete Program.cs
+
+The following is the complete `Program.cs` file with all the configuration applied:
+
+```cs
+using Newtonsoft.Json.Serialization;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Configure JSON serialization (preserves property casing).
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+{
+    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+});
+
+// Configure CORS (development only; restrict to specific origins in production).
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
+var app = builder.Build();
+
+app.UseCors();           // Enable CORS before MapControllers.
+app.UseDefaultFiles();   // Optional: serves index.html from wwwroot.
+app.UseStaticFiles();    // Optional: serves static assets from wwwroot.
+app.MapControllers();
+
+app.Run();
 ```
 
 ### Step 6: Run the backend API
@@ -349,7 +374,18 @@ With the backend API configured and running, the next step is to connect the Rea
 
 ### Step 1: Set up a React project with Pivot Table
 
-Set up a React project with the Pivot Table by following the [Getting Started](../getting-started) documentation. This sample uses a **TypeScript + Vite** React project, so the component is authored in **TSX** (`src/App.tsx`). Ensure that all necessary Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 Pivot Table dependencies are installed in the React project.
+Create a new Vite + React + TypeScript project and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 packages:
+
+```bash
+npm create vite@latest remote-save-adaptor-client -- --template react-ts
+cd remote-save-adaptor-client
+npm install
+npm install @syncfusion/ej2-react-pivotview @syncfusion/ej2-tailwind3-theme
+```
+
+> **Note:** `npm create vite@latest` may prompt for confirmation in older npm versions; pass `--yes` to run non-interactively, or answer the prompts manually.
+
+This sample uses a **TypeScript + Vite** React project, so the component is authored in **TSX** (`src/App.tsx`). For a complete walkthrough of the project scaffolding, see the [Getting Started](../getting-started) documentation.
 
 ### Step 2: Configure the Pivot Table with RemoteSaveAdaptor
 
@@ -366,8 +402,13 @@ import type { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/mode
 import './App.css';
 
 function App(): React.ReactElement {
-    const serviceUrl: string = "http://localhost:5211/api/Orders"; // Replace with actual backend URL.
+    // Replace <port> with the port number shown by `dotnet run` output
+    // (typically 5001 or 7001).
+    const serviceUrl: string = "https://localhost:<port>/api/Orders";
 
+    // Hold the DataManager in state. We start with `null` and populate it after
+    // the initial fetch resolves so the Pivot Table re-renders only when the
+    // data source is actually ready.
     const [data, setData] = useState<DataManager | null>(null);
 
     useEffect(() => {
@@ -386,10 +427,16 @@ function App(): React.ReactElement {
                 }));
             })
             .catch((error) => console.error("Error fetching data:", error));
-    }, []);
+    }, [serviceUrl]);
+
+    // Avoid rendering the Pivot Table until the DataManager is initialized,
+    // otherwise the component will mount with a `null` data source.
+    if (!data) {
+        return <div className='control-section' style={{ margin: 100 }}>Loading...</div>;
+    }
 
     const dataSourceSettings: DataSourceSettingsModel = {
-        dataSource: data as DataManager,
+        dataSource: data,
         expandAll: false,
         rows: [{ name: 'CustomerID' }],
         columns: [{ name: 'OrderID' }],
@@ -522,19 +569,22 @@ public class CRUDModel<T> where T : class
 
     /// <summary>
     /// Collection of records that have been added in batch operations.
-    /// Used when multiple records are inserted at once.
+    /// Only populated when the Pivot Table is configured with batch editing mode
+    /// (editSettings.mode === 'Batch'). Not sent in normal CRUD.
     /// </summary>
     public List<T>? added { get; set; }
 
     /// <summary>
     /// Collection of records that have been modified in batch operations.
-    /// Used when multiple records are updated at once.
+    /// Only populated when the Pivot Table is configured with batch editing mode
+    /// (editSettings.mode === 'Batch'). Not sent in normal CRUD.
     /// </summary>
     public List<T>? changed { get; set; }
 
     /// <summary>
     /// Collection of records that have been removed in batch operations.
-    /// Used when multiple records are deleted at once.
+    /// Only populated when the Pivot Table is configured with batch editing mode
+    /// (editSettings.mode === 'Batch'). Not sent in normal CRUD.
     /// </summary>
     public List<T>? deleted { get; set; }
 
@@ -553,9 +603,7 @@ public class CRUDModel<T> where T : class
 - **`keyColumn`**: The name of the primary key field configured in the Pivot Table (for example, `OrderID`).
 - **`key`**: The actual primary key value of the affected record, used by the server to find the row for update or delete operations.
 - **`value`**: The full record object for insert and update operations. It contains every field that the Pivot Table binds to the data source.
-- **`added`**: Contains the list of newly created records sent during batch insert operations.
-- **`changed`**: Contains the list of records modified by the user during batch update operations.
-- **`deleted`**: Contains the list of records marked for removal during batch delete operations.
+- **`added` / `changed` / `deleted`**: Populated only when the Pivot Table is in batch editing mode. In normal CRUD these remain `null`.
 - **`@params`**: A dictionary for any extra information the client wants to send to the server (optional).
 
 #### Insert operation
@@ -569,18 +617,19 @@ To add a new record, double-click a pivot cell to open the editing pop-up, then 
         /// <summary>
         /// Inserts a new data item into the data collection.
         /// </summary>
-        /// <param name="addRecord">The order to be inserted.</param>
-        /// <returns>It returns the newly inserted record detail.</returns>
+        /// <param name="newRecord">The order to be inserted.</param>
+        /// <returns>200 OK on success, 400 on invalid payload.</returns>
         [HttpPost]
         [Route("api/Orders/Insert")]
-        public ActionResult Insert([FromBody] CRUDModel<OrdersDetails> newRecord)
+        public IActionResult Insert([FromBody] CRUDModel<OrdersDetails> newRecord)
         {
-            if (newRecord.value != null)
+            if (newRecord?.value == null)
             {
-                OrdersDetails.GetAllRecords().Insert(0, newRecord.value);
+                return BadRequest("Invalid payload: 'value' is required.");
             }
 
-            return Json(newRecord.value);
+            OrdersDetails.GetAllRecords().Insert(0, newRecord.value);
+            return Ok(newRecord.value); // 200 OK with the inserted record.
         }
 
 ```
@@ -604,27 +653,40 @@ To modify an existing record, double-click a pivot cell to open the editing pop-
         /// <summary>
         /// Updates an existing order.
         /// </summary>
-        /// <param name="updateRecord">The updated order details.</param>
-        /// <returns>It returns the updated order details.</returns>
+        /// <param name="updatedRecord">The updated order details.</param>
+        /// <returns>200 OK on success, 404 when no record matches, 400 on invalid payload.</returns>
         [HttpPost]
         [Route("api/Orders/Update")]
-        public object Update([FromBody] CRUDModel<OrdersDetails> updatedRecord)
+        public IActionResult Update([FromBody] CRUDModel<OrdersDetails> updatedRecord)
         {
-            var updatedOrder = updatedRecord.value;
-            if (updatedOrder != null)
+            var updatedOrder = updatedRecord?.value;
+            if (updatedOrder == null)
             {
-                var data = OrdersDetails.GetAllRecords().FirstOrDefault(or => or.OrderID == updatedOrder.OrderID);
-                if (data != null)
-                {
-                    // Update the existing record
-                    data.OrderID = updatedOrder.OrderID;
-                    data.CustomerID = updatedOrder.CustomerID;
-                    data.Freight = updatedOrder.Freight;
-                    data.EmployeeID = updatedOrder.EmployeeID;
-                    // Update other properties similarly.
-                }
+                return BadRequest("Invalid payload: 'value' is required.");
             }
-            return updatedRecord;
+
+            var data = OrdersDetails.GetAllRecords().FirstOrDefault(or => or.OrderID == updatedOrder.OrderID);
+            if (data == null)
+            {
+                return NotFound(); // 404 — no record matched the supplied key.
+            }
+
+            // Update all properties (including the primary key for parity with the
+            // Pivot Table's edit model; remove this assignment if the primary key
+            // should remain immutable in your application).
+            data.OrderID = updatedOrder.OrderID;
+            data.CustomerID = updatedOrder.CustomerID;
+            data.Freight = updatedOrder.Freight;
+            data.EmployeeID = updatedOrder.EmployeeID;
+            data.ShipCity = updatedOrder.ShipCity;
+            data.ShipCountry = updatedOrder.ShipCountry;
+            data.ShipName = updatedOrder.ShipName;
+            data.ShipAddress = updatedOrder.ShipAddress;
+            data.OrderDate = updatedOrder.OrderDate;
+            data.ShippedDate = updatedOrder.ShippedDate;
+            data.Verified = updatedOrder.Verified;
+
+            return Ok(data); // 200 OK
         }
 
 ```
@@ -647,19 +709,26 @@ To remove a record, double-click a pivot cell to open the editing pop-up, select
         /// Deletes an order.
         /// </summary>
         /// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
-        /// <returns>It returns the deleted record detail</returns>
+        /// <returns>200 OK on success, 404 when no record matches, 400 on invalid payload.</returns>
         [HttpPost]
         [Route("api/Orders/Remove")]
-        public object Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
+        public IActionResult Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
         {
+            if (deletedRecord?.key == null)
+            {
+                return BadRequest("Invalid payload: 'key' is required.");
+            }
+
             int orderId = int.Parse(deletedRecord.key.ToString()); // get key value from the deletedRecord
             var data = OrdersDetails.GetAllRecords().FirstOrDefault(orderData => orderData.OrderID == orderId);
-            if (data != null)
+            if (data == null)
             {
-                // Remove the record from the data collection
-                OrdersDetails.GetAllRecords().Remove(data);
+                return NotFound(); // 404 — no record matched the supplied key.
             }
-            return deletedRecord;
+
+            // Remove the record from the data collection
+            OrdersDetails.GetAllRecords().Remove(data);
+            return Ok(data); // 200 OK
         }
 ```
 
@@ -693,7 +762,7 @@ Update the React **App.tsx** file to configure the [DataManager](https://ej2.syn
 
 #### Configure DataManager with CRUD URLs
 
-The [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) communicates with the backend API and sends HTTP POST requests to the specified endpoints when CRUD operations are performed:
+The [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) communicates with the backend API and sends HTTP POST requests to the specified endpoints when CRUD operations are performed. The full consolidated `App.tsx` is shown at the end of this section. The relevant CRUD wiring is:
 
 ```typescript
 import React, { useState, useEffect } from 'react';
@@ -702,7 +771,9 @@ import { DataManager, RemoteSaveAdaptor } from '@syncfusion/ej2-data';
 import './App.css';
 
 function App(): React.ReactElement {
-    const serviceUrl: string = "http://localhost:5211/api/Orders"; // Replace with actual backend URL.
+    // Replace <port> with the port number shown by `dotnet run` output
+    // (typically 5001 or 7001).
+    const serviceUrl: string = "https://localhost:<port>/api/Orders";
     const [data, setData] = useState<DataManager | null>(null);
     useEffect(() => {
         fetch(serviceUrl)
@@ -717,8 +788,7 @@ function App(): React.ReactElement {
                 }));
             })
             .catch((error) => console.error("Error fetching data:", error));
-    },
-        []);
+    }, [serviceUrl]);
 }
 ```
 
@@ -869,7 +939,7 @@ For a complete working implementation, refer to the [GitHub repository](https://
 
 ## See Also
 
-- [**PivotTable Data Binding**](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding)
+- [**Pivot Table Data Binding**](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding)
 - [**DataManager**](https://ej2.syncfusion.com/react/documentation/data/getting-started)
-- [**RemoteSaveAdaptor**](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/remote-save-adaptor)
-- [**PivotTable Editing**](https://ej2.syncfusion.com/react/documentation/pivotview/editing)
+- [**RemoteSaveAdaptor**](https://ej2.syncfusion.com/react/documentation/data/adaptors/remote-save-adaptor)
+- [**Pivot Table Editing**](https://ej2.syncfusion.com/react/documentation/pivotview/editing)

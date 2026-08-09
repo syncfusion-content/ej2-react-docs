@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Card component | Syncfusion
-description:  Checkout and learn about Getting Started with React Card component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Card | Syncfusion
+description: Set up the Syncfusion React Card in a Vite project and render a basic card with header, title, and content.
 control: Card
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Card component
+# Getting Started with React Card
 
 This section explains the steps required to create a simple React Card component and demonstrate its basic usage in a React environment.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label and size in React Radio button component | Syncfusion
-description: Learn here all about Label and size in Syncfusion React Radio button component of Syncfusion Essential JS 2 and more.
+title: Label and size in React Radio Button | Syncfusion
+description: Set the React Radio Button caption via the label property, control label position with labelPosition, and configure the small or standard size.
 control: Label and size 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Label and size in React Radio button component
+# Label and size in React Radio Button
 
 This section explains the different sizes and label configurations available in the RadioButton component.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in React MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about Grouping in React MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: "Grouping in React MultiColumn ComboBox | Syncfusion"
+description: Group React MultiColumn ComboBox items by category using the groupBy field, with fixed group headers that update as you scroll the popup list.
 platform: ej2-react
 control: MultiColumn Combobox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in React MultiColumn ComboBox component
+# Grouping in React MultiColumn ComboBox
 
 The MultiColumn ComboBox supports grouping nested elements by category using the [groupBy](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/fieldSettingsModel/#groupby) property. Map the category for each list item using the groupBy field in the data table. Group headers display as fixed headers and update dynamically as you scroll through the popup list.
 

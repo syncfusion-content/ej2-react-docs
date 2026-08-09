@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Datetimepicker component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Datetimepicker component of Syncfusion Essential JS 2 and more.
+title: Customization in React DateTime Picker | Syncfusion
+description: Customize the React DateTime Picker day and time cells with the renderDayCell event to disable weekends or style individual slots.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Datetimepicker component
+# Customization in React DateTime Picker
 
 The DateTimePicker component offers extensive UI customization through properties and events that enable flexible design adaptation to specific application needs.
 

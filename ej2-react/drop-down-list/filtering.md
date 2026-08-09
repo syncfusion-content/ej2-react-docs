@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in React Drop down list component | Syncfusion
-description: Learn here all about Filtering in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Filtering in React Dropdown List | Syncfusion
+description: Filter React Dropdown List items as you type with allowFiltering and the filtering event for custom data sources.
 control: Filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in React Drop down list component
+# Filtering in React Dropdown List
 
 The DropDownList includes built-in filtering support when `allowFiltering` is enabled. Filtering begins immediately as you type characters in the search box.
 

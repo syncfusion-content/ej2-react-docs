@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Dashboard Layout  component | Syncfusion
-description: Learn here all about Style in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
+title: CSS Structure in React Dashboard Layout | Syncfusion
+description: Customize Syncfusion React Dashboard Layout appearance by overriding CSS for panel header, content, resize handle, and responsive background.
 control: Dashboard Layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styling and CSS Customization in React Dashboard Layout component
+# CSS Structure in React Dashboard Layout
 
 The React Dashboard Layout component provides extensive styling capabilities through CSS customization. This guide demonstrates how to modify the component's appearance using CSS selectors to match specific design requirements.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation in React Uploader component | Syncfusion
-description: Learn here all about Validation in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: Validation in React File Upload | Syncfusion
+description: Validate selected files by type and size in the React File Upload using allowedExtensions, minFileSize, and maxFileSize before files reach the server.
 control: Validation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in React Uploader component
+# Validation in React File Upload
 
 The Uploader component validates selected files by size and extension using the **allowedExtensions**, **minFileSize**, and **maxFileSize** properties. Files are validated before uploading to the server, allowing invalid files to be excluded from the upload process. Validation can also be configured using HTML attributes on the input element. The validation process runs automatically when files are selected, dropped, or pasted.
 

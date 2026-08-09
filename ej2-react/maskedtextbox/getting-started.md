@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started with React MaskedTextBox | Syncfusion
-description: Learn how to get started with the React MaskedTextBox component in Syncfusion, including installation with Vite, configuration, masking, and styles.
+description: Set up a Vite-based React project, install the Syncfusion MaskedTextBox, and render a basic masked input with format validation.
 control: MaskedTextBox 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React MaskedTextBox component
+# Getting Started with React MaskedTextBox
 
 This section explains the steps required to create a simple React MaskedTextBox component and demonstrate its basic usage in a React environment.
 

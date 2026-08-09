@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Floating of panels in React Dashboard Layout  component | Syncfusion
-description: Learn here all about Floating of panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
+title: Floating Panels in React Dashboard Layout | Syncfusion
+description: Control whether Syncfusion React Dashboard Layout panels float upward to fill empty cells using the boolean allowFloating property.
 control: Dashboard Layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Floating of panels in React Dashboard Layout component
+# Floating Panels in React Dashboard Layout
 
 The floating functionality enables panels to move upward automatically to fill empty spaces in previous rows, maximizing space utilization within the dashboard layout. When floating is enabled, the layout automatically recalculates panel positions to eliminate gaps and maintain a compact arrangement.
 

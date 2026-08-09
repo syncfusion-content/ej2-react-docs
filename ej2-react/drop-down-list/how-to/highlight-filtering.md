@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Highlight filtering in React Drop down list component | Syncfusion
-description: Learn here all about Highlight filtering in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to highlight filtering matches in React Dropdown List | Syncfusion
+description: Highlight matched characters in the React Dropdown List during filtering by calling the highlightSearch method while the popup is open.
 control: Highlight filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight filtering in React Drop down list component
+# How to highlight filtering matches in React Dropdown List
 
 Use the `highlightSearch` method to highlight matching characters in DropDownList filtering.
 
