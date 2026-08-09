@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Split button component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Split button component of Syncfusion Essential JS 2 and more.
+title: Migration from Essential JS 1 in React Split Button | Syncfusion
+description: Migrate the React Split Button from Essential JS 1 to JS 2. Reference the property, method, and event API mapping for text, items, and icons.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Split button component
+# Migration from Essential JS 1 in React Split Button
 
 Migrate SplitButton implementations from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2 by updating property names, event handlers, and method signatures as outlined in the following reference tables. This guide helps developers transition legacy SplitButton code to leverage the improved React component API with enhanced functionality and simplified configuration.
 

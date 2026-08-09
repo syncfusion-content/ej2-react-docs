@@ -10,65 +10,48 @@ domainurl: ##DomainURL##
 
 # Microsoft SQL Server data binding in React Pivot Table
 
-This section describes how to retrieve data from SQL Server database using [Microsoft SqlClient](https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient?view=dotnet-plat-ext-7.0) and bind it to the Pivot Table via a Web API controller.
+This section describes how to retrieve data from SQL Server database using [Microsoft.Data.SqlClient](https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.sqlclient) and bind it to the Pivot Table via a Web API controller.
+
+> **Note:** The legacy `System.Data.SqlClient` namespace is part of .NET Framework. For ASP.NET Core, use the `Microsoft.Data.SqlClient` package and `using Microsoft.Data.SqlClient;`.
 
 ## Steps to Connect the SQL Server Database via Web API Application
 
-### Step 1: Download the Sample Application
-Download the ASP.NET Core Web Application from this [GitHub](https://github.com/SyncfusionExamples/how-to-bind-SQL-database-to-pivot-table) repository.
+### Step 1: Create the ASP.NET Core Web API Project
+Create a new **ASP.NET Core Web API** project named **PivotController** using Visual Studio or the .NET CLI:
 
-### Step 2: Understand the Application Structure
-The application named **PivotController** (server-side) that is downloaded from the above GitHub repository includes the following files:
+```bash
+dotnet new webapi -n PivotController
+cd PivotController
+```
 
-- **PivotController.cs** file under **Controllers** folder – This helps to do data communication with Pivot Table.
-- **Database1.mdf** file under **App_Data** folder – This MDF (Master Database File) file contains example data.
+### Step 2: Install the Required NuGet Packages
+1. Open the **NuGet Package Manager** in your project solution.
+2. Install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) package for SQL Server connectivity.
+3. Install the [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) package (required by `JsonConvert.SerializeObject`).
+
+```bash
+dotnet add package Microsoft.Data.SqlClient
+dotnet add package Newtonsoft.Json
+```
+
+![Install the Microsoft.Data.SqlClient NuGet package](../images/ms-data-sqlclient-nuget-package-install.png)
 
 ### Step 3: Connect to SQL Server and Retrieve Data
-In the **PivotController.cs** file, the [Microsoft SqlClient](https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient?view=dotnet-plat-ext-7.0) library is used to connect to a Microsoft SQL Server database and retrieve data for the Pivot Table.
+In the **PivotController.cs** file (under the **Controllers** folder), the `Microsoft.Data.SqlClient` library is used to connect to a Microsoft SQL Server database and retrieve data for the Pivot Table.
 
-1. **Establish Connection**: Use **SqlConnection** with a valid connection string to connect to the SQL Server database (e.g., **Database1.mdf**).
+1. **Establish Connection**: Use **SqlConnection** with a valid connection string to connect to the SQL Server database.
 2. **Query and Fetch Data**: Execute a SQL query (e.g., `SELECT * FROM table1`) using **SqlCommand** to retrieve data for the Pivot Table.
 3. **Structure the Data**: Use the **Fill** method of **SqlDataAdapter** to populate query results into a **DataTable** for JSON serialization.
 
-```csharp
-using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using System.Data.SqlClient;
+> **Schema dependency:** The pivot report below references the fields `Product`, `Quantity`, `Amount`, `Country`, and `State`. Make sure your table contains these columns (rename `table1` in the SQL query to match your table), otherwise the Pivot Table will be empty.
 
-namespace PivotController.Controllers
-{
-     [ApiController]
-     [Route("[controller]")]
-     public class PivotController : ControllerBase
-     {
-          private static DataTable FetchSQLResult()
-          {
-               string conSTR = @"<Enter your valid connection string here>";
-               string xquery = "SELECT * FROM table1";
-               SqlConnection sqlConnection = new(conSTR);
-               sqlConnection.Open();
-               SqlCommand cmd = new(xquery, sqlConnection);
-               SqlDataAdapter dataAdapter = new(cmd);
-               DataTable dataTable = new();
-               dataAdapter.Fill(dataTable);
-               return dataTable;
-          }
-     }
-}
-```
-
-> Replace `<Enter your valid connection string here>` with the actual connection string for your SQL Server database.
-
-### Step 4: Serialize Data to JSON
-In the **PivotController.cs** file, define a **Get** method that calls **FetchSQLResult** to retrieve data from the SQL Server database as a **DataTable**. Then, use **JsonConvert.SerializeObject** from the **Newtonsoft.Json** library to convert the **DataTable** into JSON format. This JSON data will be consumed by the Pivot Table component.
-
-> Ensure the **Newtonsoft.Json** NuGet package is installed in your project to use **JsonConvert**.
+> **Connection string example:** `Server=localhost;Database=your_database;User Id=your_user;Password=your_password;TrustServerCertificate=True;`
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Newtonsoft.Json;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace PivotController.Controllers
 {
@@ -98,12 +81,37 @@ namespace PivotController.Controllers
 }
 ```
 
+> Replace `<Enter your valid connection string here>` with the actual connection string for your SQL Server database. The Microsoft.Data.SqlClient package supports both SQL Server Authentication (`User Id`/`Password`) and Windows Authentication (`Integrated Security=true`).
+
+### Step 4: Enable CORS in the Web API
+React (typically `http://localhost:3000` or `http://localhost:5173`) running on a different origin than the Web API will be blocked by CORS unless the API explicitly allows it. In **Program.cs**, register and apply a CORS policy:
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+        policy.WithOrigins("http://localhost:3000", "http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
+var app = builder.Build();
+
+app.UseCors("AllowReactApp"); // Must be called before MapControllers.
+app.MapControllers();
+
+app.Run();
+```
+
 ### Step 5: Run the Web API Application
 1. Build and run the **PivotController** application.
-2. The application will be hosted at `https://localhost:7139/` (the port number may vary depending on your configuration).
+2. The application will be hosted at `https://localhost:7139/` by default (the port number is defined in **Properties/launchSettings.json** and may vary depending on your configuration).
 
 ### Step 6: Access the JSON Data
-1. Access the Web API endpoint at `https://localhost:7139/pivot` to view the JSON data retrieved from the SQL Server database.
+1. Access the Web API endpoint at `https://localhost:7139/Pivot` to view the JSON data retrieved from the SQL Server database (note: ASP.NET Core routing for `[Route("[controller]")]` with the class name `PivotController` produces the lowercase path `/pivot`; the route is case-insensitive by default).
 2. The browser will display the JSON data, as shown below, ready to be used by the Pivot Table.
 
 ![Hosted Web API URL](../images/code-web-app.jpeg)
@@ -113,8 +121,8 @@ namespace PivotController.Controllers
 This section explains how to connect the Pivot Table component to a Microsoft SQL Server database by retrieving data from the Web API service created in the previous section.
 
 ### Step 1: Set Up the React Pivot Table
-1. Download the React Pivot Table sample from the [GitHub](https://github.com/SyncfusionExamples/how-to-bind-SQL-database-to-pivot-table) repository.
-2. Ensure your React project is configured with the necessary EJ2 Pivot Table dependencies by following the [Getting Started](https://ej2.syncfusion.com/react/documentation/pivotview/getting-started) documentation.
+1. Create a new React project with the Pivot Table dependency by following the [Getting Started](https://ej2.syncfusion.com/react/documentation/pivotview/getting-started) documentation.
+2. A complete reference sample is also available in the [GitHub](https://github.com/SyncfusionExamples/how-to-bind-SQL-database-to-pivot-table) repository.
 
 ### Step 2: Configure the Web API URL in the Pivot Table
 1. In the **App.tsx** or **App.jsx** file, configure the Pivot Table to use the hosted Web API URL (`https://localhost:7139/pivot`) by setting the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings) object.

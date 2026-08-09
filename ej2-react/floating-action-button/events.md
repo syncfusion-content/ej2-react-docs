@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React Floating action button component | Syncfusion
-description: Learn here all about Events in Syncfusion React Floating action button component of Syncfusion Essential JS 2 and more.
+title: Events in React Floating Action Button | Syncfusion
+description: Handle React Floating Action Button events like created to run initialization logic or access component properties after rendering.
 control: Events 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React Floating action button component
+# Events in React Floating Action Button
 
 The Floating Action Button component provides events to respond to user interactions. This section explains the available events, their purposes, and how to handle them in your React application.
 

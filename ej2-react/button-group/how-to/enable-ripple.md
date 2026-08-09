@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable ripple in React Button group component | Syncfusion
-description: Learn here all about Enable ripple in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
+title: How to enable ripple in React Button Group | Syncfusion
+description: Enable the ripple effect on React Button Group buttons by importing enableRipple from ej2-base and setting it to true.
 control: Enable ripple 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable ripple in React Button group component
+# How to enable ripple in React Button Group
 
 Add a ripple effect to ButtonGroup buttons by importing the `enableRipple` method from `ej2-base` and setting it to `true`. The ripple effect provides visual feedback when users interact with buttons.
 

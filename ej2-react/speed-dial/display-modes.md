@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Display modes in React Speed dial component | Syncfusion
-description: Learn here all about Display modes in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+title: Display modes in React Speed Dial | Syncfusion
+description: Switch between Linear and Radial display modes for the React Speed Dial action items. Set direction, angles, and offsets via the mode property.
 control: Display modes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display modes in React Speed dial component
+# Display modes in React Speed Dial
 
 Choose between two layout modes to display SpeedDial action items using the [`mode`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#mode) property: Linear (list-based) and Radial (circular). Select the mode based on your UI design needs and available screen space.
 

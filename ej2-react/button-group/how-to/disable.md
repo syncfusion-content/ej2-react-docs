@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable in React Button group component | Syncfusion
-description: Learn here all about Disable in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
+title: How to disable in React Button Group | Syncfusion
+description: Disable individual buttons or the entire React Button Group by adding the disabled attribute to the relevant button elements.
 control: Disable 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable in React Button group component
+# How to disable in React Button Group
 
 Disable buttons in a ButtonGroup to prevent user interaction. You can disable individual buttons or the entire ButtonGroup.
 

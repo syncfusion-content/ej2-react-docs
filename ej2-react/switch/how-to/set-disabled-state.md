@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set disabled state in React Switch component | Syncfusion
-description: Learn here all about Set disabled state in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: How to disable in React Switch | Syncfusion
+description: Disable the React Switch by setting the disabled property to true. The toggle grays out and cannot be interacted with.
 control: Set disabled state 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set disabled state in React Switch component
+# How to disable in React Switch
 
 Prevent user interaction with the Switch component by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/switch/#disabled) property to `true`. Disabled Switches appear grayed out and cannot be toggled, used for read-only states or when the option is temporarily unavailable.
 

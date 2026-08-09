@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change size in React Switch component | Syncfusion
-description: Learn here all about Change size in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: How to change size in React Switch | Syncfusion
+description: Render a compact React Switch by setting the cssClass property to e-small for space-constrained layouts and mobile interfaces.
 control: Change size 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change size in React Switch component
+# How to change size in React Switch
 
 Switch components are available in two size variants: default and small. Render a compact Switch by setting the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/switch/#cssclass) property to `e-small`, useful for space-constrained layouts or mobile interfaces where smaller controls improve usability.
 

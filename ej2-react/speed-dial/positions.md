@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Positions in React Speed dial component | Syncfusion
-description: Learn here all about Positions in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+title: Positions in React Speed Dial | Syncfusion
+description: Position the React Speed Dial on the page using the position property. Anchor to the viewport or a target element, and open on hover.
 control: Positions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Positions in React Speed dial component
+# Positions in React Speed Dial
 
 Position the SpeedDial component anywhere on the page or within a specific container using the [`position`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#position) property. If a [`target`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#target) element is specified, the SpeedDial positions itself relative to that container; otherwise, it positions relative to the browser viewport.
 

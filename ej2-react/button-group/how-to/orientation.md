@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Orientation in React Button group component | Syncfusion
-description: Learn here all about Orientation in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
+title: How to set orientation in React Button Group | Syncfusion
+description: Arrange React Button Group buttons vertically or horizontally. Use the e-vertical CSS class to switch from the default horizontal layout.
 control: Orientation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Orientation in React Button group component
+# How to set orientation in React Button Group
 
 Arrange ButtonGroup buttons in vertical or horizontal orientation. By default, ButtonGroup displays buttons horizontally.
 

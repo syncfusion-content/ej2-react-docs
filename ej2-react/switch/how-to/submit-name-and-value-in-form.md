@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Submit name and value in form in React Switch component | Syncfusion
-description: Learn here all about Submit name and value in form in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: How to set name and value in React Switch | Syncfusion
+description: Submit the React Switch name and value in a form. Only checked and enabled Switches post data; disabled and unchecked ones are excluded.
 control: Submit name and value in form 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Submit name and value in form in React Switch component
+# How to set name and value in React Switch
 
 Use the name attribute to group Switches for form submission. When a form containing grouped Switches is submitted, only checked and enabled Switch values are sent to the server. Disabled and unchecked Switches are excluded from form data, allowing conditional data submission based on user selections.
 

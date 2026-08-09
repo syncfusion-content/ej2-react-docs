@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection and nesting in React Button group component | Syncfusion
-description: Learn here all about Selection and nesting in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
+title: Selection and nesting in React Button Group | Syncfusion
+description: Use radio or checkbox selection in React Button Group. Build single or multiple selection groups by combining input and label elements.
 control: Selection and nesting 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection and nesting in React Button group component
+# Selection and nesting in React Button Group
 
 ## Selection
 

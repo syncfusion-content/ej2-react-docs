@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Progress button component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Progress button component of Syncfusion Essential JS 2 and more.
+title: Style and appearance in React Progress Button | Syncfusion
+description: Customize the React Progress Button appearance with CSS classes for variants, states, the progress wrapper, and the spinner pane.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Progress button component
+# Style and appearance in React Progress Button
 
 To modify the ProgressButton appearance, you need to override the default CSS of ProgressButton component. Please find the list of CSS classes and its corresponding section in ProgressButton. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

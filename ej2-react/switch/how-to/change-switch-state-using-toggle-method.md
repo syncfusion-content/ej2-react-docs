@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change switch state using toggle method in React Switch component | Syncfusion
-description: Learn here all about Change switch state using toggle method in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: How to toggle in React Switch | Syncfusion
+description: Programmatically switch the React Switch state with the toggle method. Useful for keyboard shortcuts, remote commands, and external sync.
 control: Change switch state using toggle method 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change switch state using toggle method in React Switch component
+# How to toggle in React Switch
 
 Programmatically switch between on and off states using the [`toggle`](https://ej2.syncfusion.com/react/documentation/api/switch/#toggle) method. This approach enables external controls to change Switch state without direct user interaction, supporting workflows like keyboard shortcuts, remote commands, or state synchronization with external data.
 

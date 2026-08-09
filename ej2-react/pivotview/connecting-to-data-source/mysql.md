@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "MySQL data binding in React Pivot Table | Syncfusion"
-component: "Pivot Table"
+title: MySQL data binding in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table retrieves data from a MySQL database through a Web API controller and binds it as the pivot data source.
 platform: ej2-react
-description: "Learn how the React Pivot Table retrieves data from a MySQL database through a Web API controller and binds it as the pivot data source."
 control: Pivot Table
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # MySQL data binding in React Pivot Table
 
-This guide explains how to retrieve data from a MySQL database using the [MySqlClient](https://mysqlclient.readthedocs.io/) library and bind it to the Pivot Table through a Web API controller.
+This guide explains how to retrieve data from a MySQL database using the [MySql.Data](https://www.nuget.org/packages/MySql.Data/) library (the official Oracle .NET connector for MySQL) and bind it to the Pivot Table through a Web API controller.
 
 ## Creating a Web API Service to Fetch MySQL Data
 
@@ -26,6 +26,12 @@ Follow these steps to create a Web API service that retrieves data from a MySQL 
 To enable MySQL database connectivity in your application:
 1. Open the **NuGet Package Manager** in your project solution and search for **MySql.Data**.
 2. Install the **MySql.Data** package to add MySQL database support.
+3. Install **Newtonsoft.Json** for the JSON serialization in the next step.
+
+```bash
+dotnet add package MySql.Data
+dotnet add package Newtonsoft.Json
+```
 
 ![Add the NuGet package MySql.Data to the project](../images/mysql-data-nuget-package-install.png)
 
@@ -33,88 +39,81 @@ To enable MySQL database connectivity in your application:
 1. In the **Controllers** folder, create a new file named **PivotController.cs**.
 2. This controller will handle data communication between the MySQL database and the Pivot Table.
 
-### Step 4: Connect to MySQL and Retrieve Data
-In the **PivotController.cs** file, use the [MySqlClient](https://mysqlclient.readthedocs.io/) from the **MySql.Data** library to connect to a MySQL database and retrieve data for the Pivot Table.
+### Step 4: Connect to MySQL, Retrieve Data, and Serialize to JSON
+In the **PivotController.cs** file, use the **MySql.Data.MySqlClient** namespace to connect to a MySQL database, retrieve data, and return it as JSON for the Pivot Table.
 
-1. **Establish Connection**: Use **MySqlConnection** with a valid connection string (e.g., `Server=localhost;Database=mydb;Uid=myuser;Pwd=mypassword;`) to connect to the MySQL database.
+1. **Establish Connection**: Use **MySqlConnection** with a valid connection string (e.g., `Server=localhost;Database=mydb;User ID=myuser;Password=mypassword;`) to connect to the MySQL database.
 2. **Query and Fetch Data**: Execute a SQL query (e.g., `SELECT * FROM orders`) using **MySqlCommand** to retrieve data for the Pivot Table.
-3. **Structure the Data**: Use **MySqlDataAdapter**'s **Fill** method to populate query results into a **DataTable** for JSON serialization.
+3. **Structure the Data**: Use **MySqlDataAdapter**'s **Fill** method to populate query results into a **DataTable**.
+4. **Serialize to JSON**: Use **JsonConvert.SerializeObject** to convert the **DataTable** into a JSON string for the Pivot Table.
 
-```csharp
-    using Microsoft.AspNetCore.Mvc;
-    using MySql.Data.MySqlClient;
-    using Newtonsoft.Json;
-    using System.Data;
-
-    namespace MyWebService.Controllers
-    {
-        [ApiController]
-        [Route("[controller]")]
-        public class PivotController : ControllerBase
-        {
-            public dynamic GetMySQLResult()
-            {
-                // Replace with your own connection string.
-                MySqlConnection connection = new MySqlConnection("<Enter your valid connection string here>");
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM orders", connection);
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
-                dataAdapter.Fill(dataTable);
-                connection.Close();
-                return dataTable;
-            }
-        }
-    }
-```
+> **Schema dependency:** The pivot report below references the fields `ShipName`, `ShipCity`, and `Freight` (the same columns used in the classic **Northwind** or **ClassicModels** `orders` table). Make sure your `orders` table contains these columns, otherwise update both the SQL query and the report.
 
 > Replace the placeholder connection string with your actual MySQL credentials.
 
-### Step 5: Serialize Data to JSON
-In the **PivotController.cs** file, define a **Get** method that calls **GetMySQLResult** to retrieve data from the MySQL database as a **DataTable**. Then, use **JsonConvert.SerializeObject** from the **Newtonsoft.Json** library to convert the **DataTable** into a JSON format. This JSON data will be used by the Pivot Table component.
-
-> Ensure the **Newtonsoft.Json** NuGet package is installed in your project to use **JsonConvert**.
-
 ```csharp
-    using Microsoft.AspNetCore.Mvc;
-    using MySql.Data.MySqlClient;
-    using Newtonsoft.Json;
-    using System.Data;
+using Microsoft.AspNetCore.Mvc;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using System.Data;
 
-    namespace MyWebService.Controllers
+namespace MyWebService.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class PivotController : ControllerBase
     {
-        [ApiController]
-        [Route("[controller]")]
-        public class PivotController : ControllerBase
+        [HttpGet(Name = "GetMySQLResult")]
+        public object Get()
         {
-            [HttpGet(Name = "GetMySQLResult")]
-            public object Get()
-            {
-                return JsonConvert.SerializeObject(GetMySQLResult());
-            }
+            return JsonConvert.SerializeObject(GetMySQLResult());
+        }
 
-            public dynamic GetMySQLResult()
-            {
-                // Replace with your own connection string.
-                MySqlConnection connection = new MySqlConnection("<Enter your valid connection string here>");
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM orders", connection);
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
-                dataAdapter.Fill(dataTable);
-                connection.Close();
-                return dataTable;
-            }
+        public dynamic GetMySQLResult()
+        {
+            // Replace with your own connection string.
+            MySqlConnection connection = new MySqlConnection("<Enter your valid connection string here>");
+            connection.Open();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM orders", connection);
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            connection.Close();
+            return dataTable;
         }
     }
+}
+```
+
+### Step 5: Enable CORS in the Web API
+React (typically `http://localhost:3000` or `http://localhost:5173`) running on a different origin than the Web API will be blocked by CORS unless the API explicitly allows it. In **Program.cs**, register and apply a CORS policy:
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+        policy.WithOrigins("http://localhost:3000", "http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
+var app = builder.Build();
+
+app.UseCors("AllowReactApp"); // Must be called before MapControllers.
+app.MapControllers();
+
+app.Run();
 ```
 
 ### Step 6: Run the Web API Service
 1. Build and run the application in Visual Studio.
-2. The application will be hosted at a URL such as `https://localhost:7146` (the port number may vary based on your configuration).
+2. The application will be hosted at a URL such as `https://localhost:7148` by default (the port number is defined in **Properties/launchSettings.json** and may vary based on your configuration).
 
 ### Step 7: Verify the JSON Data
-1. Access the Web API endpoint at `https://localhost:7146/Pivot` to view the JSON data retrieved from the MySQL database.
+1. Access the Web API endpoint at `https://localhost:7148/Pivot` to view the JSON data retrieved from the MySQL database.
 2. The browser will display the JSON data, as shown below.
 
 ![Hosted Web API URL](../images/mysql-data.png)
@@ -128,7 +127,7 @@ This section explains how to connect the Pivot Table to a MySQL database by fetc
 2. Ensure all necessary Syncfusion EJ2 Pivot Table dependencies are installed in your React project.
 
 ### Step 2: Configure the Web API URL in the Pivot Table
-1. In the **App.jsx** (or **App.tsx**) file, map the Web API URL (`https://localhost:7146/Pivot`) to the Pivot Table using the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings).
+1. In the **App.jsx** (or **App.tsx**) file, map the Web API URL (`https://localhost:7148/Pivot`) to the Pivot Table using the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings).
 2. Below is the sample code to configure the Pivot Table to fetch data from the Web API:
 
 ```typescript
@@ -138,7 +137,7 @@ import './App.css';
 
 function App() {
     let dataSourceSettings = {
-        url: 'https://localhost:7146/Pivot'
+        url: 'https://localhost:7148/Pivot'
         // Additional configuration will be added in the next step
     };
 
@@ -161,7 +160,7 @@ import './App.css';
 
 function App() {
     let dataSourceSettings = {
-        url: 'https://localhost:7146/Pivot',
+        url: 'https://localhost:7148/Pivot',
         enableSorting: true,
         expandAll: false,
         columns: [{ name: 'ShipName' }],

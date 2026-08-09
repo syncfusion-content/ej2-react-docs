@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Radial menu in React Speed dial component | Syncfusion
-description: Learn here all about Radial menu in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+title: Radial menu in React Speed Dial | Syncfusion
+description: Customize the React Speed Dial radial menu with direction (Clockwise or AntiClockwise), start and end angles, and offset via radialSettings.
 control: Radial menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Radial menu in React Speed dial component
+# Radial menu in React Speed Dial
 
 Display SpeedDial action items in a circular pattern around the button by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/#mode) property to `Radial`. Customize the radial layout using the [`radialSettings`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#radialsettings) property to control `direction`, `startAngle`, `endAngle`, and `offset` values. This creates an elegant radial menu ideal for displaying multiple related actions.
 

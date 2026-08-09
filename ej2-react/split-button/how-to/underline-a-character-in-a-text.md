@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Underline a character in a text in React Split button component | Syncfusion
-description: Learn here all about Underline a character in a text in Syncfusion React Split button component of Syncfusion Essential JS 2 and more.
+title: How to underline a character in React Split Button | Syncfusion
+description: Underline a character in React Split Button popup items via the beforeItemRender event, injecting HTML u tags around the target character.
 control: Underline a character in a text 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Underline a character in a text in React Split button component
+# How to underline a character in React Split Button
 
 Emphasize keyboard shortcuts or specific characters in popup items by underlining them during rendering. Use the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/split-button#beforeitemrender) event to inject HTML `<u>` tags around the target character, setting the content as innerHTML in the `li` element to display formatted text.
 

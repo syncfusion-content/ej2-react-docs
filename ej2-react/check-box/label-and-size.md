@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Label and size in React Check box component | Syncfusion
-description: Learn here all about Label and size in Syncfusion React Check box component of Syncfusion Essential JS 2 and more.
+title: Label and size in React Checkbox | Syncfusion
+description: Set the React Checkbox caption via the label property, control label position with labelPosition, and configure the small or standard size.
 control: Label and size 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Label and size in React Check box component
+# Label and size in React Checkbox
 
 This section explains the different sizes and labels available in the CheckBox component.
 

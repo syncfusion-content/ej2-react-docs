@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types and styles in React Button component | Syncfusion
-description: Learn here all about Types and styles in Syncfusion React Button component of Syncfusion Essential JS 2 and more.
+title: Types and styles in React Button | Syncfusion
+description: Explore predefined React Button styles (primary, success, info, warning, danger, link) and types (basic, flat, outline, round, toggle) in Syncfusion.
 control: Types and styles 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types and styles in React Button component
+# Types and styles in React Button
 
 This section explains the different styles and types of buttons in the Syncfusion Button component.
 

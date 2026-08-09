@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set text in React Switch component | Syncfusion
-description: Learn here all about Set text in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: How to set text in React Switch | Syncfusion
+description: Set the React Switch on and off state labels via the onLabel and offLabel properties to clarify the toggle purpose and improve accessibility.
 control: Set text 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set text in React Switch component
+# How to set text in React Switch
 
 Display custom text labels on Switch states by setting the [`onLabel`](https://ej2.syncfusion.com/react/documentation/api/switch/#onlabel) and [`offLabel`](https://ej2.syncfusion.com/react/documentation/api/switch/#offlabel) properties. These labels clarify the Switch function or state, improving accessibility and usability in interfaces where the toggle purpose is not immediately obvious.
 

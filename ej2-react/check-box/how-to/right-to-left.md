@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Right to left in React Check box component | Syncfusion
-description: Learn here all about Right to left in Syncfusion React Check box component of Syncfusion Essential JS 2 and more.
+title: How to enable RTL in React Checkbox | Syncfusion
+description: Enable right-to-left layout in the React Checkbox by setting the enableRtl property to true for Arabic, Hebrew, and other RTL languages.
 control: Right to left 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right to left in React Check box component
+# How to enable RTL in React Checkbox
 
 The CheckBox component supports right-to-left (RTL) display for languages and locales that use RTL scripts. Enable RTL support by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/check-box/#enablertl) property to `true`.
 

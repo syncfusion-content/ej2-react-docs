@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Button group component | Syncfusion
-description:  Checkout and learn about Getting started with React Button group component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Button Group | Syncfusion
+description: Learn how to get started with the Syncfusion React Button Group control. Explore Vite setup, package installation, CSS themes, and basic usage.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React ButtonGroup component
+# Getting Started with React Button Group
 
 This section explains the steps required to create a simple React ButtonGroup component and demonstrate its basic usage in a React environment.
 

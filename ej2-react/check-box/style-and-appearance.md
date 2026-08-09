@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Check box component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Check box component of Syncfusion Essential JS 2 and more.
+title: Style and appearance in React Checkbox | Syncfusion
+description: Customize the React Checkbox appearance with CSS class overrides for the frame, label, hover, checked, indeterminate, disabled, and ripple states.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Check box component
+# Style and appearance in React Checkbox
 
 Customize the CheckBox appearance by overriding its default CSS styles. The following table lists the CSS classes available for CheckBox styling:
 

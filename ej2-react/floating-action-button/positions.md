@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Positions in React Floating action button component | Syncfusion
-description: Learn here all about Positions in Syncfusion React Floating action button component of Syncfusion Essential JS 2 and more.
+title: Positions in React Floating Action Button | Syncfusion
+description: Position the React Floating Action Button with the position property. Use predefined corners or centers, anchored to the viewport or a target element.
 control: Positions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Positions in React Floating action button component
+# Positions in React Floating Action Button
 
 Position the Floating Action Button anywhere on the page using the [`position`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#position) property. When paired with the [`target`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#target) property, the FAB positions itself relative to the specified container. Without a target, the FAB positions itself relative to the browser viewport.
 

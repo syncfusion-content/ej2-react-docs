@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom adaptor in React Pivot Table | Syncfusion
+title: Custom Adaptor in React Pivot Table | Syncfusion
 description: Learn how the React Pivot Table extends existing adaptors through the Custom Adaptor to transform requests and responses for custom backends.
 control: Pivot Table
 platform: ej2-react
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom adaptor in React Pivot Table
+# Custom Adaptor in React Pivot Table
 
-The Custom Adaptor is a powerful extension mechanism that **customizes any existing adaptors** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, the Custom Adaptor extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
+The Custom Adaptor is a powerful extension mechanism that **customizes any existing adaptors** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), and any other Syncfusion adaptor such as `GraphQLAdaptor`) to meet specific application requirements. Instead of creating an entirely new adaptor from scratch, the Custom Adaptor extends and modifies the behavior of existing adaptors by intercepting and customizing HTTP requests and responses.
 
 **What is the DataManager?**
 
@@ -42,9 +42,9 @@ Ensure the following software and packages are installed before proceeding:
 
 ## Setting up the ASP.NET Core Backend API
 
-As explained earlier, the Custom Adaptor **customizes any existing adaptors** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor), [GraphQLAdaptor](./graphql-adaptor)) to meet specific application requirements. Rather than building a new adaptor from scratch, the Custom Adaptor extends an existing adaptor and overrides only the parts of its behavior that need to be customized.
+As explained earlier, the Custom Adaptor **customizes any existing adaptors** ([UrlAdaptor](./url-adaptor), [WebApiAdaptor](./webapi-adaptor), [ODataV4Adaptor](./odatav4-adaptor)) to meet specific application requirements. Rather than building a new adaptor from scratch, the Custom Adaptor extends an existing adaptor and overrides only the parts of its behavior that need to be customized.
 
-In this guide, the Custom Adaptor is created by extending the [ODataV4Adaptor](./odatav4-adaptor). Because the Custom Adaptor relies on the base adaptor's data flow, it uses the same backend service as the ODataV4Adaptor to serve data requests from the React Pivot Table. To set up the **ASP.NET Core Backend API**, refer to the [Setting up the ASP.NET Core Backend API](./odatav4-adaptor#setting-up-the-aspnet-core-backend-api) section in the [ODataV4Adaptor](./odatav4-adaptor) document, which provides step-by-step instructions for creating the backend service. Complete that setup (including the model, controller `Get()` method, and `Program.cs` configuration for OData V4 services, JSON serialization, and CORS) before continuing with the Custom Adaptor implementation.
+In this guide, the Custom Adaptor is created by extending the [ODataV4Adaptor](./odatav4-adaptor). Because the Custom Adaptor relies on the base adaptor's data flow, it uses the same backend service as the ODataV4Adaptor to serve data requests from the React Pivot Table. To set up the **ASP.NET Core Backend API**, refer to the [Setting up the ASP.NET Core Backend API](./odatav4-adaptor) section in the [ODataV4Adaptor](./odatav4-adaptor) document, which provides step-by-step instructions for creating the backend service. Complete that setup (including the model, controller `Get()` method, and `Program.cs` configuration for OData V4 services, JSON serialization, and CORS) before continuing with the Custom Adaptor implementation.
 
 ## Setting up the React Pivot Table client
 
@@ -52,11 +52,20 @@ With the backend API configured and running, the next step is to connect the Rea
 
 ### Step 1: Set up a React project with Pivot Table
 
-Set up a React project with the Pivot Table by following the [Getting Started](../getting-started) documentation. Ensure that all necessary Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 Pivot Table dependencies are installed in the React project:
+This sample assumes a **Vite + TypeScript** React project (`npm create vite@latest ... -- --template react-ts`). The TypeScript types used in the `CustomAdaptor` and `App.tsx` snippets (`DataManager`, `Query`, `DataOptions`, `DataResult`, `CrudOptions`, `DataSourceSettingsModel`, `BeginDrillThroughEventArgs`, `CellEditSettings`) only exist in a TypeScript project — a plain JavaScript project will fail at build time.
+
+Create a new Vite + React + TypeScript project and install the required Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 packages:
 
 ```bash
-npm install @syncfusion/ej2-react-pivotview
+npm create vite@latest custom-adaptor-client -- --template react-ts
+cd custom-adaptor-client
+npm install
+npm install @syncfusion/ej2-react-pivotview @syncfusion/ej2-tailwind3-theme
 ```
+
+> **Note:** `npm create vite@latest` may prompt for confirmation in older npm versions; pass `--yes` to run non-interactively, or answer the prompts manually.
+
+For a complete walkthrough of the project scaffolding, see the [Getting Started](../getting-started) documentation.
 
 ### Step 2: Configure the Pivot Table with CustomAdaptor
 
@@ -81,9 +90,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> DataManager provides built�
 
 | Method            | Execution Phase                          | Purpose & Key Actions                                                                 |
 |-------------------|------------------------------------------|---------------------------------------------------------------------------------------|
-| `processResponse` | After receiving server response, before Pivot Table rendering | Adds sequential `SNo` (serial number) to each record by iterating through `response.result` → displays row numbers when the server does not provide them |
-| `processQuery`    | Before sending request to server (read, insert, update, delete)         | Overrides the `DataManager` URL and appends extra query parameters → enables dynamic endpoint targeting and request identification. Because `processQuery` runs for every operation, mutating `dm.dataSource.url` here affects all requests; prefer setting the `url` once on the `DataManager` configuration (as shown in Step 2.2) and use `processQuery` only for request-specific parameter injection. |
-| `beforeSend`      | Immediately before HTTP request is sent  | Adds a custom `Authorization` header to the HTTP request → authenticates or tags every API request sent to the server. In production, send a real bearer token (for example, `Bearer <token>`) instead of a placeholder value. |
+| `processResponse` | After receiving server response, before Pivot Table rendering | Adds sequential `SNo` (serial number) to each record by iterating through `response.result`; displays row numbers when the server does not provide them. |
+| `processQuery`    | Before sending request to server (read, insert, update, delete) | Appends extra query parameters via `query.addParams(...)` for request identification. Do not mutate `dm.dataSource.url` here — set the URL once on the `DataManager` configuration (Step 2.2). |
+| `beforeSend`      | Immediately before HTTP request is sent  | Adds a custom `Authorization` header to the HTTP request. In production, send a real bearer token (for example, `Bearer <token>`) instead of a placeholder value. |
 | *Inherited CRUD methods* | During insert/update/delete operations | The Custom Adaptor extends `ODataV4Adaptor`, which resolves CRUD routes (`POST`, `PATCH`, `DELETE`) from the entity set URL automatically. No `insertUrl`/`updateUrl`/`removeUrl` configuration is required on the client unless you override `insertRecord`/`update`/`remove` to customize CRUD behavior. |
 
 
@@ -239,7 +248,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Pivot Table supports 
 **CRUD flow overview:** The Pivot Table's `ODataV4Adaptor` (which the Custom Adaptor extends) derives CRUD routes from the entity set URL configured on the `DataManager`. Insert, update, and delete operations are triggered from the drill-through (edit) grid that opens when you double-click a pivot cell — the CRUD methods in this section handle those server-side actions. This enables the following operations:
 
 - **Create**: Add new records through the Pivot Table editing pop-up.
-- **Read**: Display data from the backend (already configured by the `Get()` method in [Step 4: Create an API controller](./odatav4-adaptor#step-4-create-an-api-controller) of the ODataV4Adaptor document).
+- **Read**: Display data from the backend (already configured by the `Get()` method in the [ODataV4Adaptor document](./odatav4-adaptor)).
 - **Update**: Edit existing records in place.
 - **Delete**: Remove records from the data source.
 
@@ -453,7 +462,7 @@ Define the following `beginDrillThrough` event handler inside the `App` function
 
 ### 3. Security
 
-- **Restrict CORS in production**: The `AllowAnyOrigin` policy is intended for development. In production, restrict allowed origins to the specific domain of your React application by using `policy.WithOrigins("https://yourdomain.com")`. See the CORS configuration in the [Program.cs setup](./odatav4-adaptor#step-5-configure-programcs) section of the ODataV4Adaptor document.
+- **Restrict CORS in production**: The `AllowAnyOrigin` policy is intended for development. In production, restrict allowed origins to the specific domain of your React application by using `policy.WithOrigins("https://yourdomain.com")`. See the CORS configuration in the [ODataV4Adaptor Program.cs setup](./odatav4-adaptor) section.
 - **Use HTTPS**: Always expose the API over HTTPS in production to protect data in transit.
 
 ### 4. Error Handling
@@ -475,7 +484,7 @@ The following table lists common issues and their resolutions when working with 
 | **Empty Pivot Table** | The Pivot Table loads without errors, but no rows or values are shown. | Verify that `GetAllRecords()` returns data correctly and the response follows the `{ "@odata.context", value }` format. Also confirm that the property names returned by the API match the field names used in `dataSourceSettings`. |
 | **404 error** | Network tab shows a 404 response when the Pivot Table tries to load data. | Ensure the controller route is configured as `[Route("[controller]")]` (matching the `/odata/Orders` endpoint registered via `AddRouteComponents("odata", ...)` in **Program.cs**) and the API server is running. Verify the URL in the React [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) matches the actual API port. |
 | **500 error** | The Pivot Table fails to load, and the browser shows a server error. | Check the Visual Studio Output window or the terminal for server logs and error details. Common causes include null reference exceptions and serialization errors. |
-| **CORS error** | Browser console shows: `Access to XMLHttpRequest at 'http://localhost:5092/odata/Orders' from origin 'https://localhost:3000' has been blocked by CORS policy.` | Verify that CORS is properly configured in **Program.cs** and `app.UseCors()` is called before `app.MapControllers()`. |
+| **CORS error** | Browser console shows: `Access to XMLHttpRequest at 'https://localhost:5092/odata/Orders' from origin 'https://localhost:3000' has been blocked by CORS policy.` | Verify that CORS is properly configured in **Program.cs** and `app.UseCors()` is called before `app.MapControllers()`. |
 | **CRUD operations not saving** | The Pivot Table editing pop-up closes, but the changes are not reflected in the data source. | Ensure the primary key is correctly configured in the `beginDrillThrough` event (so the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) can target the right record). Confirm that the backend `Post`, `Patch`, and `Delete` methods resolve under the OData route prefix configured in **Program.cs**, and verify that the `beginDrillThrough` event handler flags the `OrderID` column with `isPrimaryKey = true`. |
 | **Property casing mismatch** | The Pivot Table appears empty or shows a "field not found" warning, even though the API returns data. | Confirm that `DefaultContractResolver` is added in **Program.cs** to preserve original property casing. Without it, the API returns camelCase property names that do not match the field names configured in the Pivot Table. |
 | **Pivot Table loads slowly** | The Pivot Table takes a long time to render or becomes unresponsive. | Ensure the API only returns the fields the Pivot Table needs (keep the `value` array lean) and that the OData V4 middleware is generating the response from a queryable source. For large data sources, consider implementing server-side aggregation to reduce the payload returned to the client. |

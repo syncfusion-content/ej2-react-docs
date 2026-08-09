@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Chips component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Chips component of Syncfusion Essential JS 2 and more.
+title: Customization in React Chips | Syncfusion
+description: Customize React Chips with predefined styles (primary, success, info, warning, danger) and add icons, avatars, leading or trailing elements.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Chips component
+# Customization in React Chips
 
 This section explains how to customize chip styles, icons, avatars, and other visual elements to match your design requirements.
 

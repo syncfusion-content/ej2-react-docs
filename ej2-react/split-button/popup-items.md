@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Popup items in React Split button component | Syncfusion
-description: Learn here all about Popup items in Syncfusion React Split button component of Syncfusion Essential JS 2 and more.
+title: Popup items in React Split Button | Syncfusion
+description: Configure React Split Button popup items with icons, separators, and templated content. Bind items from a data source for the action list.
 control: Popup items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Popup items in React Split button component
+# Popup items in React Split Button
 
 ## Icons
 

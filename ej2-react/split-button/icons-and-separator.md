@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons and separator in React Split button component | Syncfusion
-description: Learn here all about Icons and separator in Syncfusion React Split button component of Syncfusion Essential JS 2 and more.
+title: Icons and separator in React Split Button | Syncfusion
+description: Set the React Split Button icon via iconCss and adjust position with iconPosition. Use a separator line to visually divide the primary action and arrow.
 control: Icons and separator 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons and separator in React Split button component
+# Icons and separator in React Split Button
 
 ## SplitButton icons
 

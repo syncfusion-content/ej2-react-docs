@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Chips component | Syncfusion
-description: Learn here all about Style in Syncfusion React Chips component of Syncfusion Essential JS 2 and more.
+title: CSS structure in React Chips | Syncfusion
+description: Override default CSS to style the React Chips text, icon, avatar, and selection visuals. Examples for font, color, background, and outline.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Chips component
+# CSS structure in React Chips
 
 Customize the Chips component's appearance by overriding default CSS styles. The following examples demonstrate common styling patterns. Use these CSS structures as a foundation and adapt them according to your design requirements.
 
