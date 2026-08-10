@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool tip table in React Chart component | Syncfusion
-description: Learn here all about Tool tip table in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Tool tip table 
+title: How to add a table in the tooltip in React Chart | Syncfusion
+description: Learn how to show a custom HTML table inside Syncfusion React Chart tooltips using the template property.
+control: Tool tip table
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool tip table in React Chart component
+# How to add a table in the tooltip in React Chart
 
 You can show the tooltip as table by using template property in tooltip.
 

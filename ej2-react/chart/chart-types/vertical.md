@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Vertical Chart in React Charts | Syncfusion
-description: Learn here all about Vertical Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
+title: Vertical Chart in React Chart | Syncfusion
+description: Learn to render any series in vertical orientation in Syncfusion React Chart by setting the isTransposed property to swap x and y axes.
 control: Vertical
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Vertical Chart in React Charts
+# Vertical Chart in React Chart
 
 ## Vertical
 

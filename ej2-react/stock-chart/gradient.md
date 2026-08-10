@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gradient in React Stock chart component | Syncfusion
-description: Learn here all about Gradient in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
+title: Gradient in React Stock Chart | Syncfusion
+description: Learn how to apply linear and radial gradients to the Syncfusion React Stock Chart Component series and indicators for richer visual styling.
 control: Gradient
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Gradient in React Stock chart control
+# Gradient in React Stock Chart
 
 <!-- markdownlint-disable MD038 -->
 

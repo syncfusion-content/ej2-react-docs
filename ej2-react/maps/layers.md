@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Layers in React Maps component | Syncfusion
-description: Learn here all about Layers in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Layers 
+title: Layers in React Maps | Syncfusion
+description: Learn how to add and combine multiple layers in React Maps, including main shape layers, map providers, and overlay sublayers for richer visualizations.
+control: Layers
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Layers in React Maps component
+# Layers in React Maps
 
 Layers are the fundamental building blocks of the Maps component. Each layer can display shape data from GeoJSON files or map providers. The Maps component renders content through the [`layers`](https://ej2.syncfusion.com/react/documentation/api/maps#layers) property, and multiple layers can be added to create rich, layered map visualizations.
 

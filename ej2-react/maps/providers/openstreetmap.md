@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Openstreetmap in React Maps component | Syncfusion
-description: Learn here all about Openstreetmap in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Openstreetmap 
+title: OpenStreetMap in React Maps | Syncfusion
+description: Learn how to integrate OpenStreetMap as a tile-based map provider in React Maps using free, community-built geographic tile images.
+control: Openstreetmap
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Openstreetmap integration in React Maps component
+# OpenStreetMap in React Maps
 
 Map providers are online services that supply map tile images for rendering geographic visualizations. The Maps component supports integration with various tile-based map providers to display real-world geographic data.
 

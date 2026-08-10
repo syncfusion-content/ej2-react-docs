@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Selection in React 3D Chart component | Syncfusion
-description: Learn here all about selection in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Selection in React 3D Chart | Syncfusion
+description: Learn how to select series or data points in the Syncfusion React 3D Chart on mouse click with selection modes for series, point, or cluster.
+control: Selection
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Selection in React 3D Chart control
+# Selection in React 3D Chart
 
 The 3D chart provides selection support for the series and its data points on mouse click.
 

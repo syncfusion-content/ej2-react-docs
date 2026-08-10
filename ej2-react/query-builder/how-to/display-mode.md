@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Display mode in React Query builder component | Syncfusion
-description: Learn here all about Display mode in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
+title: How to change display mode in React Query Builder UI | Syncfusion
+description: Switch the React Query Builder UI layout between vertical and horizontal orientations with the displayMode property for compact or stacked rules.
 control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display mode in React Query Builder component
+# How to change display mode in React Query Builder UI
 
-The Query Builder supports two layout orientations to accommodate different UI preferences. Display the component vertically or horizontally using the [`displayMode`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#displaymode) property. By default, the Query Builder displays in horizontal mode.
+The Query Builder supports two layout orientations to accommodate different UI preferences. Display the component vertically or horizontally using the [`displayMode`](https://ej2.syncfusion.com/react/documentation/api/query-builder#displaymode) property. By default, the Query Builder displays in horizontal mode.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

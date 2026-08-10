@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Tooltip in React Treemap component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Tooltip in React TreeMap | Syncfusion
+description: Learn how to enable and customize tooltips in the Syncfusion React TreeMap to show item details on hover.
 control: Tooltip 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in React Treemap component
+# Tooltip in React TreeMap
 
 Tooltip is used to display details about the items in the TreeMap. When space constraints prevent us from displaying the information using Data Labels, the tooltip comes in handy.
 

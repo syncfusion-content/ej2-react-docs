@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Legend customization in React Heatmap chart component | Syncfusion
-description: Learn here all about Legend customization in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: Customize legend labels in React HeatMap Chart | Syncfusion
+description: Customize or hide React HeatMap Chart legend labels at runtime by handling the legendRender client-side event with custom text and styles.
 control: Legend customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Legend customization in React Heatmap chart component
+# How to customize legend labels in React HeatMap Chart
 
 You can change the legend label using the `legendRender` client-side event. You can also hide the legend label using this client-side event.
 

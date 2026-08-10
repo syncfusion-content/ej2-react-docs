@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Legend in React 3D Circular Chart component | Syncfusion
-description: Learn here all about legend in Syncfusion React 3D Circular Chart component of Syncfusion Essential JS 2 and more.
+title: Legend in React 3D Circular Chart Component | Syncfusion
+description: Learn how to enable the legend in the Syncfusion React 3D Circular Chart to identify each slice, with options for position, shape, paging and more.
 control: Legend
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Legend in React 3D Circular Chart component
+# Legend in React 3D Circular Chart
 
 The legend provides information about the data points rendered in the 3D Circular Chart. It can be added by enabling the `visible` option in the `legendSettings` property.
 

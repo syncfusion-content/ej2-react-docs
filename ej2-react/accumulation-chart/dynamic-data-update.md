@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dynamic data update in Accumulation Chart component | Syncfusion
-description: Learn here all about dynamic data update in Syncfusion Accumulation Chart component in Syncfusion Essential JS 2 and more.
+title: Dynamic Data Update in React Accumulation Chart | Syncfusion
+description: Learn how to update the Syncfusion React Accumulation Chart data dynamically at runtime using the addPoint, removePoint, and setData methods.
 platform: ej2-react
 control: Dynamic Data Update
 documentation: ug
@@ -9,7 +9,7 @@ publishingplatform: ##Platform_Name##
 domainurl: ##DomainURL##
 ---
 
-# Dynamic data update in React Accumulation Chart component
+# Dynamic Data Update in React Accumulation Chart
 
 ## Adding a new data point
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Special points customization in React Sparkline component | Syncfusion
-description: Learn here all about Special points customization in Syncfusion React Sparkline component of Syncfusion Essential JS 2 and more.
+title: Special Points Customization in React Sparkline | Syncfusion
+description: Customize the start, end, positive, negative, low, and tie point colors in the Syncfusion React Sparkline for line, column, and area types.
 control: Special points customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Special points customization in React Sparkline component
+# Special Points Customization in React Sparkline
 
 You can customize the points by initializing the point colors. The customization options allows to differentiate the [`start`], [`end`], [`positive`], [`negative`], and [`low`] points. This customization is only applicable for line, column, and area type sparklines.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Title and Subtitle in React Sankey Chart component | Syncfusion
-description: Learn here all about Title and Subtitle in Syncfusion React Sankey Chart component of Syncfusion Essential JS 2 and more.
+title: Title and Subtitle in React Sankey Chart | Syncfusion
+description: Learn how to add and customize a title and subtitle for the Syncfusion React Sankey Chart Component.
 control: Title and Subtitle
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Title and Subtitle in React Sankey Chart component
+# Title and Subtitle in React Sankey Chart
 
 The Sankey Chart supports adding descriptive titles and subtitles to provide context and information about your data visualization. These text elements help users quickly understand the purpose and content of the diagram. You can fully customize the text, styling, alignment, and appearance using dedicated properties.
 

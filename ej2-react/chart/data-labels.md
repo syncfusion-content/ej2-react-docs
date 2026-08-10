@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data labels in React Chart component | Syncfusion
-description: Learn here all about Data labels in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Data labels 
+title: Data Labels in React Chart | Syncfusion
+description: Learn how to add and format data labels in Syncfusion React Chart with custom positions, templates, margins, rotation, and per-point styling.
+control: Data labels
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data labels in React Chart component
+# Data Labels in React Chart
 
 Data labels display the values of data points directly on the chart, reducing the need to reference axes for exact values. Enable data labels by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/dataLabelSettings#visible) option to `true` in the `dataLabel` configuration. Labels automatically adjust to avoid overlapping and maintain readability.
 

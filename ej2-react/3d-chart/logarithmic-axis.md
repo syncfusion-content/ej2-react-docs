@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Logarithmic axis in React 3D Chart component | Syncfusion
-description: Learn here all about logarithmic axis in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Logarithmic Axis in React 3D Chart | Syncfusion
+description: Learn how to use the logarithmic axis in the Syncfusion React 3D Chart to plot data that spans several orders of magnitude on a customizable log scale.
+control: Logarithmic Axis
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Logarithmic axis in React 3D Chart control
+# Logarithmic Axis in React 3D Chart
 
 Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numerical values in both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>).
 

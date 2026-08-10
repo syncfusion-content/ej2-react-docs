@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Center label in React Accumulation chart component | Syncfusion
-description: Learn here all about Center label in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
+title: Center Label in React Accumulation Chart | Syncfusion
+description: Learn how to show a center label in the Syncfusion React Accumulation Chart doughnut to display total, percentage, or custom text in the inner radius.
 control: Center label 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Center label in React Accumulation chart component
+# Center Label in React Accumulation Chart
 
 ## Center label
 

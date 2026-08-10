@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # PDF export in React Pivot Table
 
-The React Pivot Table allows exporting pivot table data as a PDF document. To enable PDF export, inject the `PDFExport` module into the Pivot Table and set the [`allowPdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#allowpdfexport) property to **true**. Once enabled, use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method to generate and download the PDF file.
+The React Pivot Table allows you to export Pivot Table data as a PDF document. To enable PDF export, inject the `PDFExport` module into the Pivot Table and set the [`allowPdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#allowpdfexport) property to **true**. Once enabled, use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method to generate and download the file.
 
 In the following example, an external button is used to start the PDF export process. When the user clicks the button, the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method is called so that the Pivot Table data can be saved as a PDF file.
 
@@ -31,9 +31,15 @@ In the following example, an external button is used to start the PDF export pro
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs208" %}
 
-## Multiple Pivot Table exporting
+## Exporting multiple Pivot Tables
 
 Multiple Pivot Tables can be exported to the same or different pages in a single PDF file for easy comparison. Each Pivot Table requires a unique HTML element ID, such as **PivotTable1** and **PivotTable2**. To export multiple Pivot Tables, provide their IDs in the `pivotTableIds` property of the [`pdfExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties), then pass the configured [`pdfExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties) to the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method with `isMultipleExport` set to **true** to enable multiple Pivot Table export mode.
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `pivotTableIds` | `string[]` | `[]` | The list of HTML element IDs of the Pivot Table instances to export. |
+| `multipleExport.type` | `string` | `'NewPage'` | `'AppendToPage'` exports all Pivot Tables on a single page; `'NewPage'` starts each Pivot Table on a new page. |
+| `multipleExport.blankSpace` | `number` | `0` | The amount of blank space (in points) to leave between Pivot Tables when `type` is `'AppendToPage'`. |
 
 > Note: PivotView PDF export uses Grid's PdfExportProperties model for configuration.
 
@@ -81,7 +87,7 @@ To export each Pivot Table on a separate page, set the `multipleExport.type` pro
 
 ## Export table and chart into the same document
 
-If you want to export both the table and the chart from the Pivot Table into a single PDF file, set the [`displayOption`](https://ej2.syncfusion.com/react/documentation/api/pivotview/displayoptionmodel) property to **Both**. Then, when you use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method, make sure to set the `exportBothTableAndChart` option to **true**. This will include both the data table and its chart in one PDF document when you export.
+If you want to export both the table and the chart from the Pivot Table into a single PDF file, set the [`displayOption`](https://ej2.syncfusion.com/react/documentation/api/pivotview/displayoptionmodel) property to **Both** and inject the `Chart` module alongside `PDFExport`. Then, when you use the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method, make sure to set the `exportBothTableAndChart` option to **true**. This will include both the data table and its chart in one PDF document when you export.
 
 The following example shows how you can set this up in your application:
 
@@ -256,7 +262,7 @@ The below code illustrates the PDF export customization options.
 
 ### Changing the file name while exporting
 
-The PDF export provides an option to change the file name of the document before exporting. To change the file name, define the [`fileName`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties#filename) property in the [`pdfExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties) object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method.
+The PDF export provides an option to change the file name of the exported document before exporting. To change the file name, define the [`fileName`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties#filename) property in the [`pdfExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties) object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -472,7 +478,7 @@ In the following code example, the row and column spans are adjusted for empty c
 
 The Pivot Table allows adding hyperlinks and images to cells during PDF export. The [`pdfQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#pdfquerycellinfo) event handles row and value cells, while the [`pdfHeaderQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#pdfheaderquerycellinfo) event handles header cells. Both events provide access to the [hyperlink](https://ej2.syncfusion.com/react/documentation/api/grid/pdfquerycellinfoeventargs#hyperlink) property to set URLs in cells and the [image](https://ej2.syncfusion.com/react/documentation/api/grid/pdfquerycellinfoeventargs#image) property to add images to cells.
 
-> PDF export supports base64 strings for exporting images.
+> PDF export supports Base64 strings for exporting images.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -556,6 +562,8 @@ The following example demonstrates exporting a Pivot Table with a custom date fo
 
 When you export the Pivot Table as a PDF document, you can change the colors used for headers, captions, and records. To do this, use the [`theme`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties#theme) property inside the [`pdfExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties) object. Pass this object to the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#pdfexport) method. This allows you to adjust how the Pivot Table looks in the exported PDF.
 
+The available built-in `theme` values are: `Material`, `Fabric`, `Bootstrap`, `Bootstrap4`, `Tailwind`, `Fluent`, `Fluent2`, `Material3`, `MaterialDark`, `FabricDark`, `BootstrapDark`, `TailwindDark`, `FluentDark`, and `HighContrast`.
+
 > By default, the Material theme is applied to the exported PDF document.
 
 {% tabs %}
@@ -575,7 +583,11 @@ When you export the Pivot Table as a PDF document, you can change the colors use
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs214" %}
 
-### Changing default font while exporting 
+### Font customization
+
+The following options control the fonts used in the exported PDF document.
+
+#### Changing default font while exporting
 
 By default, the Pivot Table uses the "Helvetica" font in the exported PDF. You can change this font by setting the [`theme`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties#theme) property in [`pdfExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties). The available built-in font options are:
 
@@ -599,9 +611,11 @@ let pdfExportProperties: PdfExportProperties = {
 };
 ```
 
-### Adding custom font while exporting
+#### Adding custom font while exporting
 
-You can also use custom fonts when exporting if you need support for languages or styles that are not available in the built-in fonts. The custom font should be in **Base64** format and applied using the **PdfTrueTypeFont** class. In the example below, the **Advent Pro** font is used, which supports the Hungarian language.
+You can also use custom fonts when exporting if you need support for languages or styles that are not available in the built-in fonts. The custom font should be in **Base64** format and applied using the **PdfTrueTypeFont** class:
+
+In the example below, the **Advent Pro** font is used, which supports the Hungarian language.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -622,9 +636,9 @@ You can also use custom fonts when exporting if you need support for languages o
 
 > Non-English alphabets can also be exported correctly when you specify a suitable font.
 
-### Apply custom styles based on specific conditions
+### Apply conditional styles
 
-When exporting Pivot Table data to PDF, custom styles can be applied to cells based on their values or other criteria. To apply custom styles, use the [`pdfQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#pdfquerycellinfo) event. In this event, the cell information can be accessed through the [`args.data`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfquerycellinfoeventargs#data) property, and its style properties, such as [`backgroundColor`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfstyle#backgroundcolor), [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfstyle#fontfamily), and [`textPenColor`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfstyle#textpencolor), can be customized. These changes apply only to the exported PDF and do not affect the on-screen Pivot Table display
+When exporting Pivot Table data to PDF, custom styles can be applied to cells based on their values or other criteria. To apply custom styles, use the [`pdfQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#pdfquerycellinfo) event. In this event, the cell information can be accessed through the [`args.data`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfquerycellinfoeventargs#data) property, and its style properties, such as [`backgroundColor`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfstyle#backgroundcolor), [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfstyle#fontfamily), and [`textPenColor`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfstyle#textpencolor), can be customized. These changes apply only to the exported PDF and do not affect the on-screen Pivot Table display.
 
 The following example demonstrates how to apply conditional formatting to the **Sold** field values in the exported PDF document. Values below **700** units are highlighted in **red**, while values of **700** units or more are highlighted in **green**.
 
@@ -647,7 +661,9 @@ The following example demonstrates how to apply conditional formatting to the **
 
 ## Enabling horizontal overflow
 
-The Pivot Table component supports exporting all columns on a single page in the exported PDF document, even if the number of columns exceeds the maximum page limits. This functionality ensures readability and comprehensiveness of the exported PDF. To enable this option, set the [allowHorizontalOverflow](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties#allowhorizontaloverflow) property in the [`pdfExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties) object to **true**.
+The Pivot Table component supports exporting all columns on a single page in the exported PDF document, even if the number of columns exceeds the configured page width. This functionality ensures readability and comprehensiveness of the exported PDF. To enable this option, set the [allowHorizontalOverflow](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties#allowhorizontaloverflow) property in the [`pdfExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfexportproperties) object to **true**.
+
+> Note: Enabling horizontal overflow may cause columns to render at a reduced size to fit on a single page.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -712,7 +728,7 @@ By default, row headers are repeated on each page when exporting the Pivot Table
 
 ## Repeat column headers on every page
 
-By default, column headers are repeated on each page when exporting the Pivot Table as a PDF. This ensures consistent column identification across multi-page documents. To prevent column headers from repeating on each page, use the [`pdfQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#pdfquerycellinfo) event. In this event, access the `pdfGrid` object through `args.cell.row.pdfGrid`, which holds the current PDF grid and allows component over the repeat header behavior. Then set its `repeatHeader` property to **false** to disable the repetition.
+By default, column headers are repeated on each page when exporting the Pivot Table as a PDF. This ensures consistent column identification across multi-page documents. To prevent column headers from repeating on each page, use the [`pdfQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#pdfquerycellinfo) event. In this event, access the `pdfGrid` object through `args.cell.row.pdfGrid`, which holds the current PDF grid and allows control over the repeat header behavior. Then set its `repeatHeader` property to **false** to disable the repetition.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -757,7 +773,7 @@ The [`pdfQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivo
 - [`data`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfquerycellinfoeventargs#data): The complete row data for the cell.
 - [`style`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfQueryCellInfoEventArgs#style): The style properties that control how the cell looks in the PDF.
 
-By using this event, users can easily update the cell text, apply different styles such as font or background color, or adjust other settings as needed during PDF export.
+By using this event, you can update the cell text, apply different styles such as font or background color, or adjust other settings as needed during PDF export.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -778,7 +794,7 @@ By using this event, users can easily update the cell text, apply different styl
 
 ### PdfHeaderQueryCellInfo
 
-The [`pdfHeaderQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#pdfheaderquerycellinfo) event is triggered for each column header cell when exporting the Pivot Table to a PDF document. This event allows users to easily change values or apply styles to the column header cells in the exported PDF file.
+The [`pdfHeaderQueryCellInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#pdfheaderquerycellinfo) event is triggered for each column header cell when exporting the Pivot Table to a PDF document. This event allows you to change values or apply styles to the column header cells in the exported PDF file.
 
 The event provides the following parameters:
 
@@ -831,3 +847,4 @@ The event provides the following parameters:
 ## See Also
 
 * [Excel Exporting](./excel-export)
+* [Print](./print)

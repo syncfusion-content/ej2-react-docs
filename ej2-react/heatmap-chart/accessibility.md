@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React HeatMap component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React HeatMap component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React HeatMap Chart | Syncfusion
+description: Use the React HeatMap Chart with WAI-ARIA roles, keyboard navigation, screen reader support, and WCAG 2.2, Section 508, and ADA compliance.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React HeatMap component
+# Accessibility in React HeatMap Chart
 
 The HeatMap component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gauge pointers in React Circular gauge component | Syncfusion
-description: Learn here all about Gauge pointers in Syncfusion React Circular gauge component of Syncfusion Essential JS 2 and more.
+title: Pointers in React Circular Gauge | Syncfusion
+description: Use Needle, RangeBar, and Marker pointers in the React Circular Gauge to indicate axis values, with multiple pointers, animation, and pointer drag support.
 control: Gauge pointers 
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Gauge pointers in React Circular gauge component
+# Pointers in React Circular Gauge
 
 Pointers are used to indicate values on the axis. Value of the pointer can be modified using the [`value`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/pointer#value-number) property.
 

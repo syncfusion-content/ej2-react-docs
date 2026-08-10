@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Getting Started with React TreeMap component | Syncfusion
-description: Checkout and learn about getting started with the React TreeMap component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React TreeMap | Syncfusion
+description: Learn how to get started with the Syncfusion React TreeMap control. Explore setup, features, examples, and customization options.
 control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React TreeMap Component
+# Getting Started with React TreeMap
 
 This document explains the steps required to create and render a TreeMap component and demonstrates the component's basic usage.
 

@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Appearance in React Heatmap chart component | Syncfusion
-description: Learn here all about Appearance in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: Appearance in React HeatMap Chart | Syncfusion
+description: Style React HeatMap Chart cells with cellSettings including border, radius, hover highlighting, and Table/Row/Column color gradient modes.
 control: Appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in React Heatmap chart component
+# Appearance in React HeatMap Chart
 
 ## Cell customization
 

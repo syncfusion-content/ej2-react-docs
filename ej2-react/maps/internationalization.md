@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Internationalization in React Maps component | Syncfusion
-description: Learn here all about Internationalization in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Internationalization 
+title: Internationalization in React Maps | Syncfusion
+description: Learn how to globalize React Maps data labels and tooltips using number and date formatters for different cultures and locales worldwide.
+control: Internationalization
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Internationalization in React Maps component
+# Internationalization in React Maps
 
 Internationalization enables the Maps component to display content in different cultures and locales, making it accessible to users worldwide. The Maps component supports internationalization for the following elements:
 

@@ -224,7 +224,7 @@ To enable label filtering, set the [`allowLabelFilter`](https://ej2.syncfusion.c
 
 ![Resultant pivot table on label filter](images/labelfiltering_grid.png)
 
-> In label filtering UI, based on the field chosen, it’s member data type is automatically recognized and filtering operation will be carried out. Where as in code behind, user need to define the data type through a property and it has been explained in the immediate section below.
+> In the label filtering UI, the member data type is automatically recognized based on the field chosen, and the filtering operation is carried out accordingly. In code-behind, however, users need to define the data type through a property, as explained in the following section.
 
 ### Filtering string data type through code
 
@@ -291,7 +291,7 @@ For example, to display only sales data where the "Sold" field values are less t
 <!-- markdownlint-disable MD028 -->
 > The following operators are supported for number data type: **Equals**, **DoesNotEquals**, **GreaterThan**, **GreaterThanOrEqualTo**, **LessThan**, **LessThanOrEqualTo**, **Between**, and **NotBetween**.
 
-> Number filtering is available only when the field contains numeric data format.
+> Number filtering is available only when the field contains numeric values.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -318,7 +318,7 @@ To apply date filtering, specify your filtering criteria using the [`value1`](ht
 
 > You can use the following operators with date data type filtering: **Equals**, **DoesNotEquals**, **Before**, **BeforeOrEqualTo**, **After**, **AfterOrEqualTo**, **Between**, and **NotBetween**.
 
-> Date filtering is available only when the field has date type [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) configured.
+> Date filtering is available only when the field has a [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) entry with `type: 'date'` configured.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -429,6 +429,8 @@ You can clear the applied value filter by clicking the "Clear" option at the bot
 
 ## Event
 
+The Pivot Table provides the following events to monitor filtering operations. Use them to track, customize, or cancel a filter action at runtime.
+
 ### MemberFiltering
 
 The [`memberFiltering`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#memberfiltering) event gives you complete control over filter operations by triggering before any filter is applied through the filter dialog. This event activates specifically when you click the **"OK"** button in the filter dialog, allowing you to review, modify, or cancel the filtering process based on your requirements.
@@ -437,11 +439,11 @@ This event provides access to the current filter settings, enabling you to custo
 
 The event includes the following parameters:
 
-* [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/memberfilteringeventargs#cancel) - A boolean property that stops the filter from being applied when set to **true**.
+* [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/memberfilteringeventargs#cancel) - A Boolean property that stops the filter from being applied when set to `true`.
 * [`filterSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/filter) - Contains the current [filter settings](https://ej2.syncfusion.com/react/documentation/api/pivotview/filter) including filter items, types, and conditions.
 * [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/memberfilteringeventargs#datasourcesettings) - Holds the updated [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings) after the filter is applied.
 
-For example, you can use the [`memberFiltering`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#memberfiltering) event to block the filter action by setting `args.cancel` parameter to **true**. This is shown below:
+For example, you can use the [`memberFiltering`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#memberfiltering) event to block the filter action by setting the `args.cancel` parameter to `true`. This is shown below:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -498,9 +500,9 @@ The [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview
 
 > **Note**: The `fieldInfo` property is available only when the action involves a specific field, such as filtering, sorting, removing a field from the grouping bar, editing, or changing the aggregation type.
 
-- [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionbegineventargs#cancel): A boolean property that allows you to prevent the current action from completing. Set this to **true** to stop the action.
+- [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionbegineventargs#cancel): A Boolean property that allows you to prevent the current action from completing. Set this to `true` to stop the action.
 
-In the example below, you can prevent a filter action by setting **args.cancel** to **true** in the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event:
+In the example below, you can prevent a filter action by setting `args.cancel` to `true` in the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -556,7 +558,7 @@ The event provides the following parameters:
 
 The [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionfailure) event is triggered when a UI action fails to produce the expected result. This event provides detailed information about the failure through the following parameters:
 
-* [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionfailureeventargs#actionname): It holds the name of the current action failed. For example, if the action fails while filtering, the action name will be shown as **Filter field**.
+* [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionfailureeventargs#actionname): It holds the name of the current action that failed. For example, if the action fails while filtering, the action name will be shown as **Filter field**.
 
 * [`errorInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionfailureeventargs#errorinfo): It holds the error information of the current UI action.
 

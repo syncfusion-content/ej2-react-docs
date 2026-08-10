@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool tip table in React Heatmap chart component | Syncfusion
-description: Learn here all about Tool tip table in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: Create a table in tooltip in React HeatMap Chart | Syncfusion
+description: Render the React HeatMap Chart tooltip as an HTML table by setting the template id in tooltipSettings to show multi-column cell data.
 control: Tool tip table 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool tip table in React Heatmap chart component
+# How to create a table in tooltip in React HeatMap Chart
 
 You can show a tooltip as a table using the `template` property in `tooltipSettings`.
 

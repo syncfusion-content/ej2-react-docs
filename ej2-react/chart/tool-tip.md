@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip in React Chart component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Tooltip 
+title: Tooltip in React Chart | Syncfusion
+description: Learn how to enable tooltips in Syncfusion React Chart with custom formats, HTML templates, highlighting, fixed position, and follow-pointer behavior.
+control: Tooltip
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in React Chart component
+# Tooltip in React Chart
 
 The chart displays detailed information about a data point through a tooltip when the mouse pointer moves over the point.
 

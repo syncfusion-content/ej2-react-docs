@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Maps component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in React Maps | Syncfusion
+description: Learn about React Maps accessibility compliance with WCAG 2.2, Section 508, and ADA, including screen reader and keyboard navigation support.
+control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Maps component
+# Accessibility in React Maps
 
 Accessibility enables users with disabilities to interact with the Maps component through assistive technologies such as screen readers and keyboard navigation. The Maps component is designed to comply with [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles).
 

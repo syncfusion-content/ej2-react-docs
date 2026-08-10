@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grid tick in React Range navigator component | Syncfusion
-description: Learn here all about Grid tick in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
-control: Grid tick 
+title: Grid and Tick Lines in React Range Navigator | Syncfusion
+description: Learn how to show and customize grid and tick lines on the Syncfusion React Range Navigator Component using major tick settings.
+control: Grid tick
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grid tick in React Range navigator component
+# Grid and Tick Lines in React Range Navigator
 
 ## Grid line customization
 

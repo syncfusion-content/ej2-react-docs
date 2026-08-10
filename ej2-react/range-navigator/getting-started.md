@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Range Navigator component | Syncfusion
-description: Check out and learn about getting started with the React Range Navigator component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Range Navigator | Syncfusion
+description: Learn how to get started with the Syncfusion React Range Navigator Component. Explore setup, features, examples, and customization options.
 control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Range Navigator component
+# Getting Started with React Range Navigator
 
 This section describes the steps to create a simple Range Navigator and demonstrates the basic usage of the Range Navigator component.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Query builder component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React Query Builder UI | Syncfusion
+description: Bind the React Query Builder UI to local JSON arrays or remote REST services via DataManager for local and remote data sources in one configuration.
 control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Query Builder component
+# Data Binding in React Query Builder UI
 
 The Query Builder uses DataManager to support both local JavaScript arrays and remote RESTful JSON services. Bind data using the `dataSource` property with either a DataManager instance or a JavaScript object array. Two binding methods are available:
 
@@ -17,7 +17,7 @@ The Query Builder uses DataManager to support both local JavaScript arrays and r
 
 ## Local data
 
-To bind local data to the Query Builder, assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) property. You can also provide local data as a DataManager instance.
+To bind local data to the Query Builder, assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder#datasource) property. You can also provide local data as a DataManager instance.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -34,7 +34,7 @@ To bind local data to the Query Builder, assign a JavaScript object array to the
 
 ## Remote data
 
-To bind remote data to the Query Builder, assign service data as a DataManager instance to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) property, specifying the service endpoint URL.
+To bind remote data to the Query Builder, assign service data as a DataManager instance to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder#datasource) property, specifying the service endpoint URL.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

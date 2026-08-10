@@ -41,7 +41,7 @@ The drill-down and drill-up features allow you to expand or collapse data for a 
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs330" %}
 
-## Expand All
+## Expand all
 
 > This property is applicable only for the relational data source.
 
@@ -117,7 +117,7 @@ The following example demonstrates how to configure a Pivot Table where all head
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs45" %}
 
-## Expand or Collapse Specific Members
+## Expand or collapse specific members
 
 The Pivot Table component enables users to programmatically expand or collapse specific members in any field placed under the row or column axes. This can be achieved using the [`drilledMembers`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#drilledmembers) property. The following properties of [`drilledMembers`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#drilledmembers) are described below:
 
@@ -146,13 +146,15 @@ The following code demonstrates how to configure the Pivot Table to expand speci
 
 ## Event
 
+The Pivot Table provides the following events to monitor drill down and drill up operations. Use them to track, customize, or intercept a specific stage of the user interaction lifecycle.
+
 ### Drill
 
 The [`drill`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#drill) event is triggered each time a field member in the Pivot Table is expanded or collapsed. This event allows customization of drill actions, such as modifying the delimiter or changing the behavior for specific items. The event provides the following parameters:
 
 * [`drillInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/drillargs#drillinfo): Contains information about the currently drilled field member.
 * [`pivotview`](https://ej2.syncfusion.com/react/documentation/api/pivotview/drillargs#pivotview): A reference to the Pivot Table component instance.
-* [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/drillargs#cancel): Specifies whether to prevent the current drill operation. Set this property to true in the event handler to cancel the action.
+* [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/drillargs#cancel): Specifies whether to prevent the current drill operation. Set this property to `true` in the event handler to cancel the action.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -185,7 +187,7 @@ The [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview
 
 - [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionbegineventargs#cancel): Allows you to block the current action by setting it to `true`.
 
-In the below sample, drill down and drill up action can be restricted by setting the **args.cancel** option to **true** in the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event.
+In the following sample, the drill down and drill up actions can be restricted by setting the `args.cancel` option to `true` in the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -206,11 +208,11 @@ In the below sample, drill down and drill up action can be restricted by setting
 
 ### ActionComplete
 
-The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actioncomplete) triggers when a UI action such as drill down or drill up, is completed. This allows user to identify the current UI actions being completed at runtime. It has the following parameters:
+The event [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actioncomplete) triggers when a UI action such as drill down or drill up is completed. This allows users to identify the UI actions being completed at runtime. It has the following parameters:
 
 * [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactioncompleteeventargs#datasourcesettings): It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
 
-* [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactioncompleteeventargs#actionname): It holds the name of the current action completed. The following are the UI actions and their names:
+* [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactioncompleteeventargs#actionname): It holds the name of the completed action. The following are the UI actions and their names:
 
 | Action | Action Name|
 |------|-------------|
@@ -265,3 +267,9 @@ The [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/pivotvi
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs50" %}
+
+## See Also
+
+* [Drill through](./drill-through)
+* [Row and column](./row-and-column)
+* [Aggregation](./aggregation)

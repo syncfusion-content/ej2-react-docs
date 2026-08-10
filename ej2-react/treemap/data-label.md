@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Data label in React Treemap component | Syncfusion
-description: Learn here all about Data label in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Data Label in React TreeMap | Syncfusion
+description: Learn how to show and format data labels on items and groups in the Syncfusion React TreeMap with labelPath and labelFormat.
 control: Data label 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data label in React Treemap component
+# Data Label in React TreeMap
 
 Data Labels are used to identify the name of items or groups in the TreeMap component. Data Labels will be shown by specifying the data source properties in the [`labelPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/leafItemSettingsModel#labelpath) of the [`leafItemSettings`](https://ej2.syncfusion.com/react/documentation/api/treemap#leafitemsettings).
 

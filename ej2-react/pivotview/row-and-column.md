@@ -394,7 +394,7 @@ To set the cell selection mode, use the [`cellSelectionMode`](https://ej2.syncfu
 
 Highlighting selected cells in the Pivot Table with a different background color helps users quickly identify and focus on important data. To achieve this effect seamlessly, you can apply built-in CSS classes that customize the appearance of selected cells.
 
-In the example below, selected cells appear with a **green-yellow** background. Simply add the custom styles to your stylesheet, and they will be applied when you select a cell using the mouse or arrow keys.
+In the example below, selected cells appear with a **green-yellow** background. The styles are defined as an inline CSS string in `App.jsx`; include the same snippet in your application's stylesheet.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -468,7 +468,7 @@ You can use these parameters to decide whether or not the cell should be selecte
 
 ### Limitations
 
-The [grouping](./grouping) feature is applied based on the selected row or column headers using the following [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#selectionsettings): selection [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#mode) set to **Cell**, selection [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#type) set to **Multiple**, and [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#cellselectionmode) set to **Box** by default. When using the selection and [grouping](./grouping.md) features together, cell selection is limited to row or column headers with these settings. Other settings, such as selection [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#mode) set to **Row** or **Column**, selection [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#type) set to **Single**, or [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#cellselectionmode) set to **Flow**, are incompatible with [grouping](./grouping.md) in the pivot table.
+The [grouping](./grouping) feature is applied based on the selected row or column headers using the following [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettingsmodel#selectionsettings): selection [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#mode) set to **Cell**, selection [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#type) set to **Multiple**, and [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#cellselectionmode) set to **Box** by default. When using the selection and [grouping](./grouping) features together, cell selection is limited to row or column headers with these settings. Other settings, such as selection [`mode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#mode) set to **Row** or **Column**, selection [`type`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#type) set to **Single**, or [`cellSelectionMode`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotselectionsettings#cellselectionmode) set to **Flow**, are incompatible with [grouping](./grouping) in the pivot table.
 
 ## Clip Mode
 
@@ -499,7 +499,7 @@ The clip mode option in the Pivot Table determines how cell content is displayed
 
 ## Cell Template
 
-You can change how each cell in the Pivot Table looks by using the [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#celltemplate) option. With [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#celltemplate), you can use either an HTML string or the ID of an HTML element to add custom content to every cell. This helps you display cell values in any format you prefer, such as adding icons, colors, or other elements for better understanding.
+You can change how each cell in the Pivot Table looks by using the [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#celltemplate) option. Set [`cellTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#celltemplate) to the `id` of an HTML element that contains the template markup. The element must be present in the DOM before the Pivot Table renders. This helps you display cell values in any format you prefer, such as adding icons, colors, or other elements for better understanding.
 
 For example, in the following sample, each year's revenue cost is shown along with trend icons. This gives users a clear and quick way to see changes in data at a glance.
 

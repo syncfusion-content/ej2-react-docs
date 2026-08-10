@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column Chart in React Charts | Syncfusion
-description: Learn here all about Column Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Column Chart 
+title: Column Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Column series in Syncfusion React Chart to compare category data with vertical bars, fill, and border styling.
+control: Column Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column Chart in React Charts
+# Column Chart in React Chart
 
 ## Column
 

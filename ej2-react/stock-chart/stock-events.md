@@ -1,7 +1,7 @@
 ﻿---
 layout: post
-title: Stock events in React Stock chart component | Syncfusion
-description: Learn here all about Stock events in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
+title: Stock Events in React Stock Chart | Syncfusion
+description: Learn how to add stock events to the Syncfusion React Stock Chart Component to mark specific data points with custom values and limit them to a particular series.
 control: Stock events 
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Stock events in React Stock chart component
+# Stock Events in React Stock Chart
 
 Stock Events visualizes stock events in stock chart. 'SplineSeries' is used to represent selected data value. You can customize the specific data value using `stockEvents` event.
 

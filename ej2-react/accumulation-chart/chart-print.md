@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart print in React Accumulation chart component | Syncfusion
-description: Learn here all about Chart print in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
+title: Print and Export in React Accumulation Chart | Syncfusion
+description: Learn how to print or export the Syncfusion React Accumulation Chart to PDF, image, or SVG using the public print and export methods.
 control: Chart print 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart print in React Accumulation chart component
+# Print and Export in React Accumulation Chart
 
 ## Print
 

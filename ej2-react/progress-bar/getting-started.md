@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with React Progress Bar | Syncfusion
-description: Install the Syncfusion React Progress Bar in a Vite project and configure its properties to visualize task completion.
+description: Learn how to get started with the Syncfusion React Progress Bar control. Explore setup, dependencies, installation, and configuration options.
 control: Getting Started
 platform: ej2-react
 documentation: ug

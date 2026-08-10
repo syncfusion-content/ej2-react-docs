@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool tip in React Bullet chart component | Syncfusion
-description: Learn here all about Tool tip in Syncfusion React Bullet chart component of Syncfusion Essential JS 2 and more.
-control: Tool tip 
+title: Tooltip in React Bullet Chart | Syncfusion
+description: Learn how to enable and customize tooltips on the Syncfusion React Bullet Chart Component with template options.
+control: Tooltip
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool tip in React Bullet chart component
+# Tooltip in React Bullet Chart
 
 When the mouse is hovered over a bar in the Bullet Chart, the tooltip displays important summary about the actual and the target bar values.
 

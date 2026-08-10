@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sparkline types in React Sparkline component | Syncfusion
-description: Learn here all about Sparkline types in Syncfusion React Sparkline component of Syncfusion Essential JS 2 and more.
+title: Sparkline Types in React Sparkline | Syncfusion
+description: Render data with the Syncfusion React Sparkline using line, column, area, win-loss, or pie types to visualize trends, comparisons, and composition.
 control: Sparkline types 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sparkline types in React Sparkline component
+# Sparkline Types in React Sparkline
 
 Different shapes can be used to visualize data in a Sparkline component. You can change the Sparkline type using the [`type`](https://ej2.syncfusion.com/react/documentation/api/sparkline/sparklinemodel#type) property.
 

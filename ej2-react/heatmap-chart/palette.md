@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Palette in React Heatmap chart component | Syncfusion
-description: Learn here all about Palette in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: Palette in React HeatMap Chart | Syncfusion
+description: Define gradient or fixed color palettes for React HeatMap Chart cells using paletteSettings, with color stops, value ranges, and colorValuePath mapping.
 control: Palette 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Palette in React Heatmap chart component
+# Palette in React HeatMap Chart
 
 In heat map, each data point is displayed as a cell with applied color based on the data value. The palette in the heat map is used to define the color range for cells and gradient type for colors. You can define the colors either in RGB or hex codes using the [color](https://ej2.syncfusion.com/react/documentation/api/heatmap/paletteCollection#color) property in the `palette`. The defined colors are applied to the cell background based on the palette type and cell value.
 

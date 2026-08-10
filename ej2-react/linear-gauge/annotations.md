@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Annotations in React Linear gauge component | Syncfusion
-description: Learn here all about Annotations in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
+title: Annotations in React Linear Gauge | Syncfusion
+description: Add text, image, or custom HTML annotations to mark areas of interest on the React Linear Gauge with precise pixel or axis-based positioning.
 control: Annotations 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations in React Linear gauge component
+# Annotations in React Linear Gauge
 
 <!-- markdownlint-disable MD013 -->
 
@@ -16,7 +16,7 @@ Annotations are used to mark the specific area of interest in the Linear Gauge w
 
 ## Adding annotation
 
-To render the custom HTML elements in the Linear Gauge component, use the [`content`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#content) property in the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation). The annotation can be rendered either by specifying the id of the element or specifying the code to create a new element that needs to be displayed in the gauge area.
+To render the custom HTML elements in the Linear Gauge component, use the [`content`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#content) property in the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation). The annotation can be rendered either by specifying the id of the element or specifying the code to create a new element that needs to be displayed in the gauge area.
 
 <!-- markdownlint-disable MD036 -->
 
@@ -54,16 +54,16 @@ root.render(<App />);
 
 The following properties are used to customize the annotation.
 
-* [`zIndex`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#zindex) - Bring the annotation to the front or back, when annotation overlaps with another element.
-* [`axisValue`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#axisvalue) - To place the annotation in the specified axis value with respect to the provided axis index.
-* [`axisIndex`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#axisindex) - To place the annotation in the specified axis with respect to the provided axis value.
-* [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#horizontalalignment) - To place the annotation horizontally.
-* [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#verticalalignment) - To place the annotation vertically.
-* [`x`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#x-number), [`y`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#y-number) - To place the annotation in the specified location.
+* [`zIndex`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#zindex) - Bring the annotation to the front or back, when annotation overlaps with another element.
+* [`axisValue`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#axisvalue) - To place the annotation in the specified axis value with respect to the provided axis index.
+* [`axisIndex`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#axisindex) - To place the annotation in the specified axis with respect to the provided axis value.
+* [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#horizontalalignment) - To place the annotation horizontally.
+* [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#verticalalignment) - To place the annotation vertically.
+* [`x`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#x-number), [`y`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#y-number) - To place the annotation in the specified location.
 
 ### Changing the z-index
 
-To change the stack order of an annotation element, the [`zIndex`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#zindex) property of the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/) can be used.
+To change the stack order of an annotation element, the [`zIndex`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#zindex) property of the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation) can be used.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -78,7 +78,7 @@ To change the stack order of an annotation element, the [`zIndex`](https://ej2.
 
 ### Positioning an annotation
 
-The annotation can be placed anywhere in the Linear Gauge by setting the pixel value to the [`x`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#x) and [`y`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#y) properties in the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/).
+The annotation can be placed anywhere in the Linear Gauge by setting the pixel value to the [`x`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#x) and [`y`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#y) properties in the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -95,7 +95,7 @@ The annotation can be placed anywhere in the Linear Gauge by setting the pixel v
 
 ### Alignment of annotation
 
-The annotation can be aligned horizontally and vertically by using the [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#verticalalignment) properties respectively. The possible values can be **Center**, **Far**, **Near**, and **None**. The [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#verticalalignment) properties are not applicable when the [`x`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#x) and [`y`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/#y) properties are set in the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/).
+The annotation can be aligned horizontally and vertically by using the [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#verticalalignment) properties respectively. The possible values can be **Center**, **Far**, **Near**, and **None**. The [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#verticalalignment) properties are not applicable when the [`x`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#x) and [`y`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation#y) properties are set in the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -110,7 +110,7 @@ The annotation can be aligned horizontally and vertically by using the [`horizon
 
 ## Multiple annotations
 
-Multiple annotations can be added to the Linear Gauge component by adding the multiple [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/) in the [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/#annotations) and customization for the annotation can be done with the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation/).
+Multiple annotations can be added to the Linear Gauge component by adding the multiple [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation) in the [`AnnotationsDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#annotations) and customization for the annotation can be done with the [`AnnotationDirective`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/annotation).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

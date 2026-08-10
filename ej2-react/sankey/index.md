@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in React Sankey Chart component | Syncfusion
+title: About Syncfusion React Sankey Chart | Syncfusion
 description: Learn here all about Index in Syncfusion React Sankey Chart component of Syncfusion Essential JS 2 and more.
-control: Index 
+control: Index
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Sankey Chart component
+# About Syncfusion React Sankey Chart
 
 A Sankey Chart is a visualization that displays the flow of values from one set of categories to another. It uses nodes to represent categories and links to show the connections and flow magnitudes between them. All elements are rendered using Scalable Vector Graphics (SVG).
 

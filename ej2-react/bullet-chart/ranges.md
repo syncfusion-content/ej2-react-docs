@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ranges in React Bullet chart component | Syncfusion
-description: Learn here all about Ranges in Syncfusion React Bullet chart component of Syncfusion Essential JS 2 and more.
-control: Ranges 
+title: Ranges in React Bullet Chart | Syncfusion
+description: Learn how to configure ranges in the Syncfusion React Bullet Chart Component to compare actual and target values against thresholds with custom colors.
+control: Ranges
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ranges in React Bullet chart component
+# Ranges in React Bullet Chart
 
 Ranges represent the quality of a specific range such as **Good**, **Bad** and **Satisfactory** in the Bullet Chart scale. The ending point of a qualitative range is specified in the [`end`](https://ej2.syncfusion.com/angular/documentation/api/bullet-chart/rangeModel#end) property in [`ranges`](https://ej2.syncfusion.com/angular/documentation/api/bullet-chart#ranges). The [`minimum`](https://ej2.syncfusion.com/angular/documentation/api/bullet-chart#minimum) value of a quantitative scale is considered the starting point of the first range or the previous range end point.
 

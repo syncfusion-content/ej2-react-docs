@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Axis customization in React Chart component | Syncfusion
-description: Learn here all about Axis customization in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Axis customization 
+title: Axis Customization in React Chart | Syncfusion
+description: Learn how to customize Syncfusion React Chart axes with titles, tick lines, grid lines, multiple axes, opposed position, and inverse axis options.
+control: Axis customization
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis customization in React Chart component
+# Axis Customization in React Chart
 
 ## Axis Crossing
 

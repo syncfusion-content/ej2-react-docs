@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Live chart in React Chart component | Syncfusion
-description: Learn here all about Live chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Live chart 
+title: How to create a live chart in React Chart | Syncfusion
+description: Learn how to create a live Syncfusion React Chart that updates with new data in real time for dynamic dashboards and monitoring.
+control: Live chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Live chart in React Chart component
+# How to create a live chart in React Chart
 
 You can update a chart with live data by using the set interval.
 

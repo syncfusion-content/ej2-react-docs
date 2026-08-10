@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Bubble heatmap in React Heatmap chart component | Syncfusion
-description: Learn here all about Bubble heatmap in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: Bubble HeatMap in React HeatMap Chart | Syncfusion
+description: Render data points in the React HeatMap Chart as bubbles whose size, color, or sector encodes the value, by setting tileType to Bubble.
 control: Bubble heatmap 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bubble heatmap in React Heatmap chart component
+# Bubble HeatMap in React HeatMap Chart
 
 Data points represent the data source values with **gradient** or **fixed** colors in the HeatMap. You can customize the appearance of these data points by changing the `color` and `size` attributes.
 

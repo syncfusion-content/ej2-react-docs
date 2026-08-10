@@ -1,21 +1,21 @@
 ﻿---
 layout: post
-title: Internationalization in React Linear gauge component | Syncfusion
-description: Learn here all about Internationalization in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
+title: Internationalization in React Linear Gauge | Syncfusion
+description: Format React Linear Gauge axis labels and tooltips for any culture using currency, percentage, or other numeric formats via the format property.
 control: Internationalization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Internationalization in React Linear gauge component
+# Internationalization in React Linear Gauge
 
-Globalization is the process of designing and developing a component that works in different cultures. Internationalization is used to globalize the number content in Linear Gauge component using [`format`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/label/#format) property in [`LinearGaugeComponent`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/linearGaugeModel/). It has static text on some features such as
+Globalization is the process of designing and developing a component that works in different cultures. Internationalization is used to globalize the number content in Linear Gauge component using [`format`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/label#format) property in [`LinearGaugeComponent`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/linearGaugeModel). It has static text on some features such as
 
 * Axis label
 * Tooltip
 
-The static text on above features can be changed to any culture such as Arabic, Deutsch and French. To know more about the globalization in React components, refer [here](https://ej2.syncfusion.com/react/documentation/common/internationalization/).
+The static text on above features can be changed to any culture such as Arabic, Deutsch and French. To know more about the globalization in React components, refer [here](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization).
 
 ## Numeric Format
 

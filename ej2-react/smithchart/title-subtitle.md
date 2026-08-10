@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Title subtitle in React Smithchart component | Syncfusion
-description: Learn here all about Title subtitle in Syncfusion React Smithchart component of Syncfusion Essential JS 2 and more.
+title: Title and Subtitle in React Smithchart | Syncfusion
+description: Add a title and subtitle to the React Smithchart, trim overflow with maximum width, and customize font, alignment, and visibility.
 control: Title subtitle 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Title subtitle in React Smithchart component
+# Title and Subtitle in React Smithchart
 
 ## Enable title
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Marker customization in React Chart component | Syncfusion
-description: Learn here all about Marker customization in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Marker customization 
+title: How to customize marker shape in React Chart | Syncfusion
+description: Learn how to customize marker shape per data point in Syncfusion React Chart series for richer visual cues.
+control: Marker customization
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Marker customization in React Chart component
+# How to customize marker shape in React Chart
 
 By using the [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#pointrender), you can customize the marker shape.
 

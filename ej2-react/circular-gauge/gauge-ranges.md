@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gauge ranges in React Circular gauge component | Syncfusion
-description: Learn here all about Gauge ranges in Syncfusion React Circular gauge component of Syncfusion Essential JS 2 and more.
+title: Ranges in React Circular Gauge | Syncfusion
+description: Highlight value intervals on the React Circular Gauge axis using ranges with start, end, color, and other style properties for clearer data visualization.
 control: Gauge ranges 
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Gauge ranges in React Circular gauge component
+# Ranges in React Circular Gauge
 
 You can categories certain interval on gauge axis using [`ranges`](https://ej2.syncfusion.com/react/documentation/api/circular-gauge/range#properties) property.
 

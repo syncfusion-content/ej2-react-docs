@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Legend in React 3D Chart component | Syncfusion
-description: Learn here all about legend in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Legend in React 3D Chart | Syncfusion
+description: Learn how to enable the legend in the Syncfusion React 3D Chart to identify each series, with options for position, shape, paging, and click toggling.
+control: Legend
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Legend in React 3D Chart control
+# Legend in React 3D Chart
 
 <!-- markdownlint-disable MD036 -->
 

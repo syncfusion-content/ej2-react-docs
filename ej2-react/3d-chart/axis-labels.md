@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Axis labels in React 3D Chart component | Syncfusion
-description: Learn here all about axis labels in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Axis Labels in React 3D Chart | Syncfusion
+description: Learn how to handle axis labels in Syncfusion React 3D Chart with smart label placement, edge label fitting, and maximum labels per pixel range.
+control: Axis Labels
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis labels in React 3D Chart control
+# Axis Labels in React 3D Chart
 
 Axis labels are the labels that are positioned adjacent to the y-axis and beneath the x-axis. It provides descriptive information about the axis.
 

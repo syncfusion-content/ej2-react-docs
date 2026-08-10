@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Tooltip in React Heatmap chart component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: Tooltip in React HeatMap Chart | Syncfusion
+description: Show tooltips on the React HeatMap Chart by enabling showTooltip, customize content with tooltipRender, and style via fill, border, and textStyle.
 control: Tooltip 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in React Heatmap chart component
+# Tooltip in React HeatMap Chart
 
 Tooltip is used to provide the details of the heatmap cell, and this can be displayed, while hovering the cursor over the cell or performing tap action in touch devices.
 

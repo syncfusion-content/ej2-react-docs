@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React Sankey Chart component | Syncfusion
-description: Learn here all about Events in Syncfusion React Sankey Chart component of Syncfusion Essential JS 2 and more.
+title: Events in React Sankey Chart | Syncfusion
+description: Learn how to use events in the Syncfusion React Sankey Chart Component, including nodeClick, linkClick, load, and loaded event handlers.
 control: Events
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React Sankey Chart component
+# Events in React Sankey Chart
 
 The Sankey Chart provides comprehensive events that allow you to customize behavior, respond to user interactions, and hook into the chart lifecycle. These events enable advanced customization scenarios including data transformation, analytics tracking, and dynamic UI updates.
 

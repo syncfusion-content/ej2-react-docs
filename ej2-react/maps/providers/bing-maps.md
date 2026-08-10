@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bing maps in React Maps component | Syncfusion
-description: Learn here all about Bing maps in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Bing maps 
+title: Bing Maps in React Maps | Syncfusion
+description: Learn how to integrate Microsoft Bing Maps in React Maps using a valid Bing Maps API key to render tile-based geographic visualizations.
+control: Bing maps
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bing maps integration in React Maps component
+# Bing Maps in React Maps
 
 Bing Maps is a online Maps provider, owned by Microsoft. As like OSM, it provide Maps tile images based on our requests and combines those images into a single one to display Maps area.
 

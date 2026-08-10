@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Bubble in React Maps component | Syncfusion
-description: Learn here all about Bubble in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Bubble 
+title: Bubble in React Maps | Syncfusion
+description: Learn how to render and size data bubbles in React Maps to visualize numerical values across geographic regions with circular or square shapes.
+control: Bubble
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bubble in React Maps component
+# Bubble in React Maps
 
 This section shows how to customize the appearance of the bubbles in the Maps component. The below video demonstrates the same.
 

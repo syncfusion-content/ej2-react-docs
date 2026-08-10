@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export print in React Range navigator component | Syncfusion
-description: Learn here all about Export print in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
-control: Export print 
+title: Export and Print in React Range Navigator | Syncfusion
+description: Learn how to export and print the Syncfusion React Range Navigator Component to PDF, image, or SVG using the export and print methods.
+control: Export print
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export print in React Range navigator component
+# Export and Print in React Range Navigator
 
 ## Export
 

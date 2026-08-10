@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Circular Gauge component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Circular Gauge component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Circular Gauge | Syncfusion
+description: Learn how the React Circular Gauge meets WCAG 2.2, Section 508, ARIA, and screen reader support, with WAI-ARIA attribute details and compliance validation.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Circular Gauge component
+# Accessibility in React Circular Gauge
 
 The Circular Gauge component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 

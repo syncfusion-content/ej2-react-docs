@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scatter Chart in React Charts | Syncfusion
-description: Learn here all about Scatter Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Scatter Chart 
+title: Scatter Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Scatter series in Syncfusion React Chart to display individual data points with fill, opacity, and marker shape.
+control: Scatter Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scatter Chart in React Charts
+# Scatter Chart in React Chart
 
 ## Scatter
 

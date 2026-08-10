@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Comparative bar in React Bullet chart component | Syncfusion
-description: Learn here all about Comparative bar in Syncfusion React Bullet chart component of Syncfusion Essential JS 2 and more.
-control: Comparative bar 
+title: Target Bar in React Bullet Chart | Syncfusion
+description: Learn how to render the target bar in the Syncfusion React Bullet Chart Component to compare against the actual value with custom color and width.
+control: Target bar
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comparative bar in React Bullet chart component
+# Target Bar in React Bullet Chart
 
 The line marker that runs perpendicular to the orientation of the graph is known as the **Comparative Measure** and it is used as a target marker to compare against the feature measure value. This is also called as the **Target Bar** in the Bullet Chart. To display the target bar, the [`targetField`](https://ej2.syncfusion.com/react/documentation/api/bullet-chart#targetfield) should be mapped to the appropriate field from the datasource.
 

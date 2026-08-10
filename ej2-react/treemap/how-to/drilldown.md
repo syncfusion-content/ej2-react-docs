@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Drilldown customization in React Treemap component | Syncfusion
-description: Learn here all about Drilldown customization in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: How to customize drilldown in React TreeMap | Syncfusion
+description: Learn how to customize the header on drill-down in the Syncfusion React TreeMap to show population details for a node.
 control: Drilldown 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drilldown customization in React Treemap component
+# How to customize drilldown in React TreeMap
 
 ## Customize the header for treemap drilldown
 

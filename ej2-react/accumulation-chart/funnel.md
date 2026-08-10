@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Funnel in React Accumulation chart component | Syncfusion
-description: Learn here all about Funnel in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
+title: Funnel in React Accumulation Chart | Syncfusion
+description: Learn how to render a funnel chart in the Syncfusion React Accumulation Chart to visualize values across progressive stages of a process.
 control: Funnel 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Funnel in React Accumulation chart component
+# Funnel in React Accumulation Chart
 
 To render a funnel series, use the series [`type`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel#type) as `Funnel` and inject the `FunnelSeries` module into the `services`.
 

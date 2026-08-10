@@ -1,14 +1,14 @@
 ---
 layout: post
-title: ToolTip in React Sankey Chart component | Syncfusion
-description: Learn here all about ToolTip in Syncfusion React Sankey Chart component of Syncfusion Essential JS 2 and more.
+title: Tooltip in React Sankey Chart | Syncfusion
+description: Learn how to enable and customize tooltips in the Syncfusion React Sankey Chart Component with template and format options.
 control: ToolTip
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# ToolTip in React Sankey Chart component
+# Tooltip in React Sankey Chart
 
 The Sankey Chart provides tooltips that surface contextual details for hovered elements without cluttering the diagram. Tooltips display additional information when users hover over nodes or links in the Sankey Chart. You can enable and customize tooltips using the `tooltip` property and by injecting the `SankeyTooltip` module.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data labels in React 3D Chart component | Syncfusion
-description: Learn here all about data labels in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Data Labels in React 3D Chart | Syncfusion
+description: Learn how to show point values on the Syncfusion React 3D Chart series using data labels with smart placement, text mapping, and template customization.
+control: Data Label
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data labels in React 3D Chart control
+# Data Labels in React 3D Chart
 
 Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the [`visible`](https://helpej2.syncfusion.com/react/documentation/api/chart3d/dataLabelStyleModel#visible) option in the dataLabel. By default, the labels will arrange smartly without overlapping.
 

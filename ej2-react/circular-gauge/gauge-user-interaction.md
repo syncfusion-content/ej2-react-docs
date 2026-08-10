@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gauge user interaction in React Circular gauge component | Syncfusion
-description: Learn here all about Gauge user interaction in Syncfusion React Circular gauge component of Syncfusion Essential JS 2 and more.
+title: User Interaction in React Circular Gauge | Syncfusion
+description: Enable user interaction in the React Circular Gauge with tooltips for pointers and ranges, pointer drag support, and customizable tooltip templates and styles.
 control: Gauge user interaction 
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Gauge user interaction in React Circular gauge component
+# User Interaction in React Circular Gauge
 
 ## Tooltip for pointers
 
