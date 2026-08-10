@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types in React Badge component | Syncfusion
-description: Learn here all about Types in Syncfusion React Badge component of Syncfusion Essential JS 2 and more.
+title: Types in React Badge | Syncfusion
+description: Choose from eight predefined color variants and seven shape types to render React Badges for any notification or status pattern.
 control: Badge
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types in React Badge component
+# Types in React Badge
 
 This section details the predefined style variants and shape types available in the Badge component. Understanding these options helps you select the appropriate badge for your use case and ensures consistent UI patterns throughout your application.
 

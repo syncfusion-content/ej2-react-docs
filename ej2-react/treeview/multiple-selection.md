@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple selection in React TreeView component | Syncfusion
-description: Learn here all about Multiple selection in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: Multi Selection in React Tree View | Syncfusion
+description: Select multiple Syncfusion React TreeView nodes at once by enabling allowMultiSelection and using Ctrl or Shift click combinations.
 control: Multiple selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple selection in React TreeView component
+# Multi Selection in React Tree View
 
 Selection provides an interactive support and highlights the node that you select. Selection can be done through simple mouse down or keyboard interaction.
 

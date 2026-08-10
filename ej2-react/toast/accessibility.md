@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Toast component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Toast | Syncfusion
+description: Build accessible React Toasts that comply with WCAG 2.2, Section 508, and ADA via WAI-ARIA alert roles and live regions.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Toast component
+# Accessibility in React Toast
 
 The Toast component follows WCAG 2.2, Section 508, and ADA accessibility standards to ensure notifications are accessible to all users, including those using assistive technologies. Toast notifications are announced to screen readers as live regions, enabling users to receive important updates without requiring focus or interaction.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Show dialog with full screen in React Dialog component | Syncfusion
-description: Learn here all about Show dialog with full screen in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: How to show with fullscreen in React Dialog | Syncfusion
+description: Display a React Dialog in fullscreen mode by passing true as an argument to the dialog show method for an immersive modal experience.
 control: Show dialog with full screen 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show dialog with full screen in React Dialog component
+# How to show with fullscreen in React Dialog
 
-The dialog can be displayed in fullscreen mode by passing `true` as an argument to the dialog [show](https://ej2.syncfusion.com/react/documentation/api/dialog/#show) method.
+The dialog can be displayed in fullscreen mode by passing `true` as an argument to the dialog [show](https://ej2.syncfusion.com/react/documentation/api/dialog#show) method.
 
 `[Class-component]`
 

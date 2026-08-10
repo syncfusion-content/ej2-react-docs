@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Content in React Tooltip component | Syncfusion
-description: Learn here all about Content in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+title: Content in React Tooltip | Syncfusion
+description: Configure the React Tooltip content as plain text, formatted HTML template, or dynamic data fetched at runtime for flexible message display.
 control: Content 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content in React Tooltip component
+# Content in React Tooltip
 
 The text or information assigned to the Tooltip's [content](https://ej2.syncfusion.com/react/documentation/api/tooltip/#content) property will be displayed as the main content of the Tooltip.
 This content can be either a string or a template. If the [content](https://ej2.syncfusion.com/react/documentation/api/tooltip/#content) property is not provided with any specific value, then it takes the value assigned to the `title` attribute of the target element on which the Tooltip was initialized. The content can also dynamically be assigned to the Tooltip via Fetch.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles and appearance in React Carousel component | Syncfusion
-description: Learn here all about Styles and appearance in Syncfusion React Carousel component of Syncfusion Essential JS 2 and more.
+title: Styles and Appearance in React Carousel | Syncfusion
+description: CSS class reference for customizing the Syncfusion React Carousel items, indicators, navigators, and play/pause button.
 control: Styles and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles and appearance in Carousel component
+# Styles and Appearance in React Carousel
 
 To modify the Carousel appearance, you need to override the default CSS of Carousel component. Please find the list of CSS classes and its corresponding section in Carousel component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

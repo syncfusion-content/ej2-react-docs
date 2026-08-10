@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable or Disable Items in react Context Menu | Syncfusion
-description: Learn here all about Enable or disable context menu items in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: How to enable or disable items in React | Syncfusion
+description: Enable or disable React Context Menu items and sub menu items at runtime by calling the `enableItems` method with item ids and a boolean.
 control: Context Menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or disable context menu items in React Context menu component
+# How to enable or disable items in React
 
 The ContextMenu component supports dynamic state management of menu items through the [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/menu/#enableitems) method. This functionality allows you to control menu item availability based on application state, user permissions, or contextual conditions, enhancing user experience by showing only relevant actions.
 

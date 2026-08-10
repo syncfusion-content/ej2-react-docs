@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Accordion component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: Migration from EJ1 in React Accordion | Syncfusion
+description: Side-by-side mapping of Essential JS 1 Accordion APIs to their Syncfusion React Accordion replacements.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Accordion component
+# Migration from EJ1 in React Accordion
 
 This article describes the API migration process of Accordion component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

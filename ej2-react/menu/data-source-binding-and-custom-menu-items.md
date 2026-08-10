@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding and custom menu items in React Menu component| Syncfusion
-description: Learn here all about Data source binding and custom menu items in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: Data binding and custom menu items in React Menu | Syncfusion
+description: Bind the Syncfusion React Menu to hierarchical or self-referential JSON data, a remote DataManager, or a custom `fields` mapping.
 control: Data source binding and custom menu items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data source binding and custom menu items in React Menu component
+# Data binding and custom menu items in React Menu
 
 ## Data binding
 

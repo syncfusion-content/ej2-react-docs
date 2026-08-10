@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Disable edit mode in React Inplace editor component | Syncfusion
-description: Learn here all about Disable edit mode in Syncfusion React Inplace editor component of Syncfusion Essential JS 2 and more.
-control: Disable edit mode 
+title: Disable edit mode in React In-place Editor | Syncfusion
+description: Disable the Syncfusion React In-place Editor's edit mode with the disabled property and toggle it on or off from a checkbox change event.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable edit mode in React Inplace editor component
+# How to disable the edit mode specifically in React In-place Editor
 
-Disable edit mode in the In-place Editor by setting the [disabled](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#disabled) property to `true`. In the following sample, toggling the checkbox will disable or enable the edit mode of the In-place Editor component.
+Disable edit mode in the In-place Editor by setting the [disabled](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#disabled) property to `true`. In the following sample, toggling the checkbox will disable or enable the edit mode of the In-place Editor component.
 
 `[Class-component]`
 

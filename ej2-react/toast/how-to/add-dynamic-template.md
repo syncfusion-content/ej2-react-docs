@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add dynamic template in React Toast component | Syncfusion
-description: Learn here all about Add dynamic template in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: How to add a dynamic template in React Toast | Syncfusion
+description: Reuse one React Toast instance to show varied content by passing updated ToastModel configuration to the show method.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add dynamic template in React Toast component
+# How to add a dynamic template in React Toast
 
 The Toast component supports dynamic template updates, enabling you to display different content in multiple toasts based on application state or user actions. Modify Toast properties including templates by passing updated configuration to the [`show`](https://ej2.syncfusion.com/react/documentation/api/toast/#show) method. This pattern is useful for reusing a single Toast instance to display varied content types or messages throughout the application lifecycle.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Fixed Sidebar in React Sidebar component | Syncfusion
-description: Learn here all about Fixed Sidebar in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to make a fixed Sidebar in React Sidebar | Syncfusion
+description: Render the Syncfusion React Sidebar in its default fixed position so it stays in place when the main content scrolls.
 control: Fixed Sidebar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fixed Sidebar in React Sidebar component
+# How to make a fixed Sidebar in React Sidebar
 
 The Sidebar does not require any specific style to make it as a fixed one. By default, the Sidebar position will be in fixed state. The following example demonstrates that the Sidebar is rendered with a fixed position. The position of the Sidebar will not change when scrolling the main content area.
 

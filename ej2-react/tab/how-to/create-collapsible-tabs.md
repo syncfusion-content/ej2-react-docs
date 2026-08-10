@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create collapsible tabs in React Tab component | Syncfusion
-description: Learn here all about Create collapsible tabs in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to create collapsible Tabs in React Tab | Syncfusion
+description: Make a Syncfusion React Tab item collapsible by setting the isCollapsible property so users can hide its content area.
 control: Create collapsible tabs 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create collapsible tabs in React Tab component
+# How to create collapsible Tabs in React Tab
 
 You can achieve collapse and expand functionality in Tab by adding/removing a custom CSS class in the click event handler for each tab.
 * Define a CSS class to set the style property display as none. Here 'collapse' class is added to the content element for hiding it using [`created`](https://ej2.syncfusion.com/react/documentation/api/tab/#created) event.

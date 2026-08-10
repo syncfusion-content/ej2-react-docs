@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position in React Predefined dialogs component | Syncfusion
-description: Learn here all about Position in Syncfusion React Predefined dialogs component of Syncfusion Essential JS 2 and more.
+title: Position in React Predefined Dialogs | Syncfusion
+description: Position React Predefined Dialogs using X and Y coordinate values, supporting left, center, right, top, and bottom alignment with numeric pixel offsets.
 control: Position 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position in React Predefined dialogs component
+# Position in React Predefined Dialogs
 
 The dialog position can be customized using the `position` property. Positioning is defined using `X` and `Y` coordinate values that control horizontal and vertical placement.
 

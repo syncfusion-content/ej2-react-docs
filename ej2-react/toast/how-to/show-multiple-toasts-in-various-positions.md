@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show multiple toasts in various positions in React Toast component | Syncfusion
-description: Learn here all about Show multiple toasts in various positions in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: Show multiple Toasts in various positions in React Toast | Syncfusion
+description: Render multiple React Toasts simultaneously by creating separate component instances, each configured with a different position value.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show multiple toasts in various positions in React Toast component
+# How to show multiple Toasts in various positions in React Toast
 
 By default, the Toast position applies only to toasts currently being displayed. To show toasts simultaneously at different screen positions, create multiple Toast component instances, each configured with a different position value. This multi-instance approach enables displaying related notifications (success, warning, error) in different corners or edges of the screen, improving information organization and visual hierarchy.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature Modules in React Ribbon | Syncfusion
-description: Learn about the feature-based modules in the React Ribbon that must be injected to enable functionalities like the file menu, backstage, and keytips.
+title: Modules in React Ribbon component | Syncfusion
+description:  Checkout and learn about Modules in Syncfusion React Ribbon component of Syncfusion Essential JS 2 and more.
 control: Ribbon
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature Modules in React Ribbon
+# Modules in Ribbon component
 
 The React Ribbon component contains several feature-based modules that must be injected to enable their respective functionalities.
 

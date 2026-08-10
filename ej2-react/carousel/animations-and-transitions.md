@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animations and transitions in React Carousel component | Syncfusion
-description: Learn here all about Animations and transitions in Syncfusion React Carousel component of Syncfusion Essential JS 2 and more.
+title: Animations and Transitions in React Carousel | Syncfusion
+description: Switch between built-in Slide and Fade animations, apply custom CSS effects, and set per-slide interval durations in the Syncfusion React Carousel.
 control: Animations and transitions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animations and transitions in React Carousel component
+# Animations and Transitions in React Carousel
 
 ## Animations
 

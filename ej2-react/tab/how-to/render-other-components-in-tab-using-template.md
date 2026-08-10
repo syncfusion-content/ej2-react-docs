@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Render other components in tab using template in React Tab component | Syncfusion
-description: Learn here all about Render other components in tab using template in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to render other components in Tab in React | Syncfusion
+description: Render arbitrary React components inside a Syncfusion React Tab item by assigning a function template to the item.
 control: Render other components in tab using template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render other components in tab using template in React Tab component
+# How to render other components in Tab in React
 
 You can render other components inside Tab using React **template**. Through this, we can add content as other components directly with all functionalities to our Tab. Follow the below guidelines for using the other components as template in tab.
 

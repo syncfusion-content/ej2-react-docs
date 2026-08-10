@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Sidebar component | Syncfusion
-description: Learn here all about Style in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+title: Styles and Appearance in React Sidebar | Syncfusion
+description: CSS reference for customizing the Syncfusion React Sidebar root, left and right positioned variants, and the open-state transition.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Sidebar component
+# Styles and Appearance in React Sidebar
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user's preference.
 

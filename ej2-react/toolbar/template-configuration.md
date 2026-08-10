@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template configuration in React Toolbar component | Syncfusion
-description: Learn here all about Template configuration in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: Template Configuration in React Toolbar | Syncfusion
+description: Customize the Syncfusion React Toolbar item appearance with the template property, or assign a custom template per item.
 control: Template configuration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template configuration in React Toolbar component
+# Template Configuration in React Toolbar
 
 The Toolbar can be rendered by item based collection and by HTML elements.  To render it based on the given HTML element, use `id` as the `target` property. To render the Toolbar, follow the below structure of the HTML elements:
 

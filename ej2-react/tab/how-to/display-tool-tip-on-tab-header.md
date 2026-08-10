@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Display tool tip on tab header in React Tab component | Syncfusion
-description: Learn here all about Display tool tip on tab header in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to show tooltip on Tab header in React Tab | Syncfusion
+description: Show a hover tooltip on each Syncfusion React Tab header by setting the showTooltip property to true.
 control: Display tool tip on tab header 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display tool tip on tab header in React Tab component
+# How to show tooltip on Tab header in React Tab
 
 You can display tooltip for the tab component header using [`beforeRender`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#beforerender) event of React Tooltip component which can be viewed as hint texts on mouse hovers over tab.
 

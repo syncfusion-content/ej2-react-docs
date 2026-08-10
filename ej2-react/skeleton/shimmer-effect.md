@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Shimmer effect in React Skeleton component | Syncfusion
-description: Learn here all about Shimmer effect in Syncfusion React Skeleton component of Syncfusion Essential JS 2 and more.
+title: Shimmer effect in React Skeleton | Syncfusion
+description: Animate React Skeleton loading with Wave, Pulse, or Fade shimmer effects via the shimmerEffect property for clear feedback.
 control: Skeleton
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shimmer effect in React Skeleton component
+# Shimmer effect in React Skeleton
 
-Shimmer effects provide animated visual feedback during content loading, signaling to users that the application is actively retrieving content. Configure the animation style using the [`shimmerEffect`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#shimmereffect) property. The Skeleton component supports three shimmer effect types: Wave (default), Pulse, and Fade. Each effect creates a different visual impression while conveying the same "loading" message.
+Shimmer effects provide animated visual feedback during content loading, signaling to users that the application is actively retrieving content. Configure the animation style using the [`shimmerEffect`](https://ej2.syncfusion.com/react/documentation/api/skeleton#shimmereffect) property. The Skeleton component supports three shimmer effect types: Wave (default), Pulse, and Fade. Each effect creates a different visual impression while conveying the same "loading" message.
 
 ## Effect types
 

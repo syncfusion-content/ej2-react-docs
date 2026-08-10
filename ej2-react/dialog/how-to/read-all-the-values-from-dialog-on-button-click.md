@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Read all the values from dialog on button click in React Dialog component | Syncfusion
-description: Learn here all about Read all the values from dialog on button click in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: Read all values on button click in React Dialog | Syncfusion
+description: Read all input element values from a React Dialog on footer button click by binding a handler to the buttons property's click action.
 control: Read all the values from dialog on button click 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read all the values from dialog on button click in React Dialog component
+# Read all values on button click in React Dialog
 
-Dialog element values can be read by binding an action handler to the footer buttons. The `buttons` property provides options to bind events to action buttons. For detailed information, refer to the [footer](../template/#footer) section.
+Dialog element values can be read by binding an action handler to the footer buttons. The `buttons` property provides options to bind events to action buttons. For detailed information, refer to the [footer](../template#footer) section.
 
 The following sample demonstrates how to retrieve input element values from the dialog in the footer button click event and display them in a confirmation dialog.
 

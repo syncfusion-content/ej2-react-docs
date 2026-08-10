@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add or Remove Items in React Context Menu | Syncfusion
-description: Learn here all about Add or remove context menu items in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: How to add or remove items in Context Menu in React | Syncfusion
+description: Add or remove React Context Menu items at runtime by calling the `insertAfter`, `insertBefore`, and `removeItems` public methods.
 control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Add or remove context menu items in React Context menu component
+# How to add or remove items in Context Menu in React
 
 The ContextMenu component provides dynamic item management capabilities, allowing you to add or remove menu items programmatically at runtime. This functionality enables responsive menu systems that adapt to changing application states, user permissions, or contextual requirements.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React Progress bar component | Syncfusion
-description: Learn here all about Events in Syncfusion React Progress bar component of Syncfusion Essential JS 2 and more.
+title: Events in React Progress Bar | Syncfusion
+description: Handle React Progress Bar valueChanged and progressCompleted events to respond to progress updates and completion in your app.
 control: Events 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React Progress bar component
+# Events in React Progress Bar
 
 ## valueChanged
 

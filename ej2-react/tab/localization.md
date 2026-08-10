@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in React Tab component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: Localization in React Tab | Syncfusion
+description: Localize the default Syncfusion React Tab strings, including the close icon tooltip, by setting the locale property with a translated object.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Tab component
+# Localization in React Tab
 
 Localization library allows to localize the default text content of the Tab to different cultures using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/tab/#locale) property. In Tab, the close button's tooltip text alone will be localize based on culture.  The close button is shown on tab header when enabled [`showCloseButton`](https://ej2.syncfusion.com/react/documentation/api/tab/#showclosebutton) property.
 

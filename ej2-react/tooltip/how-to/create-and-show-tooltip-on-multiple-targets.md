@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create and show Tooltip on multiple targets in React Tooltip component | Syncfusion
-description: Learn here all about Create and show Tooltip on multiple targets in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+description: Create and display a single React Tooltip on multiple target elements within a container by passing a selector to the target property.
 control: Create and show Tooltip on multiple targets 
 platform: ej2-react
 documentation: ug

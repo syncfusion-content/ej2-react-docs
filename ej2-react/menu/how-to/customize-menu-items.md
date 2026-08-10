@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize menu items in React Menu component | Syncfusion
-description: Learn here all about Customize menu items in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: How to customize Menu items in React Menu | Syncfusion
+description: Add, remove, enable, disable, show, or hide Syncfusion React Menu items at runtime using the insert, removeItems, enableItems, and showItems methods.
 control: Customize menu items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize menu items in React Menu component
+# How to customize Menu items in React Menu
 
 ## Add or remove menu items
 

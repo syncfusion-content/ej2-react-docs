@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Accordion component | Syncfusion
-description: Learn here all about Style in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: Style in React Accordion | Syncfusion
+description: CSS class reference for customizing the Syncfusion React Accordion container, list items, header, and expand/collapse icons.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Accordion component
+# Style in React Accordion
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 

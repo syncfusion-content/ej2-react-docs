@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drag and drop in React TreeView component | Syncfusion
-description: Learn here all about Drag and drop in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: Drag and Drop in React Tree View | Syncfusion
+description: Move and reorder Syncfusion React TreeView nodes by drag and drop, including dragging nodes between separate TreeView instances.
 control: Drag and drop 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in React TreeView component
+# Drag and Drop in React Tree View
 
 The TreeView component allows you to drag and drop any node by setting [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treeview/#allowdraganddrop) to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
 

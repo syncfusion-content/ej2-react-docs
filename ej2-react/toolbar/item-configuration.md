@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Item configuration in React Toolbar component | Syncfusion
-description: Learn here all about Item configuration in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: Item Configuration in React Toolbar | Syncfusion
+description: Add Buttons, DropDownButtons, Separators, and Input controls to the Syncfusion React Toolbar and align them with align and overflow.
 control: Item configuration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Item configuration in React Toolbar component
+# Item Configuration in React Toolbar
 
 The Toolbar can be rendered by defining an array of [`items`](https://ej2.syncfusion.com/react/documentation/api/toolbar/#items). Items can be constructed with the following built-in command types or item template.
 

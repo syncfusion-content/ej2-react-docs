@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Inplace editor component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Inplace editor component of Syncfusion Essential JS 2 and more.
-control: Data binding 
+title: Data Binding in React In-place Editor | Syncfusion
+description: Bind the Syncfusion React In-place Editor to local arrays or remote services via DataManager, supporting OData V4, Web API, XML, JSON, and JSONP adaptors.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Inplace editor component
+# Data Binding in React In-place Editor
 
 The Essential<sup style="font-size:70%">&reg;</sup> JS 2 React In-place Editor component supports data binding from local data sources or remote data services using the `dataSource` property. It accepts an array or `DataManager` instance and supports various data services such as OData, OData V4, and Web API with data formats including XML, JSON, and JSONP through `DataManager` adaptors.
 
@@ -48,7 +48,7 @@ Bind remote data to the In-place Editor by assigning a `DataManager` instance to
 
 ### OData V4
 
-OData V4 is an improved version of the OData protocol. The [DataManager](../data/getting-started/) can retrieve and consume OData V4 services by configuring the adaptor property to [ODataV4Adaptor](../data/adaptors/#odatav4-adaptor).
+OData V4 is an improved version of the OData protocol. The [DataManager](../data/getting-started) can retrieve and consume OData V4 services by configuring the adaptor property to [ODataV4Adaptor](../data/adaptors#odatav4-adaptor).
 
 In the following sample, the In-place Editor renders a `DropDownList` component with its `dataSource` property configured to fetch data from the server using `ODataV4Adaptor` and `DataManager`.
 
@@ -80,7 +80,7 @@ In the following sample, the In-place Editor renders a `DropDownList` component 
 
 ### Web API
 
-Fetch data from the server by using [DataManager](../data/getting-started/) with the adaptor property configured as [WebApiAdaptor](../data/adaptors/#web-api-adaptor).
+Fetch data from the server by using [DataManager](../data/getting-started) with the adaptor property configured as [WebApiAdaptor](../data/adaptors#web-api-adaptor).
 
 In the following sample, the In-place Editor renders a `DropDownList` component with its `dataSource` property configured to fetch data from the server using `WebApiAdaptor` and `DataManager`.
 

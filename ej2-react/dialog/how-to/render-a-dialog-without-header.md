@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Render a dialog without header in React Dialog component | Syncfusion
-description: Learn here all about Render a dialog without header in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: How to render without header in React Dialog | Syncfusion
+description: Render a React Dialog without a header by setting the header property to an empty string or null for a clean, minimal modal.
 control: Render a dialog without header 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render a dialog without header in React Dialog component
+# How to render without header in React Dialog
 
 The dialog can be rendered without a header by setting the `header` property to an empty string or `null`. This allows for header-only dialogs when the header property is not specified.
 

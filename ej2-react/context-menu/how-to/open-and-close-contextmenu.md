@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open and Close React Context Menu Programmatically | Syncfusion
-description: Learn here all about Open and close contextmenu in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: How to open and close Context Menu in React | Syncfusion
+description: Open and close the React Context Menu programmatically by calling the `open` and `close` methods with `top` and `left` coordinates.
 control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open and close contextmenu in React Context menu component
+# How to open and close Context Menu in React
 
 The ContextMenu component can be opened and closed programmatically using the [`open`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#open) and [`close`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#close) methods. This programmatic control is useful for creating custom trigger events or implementing context menu functionality in response to specific user interactions.
 

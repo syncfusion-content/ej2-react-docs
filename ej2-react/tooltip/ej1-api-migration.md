@@ -1,14 +1,14 @@
 ---
 layout: post
-title: EJ1 API migration in React Tooltip component | Syncfusion
-description: Learn here all about EJ1 API migration in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+title: EJ1 API migration in React Tooltip | Syncfusion
+description: Migrate Tooltip code from Essential JS 1 to Essential JS 2 with a property-by-property mapping for position, animation, offset, open mode, and show or hide methods.
 control: EJ1 API migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# EJ1 API migration in React Tooltip component
+# EJ1 API migration in React Tooltip
 
 This article describes the API migration process of Tooltip component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

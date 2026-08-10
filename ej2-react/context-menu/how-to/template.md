@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in React Context menu component | Syncfusion
-description: Learn here all about Template in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: How to use a template in React Context Menu | Syncfusion
+description: Embed tables, CheckBox components, and other React UI elements inside Context Menu items via the `beforeItemRender` event.
 control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template customization in React Context menu component
+# How to use a template in React Context Menu
 
 The ContextMenu component supports extensive template customization, allowing you to embed complex UI elements and interactive components within menu items. This flexibility enables creating rich, context-aware menus that go beyond simple text-based navigation.
 

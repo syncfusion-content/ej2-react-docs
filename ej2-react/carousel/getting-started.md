@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Carousel component | Syncfusion
-description:  Checkout and learn about Getting started with React Carousel component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Carousel | Syncfusion
+description: Learn how to get started with the Syncfusion React Carousel control. Explore setup, features, examples, and customization options.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Carousel component
+# Getting Started with React Carousel
 
 This section explains how to create a simple [React Carousel](https://www.syncfusion.com/react-components/react-carousel), and configure its available functionalities in React.
 

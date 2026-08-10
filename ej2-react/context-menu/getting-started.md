@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Context menu component | Syncfusion
-description:  Checkout and learn about Getting started with React Context menu component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Context Menu | Syncfusion
+description: Learn how to get started with the Syncfusion React Context Menu control. Explore setup, features, examples, and customization options.
 control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Context menu component
+# Getting Started with React Context Menu
 
 This section explains how to create a simple Context Menu and configure its core functionalities in a React application.
 

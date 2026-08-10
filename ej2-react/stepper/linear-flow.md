@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Linear flow in React Stepper component | Syncfusion
-description:  Checkout and learn about Linear flow with Syncfusion React Stepper component of Syncfusion Essential JS 2 and more.
+title: Linear Flow in React Stepper | Syncfusion
+description: Force sequential step-by-step navigation in the Syncfusion React Stepper by setting the `linear` property to `true`.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Linear flow in React Stepper component
+# Linear Flow in React Stepper
 
 The Stepper component enables users to progress sequentially through each step, ensuring navigation from one step to the next in a linear way by setting the [linear](https://ej2.syncfusion.com/react/documentation/api/stepper#linear) property to `true`. The default value is `false` allowing navigation between any steps and vice versa.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Set the nested accordion in React Accordion component | Syncfusion
-description: Learn here all about Set the nested accordion in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: How to set the nested accordion in React Accordion | Syncfusion
+description: Render a nested Syncfusion React Accordion inside a parent pane by passing another component through the `content` property.
 control: Set the nested accordion 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set the nested accordion in React Accordion component
+# How to set the nested accordion in React Accordion
 
-Accordion supports to render `nested` level of Accordion by using [`content`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItemModel/#content) property. You can give nested Accordion content inside the parent Accordion content property by using `id` of nested element. The nested Accordion can be rendered with the use of provided events, such as [`clicked`](https://ej2.syncfusion.com/react/documentation/api/accordion/#clicked) and [`expanding`](https://ej2.syncfusion.com/react/documentation/api/accordion/#expanding).
+Accordion supports to render `nested` level of Accordion by using [`content`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItemModel#content) property. You can give nested Accordion content inside the parent Accordion content property by using `id` of nested element. The nested Accordion can be rendered with the use of provided events, such as [`clicked`](https://ej2.syncfusion.com/react/documentation/api/accordion#clicked) and [`expanding`](https://ej2.syncfusion.com/react/documentation/api/accordion#expanding).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

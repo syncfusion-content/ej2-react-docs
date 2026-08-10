@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in React Dialog component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: Localization in React Dialog | Syncfusion
+description: Localize the React Dialog close button tooltip using the L10n library so the default English text adapts to any culture such as French.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Dialog component
+# Localization in React Dialog
 
 The [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library enables localization of the Dialog's default text content. In the Dialog, only the close button's tooltip text is localized based on the selected culture.
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Create wizard using accordion in React Accordion component | Syncfusion
-description: Learn here all about Create wizard using accordion in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: How to create a wizard in React Accordion | Syncfusion
+description: Build a multi-step form wizard by enabling, disabling, and expanding Syncfusion React Accordion items as the user progresses.
 control: Create wizard using accordion 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create wizard using accordion in React Accordion component
+# How to create a wizard in React Accordion
 
-Accordion items can be disabled dynamically by passing the index and boolean value with the ['enableItem'](https://ej2.syncfusion.com/react/documentation/api/accordion/#enableitem) method and also dynamically expand the item using [`expandItem`](https://ej2.syncfusion.com/react/documentation/api/accordion/#expanditem) method.
+Accordion items can be disabled dynamically by passing the index and boolean value with the ['enableItem'](https://ej2.syncfusion.com/react/documentation/api/accordion#enableitem) method and also dynamically expand the item using [`expandItem`](https://ej2.syncfusion.com/react/documentation/api/accordion#expanditem) method.
 
-The below Wizard sample is designed for Online Shopping model. In this,  each Accordion item is integrated with required components to fill the details and designed for getting user details and making payment at the end. Each field is provided with validation for all mandatory option to enable/disable to next Accordion.  In below sample, accordion items can be disabled dynamically with [`enableItem`](https://ej2.syncfusion.com/react/documentation/api/accordion/#enableitem) method using [`created`](https://ej2.syncfusion.com/react/documentation/api/accordion/#created) event.
+The below Wizard sample is designed for Online Shopping model. In this,  each Accordion item is integrated with required components to fill the details and designed for getting user details and making payment at the end. Each field is provided with validation for all mandatory option to enable/disable to next Accordion.  In below sample, accordion items can be disabled dynamically with [`enableItem`](https://ej2.syncfusion.com/react/documentation/api/accordion#enableitem) method using [`created`](https://ej2.syncfusion.com/react/documentation/api/accordion#created) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

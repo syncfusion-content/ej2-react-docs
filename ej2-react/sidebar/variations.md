@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Variations in React Sidebar component | Syncfusion
-description: Learn here all about Variations in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+title: Types and Positions in React Sidebar | Syncfusion
+description: Choose Over, Push, Slide, or Auto expand behavior for the Syncfusion React Sidebar to control how it reveals relative to the main content.
 control: Variations 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Variations in React Sidebar component
+# Types and Positions in React Sidebar
 
 The Sidebar component's expand behavior can be modified based on the purpose of use.
 

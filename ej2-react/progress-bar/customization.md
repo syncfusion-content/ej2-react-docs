@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Progress bar component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Progress bar component of Syncfusion Essential JS 2 and more.
+title: Customization in React Progress Bar | Syncfusion
+description: Customize React Progress Bar segments, thickness, and radius using segmentCount, trackThickness, and radius properties.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Progress bar component
+# Customization in React Progress Bar
 
 ## Segments
 
@@ -27,7 +27,7 @@ We can divide a progress bar into multiple segments using a `segmentCount` to vi
 
 ## Thickness
 
- Customize the thickness of the track using [`trackThickness`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#trackthickness), progress using [`progressThickness`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#progressthickness) and secondary progress using [`secondaryProgressThickness`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#secondaryprogressthickness) to render the progress bar with different appearances.
+ Customize the thickness of the track using [`trackThickness`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel#trackthickness), progress using [`progressThickness`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel#progressthickness) and secondary progress using [`secondaryProgressThickness`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel#secondaryprogressthickness) to render the progress bar with different appearances.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,7 +72,7 @@ The inner radius of the progress bar can be customized using `innerRadius` prope
 
 ## Progress color and track color
 
-Customize the color of progress, secondary progress, and track by using the [`progressColor`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#progresscolor), [`secondaryProgressColor`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#secondaryprogresscolor), and [`trackColor`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel/#trackcolor) properties.
+Customize the color of progress, secondary progress, and track by using the [`progressColor`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel#progresscolor), [`secondaryProgressColor`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel#secondaryprogresscolor), and [`trackColor`](https://ej2.syncfusion.com/react/documentation/api/progressbar/progressBarModel#trackcolor) properties.
 
 
 {% tabs %}

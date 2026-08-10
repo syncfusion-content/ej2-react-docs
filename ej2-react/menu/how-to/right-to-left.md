@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Right to left in React Menu component | Syncfusion
-description: Learn here all about Right to left in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: How to enable RTL in React Menu | Syncfusion
+description: Render the Syncfusion React Menu in a right-to-left layout for RTL languages by setting the `enableRtl` property to `true`.
 control: Right to left 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right to left in React Menu component
+# How to enable RTL in React Menu
 
 Menu component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/menu/#enablertl) as `true`.
 

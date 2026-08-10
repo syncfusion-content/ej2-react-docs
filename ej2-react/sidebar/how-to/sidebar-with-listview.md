@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sidebar with ListView in React Sidebar component | Syncfusion
-description: Learn here all about Sidebar with ListView in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to render Sidebar with ListView in React | Syncfusion
+description: Place a Syncfusion ListView inside the Syncfusion React Sidebar to build a navigation panel of selectable items.
 control: Sidebar with ListView 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sidebar with ListView in React Sidebar component
+# How to render Sidebar with ListView in React
 
 Any HTML element can be placed in the Sidebar content area. Sidebar supports all types of HTML structures like `TreeView`, `ListView`, etc.
 

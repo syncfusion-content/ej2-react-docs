@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overflow Scrollable in React Context menu component | Syncfusion
-description: Learn here all about Overflow Scrollable ContextMenu in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: How to make Context Menu overflow scrollable in React | Syncfusion
+description: Make the React Context Menu overflow scrollable by restricting the `ul` height and setting CSS `overflow: auto` on the menu list.
 control: Context Menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overflow Scrollable ContextMenu in React Context menu component
+# How to make Context Menu overflow scrollable in React
 
 Overflow Scrollable ContextMenu can be achieved by restricting the height of the `ul` element.
 

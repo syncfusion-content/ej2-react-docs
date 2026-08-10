@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tab key navigation in React Tab component | Syncfusion
-description: Learn here all about Tab key navigation in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to use Tab key navigation in React Tab | Syncfusion
+description: Move focus and select Syncfusion React Tab items with the keyboard by enabling enableKeyNavigation and using the arrow keys.
 control: Tab key navigation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tab key navigation in React Tab component
+# How to use Tab key navigation in React Tab
 
 The [`tabIndex`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem/#tabindex) property of a Tab item is used to enable tab key navigation for that particular item. When a positive value is assigned to the [`tabIndex`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem/#tabindex) property, it allows the user to switch focus to the next or previous tab item using the Tab or Shift+Tab keys. By default, the user can only switch between tab items using the arrow keys.
 

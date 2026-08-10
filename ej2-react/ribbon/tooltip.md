@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Tooltip in React Ribbon | Syncfusion
-description: Learn how to show additional information in the React Ribbon by adding tooltips that appear when the user hovers over a Ribbon item.
+title: Tooltip in React Ribbon component | Syncfusion
+description:  Checkout and learn about Tooltip in Syncfusion React Ribbon component of Syncfusion Essential JS 2 and more.
 control: Ribbon
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in React Ribbon
+# Tooltip in React Ribbon Component
 
 The Ribbon component supports tooltip to show additional information on Ribbon items. The tooltip appears when the user hovers over a Ribbon item.
 
 ## Adding Title
 
-The [title](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTooltip#title) property can be used to set the tooltip title for each Ribbon item.
+The [title](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTooltip/#title) property can be used to set the tooltip title for each Ribbon item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,7 +32,7 @@ The [title](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTool
 
 ## Adding Content
 
-The [content](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTooltip#content) property is used to set the tooltip content for each Ribbon item.
+The [content](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTooltip/#content) property is used to set the tooltip content for each Ribbon item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,7 +50,7 @@ The [content](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTo
 
 ## Adding tooltip icon
 
-The [iconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTooltip#iconcss) property is used to specify an icon for the tooltip.
+The [iconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTooltip/#iconcss) property is used to specify an icon for the tooltip.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -68,7 +68,7 @@ The [iconCss](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTo
 
 ## Customization
 
-The [cssClass](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTooltip#cssclass) property allows for customizing the appearance of the tooltip by applying custom CSS styles.
+The [cssClass](https://ej2.syncfusion.com/react/documentation/api/ribbon/ribbonTooltip/#cssclass) property allows for customizing the appearance of the tooltip by applying custom CSS styles.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

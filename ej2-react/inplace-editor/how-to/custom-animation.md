@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Custom animation in React Inplace editor component | Syncfusion
-description: Learn here all about Custom animation in Syncfusion React Inplace editor component of Syncfusion Essential JS 2 and more.
-control: Custom animation 
+title: Set custom animation for popup in React In-place Editor | Syncfusion
+description: Customize the Syncfusion React In-place Editor's popup animation by configuring the Tooltip model inside popupSettings with a DropDownList.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom animation in React Inplace editor component
+# How to set custom animation for popup mode in React In-place Editor
 
-In popup mode, the In-place Editor is rendered with the Essential<sup style="font-size:70%">&reg;</sup> JS 2 React `Tooltip` component. You can customize the popup by configuring tooltip properties and events through the [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/#model) property inside the [popupSettings](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings/) API.
+In popup mode, the In-place Editor is rendered with the Essential<sup style="font-size:70%">&reg;</sup> JS 2 React `Tooltip` component. You can customize the popup by configuring tooltip properties and events through the [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings#model) property inside the [popupSettings](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/popupSettings) API.
 
 In the following sample, popup animation is customized by specifying animation effects through the `model` property. Dynamic animation changes are triggered from the Essential<sup style="font-size:70%">&reg;</sup> JS 2 React `DropDownList` component `change` event.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Badge customization in React Badge component | Syncfusion
-description: Learn here all about Badge customization in Syncfusion React Badge component of Syncfusion Essential JS 2 and more.
+title: How to customize badge in React Badge | Syncfusion
+description: Customize React Badge color, size, and position with CSS classes to match your application's design and layout needs.
 control: Badge
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Badge customization in React Badge component
+# How to customize badge in React Badge
 
 The Badge component offers multiple customization options to match application design requirements. This guide covers color, size, and position customization techniques to help you create badges that integrate seamlessly with your UI.
 

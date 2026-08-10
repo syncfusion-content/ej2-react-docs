@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Play an audio before open the toast in React Toast component | Syncfusion
-description: Learn here all about Play an audio before open the toast in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: How to play audio before Toast opens in React Toast | Syncfusion
+description: Play sound files when React Toasts appear using the beforeOpen event, and stop audio via open or close event handlers.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Play an audio before open the toast in React Toast component
+# How to play audio before Toast opens in React Toast
 
 Enhance toast notifications with audio feedback by playing sound files during toast display. Implement audio playback using the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast/#beforeopen) event to trigger audio when toasts appear. To stop audio playback after toast displays, use the [`open`](https://ej2.syncfusion.com/react/documentation/api/toast/#open) event or the `close` event.
 

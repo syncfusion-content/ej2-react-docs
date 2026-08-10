@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Steps in React Stepper component | Syncfusion
-description:  Checkout and learn about Steps with Syncfusion React Stepper component of Syncfusion Essential JS 2 and more.
+title: Steps in React Stepper | Syncfusion
+description: Add steps to the Syncfusion React Stepper via `StepDirective` tags and configure each step's `iconCss`, `text`, `label`, and `optional` state.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Steps in React Stepper component
+# Steps in React Stepper
 
 The React Stepper component allows you to add steps using `StepDirective` tag. Each step can be configured with options such as `iconCss`, `text`, `label`, `cssClass` and more.
 

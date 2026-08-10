@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Resizing in React Image Editor component | Syncfusion
-description: Learn here all about Resizing in Syncfusion React Image Editor component of Syncfusion Essential JS 2 and more.
+title: Resize in React Image Editor | Syncfusion
+description: Resize image dimensions for print, web, or custom layouts in the React Image Editor with optional aspect ratio preservation.
 control: Resizing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize in the React Image Editor component
+# Resize in React Image Editor
 
 The resize feature in an Image Editor is a valuable tool that empowers users to modify the size or dimensions of an image to meet their specific requirements. Whether it's for printing, web display, or any other purpose, this feature allows users to tailor images to their desired specifications.
 
 ## Apply resize to the image 
 
-The Image Editor control includes a [`resize`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#resize) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
+The Image Editor control includes a [`resize`](https://ej2.syncfusion.com/react/documentation/api/image-editor#resize) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
 
 * width: Specifies the resizing width of the image.
 
@@ -43,18 +43,18 @@ Here is an example of resizing the image using the `resize` method.
 
 ## Resizing event
 
-The [`resizing`](https://ej2.syncfusion.com/react/documentation/api/image-editor/#resizing) event is triggered when resizing the image. This event provides information encapsulated within an object, which includes details about the previous and current height and width of an image.
+The [`resizing`](https://ej2.syncfusion.com/react/documentation/api/image-editor#resizing) event is triggered when resizing the image. This event provides information encapsulated within an object, which includes details about the previous and current height and width of an image.
 
-The parameter available in [`ResizeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs/) is,
+The parameter available in [`ResizeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs) is,
 
-* [`ResizeEventArgs.previousWidth`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs/#previouswidth) - The width of the image before resizing is performed.
+* [`ResizeEventArgs.previousWidth`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs#previouswidth) - The width of the image before resizing is performed.
 
-* [`ResizeEventArgs.previousHeight`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs/#previousheight) - The height of the image before resizing is performed.
+* [`ResizeEventArgs.previousHeight`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs#previousheight) - The height of the image before resizing is performed.
 
-* [`ResizeEventArgs.width`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs/#width) - The width of the image after resizing is performed.
+* [`ResizeEventArgs.width`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs#width) - The width of the image after resizing is performed.
 
-* [`ResizeEventArgs.height`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs/#height) - The width of the image after resizing is performed.
+* [`ResizeEventArgs.height`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs#height) - The width of the image after resizing is performed.
 
-* [`ResizeEventArgs.isAspectRatio`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs/#isaspectratio) - The type of resizing performed such as aspect ratio or non-aspect ratio.
+* [`ResizeEventArgs.isAspectRatio`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs#isaspectratio) - The type of resizing performed such as aspect ratio or non-aspect ratio.
 
-* [`ResizeEventArgs.cancel`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs/#cancel) - Specifies a boolean value to cancel the resizing action.
+* [`ResizeEventArgs.cancel`](https://ej2.syncfusion.com/react/documentation/api/image-editor/resizeEventArgs#cancel) - Specifies a boolean value to cancel the resizing action.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Content render modes in React Tab component | Syncfusion
-description: Learn here all about Content render modes in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: Content Render Modes in React Tab | Syncfusion
+description: Render Syncfusion React Tab content on demand with Init, Demand, or Hibernation modes to optimize load time and memory use.
 control: Content render modes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content render modes in React Tab component
+# Content Render Modes in React Tab
 
 Tabs support rendering content based on different scenarios. The content of the tabs can be rendered in three different ways, as outlined below.
 

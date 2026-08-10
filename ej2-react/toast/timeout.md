@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timeout in React Toast component | Syncfusion
-description: Learn here all about Timeout in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: Timeout in React Toast | Syncfusion
+description: Control React Toast display duration with timeOut, extendedTimeOut, and static mode for automatic or persistent notifications.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toast timeout and dismissal
+# Timeout in React Toast
 
 Control how long toasts remain visible before automatic dismissal using timeout properties. The Toast component provides flexible timeout configuration for different notification scenarios and user interactions.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sidebar with TreeView in React Sidebar component | Syncfusion
-description: Learn here all about Sidebar with TreeView in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to render Sidebar with TreeView in React | Syncfusion
+description: Embed a Syncfusion TreeView inside the Syncfusion React Sidebar in dock state to show navigation icons that expand to full tree content.
 control: Sidebar with TreeView 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sidebar with TreeView in React Sidebar component
+# How to render Sidebar with TreeView in React
 
 The following example demonstrates how to render TreeView component inside the Sidebar with dock state and how to achieve expand and collapse the functionalities simultaneously in the Sidebar and Treeview.
 

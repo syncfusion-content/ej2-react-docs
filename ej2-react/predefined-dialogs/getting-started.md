@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with React Predefined dialogs component | Syncfusion
+title: Getting Started with React Predefined Dialogs | Syncfusion
 description:  Checkout and learn about Getting started with React Predefined dialogs component of Syncfusion Essential JS 2 and more details.
 control: Getting started
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Predefined Dialogs component
+# Getting Started with React Predefined Dialogs
 
 This section explains the steps required to create a simple React Predefined Dialogs component and demonstrate its basic usage in a React environment.
 

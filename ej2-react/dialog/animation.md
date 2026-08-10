@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Animation in React Dialog component | Syncfusion
-description: Learn here all about Animation in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: Animation in React Dialog | Syncfusion
+description: Animate React Dialog open and close transitions with configurable delay, duration, and 16 built-in effects such as Fade, Zoom, Flip, and Slide.
 control: Animation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in React Dialog component
+# Animation in React Dialog
 
-The Dialog can be animated during the open and close actions. Animation properties such as [`delay`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings/#delay), [`duration`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings/#duration), and [`effect`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings/#effect) can be customized using the [animationSettings](https://ej2.syncfusion.com/react/documentation/api/dialog/#animationsettings) property.
+The Dialog can be animated during the open and close actions. Animation properties such as [`delay`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings#delay), [`duration`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings#duration), and [`effect`](https://ej2.syncfusion.com/react/documentation/api/dialog/animationSettings#effect) can be customized using the [animationSettings](https://ej2.syncfusion.com/react/documentation/api/dialog#animationsettings) property.
 
 <!-- markdownlint-disable MD033 -->
 <table>

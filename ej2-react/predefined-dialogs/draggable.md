@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Draggable in React Predefined dialogs component | Syncfusion
-description: Learn here all about Draggable in Syncfusion React Predefined dialogs component of Syncfusion Essential JS 2 and more.
+title: Draggable in React Predefined Dialogs | Syncfusion
+description: Enable dragging on React Alert, Confirm, and Prompt dialogs by setting the isDraggable property to reposition them within their target container.
 control: Draggable 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Draggable in React Predefined dialogs component
+# Draggable in React Predefined Dialogs
 
 The predefined dialogs support dragging within their target container by grabbing the dialog header. This enables users to reposition dialogs dynamically using the `isDraggable` property.
 

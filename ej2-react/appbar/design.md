@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Design in React Appbar component | Syncfusion
-description: Learn here all about Design in Syncfusion React Appbar component of Syncfusion Essential JS 2 and more.
+title: Design in React AppBar | Syncfusion
+description: Use Spacer, Separator, and Media Query helpers to lay out the Syncfusion React AppBar and make it responsive to screen size.
 control: Design 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Design in React Appbar component
+# Design in React AppBar
 
 ## Spacer
 

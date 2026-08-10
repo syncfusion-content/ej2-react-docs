@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set command customization in React Toolbar component | Syncfusion
-description: Learn here all about Set command customization in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: How to set command customization in React Toolbar | Syncfusion
+description: Configure Syncfusion React Toolbar command properties such as type, text, tooltipText, prefixIcon, and the click event handler.
 control: Set command customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set command customization in React Toolbar component
+# How to set command customization in React Toolbar
 
 The [`htmlAttributes`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item/#htmlattributes) property of the Toolbar item is used to set the HTML attributes ('ID', 'class', 'style' ,'role') for the commands.
 

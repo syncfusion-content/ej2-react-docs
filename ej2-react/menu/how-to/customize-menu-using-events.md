@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize menu using events in React Menu component | Syncfusion
-description: Learn here all about Customize menu using events in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: How to customize Menu using events in React | Syncfusion
+description: React to Syncfusion React Menu lifecycle events such as `beforeOpen`, `beforeClose`, `onOpen`, `onClose`, and `select` to customize behavior.
 control: Customize menu using events 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize menu using events in React Menu component
+# How to customize Menu using events in React
 
 The Menu provides a set of [`events`](https://ej2.syncfusion.com/react/documentation/api/menu/#events) to enable users to customize it.
 

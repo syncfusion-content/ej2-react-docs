@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Variants in React Message component | Syncfusion
-description: Learn here all about Variants in Syncfusion React Message component of Syncfusion Essential JS 2 and more.
+title: Variants in React Message | Syncfusion
+description: Style React Messages as Text, Outlined, or Filled variants using the variant property to match your design aesthetic.
 control: Message
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Message style variants
+# Variants in React Message
 
-Message variants define the visual presentation and styling approach for messages. The Message component supports three predefined variants that offer different design aesthetics. Configure the variant using the [variant](https://ej2.syncfusion.com/react/documentation/api/message/#variant) property.
+Message variants define the visual presentation and styling approach for messages. The Message component supports three predefined variants that offer different design aesthetics. Configure the variant using the [variant](https://ej2.syncfusion.com/react/documentation/api/message#variant) property.
 
 The Message component provides three style variants:
 

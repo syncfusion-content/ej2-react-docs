@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React hooks accordion in React Accordion component | Syncfusion
-description: Learn here all about React hooks accordion in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: How to use React Hooks with Accordion | Syncfusion
+description: Prevent child components from re-rendering on state changes by rendering React JSX as children of the Syncfusion React Accordion.
 control: React hooks accordion 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React hooks accordion in React Accordion component
+# How to use React Hooks with Accordion
 
 You can prevent the React JSX component reload issue on state changes by rendering the React JSX component as children of Accordion component. In the below example, we have prevented the re-rending of textbox component on state changes in Accordion component.
 

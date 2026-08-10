@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Message component | Syncfusion
-description:  Checkout and learn about Getting started with React Message component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Message | Syncfusion
+description: Set up the Syncfusion React Message component in a Vite project to render contextual feedback messages in your UI.
 control: Message
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Message component
+# Getting Started with React Message
 
 This section explains the steps required to create a simple React Message component and demonstrate its basic usage in a React environment.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React TreeView component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React Tree View | Syncfusion
+description: Bind the Syncfusion React TreeView to local JSON data, a remote DataManager endpoint, or self-referential data via the fields mapping.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React TreeView component
+# Data Binding in React Tree View
 
 The React TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/treeview/#fields) property. The `dataSource` property supports array of JavaScript objects and [**DataManager**](https://ej2.syncfusion.com/react/documentation/data/getting-started). It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 

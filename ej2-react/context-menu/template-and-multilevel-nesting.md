@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates React Context menu component | Syncfusion
-description: Learn here all about Template and multilevel nesting in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: Templates in React Context Menu | Syncfusion
+description: Use `itemTemplate` and the `beforeItemRender` event to render custom React content in Context Menu items and build multi-level nested menus.
 control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React Context menu component
+# Templates in React Context Menu
 
 ## Item template
 

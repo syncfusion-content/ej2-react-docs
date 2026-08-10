@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Tab component | Syncfusion
-description: Learn here all about Style in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React Tab | Syncfusion
+description: CSS class reference for customizing the Syncfusion React Tab wrapper, header, active item, close icon, and content area.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Tab component
+# Style and Appearance in React Tab
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 

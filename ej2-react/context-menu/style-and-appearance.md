@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Context menu component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React Context Menu | Syncfusion
+description: CSS class reference for customizing the React Context Menu wrapper, items, icons, carets, and visual states.
 control: Context Menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Context menu component
+# Style and Appearance in React Context Menu
 
 To modify the ContextMenu appearance, you need to override the default CSS of ContextMenu component. The ContextMenu provides extensive customization options through CSS classes that target specific elements within the component structure. You can customize everything from the overall wrapper to individual menu items, icons, and visual states. Additionally, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

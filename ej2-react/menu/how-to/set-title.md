@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set title in React Menu component | Syncfusion
-description: Learn here all about Set title in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: How to set a Menu item title in React Menu | Syncfusion
+description: Set a tooltip title for a Syncfusion React Menu item by modifying the rendered `li` element in the `beforeItemRender` client-side event.
 control: Set title 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set title in React Menu component
+# How to set a Menu item title in React Menu
 
 In this sample , the title for menu item  can be achievable by using 'beforeItemRender' client-side event in Menu component.
 

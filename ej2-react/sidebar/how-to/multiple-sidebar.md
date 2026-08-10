@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple Sidebar in React Sidebar component | Syncfusion
-description: Learn here all about Multiple Sidebar in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to render multiple Sidebar in React Sidebar | Syncfusion
+description: Render two Syncfusion React Sidebars on the same page that share the same main content area, one on each side, using the `position` property.
 control: Multiple Sidebar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple Sidebar in React Sidebar component
+# How to render multiple Sidebar in React Sidebar
 
 Two Sidebars can be initialized in a web page with same main content. Sidebars can be initialized on right side or left side of the main content using [position](https://ej2.syncfusion.com/react/documentation/api/sidebar/#position) property.
 

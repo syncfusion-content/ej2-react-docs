@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Template in React Dialog component | Syncfusion
-description: Learn here all about Template in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: Template in React Dialog | Syncfusion
+description: Customize the React Dialog header, footer, and content using template properties that accept plain text or HTML strings for full control over dialog layout.
 control: Template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in React Dialog component
+# Template in React Dialog
 
 The Dialog supports templating for the header, content, and footer sections. Text and HTML content can be appended to these sections through template properties.
 
 ## Header
 
-The Dialog header content is provided through the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog/#header) property, which accepts both text and HTML content as a string. A close button is also provided as built-in support and can be enabled through the [`showCloseIcon`](https://ej2.syncfusion.com/react/documentation/api/dialog/#showcloseicon) property.
+The Dialog header content is provided through the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog#header) property, which accepts both text and HTML content as a string. A close button is also provided as built-in support and can be enabled through the [`showCloseIcon`](https://ej2.syncfusion.com/react/documentation/api/dialog#showcloseicon) property.
 
 ## Footer
 
-The Dialog footer can be enabled by adding built-in [`buttons`](https://ej2.syncfusion.com/react/documentation/api/dialog/#buttons) or providing any HTML string through the [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/dialog/#footertemplate).
+The Dialog footer can be enabled by adding built-in [`buttons`](https://ej2.syncfusion.com/react/documentation/api/dialog#buttons) or providing any HTML string through the [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/dialog#footertemplate).
 
-> The [`buttons`](https://ej2.syncfusion.com/react/documentation/api/dialog/#buttons) and [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/dialog/#footertemplate) properties can't be used at the same time.
+> The [`buttons`](https://ej2.syncfusion.com/react/documentation/api/dialog#buttons) and [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/dialog#footertemplate) properties can't be used at the same time.
 
 ## Content
 
-The Dialog content is provided through the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog/#content) property, which accepts both text and HTML strings.
+The Dialog content is provided through the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property, which accepts both text and HTML strings.
 
 The following example demonstrates the usage of header, footer, and content templates in the Dialog.
 
