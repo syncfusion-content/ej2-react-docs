@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Dialog component | Syncfusion
-description: Learn here all about Style in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: Style in React Dialog | Syncfusion
+description: Override the React Dialog CSS classes to customize the header, content, and modal overlay colors, fonts, opacity, and other visual properties.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Dialog component
+# Style in React Dialog
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

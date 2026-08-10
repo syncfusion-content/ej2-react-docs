@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in React Stepper component | Syncfusion
-description:  Checkout and learn about Animation with Syncfusion React Stepper component of Syncfusion Essential JS 2 and more.
+title: Animation in React Stepper | Syncfusion
+description: Animate the step-to-step transition in the Syncfusion React Stepper by configuring `duration` and `delay` on the `animation` property.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in React Stepper component
+# Animation in React Stepper
 
 The Stepper progress state can be animated, smoothly transitioning from one step to another. You can customize the animation's `duration` and `delay` by using the [animation](https://ej2.syncfusion.com/react/documentation/api/stepper/#animation) property.
 

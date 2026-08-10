@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to customize toolbar scroll step in React Toolbar component | Syncfusion
-description: Learn here all about How to customize toolbar scroll step in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: How to customize Toolbar scrollStep in React | Syncfusion
+description: Set how many pixels the Syncfusion React Toolbar scrolls per arrow click by configuring the scrollStep property.
 control: How to customize toolbar scroll step 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to customize toolbar scroll step in React Toolbar component
+# How to customize Toolbar scrollStep in React
 
 Toolbar supports to customize the scrolling distance when you click the left and right side navigation icons. we can customize `ScrollStep` property for scrolling distance. Refer to the following code example.
 

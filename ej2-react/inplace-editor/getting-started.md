@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Inplace editor component | Syncfusion
-description:  Checkout and learn about Getting started with React Inplace editor component of Syncfusion Essential JS 2 and more details.
-control: Inplace editor
+title: Getting Started with React In-place Editor | Syncfusion
+description: Learn how to set up the Syncfusion React In-place Editor in a Vite project, install the npm package, import themes, and render a basic text editor.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Inplace editor component
+# Getting Started with React In-place Editor
 
 This section explains the steps required to create a simple React In-place Editor component and demonstrate its basic usage in a React environment.
 

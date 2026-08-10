@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Image Editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Image Editor component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Image Editor | Syncfusion
+description: Learn how the React Image Editor meets WCAG 2.2, Section 508, ADA, and keyboard navigation standards with screen reader and RTL support.
 control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Image Editor component
+# Accessibility in React Image Editor
 
 The Image Editor component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hover multi line tree node in React TreeView component | Syncfusion
-description: Learn here all about Hover multi line tree node in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: How to hover multi-line tree nodes in React | Syncfusion
+description: Highlight the entire multi-line row of a Syncfusion React TreeView node on hover by overriding the e-list-item hover rule.
 control: Hover multi line tree node 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hover multi line tree node in React TreeView component
+# How to hover multi-line tree nodes in React
 
 This section demonstrates how to hover and select a multi-line tree node. Here, you can set the row height (element class: `e-fullrow`) to be the same as the row content (element class: `e-text-content`)
 

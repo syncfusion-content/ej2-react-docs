@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dynamically Change Items in react Context Menu | Syncfusion
-description: Learn here all about Change menu items dynamically in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: How to change items dynamically in React | Syncfusion
+description: Show different React Context Menu items depending on the target element by toggling items in the `beforeOpen` event with `hideItems` and `showItems`.
 control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Change menu items dynamically in React Context menu component
+# How to change items dynamically in React
 
 The ContextMenu component supports dynamic menu item changes based on the target element where the context menu is triggered. This functionality enables context-aware menus that display different options depending on the specific area or element the user interacts with, enhancing user experience through relevant, targeted actions.
 

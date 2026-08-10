@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Toolbar component | Syncfusion
-description:  Checkout and learn about Getting started with React Toolbar component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Toolbar | Syncfusion
+description: Learn how to get started with the Syncfusion React Toolbar control. Explore setup, features, examples, and customization options.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Toolbar Component
+# Getting Started with React Toolbar
 
 This section explains you the steps required to create a simple Toolbar and demonstrate the basic usage of the Toolbar control.
 

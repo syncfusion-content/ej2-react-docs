@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React hooks dialog in React Dialog component | Syncfusion
-description: Learn here all about React hooks dialog in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+description: Open a React Dialog using the useState hook with the visible property to control dialog state from any React functional component.
 control: React hooks dialog 
 platform: ej2-react
 documentation: ug

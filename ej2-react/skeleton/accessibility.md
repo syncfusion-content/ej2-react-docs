@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Skeleton component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Skeleton component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Skeleton | Syncfusion
+description: Build accessible React Skeletons with WAI-ARIA status semantics, polite live regions, and prefers-reduced-motion support.
 control: Skeleton
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Skeleton component
+# Accessibility in React Skeleton
 
 The Skeleton component follows WCAG 2.2, Section 508, and ADA accessibility standards to ensure all users, including those using assistive technologies, receive meaningful feedback during content loading periods. The component provides semantic markup and ARIA attributes that communicate loading state to screen readers and assistive devices.
 
@@ -40,7 +40,7 @@ The accessibility compliance levels for the Skeleton component are outlined belo
 
 ## WAI-ARIA attributes
 
-The Skeleton component implements [WAI-ARIA status pattern](https://www.w3.org/WAI/ARIA/apg/patterns/status/) semantics to communicate loading state to assistive technologies. The following ARIA attributes are applied in the Skeleton component:
+The Skeleton component implements [WAI-ARIA status pattern](https://www.w3.org/WAI/ARIA/apg/patterns#status) semantics to communicate loading state to assistive technologies. The following ARIA attributes are applied in the Skeleton component:
 
 | Attribute | Purpose |
 | --- | --- |

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Inplace editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Inplace editor component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in React In-place Editor | Syncfusion
+description: Use the Syncfusion React In-place Editor with WCAG 2.2, Section 508, ADA, screen reader, keyboard navigation, and color contrast accessibility support.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Inplace editor component
+# Accessibility in React In-place Editor
 
 The In-place Editor component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

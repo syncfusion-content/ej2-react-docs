@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles and Appearance in React TreeView component | Syncfusion
-description: Checkout and learn here all about styles and appearance in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: Styles and Appearance in React Tree View | Syncfusion
+description: CSS class reference for customizing the Syncfusion React TreeView node, expand and collapse icons, hover state, and active selection.
 platform: ej2-react
 control: TreeView 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles and Appearance in React TreeView Component
+# Styles and Appearance in React Tree View
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user preference.
 

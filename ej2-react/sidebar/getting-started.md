@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Sidebar component | Syncfusion
-description:  Checkout and learn about Getting started with React Sidebar component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Sidebar | Syncfusion
+description: Learn how to get started with the Syncfusion React Sidebar control. Explore setup, features, examples, and customization options.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Sidebar component
+# Getting Started with React Sidebar
 
 This section explains how to create a simple Sidebar component and configure its core functionalities in a React application.
 

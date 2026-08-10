@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Icons in React Breadcrumb component | Syncfusion
-description: Learn here all about Icons in Syncfusion React Breadcrumb component of Syncfusion Essential JS 2 and more.
+title: Icons in React Breadcrumb | Syncfusion
+description: Display font icons, images, or SVGs on each Syncfusion React Breadcrumb item via the `iconCss` property with configurable positioning.
 platform: ej2-react
 control: Breadcrumb 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons in React Breadcrumb component
+# Icons in React Breadcrumb
 
-The Breadcrumb component supports icons and images to provide visual representation and enhance navigation context for each item. Icons can be implemented using font icons, custom images, or SVG graphics through the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/breadcrumbItem/#iconcss) property, with flexible positioning options to suit different design requirements.
+The Breadcrumb component supports icons and images to provide visual representation and enhance navigation context for each item. Icons can be implemented using font icons, custom images, or SVG graphics through the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/breadcrumbItem#iconcss) property, with flexible positioning options to suit different design requirements.
 
 ## Loading icon in Breadcrumb items
 
@@ -63,7 +63,7 @@ In the Breadcrumb component, SVG images can be added to items using the `iconCss
 
 ## Icon Position
 
-By default, icons are positioned to the left side of the item text in the Breadcrumb component. To position icons to the right of breadcrumb items, add the `e-icon-right` class to the required item. In the following example, the `e-icon-right` class is added to breadcrumb items using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#beforeitemrender) event.
+By default, icons are positioned to the left side of the item text in the Breadcrumb component. To position icons to the right of breadcrumb items, add the `e-icon-right` class to the required item. In the following example, the `e-icon-right` class is added to breadcrumb items using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#beforeitemrender) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

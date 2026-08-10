@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Setting max height to the dialog in React Dialog component | Syncfusion
-description: Learn here all about Setting max height to the dialog in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: Setting max height to dialog in React Dialog component | Syncfusion
+description: Override the React Dialog default maxHeight in the beforeOpen event to set a custom maximum based on the target container or viewport.
 control: Setting max height to the dialog 
 platform: ej2-react
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Setting max height to the dialog in React Dialog component
 
-By default, the `maxHeight` of the Dialog is calculated based on the target container. If the target is not specified, the Dialog uses the body as the target and calculates `maxHeight` accordingly. The `maxHeight` can be customized in the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog/#beforeOpen) event for more control over the dialog's maximum height.
+By default, the `maxHeight` of the Dialog is calculated based on the target container. If the target is not specified, the Dialog uses the body as the target and calculates `maxHeight` accordingly. The `maxHeight` can be customized in the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog#beforeOpen) event for more control over the dialog's maximum height.
 
 `[Class-component]`
 

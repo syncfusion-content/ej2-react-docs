@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React InplaceEditor control | Syncfusion
-description:  Checkout and learn about Getting started functional with React Inplace editor component of Syncfusion Essential JS 2 and more details.
-control: Getting started functional 
+title: Getting Started with React In-place Editor | Syncfusion
+description: Learn how to build the Syncfusion React In-place Editor using a functional component with create-react-app, configure dependencies, and render a DropDownList.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with React In-place Editor
 
 This section briefly explains about how to create a simple In-place Editor and demonstrate the basic usage of the In-place Editor component.
 
@@ -88,7 +88,7 @@ The above package installs [In-place Editor dependencies](#dependencies) which a
 
 ## Add the In-place Editor with Textbox
 
-By default, Essential<sup style="font-size:70%">&reg;</sup> JS2 React TextBox component is rendered in In-place Editor with [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) property sets as Text.
+By default, Essential<sup style="font-size:70%">&reg;</sup> JS2 React TextBox component is rendered in In-place Editor with [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType) property sets as Text.
 
 * Import the In-place Editor component to your `src/App.tsx` file using following code.
 
@@ -115,9 +115,9 @@ By default, Essential<sup style="font-size:70%">&reg;</sup> JS2 React TextBox co
 
 ## Configuring DropDownList
 
-You can render Essential<sup style="font-size:70%">&reg;</sup> JS 2 React DropDownList by changing [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) property as [`DropDownList`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list) and configure its properties and methods using `model` property.
+You can render Essential<sup style="font-size:70%">&reg;</sup> JS 2 React DropDownList by changing [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType) property as [`DropDownList`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list) and configure its properties and methods using `model` property.
 
-In the below sample, [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) and [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#model) values are configured to render the [`DropDownList`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list) component.
+In the below sample, [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType) and [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#model) values are configured to render the [`DropDownList`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list) component.
 
 
 
@@ -143,9 +143,9 @@ export default App;
 
 ## Integrate DatePicker
 
-You can render Essential<sup style="font-size:70%">&reg;</sup> JS2 [DatePicker](https://ej2.syncfusion.com/react/documentation/api/datepicker/) by changing [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) property as [`Date`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) and also configure its properties and methods using [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#model) property.
+You can render Essential<sup style="font-size:70%">&reg;</sup> JS2 [DatePicker](https://ej2.syncfusion.com/react/documentation/api/datepicker) by changing [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType) property as [`Date`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType) and also configure its properties and methods using [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#model) property.
 
-In the below sample, [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType/) and [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#model) values are configured to render the [DatePicker](https://ej2.syncfusion.com/react/documentation/api/datepicker) component.
+In the below sample, [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType) and [`model`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#model) values are configured to render the [DatePicker](https://ej2.syncfusion.com/react/documentation/api/datepicker) component.
 
 
 
@@ -193,7 +193,7 @@ Output will be as follows:
 
 ## Submitting data to the server (save)
 
-You can submit editor value to server by configuring the [`url`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#url), [`adaptor`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/adaptorType/) and [`primaryKey`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#primarykey) property.
+You can submit editor value to server by configuring the [`url`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#url), [`adaptor`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/adaptorType) and [`primaryKey`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#primarykey) property.
 
 | Property   | Usage                                           |
 |------------|---------------------------------------------------------|
@@ -201,7 +201,7 @@ You can submit editor value to server by configuring the [`url`](https://ej2.syn
 | **`adaptor`**    | Specifies the adaptor type that are used by DataManager to communicate with DataSource.  |
 | **`primarykey`** | Defines the unique primary key of editable field which can be used for saving data in data-base. |
 
-> [`primaryKey`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#primarykey) property is mandatory. If it's not set, edited data are not sent to the server.
+> [`primaryKey`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#primarykey) property is mandatory. If it's not set, edited data are not sent to the server.
 
 ## Refresh with modified value
 
@@ -220,4 +220,4 @@ The edited data is submitted to the server and you can see the new values gettin
 
 ## See Also
 
-* [Types of rendering the editor](./integration/)
+* [Types of rendering the editor](./integration)

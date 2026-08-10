@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Config in React Toast component | Syncfusion
-description: Learn here all about Config in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: Config in React Toast | Syncfusion
+description: Configure React Toast titles, content, target containers, close buttons, progress bars, and stacking order via built-in properties.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toast configuration
+# Config in React Toast
 
 This section explains how to customize Toast appearance, layout, and behavior using built-in properties and events. Configure titles, content, positioning, progress display, and stacking order to match your application's notification requirements.
 

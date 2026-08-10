@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons and navigation in React Context menu component | Syncfusion
-description: Learn here all about Icons and navigation in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: Icons and Navigation in React Context Menu | Syncfusion
+description: Add icons to React Context Menu items via `iconCss` and configure the `url` property to navigate to internal routes or external web pages.
 control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons and navigation in React Context menu component
+# Icons and Navigation in React Context Menu
 
 ## Icons
 

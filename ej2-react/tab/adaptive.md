@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adaptive in React Tab component | Syncfusion
-description: Learn here all about Adaptive in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: Responsive Modes in React Tab | Syncfusion
+description: Switch the Syncfusion React Tab header layout between Scrollable, Popup, and None based on container width with the overflowMode property.
 control: Adaptive 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adaptive in React Tab component
+# Responsive Modes in React Tab
 
 The following section explains about rendering Tab when its width exceeds the viewable area or particularly in a given [`width`](https://ej2.syncfusion.com/react/documentation/api/tab/#width).
 The available modes are as follows:

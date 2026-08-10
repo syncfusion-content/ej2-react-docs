@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in React Tooltip component | Syncfusion
-description: Learn here all about Animation in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+title: Animation in React Tooltip | Syncfusion
+description: Animate React Tooltip entrance and exit transitions using the animation property with configurable delay, duration, and FadeIn or FadeOut effects.
 control: Animation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in React Tooltip component
+# Animation in React Tooltip
 
 The Tooltip can be animated using specific animation effects controlled through the [`animation`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#animation) property.
 

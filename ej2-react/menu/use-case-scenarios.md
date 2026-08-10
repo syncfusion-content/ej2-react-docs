@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Use case scenarios in React Menu component | Syncfusion
-description: Learn here all about Use case scenarios in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: Use Case Scenarios in React Menu | Syncfusion
+description: Real-world Syncfusion React Menu integrations: scrollable menus, Menu in Toolbar, hamburger Menu in Sidebar, and mobile ListView.
 control: Use case scenarios 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Use case scenarios in React Menu component
+# Use Case Scenarios in React Menu
 
 ## Scrollable menu
 

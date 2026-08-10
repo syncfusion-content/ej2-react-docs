@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Process the tree node operations using context menu in React TreeView component | Syncfusion
-description: Learn here all about Process the tree node operations using context menu in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: How to use context menu for tree operations | Syncfusion
+description: Trigger a Syncfusion Context Menu on right click of a Syncfusion React TreeView node to add, rename, or delete that node.
 control: Process the tree node operations using context menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Process the tree node operations using context menu in React TreeView component
+# How to use context menu for tree operations
 
 You can integrate the context menu with 'TreeView' component in order to perform the TreeView related operations like add, remove and renaming the node.
 

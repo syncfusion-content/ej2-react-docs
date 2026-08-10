@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show different types of toast in React Toast component | Syncfusion
-description: Learn here all about Show different types of toast in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: How to show different types of Toast in React Toast | Syncfusion
+description: Apply four React Toast CSS variants — success, info, warning, danger — to communicate message severity and intent.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show different types of toast in React Toast component
+# How to show different types of Toast in React Toast
 
 The Syncfusion Toast component provides four predefined style variants for communicating different message types and severity levels. Apply these variants using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/toast/#cssclass) property to create semantically meaningful notifications. Selecting appropriate toast types helps users quickly understand the nature and urgency of messages.
 

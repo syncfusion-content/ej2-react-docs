@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Dynamic edit mode in React Inplace editor component | Syncfusion
-description: Learn here all about Dynamic edit mode in Syncfusion React Inplace editor component of Syncfusion Essential JS 2 and more.
-control: Dynamic edit mode 
+title: Move input to edit mode in React In-place Editor | Syncfusion
+description: Open the Syncfusion React In-place Editor in edit mode on initial load using enableEditMode, and toggle edit mode at runtime from a checkbox event.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dynamic edit mode in React Inplace editor component
+# How to dynamically move input to edit mode in React In-place Editor
 
-Open the editor automatically when the In-place Editor component loads by setting the [enableEditMode](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#enableeditmode) property to `true`.
+Open the editor automatically when the In-place Editor component loads by setting the [enableEditMode](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#enableeditmode) property to `true`.
 
 In the following sample, the editor opens at initial load. Toggling the checkbox dynamically toggles the edit mode on and off.
 

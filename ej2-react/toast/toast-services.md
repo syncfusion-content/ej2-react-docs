@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toast services in React Toast component | Syncfusion
-description: Learn here all about Toast services in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: Toast services in React Toast | Syncfusion
+description: Show React Toasts globally with ToastUtility.show() using Information, Success, Error, or Warning predefined types — no setup needed.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toast services and utility functions
+# Toast services in React Toast
 
 The Toast component provides utility functions for displaying toasts without requiring component instantiation or DOM container setup. This approach enables showing toasts programmatically "on-the-go" with minimal code. The utility functions are ideal for global notifications triggered from anywhere in the application.
 

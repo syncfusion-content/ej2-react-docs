@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in React Predefined dialogs component | Syncfusion
-description: Learn here all about Animation in Syncfusion React Predefined dialogs component of Syncfusion Essential JS 2 and more.
+title: Animation in React Predefined Dialogs | Syncfusion
+description: Animate React Predefined Dialogs with configurable delay, duration, and effect settings for smooth open and close transitions on Alert and Confirm dialogs.
 control: Animation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in React Predefined dialogs component
+# Animation in React Predefined Dialogs
 
 The predefined dialogs can be animated during the open and close actions. Animation properties such as `delay`, `duration`, and `effect` can be customized using the `animationSettings` property.
 

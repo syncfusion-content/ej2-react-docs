@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Tooltip component | Syncfusion
-description: Learn here all about Style in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+title: Style in React Tooltip | Syncfusion
+description: Override the React Tooltip CSS classes to customize the popup border, background, opacity, border-radius, and content typography.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Tooltip component
+# Style in React Tooltip
 
 The following content provides the CSS structure that can be used to modify the component's appearance according to user preferences.
 

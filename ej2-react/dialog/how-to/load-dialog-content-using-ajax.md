@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load dialog content using AJAX in React Dialog component | Syncfusion
-description: Learn how to dynamically load dialog content from external sources using AJAX in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: How to load content using AJAX in React Dialog | Syncfusion
+description: Dynamically fetch and display content in a React Dialog from a server endpoint using AJAX triggered by the beforeOpen or open lifecycle event.
 control: Load dialog content using AJAX 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load dialog content using AJAX in React Dialog component
+# How to load content using AJAX in React Dialog
 
 The Dialog component supports dynamic content loading from external sources, such as server files or API endpoints, using AJAX. This allows you to fetch and display content on demand without including it directly in the markup.
 
@@ -16,7 +16,7 @@ The Dialog component supports dynamic content loading from external sources, suc
 
 You can use the Dialog's lifecycle events to trigger AJAX requests and populate the dialog content. The following approach demonstrates how to load content when the dialog opens:
 
-1. Use the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog/#beforeopen) or [open](https://ej2.syncfusion.com/react/documentation/api/dialog/#open) event to initiate an AJAX request
+1. Use the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog#beforeopen) or [open](https://ej2.syncfusion.com/react/documentation/api/dialog#open) event to initiate an AJAX request
 2. Update the dialog content using the fetched data
 3. Handle errors appropriately if the request fails
 

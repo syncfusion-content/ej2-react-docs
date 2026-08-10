@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Server actions in React Inplace editor component | Syncfusion
-description: Learn here all about Server actions in Syncfusion React Inplace editor component of Syncfusion Essential JS 2 and more.
-control: Server actions 
+title: Server Actions in React In-place Editor | Syncfusion
+description: Submit the Syncfusion React In-place Editor value to a remote URL with primaryKey, handle actionSuccess and actionFailure events, and process server responses.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Server actions in React Inplace editor component
+# Server Actions in React In-place Editor
 
-When submitting In-place Editor values to the server, the [primaryKey](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#primarykey) property is required for remote data operations; otherwise, the action will not be performed.
+When submitting In-place Editor values to the server, the [primaryKey](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#primarykey) property is required for remote data operations; otherwise, the action will not be performed.
 
-If the [URL](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#url) property is empty, data submission is handled locally and the [actionSuccess](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionsuccess) event triggers with `null` as the argument value.
+If the [URL](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#url) property is empty, data submission is handled locally and the [actionSuccess](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#actionsuccess) event triggers with `null` as the argument value.
 
 > The following arguments are passed to the server when submit actions are performed.
 
@@ -41,9 +41,9 @@ public IEnumerable<SubmitModel> UpdateData([FromBody]SubmitModel value) {
 
 ```
 
-* When server submission is successful, the [actionSuccess](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionsuccess) event is triggered with the returned server data.
+* When server submission is successful, the [actionSuccess](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#actionsuccess) event is triggered with the returned server data.
 
-* If the server does not respond or an error occurs, the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#actionfailure) event is triggered and the value is not updated in the Editor.
+* If the server does not respond or an error occurs, the [actionFailure](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#actionfailure) event is triggered and the value is not updated in the Editor.
 
 In the following sample, both `actionSuccess` and `actionFailure` events are configured. The `actionSuccess` event triggers when the value is successfully submitted to the server, and the returned value is converted to chips.
 
@@ -75,4 +75,4 @@ In the following sample, both `actionSuccess` and `actionFailure` events are con
 
 ## See Also
 
-* [Indicate the server actions in the editor](./how-to/custom-indication/)
+* [Indicate the server actions in the editor](./how-to/custom-indication)

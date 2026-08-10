@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto hide show icon in React TreeView component | Syncfusion
-description: Learn here all about Auto hide show expand collapse icon in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: How to auto-hide expand/collapse icons in React | Syncfusion
+description: Hide the expand and collapse icons on Syncfusion React TreeView leaf nodes that have no children, via CSS rules.
 control: Auto hide show expand collapse icon 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto hide show expand collapse icon in React TreeView component
+# How to auto-hide expand/collapse icons in React
 
 You can display the expand icon by hovering the mouse over TreeView and hide the expand icon by leaving the mouse from TreeView. Refer to the following code sample to hide/show the expand/collapse icon automatically using the mouse.
 

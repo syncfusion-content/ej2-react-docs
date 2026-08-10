@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Nodes Manipulation in React TreeView component | Syncfusion
-description: Learn here all about Nodes Manipulation in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: How to manipulate Tree View nodes in React | Syncfusion
+description: Add, remove, expand, collapse, select, and edit Syncfusion React TreeView nodes at runtime via addNodes, removeNodes, and expandAll.
 control: TreeView
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Nodes manipulation in ##Platform_Name## TreeView component
+# How to manipulate Tree View nodes in React
 
 The TreeView component provides Essential<sup style="font-size:70%">&reg;</sup> methods for dynamically managing nodes, offering the ability to create a highly interactive and customizable tree structure,
 

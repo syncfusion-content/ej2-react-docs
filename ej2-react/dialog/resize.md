@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Resize in React Dialog component | Syncfusion
-description: Learn here all about Resize in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: Resize in React Dialog | Syncfusion
+description: Make the React Dialog resizable by enabling a drag handle on any edge so users can dynamically adjust the dialog size within its target container.
 control: Resize 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize in React Dialog component
+# Resize in React Dialog
 
 The Dialog supports resizing functionality. To resize the dialog, select and drag it using the resize handle (grip) or hover on any of the edges or borders of the dialog within the sample container.
 
-A resizable dialog can be created by setting the [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog/#enableresize) property to `true`. This allows the dialog size to be changed dynamically, enabling users to view content in expanded mode. The [resizeHandles](https://ej2.syncfusion.com/react/documentation/api/dialog/#resizehandles) property can be configured to specify all directions in which the dialog can be resized. When the target property is configured along with [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog/#enableresize), the dialog can be resized only within its specified target container.
+A resizable dialog can be created by setting the [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog#enableresize) property to `true`. This allows the dialog size to be changed dynamically, enabling users to view content in expanded mode. The [resizeHandles](https://ej2.syncfusion.com/react/documentation/api/dialog#resizehandles) property can be configured to specify all directions in which the dialog can be resized. When the target property is configured along with [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog#enableresize), the dialog can be resized only within its specified target container.
 
 `[Class-component]`
 

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Overflow in React Breadcrumb component | Syncfusion
-description: Learn here all about Overflow mode in Syncfusion React Breadcrumb component of Syncfusion Essential JS 2 and more.
+title: Overflow Mode in React Breadcrumb | Syncfusion
+description: Handle excess Syncfusion React Breadcrumb items with Collapsed, Menu, Wrap, Scroll, Hidden, or None overflow modes via `maxItems`.
 control: Breadcrumb 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overflow in React Breadcrumb component
+# Overflow Mode in React Breadcrumb
 
 ## Overflow Mode
 
-The Breadcrumb component uses the [`maxItems`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#maxitems) and [`overflowMode`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#overflowmode) properties to control how breadcrumb items are displayed when they exceed the available container space. The `maxItems` property sets the maximum number of items to display, while  [`overflowMode`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#overflowmode) determines the behavior for handling additional items.
+The Breadcrumb component uses the [`maxItems`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#maxitems) and [`overflowMode`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#overflowmode) properties to control how breadcrumb items are displayed when they exceed the available container space. The `maxItems` property sets the maximum number of items to display, while  [`overflowMode`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#overflowmode) determines the behavior for handling additional items.
 
-In the following example, maxItems is set to 3 with overflowMode as Menu (default). To prevent breadcrumb item navigation, the [`enableNavigation`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#enablenavigation) property has been set to false in the Breadcrumb component.
+In the following example, maxItems is set to 3 with overflowMode as Menu (default). To prevent breadcrumb item navigation, the [`enableNavigation`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#enablenavigation) property has been set to false in the Breadcrumb component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

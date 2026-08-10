@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validate the text when renaming the tree node in React TreeView component | Syncfusion
-description: Learn here all about Validate the text when renaming the tree node in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: How to validate node text on rename in React | Syncfusion
+description: Validate new text in the Syncfusion React TreeView rename editor by handling the nodeEditing event and canceling on invalid input.
 control: Validate the text when renaming the tree node 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validate the text when renaming the tree node in React TreeView component
+# How to validate node text on rename in React
 
 You can validate the tree node text while editing using [`nodeEdited`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodeedited) event of the TreeView. Following is an example that shows how to validate and prevent empty values in tree node.
 

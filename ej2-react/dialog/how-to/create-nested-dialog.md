@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create nested dialog in React Dialog component | Syncfusion
-description: Learn here all about Create nested dialog in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: How to create nested in React Dialog | Syncfusion
+description: Open a child React Dialog inside a parent Dialog by setting the inner dialog's target property to the outer dialog's CSS class.
 control: Create nested dialog 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create nested dialog in React Dialog component
+# How to create nested in React Dialog
 
 A Dialog can be nested within another Dialog. The following sample contains parent and child Dialog (inner Dialog).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Context menu component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React ContextMenu component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Context Menu | Syncfusion
+description: WAI-ARIA menubar pattern, `role`, `aria-haspopup`, and `aria-expanded` attributes plus full keyboard navigation support for the React Context Menu.
 control: Context Menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Context menu component
+# Accessibility in React Context Menu
 
 The React ContextMenu component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

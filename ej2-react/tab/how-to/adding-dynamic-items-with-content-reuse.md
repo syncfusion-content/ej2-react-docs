@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adding dynamic items with content reuse in React Tab component | Syncfusion
-description: Learn here all about Adding dynamic items with content reuse in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to add dynamic Tabs with content reuse in React | Syncfusion
+description: Add new Syncfusion React Tab items at runtime that reuse an existing component or template via the addTab method.
 control: Adding dynamic items with content reuse 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding dynamic items with content reuse in React Tab component
+# How to add dynamic Tabs with content reuse in React
 
 You can add dynamic tabs by reusing the content using React **template**. Tabs can be added dynamically by passing array of items and index value to the [`addTab`](https://ej2.syncfusion.com/react/documentation/api/tab/#addtab) method.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in React Image Editor component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Image Editor component of Syncfusion Essential JS 2 and more.
+title: Localization in React Image Editor | Syncfusion
+description: Localize the default text content of the React Image Editor into other cultures like Arabic, German, and French by defining a locale object.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in the React Image Editor component
+# Localization in React Image Editor
 
 The `Localization` library allows you to localize the default text content of the Image Editor. The Image Editor has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the `locale` value and translation object.
 

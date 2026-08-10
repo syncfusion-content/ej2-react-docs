@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dimension in React Predefined dialogs component | Syncfusion
-description: Learn here all about Dimension in Syncfusion React Predefined dialogs component of Syncfusion Essential JS 2 and more.
+title: Dimension in React Predefined Dialogs | Syncfusion
+description: Set the React Predefined Dialogs height and width in pixels or percentage format to control the default size of Alert and Confirm dialogs.
 control: Dimension 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dimension in React Predefined dialogs component
+# Dimension in React Predefined Dialogs
 
 The dimensions of predefined dialogs can be customized using the `height` and `width` properties. Dimension values can be specified in pixels or percentage format to change the default dialog width and height.
 

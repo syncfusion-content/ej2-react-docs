@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Tooltip component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Tooltip | Syncfusion
+description: Build accessible React Tooltips compliant with WCAG 2.2, Section 508, and ADA, including full WAI-ARIA support and screen reader compatibility.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Tooltip component
+# Accessibility in React Tooltip
 
 The Tooltip component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

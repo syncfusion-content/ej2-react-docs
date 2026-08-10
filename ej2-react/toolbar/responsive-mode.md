@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Responsive mode in React Toolbar component | Syncfusion
-description: Learn here all about Responsive mode in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: Responsive Mode in React Toolbar | Syncfusion
+description: Show a popup with overflowing Syncfusion React Toolbar items on small screens by setting the overflowMode property to Popup or Extended.
 control: Responsive mode 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Responsive mode in React Toolbar component
+# Responsive Mode in React Toolbar
 
 This section explains the supported display modes of the Toolbar when the content exceeds the viewing area. Possible modes are:
 

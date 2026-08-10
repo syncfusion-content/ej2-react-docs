@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with the React Skeleton Component | Syncfusion
-description: Learn how to quickly set up and use the Syncfusion React Skeleton component, including dependencies, installation, and configuration details.
+title: Getting Started with React Skeleton | Syncfusion
+description: Set up the Syncfusion React Skeleton component in a Vite project to display placeholder loading states for your content.
 control: Skeleton
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React Skeleton component
+# Getting Started with React Skeleton
 
 This section explains the steps required to create a simple React Skeleton component and demonstrate its basic usage in a React environment.
 

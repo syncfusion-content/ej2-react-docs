@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Spinner component | Syncfusion
-description: Learn here all about Style in Syncfusion React Spinner component of Syncfusion Essential JS 2 and more.
+title: Style in React Spinner | Syncfusion
+description: Override the React Spinner CSS classes to customize the stroke color, fill, and other visual properties of the Material, Fabric, Bootstrap, and Bootstrap4 themes.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Spinner component
+# Style in React Spinner
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

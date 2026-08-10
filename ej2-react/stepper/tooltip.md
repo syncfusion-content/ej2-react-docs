@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip in React Stepper component | Syncfusion
-description:  Checkout and learn about Tooltip with Syncfusion React Stepper component of Syncfusion Essential JS 2 and more.
+title: Tooltip in React Stepper | Syncfusion
+description: Show a hover tooltip on each Syncfusion React Stepper step by setting `showTooltip` to `true` and customize it with the `tooltipTemplate` property.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in React Stepper component
+# Tooltip in React Stepper
 
 The Stepper component supports tooltip to show additional information in the steps by setting the [showTooltip](https://ej2.syncfusion.com/react/documentation/api/stepper/#showtooltip) property to `true`. 
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Toolbar component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Toolbar | Syncfusion
+description: Built-in WAI-ARIA toolbar role, aria-label and aria-disabled patterns, and arrow-key navigation for the Syncfusion React Toolbar.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Toolbar component
+# Accessibility in React Toolbar
 
 The Toolbar component has been designed,  keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/) specifications, and applying the WAI-ARIA roles, states, and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, and `aria-orientation`, It provides information about elements in a document for assistive technology.  The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/), and has been tested in major screen readers.
 

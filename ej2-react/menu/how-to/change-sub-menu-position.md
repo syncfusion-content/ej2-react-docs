@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change sub menu position in React Menu component | Syncfusion
-description: Learn here all about Change sub menu position in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: How to change Sub Menu position in React Menu | Syncfusion
+description: Reposition a Syncfusion React Menu sub menu by overriding the `args.top` and `args.left` values in the `beforeOpen` event arguments.
 control: Change sub menu position 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change sub menu position in React Menu component
+# How to change Sub Menu position in React Menu
 
 The submenu position can be changed by using the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/menu/#beforeopen) event. Assign the top and left position where you want to open the submenu to the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/menu/#beforeopen) event arguments `args.top` and `args.left` respectively.
 

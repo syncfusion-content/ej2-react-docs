@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Populating items in React Carousel component | Syncfusion
-description: Learn here all about Populating items in Syncfusion React Carousel component of Syncfusion Essential JS 2 and more.
+title: Populating Items in React Carousel | Syncfusion
+description: Render Syncfusion React Carousel slides by binding `CarouselItemDirective` items or by binding a data source to a common item template.
 control: Populating items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Populating items in React Carousel component
+# Populating Items in React Carousel
 
 In the Carousel, slides can be rendered in two ways as follows,
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Clear an Image in Image Editor Component | Syncfusion
-description: Learn here all about How to Clear an Image in Image editor Component of Syncfusion Essential JS 2 and more.
+title: How to clear an Image in React Image Editor | Syncfusion
+description: Empty the React Image Editor canvas by calling clearImage before closing a dialog so it reopens with a fresh selection.
 control: Clear an Image
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clear an Image
+# How to clear an Image in React Image Editor
 
-The [`clearImage`](https://ej2.syncfusion.com/angular/documentation/api/image-editor/#clearimage) method in the image editor control provides functionality to empty the editor before reopening it, particularly when the editor is used within a dialog. By invoking `clearImage` before closing the dialog, you ensure that the editor does not retain previously loaded images when the dialog reopens. This allows users to start fresh with a new image selection.
+The [`clearImage`](https://ej2.syncfusion.com/angular/documentation/api/image-editor#clearimage) method in the image editor control provides functionality to empty the editor before reopening it, particularly when the editor is used within a dialog. By invoking `clearImage` before closing the dialog, you ensure that the editor does not retain previously loaded images when the dialog reopens. This allows users to start fresh with a new image selection.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

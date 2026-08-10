@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customize the dialog appearance in React Dialog component | Syncfusion
-description: Learn here all about Customize the dialog appearance in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: How to customize appearance in React Dialog | Syncfusion
+description: Customize the React Dialog appearance with custom HTML or string content via the content property, such as an error or success window.
 control: Customize the dialog appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the dialog appearance in React Dialog component
+# How to customize appearance in React Dialog
 
-You can customize the dialog appearance by providing a dialog template as a string or HTML element to the [content](https://ej2.syncfusion.com/react/documentation/api/dialog/#content) property. In the following sample, the dialog is customized to appear as an error window.
+You can customize the dialog appearance by providing a dialog template as a string or HTML element to the [content](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property. In the following sample, the dialog is customized to appear as an error window.
 
 `[Class-component]`
 

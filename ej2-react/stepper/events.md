@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React Stepper component | Syncfusion
-description:  Checkout and learn about Events with Syncfusion React Stepper component of Syncfusion Essential JS 2 and more.
+title: Events in React Stepper | Syncfusion
+description: React to Syncfusion React Stepper lifecycle with the `created`, `stepChanged`, and `stepChanging` events to track and control step transitions.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React Stepper component
+# Events in React Stepper
 
 This section describes the Stepper events that will be triggered when an appropriate actions are performed. The following events are available in the Stepper component.
 

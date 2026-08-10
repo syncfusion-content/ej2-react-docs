@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in React Spinner component | Syncfusion
-description: Learn here all about Template in Syncfusion React Spinner component of Syncfusion Essential JS 2 and more.
+title: Template in React Spinner | Syncfusion
+description: Replace the default React Spinner with a custom HTML template by passing a template string to the setSpinner method before rendering any EJ2 component.
 control: Template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in React Spinner component
+# Template in React Spinner
 
 Custom templates can be used on the Spinner instead of the default Spinner by specifying the template in the `setSpinner` method.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types in React Spinner component | Syncfusion
-description: Learn here all about Types in Syncfusion React Spinner component of Syncfusion Essential JS 2 and more.
+title: Types in React Spinner | Syncfusion
+description: Switch the React Spinner visual style between Material, Fabric, and Bootstrap themes by passing the type parameter to the setSpinner method.
 control: Types 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types in React Spinner component
+# Types in React Spinner
 
 By default, the Spinner is loaded in the applicable Essential<sup style="font-size:70%">&reg;</sup> JS 2 component based on the theme imported into the page. Based on the theme, the type is set to the Spinner.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create mnemonic ui in menuitem in React Menu component | Syncfusion
-description: Learn here all about Create mnemonic ui in menuitem in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: How to add mnemonic UI in Menu items in React | Syncfusion
+description: Underline a character in a Syncfusion React Menu item to act as a mnemonic access key, by inserting `<u>` tags in the `beforeItemRender` event.
 control: Create mnemonic ui in menuitem 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create mnemonic ui in menuitem in React Menu component
+# How to add mnemonic UI in Menu items in React
 
 A particular character in a text can be underlined in the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/menu/#beforeitemrender) event by adding `<u>` tag in between the text and assign the innerHTML to the `li` element.
 

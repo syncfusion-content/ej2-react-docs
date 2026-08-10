@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Prevent content swipe selection in React Tab component | Syncfusion
-description: Learn here all about Prevent content swipe selection in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to prevent content swipe selection in React | Syncfusion
+description: Disable horizontal swipe scrolling inside the active Syncfusion React Tab content by intercepting touch events on the content area.
 control: Prevent content swipe selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent content swipe selection in ##Platform_Name## Tab control
+# How to prevent content swipe selection in React
 
 The [`swipeMode`](https://ej2.syncfusion.com/react/documentation/api/tab/#swipemode)  property in the Tab component allows users to navigate between tabs using swipe gestures, improving the overall navigation experience. It supports both touch and mouse inputs, enabling intuitive tab switching.
 

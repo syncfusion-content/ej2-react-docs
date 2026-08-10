@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Orientations in React Stepper component | Syncfusion
-description:  Checkout and learn about Orientations with Syncfusion React Stepper component of Syncfusion Essential JS 2 and more.
+title: Orientations in React Stepper | Syncfusion
+description: Display the Syncfusion React Stepper horizontally or vertically by setting the `orientation` property to `Horizontal` or `Vertical`.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Orientations in React Stepper component
+# Orientations in React Stepper
 
 The Stepper component supports the display of steps in both horizontal and vertical orientations by using the [orientation](https://ej2.syncfusion.com/react/documentation/api/stepper#orientation) property.
 

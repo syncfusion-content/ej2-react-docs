@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with the React Toast Component | Syncfusion
-description: Learn how to set up and use the Syncfusion React Toast component, including dependencies, installation, and configuration details.
+title: Getting Started with React Toast | Syncfusion
+description: Set up the Syncfusion React Toast in a Vite project to display notification messages in your application.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React Toast component
+# Getting Started with React Toast
 
 This section explains the steps required to create a simple React Toast component and demonstrate its basic usage in a React environment.
 

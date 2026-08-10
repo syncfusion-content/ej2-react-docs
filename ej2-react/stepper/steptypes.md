@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Step Types in React Stepper component | Syncfusion
-description:  Checkout and learn about Step Types with Syncfusion React Stepper component of Syncfusion Essential JS 2 and more.
+title: Step Types in React Stepper | Syncfusion
+description: Display Syncfusion React Stepper steps as indicators with labels, labels only, or indicators only by setting the `stepType` and `labelPosition` properties.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Step types in React Stepper component
+# Step Types in React Stepper
 
 The Stepper component provides support for displaying steps with the following step types.
 

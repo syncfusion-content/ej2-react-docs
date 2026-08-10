@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize tab content height in React Tab component | Syncfusion
-description: Learn here all about Customize tab content height in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to customize Tab content height in React | Syncfusion
+description: Set the Syncfusion React Tab content area height to Auto, Fill, Min, or a fixed pixel value via the heightAdjustMode property.
 control: Customize tab content height 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize tab content height in React Tab component
+# How to customize Tab content height in React
 
 You can change the Tab content height by using the [`heightAdjustMode`](https://ej2.syncfusion.com/react/documentation/api/tab/#heightadjustmode) property. By default, the Tab content [`heightAdjustMode`](https://ej2.syncfusion.com/react/documentation/api/tab/#heightadjustmode) property is set to `Content` value.
 

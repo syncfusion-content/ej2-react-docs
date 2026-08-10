@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scrollable Context Menu in react Context menu component | Syncfusion
-description: Learn here all about Render Scrollable Context Menu in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: How to make Context Menu scrollable in React | Syncfusion
+description: Make a long React Context Menu scrollable by setting `enableScrolling` to `true` and configuring a fixed height in the `beforeOpen` event.
 control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render Scrollable Context Menu in React Context menu component
+# How to make Context Menu scrollable in React
 
 The Context Menu component provides scrolling functionality through the [enableScrolling](https://ej2.syncfusion.com/react/documentation/api/context-menu/#enablescrolling) property to manage overflow behavior when menu items exceed the available display area. This feature ensures all menu options remain accessible without disrupting page layout, particularly beneficial for menus with extensive item lists.
 

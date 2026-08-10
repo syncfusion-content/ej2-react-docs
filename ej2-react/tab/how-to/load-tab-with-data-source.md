@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load tab with data source in React Tab component | Syncfusion
-description: Learn here all about Load tab with data source in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to load Tab from a data source in React | Syncfusion
+description: Populate the Syncfusion React Tab from a data source by binding each record's header and content fields to TabItemDirective items.
 control: Load tab with data source 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load tab with data source in React Tab component
+# How to load Tab from a data source in React
 
 You can bind any data object to Tab items, by mapping it to a [`header`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem/#header) and [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem/#content) property.
 

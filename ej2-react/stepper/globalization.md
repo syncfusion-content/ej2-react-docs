@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React Stepper component | Syncfusion
-description:  Checkout and learn about Globalization with Syncfusion React Stepper component of Syncfusion Essential JS 2 and more.
+title: Globalization in React Stepper | Syncfusion
+description: Localize the optional-step label and switch the Syncfusion React Stepper to right-to-left layout using the `locale` and `enableRtl` properties.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Stepper component
+# Globalization in React Stepper
 
 ## Localization
 

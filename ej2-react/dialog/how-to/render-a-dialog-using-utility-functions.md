@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Render a dialog using utility functions in React Dialog component | Syncfusion
-description: Learn here all about Render a dialog using utility functions in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: How to render using utility functions in React Dialog | Syncfusion
+description: Open an alert or confirm React Dialog with minimal code using the built-in utility functions and configure title, content, buttons, and animation.
 control: Render a dialog using utility functions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render a dialog using utility functions in React Dialog component
+# How to render using utility functions in React Dialog
 
 The dialog component provides built-in utility functions to render the alert and confirm dialogs with the minimal code.
 The following options are used as an argument on calling the utility functions:
 
 | Options   | Description |
 |-----------|-------------|
-| title | Specifies the title of dialog like the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog/#header) property.|
-| content | Specifies the value that can be displayed in dialog's content area like the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog/#content) property. |
-| isModal | Specifies the Boolean value whether the dialog can be displayed as modal or non-modal. For more details, refer to the [`isModal`](https://ej2.syncfusion.com/react/documentation/api/dialog/#ismodal) property.|
-| position | Specifies the value where the alert or confirm dialog is positioned within the document. For more details, refer to the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog/#position) property { X: ‘center’, Y: ‘center’}|
+| title | Specifies the title of dialog like the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog#header) property.|
+| content | Specifies the value that can be displayed in dialog's content area like the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property. |
+| isModal | Specifies the Boolean value whether the dialog can be displayed as modal or non-modal. For more details, refer to the [`isModal`](https://ej2.syncfusion.com/react/documentation/api/dialog#ismodal) property.|
+| position | Specifies the value where the alert or confirm dialog is positioned within the document. For more details, refer to the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog#position) property { X: ‘center’, Y: ‘center’}|
 | okButton | Configures the `OK button` that contains button properties with the click events. `okButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for OK button click', text: 'Yes' // <-- Default value is 'OK' }`|
 | cancelButton | Configures the `Cancel button` that contains button properties with the click events. `cancelButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for ‘Cancel’ button click', text: 'No' // <-- Default value is 'Cancel'}`|
 |isDraggable|Specifies the value whether the alert or confirm dialog can be dragged by the user.|

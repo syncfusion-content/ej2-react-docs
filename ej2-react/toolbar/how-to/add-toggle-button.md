@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add toggle button in React Toolbar component | Syncfusion
-description: Learn here all about Add toggle button in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: How to add a Toggle Button in Toolbar in React | Syncfusion
+description: Insert a Toggle Button into the Syncfusion React Toolbar by setting the command type to Toggle and binding its isSelected state.
 control: Add toggle button 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add toggle button in React Toolbar component
+# How to add a Toggle Button in Toolbar in React
 
 Toolbar supports to add a toggle Button by using the [`template`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item/#template) property. Refer below steps
 

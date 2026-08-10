@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load tab items dynamically in React Tab component | Syncfusion
-description: Learn here all about Load tab items dynamically in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to load Tab items dynamically in React Tab | Syncfusion
+description: Add new items to the Syncfusion React Tab at runtime by calling the addTab public method with the new item and target index.
 control: Load tab items dynamically 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load tab items dynamically in React Tab component
+# How to load Tab items dynamically in React Tab
 
 Tabs can be added dynamically by passing array of items and index value to the [`addTab`](https://ej2.syncfusion.com/react/documentation/api/tab/#addtab) method.
 
