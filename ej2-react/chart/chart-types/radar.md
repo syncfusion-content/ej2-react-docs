@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Radar Chart in React Charts | Syncfusion
-description: Learn here all about Radar Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Radar Chart 
+title: Radar Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Radar series in Syncfusion React Chart to plot data on a circular grid with line, column, area, or spline draw types.
+control: Radar Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Radar Chart in React Charts
+# Radar Chart in React Chart
 
 ## Radar
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Stock chart component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Stock Chart | Syncfusion
+description: Learn how the Syncfusion React Stock Chart Component supports accessibility with WAI-ARIA, Section 508, WCAG 2.2, and keyboard navigation.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Stock chart component
+# Accessibility in React Stock Chart
 
 The Stock chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 

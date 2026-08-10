@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Chart Component | Syncfusion
-description: Check out and learn about the Getting Started with React Chart component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Chart | Syncfusion
+description: Learn how to add Syncfusion React Chart to a React app using the Syncfusion CLI or Vite, install the package, inject modules, bind data, and render your first chart.
 control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React Chart Component
+# Getting Started with React Chart
 
 This section explains the steps required to create a simple [React Chart](https://www.syncfusion.com/react-components/react-charts) component and demonstrate its basic usage in a React environment.
 

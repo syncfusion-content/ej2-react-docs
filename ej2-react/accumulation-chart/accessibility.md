@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Accumulation chart component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in React Accumulation Chart | Syncfusion
+description: Learn how the Syncfusion React Accumulation Chart support accessibility with WAI-ARIA roles, attributes, and keyboard navigation for screen readers.
+control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Accumulation chart component
+# Accessibility in React Accumulation Chart
 
 The Accumulation chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 

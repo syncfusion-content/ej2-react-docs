@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in React Progress Bar | Syncfusion
-description: Show progress values and custom tooltips on hover in React Progress Bars using the tooltipSettings enable and format properties.
+description: Learn how to enable and customize the tooltip in the React Progress Bar to show progress value on hover with custom format and styling.
 control: Tooltip 
 platform: ej2-react
 documentation: ug

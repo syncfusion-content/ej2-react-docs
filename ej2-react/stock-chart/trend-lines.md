@@ -1,15 +1,15 @@
 ﻿---
 layout: post
-title: Trend lines in React Stock chart component | Syncfusion
-description: Learn here all about Trend lines in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
-control: Trend lines 
+title: Trendlines in React Stock Chart | Syncfusion
+description: Learn how to add trendlines to the Syncfusion React Stock Chart Component to show the direction and speed of a price trend over time.
+control: Trendlines
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Trend lines in React Stock chart component
+# Trendlines in React Stock Chart
 
 Trendlines are used to show the direction and speed of price.
 

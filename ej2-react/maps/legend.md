@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Legend in React Maps component | Syncfusion
-description: Learn here all about Legend in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Legend 
+title: Legend in React Maps | Syncfusion
+description: Learn how to add and position legends in React Maps to explain the colors, shapes, and symbols used to represent data on the map.
+control: Legend
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Legend in React Maps component
+# Legend in React Maps
 
 This section shows how to add legends in the Maps component. The below video demonstrates the same.
 

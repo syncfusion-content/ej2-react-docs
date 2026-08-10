@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Dimensions in React Heatmap chart component | Syncfusion
-description: Learn here all about Dimensions in Syncfusion React Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: Dimensions in React HeatMap Chart | Syncfusion
+description: Set the React HeatMap Chart size in pixels or as a percentage of its container using the width and height properties, or by sizing the container.
 control: Dimensions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dimensions in React Heatmap chart component
+# Dimensions in React HeatMap Chart
 
 ## Size for container
 
@@ -22,7 +22,7 @@ Heat map can be rendered to its container size. You can set the size through inl
 
 ## Size for heat map
 
-You can  set the size of heat map directly by using the [width](https://ej2.syncfusion.com/react/documentation/api/heatmap/#width) and [height](https://ej2.syncfusion.com/react/documentation/api/heatmap/#height) properties.
+You can  set the size of heat map directly by using the [width](https://ej2.syncfusion.com/react/documentation/api/heatmap#width) and [height](https://ej2.syncfusion.com/react/documentation/api/heatmap#height) properties.
 
 ## In pixel
 

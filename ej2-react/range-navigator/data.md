@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Data in React Range navigator component | Syncfusion
-description: Learn here all about Data in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
-control: Data 
+title: Data in React Range Navigator | Syncfusion
+description: Learn how to bind numeric, date-time, and logarithmic data to the Syncfusion React Range Navigator Component using valueType properties.
+control: Data
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Data in React Range navigator component
+# Data in React Range Navigator
 
 ## Numeric
 

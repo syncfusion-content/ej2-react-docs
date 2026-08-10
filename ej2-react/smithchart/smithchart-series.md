@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Smithchart series in React Smithchart component | Syncfusion
-description: Learn here all about Smithchart series in Syncfusion React Smithchart component of Syncfusion Essential JS 2 and more.
+title: Series in React Smithchart | Syncfusion
+description: Add one or more series to the React Smithchart using points or a data source, and customize fill, opacity, width, and smart label placement.
 control: Smithchart series 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Smithchart series in React Smithchart component
+# Series in React Smithchart
 
 You can add any number of series to Smith chart as needed. By using the series setting, you can add or customize the data. For the points and data source added in the series, line can be drawn. You can customize the each series with marker, data label, animation, opacity, and so on.
 

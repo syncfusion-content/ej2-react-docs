@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Types in React Progress Bar | Syncfusion
-description: Render React Progress Bars in linear, circular, or semi-circle shapes to visualize progress in any UI layout.
+description: Learn about Linear and Circular types of the React Progress Bar to visualize progress in different shapes for your app design.
 control: Types 
 platform: ej2-react
 documentation: ug

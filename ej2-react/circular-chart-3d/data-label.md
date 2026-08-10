@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data Label in React 3D Circular Chart component | Syncfusion
-description: Learn here all about data label in Syncfusion React 3D Circular Chart component of Syncfusion Essential JS 2 and more.
+title: Data Label in React 3D Circular Chart | Syncfusion
+description: Learn how to show point values on the Syncfusion React 3D Circular Chart series using data labels with smart placement and template customization.
 control: Data Label
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data Label in React 3D Circular Chart component
+# Data Label in React 3D Circular Chart
 
 A data label refers to a label associated with specific data points. It can be added to a 3D Circular Chart series by enabling the `visible` option in the `dataLabel` property. By default, the labels will arrange themselves smartly to avoid overlapping.
 

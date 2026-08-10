@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Empty points in React Accumulation chart component | Syncfusion
-description: Learn here all about Empty points in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
+title: Empty Points in React Accumulation Chart | Syncfusion
+description: Learn how to handle null or undefined values in the Syncfusion React Accumulation Chart with empty-point modes Gap, Average, and Zero.
 control: Empty points 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Empty points in React Accumulation chart component
+# Empty Points in React Accumulation Chart
 
 The data points those uses the `null` or `undefined` as value are considered as empty points. The empty data points are ignored and not plotted in the chart. You can customize those points, using the `emptyPointSettings` property in series. The default mode of the empty point is `Gap`. Other supported modes are `Average` and `Zero`.
 

@@ -1,20 +1,20 @@
 ﻿---
 layout: post
-title: Dimensions in React Linear gauge component | Syncfusion
-description: Learn here all about Dimensions in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
+title: Dimensions in React Linear Gauge | Syncfusion
+description: Set the React Linear Gauge width and height in pixels or as a percentage of its parent container to create a responsive, fluid layout.
 control: Dimensions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dimensions in React Linear gauge component
+# Dimensions in React Linear Gauge
 
 <!-- markdownlint-disable MD013 -->
 
 ## Size for Linear Gauge
 
-The height and width of the Linear Gauge can be set using the [`width`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/#height) properties in [`LinearGaugeComponent`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge/).
+The height and width of the Linear Gauge can be set using the [`width`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge#height) properties in [`LinearGaugeComponent`](https://ej2.syncfusion.com/react/documentation/api/linear-gauge).
 
 <!-- markdownlint-disable MD036 -->
 

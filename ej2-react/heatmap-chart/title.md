@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Title in React Heatmap chart component | Syncfusion
-description: Learn here all about Title in Syncfusion Angular Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: Title in React HeatMap Chart | Syncfusion
+description: Add a title to the React HeatMap Chart via titleSettings to give quick context about the plotted data and style text with textStyle.
 control: Title 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Title in React Heatmap chart component
+# Title in React HeatMap Chart
 
 ## Add Heatmap title
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Step Line Chart in React Charts | Syncfusion
-description: Learn here all about Step Line Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Step Line Chart 
+title: Step Line Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Step Line series in Syncfusion React Chart to display data with stepped horizontal and vertical lines.
+control: Step Line Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Step Line Chart in React Charts
+# Step Line Chart in React Chart
 
 ## Step Line
 

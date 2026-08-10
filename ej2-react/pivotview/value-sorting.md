@@ -10,12 +10,13 @@ domainurl: ##DomainURL##
 
 # Value sorting in React Pivot Table
 
-Value sorting allows you to sort individual column based on it's values either in ascending or descending order. It can been enabled by setting the `enableValueSorting` property to **true**. You can sort the column values by clicking the column header.
+Value sorting allows you to sort an individual column based on its values either in ascending or descending order. It can be enabled by setting the `enableValueSorting` property to **true** (default `false`). You can sort the column values at runtime by clicking the column header, or configure the sort order at initial render through `valueSortSettings`.
 
-Value sorting can be configured using the `valueSortSettings` option through code behind. The settings required to sort value fields at initial rendering are:
-* `headerText`: It allows to set the column header names with delimiters, that is used for value sorting.
-* `headerDelimiter`: It allows to set the delimiters string to separate the given header text.
-* `sortOrder`: It allows to set the sort direction of the value field.
+Value sorting can be configured using the `valueSortSettings` option through code-behind. The settings required to sort value fields at initial rendering are:
+
+* `headerText`: Sets the column header names (delimiter-separated) used to identify which column to sort.
+* `headerDelimiter`: Sets the delimiter string that separates the levels in `headerText`. Defaults to `'.'`.
+* `sortOrder`: Sets the sort direction. Accepts `'Ascending'` or `'Descending'`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

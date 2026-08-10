@@ -1,7 +1,7 @@
 ---
 layout: post
 title: States in React Progress Bar | Syncfusion
-description: Display React Progress Bars in Determinate, Indeterminate, or Buffer states to show known, unknown, or dual progress.
+description: Learn about the Determinate, Indeterminate, and Buffer states of the React Progress Bar for visualizing known and unknown progress values.
 control: States 
 platform: ej2-react
 documentation: ug

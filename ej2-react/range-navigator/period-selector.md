@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Period selector in React Range navigator component | Syncfusion
-description: Learn here all about Period selector in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
-control: Period selector 
+title: Period Selector in React Range Navigator | Syncfusion
+description: Learn how to add a period selector to the Syncfusion React Range Navigator Component for quick presets.
+control: Period selector
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Period selector in React Range navigator component
+# Period Selector in React Range Navigator
 
 The period selector allows to select a range with specified periods.
 

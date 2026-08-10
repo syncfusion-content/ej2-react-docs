@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Range navigator component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
-control: Ej1 api migration 
+title: EJ1 API Migration in React Range Navigator | Syncfusion
+description: Learn how to migrate the Syncfusion React Range Navigator Component from Essential JS 1 to EJ2 with API mapping and code rewrite guidance.
+control: Ej1 api migration
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Range navigator component
+# EJ1 API Migration in React Range Navigator
 
 This article describes the API migration process of Chart component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

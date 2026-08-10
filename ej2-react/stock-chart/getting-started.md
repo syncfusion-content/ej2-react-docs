@@ -1,7 +1,7 @@
 ﻿---
 layout: post
-title: Getting Started with React Stock Chart Component | Syncfusion
-description: Check out and learn about getting started with Syncfusion Essential React Stock Chart component, its elements, and more details.
+title: Getting Started with React Stock Chart | Syncfusion
+description: Learn how to get started with the Syncfusion React Stock Chart Component. Explore setup, features, examples, and customization options.
 control: Getting started
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Getting Started with React Stock Chart Component
+# Getting Started with React Stock Chart
 
 This section describes the steps to create a simple Stock Chart component.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pie dough nut in React Accumulation chart component | Syncfusion
-description: Learn here all about Pie dough nut in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Pie dough nut 
+title: Pie and Doughnut in React Accumulation Chart | Syncfusion
+description: Learn how to render pie and doughnut series in the Syncfusion React Accumulation Chart to compare category shares with inner-radius and explode options.
+control: Pie dough nut
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pie dough nut in React Accumulation chart component
+# Pie and Doughnut in React Accumulation Chart
 
 ## Pie chart
 

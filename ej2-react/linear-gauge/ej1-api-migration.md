@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Linear gauge component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Linear gauge component of Syncfusion Essential JS 2 and more.
+title: Migration from Essential JS 1 in React Linear Gauge | Syncfusion
+description: Migrate your React Linear Gauge code from the legacy v1 API to v2 with a side-by-side mapping of dimensions, axis, ranges, pointers, and more.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Linear gauge component
+# Migration from Essential JS 1 in React Linear Gauge
 
 This article describes the API migration process of Accordion component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

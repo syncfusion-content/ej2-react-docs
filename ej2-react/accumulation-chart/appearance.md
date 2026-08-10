@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in React Accumulation chart component | Syncfusion
-description: Learn here all about Appearance in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Appearance 
+title: Appearance in React Accumulation Chart | Syncfusion
+description: Learn how to customize the appearance of the Syncfusion React Accumulation Chart with custom palettes and animation.
+control: Appearance
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in React Accumulation chart component
+# Appearance in React Accumulation Chart
 
 ## Custom Color Palette
 

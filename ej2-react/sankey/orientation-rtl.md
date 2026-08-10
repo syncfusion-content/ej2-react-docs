@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Orientation and RTL in React Sankey Chart component | Syncfusion
-description: Learn here all about Orientation and RTL in Syncfusion React Sankey Chart component of Syncfusion Essential JS 2 and more.
+title: Orientation and RTL in React Sankey Chart | Syncfusion
+description: Learn how to set the orientation and enable right-to-left rendering on the Syncfusion React Sankey Chart Component for languages like Arabic and Hebrew.
 control: Orientation and RTL
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Orientation and RTL in React Sankey Chart component
+# Orientation and RTL in React Sankey Chart
 
 The Sankey Chart supports flexible layout options including horizontal and vertical orientations, as well as right-to-left (RTL) rendering for international applications. These features enable you to create localized and directionally appropriate visualizations.
 

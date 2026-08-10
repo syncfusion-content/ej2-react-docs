@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Axis labels in React Chart component | Syncfusion
-description: Learn here all about Axis labels in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Axis labels 
+title: Axis Labels in React Chart | Syncfusion
+description: Learn how to format and customize axis labels in Syncfusion React Chart with smart positioning, multilevel labels, sorting, edge placement, and label templates.
+control: Axis labels
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis labels in React Chart component
+# Axis Labels in React Chart
 
 To get start quickly with Axis Labels in React Charts, you can check on this video:
 

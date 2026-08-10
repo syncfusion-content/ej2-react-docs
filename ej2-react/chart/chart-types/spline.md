@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Chart in React Charts | Syncfusion
-description: Learn here all about Spline Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Spline Chart 
+title: Spline Chart in React Chart | Syncfusion
+description: Learn to render and bind Spline series in Syncfusion React Chart to visualize trends with smooth curves.
+control: Spline Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Spline Chart in React Charts
+# Spline Chart in React Chart
 
 ## Spline
 

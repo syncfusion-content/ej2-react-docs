@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Smithchart dimensions in React Smithchart component | Syncfusion
-description: Learn here all about Smithchart dimensions in Syncfusion React Smithchart component of Syncfusion Essential JS 2 and more.
+title: Dimensions in React Smithchart | Syncfusion
+description: Set the React Smithchart size to its container, or specify width and height in pixels or percentages for responsive layout control.
 control: Smithchart dimensions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Smithchart dimensions in React Smithchart component
+# Dimensions in React Smithchart
 
 You can render the Smith chart corresponding to its container size. To set the size for the Smith chart, use the width and height properties.
 

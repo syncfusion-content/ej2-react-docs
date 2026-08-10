@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started with React Sankey Chart component | Syncfusion
-description: Check out and learn about getting started with the React Sankey Chart component of Syncfusion Essential JS 2 and more details.
-control: Getting Started 
+title: Getting Started with React Sankey Chart | Syncfusion
+description: Learn how to get started with the Syncfusion React Sankey Chart Component. Explore setup, features, examples, and customization options.
+control: Getting Started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Getting started with React Sankey Chart component
+# Getting Started with React Sankey Chart
 
 This section describes how to integrate the Syncfusion React Sankey Chart component into a new React application. You'll learn about dependencies, installation steps, and how to create your first Sankey Chart visualization.
 

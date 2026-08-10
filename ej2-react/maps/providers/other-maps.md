@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Other maps in React Maps component | Syncfusion
-description: Learn here all about Other maps in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Other maps 
+title: Other Maps in React Maps | Syncfusion
+description: Learn how to integrate any tile-based map provider in React Maps by specifying a custom URL template via the urlTemplate property.
+control: Other maps
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Other maps in React Maps component
+# Other Maps in React Maps
 
 In addition to OpenStreetMap, Bing Maps, and Azure Maps, the Maps component supports integration with other third-party online map service providers. Custom map providers can be rendered by specifying their tile server URL in the [urlTemplate](https://ej2.syncfusion.com/react/documentation/api/maps/layerSettingsModel#urltemplate) property. The Maps component supports any tile-based map provider that uses standard URL template formats for tile requests.
 

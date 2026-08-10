@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Smithchart component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Smithchart component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Smithchart | Syncfusion
+description: Learn how the React Smithchart meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA roles, keyboard support, and axe-core validation.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Smithchart component
+# Accessibility in React Smithchart
 
 The Smith chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

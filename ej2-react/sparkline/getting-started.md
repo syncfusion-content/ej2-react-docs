@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Sparkline component | Syncfusion
-description: Checkout and learn about Getting started with React Sparkline component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Sparkline | Syncfusion
+description: Learn how to get started with the Syncfusion React Sparkline control. Explore setup, features, examples, and customization options.
 control: Getting started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Sparkline component
+# Getting Started with React Sparkline
 
 This section describes the steps to create a simple Sparkline and demonstrates the basic usage of the Sparkline component.
 

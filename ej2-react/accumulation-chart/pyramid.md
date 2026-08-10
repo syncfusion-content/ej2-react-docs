@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pyramid in React Accumulation chart component | Syncfusion
-description: Learn here all about Pyramid in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Pyramid 
+title: Pyramid in React Accumulation Chart | Syncfusion
+description: Learn how to render a pyramid chart in the Syncfusion React Accumulation Chart to compare values that decrease proportionally from base to apex.
+control: Pyramid
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pyramid in React Accumulation chart component
+# Pyramid in React Accumulation Chart
 
 To render a pyramid series, use the series [`type`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel#type) as `Pyramid` and inject `PyramidSeries` module into the `services`.
 

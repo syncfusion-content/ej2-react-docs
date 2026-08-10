@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Gauge appearance in React Circular gauge component | Syncfusion
-description: Learn here all about Gauge appearance in Syncfusion React Circular gauge component of Syncfusion Essential JS 2 and more.
+title: Appearance in React Circular Gauge | Syncfusion
+description: Customize React Circular Gauge appearance with title text, position, background, margins, and other style properties to match your application design.
 control: Gauge appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Gauge appearance in React Circular gauge component
+# Appearance in React Circular Gauge
 
 ## Gauge Title
 

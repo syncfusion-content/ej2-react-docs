@@ -1,14 +1,14 @@
 ---
 layout: post
-title: User interaction in React Sparkline component | Syncfusion
-description: Learn here all about User interaction in Syncfusion React Sparkline component of Syncfusion Essential JS 2 and more.
+title: User Interaction in React Sparkline | Syncfusion
+description: Enable hover tooltips with custom format and template, plus track lines, on the Syncfusion React Sparkline to highlight nearby data points.
 control: User interaction 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# User interaction in React Sparkline component
+# User Interaction in React Sparkline
 
 Sparkline has two user interaction features: tooltip and tracker line.
 

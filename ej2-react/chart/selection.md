@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Selection in React Chart component | Syncfusion
-description: Learn here all about Selection in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Selection 
+title: Selection in React Chart | Syncfusion
+description: Learn how to select points, series, or rectangular and lasso regions in Syncfusion React Chart using Point, Series, Cluster, Drag, and Lasso selection modes.
+control: Selection
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Selection in React Chart component
+# Selection in React Chart
 
 The chart provides selection support for both series and individual data points when users interact with the chart using mouse clicks.
 

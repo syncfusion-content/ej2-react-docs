@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in React Progress Bar | Syncfusion
-description: Build accessible React Progress Bars with WAI-ARIA progressbar semantics, ARIA value attributes, and keyboard support.
+description: Learn how the React Progress Bar meets WCAG 2.2, Section 508, and ADA accessibility standards with WAI-ARIA support and keyboard navigation.
 control: Accessibility 
 platform: ej2-react
 documentation: ug

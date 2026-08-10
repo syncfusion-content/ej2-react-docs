@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Line Chart in React Charts | Syncfusion
-description: Learn here all about Stacked Line Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Stacked Line Chart 
+title: Stacked Line Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Stacked Line series in Syncfusion React Chart to compare each series contribution to a total trend over time.
+control: Stacked Line Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Stacked Line Chart in React Charts
+# Stacked Line Chart in React Chart
 
 ## Stacked Line
 

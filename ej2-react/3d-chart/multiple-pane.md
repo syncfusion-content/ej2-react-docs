@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple panes in React 3D Chart component | Syncfusion
-description: Learn here all about multiple panes in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Multiple Panes in React 3D Chart | Syncfusion
+description: Learn how to split the Syncfusion React 3D Chart plot area into rows and columns of sized panes to compare multiple series in a single chart.
+control: Multiple Panes
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple panes in React 3D Chart control
+# Multiple Panes in React 3D Chart
 
 The chart area can be divided into multiple panes using [`rows`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#rows) and [`columns`](https://ej2.syncfusion.com/react/documentation/api/chart3d/chart3DModel#columns).
 

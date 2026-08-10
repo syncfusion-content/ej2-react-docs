@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in React Progress Bar | Syncfusion
-description: Handle React Progress Bar valueChanged and progressCompleted events to respond to progress updates and completion in your app.
+description: Learn about React Progress Bar events like valueChanged and progressCompleted that fire when the progress value changes or completes.
 control: Events 
 platform: ej2-react
 documentation: ug

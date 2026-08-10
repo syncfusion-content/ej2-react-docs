@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Color mapping in React Treemap component | Syncfusion
-description: Learn here all about Color mapping in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Color Mapping in React TreeMap | Syncfusion
+description: Learn how to apply color mapping in the Syncfusion React TreeMap using range, equal, desaturation, and palette modes for items.
 control: Color mapping 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Color mapping in React Treemap component
+# Color Mapping in React TreeMap
 
 ## Apply color mapping
 

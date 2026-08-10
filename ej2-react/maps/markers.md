@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Markers in React Maps component | Syncfusion
-description: Learn here all about Markers in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Markers 
+title: Markers in React Maps | Syncfusion
+description: Learn how to add and customize markers in React Maps to pinpoint specific locations, highlight points of interest, and display custom symbols.
+control: Markers
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Markers in React Maps component
+# Markers in React Maps
 
 This section shows how to add and customize the markers in the Maps component. The below video demonstrates the same.
 

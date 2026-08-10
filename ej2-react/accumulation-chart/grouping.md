@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in React Accumulation chart component | Syncfusion
-description: Learn here all about Grouping in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Grouping 
+title: Grouping in React Accumulation Chart | Syncfusion
+description: Learn how to group small slices in the Syncfusion React Accumulation Chart into a single slice using groupMode for cleaner category comparison.
+control: Grouping
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in React Accumulation chart component
+# Grouping in React Accumulation Chart
 
 You can club/group few points of the series based on [`groupTo`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationSeriesModel#groupto) property. For example, if the club value is 11, then the points with value less than 11 is grouped together and will be showed as a single point with label `others`. The property also takes value in percentage (percentage of total data points value).
 

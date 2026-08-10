@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Understanding React Chart component | Syncfusion
-description: Explore and understand the Syncfusion React Chart component in Essential JS 2 and discover its powerful features.
+title: Understanding React Chart | Syncfusion
+description: Learn the core building blocks of Syncfusion React Chart, including series, axes, legends, tooltips, and how they fit into a chart layout.
 platform: ej2-react
 control: Understanding
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Understanding of React Chart
+# Understanding React Chart
 
 The [React Charts](https://www.syncfusion.com/react-components/react-charts) component is a versatile visualization tool that presents data using a wide range of graphical formats. Each chart is composed of essential elements—such as the title, series, tooltip, legend, and axes—that work together to provide clear, interactive, and meaningful insights. Understanding these elements helps in configuring and customizing charts for various analytical needs.
 

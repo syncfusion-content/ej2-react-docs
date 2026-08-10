@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Strip line in React Chart component | Syncfusion
-description: Learn here all about Strip line in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Strip line 
+title: Strip line in React Chart | Syncfusion
+description: Learn how to add horizontal, vertical, or segmented strip lines in Syncfusion React Chart to mark thresholds, ranges, or reference values.
+control: Strip line
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Strip line in React Chart component
+# Strip line in React Chart
 
 The [React Charts](https://www.syncfusion.com/react-components/react-charts) component supports horizontal and vertical strip lines, providing visual guides to highlight specific ranges in the chart area. Strip lines can be added to both axes and fully customized based on visual and functional requirements. To use strip line features, inject the `StripLine` module into the `services`.
 

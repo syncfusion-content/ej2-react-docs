@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection and highlight in React Treemap component | Syncfusion
-description: Learn here all about Selection and highlight in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Selection and Highlight in React TreeMap | Syncfusion
+description: Learn how to select and highlight items and groups in the Syncfusion React TreeMap using selectionSettings and highlightSettings.
 control: Selection and highlight 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection and highlight in React Treemap component
+# Selection and Highlight in React TreeMap
 
 ## Selection
 

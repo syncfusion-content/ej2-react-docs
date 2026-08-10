@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Stacking total in React Chart component | Syncfusion
-description: Learn here all about Stacking total in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Stacking total 
+title: How to show stacking series total in React Chart | Syncfusion
+description: Learn how to show the total value on top of stacked Syncfusion React Chart series using annotations at each x point.
+control: Stacking total
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stacking total in React Chart component
+# How to show stacking series total in React Chart
 
 By using the `annotation`, you can show any element in desired view.
 

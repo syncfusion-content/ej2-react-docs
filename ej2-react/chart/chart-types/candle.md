@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Candle Chart in React Charts | Syncfusion
-description: Learn here all about Candle in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
+title: Candle Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Candle series in Syncfusion React Chart to visualize stock price movements with high, low, open, and close values.
 control: Candle
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Candle Chart in React Charts
+# Candle Chart in React Chart
 
 ## Candle
 

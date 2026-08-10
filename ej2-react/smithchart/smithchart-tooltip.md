@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Smithchart tooltip in React Smithchart component | Syncfusion
-description: Learn here all about Smithchart tooltip in Syncfusion React Smithchart component of Syncfusion Essential JS 2 and more.
+title: Tooltip in React Smithchart | Syncfusion
+description: Enable tooltips on the React Smithchart by setting tooltip visible to true and injecting the TooltipRender module into services.
 control: Smithchart tooltip 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Smithchart tooltip in React Smithchart component
+# Tooltip in React Smithchart
 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/smithchart/seriestooltipmodel#visible) property as `true` in [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/smithchart/smithchartseriesmodel#tooltip) object and by injecting the `TooltipRender` module into the `services`.
 

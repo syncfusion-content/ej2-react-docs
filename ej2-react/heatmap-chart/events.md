@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Events in React HeatMap chart component | Syncfusion
-description: Learn here all about Events in Syncfusion React HeatMap chart component of Syncfusion Essential JS 2 and more.
+title: Events in React HeatMap Chart | Syncfusion
+description: Handle React HeatMap Chart events such as cellClick, cellRender, cellSelected, and created to react to user interaction and cell lifecycle.
 control: Events 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React HeatMap chart component
+# Events in React HeatMap Chart
 
 This section describes the HeatMap chart event, which occurs when the required actions are performed.
 

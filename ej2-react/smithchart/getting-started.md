@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Smith Chart component | Syncfusion
-description: Check out and learn about Getting started with React Smith Chart component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Smithchart | Syncfusion
+description: Learn how to set up a React Smithchart with Vite, install the Syncfusion Charts package, register modules, and render your first chart.
 control: Getting Started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Smith Chart component
+# Getting Started with React Smithchart
 
 This section describes the steps to create a simple Smith Chart and demonstrates the basic usage of the Smith Chart component.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # EJ1 API migration in React Pivot Table
 
-This article describes the API migration process of pivot table component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
+This article describes the API migration process of the Pivot Table component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Data Binding
 
@@ -19,7 +19,7 @@ This article describes the API migration process of pivot table component from E
 | **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | Data source | **property:** dataSource<br/><br/>`<EJ.PivotGrid id="PivotGrid" dataSource= {pivotdataSource}></EJ.PivotGrid>`<br/><br/>`var  pivotdataSource = {`<br/>`data: []`<br/>`};`| **property:** dataSourceSettings<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: DataSourceSettingsModel = {`<br/>`dataSource: [] as IDataSet[]` <br/>`};`|
-| Rows |**property:** rows<br/><br/>`<EJ.PivotGrid id="PivotGrid" dataSource= {pivotdataSource}></EJ.PivotGrid>`<br/><br/>`var  pivotdataSource = {`<br/>`rows: [{`<br/>`fieldName: "Country", fieldCaption: "Country"}]`<br/>`};` | **property:** rows<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: DataSourceSettingsModel = {`<br/>`row: [{`<br/> `name: 'company', caption: 'Industry' }]` <br/>`};`|
+| Rows |**property:** rows<br/><br/>`<EJ.PivotGrid id="PivotGrid" dataSource= {pivotdataSource}></EJ.PivotGrid>`<br/><br/>`var  pivotdataSource = {`<br/>`rows: [{`<br/>`fieldName: "Country", fieldCaption: "Country"}]`<br/>`};` | **property:** rows<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: DataSourceSettingsModel = {`<br/>`rows: [{`<br/> `name: 'company', caption: 'Industry' }]` <br/>`};`|
 | Columns |**property:** columns<br/><br/>`<EJ.PivotGrid id="PivotGrid" dataSource= {pivotdataSource}></EJ.PivotGrid>`<br/><br/>`var  pivotdataSource = {`<br/>`columns: [{`<br/>`fieldName: "Country", fieldCaption: "Country"}]`<br/>`};` | **property:** columns<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: DataSourceSettingsModel = {`<br/>`columns: [{`<br/> `name: 'company', caption: 'Industry' }]` <br/>`};`|
 | Values |**property:** values<br/><br/>`<EJ.PivotGrid id="PivotGrid" dataSource= {pivotdataSource}></EJ.PivotGrid>`<br/><br/>`var  pivotdataSource = {`<br/>`values: [ {`<br/> `fieldName: "balance", fieldCaption: "Balance($)"}]`<br/> `};` | **property:** values<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: DataSourceSettingsModel = {`<br/>`values: [{`<br/> `name: 'balance', caption: 'Balance($)' }]`<br/>`};`|
 |Filters |**property:** filters<br/><br/>`<EJ.PivotGrid id="PivotGrid" dataSource= {pivotdataSource}></EJ.PivotGrid>`<br/><br/>`var  pivotdataSource = {`<br/>`filters: [{`<br/>`fieldName: "Country",  fieldCaption: "Country" }]`<br/>`};`|**property:** filters<br/><br/>`<PivotViewComponent id='PivotView' dataSourceSettings={dataSourceSettings}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: DataSourceSettingsModel = {`<br/>`filters: [{`<br/> `name: 'company', caption: 'Industry'}]`<br/>`};`|
@@ -155,7 +155,7 @@ This article describes the API migration process of pivot table component from E
 
 | **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
-|Enable/disable value sorting|Not Applicable|**property:** enableSorting<br/><br/>`<PivotViewComponent id="PivotGrid" enableValueSorting= {true}></PivotViewComponent>`|
+|Enable/disable value sorting|Not Applicable|**property:** enableValueSorting<br/><br/>`<PivotViewComponent id="PivotGrid" enableValueSorting= {true}></PivotViewComponent>`|
 |Value sort settings|**property:** valueSortSettings<br/><br/>`<EJ.PivotGrid id="PivotGrid" valueSortSettings= {valueSortSettings}></EJ.PivotGrid>`<br/><br/>`var  valueSortSettings = {`<br/>`headerText: "Bike##Quantity",`<br/>`headerDelimiters: "##",`<br/>`sortOrder: ej.PivotAnalysis.SortOrder.Descending`<br/>`};`|**property:** valueSortSettings<br/><br/>`<PivotViewComponent id="PivotGrid" dataSource= {dataSource}></PivotViewComponent>`<br/><br/>`let dataSourceSettings: DataSourceSettingsModel = {`<br/>`valueSortSettings: {`<br/>`headerText: 'FY 2015##Sold Amount',`<br/>`headerDelimiter: '##',`<br/>`sortOrder: 'Descending' }`<br/>`};`|
 
 ## Calculated Field
@@ -214,7 +214,7 @@ This article describes the API migration process of pivot table component from E
 | **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 |Localization|**property:** locale<br/><br/>`<EJ.PivotGrid id="PivotGrid" locale= {'es-ES'}></EJ.PivotGrid>`|**property:** locale<br/><br/>`<PivotViewComponent id="PivotGrid" locale= {'es-ES'}></PivotViewComponent>`|
-|Right to left|**property:** enableRTL<br/><br/>`<EJ.PivotGrid id="PivotGrid" enableRTL= {true}></EJ.PivotGrid>`|**property:** enableRtl<br/><br/>`<PivotViewComponent id="PivotGrid" enableRTL= {true}></PivotViewComponent>`|
+|Right to left|**property:** enableRTL<br/><br/>`<EJ.PivotGrid id="PivotGrid" enableRTL= {true}></EJ.PivotGrid>`|**property:** enableRtl<br/><br/>`<PivotViewComponent id="PivotGrid" enableRtl= {true}></PivotViewComponent>`|
 
 ## Common
 {% raw %}

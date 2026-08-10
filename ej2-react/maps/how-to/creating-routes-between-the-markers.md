@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to create routes between markers in Maps component | Syncfusion
-description: Learn here all about creating routes between markers in the Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Maps 
+title: How to create routes between markers in React Maps | Syncfusion
+description: Learn how to plot routes between source and destination markers in React Maps using navigation lines and coordinates from the Google Maps Directions API.
+control: Maps
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Creating Routes Between Markers in the React Maps component
+# How to create routes between markers in React Maps
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Maps component supports plotting routes between two locations (source and destination) using the navigation line feature. Markers can be placed at these locations to visually indicate the source and destination, making it easier to view the path between them on the map.
 

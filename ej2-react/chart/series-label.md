@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Series label in React Chart component | Syncfusion
-description: Learn here all about Series label in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Series label 
+title: Series label in React Chart | Syncfusion
+description: Learn how to add labels to the series in Syncfusion React Chart to make every series self-describing without relying on the legend.
+control: Series label
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Series label in React Chart component
+# Series label in React Chart
 
 The series label displays the name of each series inline, positioned near the end of the series path or the last visible data point. This helps identify each series without referring to the legend.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: DateTime axis in React 3D Chart component | Syncfusion
-description: Learn here all about DateTime axis in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: DateTime Axis in React 3D Chart | Syncfusion
+description: Learn how to use the DateTime axis in the Syncfusion React 3D Chart to display time-scale values on the axis with a configurable date-time label format.
+control: Datetime Axis
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# DateTime axis in React 3D Chart control
+# DateTime Axis in React 3D Chart
 
 ## DateTime axis
 

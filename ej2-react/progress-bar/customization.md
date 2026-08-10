@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in React Progress Bar | Syncfusion
-description: Customize React Progress Bar segments, thickness, and radius using segmentCount, trackThickness, and radius properties.
+description: Learn how to customize the React Progress Bar using segmentCount, trackThickness, progressThickness, radius, and cornerRadius properties.
 control: Customization 
 platform: ej2-react
 documentation: ug

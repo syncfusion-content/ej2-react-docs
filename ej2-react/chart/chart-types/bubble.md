@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bubble Chart in React Charts | Syncfusion
-description: Learn here all about Bubble Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Bubble Chart 
+title: Bubble Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Bubble series in Syncfusion React Chart to plot three-variable data with size mapping, fill, and opacity.
+control: Bubble Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Bubble Chart in React Charts
+# Bubble Chart in React Chart
 
 ## Bubble
 

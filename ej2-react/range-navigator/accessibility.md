@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Range navigator component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Range Navigator | Syncfusion
+description: Learn how the Syncfusion React Range Navigator Component supports accessibility with WAI-ARIA roles, attributes, and keyboard navigation.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Range navigator component
+# Accessibility in React Range Navigator
 
 The Range navigator component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 

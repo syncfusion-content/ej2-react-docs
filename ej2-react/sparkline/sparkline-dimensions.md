@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sparkline dimensions in React Sparkline component | Syncfusion
-description: Learn here all about Sparkline dimensions in Syncfusion React Sparkline component of Syncfusion Essential JS 2 and more.
+title: Dimensions in React Sparkline | Syncfusion
+description: Set the Syncfusion React Sparkline size via container, CSS, or direct width and height properties in pixel or percentage for responsive layouts.
 control: Sparkline dimensions 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sparkline dimensions in React Sparkline component
+# Dimensions in React Sparkline
 
 ## Size for container
 
@@ -36,7 +36,7 @@ Sparkline can be rendered to its container size. You can set the size through in
 
 <!-- markdownlint-disable MD036 -->
 
-You can also set the size for sparkline directly using the [`width`](../sparkline/#width-string) and [`height`](https://ej2.syncfusion.com/react/documentation/api/sparkline/#height-string) properties.
+You can also set the size for sparkline directly using the [`width`](../sparkline#width-string) and [`height`](https://ej2.syncfusion.com/react/documentation/api/sparkline#height-string) properties.
 
 **In pixel**
 

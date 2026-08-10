@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation in React Progress Bar | Syncfusion
-description: Add custom content, images, or progress value labels to the center of circular React Progress Bars via the annotation Content property.
+description: Learn how to add annotations like text, images, or buttons to the center of the React Progress Bar using the Content property.
 control: Annotation 
 platform: ej2-react
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dynamic data update in React Chart component | Syncfusion
-description: Learn here all about dynamic data update in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Dynamic Data Update in React Chart | Syncfusion
+description: Learn how to dynamically add, remove, or replace data points in Syncfusion React Chart without re-rendering the entire chart.
 control: Dynamic Data Update
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dynamic data update in React Chart component
+# Dynamic Data Update in React Chart
 
 The [React Charts](https://www.syncfusion.com/react-components/react-charts) component provides methods to dynamically modify data without requiring a full chart refresh. This enables real-time data visualization, interactive features, and responsive user experiences. Common scenarios include adding sensor readings, removing outdated data points, replacing entire datasets, and enabling click-based data manipulation.
 

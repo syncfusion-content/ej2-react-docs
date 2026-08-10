@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Axis in React HeatMap chart component | Syncfusion
-description: Learn here all about axis in Syncfusion React HeatMap chart component of Syncfusion Essential JS 2 and more.
+title: Axis in React HeatMap Chart | Syncfusion
+description: Configure X and Y axes on the React HeatMap Chart as Category, Numeric, or DateTime, and invert or oppose them with valueType and label options.
 control: Axis 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Axis in React HeatMap chart component
+# Axis in React HeatMap Chart
 
 HeatMap consists of two axes namely, X-axis and Y-axis that displays the row headers and column headers to plot the data points respectively. You can define the type, format, and other customizing options for both axes in the HeatMap.
 

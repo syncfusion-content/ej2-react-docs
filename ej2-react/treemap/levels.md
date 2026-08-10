@@ -1,24 +1,24 @@
 ﻿---
 layout: post
-title: Levels in React Treemap component | Syncfusion
-description: Learn here all about Levels in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Levels in React TreeMap | Syncfusion
+description: Learn how to add multiple hierarchical levels to the Syncfusion React TreeMap using the groupPath property in levelSettings.
 control: Levels 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Levels in React Treemap component
+# Levels in React TreeMap
 
-TreeMap supports **n** number of levels and each level is separated by using the [`groupPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel/#grouppath) property.
+TreeMap supports **n** number of levels and each level is separated by using the [`groupPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel#grouppath) property.
 
 <!-- markdownlint-disable MD036 -->
 
 ## Group path
 
-The [`groupPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel/#grouppath) property is used to separate each level of the TreeMap by specifying the property from the data source.
+The [`groupPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel#grouppath) property is used to separate each level of the TreeMap by specifying the property from the data source.
 
-In the following example, three levels are added and each level is configured using the [`groupPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel/#grouppath) property.
+In the following example, three levels are added and each level is configured using the [`groupPath`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel#grouppath) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,7 +35,7 @@ In the following example, three levels are added and each level is configured us
 
 ## Group gap
 
-The [`groupGap`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel/#groupgap) property is used to separate an item from each group or another item to differentiate the levels mentioned in the TreeMap.
+The [`groupGap`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel#groupgap) property is used to separate an item from each group or another item to differentiate the levels mentioned in the TreeMap.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -52,7 +52,7 @@ The [`groupGap`](https://ej2.syncfusion.com/react/documentation/api/treemap/leve
 
 ## Header format and Alignment
 
-Customize header using the [`headerFormat`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel/#headerformat) property in which fields are mapping from the dataSource and align header using the [`headerAlignment`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel/#headeralignment) property.
+Customize header using the [`headerFormat`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel#headerformat) property in which fields are mapping from the dataSource and align header using the [`headerAlignment`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel#headeralignment) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -67,7 +67,7 @@ Customize header using the [`headerFormat`](https://ej2.syncfusion.com/react/doc
 
 ## Header height and style
 
-Customize the font color, family, weight, opacity and size using the [`headerStyle`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel/#headerstyle). Based on the font settings, the header height is given using the [`headerHeight`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel/#headerheight) property in [`levels`](https://ej2.syncfusion.com/react/documentation/api/treemap/#levels).
+Customize the font color, family, weight, opacity and size using the [`headerStyle`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel#headerstyle). Based on the font settings, the header height is given using the [`headerHeight`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel#headerheight) property in [`levels`](https://ej2.syncfusion.com/react/documentation/api/treemap#levels).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,7 +82,7 @@ Customize the font color, family, weight, opacity and size using the [`headerSty
 
 ## Header template and position
 
-The TreeMap header supports to customize header of each item using the [`headerTemplate`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel/#headertemplate) property. It uses Essential JS2 Template engine to render the elements. You can position the template using the [`templatePosition`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel/#templateposition) property.
+The TreeMap header supports to customize header of each item using the [`headerTemplate`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel#headertemplate) property. It uses Essential JS2 Template engine to render the elements. You can position the template using the [`templatePosition`](https://ej2.syncfusion.com/react/documentation/api/treemap/levelSettingsModel#templateposition) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

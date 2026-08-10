@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart appearance in React Chart component | Syncfusion
-description: Learn here all about Chart appearance in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Chart appearance 
+title: Chart Appearance in React Chart | Syncfusion
+description: Learn how to style Syncfusion React Chart with custom color palettes, point and range color mapping, chart area customization, and animation options.
+control: Chart appearance
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart appearance in React Chart component
+# Chart Appearance in React Chart
 
 ## Custom color palette
 

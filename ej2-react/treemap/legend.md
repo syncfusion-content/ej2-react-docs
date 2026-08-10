@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Legend in React Treemap component | Syncfusion
-description: Learn here all about Legend in Syncfusion React Treemap component of Syncfusion Essential JS 2 and more.
+title: Legend in React TreeMap | Syncfusion
+description: Learn how to enable and customize legends in the Syncfusion React TreeMap for position, shape, and interactive item identification.
 control: Legend 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Legend in React Treemap component
+# Legend in React TreeMap
 
 Legend is used to provide valuable information for interpreting what the TreeMap displays. The legends can be represented in various colors, shapes or other identifiers based on the data.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Series types in React Range navigator component | Syncfusion
-description: Learn here all about Series types in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
+title: Series Types in React Range Navigator | Syncfusion
+description: Learn how to render line, area, column, step line, spline and spline area series in the Syncfusion React Range Navigator Component for visual time-range data.
 control: Series types 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Series types in React Range navigator component
+# Series Types in React Range Navigator
 
 To render the data, the Range Selector supports six types of series.
 

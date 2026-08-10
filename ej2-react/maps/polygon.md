@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Polygon in React Maps component | Syncfusion
-description: Learn here all about Polygon in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Polygon 
+title: Polygon in React Maps | Syncfusion
+description: Learn how to add and customize polygon overlays in React Maps using latitude/longitude coordinates for zones, boundaries, regions, and coverage areas.
+control: Polygon
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Polygon shape in React Maps component
+# Polygon in React Maps
 
 The Maps component supports rendering custom polygon shapes as overlays on both geometry-based maps and online tile maps. Polygons are useful for highlighting specific geographic regions, marking zones of interest, drawing custom boundaries, or visualizing areas such as coverage zones, territorial boundaries, or restricted areas. This feature is configured using the [polygons](https://ej2.syncfusion.com/react/documentation/api/maps/polygonSettingsModel#polygons) property, which allows multiple polygon shapes to be added and customized independently.
 

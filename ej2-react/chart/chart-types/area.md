@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Area Chart in React Charts | Syncfusion
-description: Learn here all about Area Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Area Chart 
+title: Area Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Area series in Syncfusion React Chart to visualize trends with filled regions, gradient fills, and border styling.
+control: Area Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Area Chart in React Charts
+# Area Chart in React Chart
 
 ## Area
 

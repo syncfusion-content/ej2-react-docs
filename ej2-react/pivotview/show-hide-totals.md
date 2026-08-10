@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show hide totals in React Pivot Table
+# Show or hide totals in React Pivot Table
 
 The Pivot Table component allows users to easily customize the display of grand totals and sub-totals. This documentation explains how to control their visibility and positioning to suit your data analysis needs.
 
@@ -91,9 +91,9 @@ The Pivot Table component enables showing or hiding sub-totals for rows, columns
 
 ## Show or hide sub-totals for specific fields
 
-The Pivot Table component allows users to show or hide sub-totals for specific fields in the row and column axes using the [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals) property. To hide sub-totals for a specific field in either axis, set the [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals) property to **false** in the corresponding field configuration within the rows or columns axis.
+The Pivot Table component allows users to show or hide sub-totals for specific fields in the row and column axes. Set the `showSubTotals` property to **false** on an individual field entry inside the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#rows) or [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#columns) array to hide the sub-total for that field only.
 
-> By default, the [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals) property for fields in both the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#rows) and [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#columns) axes is set to **true**.
+> By default, the `showSubTotals` property for fields in both the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#rows) and [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#columns) axes is set to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -114,7 +114,7 @@ The Pivot Table component allows users to show or hide sub-totals for specific f
 
 ## Show sub-totals at top or bottom
 
-You can configure the position of sub-totals within header groups for both rows and columns in the Pivot Table using the [`subTotalsPosition`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#subtotalsposition) property in the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) object. By default, the [`subTotalsPosition`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#subtotalsposition) property is set to **Auto**, which displays column sub-totals at the bottom and row sub-totals at the top of their respective header groups in the pivot table.
+You can configure the position of sub-totals within header groups for both rows and columns in the Pivot Table using the [`subTotalsPosition`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#subtotalsposition) property in the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) object. The available values are **Top**, **Bottom**, and **Auto** (the default). With **Auto**, column sub-totals appear at the bottom and row sub-totals appear at the top of their respective header groups.
 
 To display sub-totals at the top of header groups for both rows and columns, set the [`subTotalsPosition`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#subtotalsposition) property in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) to **Top**.
 

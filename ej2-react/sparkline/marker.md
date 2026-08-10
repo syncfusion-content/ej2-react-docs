@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Marker in React Sparkline component | Syncfusion
-description: Learn here all about Marker in Syncfusion React Sparkline component of Syncfusion Essential JS 2 and more.
+title: Markers in React Sparkline | Syncfusion
+description: Add markers to the Syncfusion React Sparkline for all, start, end, high, low, or negative points and customize their fill, border, size, and opacity.
 control: Marker 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Marker in React Sparkline component
+# Markers in React Sparkline
 
 This section explains how to add markers to the sparkline.
 

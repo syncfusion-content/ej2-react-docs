@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Threshold in React Chart component | Syncfusion
-description: Learn here all about Threshold in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Threshold 
+title: How to add a threshold line in React Chart | Syncfusion
+description: Learn how to mark a y-axis threshold line on Syncfusion React Chart using striplines to highlight reference values.
+control: Threshold
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Threshold in React Chart component
+# How to add a threshold line in React Chart
 
 You can mark a threshold in chart by using the `stripline`.
 

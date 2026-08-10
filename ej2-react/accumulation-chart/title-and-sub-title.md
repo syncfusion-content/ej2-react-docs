@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Title and sub title in React Accumulation chart component | Syncfusion
-description: Learn here all about Title and sub title in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Title and sub title 
+title: Title and Subtitle in React Accumulation Chart | Syncfusion
+description: Learn how to add a chart title or subtitle to the Syncfusion React Accumulation Chart with custom position, alignment, and style options.
+control: Title and sub title
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Title and sub title in React Accumulation chart component
+# Title and Subtitle in React Accumulation Chart
 
 ## Title
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Area Chart in React Charts | Syncfusion
-description: Learn here all about Spline Area Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Spline Area Chart 
+title: Spline Area Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Spline Area series in Syncfusion React Chart to visualize trends with smooth curved filled regions.
+control: Spline Area Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Spline Area Chart in React Charts
+# Spline Area Chart in React Chart
 
 ## Spline Area
 

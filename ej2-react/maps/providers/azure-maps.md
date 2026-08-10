@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Azure maps in React Maps component | Syncfusion
-description: Learn here all about Azure maps in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Azure maps 
+title: Azure Maps in React Maps | Syncfusion
+description: Learn how to integrate Microsoft Azure Maps in React Maps with satellite, road, and terrain styles using an Azure Maps subscription.
+control: Azure maps
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Azure maps integration in React Maps component
+# Azure Maps in React Maps
 
 Azure Maps is an online map service provider from Microsoft. Similar to OSM and Bing Maps, it provides map tile images based on requests and combines them to display the map area. Azure Maps offers various map styles including satellite imagery, road maps, and terrain views with global coverage.
 

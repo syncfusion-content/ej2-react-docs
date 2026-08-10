@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Methods in React Maps component | Syncfusion
-description: Learn here all about methods in Syncfusion React Maps component of Syncfusion Essential JS 2 and more.
-control: Methods 
+title: Methods in React Maps | Syncfusion
+description: Learn the React Maps public methods for retrieving coordinates, manipulating layers, refreshing content, and exporting visualizations programmatically.
+control: Methods
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Methods in React Maps component
+# Methods in React Maps
 
 The Maps control provides several public methods that enable programmatic control and interaction with map controls. These methods allow developers to perform operations such as retrieving geographic coordinates, manipulating layers, refreshing content, and exporting map visualizations. This section documents the available methods and their usage.
 
