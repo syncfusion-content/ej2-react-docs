@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Combo box component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: Migration in React ComboBox | Syncfusion
+description: Migrate ComboBox code from Syncfusion Essential JS 1 to EJ2 with a side-by-side API map for data binding, fields, query, and actionBegin/Complete events.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Combo box component
+# Migration in React ComboBox
 
 This article describes the API migration process of ComboBox component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Disabled in React Color picker component | Syncfusion
-description: Learn here all about Disabled in Syncfusion React Color picker component of Syncfusion Essential JS 2 and more.
+title: How to disable ColorPicker in React Color Picker | Syncfusion
+description: Disable the React Color Picker by setting the disabled property to true so the popup is inaccessible to users.
 control: Disabled 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disabled in React Color picker component
+# How to disable ColorPicker in React Color Picker
 
-To disable the ColorPicker, set the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#disabled) property to `true`. When disabled, the ColorPicker popup cannot be accessed.
+To disable the ColorPicker, set the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/color-picker#disabled) property to `true`. When disabled, the ColorPicker popup cannot be accessed.
 
 The following example shows the ColorPicker in a disabled state.
 

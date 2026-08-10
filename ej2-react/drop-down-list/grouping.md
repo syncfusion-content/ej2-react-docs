@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in React Drop down list component | Syncfusion
-description: Learn here all about Grouping in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Grouping in React Dropdown List | Syncfusion
+description: Group React Dropdown List items by category using the groupBy field, with inline or fixed group headers and customizable groupTemplate styling.
 control: Grouping 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in React Drop down list component
+# Grouping in React Dropdown List
 
 The DropDownList supports grouping nested elements based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content updates dynamically as you scroll through the popup list, displaying the category value for each group.
 

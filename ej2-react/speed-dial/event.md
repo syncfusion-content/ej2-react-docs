@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Event in React Speed dial component | Syncfusion
-description: Learn here all about Event in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+title: Events in React Speed Dial | Syncfusion
+description: Handle React Speed Dial events: clicked for item actions, created for setup, plus open and beforeClose for popup state changes.
 control: Event 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Event in React Speed dial component
+# Events in React Speed Dial
 
 The SpeedDial component emits events at different lifecycle stages—from initialization through user interactions to popup state changes. Monitor these events to execute custom logic and control component behavior. This section details each available event and its purpose.
 

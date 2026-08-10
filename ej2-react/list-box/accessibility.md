@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React ListBox component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React ListBox component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in React ListBox | Syncfusion
+description: Build inclusive React ListBox UIs with full WCAG 2.2, Section 508, ADA, and ARIA support, including screen reader, keyboard, and RTL coverage.
+control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React ListBox component
+# Accessibility in React ListBox
 
 The ListBox component adheres to established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection in React List box component | Syncfusion
-description: Learn here all about Selection in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
-control: Selection 
+title: Selection in React ListBox | Syncfusion
+description: Configure single or multiple selection in the React ListBox via selectionSettings.mode, with SHIFT, CTRL, and arrow-key support and a change event.
+control: Selection
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in React List box component
+# Selection in React ListBox
 
 The ListBox supports selecting items using mouse or keyboard actions. Two selection modes are available:
 

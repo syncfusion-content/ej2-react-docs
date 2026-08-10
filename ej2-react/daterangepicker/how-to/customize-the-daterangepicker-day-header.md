@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the DateRangePicker day header in React Daterangepicker component | Syncfusion
-description: Learn here all about Customize the DateRangePicker day header in Syncfusion React Daterangepicker component of Syncfusion Essential JS 2 and more.
+title: How to customize the day header in React DateRangePicker | Syncfusion
+description: Customize the React DateRangePicker day header format with dayHeaderFormat using Short, Narrow, Abbreviated, or Wide name styles.
 control: Customize the DateRangePicker day header 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the DateRangePicker day header in React Daterangepicker component
+# How to customize the day header in React DateRangePicker
 
 The day names displayed in the calendar header can be customized using the [`dayHeaderFormat`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#dayheaderformat) property. By default, the format is `Short`. The following formats are available:
 

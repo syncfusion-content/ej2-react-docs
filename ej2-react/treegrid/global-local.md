@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global local in React Treegrid component | Syncfusion
-description: Learn here all about Global local in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Global Localization | Syncfusion
+description: Learn how to implement global localization in React TreeGrid, including internationalization, localization, and RTL language support.
 control: Global local 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in React Treegrid component
+# Global Localization in React TreeGrid
 
 ## Localization
 

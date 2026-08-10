@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React Calendar component | Syncfusion
-description: Learn here all about Globalization in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: Globalization in React Calendar | Syncfusion
+description: Configure the React Calendar for non-English cultures using Internationalization, localization, and UNICODE CLDR JSON data.
 control: Globalization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Calendar component
+# Globalization in React Calendar
 
 Globalization combines [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (date and number parsing/formatting) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (culture-specific text and formatting). Use these mechanisms to adapt the Calendar to different languages and regions.
 

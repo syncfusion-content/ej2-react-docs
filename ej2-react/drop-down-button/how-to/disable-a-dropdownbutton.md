@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable a dropdownbutton in React Drop down button component | Syncfusion
-description: Learn here all about Disable a dropdownbutton in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to disable in React DropDownButton | Syncfusion
+description: Disable the React DropDownButton by setting the disabled property to true. The button becomes non-interactive and won't trigger click events.
 control: Disable a dropdownbutton 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable a dropdownbutton in React Drop down button component
+# How to disable in React DropDownButton
 
 Disable the DropDownButton component by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#disabled) property to `true`. A disabled button is not interactive and cannot receive focus or trigger click events.
 

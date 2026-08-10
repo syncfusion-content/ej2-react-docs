@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Localization in React Combo box component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: Localization in React ComboBox | Syncfusion
+description: Localize the Syncfusion React ComboBox's noRecordsTemplate and actionFailureTemplate text using the L10n load function with any culture such as fr-FR.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Combo box component
+# Localization in React ComboBox
 
-The Localization library enables you to translate static text content in the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#actionfailuretemplate) properties based on the ComboBox's assigned culture.
+The Localization library enables you to translate static text content in the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#actionfailuretemplate) properties based on the ComboBox's assigned culture.
 
 | Locale key | en-US (default)  |
 |------|------|
@@ -51,5 +51,5 @@ In the following example, French culture is applied to the ComboBox. With no dat
 
 ## See Also
 
-* [Accessibility](./accessibility/)
-* [How to bind the data to the combobox](./data-binding/)
+* [Accessibility](./accessibility)
+* [How to bind the data to the combobox](./data-binding)

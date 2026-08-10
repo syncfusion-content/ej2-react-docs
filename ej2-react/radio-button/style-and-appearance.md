@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Radio button component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Radio button component of Syncfusion Essential JS 2 and more.
+title: Style and appearance in React Radio Button | Syncfusion
+description: Customize the React Radio Button appearance with CSS overrides for the wrapper, indicator, label, hover, focus, checked, and disabled states.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Radio button component
+# Style and appearance in React Radio Button
 
 Customize the RadioButton's appearance by overriding default CSS classes. Create your own custom theme using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material) or apply targeted CSS rules to individual components.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filter List box Data Using TextBox component | Syncfusion
-description: Learn here all about Filter List box Data Using TextBox component in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
+description: Filter React ListBox data with a TextBox by listening to its input event and calling the ListBox filter method to narrow items to matching text.
 control: ListBox Filter
 platform: ej2-react
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row template in React TreeGrid component | Syncfusion
-description: Learn here all about Row template in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Row Template | Syncfusion
+description: Learn how to use row templates in React TreeGrid to customize row layouts, display custom content, and enhance data presentation.
 control: Row template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row template in React TreeGrid
+# Row Template in React TreeGrid
 
 The [rowTemplate](https://ej2.syncfusion.com/react/documentation/api/treegrid/#rowtemplate) option customizes the look and behavior of TreeGrid rows. The `rowTemplate` property accepts either a template string or an HTML element ID.
 

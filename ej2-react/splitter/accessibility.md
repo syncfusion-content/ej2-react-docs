@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Splitter component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Splitter | Syncfusion
+description: Review Syncfusion React Splitter accessibility support for WCAG, Section 508, WAI-ARIA, and keyboard arrow shortcuts for pane navigation.
 control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Splitter component
+# Accessibility in React Splitter
 
 The React Splitter component adheres to major accessibility standards including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22), and [WCAG roles](https://www.w3.org/TR/wai-aria#roles), ensuring inclusive user experiences across platforms.
 

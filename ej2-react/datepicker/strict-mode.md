@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Strict mode in React Datepicker component | Syncfusion
-description: Learn here all about Strict mode in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Strict Mode in React DatePicker | Syncfusion
+description: Enforce strict date validation in the React DatePicker so out-of-range and invalid dates are auto-clamped or rejected.
 control: Strict mode 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Strict mode in React Datepicker component
+# Strict Mode in React DatePicker
 
 When [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/datepicker#strictmode) is enabled, the DatePicker validates user input against specified min/max constraints. The following behaviors apply:
 

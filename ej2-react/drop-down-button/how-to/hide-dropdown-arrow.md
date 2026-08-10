@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hide dropdown arrow in React Drop down button component | Syncfusion
-description: Learn here all about Hide dropdown arrow in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to hide dropdown arrow in React DropDownButton | Syncfusion
+description: Hide the React DropDownButton caret by adding the e-caret-hide class via the cssClass property for icon-only or custom-styled buttons.
 control: Hide dropdown arrow 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide dropdown arrow in React Drop down button component
+# How to hide dropdown arrow in React DropDownButton
 
 Remove the dropdown caret icon from the DropDownButton by adding the `e-caret-hide` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#cssclass) property. This is useful for creating icon-only buttons or buttons with custom styling where the caret is not needed.
 

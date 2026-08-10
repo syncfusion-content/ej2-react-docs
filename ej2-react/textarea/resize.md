@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resize in React TextArea component | Syncfusion
-description: Checkout and learn about Resize in React TextArea component of Syncfusion Essential JS 2 and more details.
+title: Resize in React TextArea | Syncfusion
+description: Allow users to resize the React TextArea vertically, horizontally, both, or none using the resizeMode property.
 control: Resize
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize in React TextArea Component
+# Resize in React TextArea
 
 The TextArea supports resizing to enhance user experience and accommodate varying content. Configure resizing behavior using the [resizeMode](https://ej2.syncfusion.com/react/documentation/api/textarea/#resizeMode) API, which offers several options:
 

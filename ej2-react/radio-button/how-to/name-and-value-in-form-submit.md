@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Name and value in form submit in React Radio button component | Syncfusion
-description: Learn here all about Name and value in form submit in Syncfusion React Radio button component of Syncfusion Essential JS 2 and more.
+title: How to set name and value in React Radio Button | Syncfusion
+description: Group React Radio Buttons as mutually exclusive options with the name attribute. Only the checked value is submitted; disabled and unchecked are excluded.
 control: Name and value in form submit 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Name and value in form submit in React Radio button component
+# How to set name and value in React Radio Button
 
 Use the [`name`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#name) attribute to group RadioButton components as mutually exclusive options. When grouped RadioButtons are submitted with a form, only the [`value`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#value) attribute of the checked RadioButton is sent to the server—retrieved using the shared `name` attribute. RadioButtons that are disabled or unchecked do not submit their values.
 

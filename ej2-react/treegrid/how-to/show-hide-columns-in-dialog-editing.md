@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show hide columns in dialog editing in React Treegrid component | Syncfusion
-description: Learn here all about Show hide columns in dialog editing in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Dialog Editing Column Visibility | Syncfusion
+description: Learn how to show or hide columns in React TreeGrid dialog editing to customize edit forms, manage column visibility, and improve data entry.
 control: Show hide columns in dialog editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show hide columns in dialog editing in React Treegrid component
+# Show or Hide Columns in Dialog Editing in React TreeGrid
 
 You can show hidden columns or hide visible column's editor in the dialog while editing the treegrid record using [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actionbegin) and [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/treegrid/#actioncomplete) events.
 

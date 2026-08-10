@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "PostgreSQL data binding in React Pivot Table | Syncfusion"
-component: "Pivot Table"
+title: PostgreSQL data binding in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table connects to PostgreSQL through an ASP.NET Core Web API and Npgsql for data binding, CRUD, and server-side integration.
 platform: ej2-react
-description: "Learn how the React Pivot Table connects to PostgreSQL through an ASP.NET Core Web API and Npgsql for data binding, CRUD, and server-side integration."
 control: Pivot Table
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # PostgreSQL data binding in React Pivot Table
@@ -216,7 +216,9 @@ The database connection string has been configured successfully.
 
 ### Step 3: Configure Program.cs
 
-Update the **Program.cs** file to register the PostgreSQL connection and enable CORS for communication between the React client and the API:
+Update the **Program.cs** file to register the PostgreSQL data source and enable CORS for communication between the React client and the API:
+
+> **Nullable references:** The samples in this doc use `string?`, `int?`, and `DateTime?` (nullable reference types). Add `<Nullable>enable</Nullable>` to the `<PropertyGroup>` of your **.csproj** file or set `Nullable` to `enable` in **Directory.Build.props** so the code compiles.
 
 ```csharp
 using Npgsql;
@@ -227,11 +229,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 
-// Register PostgreSQL connection from configuration
-builder.Services.AddSingleton<NpgsqlConnection>(sp =>
+// Register an NpgsqlDataSource as a singleton. NpgsqlDataSource is thread-safe
+// and manages an internal connection pool. Do NOT register NpgsqlConnection
+// directly as a singleton: NpgsqlConnection is not thread-safe and will fail
+// under concurrent requests.
+builder.Services.AddSingleton<NpgsqlDataSource>(sp =>
 {
     var connString = builder.Configuration.GetConnectionString("SalesDb");
-    return new NpgsqlConnection(connString);
+    return new NpgsqlDataSourceBuilder(connString).Build();
 });
 
 // Enable CORS to allow requests from React client
@@ -254,7 +259,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
-app.UseCors("AllowAll");  // Apply CORS policy
+app.UseCors("AllowAll");  // Apply CORS policy (must be before MapControllers)
 app.MapControllers();
 
 app.Run();
@@ -262,9 +267,9 @@ app.Run();
 
 **What's Happening:**
 
-1. **AddSingleton**: Registers the PostgreSQL connection globally, making it available to all controllers
-2. **AddCors**: Enables Cross-Origin Resource Sharing (CORS), allowing the React frontend to make API requests to this backend
-3. **AllowAll policy**: Permits all origins, methods, and headers (suitable for development; restrict in production)
+1. **AddSingleton&lt;NpgsqlDataSource&gt;**: Registers a thread-safe Npgsql data source that manages an internal connection pool. Each request opens its own short-lived `NpgsqlConnection` via `dataSource.CreateConnection()`.
+2. **AddCors**: Enables Cross-Origin Resource Sharing (CORS), allowing the React frontend to make API requests to this backend.
+3. **AllowAll policy**: Permits all origins, methods, and headers (suitable for development; restrict the allowed origins in production).
 
 ### Step 4: Create the Data Model and Controller
 
@@ -282,28 +287,24 @@ namespace PivotTable_PostgreSQL.Server.Controllers
     [ApiController]
     public class SalesController : ControllerBase
     {
-        private readonly string _connectionString;
+        private readonly NpgsqlDataSource _dataSource;
 
         /// <summary>
-        /// Constructor that injects the configuration to retrieve the connection string.
+        /// Constructor that injects the Npgsql data source from the DI container.
         /// </summary>
-        public SalesController(IConfiguration configuration)
+        public SalesController(NpgsqlDataSource dataSource)
         {
-            _connectionString = configuration.GetConnectionString("SalesDb");
+            _dataSource = dataSource;
         }
 
         /// <summary>
-        /// Handles GET requests to retrieve all sales data for the Pivot Table.
-        /// This endpoint is called when the Pivot Table first loads or refreshes data.
+        /// Reads all sales records from the database and projects them to a list.
         /// </summary>
-        /// <returns>Returns a list of all sales records from the database.</returns>
-        [HttpGet]
-        [Route("api/[controller]")]
-        public List<SalesData> GetSalesData()
+        private List<SalesData> GetSalesData()
         {
             const string Query = @"SELECT * FROM salesdata ORDER BY orderid;";
-            
-            using var Connection = new NpgsqlConnection(_connectionString);
+
+            using var Connection = _dataSource.CreateConnection();
             Connection.Open();
 
             using var Command = new NpgsqlCommand(Query, Connection);
@@ -327,26 +328,35 @@ namespace PivotTable_PostgreSQL.Server.Controllers
                                   TotalAmount = Data["totalamount"] == DBNull.Value ? 0m : Convert.ToDecimal(Data["totalamount"]),
                                   SalesPerson = Data["salesperson"] == DBNull.Value ? null : Data["salesperson"].ToString()
                               }).ToList();
-            
+
             return DataSource;
         }
 
         /// <summary>
         /// Handles POST requests from the Pivot Table DataManager.
-        /// Processes the data request and returns formatted data for the component.
+        /// Applies the filtering, sorting, and paging from DataManagerRequest
+        /// using DataOperations.Execute so server-side operations work correctly.
         /// </summary>
         /// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-        /// <returns>Returns the data records along with the total count.</returns>    
+        /// <returns>Returns the data records along with the total count.</returns>
         [HttpPost]
         [Route("api/[controller]")]
         public object Post([FromBody] DataManagerRequest DataManagerRequest)
         {
             // Retrieve all sales data from the database
             IQueryable<SalesData> DataSource = GetSalesData().AsQueryable();
-            
-            // Get the total number of records
+
+            // Get the total number of records (before paging)
             int totalRecordsCount = DataSource.Count();
-            
+
+            // Apply the DataManager operations (filter, sort, page) on the server.
+            // Without this call, paging/filtering sent by the Pivot Table are ignored.
+            if (DataManagerRequest != null)
+            {
+                DataSource = DataSource.ToList().AsQueryable();
+                DataSource = new Syncfusion.EJ2.DataOperations().Execute(DataSource, DataManagerRequest) as IQueryable<SalesData>;
+            }
+
             // Return data and count to the client
             return new { result = DataSource, count = totalRecordsCount };
         }
@@ -485,7 +495,7 @@ function App() {
     url: 'https://localhost:7086/api/Sales',
     adaptor: new UrlAdaptor
   });
-  
+
   // Configure the Pivot Table data structure
   const dataSourceSettings = {
     dataSource: data,
@@ -496,12 +506,12 @@ function App() {
     filters: [],
     fieldMapping: [{ name: 'orderDate', caption: 'Order Date' }, { name: 'orderID', caption: 'Order ID' }, { name: 'customerName', caption: 'Customer Name' }, { name: 'region', caption: 'Region' }, { name: 'salesPerson', caption: 'Sales Person' }, { name: 'productName', caption: 'Product Name' }, { name: 'unitPrice', caption: 'Unit Price' }]
   }
-  
+
   return (
-    <PivotViewComponent 
-      id='PivotView' 
-      ref={(scope: any) => { pivotObj = scope; }} 
-      height={350} 
+    <PivotViewComponent
+      id='PivotView'
+      ref={(scope: any) => { pivotObj = scope; }}
+      height={350}
       dataSourceSettings={dataSourceSettings}
       showFieldList={true}>
       <Inject services={[FieldList]}/>
@@ -808,14 +818,10 @@ public class CRUDModel<T> where T : class
 
 ### Configure Client-Side CRUD Endpoints
 
-Update your React **App.tsx** to configure the DataManager with CRUD endpoints and enable editing features in the Pivot Table. This step involves three main configurations: setting up the DataManager with CRUD URLs, enabling edit settings, and configuring the beginDrillThrough event to handle the primary key.
-
-#### Configure DataManager with CRUD URLs
-
-The [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) is a data source manager that communicates with your backend API. When CRUD operations are performed, it sends HTTP POST requests to the corresponding endpoints you specify. Here's how to set it up:
+Update your React **App.tsx** to configure the DataManager with CRUD endpoints, enable editing features, and configure the `beginDrillThrough` event to handle the primary key. Below is a single, complete **App.tsx** that combines the read-only display from Step 4 with all of the CRUD configuration in this step. Replace your previous **App.tsx** with this file.
 
 ```typescript
-import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { FieldList, Inject, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import './App.css';
 
@@ -830,56 +836,34 @@ function App() {
     removeUrl: 'https://localhost:7086/api/Sales/Remove',       // Called when user deletes a record
     adaptor: new UrlAdaptor                                    // Uses the standard URL adaptor for HTTP communication
   });
-```
 
-**How it works:**
+  // Configure the Pivot Table data structure
+  const dataSourceSettings = {
+    dataSource: data,
+    expandAll: true,
+    rows: [{ name: 'country', caption: 'Country' }],
+    columns: [{ name: 'productCategory', caption: 'Product Category' }],
+    values: [{ name: 'quantity', caption: 'Quantity' }, { name: 'totalAmount', caption: 'Total Amount' }],
+    filters: [],
+    fieldMapping: [
+      { name: 'orderDate', caption: 'Order Date' },
+      { name: 'orderID', caption: 'Order ID' },
+      { name: 'customerName', caption: 'Customer Name' },
+      { name: 'region', caption: 'Region' },
+      { name: 'salesPerson', caption: 'Sales Person' },
+      { name: 'productName', caption: 'Product Name' },
+      { name: 'unitPrice', caption: 'Unit Price' }
+    ]
+  };
 
-- **`url`**: This is the main endpoint that retrieves data from the database. When the Pivot Table loads, it sends a POST request to this URL to fetch all records from the **salesdata** table.
-
-- **`insertUrl`**: When a user clicks **Add** in the drill-through grid and submits a new record, the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) automatically sends a POST request to this endpoint with the new record data. The server's Insert method (from Step 6.1) processes this request and adds the record to the database.
-
-- **`updateUrl`**: When a user clicks **Edit** and modifies an existing record, the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) sends a POST request to this endpoint with the updated data. The server's Update method (from Step 6.2) processes this request and updates the record in the database.
-
-- **`removeUrl`**: When a user clicks **Delete** and confirms the deletion, the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) sends a POST request to this endpoint with the record ID. The server's Remove method (from Step 6.3) processes this request and deletes the record from the database.
-
-- **`adaptor: new UrlAdaptor`**: This tells the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) to use the URL adaptor, which handles automatic HTTP communication with your REST API.
-
-#### Enable Edit Settings
-
-Configure the [editSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#editsettings) property to enable CRUD operations in the Pivot Table:
-
-```typescript
   // Enable editing functionality
-  const editSettings = { 
+  const editSettings = {
     allowEditing: true,    // Enables the Edit button and allows users to modify existing records
     allowAdding: true,     // Enables the Add button and allows users to create new records
     allowDeleting: true,   // Enables the Delete button and allows users to remove records
     mode: 'Normal'         // Uses Normal mode (popup dialog) for editing; other options: 'Dialog', 'Batch'
   };
 
-  return (
-    <PivotViewComponent 
-      id='PivotView' 
-      ref={(scope: any) => { pivotObj = scope; }}
-      editSettings={editSettings} 
-      >
-    </PivotViewComponent>
-  );
-```
-
-The Pivot Table supports different editing modes (Normal, Dialog, Batch, and Command Column) that can be configured using the [mode](https://ej2.syncfusion.com/react/documentation/api/pivotview/celleditsettingsmodel#mode) property. For detailed information about each editing mode and their usage, refer to the [Editing documentation](https://ej2.syncfusion.com/react/documentation/pivotview/editing).
-
-#### Configure Primary Key to perform editing
-
-The [beginDrillThrough](https://ej2.syncfusion.com/react/documentation/pivotview/drill-through#begindrillthrough) event is triggered whenever a user double-clicks a pivot cell to open the editing pop-up. This event is crucial for CRUD operations because it's where you configure the primary key column.
-
-**Why is the primary key important?**
-
-The primary key (OrderID in our case) uniquely identifies each record in the database. When the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) performs update or delete operations, it needs to know which record to modify or delete. It uses the primary key to identify the exact record. Without a properly configured primary key, the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) won't know which record is being edited or deleted.
-
-Here's how to configure it:
-
-```typescript
   // Configure beginDrillThrough event to set the primary key for CRUD operations
   function beginDrillThrough(args: any) {
     // Iterate through all columns in the drill-through grid
@@ -892,23 +876,47 @@ Here's how to configure it:
       } else {
         // Make all other columns visible so users can view and edit them
         args.gridObj.columns[i].visible = true;
-        // Configure the edit type for date field to use a date picker for editing
+        // Configure the edit type and display format for the orderDate column
         if (args.gridObj.columns[i].field === 'orderDate') {
           args.gridObj.columns[i].editType = 'datetimepickeredit';
+          args.gridObj.columns[i].format = 'yMd'; // Date format for display
         }
       }
     }
   }
 
   return (
-    <PivotViewComponent 
-      id='PivotView' 
+    <PivotViewComponent
+      id='PivotView'
       ref={(scope: any) => { pivotObj = scope; }}
+      height={350}
+      dataSourceSettings={dataSourceSettings}
+      editSettings={editSettings}
       beginDrillThrough={beginDrillThrough}
-      >
+      showFieldList={true}>
+      <Inject services={[FieldList]}/>
     </PivotViewComponent>
   );
+}
+
+export default App;
 ```
+
+**How it works:**
+
+- **`url`**: This is the main endpoint that retrieves data from the database. When the Pivot Table loads, it sends a POST request to this URL to fetch all records from the **salesdata** table.
+
+- **`insertUrl`**: When a user clicks **Add** in the drill-through grid and submits a new record, the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) automatically sends a POST request to this endpoint with the new record data. The server's Insert method (defined earlier) processes this request and adds the record to the database.
+
+- **`updateUrl`**: When a user clicks **Edit** and modifies an existing record, the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) sends a POST request to this endpoint with the updated data. The server's Update method processes this request and updates the record in the database.
+
+- **`removeUrl`**: When a user clicks **Delete** and confirms the deletion, the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) sends a POST request to this endpoint with the record ID. The server's Remove method processes this request and deletes the record from the database.
+
+- **`adaptor: new UrlAdaptor`**: This tells the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) to use the URL adaptor, which handles automatic HTTP communication with your REST API.
+
+- **Primary key (`orderID`)**: The [beginDrillThrough](https://ej2.syncfusion.com/react/documentation/pivotview/drill-through#begindrillthrough) event marks the `orderID` column as the primary key so update and delete operations know which record to target. The Pivot Table opens the editing pop-up only from a drill-through (double-click) on a value cell, not from arbitrary grid cells.
+
+The Pivot Table supports different editing modes (Normal, Dialog, Batch, and Command Column) that can be configured using the [mode](https://ej2.syncfusion.com/react/documentation/api/pivotview/celleditsettingsmodel#mode) property. For detailed information about each editing mode and their usage, refer to the [Editing documentation](https://ej2.syncfusion.com/react/documentation/pivotview/editing).
 
 ### Using CRUD Operations
 
@@ -957,7 +965,7 @@ When working with the Pivot Table, Web API, and PostgreSQL integration, you may 
 
 #### 1. CORS Error: "Access to XMLHttpRequest blocked by CORS policy"
 
-**Issue**: React frontend (localhost:5173) cannot communicate with API backend (localhost:5088).
+**Issue**: React frontend (typically `http://localhost:5173`) cannot communicate with API backend (`https://localhost:7086`).
 
 **Symptoms**: Browser console shows: `Access to XMLHttpRequest at 'https://localhost:7086/api/Sales' blocked by CORS policy`
 

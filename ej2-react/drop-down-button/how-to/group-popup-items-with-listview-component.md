@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Group popup items with listview component in React Drop down button component | Syncfusion
-description: Learn here all about Group popup items with listview component in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to group popup items in React DropDownButton | Syncfusion
+description: Group React DropDownButton popup items with headers by integrating the ListView component as the target and enabling the groupBy property.
 control: Group popup items with listview component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Group popup items with listview component in React Drop down button component
+# How to group popup items in React DropDownButton
 
 Create grouped popup items with headers by integrating the ListView component with DropDownButton. Set the ListView element as the [`target`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#target) property and enable grouping using the [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettings/#groupby) property.
 

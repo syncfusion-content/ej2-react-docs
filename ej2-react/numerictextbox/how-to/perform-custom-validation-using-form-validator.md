@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Perform custom validation using form validator in React Numerictextbox component | Syncfusion
-description: Learn here all about Perform custom validation using form validator in Syncfusion React Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: How to add custom validation in React NumericTextBox | Syncfusion
+description: Add custom validation rules to the React NumericTextBox via the FormValidator rules collection to validate numeric input.
 control: Perform custom validation using form validator 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform custom validation using form validator in React NumericTextBox component
+# How to add custom validation in React NumericTextBox
 
 Implement custom validation logic for the NumericTextBox using the FormValidator component. Define custom validation rules that trigger on value changes or form submission. The following example demonstrates how to add custom validation rules to the FormValidator's rules collection to validate NumericTextBox input.
 

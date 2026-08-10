@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Repeat button in React Button component | Syncfusion
-description: Learn here all about Repeat button in Syncfusion React Button component of Syncfusion Essential JS 2 and more.
+title: How to repeat button in React Button | Syncfusion
+description: Implement a React repeat button that fires click events continuously while pressed, using mouse and touch events for volume or value controls.
 control: Repeat button 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Repeat button in React Button component
+# How to repeat button in React Button
 
 A repeat button triggers its click event repeatedly at regular intervals while the button is pressed, remaining active until released. This behavior is useful for continuous actions such as incrementing/decrementing values or volume control.
 

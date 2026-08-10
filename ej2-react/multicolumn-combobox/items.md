@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Items in React MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about items in React MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: "Items in React MultiColumn ComboBox | Syncfusion"
+description: Configure the React MultiColumn ComboBox selected item, value, index, placeholder, and floating label to match your form layout and user input flow.
 platform: ej2-react
 control: MultiColumn Combobox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Items in React MultiColumn ComboBox component
+# Items in React MultiColumn ComboBox
 
 ## Setting text
 

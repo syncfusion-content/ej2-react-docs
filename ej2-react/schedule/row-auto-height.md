@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row auto height in React Schedule component | Syncfusion
-description: Learn here all about Row auto height in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Row Auto Height in React Scheduler | Syncfusion
+description: Learn how to auto-adjust row height in the Syncfusion React Scheduler timeline and month views to display all overlapping appointments.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row auto height in React Schedule component
+# Row Auto Height in React Scheduler
 
 By default, the height of the Scheduler rows in Timeline views is static. Therefore, when the same time ranges hold multiple overlapping appointments, a `+n more` text indicator is displayed. With this feature enabled, you can now view all overlapping appointments in a specific time range by auto-adjusting the row height according to the number of appointments, instead of displaying the `+n more` text indicators.
 

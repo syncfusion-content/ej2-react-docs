@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React ColorPicker | Syncfusion
-description: Learn how to get started with the React ColorPicker component in Syncfusion, including installation with Vite, configuration, and required styles.
+title: Getting Started with React Color Picker | Syncfusion
+description: Learn how to set up a Vite-based React project, install the Syncfusion Color Picker, and render a basic inline or palette picker in minutes.
 control: Color Picker
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React ColorPicker component
+# Getting Started with React Color Picker
 
 This section explains the steps required to create a simple React ColorPicker component and demonstrate its basic usage in a React environment.
 

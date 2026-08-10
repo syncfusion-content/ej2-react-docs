@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Close popup in React Drop down list component | Syncfusion
-description: Learn here all about Close popup in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to close popup in React Dropdown List | Syncfusion
+description: Close the React Dropdown List popup on window scroll by calling the hidePopup method inside a scroll event listener.
 control: Close popup 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Close popup in React Drop down list component
+# How to close popup in React Dropdown List
 
 Use the `hidePopup` method in DropDownList to close the popup when the window scroll event is triggered.
 

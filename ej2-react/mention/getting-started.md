@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Mention component | Syncfusion
-description: Checkout and learn about Getting started with React Mention component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Mention | Syncfusion
+description: Learn how to set up the Syncfusion React Mention in a Vite project: install packages, import styles, and bind a data source.
 control: Mention
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Mention component
+# Getting Started with React Mention
 
 This section explains the steps required to create a simple React Mention component and demonstrate its basic usage in a React environment.
 

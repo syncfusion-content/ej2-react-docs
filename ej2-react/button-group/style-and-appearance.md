@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Button group component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
+title: Style and appearance in React Button Group | Syncfusion
+description: Customize the React Button Group appearance using CSS class overrides. Learn the available classes for state, variant, vertical, and RTL styling.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Button group component
+# Style and appearance in React Button Group
 
 Customize the ButtonGroup appearance by overriding its default CSS styles. The following table lists the CSS classes available for ButtonGroup styling:
 

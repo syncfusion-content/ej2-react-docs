@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drag and drop in React Chips component | Syncfusion
-description: Learn here all about Drag and drop in Syncfusion React Chips component of Syncfusion Essential JS 2 and more.
+title: Drag and drop in React Chips | Syncfusion
+description: Enable drag and drop in React Chips with the allowDragAndDrop property. Reorder chips within or across ChipLists using dragStart, dragging, and dragStop events.
 platform: ej2-react
 control: Drag and drop
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in React Chips component
+# Drag and drop in React Chips
 
 Enable drag and drop functionality for chips by setting the [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/chips/#allowdraganddrop) property to **true**. Users can drag and drop chips within the same ChipList or across multiple ChipList containers to reorder or reorganize them.
 

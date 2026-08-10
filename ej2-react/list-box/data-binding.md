@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React List box component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
-control: Data binding 
+title: Data Binding in React ListBox | Syncfusion
+description: Bind the React ListBox to local arrays or remote DataManager sources and map text, value, groupBy, and iconCss fields to your data model.
+control: Data binding
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React List box component
+# Data Binding in React ListBox
 
 The ListBox loads data from local or remote sources using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/list-box/#datasource) property. It supports both `array` and `DataManager` data types.
 

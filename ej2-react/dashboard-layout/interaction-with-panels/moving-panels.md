@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Moving panels in React Dashboard Layout component | Syncfusion
-description: Learn here all about Moving panels in Syncfusion React Dashboard Layout component of Syncfusion Essential JS 2 and more.
+title: Moving Panels in React Dashboard Layout | Syncfusion
+description: Move Syncfusion React Dashboard Layout panels programmatically with the movePanel method, passing id, row, and column to reposition.
 control: Dashboard Layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Moving panels in React Dashboard Layout  component
+# Moving Panels in React Dashboard Layout
 
 In addition to drag and drop, it is possible to move panels in the Dashboard Layout programmatically. This can be achieved using [movePanel](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#movepanel) method. The method is invoked as follows,
 

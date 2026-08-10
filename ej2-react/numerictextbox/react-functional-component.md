@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React functional component in React Numerictextbox component | Syncfusion
-description: Learn here all about React functional component in Syncfusion React Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Functional Component in React NumericTextBox | Syncfusion
+description: Render the React NumericTextBox in a functional component using React Hooks like useState, useEffect, useRef, and useReducer.
 control: React functional component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React functional component in React NumericTextBox component
+# Functional Component in React NumericTextBox
 
 Implement the NumericTextBox component using React functional components and hooks for a modern, state-management approach. The following table describes the essential React hooks used to manage NumericTextBox behavior and state:
 

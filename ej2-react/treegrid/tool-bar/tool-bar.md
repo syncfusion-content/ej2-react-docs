@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tool bar in React TreeGrid | Syncfusion
-description: Learn here all about Tool bar in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Toolbar | Syncfusion
+description: Learn how to customize the toolbar in React TreeGrid, including item control, toolbar placement, and toolbar templates.
 control: Tool bar
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool bar in React TreeGrid
+# Toolbar in React TreeGrid
 
 The TreeGrid provides toolbar support to handle TreeGrid actions. The [toolbar](https://ej2.syncfusion.com/react/documentation/api/TreeGrid/#toolbar) property accepts a collection of built-in toolbar items, [ItemModel](https://ej2.syncfusion.com/react/documentation/api/toolbar/itemModel/) objects for custom items, or an HTML element ID for a toolbar template.
 

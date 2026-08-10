@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Check the MIME type of file before uploading it in React Uploader component | Syncfusion
-description: Learn here all about checking the MIME type of file before uploading it in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to check the MIME type in React File Upload | Syncfusion
+description: Check each file's MIME type before upload in the React File Upload using the uploading event to validate or display the file type.
 control: Check the MIME type of file before uploading it 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check the MIME type of file before uploading it in React Uploader component
+# How to check the MIME type in React File Upload
 
 Validate file types before upload by checking the MIME type using the [uploading](https://ej2.syncfusion.com/react/documentation/api/uploader/#uploading) event. The following sample demonstrates displaying the file MIME type in an alert box before the upload begins.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons and templates in React List box component | Syncfusion
-description: Learn here all about Icons and templates in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
-control: Icons and templates 
+title: Icons and Customization in React ListBox | Syncfusion
+description: Customize React ListBox items with iconCss classes for visual indicators and itemTemplate for fully custom item layouts such as product cards.
+control: Icons and templates
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons and templates in React List box component
+# Icons and Customization in React ListBox
 
 ## Icons
 

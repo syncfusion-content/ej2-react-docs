@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Switch component | Syncfusion
-description:  Checkout and learn about Getting started with React Switch component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Switch | Syncfusion
+description: Learn how to get started with the Syncfusion React Switch. Explore Vite setup, package installation, CSS themes, and basic usage.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Switch component
+# Getting Started with React Switch
 
 This section explains the steps required to create a simple React Switch component and demonstrate its basic usage in a React environment.
 

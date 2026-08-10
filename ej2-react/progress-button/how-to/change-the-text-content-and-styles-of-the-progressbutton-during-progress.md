@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change the text content and styles of the progressbutton during progress in React Progress button component | Syncfusion
-description: Learn here all about Change the text content and styles of the progressbutton during progress in Syncfusion React Progress button component of Syncfusion Essential JS 2 and more.
+title: How to style ProgressButton in React Progress Button | Syncfusion
+description: Update the React Progress Button text and style during progress via the begin and end event handlers to show real-time status feedback.
 control: Change the text content and styles of the progressbutton during progress 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the text content and styles of the ProgressButton during progress in React Progress button component
+# How to style ProgressButton in React Progress Button
 
 Update the ProgressButton's text content and visual appearance while progress is active by modifying the button's content and [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#cssClass) property within the [`begin`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#begin) and [`end`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#end) event handlers. This technique allows you to provide real-time visual feedback and status updates to users during long-running operations.
 

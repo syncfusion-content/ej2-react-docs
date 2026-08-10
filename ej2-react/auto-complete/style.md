@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Auto complete component | Syncfusion
-description: Learn here all about Style in Syncfusion React Auto complete component of Syncfusion Essential JS 2 and more.
+title: Customization in React AutoComplete | Syncfusion
+description: Style the Syncfusion React AutoComplete by overriding CSS for the wrapper, input, dropdown icon, focus state, and popup list to match your app's theme.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Auto complete component
+# Customization in React AutoComplete
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

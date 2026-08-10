@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in React Timeline component | Syncfusion
-description:  Checkout and learn about Template with Syncfusion React Timeline component of Syncfusion Essential JS 2 and more.
+title: Template in React Timeline | Syncfusion
+description: Customize the Syncfusion React Timeline item rendering with the template property for full control over dots, content, and layout.
 control: Timeline
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in React Timeline component
+# Template in React Timeline
 
 The Timeline component provides comprehensive template customization through the [template](https://ej2.syncfusion.com/react/documentation/api/timeline#template) property. Templates allow complete control over the rendered structure and appearance of timeline items, including dot indicators, content areas, styling, and layout, enabling designs that match application-specific UI requirements.
 

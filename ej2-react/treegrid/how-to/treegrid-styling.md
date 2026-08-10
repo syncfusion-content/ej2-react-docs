@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Treegrid styling in React Treegrid component | Syncfusion
-description: Learn here all about Treegrid styling in Syncfusion React Treegrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Styling | Syncfusion
+description: Learn how to customize React TreeGrid styling using CSS classes, theme overrides, and Theme Studio to control the appearance of grid elements.
 control: Treegrid styling 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Treegrid styling in React Treegrid component
+# TreeGrid Styling in React TreeGrid
 
 To modify the TreeGrid appearance, you need to override the default CSS of treegrid. Please find the list of CSS classes and its corresponding section in treegrid. Also, you have an option to create your own custom theme for all the React controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

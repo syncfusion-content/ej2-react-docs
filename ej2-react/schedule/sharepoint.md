@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with SharePoint and React Scheduler | Syncfusion
-description: Learn all about integrating Syncfusion Essential JS 2 React Schedule component in SharePoint, and much more, here.
+title: Getting Started with React Scheduler and SharePoint | Syncfusion
+description: Learn how to integrate the Syncfusion React Scheduler into a SharePoint Framework app to manage appointments in SharePoint.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Scheduler in SharePoint Framework
+# Getting Started with React Scheduler and SharePoint
 
 This article provides a step-by-step guide for setting up a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) project and integrating the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
 
@@ -57,7 +57,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are av
 npm install @syncfusion/ej2-react-schedule --save
 ```
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-Themes for SyncfusionÂ® React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more detail.
+Themes for Syncfusion® React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more detail.
 
 This example demonstrates importing the `Bootstrap` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/`:
 

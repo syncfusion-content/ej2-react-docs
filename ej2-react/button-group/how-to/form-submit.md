@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form submit in React Button group component | Syncfusion
-description: Learn here all about Form submit in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
+title: How to submit form in React Button Group | Syncfusion
+description: Submit radio and checkbox React Button Group values in a form using the name attribute. Disabled buttons do not submit their values.
 control: Form submit 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form submit in React Button group component
+# How to submit form in React Button Group
 
 The `name` attribute groups radio and checkbox type buttons in a form. When the form submits, the value of the checked button is sent to the server and can be retrieved using the `name` attribute. Disabled buttons do not send their values on form submission.
 

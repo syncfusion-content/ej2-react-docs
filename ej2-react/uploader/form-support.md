@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form support in React Uploader component | Syncfusion
-description: Learn here all about Form support in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: Form Support in React File Upload | Syncfusion
+description: Integrate the React File Upload with HTML forms so selected files submit with the form by nulling saveUrl and removeUrl and disabling autoUpload.
 control: Form support 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form support in React Uploader component
+# Form Support in React File Upload
 
 The Uploader component integrates with HTML forms like standard file input elements. To use the Uploader within a form, set the following configuration:
 

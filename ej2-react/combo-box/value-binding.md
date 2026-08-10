@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value binding in React Combo box component | Syncfusion
-description: Learn here all about Value binding in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: Value Binding in React ComboBox | Syncfusion
+description: Bind primitive or complex object values to the Syncfusion React ComboBox with the value property, including strings, numbers, booleans, and JSON objects.
 control: Value binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value binding in ComboBox Component
+# Value Binding in React ComboBox
 
 Value binding in the ComboBox control allows you to associate data values with each list item. This facilitates managing and retrieving selected values efficiently. The ComboBox component provides flexibility in binding both primitive data types and complex objects.
 

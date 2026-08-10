@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in React AutoComplete component | Syncfusion
-description: Learn here all about Templates in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
+title: Templates in React AutoComplete | Syncfusion
+description: Customize each Syncfusion React AutoComplete list item, group header, and popup header or footer with item, group, header, and footer templates for richer UIs.
 control: Templates 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React AutoComplete component
+# Templates in React AutoComplete
 
 The AutoComplete has been provided with several options to customize each list items, group title, header and footer elements.
 

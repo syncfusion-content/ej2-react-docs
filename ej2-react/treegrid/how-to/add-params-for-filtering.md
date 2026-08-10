@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add params for filtering in React TreeGrid | Syncfusion
-description: Learn here all about Add params for filtering in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Filtering Parameters | Syncfusion
+description: Learn how to add filtering parameters in React TreeGrid, including menu filter customization, parameter handling, and advanced filtering options.
 control: Add params for filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add params for filtering in React TreeGrid
+# Add Parameters for Filtering in React TreeGrid
 
 Customize the default settings of the components used in the Menu filter by configuring the `params` of the column’s `filter` property.  
 

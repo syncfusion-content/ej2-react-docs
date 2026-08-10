@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize pager drop down in React TreeGrid | Syncfusion
-description: Learn here all about Customize pager drop down in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Pager Dropdown Customization | Syncfusion
+description: Learn how to customize the pager dropdown in React TreeGrid of Essential JS 2, including setting page size values using pageSettings.
 control: Customize pager drop down 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize pager drop down in React TreeGrid component
+# Customize Pager Dropdown in React TreeGrid
 
 To customize the default pager dropdown values, define [pageSizes](https://ej2.syncfusion.com/react/documentation/api/treegrid/pageSettings/#pagesizes) as an array of strings.
 

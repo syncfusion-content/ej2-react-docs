@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set panels header in React Dashboard layout component | Syncfusion
-description: Learn here all about Setting header of panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
+title: Header and Content in React Dashboard Layout | Syncfusion
+description: Set per-panel header text and rich content in the Syncfusion React Dashboard Layout, and embed components like charts inside a panel.
 control: Dashboard Layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Setting panel headers in React Dashboard Layout component
+# Header and Content in React Dashboard Layout
 
 The Dashboard Layout component is designed for data monitoring and process management applications. Panel content—including data visualizations, HTML templates, or interactive components—is defined using the [`content`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#content) property. Also, a word or phrase that summarizes the panel's content can be added as the header on the top of each panel using the [`header`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#header) property of the panel.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Initialize buttongroup | Syncfusion
-description: Learn here all about Initialize buttongroup using util function in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
+title: Init with util in React Button Group | Syncfusion
+description: Initialize a React Button Group with the createButtonGroup utility from ej2-splitbuttons for basic, radio, and checkbox type configurations.
 control: Initialize buttongroup using util function 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Initialize ButtonGroup using util function
+# How to init with util in React Button Group
 
 The `createButtonGroup` utility function provides an alternative approach to initialize ButtonGroup components with minimal setup. This function automatically applies ButtonGroup styling and behavior to elements.
 

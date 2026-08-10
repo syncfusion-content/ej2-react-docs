@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Search on filtering in React Drop down list component | Syncfusion
-description: Learn here all about Search on filtering in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to limit the search result on filtering in React Dropdown List | Syncfusion
+description: Limit search results during React Dropdown List filtering by trimming the result array in the filtering event handler.
 control: Search on filtering 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search on filtering in React Drop down list component
+# How to limit the search result on filtering in React Dropdown List
 
 The following example demonstrates how to limit search results during filtering:
 

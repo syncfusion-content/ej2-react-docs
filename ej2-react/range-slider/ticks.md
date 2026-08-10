@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ticks in React Range Slider component | Syncfusion
-description: Learn here all about Ticks in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: Ticks in React Slider | Syncfusion
+description: Configure major and minor tick marks on the React Slider using smallStep, largeStep, and showSmallTicks for clearer value indication.
 control: Ticks 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ticks in React Range Slider component
+# Ticks in React Slider
 
 Ticks in the Slider help identify the current value or values. The slider supports [`smallStep`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#largestep), with only major tick values displayed by default. Use the [`showSmallTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#showsmallticks) property to enable or disable small ticks.
 

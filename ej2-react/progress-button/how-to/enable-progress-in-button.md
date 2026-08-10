@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable progress in button in React Progress button component | Syncfusion
-description: Learn here all about Enable progress in button in Syncfusion React Progress button component of Syncfusion Essential JS 2 and more.
+title: How to enable progress in React Progress Button | Syncfusion
+description: Show a visual progress fill in the React Progress Button by setting the enableProgress property to true for clear task completion feedback.
 control: Enable progress in button 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable progress in button in React Progress button component
+# How to enable progress in React Progress Button
 
 Display a visual progress indicator within the ProgressButton by setting the [`enableProgress`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#enableprogress) property to `true`. When enabled, a background fill extends across the button width as the operation progresses, providing clear visual feedback of task completion percentage to users.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sizing in React TextBox component | Syncfusion
-description: Learn here all about Sizing in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: Sizing in React TextBox | Syncfusion
+description: Render the React TextBox in small, default, or large size by adding e-small or e-bigger CSS classes via the cssClass property.
 control: Sizing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sizing in React TextBox component
+# Sizing in React TextBox
 
 Render the TextBox component in three predefined sizes to match your design requirements:
 

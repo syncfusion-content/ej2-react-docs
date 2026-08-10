@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Radio button component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Radio button component of Syncfusion Essential JS 2 and more.
+title: Migration from Essential JS 1 in React Radio Button | Syncfusion
+description: Migrate the React Radio Button from Essential JS 1 to JS 2. Reference the property, method, and event API mapping for label, state, and styling changes.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Radio button component
+# Migration from Essential JS 1 in React Radio Button
 
 This migration guide helps you transition your RadioButton component implementation from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2. The new version introduces API changes in properties, methods, and events. Use this guide to understand the mapping between old and new APIs and update your codebase accordingly.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Frequently asked questions in React Schedule component | Syncfusion
-description: Learn here all about Frequently asked questions in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Frequently Asked Questions in React Scheduler | Syncfusion
+description: Find answers to common questions and solutions to frequent issues when working with the Syncfusion React Scheduler control.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently asked questions in React Schedule component
+# Frequently Asked Questions in React Scheduler
 
 In this article, you can find some frequently asked questions and corresponding solutions while getting hands-on experience with the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
 
@@ -100,7 +100,7 @@ The above problem occurs when missing CSS references for the scheduler in a proj
     <meta name="description" content="Syncfusion React UI Components" />
     <meta name="author" content="Syncfusion" />
 
-      <! â€“â€“ scheduler CSS is referred from this link â€“â€“>
+      <! –– scheduler CSS is referred from this link ––>
     <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
 
 </head>

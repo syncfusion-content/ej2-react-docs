@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Expand collapse in React Splitter component | Syncfusion
-description: Learn here all about Expand collapse in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
+title: Expand and Collapse in React Splitter | Syncfusion
+description: Enable collapsible Syncfusion React Splitter panes via the collapsible property, and toggle them with the expand and collapse methods.
 control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Expand and collapse panes in React Splitter component
+# Expand and Collapse in React Splitter
 
 ## Collapsible panes
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pane sizing in React Splitter component | Syncfusion
-description: Learn here all about Pane sizing in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
+title: Pane Sizing in React Splitter | Syncfusion
+description: Size Syncfusion React Splitter panes with fixed pixels, percentage values, or automatic sizing using the size property in paneSettings.
 control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pane sizing in React Splitter component
+# Pane Sizing in React Splitter
 
 
 The React Splitter component lets you define pane sizes using pixel values, percentage values, or automatic sizing driven by layout behavior.

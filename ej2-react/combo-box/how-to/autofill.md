@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Autofill in React Combo box component | Syncfusion
-description: Learn here all about Autofill in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: How to enable autofill in React ComboBox | Syncfusion
+description: Enable autofill in the Syncfusion React ComboBox so the input auto-completes to the first matching suggestion as you type against the available options.
 control: Autofill 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Autofill in React Combo box component
+# How to enable autofill in React ComboBox
 
-The ComboBox supports autofill functionality through the [autofill](https://ej2.syncfusion.com/react/documentation/api/combo-box/#autofill) property. As you type, the ComboBox automatically completes your input by matching typed characters against available options. If no matches are found, the ComboBox does not suggest any item.
+The ComboBox supports autofill functionality through the [autofill](https://ej2.syncfusion.com/react/documentation/api/combo-box#autofill) property. As you type, the ComboBox automatically completes your input by matching typed characters against available options. If no matches are found, the ComboBox does not suggest any item.
 
 The following examples demonstrate how autofill works with the ComboBox.
 

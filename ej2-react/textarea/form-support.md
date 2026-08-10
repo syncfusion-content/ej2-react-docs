@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Support with React TextArea component | Syncfusion
-description: Checkout and learn about Form support of the React TextArea component of Syncfusion Essential JS 2 and more details.
+title: Form Support in React TextArea | Syncfusion
+description: Submit multiline user input natively within React HTML forms using the TextArea component with form support and name attribute.
 control: Form Support
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Support in React TextArea Component
+# Form Support in React TextArea
 
 The TextArea component seamlessly integrates with HTML forms, enabling efficient submission of multiline text data. This integration allows users to provide detailed feedback, enter lengthy descriptions, or submit other multiline text content as part of form submissions.
 

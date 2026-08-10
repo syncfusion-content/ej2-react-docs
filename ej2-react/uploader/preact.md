@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Preact Getting Started with React Uploader Component | Syncfusion
-description: Check out and learn about getting started with the Preact Framework and React Uploader Component of Syncfusion Essential JS 2 and more details.
+title: Preact Getting Started with React File Upload | Syncfusion
+description: Set up a Preact project and integrate the Syncfusion React File Upload, using Preact's small footprint for faster initial page loads.
 control: Preact
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Uploader Component in the Preact Framework
+# Preact Getting Started with React File Upload
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Uploader component.
 

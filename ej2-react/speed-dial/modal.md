@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Modal in React Speed dial component | Syncfusion
-description: Learn here all about Modal in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+title: Modal in React Speed Dial | Syncfusion
+description: Enable modal mode on the React Speed Dial via the modal property to dim the page and block outside interaction while the menu is open.
 control: Modal 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Modal in React Speed dial component
+# Modal in React Speed Dial
 
 Enable modal mode for the SpeedDial component by setting the [`modal`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#modal) property to `true`. When modal is enabled, a semi-transparent overlay appears behind the popup, dimming the background and preventing user interaction with page content outside the SpeedDial menu. This is useful for creating focused user experiences or guiding users through required actions.
 

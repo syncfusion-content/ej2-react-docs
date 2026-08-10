@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in React TreeGrid | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Accessibility | Syncfusion
+description: Learn how React TreeGrid supports accessibility with WAI-ARIA roles, keyboard navigation, and ADA, Section 508, and WCAG compliance.
 control: Accessibility
 platform: ej2-react
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in React Drop down list component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Localization in React Dropdown List | Syncfusion
+description: Localize the React Dropdown List noRecordsTemplate and actionFailureTemplate text for any culture using the L10n load function with translation objects.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Drop down list component
+# Localization in React Dropdown List
 
 The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#actionfailuretemplate) &nbsp;properties according to the culture currently assigned to the DropDownList.
 

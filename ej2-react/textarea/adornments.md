@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adornments in ##Platform_Name## TextArea control | Syncfusion
-description: Learn here all about Adornments in Syncfusion ##Platform_Name## TextArea control of Syncfusion Essential JS 2 and more.
+title: Adornments in React TextArea | Syncfusion
+description: Add icons, formatting buttons, or submit actions to the React TextArea using prependTemplate and appendTemplate for richer input layouts.
 platform: ej2-react
 control: Adornments
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adornments in ##Platform_Name## TextArea control
+# Adornments in React TextArea
 
 Adornments enable custom elements (icons, text labels, or action buttons) to be added before or after the TextArea using the `prependTemplate` and `appendTemplate` properties. Use `adornmentFlow` and `adornmentOrientation` to arrange adornments horizontally or vertically for flexible layouts.
 

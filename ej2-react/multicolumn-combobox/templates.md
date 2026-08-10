@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in React MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about templates with React MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: "Templates in React MultiColumn ComboBox | Syncfusion"
+description: Customize the React MultiColumn ComboBox popup with item, header, group, footer, no-records, and action-failure templates for full UI control.
 platform: ej2-react
 control: MultiColumn Combobox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React MultiColumn ComboBox component
+# Templates in React MultiColumn ComboBox
 
 The MultiColumn ComboBox provides several template options to customize list items, groups, headers, and footers.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dual list box in React List box component | Syncfusion
-description: Learn here all about Dual list box in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
-control: Dual list box 
+title: Dual Listbox in React ListBox | Syncfusion
+description: Build a React dual list box with toolbar buttons to move, reorder, and bulk-transfer selected items between two synchronized lists.
+control: Dual list box
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dual list box in React List box component
+# Dual Listbox in React ListBox
 
 The dual list box enables users to move items between two list boxes using toolbar buttons. Create a dual list box by configuring items in the [`toolbarSettings`](https://ej2.syncfusion.com/react/documentation/api/list-box/#toolbarsettings) property along with the `scope` property.
 

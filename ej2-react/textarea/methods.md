@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Methods in React TextArea component | Syncfusion
-description: Checkout and learn about methods in the React TextArea component of Syncfusion Essential JS 2 and more.
+title: Methods in React TextArea | Syncfusion
+description: Call React TextArea methods like focusIn, focusOut, getText, and selectAll programmatically to control the input.
 control: Methods 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Methods in React TextArea Component
+# Methods in React TextArea
 
 This section outlines the methods available for interacting with the TextArea component.
 

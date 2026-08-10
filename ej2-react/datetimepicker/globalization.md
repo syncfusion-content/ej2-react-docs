@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React Datetimepicker component | Syncfusion
-description: Learn here all about Globalization in Syncfusion React Datetimepicker component of Syncfusion Essential JS 2 and more.
+title: Globalization in React DateTime Picker | Syncfusion
+description: Adapt the React DateTime Picker to global cultures with Internationalization, localization, and UNICODE CLDR JSON data.
 control: Globalization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Datetimepicker component
+# Globalization in React DateTime Picker
 
 Globalization enables components to support multiple languages and regional formats. This combines [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (parsing and formatting dates and times according to regional standards) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (translating text and applying culture-specific customizations).
 

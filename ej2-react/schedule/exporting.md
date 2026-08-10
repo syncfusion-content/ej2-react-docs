@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Exporting in React Schedule component | Syncfusion
-description: Learn here all about Exporting in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Exporting in React Scheduler | Syncfusion
+description: Learn how to export and import events in the Syncfusion React Scheduler to Excel and ICS files, and print appointments with custom options.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exporting in React Schedule component
+# Exporting in React Scheduler
 
 The Scheduler supports exporting all its appointments both to an Excel or ICS extension file at client-side. It offers different client-side methods to export its appointments in an Excel or iCal format file. Let's look onto the ways on how to implement the exporting functionality in Scheduler.
 

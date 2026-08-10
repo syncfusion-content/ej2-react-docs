@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create dropdownbutton with rounded corner in React Drop down button component | Syncfusion
-description: Learn here all about Create dropdownbutton with rounded corner in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: Round corners in React DropDownButton | Syncfusion
+description: Add rounded corners to the React DropDownButton by applying the e-round-corner class via the cssClass property for a 5px radius.
 control: Create dropdownbutton with rounded corner 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create dropdownbutton with rounded corner in React Drop down button component
+# How to round corners in React DropDownButton
 
 Create a DropDownButton with rounded corners by adding the `border-radius` CSS property. Apply the `e-round-corner` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#cssclass) property to achieve a 5px border radius.
 

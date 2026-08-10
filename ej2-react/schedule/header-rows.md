@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header rows in React Schedule component | Syncfusion
-description: Learn here all about Header rows in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Timeline Header Rows in React Scheduler | Syncfusion
+description: Learn how to add additional header rows in timeline views of the Syncfusion React Scheduler, including year, month, week, and date rows.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header rows in React Schedule component
+# Timeline Header Rows in React Scheduler
 
 The Timeline views can have additional header rows other than its default date and time header rows. It is possible to show individual header rows for displaying year, month and week separately using the [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows). This is applicable only on the Timeline views. The possible rows which can be added using [`HeaderRowDirective`](https://ej2.syncfusion.com/react/documentation/api/schedule#headerrows) are as follows.
 

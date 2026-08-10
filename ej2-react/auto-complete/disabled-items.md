@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disabled Items in React AutoComplete component | Syncfusion
-description: Learn here all about Disabled Items in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
+title: Disabled Items in React AutoComplete | Syncfusion
+description: Disable individual items in the Syncfusion React AutoComplete by mapping the fields.disabled property so users cannot select them as values.
 control: Disabled Items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disabled Items in React AutoComplete component
+# Disabled Items in React AutoComplete
 
 The AutoComplete provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [disabled](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `fields.disabled` property.
 

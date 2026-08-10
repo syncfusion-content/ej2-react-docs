@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in React Maskedtextbox component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion React Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React MaskedTextBox | Syncfusion
+description: Override React MaskedTextBox CSS classes to customize the wrapper, input, and float label appearance for your design system.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in React Maskedtextbox component
+# Style and Appearance in React MaskedTextBox
 
 The following content provides the CSS structure that can be used to modify the component's appearance based on your preferences.
 

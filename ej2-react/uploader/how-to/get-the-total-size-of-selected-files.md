@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get the total size of selected files in React Uploader component | Syncfusion
-description: Learn here all about Get the total size of selected files in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to get total file size in React File Upload | Syncfusion
+description: Calculate the total size of all selected files in the React File Upload using the selected event to validate against server limits.
 control: Get the total size of selected files 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get the total size of selected files in React Uploader component
+# How to get total file size in React File Upload
 
 Calculate the total size of all selected files before upload using the selected event. This enables you to validate cumulative file size against server limits or display storage information to the user. Refer to the following example to implement total file size calculation.
 

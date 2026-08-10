@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add or Remove the value programatically on read only TextBox in React TextBox component | Syncfusion
-description: Learn here all about Add or Remove the value programatically on read only TextBox in React TextBox component of Syncfusion Essential JS 2 and more.
+title: How to add floating label in read-only TextBox in React TextBox | Syncfusion
+description: Add a floating label to a React read-only TextBox so the label animates above the value when the field is populated programmatically.
 control: Add floating label to read only TextBox 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add or remove value programmatically in a read-only TextBox in React TextBox component
+# How to add floating label in read-only TextBox in React TextBox
 
 While a read-only TextBox prevents direct user input, you can still update its value programmatically using code. This is useful for displaying dynamic data or status information that users should not edit. The following example demonstrates how to update a read-only TextBox value and trigger the floating label behavior.
 

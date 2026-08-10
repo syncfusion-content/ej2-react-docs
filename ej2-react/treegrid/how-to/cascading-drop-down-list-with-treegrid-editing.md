@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cascading Dropdowns with TreeGrid in React | Syncfusion
-description: Learn here all about Cascading drop down list with TreeGrid editing in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Cascading Drop-Down Editing | Syncfusion
+description: Learn how to implement cascading drop down lists with editing in the React TreeGrid of Essential JS 2 using cell edit templates.
 control: Cascading drop down list with TreeGrid editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cascading drop down list with TreeGrid editing in React TreeGrid
+# Cascading Drop-Down Lists with Editing in React TreeGrid
 
 Implement a cascading DropDownList in TreeGrid editing using the cell edit template feature.
 

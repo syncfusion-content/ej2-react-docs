@@ -1,14 +1,14 @@
 ---
 layout: post
-title: JWT Authentication in React Uploader component | Syncfusion
-description: Learn here all about File Upload Using JWT Authentication in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: JWT Authentication in React File Upload | Syncfusion
+description: Secure uploads with JWT authentication in the React File Upload by adding tokens to request headers in the uploading and removing events.
 platform: ej2-react
 control: JWT Authentication  
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File Upload Using JWT Authentication
+# JWT Authentication in React File Upload
 
 JSON Web Token (JWT) is an open standard for securely transmitting information between parties as a JSON object. JWTs are commonly used for authorization, where the client includes a JWT in the request header and the server validates it before processing the request. This approach ensures that only authenticated users can upload or remove files.
 

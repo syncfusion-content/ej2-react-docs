@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Card component | Syncfusion
-description: Learn here all about Style in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
+title: Styles and Appearances in React Card | Syncfusion
+description: Customize Syncfusion React Card appearance by overriding CSS for background, header, content, dividers, images, action buttons, and horizontal alignment.
 control: Card 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Card component
+# Styles and Appearances in React Card
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on user preference.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React OTP Input component | Syncfusion
-description: Learn here all about Events in Syncfusion React OTP Input component of Syncfusion Essential JS 2 and more.
+title: Events in React OTP Input | Syncfusion
+description: Handle React OTP Input lifecycle events such as created, valueChange, focus, and blur to react to user input and rendering.
 platform: ej2-react
 control: OTP Input 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React OTP Input component
+# Events in React OTP Input
 
 This section describes the OTP Input events that will be triggered when appropriate actions are performed. The following events are available in the OTP Input component.
 

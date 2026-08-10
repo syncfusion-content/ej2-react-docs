@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in React MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about Sorting in React MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: "Sorting in React MultiColumn ComboBox | Syncfusion"
+description: Sort React MultiColumn ComboBox columns in ascending or descending order with one click, or sort multiple columns at once by holding CTRL while clicking headers.
 platform: ej2-react
 control: MultiColumn Combobox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in React MultiColumn ComboBox component
+# Sorting in React MultiColumn ComboBox
 
 The MultiColumn ComboBox component provides built-in support for sorting data-bound columns in ascending or descending order by using the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#allowsorting) property. By default, the value is `true`.
 

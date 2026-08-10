@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Multi select component | Syncfusion
-description: Learn here all about Style in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Customization in React MultiSelect Dropdown | Syncfusion
+description: Customize the React MultiSelect Dropdown appearance with CSS overrides for the wrapper background, chip styling, dropdown icon, focus state, placeholder, float label, popup items, and checkbox.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React MultiSelect component
+# Customization in React MultiSelect Dropdown
 
 The following CSS classes and structures enable customization of the MultiSelect appearance to match your design requirements.
 

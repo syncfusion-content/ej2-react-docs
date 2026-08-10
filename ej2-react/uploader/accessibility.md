@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Uploader component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React File Upload | Syncfusion
+description: Review the React File Upload's WCAG 2.2, Section 508, WAI-ARIA, keyboard navigation, and RTL accessibility compliance details.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Uploader component
+# Accessibility in React File Upload
 
 The Uploader component adheres to industry accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). The following table summarizes the component's accessibility compliance across all features and interaction modes.
 

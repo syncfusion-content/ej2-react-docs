@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Switch component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: Style and appearance in React Switch | Syncfusion
+description: Customize the React Switch appearance with CSS classes for size variants, on and off state styling, handle, track, and label elements.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Switch component
+# Style and appearance in React Switch
 
 Customize Switch styling by overriding its default CSS classes. The following table lists the CSS classes available for styling different Switch elements. Additionally, use the [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material) to create and preview custom themes for all Syncfusion components.
 

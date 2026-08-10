@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in React TreeGrid component | Syncfusion
-description: Learn here all about Filtering in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Filtering | Syncfusion
+description: Learn how to use filtering in React TreeGrid, including filter bar, menu, Excel-like filtering, operators, and custom filter options.
 control: Filtering 
 platform: ej2-react
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize column styles in React TreeGrid | Syncfusion
-description: Learn here all about Customize column styles in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Column Style Customization | Syncfusion
+description: Learn how to customize column styles in React TreeGrid using customAttributes, including applying custom CSS to header and content cells.
 control: Customize column styles 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize column styles in React TreeGrid
+# Customize Column Styles in React TreeGrid
 
 Customize the appearance of a specific column’s header and content using the [customAttributes](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#customattributes) property.
 

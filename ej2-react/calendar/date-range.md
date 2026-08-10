@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date range in React Calendar component | Syncfusion
-description: Learn here all about Date range in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: Date Range in React Calendar | Syncfusion
+description: Restrict selectable dates in the React Calendar using the min and max properties to enforce a valid range for users.
 control: Date range 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date range in React Calendar component
+# Date Range in React Calendar
 
 The Calendar provides an option to select a date within a specified range using the [`min`](https://ej2.syncfusion.com/react/documentation/api/calendar#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/calendar#max) properties. The min date must be less than the max date.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Floating action button component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Floating action button component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Floating Action Button | Syncfusion
+description: Learn how the React Floating Action Button meets WCAG 2.2, Section 508, and ADA standards. Includes WAI-ARIA roles, keyboard interaction, and validation.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Floating action button component
+# Accessibility in React Floating Action Button
 
 The Floating Action Button component adheres to accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is usable by all users, including those using assistive technologies.
 

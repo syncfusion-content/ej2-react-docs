@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React OTP Input component | Syncfusion
-description: Checkout and learn about Getting started with React OTP Input component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React OTP Input | Syncfusion
+description: Set up a Vite-based React project, install the Syncfusion OTP Input, and render a basic one-time password field with verification code entry.
 control: OTP Input
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React OTP Input component
+# Getting Started with React OTP Input
 
 This section explains the steps required to create a simple React OTP Input component and demonstrate its basic usage in a React environment.
 

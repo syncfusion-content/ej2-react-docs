@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in React Multi select component | Syncfusion
-description: Learn here all about Grouping in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Grouping in React MultiSelect Dropdown | Syncfusion
+description: Group React MultiSelect Dropdown items by category using the groupBy field, with inline and fixed group headers and an optional checkbox to select all items in a group at once.
 control: Grouping 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in React Multi select component
+# Grouping in React MultiSelect Dropdown
 
 The MultiSelect supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/multi-select/#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically as you scroll through the popup list, displaying the category value for each group.
 

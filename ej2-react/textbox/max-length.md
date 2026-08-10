@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Maximum Length in React TextBox component | Syncfusion
-description: Limiting the maximum number of characters in the React TextBox component of Syncfusion Essential JS 2 and more details.
+title: Maximum Length in React TextBox | Syncfusion
+description: Cap the React TextBox input length by setting the maxLength property to prevent users from entering more than N characters.
 control: Maximum Length
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Maximum Length in React TextBox Component
+# Maximum Length in React TextBox
 
 Enforce a maximum length limit using the `maxLength` property, which defines the maximum number of characters users can input. By setting this property, you control text length and prevent users from exceeding the specified limit.
 

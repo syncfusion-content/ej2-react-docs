@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Prevent State Change in React Switch component | Syncfusion
-description: Learn here all about Prevent State Change in Syncfusion React Switch component of Syncfusion Essential JS 2 and more.
+title: How to prevent state change in React Switch | Syncfusion
+description: Cancel or validate a React Switch state change with the beforeChange event for conditional transitions and business rule enforcement.
 control: Prevent State Change 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent State Change in React Switch component
+# How to prevent state change in React Switch
 
 The [`beforeChange`](https://ej2.syncfusion.com/react/documentation/api/switch/#beforechange) event fires before the Switch's state changes. Use this event to intercept state transitions, validate conditions, or cancel the change action entirely. This approach enables conditional state management, validation workflows, and prevents state transitions that don't meet business logic requirements.
 

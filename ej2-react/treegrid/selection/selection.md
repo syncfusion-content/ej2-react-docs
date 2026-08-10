@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in React TreeGrid component | Syncfusion
-description: Learn here all about Selection in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Selection | Syncfusion
+description: Learn all about selection in the React TreeGrid, including single/multiple selection, selection modes, toggle selection, and touch interactions.
 control: Selection 
 platform: ej2-react
 documentation: ug

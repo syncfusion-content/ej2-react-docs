@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Customize colorpicker in React Color picker component | Syncfusion
-description: Learn here all about Customize colorpicker in Syncfusion React Color picker component of Syncfusion Essential JS 2 and more.
+title: How to customize ColorPicker in React Color Picker | Syncfusion
+description: Customize the React Color Picker palette with presetColors and the BeforeTileRender event to load your own color tiles and styles.
 control: Customize colorpicker 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize colorpicker in React Color picker component
+# How to customize ColorPicker in React Color Picker
 
 ## Custom palette
 
-By default, the palette is rendered with default colors. To load custom colors, specify them in the [`presetColors`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#presetcolors) property. To customize palette tiles, add a custom class using the [`BeforeTileRender`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#beforetilerender) event.
+By default, the palette is rendered with default colors. To load custom colors, specify them in the [`presetColors`](https://ej2.syncfusion.com/react/documentation/api/color-picker#presetcolors) property. To customize palette tiles, add a custom class using the [`BeforeTileRender`](https://ej2.syncfusion.com/react/documentation/api/color-picker#beforetilerender) event.
 
 The following sample demonstrates these features.
 
@@ -29,7 +29,7 @@ The following sample demonstrates these features.
 
 ## Hide input area from picker
 
-By default, the input area is rendered in the ColorPicker. To hide it, add the `e-hide-value` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#cssclass) property.
+By default, the input area is rendered in the ColorPicker. To hide it, add the `e-hide-value` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/color-picker#cssclass) property.
 
 In the following sample, the ColorPicker renders without an input area.
 
@@ -65,7 +65,7 @@ The following sample shows the customized ColorPicker handle.
 
 By default, the applied color is displayed in the primary button. You can customize it to show an icon instead.
 
-In the following sample, the `picker` icon is added to the primary button, and the [`change`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#change) event updates the selected color in the bottom portion of the icon.
+In the following sample, the `picker` icon is added to the primary button, and the [`change`](https://ej2.syncfusion.com/react/documentation/api/color-picker#change) event updates the selected color in the bottom portion of the icon.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

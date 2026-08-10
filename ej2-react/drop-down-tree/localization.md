@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in React Dropdown Tree component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Drop down tree component of Syncfusion Essential JS 2 and more.
+title: Localization in React Dropdown Tree | Syncfusion
+description: Localize the React Dropdown Tree by customizing default culture strings like noRecordsTemplate, actionFailureTemplate, and overflowCountTemplate.
 control: Dropdown Tree
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Dropdown Tree component
+# Localization in React Dropdown Tree
 
 The Dropdown Tree component supports comprehensive localization to adapt text, messages, and user interface elements for different cultures and languages. This enables seamless integration into multi-language applications by customizing all user-facing strings according to specific cultural requirements. The component's default locale is `en` (English), providing a foundation that can be extended to support any target culture through resource configuration and locale property settings.
 

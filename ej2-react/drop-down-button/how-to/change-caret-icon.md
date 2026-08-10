@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change caret icon in React Drop down button component | Syncfusion
-description: Learn here all about Change caret icon in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: How to change caret icon in React DropDownButton | Syncfusion
+description: Swap the React DropDownButton caret icon based on popup state using the beforeOpen and beforeClose events to toggle the e-caret-up class.
 control: Change caret icon 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change caret icon in React Drop down button component
+# How to change caret icon in React DropDownButton
 
 Customize the dropdown caret icon based on the popup state using the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#beforeopen) and [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#beforeclose) events. These events allow you to change the icon appearance when the popup opens or closes.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open and edit the uploaded files in Uploader component | Syncfusion
-description: Learn here all about Open and edit the uploaded files in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to open or edit uploaded files in React File Upload | Syncfusion
+description: Open or edit uploaded files in the React File Upload by capturing the server file path in the success event and sending it via HTTP headers.
 control: Open and edit the uploaded files 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open and edit the uploaded files in React Uploader component
+# How to open or edit uploaded files in React File Upload
 
 Enable post-upload file operations by retrieving the saved file path from the server and allowing users to open or edit files directly from the uploaded file list. This workflow captures the file path during the success event and uses HTTP headers to communicate with the server for file operations.
 

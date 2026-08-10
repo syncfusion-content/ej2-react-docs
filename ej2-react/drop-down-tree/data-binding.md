@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Dropdown Tree component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Drop down tree component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React Dropdown Tree | Syncfusion
+description: Bind hierarchical, self-referential, or remote data to the React Dropdown Tree from local arrays, OData, Web API, or JSON via DataManager.
 control: Dropdown Tree
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Dropdown Tree component
+# Data Binding in React Dropdown Tree
 
 The Dropdown Tree component provides flexible data binding capabilities to display hierarchical data from various sources. Data binding is essential for populating the Dropdown Tree with dynamic content and can be configured through the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/fieldsModel/#datasource) property, which is a member of the [`fields`](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/#fields) property. This enables seamless integration with both local data arrays and remote data services.
 

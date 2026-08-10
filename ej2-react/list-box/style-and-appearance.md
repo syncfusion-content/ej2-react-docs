@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React List box component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
-control: Style and appearance 
+title: Styles and Appearances in React ListBox | Syncfusion
+description: Style the React ListBox by overriding e-listbox CSS classes for wrapper, items, hover, and selection, or render a horizontal listbox via the cssClass property.
+control: Style and appearance
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React List box component
+# Styles and Appearances in React ListBox
 
 Modify the ListBox appearance by overriding the default CSS of the ListBox component. Refer to the CSS class table below for customization options. You can also create custom themes using [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

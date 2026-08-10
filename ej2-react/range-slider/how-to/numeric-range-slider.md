@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Numeric range Slider in React Range Slider component | Syncfusion
-description: Learn here all about Numeric range Slider in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to format numeric values in React Slider | Syncfusion
+description: Format React Slider values with custom decimals, units, or fixed whole numbers for a numeric range slider with custom display.
 control: Numeric range Slider 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Numeric range Slider in React Range Slider component
+# How to format numeric values in React Slider
 
 Numeric values in the Range Slider can be formatted to display different decimal places, fixed whole numbers, or specific units. The following example demonstrates numeric value formatting.
 

@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Web method adaptor in React Pivot Table | Syncfusion
-component: Pivot Table
+title: Web Method Adaptor in React Pivot Table | Syncfusion
 description: Learn how the React Pivot Table calls server-side web methods through the WebMethodAdaptor for remote data operations.
 control: Pivot Table
 platform: ej2-react
@@ -9,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Web method adaptor in React Pivot Table
+# Web Method Adaptor in React Pivot Table
 
 The [WebMethodAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor) enables the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to communicate with remote services using web methods. It functions similarly to [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/url-adaptor) but with a key difference: it wraps all operation parameters (CRUD operations) inside a special `value` object before sending them to the server.
 
@@ -150,6 +149,8 @@ The model class represents the structure of the data displayed in the Pivot Tabl
 {% tabs %}
 {% highlight cs tabtitle="OrdersDetails.cs" %}
 
+using System.ComponentModel.DataAnnotations; // Required for the [Key] attribute.
+
 namespace WebMethodAdaptor.Models
 {
     public class OrdersDetails
@@ -193,6 +194,7 @@ namespace WebMethodAdaptor.Models
             return order;
         }
 
+        [Key] // Marks OrderID as the primary key for CRUD operations.
         public int? OrderID { get; set; }
         public string? CustomerID { get; set; }
         public int? EmployeeID { get; set; }
@@ -252,7 +254,7 @@ Create a file named `OrdersController.cs` under the **Controllers** folder to ha
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
-using Microsoft.AspNetCore.Http;
+using System.Linq; // Required for `.ToList()` and `.Count()`.
 using Microsoft.AspNetCore.Mvc;
 using WebMethodAdaptor.Models;
 
@@ -276,11 +278,13 @@ namespace WebMethodAdaptor.Controllers
         [Route("api/[controller]")]
         public object Post()
         {
-            // Retrieve data source and convert to queryable
-            IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+            // Materialize the data source before serializing. Returning an
+            // IQueryable can lead to deferred-execution / disposed-context
+            // issues once a real database is wired in.
+            List<OrdersDetails> DataSource = GetOrderData();
 
             // Get total record count
-            int totalRecordsCount = DataSource.Count();
+            int totalRecordsCount = DataSource.Count;
 
             // Return result and total record count
             return new { result = DataSource, count = totalRecordsCount };
@@ -319,6 +323,8 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 var app = builder.Build();
 app.Run();
 ```
+
+> **Note:** The snippets below show how to layer CORS and static-file support onto the minimal `Program.cs` above. A complete consolidated `Program.cs` is provided at the end of this step.
 
 #### Configure CORS
 
@@ -361,6 +367,42 @@ app.MapControllers();
 app.Run();
 ```
 
+#### Complete Program.cs
+
+The following is the complete `Program.cs` file with all the configuration applied:
+
+```cs
+using Newtonsoft.Json.Serialization;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Configure JSON serialization (preserves property casing).
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+{
+    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+});
+
+// Configure CORS (development only; restrict to specific origins in production).
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
+var app = builder.Build();
+
+app.UseCors();           // Enable CORS before MapControllers.
+app.UseDefaultFiles();   // Optional: serves index.html from wwwroot.
+app.UseStaticFiles();    // Optional: serves static assets from wwwroot.
+app.MapControllers();
+
+app.Run();
+```
+
 The following error occurs when CORS is not configured:
 
 ```
@@ -381,6 +423,8 @@ Open a terminal in the project folder and run:
 dotnet dev-certs https --trust
 dotnet run
 ```
+
+> **Note:** `dotnet dev-certs https --trust` is supported on Windows and macOS only. On Linux, manually trust the certificate or use HTTP for local testing. The `--trust` flag prompts for administrator permission; pass `--yes` if your environment requires non-interactive setup.
 
 The application will be accessible at a URL like `https://localhost:<port>`. To verify that the API returns order data correctly, navigate to `https://localhost:<port>/api/Orders`, where `<port>` is the port number assigned by the CLI output.
 
@@ -976,8 +1020,10 @@ The `CrudUpdate` method checks the `action` value in the request (`update`, `ins
 Configure the React client to use the single CRUD endpoint as shown in the following example:
 
 ```ts
-import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { PivotViewComponent, CellEditSettings } from '@syncfusion/ej2-react-pivotview';
 import { DataManager, WebMethodAdaptor } from '@syncfusion/ej2-data';
+import type { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
+import type { BeginDrillThroughEventArgs } from '@syncfusion/ej2-pivotview';
 import './App.css';
 
 function App(): React.ReactElement {
@@ -987,7 +1033,58 @@ function App(): React.ReactElement {
     crudUrl:'https://localhost:<port>/api/Orders/CrudUpdate',
     adaptor: new WebMethodAdaptor()
   });
+
+  const dataSourceSettings: DataSourceSettingsModel = {
+    dataSource: data,
+    expandAll: false,
+    rows: [{ name: 'CustomerID' }],
+    columns: [{ name: 'OrderID' }],
+    values: [{ name: 'Freight' }],
+    formatSettings: [{ name: 'Freight', format: 'N0' }],
+  };
+
+  const editSettings: CellEditSettings = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true,
+    mode: 'Normal',
+  };
+
+  function beginDrillThrough(args: BeginDrillThroughEventArgs) {
+    for (let i = 0; i < args.gridObj.columns.length; i++) {
+      if (args.gridObj.columns[i].field === 'OrderID') {
+        args.gridObj.columns[i].isPrimaryKey = true;
+      } else {
+        args.gridObj.columns[i].visible = true;
+        if (
+          args.gridObj.columns[i].field === 'OrderDate' ||
+          args.gridObj.columns[i].field === 'ShippedDate'
+        ) {
+          args.gridObj.columns[i].editType = 'datetimepickeredit';
+        }
+      }
+    }
+  }
+
+  const pivotObj = React.useRef<PivotViewComponent>(null);
+
+  return (
+    <PivotViewComponent
+      ref={pivotObj}
+      id='PivotView'
+      height={350}
+      width={'100%'}
+      dataSourceSettings={dataSourceSettings}
+      editSettings={editSettings}
+      beginDrillThrough={beginDrillThrough}
+    />
+  );
+}
+
+export default App;
 ```
+
+> **Important:** `crudUrl` is mutually exclusive with the individual `insertUrl`, `updateUrl`, and `removeUrl` properties. When `crudUrl` is set, the DataManager ignores the other three and dispatches every CRUD action to the single endpoint.
 
 The `crudUrl` replaces the separate insert, update, and remove URLs. All CRUD operations are routed through this single endpoint.
 
@@ -1055,7 +1152,7 @@ For a complete working implementation, refer to the [GitHub repository](https://
 
 ## See Also
 
-- [**PivotTable Data Binding**](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding)
+- [**Pivot Table Data Binding**](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding)
 - [**DataManager**](https://ej2.syncfusion.com/react/documentation/data/getting-started)
 - [**Web Method Adaptor**](https://ej2.syncfusion.com/react/documentation/data/adaptors/web-method-adaptor)
-- [**PivotTable Editing**](https://ej2.syncfusion.com/react/documentation/pivotview/editing)
+- [**Pivot Table Editing**](https://ej2.syncfusion.com/react/documentation/pivotview/editing)

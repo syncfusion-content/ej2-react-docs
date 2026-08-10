@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ODataV4 adaptor in React Pivot Table | Syncfusion
+title: ODataV4 Adaptor in React Pivot Table | Syncfusion
 description: Learn how the React Pivot Table binds to OData V4 services through the ODataV4Adaptor, which converts CRUD operations into OData-compliant requests.
 control: Pivot Table
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# ODataV4 adaptor in React Pivot Table
+# ODataV4 Adaptor in React Pivot Table
 
 The [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> React DataManager enables seamless integration between the React Pivot Table and OData V4 services by handling OData‑formatted request and response processing. It converts Pivot Table CRUD operations into OData V4-compliant requests and sends them to the server. The adaptor also parses the structured OData V4 JSON response, extracting the result set and count values, ensuring smooth remote data binding for the Pivot Table without custom query or response logic.
 
@@ -254,6 +254,7 @@ To construct the Entity Data Model (EDM) for your ODataV4 service, use the `ODat
 
 ```cs
 using Microsoft.OData.ModelBuilder;
+using ODataV4Adaptor.Models; // Required so `OrdersDetails` is recognized in `EntitySet<OrdersDetails>`.
 
 // Create the web application builder.
 var builder = WebApplication.CreateBuilder(args);
@@ -439,7 +440,7 @@ import './App.css';
 function App(): React.ReactElement {
     // Configure DataManager with ODataV4Adaptor.
     const data: DataManager = new DataManager({
-        url: 'http://localhost:<port>/odata/Orders',
+        url: 'https://localhost:<port>/odata/Orders',
         adaptor: new ODataV4Adaptor(),
     });
 
@@ -470,7 +471,7 @@ export default App;
 
 **Code Explanation:**
 
-- [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started): Creates a typed data source that targets the ASP.NET Core Web API endpoint at `http://localhost:<port>/odata/Orders`. Replace `<port>` with the port number shown in the `dotnet run` output. The `DataManager` type annotation (`: DataManager`) lets the TypeScript compiler validate the configuration object.
+- [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started): Creates a typed data source that targets the ASP.NET Core Web API endpoint at `https://localhost:<port>/odata/Orders`. Replace `<port>` with the port number shown in the `dotnet run` output. The `DataManager` type annotation (`: DataManager`) lets the TypeScript compiler validate the configuration object.
 - [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor): Tells the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) to use the OData V4 adaptor, which automatically handles OData V4-compliant HTTP requests and JSON response parsing for the Pivot Table.
 - [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings): Typed with `DataSourceSettingsModel` so the row, column, value, and format string definitions are checked at compile time. It defines the Pivot Table layout:
   - [rows](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#rows): Displays **CustomerID** values as row headers.
@@ -489,7 +490,7 @@ Open a terminal in the backend project folder and run:
 dotnet run
 ```
 
-The server will start and listen on `https://localhost:<port>` by default. The API endpoint will be available at `http://localhost:<port>/odata/Orders`. Note the `<port>` number from the output (typically 5001, 7181, or 5092).
+The server will start and listen on `https://localhost:<port>` by default. The API endpoint will be available at `https://localhost:<port>/odata/Orders`. Note the `<port>` number from the output (typically 5001, 7181, or 5092).
 
 **Start the React application:**
 
@@ -512,7 +513,7 @@ The Pivot Table is now successfully connected to the backend API and displays th
 
 To confirm the API is working correctly:
 1. Open the browser's **Developer Tools** (F12) → **Network** tab.
-2. Load the React application. You should see an OData V4-compliant request to `http://localhost:<port>/odata/Orders` with a 200 status and a JSON response containing `@odata.context` and `value`.
+2. Load the React application. You should see an OData V4-compliant request to `https://localhost:<port>/odata/Orders` with a 200 status and a JSON response containing `@odata.context` and `value`.
 3. If the Pivot Table appears empty, check the Network tab for failed requests or the Console tab for JavaScript errors.
 
 ## CRUD operations with Pivot Table
@@ -547,7 +548,9 @@ public IActionResult Post([FromBody] OrdersDetails addRecord)
 
     // Add to the beginning of the list
     OrdersDetails.GetAllRecords().Insert(0, addRecord);
-    return Created(addRecord);
+    // ODataV4 expects a 201 Created with the new entity's location header.
+    // Return the entity so the client can refresh its in-memory copy.
+    return Created($"/odata/Orders({addRecord.OrderID})", addRecord);
 }
 
 ```
@@ -760,7 +763,7 @@ The following table lists common issues and their resolutions when working with 
 | **Empty Pivot Table** | The Pivot Table loads without errors, but no rows or values are shown. | Verify that `GetAllRecords()` returns data correctly and the response follows the `{ "@odata.context", value }` format. Also confirm that the property names returned by the API match the field names used in `dataSourceSettings`. |
 | **404 error** | Network tab shows a 404 response when the Pivot Table tries to load data. | Ensure the controller route is configured as `[Route("[controller]")]` (matching the `/odata/Orders` endpoint registered via `AddRouteComponents("odata", ...)` in **Program.cs**) and the API server is running. Verify the URL in the React [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) matches the actual API port. |
 | **500 error** | The Pivot Table fails to load, and the browser shows a server error. | Check the Visual Studio Output window or the terminal for server logs and error details. Common causes include null reference exceptions and serialization errors. |
-| **CORS error** | Browser console shows: `Access to XMLHttpRequest at 'http://localhost:5092/odata/Orders' from origin 'https://localhost:3000' has been blocked by CORS policy.` | Verify that CORS is properly configured in **Program.cs** and `app.UseCors()` is called before `app.MapControllers()`. |
+| **CORS error** | Browser console shows: `Access to XMLHttpRequest at 'https://localhost:5092/odata/Orders' from origin 'https://localhost:3000' has been blocked by CORS policy.` | Verify that CORS is properly configured in **Program.cs** and `app.UseCors()` is called before `app.MapControllers()`. |
 | **CRUD operations not saving** | The Pivot Table editing pop-up closes, but the changes are not reflected in the data source. | Ensure the primary key is correctly configured in the `beginDrillThrough` event (so the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) can target the right record) and that the backend `Post`, `Patch`, and `Delete` methods resolve under the OData route prefix configured in **Program.cs**. |
 | **Property casing mismatch** | The Pivot Table appears empty or shows a "field not found" warning, even though the API returns data. | Confirm that `DefaultContractResolver` is added in **Program.cs** to preserve original property casing. Without it, the API returns camelCase property names that do not match the field names configured in the Pivot Table. |
 | **Pivot Table loads slowly** | The Pivot Table takes a long time to render or becomes unresponsive. | Ensure the API only returns the fields the Pivot Table needs (keep the `value` array lean) and that the OData V4 middleware is generating the response from a queryable source. For large data sources, consider implementing server-side aggregation to reduce the payload returned to the client. |
@@ -772,7 +775,7 @@ For a complete working implementation, refer to the [GitHub repository](https://
 
 ## See Also
 
-- [**PivotTable Data Binding**](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding)
+- [**Pivot Table Data Binding**](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding)
 - [**DataManager**](https://ej2.syncfusion.com/react/documentation/data/getting-started)
 - [**ODataV4Adaptor**](https://ej2.syncfusion.com/react/documentation/data/adaptors/odatav4-adaptor)
-- [**PivotTable Editing**](https://ej2.syncfusion.com/react/documentation/pivotview/editing)
+- [**Pivot Table Editing**](https://ej2.syncfusion.com/react/documentation/pivotview/editing)

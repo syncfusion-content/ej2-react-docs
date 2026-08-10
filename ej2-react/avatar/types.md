@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types in React Avatar component | Syncfusion
-description: Learn here all about Types in Syncfusion React Avatar component of Syncfusion Essential JS 2 and more.
+title: Types in React Avatar | Syncfusion
+description: Explore Syncfusion React Avatar size and shape variants, from xsmall to xlarge, plus the rectangular default and circular profile styles.
 control: Avatar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types in React Avatar component
+# Types in React Avatar
 
 The React Avatar component provides different sizes and visual styles to suit various design requirements. This section covers the available avatar sizes and shape types that can be customized using CSS classes.
 

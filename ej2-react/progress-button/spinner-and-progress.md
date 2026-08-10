@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spinner and progress in React Progress button component | Syncfusion
-description: Learn here all about Spinner and progress in Syncfusion React Progress button component of Syncfusion Essential JS 2 and more.
+title: Spinner and progress in React Progress Button | Syncfusion
+description: Customize the React Progress Button spinner position, size, and template, and configure the progress fill using spinSettings and cssClass.
 control: Spinner and progress 
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 <!-- markdownlint-disable MD002 MD022 -->
-# Spinner and progress in React Progress button component
+# Spinner and progress in React Progress Button
 
 ## Spinner
 

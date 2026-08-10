@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integrate Avatar into ListView in React Avatar component | Syncfusion
-description: Learn here all about Integrate Avatar into ListView in Syncfusion React Avatar component of Syncfusion Essential JS 2 and more.
+title: How to integrate Avatar into ListView in React Avatar | Syncfusion
+description: Integrate Syncfusion React Avatar into ListView items to show profile images, initials, or icons alongside list content in xsmall size.
 control: Avatar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Avatar into ListView in React Avatar component
+# How to integrate Avatar into ListView in React Avatar
 
 The Avatar component integrates with ListView to display profile images, initials, or icons alongside list item content. This approach is particularly effective in contact lists, team directories, chat applications, and user management interfaces where visual identification enhances usability and provides immediate context about each list item.
 

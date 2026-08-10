@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change the color of the TextBox based on its value in React TextBox component | Syncfusion
-description: Learn here all about Change the color of the TextBox based on its value in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: How to change the TextBox color by value in React TextBox | Syncfusion
+description: Dynamically change the React TextBox color based on the entered value by validating with regex in the keyup event.
 control: Change the color of the TextBox based on its value 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the color of the TextBox based on its value in React TextBox component
+# How to change the TextBox color by value in React TextBox
 
 Dynamically update the TextBox appearance based on user input by validating the value using regular expressions in the `keyup` event. This provides immediate visual feedback about input validity. The following example demonstrates changing the TextBox color when numeric values are detected.
 

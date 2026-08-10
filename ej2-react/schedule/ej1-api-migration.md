@@ -1,14 +1,14 @@
 ---
 layout: post
-title: EJ1 API migration in React Schedule component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: EJ1 API Migration in React Scheduler | Syncfusion
+description: Learn how to migrate the Syncfusion React Scheduler from Essential JS 1 to Essential JS 2 by mapping the equivalent APIs and properties.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# EJ1 API migration in React Schedule component
+# EJ1 API Migration in React Scheduler
 
 This topic shows the API equivalents for Essential<sup style="font-size:70%">&reg;</sup> JS1 Scheduler to Essential<sup style="font-size:70%">&reg;</sup> JS2 Scheduler.
 

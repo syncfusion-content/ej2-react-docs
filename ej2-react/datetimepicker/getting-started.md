@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Datetimepicker component | Syncfusion
-description:  Checkout and learn about Getting started with React Datetimepicker component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React DateTime Picker | Syncfusion
+description: Set up the React DateTime Picker in a Vite or CRA project and let users pick a date and a time together from a single input.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React DateTimePicker component
+# Getting Started with React DateTime Picker
 
 This section explains the steps required to create a simple React DateTimePicker component and demonstrate its basic usage in a React environment.
 

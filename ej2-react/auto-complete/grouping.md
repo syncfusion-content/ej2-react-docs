@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in React AutoComplete component | Syncfusion
-description: Learn here all about Grouping in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
+title: Grouping in React AutoComplete | Syncfusion
+description: Group Syncfusion React AutoComplete list items by category using the groupBy field, with both inline and fixed group headers that update while scrolling.
 control: Grouping 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in React AutoComplete component
+# Grouping in React AutoComplete
 
 The AutoComplete supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
 

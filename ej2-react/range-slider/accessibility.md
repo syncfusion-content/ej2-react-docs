@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Range Slider component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Slider | Syncfusion
+description: Review the React Slider compliance with WCAG 2.2, Section 508, WAI-ARIA, and screen reader accessibility standards.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Range Slider component
+# Accessibility in React Slider
 
 The Range Slider component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

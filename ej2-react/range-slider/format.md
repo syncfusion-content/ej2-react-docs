@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Format in React Range Slider component | Syncfusion
-description: Learn here all about Format in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: Format in React Slider | Syncfusion
+description: Format React Slider values, ticks, and tooltips using the format API or the renderingTicks and tooltipChange events.
 control: Format 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Format in React Range Slider component
+# Format in React Slider
 
 The [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) feature customizes the units of Slider values to your desired format. Formatted values are also applied to the ARIA attributes. There are two ways to achieve formatting:
 

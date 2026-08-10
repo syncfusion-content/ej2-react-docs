@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Select React Calendar component | Syncfusion
-description: Learn here all about Select a sequence of dates in calendar in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: How to select sequence of dates in React Calendar | Syncfusion
+description: Select a full week of dates in the React Calendar by combining isMultiSelection with Moment.js to compute the week range.
 control: Select a sequence of dates in calendar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Select a sequence of dates in calendar in React Calendar component
+# How to select sequence of dates in React Calendar
 
 The following example demonstrates how to select the week dates for a chosen date in the Calendar using the [`values`](https://ej2.syncfusion.com/react/documentation/api/calendar#values) property when [`isMultiSelection`](https://ej2.syncfusion.com/react/documentation/api/calendar#ismultiselection) is enabled. Moment.js is used in this sample to calculate the start and end of the week for the selected date.
 

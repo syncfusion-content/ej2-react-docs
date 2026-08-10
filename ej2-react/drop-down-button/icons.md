@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons in React Drop down button component | Syncfusion
-description: Learn here all about Icons in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: Icons in React DropDownButton | Syncfusion
+description: Add icons to the React DropDownButton via the iconCss property. Position the icon left, right, or top, and create an icon-only button.
 control: Icons 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons in React Drop down button component
+# Icons in React DropDownButton
 
 ## DropDownButton icons
 

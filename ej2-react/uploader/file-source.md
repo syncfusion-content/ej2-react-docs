@@ -1,14 +1,14 @@
 ---
 layout: post
-title: File source in React Uploader component | Syncfusion
-description: Learn here all about File source in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: File Source in React File Upload | Syncfusion
+description: Upload images directly from the clipboard in the React File Upload using paste operations, with server-side logic to rename the pasted file.
 control: File source 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File source in React Uploader component
+# File Source in React File Upload
 
 ## Paste to upload
 

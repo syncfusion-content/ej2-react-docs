@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Timeline component | Syncfusion
-description:  Checkout and learn about Getting Started with Syncfusion React Timeline component of Syncfusion Essential JS 2 and more.
+title: Getting Started with React Timeline | Syncfusion
+description: Set up the Syncfusion React Timeline in a Vite project and render a basic event sequence with configurable items and orientation.
 control: Timeline
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Timeline component
+# Getting Started with React Timeline
 
 This section explains the steps required to create a simple React Timeline component and demonstrate its basic usage in a React environment.
 

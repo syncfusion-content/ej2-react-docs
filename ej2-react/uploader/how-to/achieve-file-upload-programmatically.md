@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Achieve file upload programmatically in React Uploader component | Syncfusion
-description: Learn here all about Achieve file upload programmatically in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to upload files programmatically in React File Upload | Syncfusion
+description: Trigger file uploads from code in the React File Upload using the upload method and retrieve the selected files with the getFilesData method.
 control: Achieve file upload programmatically 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Achieve file upload programmatically in React Uploader component
+# How to upload files programmatically in React File Upload
 
 Programmatic file upload enables you to trigger upload actions through code rather than user interactions. Use the [upload](https://ej2.syncfusion.com/react/documentation/api/uploader/#upload) method to initiate file uploads, and retrieve selected file data from the [getFilesData](https://ej2.syncfusion.com/react/documentation/api/uploader/#getfilesdata) public method.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons in React Floating action button component | Syncfusion
-description: Learn here all about Icons in Syncfusion React Floating action button component of Syncfusion Essential JS 2 and more.
+title: Icons in React Floating Action Button | Syncfusion
+description: Set icons and text on the React Floating Action Button using iconCss and content. Show icon-only buttons with title attributes for tooltips.
 control: Icons 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons in React Floating action button component
+# Icons in React Floating Action Button
 
 You can customize the icon and text of React Floating Action Button(FAB) using [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#iconcss) and [`content`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#content) properties.
 

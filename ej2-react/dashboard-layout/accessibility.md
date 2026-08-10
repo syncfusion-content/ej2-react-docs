@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Dashboard Layout component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Dashboard Layout component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Dashboard Layout | Syncfusion
+description: Review Syncfusion React Dashboard Layout accessibility support for WCAG, Section 508, WAI-ARIA roles, and automated axe-core validation.
 control: Dashboard Layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Dashboard Layout component
+# Accessibility in React Dashboard Layout
 
 The Dashboard Layout component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) and WAI-ARIA patterns that are commonly used to evaluate accessibility.
 

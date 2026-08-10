@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Reversible Range Slider in React Range Slider component | Syncfusion
-description: Learn here all about Reversible Range Slider in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to create a reversible Slider in React Slider | Syncfusion
+description: Create a React Slider with values in reverse order by swapping the min and max property values for a reversible range slider.
 control: Reversible Range Slider 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Reversible Range Slider in React
+# How to create a reversible Slider in React Slider
 
 You can create a Range Slider with values in reverse order by setting the [min](https://ej2.syncfusion.com/react/documentation/api/slider/#min) property to the maximum value and the [max](https://ej2.syncfusion.com/react/documentation/api/slider/#max) property to the minimum value. The following example shows how to achieve this.
 

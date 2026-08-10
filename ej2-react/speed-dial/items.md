@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Items in React Speed dial component | Syncfusion
-description: Learn here all about Items in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+title: Items in React Speed Dial | Syncfusion
+description: Define Speed Dial action items via the items property. Each item supports text, icon, disabled state, and ID for click events and tooltips.
 control: Items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Items in React Speed dial component
+# Items in React Speed Dial
 
 Define the action items displayed in the SpeedDial popup using the [`items`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#items) property. Each item is a [`SpeedDialItemModel`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialitemmodel) object that can include text, icons, disabled states, and custom IDs. Configure item appearance and behavior to create a functional and user-friendly action menu.
 

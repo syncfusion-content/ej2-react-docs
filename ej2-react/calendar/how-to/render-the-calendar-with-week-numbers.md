@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Calendar component | Syncfusion
-description: Learn here all about Render the calendar with week numbers in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: How to show week number in React Calendar | Syncfusion
+description: Display ISO week numbers in the React Calendar by enabling the weekNumber property to show the current week in each row.
 control: Render the calendar with week numbers 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render the calendar with week numbers in React Calendar component
+# How to show week number in React Calendar
 
 Enable week numbers in the Calendar by setting the [`weekNumber`](https://ej2.syncfusion.com/react/documentation/api/calendar#weeknumber) property.
 

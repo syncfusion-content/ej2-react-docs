@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Half-yearly view in React Schedule component | Syncfusion
-description: Learn here all about Half yearly view in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Show Half-Yearly View in React Scheduler | Syncfusion
+description: Learn how to show a half-yearly view in the Syncfusion React Scheduler by customizing the year view to render a specific range of consecutive months.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Half-yearly view in React Schedule component
+# Half-Yearly View in React Scheduler
 
 The year view of the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) displays all 365 days and their appointments for a given year. You can customize this view by using the following properties:
 

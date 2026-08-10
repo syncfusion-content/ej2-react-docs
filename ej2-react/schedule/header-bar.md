@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header bar in React Schedule component | Syncfusion
-description: Learn here all about Header bar in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Header Customization in React Scheduler | Syncfusion
+description: Learn how to show or hide the header bar and customize date and view navigation in the Syncfusion React Scheduler.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize header bar in React Schedule component
+# Header Customization in React Scheduler
 
 The header part of Scheduler can be customized easily with the built-in options available.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in React Speed dial component | Syncfusion
-description: Learn here all about Template in Syncfusion React Speed dial component of Syncfusion Essential JS 2 and more.
+title: Template in React Speed Dial | Syncfusion
+description: Use itemTemplate and popupTemplate on the React Speed Dial to render custom HTML for individual items and the entire popup container.
 control: Template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in React Speed dial component
+# Template in React Speed Dial
 
 SpeedDial provides powerful templating capabilities to customize both individual action items and the entire popup container. Use templates to create complex layouts with custom HTML, styling, and interactive elements beyond the standard text and icon configurations.
 

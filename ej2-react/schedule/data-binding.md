@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Schedule component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React Scheduler | Syncfusion
+description: Learn how to bind data to the Syncfusion React Scheduler from local collections and remote REST services for flexible data loading.
 control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Schedule component
+# Data Binding in React Scheduler
 
 The Scheduler utilizes the `DataManager`, which supports both RESTful data service binding and JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/schedule/eventSettings#datasource) property of Scheduler can be assigned either an instance of `DataManager` or a JavaScript object array collection. Scheduler supports the following data binding methods:
 

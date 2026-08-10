@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in React Numerictextbox component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion React Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React NumericTextBox | Syncfusion
+description: Customize the React NumericTextBox wrapper, input, and spin button appearance with CSS to match your application design system.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in React NumericTextBox component
+# Style and Appearance in React NumericTextBox
 
 Customize the NumericTextBox component's appearance using CSS to match your application's design system. The following CSS rules demonstrate common styling modifications for various NumericTextBox scenarios.
 

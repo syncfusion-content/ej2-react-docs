@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started with React Rating | Syncfusion
-description: Learn how to get started with the React Rating component in Syncfusion Essential JS 2, including installation with Vite, configuration, and required styles.
+description: Set up a Vite-based React project, install the Syncfusion Rating, and render a basic star rating with value, itemsCount, and precision.
 control: Rating
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Rating component
+# Getting Started with React Rating
 
 This section explains the steps required to create a simple React Rating component and demonstrate its basic usage in a React environment.
 

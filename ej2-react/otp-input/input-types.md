@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Input Types in React OTP Input component | Syncfusion
-description:  Checkout and learn about Input Types with React OTP Input component of Syncfusion Essential JS 2 and more.
+title: Input Types in React OTP Input | Syncfusion
+description: Choose the React OTP Input type such as number or text to control which characters are accepted in each verification code field.
 platform: ej2-react
 control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Input Types in React OTP Input component
+# Input Types in React OTP Input
 
 ## Types
 

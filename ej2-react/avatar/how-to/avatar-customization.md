@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Avatar customization in React Avatar component | Syncfusion
-description: Learn here all about Avatar customization in Syncfusion React Avatar component of Syncfusion Essential JS 2 and more.
+title: How to customize Avatar in React Avatar | Syncfusion
+description: Customize Syncfusion React Avatar with custom colors, font-size-driven dimensions, and SVG, font-icon, image, letter, or data-source media.
 control: Avatar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Avatar customization in React Avatar component
+# How to customize Avatar in React Avatar
 
 The Syncfusion React Avatar component provides a wide range of customization options, including color, size, and support for various media formats. This section explains how to tailor the Avatar's appearance to meet specific design requirements and integrate different content types.
 

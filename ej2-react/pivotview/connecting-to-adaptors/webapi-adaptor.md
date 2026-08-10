@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Web API adaptor in React Pivot Table | Syncfusion
+title: Web API Adaptor in React Pivot Table | Syncfusion
 platform: ej2-react
-component: Pivot Table
 description: Learn how the React Pivot Table binds to ASP.NET Web API endpoints through the WebApiAdaptor, which supports OData-style query parameters.
 control: Pivot Table
-keywords: Adaptors, webapiadaptor, remotedata 
+keywords: Adaptors, WebApiAdaptor, RemoteData
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Web API adaptor in React Pivot Table
+# Web API Adaptor in React Pivot Table
 
 The [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors/webapi-adaptor) connects the React Pivot Table with ASP.NET Web API endpoints that support OData-style querying. Since it is derived from the `ODataAdaptor`, the Web API must accept OData-formatted query parameters.
 
@@ -215,7 +214,7 @@ Create a file named `OrdersController.cs` under the **Controllers** folder to ha
 {% tabs %}
 {% highlight cs tabtitle="OrdersController.cs" %}
 
-using Microsoft.AspNetCore.Http;
+using System.Linq; // Required for `.ToList()` and `.Count()`.
 using Microsoft.AspNetCore.Mvc;
 using WebApiAdaptor.Models;
 
@@ -229,6 +228,8 @@ namespace WebApiAdaptor.Controllers
         public object GetOrderData()
         {
             var data = OrdersDetails.GetAllRecords().ToList();
+            // .Count uses the LINQ extension (works for IEnumerable<T>);
+            // .Count property works for List<T> directly.
             return new { Items = data, Count = data.Count() };
         }
     }
@@ -258,10 +259,7 @@ using Newtonsoft.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add controllers (Web API template).
-builder.Services.AddControllers();
-
-// Configure JSON serialization (preserves property casing).
+// Add controllers and configure JSON serialization (preserves property casing).
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ContractResolver = new DefaultContractResolver();
@@ -283,6 +281,9 @@ var app = builder.Build();
 
 // Enable CORS middleware (call before MapControllers so the policy applies to endpoints).
 app.UseCors();
+
+app.UseDefaultFiles();  // Optional: serves index.html from wwwroot.
+app.UseStaticFiles();   // Optional: serves static assets from wwwroot.
 
 // Map controller endpoints.
 app.MapControllers();
@@ -473,22 +474,31 @@ To modify an existing record, double-click a pivot cell to open the editing pop-
 
 ```cs
 
-// PUT: api/Orders
-[HttpPut]
-public IActionResult Put([FromBody] OrdersDetails updatedOrder)
+// PUT: api/Orders/{key}
+[HttpPut("{key}")]
+public IActionResult Put(int key, [FromBody] OrdersDetails updatedOrder)
 {
     // Find the existing order by ID.
-    var existingOrder = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == updatedOrder.OrderID);
+    var existingOrder = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == key);
     if (existingOrder == null)
     {
         return NotFound();  // 404 — no record matched the supplied key.
+    }
+    if (updatedOrder == null)
+    {
+        return BadRequest("Updated order cannot be null.");
     }
     // Update the order properties (do not overwrite the primary key).
     existingOrder.CustomerID = updatedOrder.CustomerID;
     existingOrder.EmployeeID = updatedOrder.EmployeeID;
     existingOrder.Freight = updatedOrder.Freight;
     existingOrder.ShipCity = updatedOrder.ShipCity;
-    // Update other properties similarly.
+    existingOrder.ShipCountry = updatedOrder.ShipCountry;
+    existingOrder.ShipName = updatedOrder.ShipName;
+    existingOrder.ShipAddress = updatedOrder.ShipAddress;
+    existingOrder.OrderDate = updatedOrder.OrderDate;
+    existingOrder.ShippedDate = updatedOrder.ShippedDate;
+    existingOrder.Verified = updatedOrder.Verified;
     return Ok();  // 200
 }
 
@@ -703,7 +713,7 @@ For a complete working implementation, refer to the [GitHub repository](https://
 
 ## See Also
 
-- [**PivotTable Data Binding**](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding)
+- [**Pivot Table Data Binding**](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding)
 - [**DataManager**](https://ej2.syncfusion.com/react/documentation/data/getting-started)
 - [**WebApiAdaptor**](https://ej2.syncfusion.com/react/documentation/data/adaptors/webapi-adaptor)
-- [**PivotTable Editing**](https://ej2.syncfusion.com/react/documentation/pivotview/editing)
+- [**Pivot Table Editing**](https://ej2.syncfusion.com/react/documentation/pivotview/editing)

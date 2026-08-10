@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance with React Rating component | Syncfusion
-description:  Learn here all about Appearance in Syncfusion React Rating component of Syncfusion Essential JS 2 and more.
+title: Appearance in React Rating | Syncfusion
+description: Customize the React Rating count, symbol size, and spacing with the itemsCount property and CSS for a tailored star layout.
 control: Appearance
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in React Rating Component
+# Appearance in React Rating
 
 You can also customize the appearance of rating component.
 

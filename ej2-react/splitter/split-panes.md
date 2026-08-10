@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Split panes in React Splitter component | Syncfusion
-description: Learn here all about Split panes in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
+title: Split Panes in React Splitter | Syncfusion
+description: Switch Syncfusion React Splitter orientation between horizontal and vertical split panes via the orientation property.
 control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Split panes in React Splitter component
+# Split Panes in React Splitter
 
 This section explains split pane behavior and shows examples for common layouts using the React Splitter component.
 

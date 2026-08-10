@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chip customization in React Multi select component | Syncfusion
-description: Learn here all about Chip customization in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Chip Customization in React MultiSelect Dropdown | Syncfusion
+description: Style individual selected-value chips in the React MultiSelect Dropdown by handling the tagging event and applying custom CSS classes through the setClass method.
 control: Chip customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chip customization in React Multi select component
+# Chip Customization in React MultiSelect Dropdown
 
 The MultiSelect provides chip customization through the [`tagging`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#tagging) event. Within this event, apply custom CSS classes to chip elements using the `setClass` method provided in the event arguments.
 

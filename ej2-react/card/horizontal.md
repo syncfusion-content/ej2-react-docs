@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Horizontal in React Card component | Syncfusion
-description: Learn here all about Horizontal in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
+title: Horizontal Card in React Card | Syncfusion
+description: Switch a Syncfusion React Card to a side-by-side horizontal layout with the e-card-horizontal class and stack inner sections via e-card-stacked.
 control: Card 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Horizontal in React Card component
+# Horizontal Card in React Card
 
 By default, all card elements are aligned vertically in a stacked layout following the natural DOM flow. The horizontal layout offers an alternative arrangement where card elements are positioned side-by-side, creating a more compact and visually engaging presentation for content that benefits from lateral organization.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timezone in React Schedule component | Syncfusion
-description: Learn here all about Timezone in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Timezone in React Scheduler | Syncfusion
+description: Learn how to render appointments in different time zones in the Syncfusion React Scheduler for global users and cross-region scheduling.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timezone support in React Schedule component
+# Timezone in React Scheduler
 
 The Scheduler component uses the current system timezone by default. To schedule events according to a different timezone, use the [`timezone`](https://ej2.syncfusion.com/react/documentation/api/schedule#timezone) property. In addition to applying a specific timezone at the Scheduler level, individual appointments can have their own timezones using the [`startTimezone`](https://helpej2.syncfusion.com/react/documentation/api/schedule/field#starttimezone) and [`endTimezone`](https://helpej2.syncfusion.com/react/documentation/api/schedule/field#endtimezone) properties within the event fields collection.
 

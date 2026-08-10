@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Restrict Decimal Points in React TreeGrid Editing | Syncfusion
-description: Learn here all about Restrict decimal points while treegrid editing in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Decimal Point Restriction | Syncfusion
+description: Learn how to restrict decimal points while editing in the React TreeGrid using NumericTextBox configuration.
 control: Restrict decimal points while treegrid editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict decimal points while treegrid editing in React TreeGrid
+# Restrict Decimal Points While Editing in React TreeGrid
 
 By default, NumericTextBox restricts input to two decimal places when editing a numeric column. Prevent entering decimal points in a NumericTextBox by using the **validateDecimalOnType** and **decimals** properties of NumericTextBox.
 

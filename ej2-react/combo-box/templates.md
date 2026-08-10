@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in React Combo box component | Syncfusion
-description: Learn here all about Templates in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: Templates in React ComboBox | Syncfusion
+description: Customize Syncfusion React ComboBox list items, group headers, and footer areas with itemTemplate, groupTemplate, headerTemplate, and footerTemplate properties.
 control: Templates 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React Combo box component
+# Templates in React ComboBox
 
 The ComboBox provides comprehensive template support to customize list items, group titles, headers, and footer elements.
 
@@ -18,7 +18,7 @@ To get started with React ComboBox templates, you can check this video:
 
 ## Item template
 
-Customize the content of each list item using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#itemtemplate) property. This allows you to create custom layouts for displaying data in each item.
+Customize the content of each list item using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#itemtemplate) property. This allows you to create custom layouts for displaying data in each item.
 
 In the following example, each list item displays data in a two-column layout.
 
@@ -50,7 +50,7 @@ In the following example, each list item displays data in a two-column layout.
 
 ## Group template
 
-Customize group header titles using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#grouptemplate) property. This template applies to both inline and floating group headers, allowing consistent group header styling.
+Customize group header titles using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#grouptemplate) property. This template applies to both inline and floating group headers, allowing consistent group header styling.
 
 In the following example, employees are grouped by their city.
 
@@ -82,7 +82,7 @@ In the following example, employees are grouped by their city.
 
 ## Header template
 
-Add a static header to the top of the popup list using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#headertemplate) property. This allows you to place custom elements such as titles, filters, or other controls in the header area.
+Add a static header to the top of the popup list using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#headertemplate) property. This allows you to place custom elements such as titles, filters, or other controls in the header area.
 
 In the following example, list items and their headers display in a two-column layout similar to a data grid.
 
@@ -114,7 +114,7 @@ In the following example, list items and their headers display in a two-column l
 
 ## Footer template
 
-Add a footer element at the bottom of the popup list using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#footertemplate) property. This allows you to place custom elements such as summaries, totals, or action buttons.
+Add a footer element at the bottom of the popup list using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#footertemplate) property. This allows you to place custom elements such as summaries, totals, or action buttons.
 
 In the following example, the footer displays the total number of list items in the ComboBox.
 
@@ -147,7 +147,7 @@ In the following example, the footer displays the total number of list items in 
 ## No records template
 
 The ComboBox is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of
-[noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#norecordstemplate) property.
+[noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#norecordstemplate) property.
 
 In the following sample, popup list content displays the notification of no data available.
 
@@ -180,7 +180,7 @@ In the following sample, popup list content displays the notification of no data
 ## Action failure template
 
 There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the
-[actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box/#actionfailuretemplate) property.
+[actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#actionfailuretemplate) property.
 
 In the following sample, when the data fetch request fails, the ComboBox displays the notification.
 
@@ -212,6 +212,6 @@ In the following sample, when the data fetch request fails, the ComboBox display
 
 ## See Also
 
-* [How to achieve filtering](./filtering/)
-* [How to group the data using header](./grouping/)
-* [How to show the list items with icon](./how-to/icons-support/)
+* [How to achieve filtering](./filtering)
+* [How to group the data using header](./grouping)
+* [How to show the list items with icon](./how-to/icons-support)

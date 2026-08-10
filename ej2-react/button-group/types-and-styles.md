@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types and styles in React Button group component | Syncfusion
-description: Learn here all about Types and styles in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
+title: Types and styles in React Button Group | Syncfusion
+description: Explore React Button Group types (outline) and styles (primary, success, info, warning, danger) applied through the cssClass property.
 control: Types and styles 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types and styles in React Button group component
+# Types and styles in React Button Group
 
 This section explains the different types and styles available in the Syncfusion ButtonGroup component.
 

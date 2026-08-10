@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Localization in React Form validator component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Form validator component of Syncfusion Essential JS 2 and more.
+title: Localization in React Form Validation Library | Syncfusion
+description: Localize React Form Validation Library error messages to any culture by setting the locale property and providing a translation object.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Form validator component
+# Localization in React Form Validation Library
 
-The [`Localization`](../common/localization/) library allows you to localize the FormValidator's default error messages to different cultures using the `locale` property.
+The [`Localization`](../common/localization) library allows you to localize the FormValidator's default error messages to different cultures using the `locale` property.
 
 The FormValidator provides default error messages for all validation rules. The following table lists these messages:
 

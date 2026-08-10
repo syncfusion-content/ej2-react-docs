@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in React MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about Filtering with React MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: "Filtering in React MultiColumn ComboBox | Syncfusion"
+description: Filter React MultiColumn ComboBox items as you type using StartsWith, EndsWith, or Contains match modes for fast lookup in large lists.
 platform: ej2-react
 control: MultiColumn Combobox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in React MultiColumn ComboBox component
+# Filtering in React MultiColumn ComboBox
 
 The MultiColumn ComboBox includes built-in filtering support, enabling users to filter items based on their input. Filter operations start automatically when typing characters in the component. Disable filtering by setting the [allowFiltering](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox#allowfiltering) property to `false`. By default, the value is `true`.
 

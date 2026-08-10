@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Auto complete component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Auto complete component of Syncfusion Essential JS 2 and more.
+title: Migration in React AutoComplete | Syncfusion
+description: Migrate the Syncfusion React AutoComplete from Essential JS 1 to EJ2 with a side-by-side API map for data binding, filtering, events, and templates.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Auto complete component
+# Migration in React AutoComplete
 
 This article describes the API migration process of  AutoComplete component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 > MultiSelect concept is not present in EJ2-AutoComplete.  If you want to use multiselection support in autocomplete, we suggest you to use MultiSelect component.
@@ -71,10 +71,10 @@ This article describes the API migration process of  AutoComplete component from
 | **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
 | **Default** | **Property:** *cssClass* <br/> `<EJ.Autocomplete id="autocomplete" cssClass="cssClass"></EJ.Autocomplete>` | **Property:** *cssClass* <br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} cssClass={this.cssClass} />`|
-| **Height** | **Property:** *height* <br/> `<EJ.Autocomplete id="autocomplete" height="400px"></EJ.Autocomplete>`| **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#cssclass) property.** |
-| **showRoundedCorner**   | **Property:** *showRoundedCorner*<br/> `<EJ.Autocomplete id="autocomplete" showRoundedCorner={true}></EJ.Autocomplete>` | **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#cssclass) property.** |
+| **Height** | **Property:** *height* <br/> `<EJ.Autocomplete id="autocomplete" height="400px"></EJ.Autocomplete>`| **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/auto-complete#cssclass) property.** |
+| **showRoundedCorner**   | **Property:** *showRoundedCorner*<br/> `<EJ.Autocomplete id="autocomplete" showRoundedCorner={true}></EJ.Autocomplete>` | **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/auto-complete#cssclass) property.** |
 | **Width** | **Property:** *width* <br/> `<EJ.Autocomplete id="autocomplete" width="300px"></EJ.Autocomplete>`| **Property:** *width* <br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} width={this.width} />`|
-| **Visibility** | **Property:** *visible* <br/>`<EJ.Autocomplete id="autocomplete" visible={true}></EJ.Autocomplete>` | **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#cssclass) property.** |
+| **Visibility** | **Property:** *visible* <br/>`<EJ.Autocomplete id="autocomplete" visible={true}></EJ.Autocomplete>` | **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/auto-complete#cssclass) property.** |
 
 ## Grouping
 
@@ -104,7 +104,7 @@ This article describes the API migration process of  AutoComplete component from
 
 | **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | --- | --- | --- |
-| **Default** | **Property:** *allowSorting* <br/> `<EJ.Autocomplete id="default" allowSorting = {true} ></EJ.Autocomplete>` | **Acheivable through [sortOrder](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#sortorder) property** |
+| **Default** | **Property:** *allowSorting* <br/> `<EJ.Autocomplete id="default" allowSorting = {true} ></EJ.Autocomplete>` | **Acheivable through [sortOrder](https://ej2.syncfusion.com/react/documentation/api/auto-complete#sortorder) property** |
 | **Order of sorting** | **Property:** *sortOrder* <br/>`<EJ.Autocomplete id="default" sortOrder = {sortOrder} ></EJ.Autocomplete>`|**Property:** *sortOrder*<br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} sortOrder={this.sortOrder} />` |
 
 ## Accessibility
@@ -117,10 +117,10 @@ This article describes the API migration process of  AutoComplete component from
 
 | **Behavior** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 1** | **API in Essential<sup style="font-size:70%">&reg;</sup> JS 2** |
 | ------------ | ------------ | ----------- |
-|**Selecting particular value**| **Property**: *selectValueByKey* <br/>`<EJ.Autocomplete id="default" selectValueByKey = {selectValueByKey} ></EJ.Autocomplete>`|**Achievable through [value](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#value) property.** |
+|**Selecting particular value**| **Property**: *selectValueByKey* <br/>`<EJ.Autocomplete id="default" selectValueByKey = {selectValueByKey} ></EJ.Autocomplete>`|**Achievable through [value](https://ej2.syncfusion.com/react/documentation/api/auto-complete#value) property.** |
 | **Selecting particular value** | **Property**: *value*<br/>`<EJ.Autocomplete id="default" value = {value} ></EJ.Autocomplete>` | **Property:** *value*<br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} value={this.value} />`|
 | **Selecting particular text** | **Property:** *text*<br/> `<EJ.Autocomplete id="default" text = {text} ></EJ.Autocomplete>` | **Not Applicable** |
-| **Selecting particular value** |**Method:** *selectValueByKey*<br/>`<EJ.Autocomplete id="autocomplete" enableRtl = {true} ></EJ.Autocomplete>`<br/> `$("#autocomplete").selectValueByKey("key")`| **Achievable through [value](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#value) property.**   |
+| **Selecting particular value** |**Method:** *selectValueByKey*<br/>`<EJ.Autocomplete id="autocomplete" enableRtl = {true} ></EJ.Autocomplete>`<br/> `$("#autocomplete").selectValueByKey("key")`| **Achievable through [value](https://ej2.syncfusion.com/react/documentation/api/auto-complete#value) property.**   |
 | **Selecting particular text** |**Method:** *selectValueByText* <br/> `<EJ.Autocomplete id="autocomplete" enableRtl = {true} ></EJ.Autocomplete>`<br/>`$("#autocomplete").selectValueByText("key")`|**Not applicable** |
 | **Select event** |**Event**: *select*<br/>`<EJ.Autocomplete id="default" select = "select" ></EJ.Autocomplete>` | **Event:** *select* <br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} select={this.select.bind(this)} />`|
 
@@ -132,7 +132,7 @@ This article describes the API migration process of  AutoComplete component from
 | **Enable persistence** | **Property:** *enablePersistence*<br/> `<EJ.Autocomplete id="default" enablePersistence = {true} ></EJ.Autocomplete>` | **Property:** *enablePersistence* <br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} enablePersistence={true} />`|
 | **Loading icon** | **Property:** *showLoadingIcon* <br/>`<EJ.Autocomplete id="default" showLoadingIcon = {true} ></EJ.Autocomplete>` | **By default,it is showing** |
 | **Read only** | **Property:** *readOnly* <br/> `<EJ.Autocomplete id="default" readOnly = {true} ></EJ.Autocomplete>` | **Property:** *readOnly* <br/> `<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} readOnly={this.readOnly} />`  |
-| **Disable** | **Method:** *disable*<br/>`<EJ.Autocomplete id="autocomplete"></EJ.Autocomplete>`<br/> `$("#autocomplete").ejAutoComplete("disable");` | **Achievable through [enabled](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#enabled) property.**  |
+| **Disable** | **Method:** *disable*<br/>`<EJ.Autocomplete id="autocomplete"></EJ.Autocomplete>`<br/> `$("#autocomplete").ejAutoComplete("disable");` | **Achievable through [enabled](https://ej2.syncfusion.com/react/documentation/api/auto-complete#enabled) property.**  |
 
 ## Common
 
@@ -144,9 +144,9 @@ This article describes the API migration process of  AutoComplete component from
 | **Destroy** | **Method:** *destroy*<br/>`<EJ.Autocomplete id="autocomplete" ></EJ.Autocomplete>`<br/> `$("#autocomplete").ejAutoComplete("destroy");`| **Method:** *destroy* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} />`<br/><br/>`this.cmbObj.destroy();`|
 | **Reset the autocomplete** | **Method:** *clearText*<br/>`<EJ.Autocomplete id="autocomplete" ></EJ.Autocomplete>`<br/>`$("#autocomplete").ejAutoComplete("clearText");`  | **Property:** *value* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} value="" />` |
 | **Multicolumn** | **Property:** *multiColumnSettings*<br/> `var autocompleteInstance =new ej.Autocomplete($("#selectCar"), {multiColumnSettings:{enable:true,showHeader:true,stringFormat:"{1}",searchColumnIndices[0,1,2], columns:[{"field": "EmployeeID" ,"headerText":"EmployeeID"},{"field": "FirstName" , "headerText":"FirstName"},{"field": "City" , "headerText":"City"}]}});` |**Not applicable** |
-| **Hide the Autocomplete** | **Method:** *hide*<br/>`<EJ.Autocomplete id="autocomplete" ></EJ.Autocomplete>`<br/>`$("#autocomplete").ejAutoComplete("hide");` | **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#cssclass) property.** |
+| **Hide the Autocomplete** | **Method:** *hide*<br/>`<EJ.Autocomplete id="autocomplete" ></EJ.Autocomplete>`<br/>`$("#autocomplete").ejAutoComplete("hide");` | **Acheivable through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/auto-complete#cssclass) property.** |
 | **Getting particular text** | **Method:** *getActiveText* <br/>`<EJ.Autocomplete id="autocomplete" ></EJ.Autocomplete>`<br/>`$("#autocomplete").ejAutoComplete("getActiveText");`|**Not applicable** |
-| **Getting particular value** | **Method:** *getValue*<br/>`<EJ.Autocomplete id="autocomplete"  ></EJ.Autocomplete>`<br/> `$("#autocomplete").ejAutoComplete("getValue");` |**Achievable through [value](https://ej2.syncfusion.com/react/documentation/api/auto-complete/#value) property.**  |
+| **Getting particular value** | **Method:** *getValue*<br/>`<EJ.Autocomplete id="autocomplete"  ></EJ.Autocomplete>`<br/> `$("#autocomplete").ejAutoComplete("getValue");` |**Achievable through [value](https://ej2.syncfusion.com/react/documentation/api/auto-complete#value) property.**  |
 | **Change event** | **Event:** *change*<br/>`<EJ.Autocomplete id="default" change = "change" ></EJ.Autocomplete>`|**Event:** *change* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} change={this.change.bind(this)} />`|
 | **Create event** | **Event:** *create* <br/>`<EJ.Autocomplete id="default" create = "create" ></EJ.Autocomplete>`|**Event:** *created* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} created={this.created.bind(this)} />`|
 | **Destroy event** | **Event:** *destroy* <br/>`<EJ.Autocomplete id="default" destroy = "destroy" ></EJ.Autocomplete>` |**Event:** *destroyed* <br/>`<AutoCompleteComponent  id="atcelement" ref={(scope) => { this.cmbObj = scope; }} destroyed={this.destroyed.bind(this)} />`|

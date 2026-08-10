@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize button with html element in React Uploader component | Syncfusion
-description: Learn here all about Customize button with html element in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to customize the button in React File Upload | Syncfusion
+description: Render custom HTML content in the React File Upload's Browse, Upload, and Clear action buttons using the buttons property.
 control: Customize button with html element 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize button with HTML element in React Uploader component
+# How to customize the button in React File Upload
 
 Customize the Uploader action buttons (Browse, Upload, Clear) with custom HTML content using the [buttons](https://ej2.syncfusion.com/react/documentation/api/uploader/#buttons) property. This enables you to create branded or themed button styles that match your application design. Refer to the following example.
 

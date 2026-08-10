@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Editor template in React Schedule component | Syncfusion
-description: Learn here all about Editor template in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Editor Window Customization in React Scheduler | Syncfusion
+description: Learn how to customize the editor window and quick pop-up in the Syncfusion React Scheduler to match your data and design needs.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Editor template in React Schedule component
+# Editor Window Customization in React Scheduler
 
 The Scheduler uses popups and dialogs to display notifications and provides a detailed event editor window to simplify appointment creation and editing. You can customize this editor window, its fields, and apply validations as needed.
 

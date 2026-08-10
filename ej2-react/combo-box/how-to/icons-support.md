@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Icons support in React Combo box component | Syncfusion
-description: Learn here all about Icons support in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: How to show list items with icons in React ComboBox | Syncfusion
+description: Display icons in Syncfusion React ComboBox list items by mapping the iconCss field, which renders a styled span inside each item for custom styling.
 control: Icons support 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons support in React Combo box component
+# How to show list items with icons in React ComboBox
 
-Display icons in list items by mapping the [iconCss](https://ej2.syncfusion.com/react/documentation/api/combo-box/#fields) field. The `iconCss` field creates a span element in each list item with the mapped class name, allowing you to apply custom styling as needed.
+Display icons in list items by mapping the [iconCss](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) field. The `iconCss` field creates a span element in each list item with the mapped class name, allowing you to apply custom styling as needed.
 
 In the following sample, icon classes are mapped with `iconCss` field.
 

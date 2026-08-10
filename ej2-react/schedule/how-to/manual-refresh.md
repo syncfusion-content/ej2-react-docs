@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Manual refresh in React Schedule component | Syncfusion
-description: Learn here all about Manual refresh in Syncfusion React Schedule component of Syncfusion Essential JS 2 and more.
-control: Scheduler 
+title: Manually Refresh Layout in React Scheduler | Syncfusion
+description: Learn how to manually refresh specific templates and the overall layout in the Syncfusion React Scheduler without re-rendering the entire component.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Manual refresh in React Schedule component
+# Manually Refresh Layout in React Scheduler
 
 ## Refresh Template
 

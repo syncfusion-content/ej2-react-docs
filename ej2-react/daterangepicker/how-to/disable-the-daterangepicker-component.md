@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable the DateRangePicker component in React Daterangepicker component | Syncfusion
-description: Learn here all about Disable the DateRangePicker component in Syncfusion React Daterangepicker component of Syncfusion Essential JS 2 and more.
+title: How to disable the DateRangePicker in React DateRangePicker | Syncfusion
+description: Disable the React DateRangePicker with the enabled property set to false to block all user input and form submission.
 control: Disable the DateRangePicker component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable the DateRangePicker component in React Daterangepicker component
+# How to disable the DateRangePicker in React DateRangePicker
 
 The DateRangePicker component can be disabled by setting the [`enabled`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#enabled) property to `false`. A disabled DateRangePicker prevents all user interactions, including form submission, and appears visually distinct from an enabled state.
 

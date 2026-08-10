@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Popup items in React Drop down button component | Syncfusion
-description: Learn here all about Popup items in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: Popup items in React DropDownButton | Syncfusion
+description: Configure React DropDownButton popup items with icons, separators, and text. Bind items from a data source to populate the action list.
 control: Popup items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Popup items in React Drop down button component
+# Popup items in React DropDownButton
 
 ## Icons
 

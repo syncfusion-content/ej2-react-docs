@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Daterangepicker component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Daterangepicker component of Syncfusion Essential JS 2 and more.
+title: Customization in React DateRangePicker | Syncfusion
+description: Customize the React DateRangePicker day cells, presets, and separators using the renderDayCell event and the presets property.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Daterangepicker component
+# Customization in React DateRangePicker
 
 The DateRangePicker component offers extensive UI customization through events and properties that enable flexible design adaptation to specific application needs.
 

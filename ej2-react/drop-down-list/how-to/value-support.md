@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value support in React Drop down list component | Syncfusion
-description: Learn here all about Value support in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to ensure unique values per list item in React Dropdown List | Syncfusion
+description: Ensure each list item in the React Dropdown List has a unique value by mapping the value field to a distinct data column.
 control: Value support 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value support in React Drop down list component
+# How to ensure unique values per list item in React Dropdown List
 
 Yes, the value for each list item must be unique.

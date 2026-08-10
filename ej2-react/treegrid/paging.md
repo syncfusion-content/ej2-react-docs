@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Paging in React TreeGrid component | Syncfusion
-description: Learn here all about Paging in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Paging | Syncfusion
+description: Learn how to use paging in React TreeGrid, including pagination configuration, customization, and advanced features for managing large datasets.
 control: Paging 
 platform: ej2-react
 documentation: ug

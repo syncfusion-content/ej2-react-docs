@@ -1,16 +1,18 @@
 ---
 layout: post
-title: "MongoDB data binding in React Pivot Table | Syncfusion"
-component: "Pivot Table"
+title: MongoDB data binding in React Pivot Table | Syncfusion
+description: Learn how the React Pivot Table retrieves data from a MongoDB database through a Web API controller and binds it as the pivot data source.
 platform: ej2-react
-description: "Learn how the React Pivot Table retrieves data from a MongoDB database through a Web API controller and binds it as the pivot data source."
 control: Pivot Table
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # MongoDB data binding in React Pivot Table
 
 This guide explains how to retrieve data from a MongoDB database using the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) and [MongoDB.Bson](https://www.nuget.org/packages/MongoDB.Bson) libraries and bind it to the Pivot Table through a Web API controller.
+
+> **Sample dataset:** The pivot report below uses the `sample_training` database with a `ProductDetails` collection. If you don't already have this collection, you can load the public [sample datasets](https://docs.atlas.mongodb.com/sample-data/available-sample-datasets/) into your local MongoDB or MongoDB Atlas cluster, or replace the database/collection names with your own. Make sure the collection contains the fields referenced in the pivot report (`Country`, `Products`, `Sold`, `Amount`, `Year`).
 
 ## Creating a Web API Service to Fetch MongoDB Data
 
@@ -27,6 +29,12 @@ To enable MongoDB database connectivity:
 1. Open the **NuGet Package Manager** in your project solution and search for the packages [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver/) and [MongoDB.Bson](https://www.nuget.org/packages/MongoDB.Bson).
 2. Install both packages to add MongoDB support.
 
+```bash
+dotnet add package MongoDB.Driver
+dotnet add package MongoDB.Bson
+dotnet add package Newtonsoft.Json
+```
+
 ![Add the NuGet package MongoDB.Driver to the project](../images/mongodb-data-nuget-package-install.png)
 
 ### Step 3: Create a Web API Controller
@@ -36,55 +44,18 @@ To enable MongoDB database connectivity:
 ### Step 4: Connect to MongoDB and Retrieve Data
 In the **PivotController.cs** file, use the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver/) and [MongoDB.Bson](https://www.nuget.org/packages/MongoDB.Bson) libraries to connect to a MongoDB database and retrieve data for the Pivot Table.
 
-1. **Establish Connection**: Use **MongoClient** with a valid connection string (e.g., `<Enter your valid connection string here>`) to connect to the MongoDB database.
+1. **Establish Connection**: Use **MongoClient** with a valid connection string (e.g., `<Enter your valid connection string here>`) to connect to the MongoDB database. For MongoDB Atlas, the connection string is in the format `mongodb+srv://user:password@cluster.mongodb.net/`.
 2. **Access the Database and Collection**: Use the **GetDatabase** method to access the specified database (e.g., `sample_training`) and the **GetCollection** method to target the desired collection (e.g., `ProductDetails`).
 3. **Retrieve and Structure Data**: Use the **Find** method of the **IMongoCollection** interface with an empty **BsonDocument** to retrieve data from the collection. The **ToList** method then converts the retrieved data into a **List** for JSON serialization.
 
-```csharp
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using MongoDB.Driver;
-using MongoDB.Bson;
-
-namespace MyWebService.Controllers
-{
-    [ApiController]
-    [Route("[controller]")]
-    public class PivotController : ControllerBase
-    {
-        private static List<ProductDetails> FetchMongoDbResult()
-        {
-            // Replace with your own connection string.
-            string connectionString = "<Enter your valid connection string here>";
-            MongoClient client = new MongoClient(connectionString);
-            IMongoDatabase database = client.GetDatabase("sample_training");
-            var collection = database.GetCollection<ProductDetails>("ProductDetails");
-            return collection.Find(new BsonDocument()).ToList();
-        }
-        public class ProductDetails
-        {
-            public ObjectId Id { get; set; }
-            public int Sold { get; set; }
-            public double Amount { get; set; }
-            public string? Country { get; set; }
-            public string? Products { get; set; }
-            public string? Year { get; set; }
-            public string? Quarter { get; set; }
-        }
-    }
-}
-```
-
-### Step 5: Serialize Data to JSON
-In the **PivotController.cs** file, define a **Get** method that calls **FetchMongoDbResult** to retrieve data from the MongoDB database as a **List**. Then, use **JsonConvert.SerializeObject** from the **Newtonsoft.Json** library to convert the **List** into JSON format. This JSON data will be used by the Pivot Table component.
-
-> Ensure the **Newtonsoft.Json** NuGet package is installed in your project to use **JsonConvert**.
+> **Important:** The `Id` property of type `ObjectId` must be decorated with the `[BsonId]` attribute. Without it, MongoDB.Driver will throw `FormatException` when reading documents whose `_id` field is an ObjectId. The Pivot Table will also reject the JSON response because `ObjectId` does not serialize to a primitive type by default.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
+using Newtonsoft.Json;
 
 namespace MyWebService.Controllers
 {
@@ -107,9 +78,12 @@ namespace MyWebService.Controllers
             var collection = database.GetCollection<ProductDetails>("ProductDetails");
             return collection.Find(new BsonDocument()).ToList();
         }
+
         public class ProductDetails
         {
-            public ObjectId Id { get; set; }
+            [BsonId]
+            [BsonRepresentation(BsonType.ObjectId)]
+            public string? Id { get; set; }
             public int Sold { get; set; }
             public double Amount { get; set; }
             public string? Country { get; set; }
@@ -121,12 +95,35 @@ namespace MyWebService.Controllers
 }
 ```
 
+### Step 5: Enable CORS in the Web API
+React (typically `http://localhost:3000` or `http://localhost:5173`) running on a different origin than the Web API will be blocked by CORS unless the API explicitly allows it. In **Program.cs**, register and apply a CORS policy:
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+        policy.WithOrigins("http://localhost:3000", "http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
+var app = builder.Build();
+
+app.UseCors("AllowReactApp"); // Must be called before MapControllers.
+app.MapControllers();
+
+app.Run();
+```
+
 ### Step 6: Run the Web API Service
 1. Build and run the application.
-2. The application will be hosted at `https://localhost:44346/` (the port number may vary based on your configuration).
+2. The application will be hosted at `https://localhost:7147/` by default (the port number is defined in **Properties/launchSettings.json** and may vary based on your configuration).
 
 ### Step 7: Access the JSON Data
-1. Access the Web API endpoint at `https://localhost:44346/Pivot` to view the JSON data retrieved from the MongoDB database.
+1. Access the Web API endpoint at `https://localhost:7147/Pivot` to view the JSON data retrieved from the MongoDB database.
 2. The browser will display the JSON data, as shown below.
 
 ![Hosted Web API URL](../images/mongodb-data.png)
@@ -140,7 +137,7 @@ This section explains how to connect the Pivot Table component to a MongoDB data
 2. Ensure your React project is configured with the necessary EJ2 Pivot Table dependencies.
 
 ### Step 2: Configure the Web API URL in the Pivot Table
-1. In the **App.tsx** (or **App.jsx**) file, map the Web API URL (`https://localhost:44346/Pivot`) to the Pivot Table using the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings).
+1. In the **App.tsx** (or **App.jsx**) file, map the Web API URL (`https://localhost:7147/Pivot`) to the Pivot Table using the [url](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url) property within the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings).
 2. Below is the sample code to configure the Pivot Table to fetch data from the Web API:
 
 ```typescript
@@ -150,7 +147,7 @@ import './App.css';
 
 function App() {
     let dataSourceSettings = {
-        url: 'https://localhost:44346/Pivot'
+        url: 'https://localhost:7147/Pivot'
         // Additional configuration will be added in the next step
     };
 
@@ -176,7 +173,7 @@ import './App.css';
 
 function App() {
     let dataSourceSettings = {
-        url: 'https://localhost:44346/Pivot',
+        url: 'https://localhost:7147/Pivot',
         enableSorting: true,
         columns: [
             { name: 'Year' }

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip with React Rating component | Syncfusion
-description:  Learn here all about Tooltip in Syncfusion React Rating component of Syncfusion Essential JS 2 and more.
+title: Tooltip in React Rating | Syncfusion
+description: Show tooltips on React Rating items by enabling showTooltip so users see hints like Poor, OK, or Good when hovering.
 control: Tooltip
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Tooltip in React Rating Component
+# Tooltip in React Rating
 
 Display tooltips in rating items by setting the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/rating/#showtooltip) property to `true`. When enabled, tooltips appear when users hover over rating items.
 

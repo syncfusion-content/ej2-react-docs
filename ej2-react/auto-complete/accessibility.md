@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React AutoComplete component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React AutoComplete | Syncfusion
+description: Build accessible apps with the Syncfusion React AutoComplete, which follows WAI-ARIA, WCAG 2.2, Section 508, and ADA standards with full keyboard support.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React AutoComplete component
+# Accessibility in React AutoComplete
 
 The AutoComplete component has been designed with WAI-ARIA specifications in mind and applies the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 

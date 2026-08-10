@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React TextArea component | Syncfusion
-description: Handling events triggered by user interactions or changes in the React TextArea component of Syncfusion Essential JS 2 and more.
+title: Events in React TextArea | Syncfusion
+description: Handle the React TextArea lifecycle events such as created, change, focus, blur, and input to react to user interactions.
 control: Events
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React TextArea Component
+# Events in React TextArea
 
 This section describes the TextArea events that will be triggered when appropriate actions are performed. The following events are available in the TextArea component.
 

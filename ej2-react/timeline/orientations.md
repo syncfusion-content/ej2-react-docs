@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Orientations in the React Timeline component | Syncfusion
-description:  Checkout and learn about Orientations with Syncfusion React Timeline component of Syncfusion Essential JS 2 and more.
+title: Orientations in React Timeline | Syncfusion
+description: Switch the Syncfusion React Timeline layout between Vertical and Horizontal orientations via the orientation property to fit any container.
 control: Timeline
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Orientations in React Timeline component
+# Orientations in React Timeline
 
 The Timeline component supports two layout directions via the [orientation](https://ej2.syncfusion.com/react/documentation/api/timeline#orientation) property: `Vertical` and `Horizontal`. Choose the orientation that best fits the available space and the visual flow of the application.
 

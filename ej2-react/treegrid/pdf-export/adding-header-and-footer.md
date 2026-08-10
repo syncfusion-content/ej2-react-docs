@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adding header and footer in React TreeGrid | Syncfusion
-description: Learn here all about PDF Adding header and footer in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid PDF Headers and Footers | Syncfusion
+description: Learn how to add and customize headers and footers in PDF exports for the React TreeGrid, including text, page numbers, lines, and images.
 control: Adding header and footer 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding header and footer in React TreeGrid
+# Adding Headers and Footers in React TreeGrid
 
 Customize header and footer content such as text, page numbers, lines, page size, and orientation.
 

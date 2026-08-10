@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Datepicker component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Customization in React DatePicker | Syncfusion
+description: Customize the React DatePicker appearance with the cssClass property, renderDayCell event, and a full list of .e-* CSS classes.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Datepicker component
+# Customization in React DatePicker
 
 The DatePicker appearance can be customized using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/datepicker#cssclass) property to apply custom styles to the input element and calendar. Additionally, the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/datepicker/renderDayCellEventArgs#renderdaycelleventargs) event allows customization of individual day cell appearances within the calendar.
 

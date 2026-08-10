@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Action buttons in React Card component | Syncfusion
-description: Learn here all about Action buttons in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
+title: Action Buttons in React Card | Syncfusion
+description: Add horizontal or vertical action buttons and anchor links inside a Syncfusion React Card using the e-card-actions and e-card-btn classes.
 control: Card 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Action buttons in React Card component
+# Action Buttons in React Card
 
 Action buttons can be included within the Card and customize them. Action buttons are contained within a `div` element with the `e-card-actions` class, which holds button or anchor elements within the card root element.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip for button in React Button component | Syncfusion
-description: Learn here all about Tooltip for button in Syncfusion React Button component of Syncfusion Essential JS 2 and more.
+title: How to show tooltip in React Button | Syncfusion
+description: Show a native browser tooltip on the React Button hover by setting the HTML title attribute on the element.
 control: Tooltip for button 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip for button in React Button component
+# How to show tooltip in React Button
 
 Display a tooltip on Button hover by setting the `title` attribute. The browser displays the tooltip text as a native browser tooltip.
 

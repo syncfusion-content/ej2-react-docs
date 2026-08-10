@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in React AutoComplete component | Syncfusion
-description: Learn here all about Localization in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
+title: Localization in React AutoComplete | Syncfusion
+description: Localize the Syncfusion React AutoComplete's noRecordsTemplate and actionFailureTemplate text using the L10n class and any culture such as fr-FR.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React AutoComplete component
+# Localization in React AutoComplete
 
 The Localization library allows you to localize the static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/auto-complete#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/auto-complete#actionfailuretemplate) properties according to the culture currently assigned to the AutoComplete.
 

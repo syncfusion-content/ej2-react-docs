@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in React Multi select component | Syncfusion
-description: Learn here all about Templates in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Templates in React MultiSelect Dropdown | Syncfusion
+description: Customize the React MultiSelect Dropdown popup with item, value, group, header, footer, and no-records templates for richer item layouts, selected-value formatting, and empty-state messaging.
 control: Templates 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React Multi select component
+# Templates in React MultiSelect Dropdown
 
 The MultiSelect provides comprehensive template support to customize list items, group titles, selected values, headers, and footer elements.
 

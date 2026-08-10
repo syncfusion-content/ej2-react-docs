@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disabled Items in React Mention component | Syncfusion
-description: Learn here all about Disabled Items in Syncfusion React Mention component of Syncfusion Essential JS 2 and more.
+title: Disabled Items in React Mention | Syncfusion
+description: Disable individual items in the React Mention suggestion list via the fields.disabled data field or the disableItem method.
 control: Disabled Items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disabled Items in React Mention component
+# Disabled Items in React Mention
 
 The Mention supports enabling or disabling individual items as needed. Map the disabled state through the [disabled](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) field in the data table. Disabled items cannot be selected. Configure disabled item behavior using the `fields.disabled` property.
 

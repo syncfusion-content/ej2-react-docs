@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Command column editing in React TreeGrid component | Syncfusion
-description: Learn here all about Command column editing in Syncfusion React TreeGrid component of Syncfusion Essential JS 2 and more.
+title: React TreeGrid Command Column Editing | Syncfusion
+description: Learn how to use command column editing in the React TreeGrid to add CRUD and custom action buttons for row-level operations.
 control: Command column editing 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Command column editing in React TreeGrid 
+# Command Column Editing in React TreeGrid 
 
-The command column adds CRUD action buttons within a column. Configure command buttons using the [column.commands](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#commands) property.
+The command column adds CRUD action buttons within a column. Configure command buttons using the [column.commands](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#commands) property.
 
 The available built-in command buttons are:
 
@@ -34,7 +34,7 @@ The available built-in command buttons are:
 
 ## Custom command
 
-Custom command buttons can be added using the [column.commands](https://ej2.syncfusion.com/react/documentation/api/treegrid/column/#commands) property. Define the action for custom buttons in the [buttonOption.click](https://ej2.syncfusion.com/react/documentation/api/grid/commandButtonOptions/#click) event.
+Custom command buttons can be added using the [column.commands](https://ej2.syncfusion.com/react/documentation/api/treegrid/column#commands) property. Define the action for custom buttons in the [buttonOption.click](https://ej2.syncfusion.com/react/documentation/api/grid/commandButtonOptions#click) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

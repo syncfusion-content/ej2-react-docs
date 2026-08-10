@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Preact and React Schedule Component | Syncfusion
-description: Check out and learn about getting started with the Preact Framework and React Schedule Component of Syncfusion Essential JS 2 and more details.
-control: Preact
+title: Getting Started with React Scheduler and Preact | Syncfusion
+description: Learn how to get started with the Syncfusion React Scheduler in a Preact application, exploring setup, configuration, and basic usage.
+control: Scheduler
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Schedule Component in Preact Framework
+# Getting Started with React Scheduler and Preact
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler).
 

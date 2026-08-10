@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hide default drop area in React Uploader component | Syncfusion
-description: Learn here all about Hide default drop area in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to hide the default drop area in React File Upload | Syncfusion
+description: Hide the default drag-and-drop area in the React File Upload by overriding the .e-upload.e-control styles to use a custom drop area.
 control: Hide default drop area 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide default drop area in React Uploader component
+# How to hide the default drop area in React File Upload
 
 Hide the default drag-and-drop area by overriding the corresponding Uploader styles. This is useful when you want to create a custom drop area or use the Uploader with alternative UI patterns. Override the following styles to hide the default drop area:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Maskedtextbox component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: EJ1 API Migration in React MaskedTextBox | Syncfusion
+description: Migrate the React MaskedTextBox (MaskEdit) code from Essential JS 1 to Essential JS 2 using the renamed property and event mapping table.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Maskedtextbox component
+# EJ1 API Migration in React MaskedTextBox
 
 This article describes the API migration process of MaskEdit component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Split button component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Split button component of Syncfusion Essential JS 2 and more.
+title: Style and appearance in React Split Button | Syncfusion
+description: Customize the React Split Button appearance with CSS classes for variants (primary, success, warning, danger), sizes, and state styling.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Split button component
+# Style and appearance in React Split Button
 
 Customize SplitButton styling by overriding its default CSS classes. The following table lists the CSS classes available for styling different SplitButton elements. Additionally, use the [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material) to create and preview custom themes for all Syncfusion components.
 

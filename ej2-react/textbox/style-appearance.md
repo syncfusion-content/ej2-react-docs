@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in React TextBox component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React TextBox | Syncfusion
+description: Override React TextBox CSS classes to customize the wrapper, input, and float label appearance for your design system.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in React TextBox component
+# Style and Appearance in React TextBox
 
 Customize the TextBox component's appearance using CSS to match your application's design system. The following CSS rules demonstrate common styling modifications for various TextBox scenarios.
 

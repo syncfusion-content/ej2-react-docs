@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ej1 api migration in React Range Slider component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: EJ1 API Migration in React Slider | Syncfusion
+description: Migrate the React Slider code from Essential JS 1 to Essential JS 2 using the renamed property and event mapping table.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Ej1 api migration in React Range Slider component
+# EJ1 API Migration in React Slider
 
 This article describes how to migrate the Slider component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

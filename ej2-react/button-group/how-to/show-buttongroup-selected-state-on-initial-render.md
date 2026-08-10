@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Button group component | Syncfusion
-description: Learn here all about Show buttongroup selected state on initial render in Syncfusion React Button group component of Syncfusion Essential JS 2 and more.
+title: Pre-select on render in React Button Group | Syncfusion
+description: Pre-select a button on initial render in the React Button Group by adding the checked attribute to the input element for default selections.
 control: Show buttongroup selected state on initial render 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set ButtonGroup initial selection
+# How to pre-select on render in React Button Group
 
 Display a button in the selected state when the ButtonGroup first renders by adding the `checked` attribute to the corresponding input element. This is useful for setting default selections in radio and checkbox button groups.
 

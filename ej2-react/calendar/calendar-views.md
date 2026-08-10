@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Calendar views in React Calendar component | Syncfusion
-description: Learn here all about Calendar views in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: Calendar Views in React Calendar | Syncfusion
+description: Switch the React Calendar start view between month, year, and decade to give users a flexible date navigation experience.
 control: Calendar views 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Calendar views in React Calendar component
+# Calendar Views in React Calendar
 
 The Calendar provides predefined views that give a flexible way to navigate and select dates. Use the [`start`](https://ej2.syncfusion.com/react/documentation/api/calendar#start) property to change the default view of the Calendar.
 

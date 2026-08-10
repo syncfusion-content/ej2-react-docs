@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types in React Chips component | Syncfusion
-description: Learn here all about Types in Syncfusion React Chips component of Syncfusion Essential JS 2 and more.
+title: Types in React Chips | Syncfusion
+description: Use the four React Chips types: input, choice, filter, and action. Each serves a different purpose from tagging data to triggering actions.
 control: Types 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types in React Chips component
+# Types in React Chips
 
 The Chips component supports four primary types, each serving a different functional purpose. Choose the appropriate type based on the interaction pattern and use case.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Resizing in React ComboBox component | Syncfusion
-description: Learn here all about Popup Resizing in Syncfusion React ComboBox component of Syncfusion Essential JS 2 and more.
+title: Resizing in React ComboBox | Syncfusion
+description: Let users dynamically resize the Syncfusion React ComboBox popup by enabling the AllowResize property, with dimensions retained across sessions.
 control: Resizing
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resizing in React ComboBox component
+# Resizing in React ComboBox
 
-Enable popup resizing in the ComboBox component using the [AllowResize](https://ej2.syncfusion.com/react/documentation/api/combo-box/#allowresize) property. When enabled, users can dynamically adjust the popup size to improve visibility. Resized dimensions persist across sessions, providing a consistent user experience.
+Enable popup resizing in the ComboBox component using the [AllowResize](https://ej2.syncfusion.com/react/documentation/api/combo-box#allowresize) property. When enabled, users can dynamically adjust the popup size to improve visibility. Resized dimensions persist across sessions, providing a consistent user experience.
 
 
 `[Class-component]`
