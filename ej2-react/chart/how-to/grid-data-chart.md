@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grid data chart in React Chart component | Syncfusion
-description: Learn here all about Grid data chart in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: How to visualize Grid data in React Chart | Syncfusion
+description: Learn how to visualize data from a Syncfusion React Grid in Syncfusion React Chart by using the Grid's actionComplete and dataBound events.
 control: Grid data chart 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grid data chart in React Chart component
+# How to visualize Grid data in React Chart
 
 You can visualize the data that returned by grid in chart.
 

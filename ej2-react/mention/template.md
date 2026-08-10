@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in React Mention component | Syncfusion
-description: Learn here all about Template in Syncfusion React Mention component of Syncfusion Essential JS 2 and more.
+title: Template in React Mention | Syncfusion
+description: Customize React Mention item, display, no-records, and loading-spinner templates for richer suggestion lists.
 control: Template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in React Mention component
+# Template in React Mention
 
 The Mention provides several options to customize suggestion list items, display values, and data loading indicators.
 

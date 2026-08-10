@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Appearance in React Stock chart component | Syncfusion
-description: Learn here all about Appearance in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
+title: Appearance in React Stock Chart | Syncfusion
+description: Learn how to customize the appearance of the Syncfusion React Stock Chart Component with custom title and theme.
 control: Appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in React Stock chart component
+# Appearance in React Stock Chart
 
 ## Stock Chart Title
 

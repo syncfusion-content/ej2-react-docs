@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Datetimepicker component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Datetimepicker component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React DateTime Picker | Syncfusion
+description: Review the React DateTime Picker accessibility compliance for WCAG 2.2, Section 508, screen readers, RTL, and keyboard navigation.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Datetimepicker component
+# Accessibility in React DateTime Picker
 
 The DateTimePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

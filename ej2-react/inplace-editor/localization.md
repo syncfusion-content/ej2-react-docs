@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Localization in React Inplace editor component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Inplace editor component of Syncfusion Essential JS 2 and more.
-control: Localization 
+title: Localization in React In-place Editor | Syncfusion
+description: Localize the Syncfusion React In-place Editor for French and other cultures, enable right-to-left text direction, and format DatePicker values.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Inplace editor component
+# Localization in React In-place Editor
 
 ## Localization
 
-Localize the default text content of the In-place Editor for different cultures by setting the [locale](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#locale) property. The following keys are localized based on the specified culture.
+Localize the default text content of the In-place Editor for different cultures by setting the [locale](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#locale) property. The following keys are localized based on the specified culture.
 
 | Locale key | en-US (default) |
 |------|------|
@@ -85,14 +85,14 @@ Control the text direction of the In-place Editor using the `enableRtl` property
 
 ## Format
 
-Format the displayed values by configuring the `format` property of the In-place Editor's child component through the [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#model) property. The following components support format customization:
+Format the displayed values by configuring the `format` property of the In-place Editor's child component through the [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#model) property. The following components support format customization:
 
-* [DatePicker](../datepicker/date-format/)
-* [DateRangePicker](../daterangepicker/globalization/#customize-the-date-format)
-* [DateTimePicker](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#format)
-* [NumericTextBox](../numerictextbox/formats/#custom-formats)
-* [Slider](../slider/format/)
-* [TimePicker](https://ej2.syncfusion.com/react/documentation/api/timepicker/#format)
+* [DatePicker](../datepicker/date-format)
+* [DateRangePicker](../daterangepicker/globalization#customize-the-date-format)
+* [DateTimePicker](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#format)
+* [NumericTextBox](../numerictextbox/formats#custom-formats)
+* [Slider](../slider/format)
+* [TimePicker](https://ej2.syncfusion.com/react/documentation/api/timepicker#format)
 
 `[Class-component]`
 

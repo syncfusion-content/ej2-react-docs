@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Time masking in React Timepicker component | Syncfusion
-description: Learn here all about Time masking in Syncfusion React Timepicker component of Syncfusion Essential JS 2 and more.
+title: Mask Support in React TimePicker | Syncfusion
+description: Enable built-in time masking in the React TimePicker with the enableMask property and the MaskedDateTime module for fixed input.
 control: Time masking 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Time masking in React Timepicker component
+# Mask Support in React TimePicker
 
 TimePicker has `enableMask` property that provides the option to enable the built-in date masking support. Also, you must inject the MaskedDateTime module to enable the masking support.
 

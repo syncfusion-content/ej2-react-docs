@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Legend in React Chart component | Syncfusion
-description: Learn here all about Legend in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Legend 
+title: Legend in React Chart | Syncfusion
+description: Learn how to add and customize the legend in Syncfusion React Chart to identify series, control position, and toggle series visibility.
+control: Legend
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Legend in React Chart component
+# Legend in React Chart
 
 The legend provides information about the series rendered in the chart and helps users identify each series by its color, shape, or style.
 

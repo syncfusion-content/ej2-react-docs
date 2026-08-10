@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Inplace editor component | Syncfusion
-description: Learn here all about Style in Syncfusion React Inplace editor component of Syncfusion Essential JS 2 and more.
-control: Style 
+title: Style in React In-place Editor | Syncfusion
+description: Customize the Syncfusion React In-place Editor's text color, font, border, and save or cancel button icon and background colors using CSS classes.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Inplace editor component
+# Style in React In-place Editor
 
 Use the following CSS classes and selectors to customize the In-place Editor's appearance based on specific requirements.
 

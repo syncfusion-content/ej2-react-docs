@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Predefined dialogs component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Predefined dialogs component of Syncfusion Essential JS 2 and more.
+title: Customization in React Predefined Dialogs | Syncfusion
+description: Customize the React Predefined Dialogs action button text and icons for Alert, Confirm, and Prompt dialogs using the okButton and cancelButton properties.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Predefined dialogs component
+# Customization in React Predefined Dialogs
 
 The buttons of predefined dialogs can be customized using the following properties:
 
@@ -111,10 +111,10 @@ The following code snippet demonstrates how to customize action buttons for **al
 
 When rendering the predefined dialogs through utility methods, You can close the dialog using the following ways. The default values of `closeOnEscape` and `showCloseIcon` is `false`.
 
-* By pressing the escape key if the [closeOnEscape](https://ej2.syncfusion.com/angular/documentation/api/dialog/#closeonescape) property is enabled.
-* By clicking the close button if the [showCloseIcon](https://ej2.syncfusion.com/angular/documentation/api/dialog/#showcloseicon) property is enabled.
+* By pressing the escape key if the [closeOnEscape](https://ej2.syncfusion.com/angular/documentation/api/dialog#closeonescape) property is enabled.
+* By clicking the close button if the [showCloseIcon](https://ej2.syncfusion.com/angular/documentation/api/dialog#showcloseicon) property is enabled.
 
-You can also manually close the Dialogs by creating an instance to the dialog and call the [hide](https://ej2.syncfusion.com/angular/documentation/api/dialog/#hide) method.
+You can also manually close the Dialogs by creating an instance to the dialog and call the [hide](https://ej2.syncfusion.com/angular/documentation/api/dialog#hide) method.
 
 Use the following code for **alert**, **confirm** and **prompt** to demonstrates the different ways of hiding the utility dialog.
 

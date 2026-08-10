@@ -1,14 +1,14 @@
 ---
 layout: post
-title: States in React Progress bar component | Syncfusion
-description: Learn here all about States in Syncfusion React Progress bar component of Syncfusion Essential JS 2 and more.
+title: States in React Progress Bar | Syncfusion
+description: Learn about the Determinate, Indeterminate, and Buffer states of the React Progress Bar for visualizing known and unknown progress values.
 control: States 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# States in React Progress bar component
+# States in React Progress Bar
 
 Visualize progress in different modes.
 

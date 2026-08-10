@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cross hair and track ball in React Chart component | Syncfusion
-description: Learn here all about Cross hair and track ball in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Cross hair and track ball 
+title: Crosshair and Trackball in React Chart | Syncfusion
+description: Learn how to add crosshair and trackball interactions to Syncfusion React Chart to inspect data points precisely with axis tooltips and highlighting.
+control: Cross hair and track ball
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cross hair and track ball in React Chart component
+# Crosshair and Trackball in React Chart
 
 The crosshair feature displays vertical and horizontal guide lines that intersect at the mouse or touch position, helping to identify the corresponding axis values precisely.
 

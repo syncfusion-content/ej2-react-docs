@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resizing of panels in React Dashboard Layout  component | Syncfusion
-description: Learn here all about Resizing of panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
+title: Resizing Panels in React Dashboard Layout | Syncfusion
+description: Resize Syncfusion React Dashboard Layout panels via allowResizing, configurable directional handles, and the resizePanel public method.
 control: Dashboard Layout 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resizing of panels in React Dashboard Layout  component
+# Resizing Panels in React Dashboard Layout
 
 The Dashboard Layout component provides resizing functionality that can be enabled using the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#allowresizing) property. This functionality allows users to dynamically resize panels using resizing handles that control panel dimensions in various directions. The Dashboard Layout automatically handles collisions when resizing—if a panel expands into occupied space, adjacent panels are pushed to available positions.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header in React Tab component | Syncfusion
-description: Learn here all about Header in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: Header in React Tab | Syncfusion
+description: Customize the Syncfusion React Tab header text, icons, and close button, and place the header at the top, bottom, left, or right of content.
 control: Header 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header in React Tab component
+# Header in React Tab
 
 This section explains about modifying the style of Tab header, and configuring its icons and positions.
 

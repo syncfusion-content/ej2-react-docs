@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Tab component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Tab | Syncfusion
+description: Built-in WAI-ARIA tablist roles, aria-selected and aria-controls attributes, and arrow-key navigation for the Syncfusion React Tab.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Tab component
+# Accessibility in React Tab
 
 The Tab component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

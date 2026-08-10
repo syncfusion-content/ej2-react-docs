@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Trigger click event of input file from external button in React Uploader component | Syncfusion
-description: Learn here all about Trigger click event of input file from external button in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to trigger the file dialog from a button in React File Upload | Syncfusion
+description: Open the file selection dialog from an external button in the React File Upload by invoking click on the uploader's hidden input element.
 control: Trigger click event of input file from external button 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Trigger click event of input file from external button in React Uploader component
+# How to trigger the file dialog from a button in React File Upload
 
 Trigger the file input dialog from an external button by invoking the `click` event on the Uploader's internal input element. This approach enables custom browse buttons outside the Uploader component. The following sample demonstrates triggering the file selection dialog from an **Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Button**.
 

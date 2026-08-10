@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Different layouts in React Splitter component | Syncfusion
-description: Learn here all about Different layouts in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
+title: Different Layouts in React Splitter | Syncfusion
+description: Build complex multi-pane and nested Syncfusion React Splitter layouts, such as a code editor style with outer and inner Splitter components.
 control: Splitter
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Different layouts in React Splitter component
+# Different Layouts in React Splitter
 
 Using the React Splitter component, create complex layouts with multiple and nested panes.
 

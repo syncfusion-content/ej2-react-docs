@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Slider thumb in React Range Slider component | Syncfusion
-description: Learn here all about Customize Slider thumb in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to customize the Slider thumb in React Slider | Syncfusion
+description: Customize the React Slider thumb handle by overriding the e-handle CSS class with custom background images or shapes.
 control: Customize Slider thumb 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Slider thumb in React Range Slider component
+# How to customize the Slider thumb in React Slider
 
 The Slider appearance can be customized using CSS by overriding Slider CSS classes. By default, the Slider uses the `e-handle` class for the Slider thumb. You can override this class as needed.
 

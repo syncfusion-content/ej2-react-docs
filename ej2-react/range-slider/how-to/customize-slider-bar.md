@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Slider bar in React Range Slider component | Syncfusion
-description: Learn here all about Customize Slider bar in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to customize the Slider bar in React Slider | Syncfusion
+description: Customize the React Slider track bar by overriding the e-slider-track CSS class with custom colors or gradient backgrounds.
 control: Customize Slider bar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Slider bar in React Range Slider component
+# How to customize the Slider bar in React Slider
 
 The Slider appearance can be customized through CSS by overriding Slider CSS classes. By default, the Slider uses the `e-slider-track` class for the bar. You can override this class with custom color values as shown below.
 

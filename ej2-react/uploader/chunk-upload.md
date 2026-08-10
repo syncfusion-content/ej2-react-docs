@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chunk upload in React Uploader component | Syncfusion
-description: Learn here all about Chunk upload in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: Chunk Upload in React File Upload | Syncfusion
+description: Split large files into chunks and upload them over AJAX in the React File Upload, with built-in pause, resume, and retry for failed chunks.
 control: Chunk upload 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chunk upload in React Uploader component
+# Chunk Upload in React File Upload
 
 The Uploader sends the large file split into small chunks and transmits to the server using AJAX. You can also pause, resume, and retry the failed chunk file.
 

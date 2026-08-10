@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Mode and value in React Color picker component | Syncfusion
-description: Learn here all about Mode and value in Syncfusion React Color picker component of Syncfusion Essential JS 2 and more.
+title: Mode and Value in React Color Picker | Syncfusion
+description: Switch the React Color Picker between inline and popup modes, render the palette at initial load, and bind color values for the picker.
 control: Mode and value 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Mode and value in React Color picker component
+# Mode and Value in React Color Picker
 
 ## Inline
 
-By default, the ColorPicker renders as a SplitButton and opens a popup to access the ColorPicker. To render the ColorPicker container alone and access it directly, set the [`inline`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#inline) property to `true`.
+By default, the ColorPicker renders as a SplitButton and opens a popup to access the ColorPicker. To render the ColorPicker container alone and access it directly, set the [`inline`](https://ej2.syncfusion.com/react/documentation/api/color-picker#inline) property to `true`.
 
 The following sample shows inline rendering of the ColorPicker.
 
@@ -31,7 +31,7 @@ The following sample shows inline rendering of the ColorPicker.
 
 ## Rendering palette at initial load
 
-By default, the `Picker` area is rendered initially. To open the ColorPicker popup with the `Palette` area rendered, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#mode) property to `Palette`.
+By default, the `Picker` area is rendered initially. To open the ColorPicker popup with the `Palette` area rendered, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/color-picker#mode) property to `Palette`.
 
 In the following sample, the ColorPicker opens with the `Palette` rendered initially.
 
@@ -48,7 +48,7 @@ In the following sample, the ColorPicker opens with the `Palette` rendered initi
 
 ## Color value
 
-The [`value`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#value) property specifies the ColorPicker's color value. It supports three- or six-digit hex codes. To include opacity, use four- or eight-digit hex codes.
+The [`value`](https://ej2.syncfusion.com/react/documentation/api/color-picker#value) property specifies the ColorPicker's color value. It supports three- or six-digit hex codes. To include opacity, use four- or eight-digit hex codes.
 
 In the following sample, the color value is set as a four-digit hex code; the last digit represents the `opacity` value.
 
@@ -63,7 +63,7 @@ In the following sample, the color value is set as a four-digit hex code; the la
 
  {% previewsample "page.domainurl/code-snippet/colorpicker/mode-and-value-cs1" %}
 
->> The [`value`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#value) property supports hex code with or without `#` prefix.
+>> The [`value`](https://ej2.syncfusion.com/react/documentation/api/color-picker#value) property supports hex code with or without `#` prefix.
 
 ## See Also
 

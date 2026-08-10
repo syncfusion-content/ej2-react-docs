@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in React MultiColumn Combobox component | Syncfusion
-description: Checkout and learn about Localization in React MultiColumn Combobox component of Syncfusion Essential JS 2 and more.
+title: "Localization in React MultiColumn ComboBox | Syncfusion"
+description: Localize React MultiColumn ComboBox static text, such as the no-records message, by loading culture-specific translations through the L10n class.
 platform: ej2-react
 control: MultiColumn Combobox
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React MultiColumn ComboBox component
+# Localization in React MultiColumn ComboBox
 
 The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#norecordstemplate) property according to the culture currently assigned to the MultiColumn ComboBox.
 

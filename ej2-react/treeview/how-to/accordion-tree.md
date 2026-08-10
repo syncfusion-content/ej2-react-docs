@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accordion tree in React TreeView component | Syncfusion
-description: Learn here all about Accordion tree in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: How to make Tree View behave as Accordion | Syncfusion
+description: Make the Syncfusion React TreeView behave like an Accordion by collapsing all other nodes when one is expanded.
 control: Accordion tree 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accordion tree in React TreeView component
+# How to make Tree View behave as Accordion
 
 Accordion is an interface where a list of items can be collapsed or expanded, but only one list can be collapsed or expanded at a time. You can customize the TreeView to make it behave as an Accordion. Refer to the following code sample to create an Accordion tree.
 

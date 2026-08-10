@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom expand,collapse icon in React TreeView component | Syncfusion
-description: Learn here all about Customize the expand and collapse icons in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: How to customize expand/collapse icons in React | Syncfusion
+description: Replace the default expand and collapse icons on the Syncfusion React TreeView with custom icon CSS via expandIcon and collapseIcon.
 control: Customize the expand and collapse icons 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the expand and collapse icons in React TreeView component
+# How to customize expand/collapse icons in React
 
 You can customize TreeView expand and collapse icons by using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/treeview/#cssclass)&nbsp;property of TreeView. Refer to the sample to customize expand/collapse icons.
 

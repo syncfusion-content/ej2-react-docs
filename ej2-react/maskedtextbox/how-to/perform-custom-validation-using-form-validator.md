@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Perform custom validation using form validator in React Maskedtextbox component | Syncfusion
-description: Learn here all about Perform custom validation using form validator in Syncfusion React Maskedtextbox component of Syncfusion Essential JS 2 and more.
+title: How to add custom validation in React MaskedTextBox | Syncfusion
+description: Add a custom validation rule to the React MaskedTextBox using the FormValidator component to validate a mobile number format.
 control: Perform custom validation using form validator 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform custom validation using form validator in React Maskedtextbox component
+# How to add custom validation in React MaskedTextBox
 
 To perform custom validation on the MaskedTextBox, use the FormValidator component with custom validation rules.
 

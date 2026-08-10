@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Prevent the focus to previous element in React Dialog | Syncfusion
-description: Learn how to prevent focus from returning to the previously focused element in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: How to prevent focus to previous element in React Dialog | Syncfusion
+description: Stop the React Dialog from returning focus to the previously focused element on close by setting preventFocus to true in the beforeClose event.
 control: Prevent the focus to previous element 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent focus to previous element in React Dialog component
+# How to prevent focus to the previous element in React Dialog
 
 By default, when the dialog is closed, focus returns to the element that was previously focused before the dialog opened. You can prevent this behavior using the `beforeClose` event and setting the `preventFocus` argument to `true`.
 

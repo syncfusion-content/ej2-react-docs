@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in React Multi select component | Syncfusion
-description: Learn here all about Localization in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Localization in React MultiSelect Dropdown | Syncfusion
+description: Localize the React MultiSelect Dropdown no-records and action-failure template strings for any culture using the L10n class's load function with translation objects.
 control: Localization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in React Multi select component
+# Localization in React MultiSelect Dropdown
 
 The Localization library enables you to translate static text content in the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#actionfailuretemplate) properties based on the MultiSelect's assigned culture.
 

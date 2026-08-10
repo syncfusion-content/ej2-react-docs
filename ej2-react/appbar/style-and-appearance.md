@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Appbar component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Appbar component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React AppBar | Syncfusion
+description: CSS class reference plus the `cssClass` and `htmlAttributes` properties for theming the Syncfusion React AppBar.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Appbar component
+# Style and Appearance in React AppBar
 
 To modify the AppBar appearance, you need to override the default CSS of the AppBar component. Please find the list of CSS classes and their corresponding sections in the AppBar component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
 

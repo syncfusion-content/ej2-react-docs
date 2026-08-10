@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React SpeechToText component | Syncfusion
-description: Checkout and learn about Accessibility with React SpeechToText component of Syncfusion Essential JS 2 and more details.
+title: Accessibility in React Speech To Text | Syncfusion®
+description: Learn how the Syncfusion React Speech To Text component meets WCAG 2.2, Section 508, and ADA standards with WAI-ARIA labels and keyboard support.
 control: SpeechToText
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in ##Platform_Name## SpeechToText component
+# Accessibility in ##Platform_Name## Speech To Text
 
 The SpeechToText component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

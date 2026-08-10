@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the TextBox background color and text color in React TextBox component | Syncfusion
-description: Learn here all about Customize the TextBox background color and text color in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: How to customize TextBox colors in React TextBox | Syncfusion
+description: Customize the React TextBox background, text, and border colors by overriding the input and container CSS properties.
 control: Customize the TextBox background color and text color 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the TextBox background color and text color in React TextBox component
+# How to customize TextBox colors in React TextBox
 
 Apply custom styling to the TextBox by overriding its default CSS properties for background color, text color, and border color. This allows you to match your application's design system and visual branding.
 

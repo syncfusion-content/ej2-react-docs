@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Maintain trailing zeros in numerictextbox in React Numerictextbox component | Syncfusion
-description: Learn here all about Maintain trailing zeros in numerictextbox in Syncfusion React Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: How to maintain trailing zeros in React NumericTextBox | Syncfusion
+description: Preserve trailing zeros in the React NumericTextBox on focus for currency or precision display by overriding the default focus behavior.
 control: Maintain trailing zeros in numerictextbox 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Maintain trailing zeros in NumericTextBox in React
+# How to maintain trailing zeros in React NumericTextBox
 
 By default, the NumericTextBox removes trailing zeros when the component receives focus (to allow easy editing of numeric values). However, when you need to preserve trailing zeros for currency formatting or precision display, use the following sample to maintain trailing zeros while focusing the NumericTextBox.
 

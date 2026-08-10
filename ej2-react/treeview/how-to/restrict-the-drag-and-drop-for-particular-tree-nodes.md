@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Restrict the drag and drop for particular tree nodes in React TreeView component | Syncfusion
-description: Learn here all about Restrict the drag and drop for particular tree nodes in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: How to restrict drag and drop for tree nodes | Syncfusion
+description: Prevent dragging specific Syncfusion React TreeView nodes by canceling the nodeDragStart event based on node attributes.
 control: Restrict the drag and drop for particular tree nodes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict the drag and drop for particular tree nodes in React TreeView component
+# How to restrict drag and drop for tree nodes
 
 You can able to restrict to drag and drop files under folder only. These can be achieved by using [`nodeDragStop`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragstop) and [`nodeDragging`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragging) event of TreeView.
 

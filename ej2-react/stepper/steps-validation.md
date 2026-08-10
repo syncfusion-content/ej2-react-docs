@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation in React Stepper component | Syncfusion
-description:  Checkout and learn about Validation with Syncfusion React Stepper component of Syncfusion Essential JS 2 and more.
+title: Validation in React Stepper | Syncfusion
+description: Mark each Syncfusion React Stepper step as success, error, or neutral by setting the `isValid` property on individual steps.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Steps validation in React Stepper component
+# Validation in React Stepper
 
 The Stepper component allows you to set the validation state for each step, displaying either a success or error icon. You can define the success state of a step by setting the `isValid` property to `true`. If set to `false`, the step will display an error state. By default, the `isValid` property is `null`.
 

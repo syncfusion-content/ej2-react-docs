@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set tool tip to the commands in React Toolbar component | Syncfusion
-description: Learn here all about Set tool tip to the commands in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: How to set a Tooltip on Toolbar commands | Syncfusion
+description: Show a Syncfusion Tooltip on each Syncfusion React Toolbar command by attaching the Tooltip component to the command element id.
 control: Set tool tip to the commands 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set tool tip to the commands in React Toolbar component
+# How to set a Tooltip on Toolbar commands
 
 The [`tooltipText`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item/#tooltiptext) property of the Toolbar item is used to set the HTML Tooltip to the commands that can be viewed as hint texts on mouse hover.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotation in React Progress bar component | Syncfusion
-description: Learn here all about Annotation in Syncfusion React Progress bar component of Syncfusion Essential JS 2 and more.
+title: Annotation in React Progress Bar | Syncfusion
+description: Learn how to add annotations like text, images, or buttons to the center of the React Progress Bar using the Content property.
 control: Annotation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation in React Progress bar component
+# Annotation in React Progress Bar
 
 ## Annotation
 

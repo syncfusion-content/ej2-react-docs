@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize Image Title Position in React Card | Syncfusion
-description: Learn here all about customizing the card image title position in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
+title: How to change Card image title Position in React Card | Syncfusion
+description: Move the Syncfusion React Card image title from the default bottom-left position by applying custom CSS to override the overlay placement.
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the card image title position in React Card component
+# How to customize the card image title position in React Card
 
 By default, image titles in the Card component appear in the bottom-left corner with an overlay effect. To place the title at a different location on the image, apply custom CSS to override the default position styles.
 

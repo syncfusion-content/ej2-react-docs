@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Range navigator component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
-control: Customization 
+title: Customization in React Range Navigator | Syncfusion
+description: Learn how to customize the Syncfusion React Range Navigator Component using navigator style, thumb shape, border, snapping, and animation.
+control: Customization
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Range navigator component
+# Customization in React Range Navigator
 
 ## Navigator appearance
 

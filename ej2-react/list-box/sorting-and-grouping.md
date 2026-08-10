@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting and grouping in React List box component | Syncfusion
-description: Learn here all about Sorting and grouping in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
-control: Sorting and grouping 
+title: Sorting and Grouping in React ListBox | Syncfusion
+description: Sort React ListBox items in ascending or descending order and group related items by category using the sortOrder property and the groupBy field.
+control: Sorting and grouping
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting and grouping in React List box component
+# Sorting and Grouping in React ListBox
 
 ## Sorting
 

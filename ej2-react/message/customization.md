@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Message component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Message component of Syncfusion Essential JS 2 and more.
+title: Customization in React Message | Syncfusion
+description: Customize React Message content alignment, CSS-based styling, and appearance with built-in classes and the cssClass property.
 control: Message
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Message component
+# Customization in React Message
 
 The Message component provides multiple customization options to match your application's design and layout requirements. This guide covers content alignment, visual styling approaches, and CSS-based customization techniques for creating messages that integrate seamlessly with your UI.
 
@@ -34,7 +34,7 @@ The following example demonstrates the message with different content alignments
 
 ## Custom appearance
 
-Customize the Message component's visual styling by applying a custom CSS class through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/message/#cssclass) property. The specified class is applied to the root message element, allowing you to override default styles and implement custom designs at the application level.
+Customize the Message component's visual styling by applying a custom CSS class through the [cssClass](https://ej2.syncfusion.com/react/documentation/api/message#cssclass) property. The specified class is applied to the root message element, allowing you to override default styles and implement custom designs at the application level.
 
 The following example demonstrates rounded and squared message appearance variations achieved through the `cssClass` property.
 

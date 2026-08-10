@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Validation in React Inplace editor component | Syncfusion
-description: Learn here all about Validation in Syncfusion React Inplace editor component of Syncfusion Essential JS 2 and more.
-control: Validation 
+title: Validation in React In-place Editor | Syncfusion
+description: Apply required, email, URL, date, number, length, and regex validation rules to the Syncfusion React In-place Editor with the validating event.
+control: In-place Editor
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in React Inplace editor component
+# Validation in React In-place Editor
 
-In-place Editor component supports validation and it can be achieved by adding rules to the [validationRules](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#validationrules) property, its child property `key` must be same as [name](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#name) property, otherwise validation not performed. Submitting data to the server or calling the [validate](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#validate) method validation executed.
+In-place Editor component supports validation and it can be achieved by adding rules to the [validationRules](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#validationrules) property, its child property `key` must be same as [name](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#name) property, otherwise validation not performed. Submitting data to the server or calling the [validate](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#validate) method validation executed.
 
 ## Validation Rules
 
@@ -66,7 +66,7 @@ Configure validation in the In-place Editor by following these steps:
 
  {% previewsample "page.domainurl/code-snippet/in-place-editor/validation-sample-cs2" %}
 
-In the following sample, the first editor displays a validation error when submitted without a date selection. The second editor is configured with the [validating](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/#validating) event. In the event handler, the [errorMessage](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/validateEventArgs/#errormessage) is customized and displayed below the `DatePicker` element.
+In the following sample, the first editor displays a validation error when submitted without a date selection. The second editor is configured with the [validating](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#validating) event. In the event handler, the [errorMessage](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/validateEventArgs#errormessage) is customized and displayed below the `DatePicker` element.
 
 `[Class-component]`
 
@@ -94,10 +94,10 @@ In the following sample, the first editor displays a validation error when submi
 
  {% previewsample "page.domainurl/code-snippet/in-place-editor/validation-cs2" %}
 
-* For more details about validation configuration, refer this documentation [section](../form-validator/validation-rules/).
+* For more details about validation configuration, refer this documentation [section](../form-validator/validation-rules).
 
 * For custom validation except specifying validationRules, specify errorMessage at validating event, message will be shown when the value is `Empty`.
 
 ## See Also
 
-* [Indication to unsaved value](./how-to/custom-indication/)
+* [Indication to unsaved value](./how-to/custom-indication)

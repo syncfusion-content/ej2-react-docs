@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value binding in React Multi select component | Syncfusion
-description: Learn here all about Value binding in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Value Binding in React MultiSelect Dropdown | Syncfusion
+description: Bind the React MultiSelect Dropdown to primitive values such as strings, numbers, or booleans, or to complex objects via the value property and allowObjectBinding.
 control: Value binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value binding in React MultiSelect control
+# Value Binding in React MultiSelect Dropdown
 
 Value binding in the MultiSelect control associates data values with each list item, enabling efficient management and retrieval of selected values. The component supports flexible binding for both primitive data types and complex objects.
 

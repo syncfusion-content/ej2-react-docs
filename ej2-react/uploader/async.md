@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Async in React Uploader component | Syncfusion
-description: Learn here all about Async in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: Async in React File Upload | Syncfusion
+description: Upload files asynchronously in the React File Upload using save and remove action URLs, with automatic or manual upload and multiple selection.
 control: Async 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Async in React Uploader component
+# Async in React File Upload
 
 The uploader component allows you to upload the files asynchronously. The upload process requires save and remove action URL to manage the upload process in the server.
 

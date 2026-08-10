@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show dates of other months in React Calendar component | Syncfusion
-description: Learn here all about Show dates of other months in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: How to show other months in React Calendar | Syncfusion
+description: Display dates from other months in the React Calendar by overriding the .e-other-month and .e-month-hide CSS classes.
 control: Show dates of other months 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show dates of other months in React Calendar component
+# How to show other months in React Calendar
 
 The following example demonstrates how to show dates from other months.
 

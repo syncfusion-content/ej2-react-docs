@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gradient in React Accumulation chart component | Syncfusion
-description: Learn here all about Gradient in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
+title: Gradient in React Accumulation Chart | Syncfusion
+description: Learn how to apply linear and radial gradients to slices of the Syncfusion React Accumulation Chart for richer visual styling.
 control: Gradient
 platform: ej2-react
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Gradient in React Accumulation chart control
+# Gradient in React Accumulation Chart
 
 <!-- markdownlint-disable MD038 -->
 

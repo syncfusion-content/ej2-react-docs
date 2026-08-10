@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dimensions in React 3D Chart component | Syncfusion
-description: Learn here all about dimensions in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Dimensions in React 3D Chart | Syncfusion
+description: Learn how to set the Syncfusion React 3D Chart size to a fixed container, the parent element, or a custom width and height using CSS or inline style.
+control: Dimensions
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dimensions in React 3D Chart control
+# Dimensions in React 3D Chart
 
 ## Size for container
 

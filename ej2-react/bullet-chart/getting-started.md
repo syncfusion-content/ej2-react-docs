@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting started with React Bullet Chart component | Syncfusion
-description: Check out and learn about getting started with the React Bullet Chart component of Syncfusion Essential JS 2 and more details.
-control: Getting Started 
+title: Getting Started with React Bullet Chart | Syncfusion
+description: Learn how to get started with the Syncfusion React Bullet Chart Component. Explore setup, features, examples, and customization options.
+control: Getting Started
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD036 -->
 
-# Getting started with React Bullet Chart component
+# Getting Started with React Bullet Chart
 
 This section describes the steps to create a simple Bullet Chart component.
 

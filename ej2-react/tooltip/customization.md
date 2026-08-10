@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Tooltip component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+title: Customization in React Tooltip | Syncfusion
+description: Customize the React Tooltip appearance by passing custom CSS class names to the cssClass property to style the tip pointer and overall popup.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Tooltip component
+# Customization in React Tooltip
 
 The Tooltip can be customized using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#cssclass) property. This property accepts custom CSS class names that define specific user-defined styles and themes to be applied to the Tooltip element.
 

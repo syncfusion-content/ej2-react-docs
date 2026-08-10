@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Drop down list component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Dropdown List | Syncfusion
+description: The React Dropdown List follows WAI-ARIA combobox patterns, supports full keyboard navigation, and meets WCAG 2.2, Section 508, and ADA accessibility standards.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Drop down list component
+# Accessibility in React Dropdown List
 
 The DropDownList component is built according to `WAI-ARIA` specifications, incorporating WAI-ARIA roles, states, properties, and comprehensive keyboard support. The component provides complete keyboard navigation and ARIA accessibility, enabling users of assistive technologies and keyboard-only users to interact effectively.
 

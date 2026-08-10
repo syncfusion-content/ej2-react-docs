@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React Numerictextbox component | Syncfusion
-description: Learn here all about Globalization in Syncfusion React Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: Globalization in React NumericTextBox | Syncfusion
+description: Localize the React NumericTextBox spin button tooltips and UI text using the locale property and the Localization library.
 control: Globalization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Numerictextbox component
+# Globalization in React NumericTextBox
 
 ## Localization
 

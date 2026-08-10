@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Navigation in React Breadcrumb component | Syncfusion
-description: Learn here all about Navigation in Syncfusion React Breadcrumb component of Syncfusion Essential JS 2 and more.
+title: Navigation in React Breadcrumb | Syncfusion
+description: Configure relative or absolute URLs on Syncfusion React Breadcrumb items, and enable click navigation on the active last item.
 control: Breadcrumb 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in React Breadcrumb component
+# Navigation in React Breadcrumb
 
-The Breadcrumb component enables navigation to specific paths when users click breadcrumb items. To enable navigation functionality, bind the [`url`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/breadcrumbItem/#url) property to the breadcrumb items.
+The Breadcrumb component enables navigation to specific paths when users click breadcrumb items. To enable navigation functionality, bind the [`url`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/breadcrumbItem#url) property to the breadcrumb items.
 
 ## URL
 
@@ -48,7 +48,7 @@ Breadcrumb items with absolute URLs contain the complete path and navigate direc
 
 ## Enable navigation for last Breadcrumb item
 
-By default, the last breadcrumb item (active item) is not clickable. To enable navigation for the last item, set the [`enableActiveItemNavigation`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#enableactiveitemnavigation) property to `true`. The following example demonstrates enabling navigation for the last breadcrumb item.
+By default, the last breadcrumb item (active item) is not clickable. To enable navigation for the last item, set the [`enableActiveItemNavigation`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#enableactiveitemnavigation) property to `true`. The following example demonstrates enabling navigation for the last breadcrumb item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -63,7 +63,7 @@ By default, the last breadcrumb item (active item) is not clickable. To enable n
 
 ## Open URL in new page or tab
 
-To open the breadcrumb item in a new page or tab, set the target property of the required item url to blank in the Breadcrumb component. In the following example, the target property of items url was set to blank by using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb/#beforeitemrender) event which locates to the path in the new tab.
+To open the breadcrumb item in a new page or tab, set the target property of the required item url to blank in the Breadcrumb component. In the following example, the target property of items url was set to blank by using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#beforeitemrender) event which locates to the path in the new tab.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

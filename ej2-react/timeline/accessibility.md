@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Timeline component | Syncfusion
-description:  Checkout and learn about Accessibility with Syncfusion React Timeline component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Timeline | Syncfusion
+description: Review Syncfusion React Timeline accessibility support for WCAG, Section 508, role=navigation, and automated accessibility tool validation.
 control: Timeline
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in the React Timeline component
+# Accessibility in React Timeline
 
 The Timeline component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 

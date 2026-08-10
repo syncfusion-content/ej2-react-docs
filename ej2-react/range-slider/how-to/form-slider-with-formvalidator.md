@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Validation with React Range Slider component | Syncfusion
-description: Learn here all about Form Slider with formvalidator in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to use FormValidator with React Slider | Syncfusion
+description: Validate the React Slider inside a form using the FormValidator component bound to the slider's changed event.
 control: Form Slider with formvalidator 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Slider with formvalidator in React Range Slider component
+# How to use FormValidator with React Slider
 
 The Slider component can be validated using our [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). The following steps walk-through Slider validation.
 

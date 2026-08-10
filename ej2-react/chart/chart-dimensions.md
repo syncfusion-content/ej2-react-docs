@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart dimensions in React Chart component | Syncfusion
-description: Learn here all about Chart dimensions in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Chart dimensions 
+title: Chart Dimensions in React Chart | Syncfusion
+description: Learn how to set Syncfusion React Chart size for its container, in pixels, or as a percentage of the parent container.
+control: Chart dimensions
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart dimensions in React Chart component
+# Chart Dimensions in React Chart
 
 ## Size for Container
 

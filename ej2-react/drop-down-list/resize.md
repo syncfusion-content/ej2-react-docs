@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resizing in React DropDownList component | Syncfusion
-description: Learn here all about Popup Resizing in Syncfusion React DropDownList component of Syncfusion Essential JS 2 and more.
+title: Resizing in React Dropdown List | Syncfusion
+description: Enable users to dynamically resize the React Dropdown List popup with the AllowResize property, with dimensions persisting across browser sessions.
 control: Resizing
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resizing in React DropDownList component
+# Resizing in React Dropdown List
 
 Enable dynamic popup resizing in the DropDownList component using the [AllowResize](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#allowresize) property. When enabled, users can resize the popup to improve visibility and control. The resized dimensions persist across sessions for a consistent user experience.
 

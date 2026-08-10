@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Dialog component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Dialog | Syncfusion
+description: Build accessible React Dialogs compliant with WCAG 2.2, Section 508, and ADA, featuring WAI-ARIA support, keyboard navigation, and screen reader compatibility.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Dialog component
+# Accessibility in React Dialog
 
 The Dialog component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -65,7 +65,7 @@ Keyboard interaction of Dialog component has designed based on [WAI-ARIA Practic
 <td>
 <kbd>Esc</kbd></td><td>
 Closes the Dialog. This functionality can be controlled by using
-[`closeOnEscape`](https://ej2.syncfusion.com/react/documentation/api/dialog/#closeonescape) </td></tr>
+[`closeOnEscape`](https://ej2.syncfusion.com/react/documentation/api/dialog#closeonescape) </td></tr>
 <tr>
 <td>
 <kbd>Enter</kbd></td><td>

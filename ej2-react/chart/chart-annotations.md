@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart annotations in React Chart component | Syncfusion
-description: Learn here all about Chart annotations in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Chart annotations 
+title: Chart Annotations in React Chart | Syncfusion
+description: Learn how to add HTML annotations to Syncfusion React Chart with custom positioning, regions, and coordinate units.
+control: Chart annotations
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart annotations in React Chart component
+# Chart Annotations in React Chart
 
 Chart annotations allow highlighting specific areas of the chart using text, shapes, images, or custom HTML elements. Annotations can be used to emphasize trends, mark thresholds, show custom notes, or display additional information directly inside the chart area.
 

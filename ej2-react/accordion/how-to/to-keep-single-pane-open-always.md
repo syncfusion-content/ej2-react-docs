@@ -1,14 +1,14 @@
 ---
 layout: post
-title: To keep single pane open always in React Accordion component | Syncfusion
-description: Learn here all about To keep single pane open always in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: How to keep a single pane open in React Accordion | Syncfusion
+description: Keep exactly one Syncfusion React Accordion pane expanded at all times in Single mode by preventing collapse of the active item.
 control: To keep single pane open always 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# To keep single pane open always in React Accordion component
+# How to keep a single pane open in React Accordion
 
 By default, all Accordion panels are collapsible. You can customize the Accordion to keep one panel as expanded state always. This is applicable for `Single` expand mode.
 

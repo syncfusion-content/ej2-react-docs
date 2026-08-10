@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Grouping in React Combo box component | Syncfusion
-description: Learn here all about Grouping in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: Grouping in React ComboBox | Syncfusion
+description: Group Syncfusion React ComboBox items by category using the groupBy field, with both inline and fixed group headers that update while scrolling.
 control: Grouping 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in React Combo box component
+# Grouping in React ComboBox
 
-The ComboBox supports grouping nested elements based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/combo-box/#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content updates dynamically as you scroll through the popup list, displaying the category value for each group.
+The ComboBox supports grouping nested elements based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content updates dynamically as you scroll through the popup list, displaying the category value for each group.
 
 In the following example, vegetables are grouped according to their category using the `groupBy` field.
 

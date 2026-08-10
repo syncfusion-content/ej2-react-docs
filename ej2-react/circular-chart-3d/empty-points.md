@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Empty points in React 3D Circular Chart component | Syncfusion
-description: Learn here all about empty points in Syncfusion React 3D Circular Chart component of Syncfusion Essential JS 2 and more.
-control: Empty points 
+title: Empty Points in React 3D Circular Chart | Syncfusion
+description: Learn how to handle missing or zero values in the Syncfusion React 3D Circular Chart by configuring empty-point mode, fill, and border.
+control: Empty points
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Empty points in React 3D Circular Chart component
+# Empty Points in React 3D Circular Chart
 
 Data points containing `null` or `undefined` values are considered empty points. These empty data points are ignored and not plotted in the 3D Circular Chart. You can customize the handling of empty points using the `emptyPointSettings` property in the series. The default mode for empty points is `Gap`. Other supported modes include `Average`, `Drop`, and `Zero`.
 

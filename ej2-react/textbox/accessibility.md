@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React TextBox component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React TextBox | Syncfusion
+description: Review the React TextBox compliance with WCAG 2.2, Section 508, WAI-ARIA, and screen reader accessibility standards.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React TextBox component
+# Accessibility in React TextBox
 
 The TextBox component is built to meet the highest accessibility standards, ensuring that all users—including those using assistive technologies—can interact with the component effectively. It complies with [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles) that are essential for evaluating digital accessibility.
 

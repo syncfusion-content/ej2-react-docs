@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Data binding in React Combo box component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Combo box component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React ComboBox | Syncfusion
+description: Bind the Syncfusion React ComboBox to local arrays, JSON objects, or remote OData, OData V4, and Web API sources via dataSource and DataManager adaptors.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Combo box component
+# Data Binding in React ComboBox
 
-The ComboBox loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/combo-box/#datasource) property. It supports both `array` and `DataManager` data types.
+The ComboBox loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/combo-box#datasource) property. It supports both `array` and `DataManager` data types.
 
 The component also supports various data services including OData, OData V4, and Web API, with support for XML, JSON, and JSONP formats through `DataManager` adaptors.
 
@@ -59,7 +59,7 @@ The ComboBox supports loading arrays of primitive data such as strings and numbe
 
 ### 2. Array of JSON data
 
-The ComboBox generates list items from arrays of objects. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box/#fields) property.
+The ComboBox generates list items from arrays of objects. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) property.
 
 In the following example, the `Id` column is mapped to the `value` field and the `Game` column is mapped to the `text` field.
 
@@ -91,7 +91,7 @@ In the following example, the `Id` column is mapped to the `value` field and the
 
 ### 3. Array of Complex data
 
-The ComboBox generates list items from arrays of complex objects by mapping nested properties to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box/#fields) property.
+The ComboBox generates list items from arrays of complex objects by mapping nested properties to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) property.
 
 In the following example, `Code.Id` is mapped to the `value` field and `Country.Name` is mapped to the `text` field.
 
@@ -123,7 +123,7 @@ In the following example, `Code.Id` is mapped to the `value` field and `Country.
 
 ## Binding remote data
 
-The ComboBox supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](https://ej2.syncfusion.com/react/documentation/api/combo-box/#query) property is used to fetch data from the database and bind it to the ComboBox.
+The ComboBox supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](https://ej2.syncfusion.com/react/documentation/api/combo-box#query) property is used to fetch data from the database and bind it to the ComboBox.
 
 The following sample displays the first 6 contacts from “Customers” table of the `Northwind` Data Service.
 
@@ -155,7 +155,7 @@ The following sample displays the first 6 contacts from “Customers” table of
 
 ## See Also
 
-* [How to achieve cascading](./how-to/cascading/)
+* [How to achieve cascading](./how-to/cascading)
 * [How to load data using template](./templates#item-template)
-* [How to group the data using header](./grouping/)
-* [How to filter the bound data](./filtering/)
+* [How to group the data using header](./grouping)
+* [How to filter the bound data](./filtering)

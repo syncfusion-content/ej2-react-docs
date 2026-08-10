@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Bar Chart in React 3D Chart component | Syncfusion
-description: Learn here all about stacked bar chart in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Stacked Bar Chart in React 3D Chart | Syncfusion
+description: Learn how to render a stacked 3D bar chart in Syncfusion React 3D Chart to show the contribution of multiple series to a total horizontal value.
+control: Stack Bar Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Stacked bar chart in React Chart component
+# Stacked Bar Chart in React 3D Chart
 
 ## Stacked bar chart
 

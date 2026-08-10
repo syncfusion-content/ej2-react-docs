@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data label in React Accumulation chart component | Syncfusion
-description: Learn here all about Data label in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
+title: Data Label in React Accumulation Chart | Syncfusion
+description: Learn how to show point values on the Syncfusion React Accumulation Chart series using data labels with smart placement and template customization.
 control: Data label 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data label in React Accumulation chart component
+# Data Label in React Accumulation Chart
 
 Data label can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/accumulationDataLabelSettings#visible) option in the dataLabel property.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Splitter component | Syncfusion
-description: Checkout and learn about Getting started with React Splitter component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Splitter | Syncfusion
+description: Set up the Syncfusion React Splitter in a Vite project and render horizontal or vertical split panes with a separator bar.
 control: Splitter
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Splitter
+# Getting Started with React Splitter
 
 The following section explains the steps required to build the Splitter component with a step-by-step procedure.
 

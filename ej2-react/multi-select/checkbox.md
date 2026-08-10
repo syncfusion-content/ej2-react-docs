@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Checkbox in React Multi select component | Syncfusion
-description: Learn here all about Checkbox in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Checkbox in React MultiSelect Dropdown | Syncfusion
+description: Enable checkbox-based multi-selection in the React MultiSelect Dropdown with the CheckBox mode, plus Select All, a maximum selection limit, and selection reordering that reflects the order of user picks.
 control: Checkbox 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Checkbox in React Multi select component
+# Checkbox in React MultiSelect Dropdown
 
 The MultiSelect includes built-in checkbox support to select multiple values. Enable this feature by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#mode) property to `CheckBox`.
 

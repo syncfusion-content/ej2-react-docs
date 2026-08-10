@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resize in React Splitter component | Syncfusion
-description: Learn here all about Resize in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
+title: Resize in React Splitter | Syncfusion
+description: Configure Syncfusion React Splitter pane resizing with min and max size constraints, or disable resizing per pane with the resizable property.
 control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resizing panes in React Splitter component
+# Resize in React Splitter
 
 The React Splitter component enables pane resizing by default. A gripper element is added to the separator to provide an intuitive pointer-based resize handle.
 

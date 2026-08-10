@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add link to toolbar item in React Toolbar component | Syncfusion
-description: Learn here all about Add link to toolbar item in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: How to add a link to a Toolbar item in React | Syncfusion
+description: Add a clickable hyperlink as a Syncfusion React Toolbar item by setting the command type to Input and binding an anchor element.
 control: Add link to toolbar item 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add link to toolbar item in React Toolbar component
+# How to add a link to a Toolbar item in React
 
 You can add link inside Toolbar using React **template**. Follow the below guidelines for add link as template in Toolbar.
 

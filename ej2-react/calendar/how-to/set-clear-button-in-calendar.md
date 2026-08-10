@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set clear button in calendar in React Calendar component | Syncfusion
-description: Learn here all about Set clear button in calendar in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: How to set clear button in React Calendar | Syncfusion
+description: Add a clear button to the React Calendar footer during the created event so users can reset the selected date in one click.
 control: Set clear button in calendar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set clear button in calendar in React Calendar component
+# How to set clear button in React Calendar
 
 The following steps illustrate how to configure a clear button in the Calendar UI.
 

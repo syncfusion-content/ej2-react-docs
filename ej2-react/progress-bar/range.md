@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range in React Progress bar component | Syncfusion
-description: Learn here all about Range in Syncfusion React Progress bar component of Syncfusion Essential JS 2 and more.
+title: Range in React Progress Bar | Syncfusion
+description: Learn how to define the range of the React Progress Bar using the minimum and maximum properties, with a default range of 0 to 100.
 control: Range 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range in React Progress bar component
+# Range in React Progress Bar
 
 Range represents the entire span of the progress bar and can be defined using the `minimum` and `maximum` properties. The default value of the range is 0 to 100.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Strict mode in React Timepicker component | Syncfusion
-description: Learn here all about Strict mode in Syncfusion React Timepicker component of Syncfusion Essential JS 2 and more.
+title: Strict Mode in React TimePicker | Syncfusion
+description: Enforce strict time validation in the React TimePicker so out-of-range and invalid times are auto-clamped or reverted.
 control: Strict mode 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Strict mode in React Timepicker component
+# Strict Mode in React TimePicker
 
 The [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/timepicker#strictmode) property enforces validation for time entry within the specified min/max range. When enabled:
 

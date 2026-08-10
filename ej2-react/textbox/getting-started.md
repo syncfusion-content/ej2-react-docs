@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React TextBox component | Syncfusion
-description:  Checkout and learn about Getting started with React TextBox component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React TextBox | Syncfusion
+description: Set up a Vite-based React project, install the Syncfusion TextBox, and render a basic input with floating label and two-way binding.
 control: TextBox
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React TextBox component
+# Getting Started with React TextBox
 
 This section explains the steps required to create a simple React TextBox component and demonstrate its basic usage in a React environment.
 

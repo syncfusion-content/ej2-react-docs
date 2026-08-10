@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in React Timepicker component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion React Timepicker component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React TimePicker | Syncfusion
+description: Customize the React TimePicker wrapper, input, and list popup appearance with the .e-input-group and .e-timepicker CSS selectors.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in React Timepicker component
+# Style and Appearance in React TimePicker
 
 The following CSS structure enables you to customize the TimePicker component's appearance. Apply these styles with appropriate specificity to override default styles for your use case.
 

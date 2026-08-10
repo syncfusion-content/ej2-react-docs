@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Stacked Column Chart in React 3D Chart component | Syncfusion
-description: Learn here all about stacked column chart in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Stacked Column Chart in React 3D Chart | Syncfusion
+description: Learn how to render a stacked 3D column chart in Syncfusion React 3D Chart to show the contribution of multiple series to a total vertical value.
+control: Stack Column Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stacked column chart in React 3D Chart control
+# Stacked Column Chart in React 3D Chart
 
 ## Stacked column chart
 

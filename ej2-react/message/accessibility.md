@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Message component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Message component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Message | Syncfusion
+description: Build accessible React Messages that comply with WCAG 2.2, Section 508, and ADA via WAI-ARIA alert semantics and keyboard support.
 control: Message
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Message component
+# Accessibility in React Message
 
 The Message component follows WCAG 2.2, Section 508, and ADA accessibility standards. This ensures that applications using the Message component provide an accessible experience for all users, including those using assistive technologies such as screen readers and keyboard navigation.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position the dialog on center of the page on scrolling in React Dialog component | Syncfusion
-description: Learn here all about Position the dialog on center of the page on scrolling in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: Center the dialog on page scroll in React Dialog | Syncfusion
+description: Keep the React Dialog centered in the viewport while the page scrolls by applying the e-fixed CSS class to the dialog element.
 control: Position the dialog on center of the page on scrolling 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position the dialog on center of the page on scrolling in React Dialog component
+# Center the dialog on page scroll in React Dialog
 
 By default, the Dialog scrolls along with the page or container. To keep the Dialog fixed in the center of the viewport while the page scrolls, apply the `e-fixed` class to the Dialog element. This prevents the Dialog from moving when the user scrolls the page, maintaining its centered position in the current view.
 

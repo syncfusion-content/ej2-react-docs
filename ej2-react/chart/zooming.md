@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Zooming in React Chart component | Syncfusion
-description: Learn here all about Zooming in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Zooming 
+title: Zooming in React Chart | Syncfusion
+description: Learn how to enable mouse-wheel, pinch, selection, and toolbar zooming in Syncfusion React Chart, with options for pan and reset.
+control: Zooming
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Zooming in React Chart component
+# Zooming in React Chart
 
 To get start quickly with React Chart Zooming and Panning, you can check on this video:
 

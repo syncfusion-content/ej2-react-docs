@@ -16,7 +16,7 @@ A BPMN group is a visual mechanism used to organize and frame related elements w
 
 ## Creating a BPMN Group
 
-To create a BPMN group, set the [`shape`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnShapes) property of the node to **group**. The group appears as a rounded rectangle with dashed borders that encompasses the grouped elements.
+To create a BPMN group, set the [`shape`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnShapes) property of the node to **group**. By default, the group appears as a rounded rectangle with dashed borders that encompasses the grouped elements.
 
 ![BPMN Group Shape](images/Group.png)
 
@@ -29,4 +29,12 @@ To create a BPMN group, set the [`shape`](https://ej2.syncfusion.com/react/docum
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Group-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Group-cs1" %}
+
+## See Also
+
+* [BPMN Shapes](https://ej2.syncfusion.com/react/documentation/diagram/bpmn-shapes)
+* [BPMN Events](https://ej2.syncfusion.com/react/documentation/diagram/bpmn-events)
+* [BPMN Activities](https://ej2.syncfusion.com/react/documentation/diagram/bpmn-activities)
+* [BPMN Flows](https://ej2.syncfusion.com/react/documentation/diagram/bpmn-flows)
+* [Getting Started with React Diagram](https://ej2.syncfusion.com/react/documentation/diagram/getting-started)

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Menu component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: Migration from EJ1 in React Menu | Syncfusion
+description: Side-by-side mapping of Essential JS 1 Menu properties and methods to their Syncfusion React Menu replacements.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Menu component
+# Migration from EJ1 in React Menu
 
 This article describes the API migration process of Menu component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

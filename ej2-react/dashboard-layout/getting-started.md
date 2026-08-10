@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Dashboard Layout Component | Syncfusion
-description: Checkout and learn about getting started with Syncfusion Essential React Dashboard Layout component, its elements, and more.
+title: Getting Started with React Dashboard Layout | Syncfusion
+description: Set up the Syncfusion React Dashboard Layout grid in a Vite project and render panels using e-panel markup or the panels property.
 control: Dashboard Layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Dashboard Layout
+# Getting Started with React Dashboard Layout
 
 This section explains how to create a simple **Dashboard Layout** component and demonstrates its basic usage.
 

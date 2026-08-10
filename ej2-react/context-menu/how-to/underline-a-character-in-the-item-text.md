@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Underline Character in React Context Menu Item | Syncfusion
-description: Learn here all about Underline a character in the item text in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: How to underline a character in React Context Menu | Syncfusion
+description: Underline a single character in a React Context Menu item to indicate a keyboard shortcut, using the `beforeItemRender` event and `<u>` tags.
 control: Context Menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Underline Character in react Context Menu Item Text
+# How to underline a character in React Context Menu
 
 To underline a specific character in a menu item's text, you can utilize the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#beforeitemrender) event. This technique is commonly used to create  Shortcut keys by visually highlighting specific characters within menu items.
 

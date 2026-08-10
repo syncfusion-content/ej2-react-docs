@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date masking in React Datepicker component | Syncfusion
-description: Learn here all about Date masking in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Mask Support in React DatePicker | Syncfusion
+description: Enable built-in date masking in the React DatePicker with the enableMask property and the MaskedDateTime module for fixed-format input.
 control: Date masking 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date masking in React Datepicker component
+# Mask Support in React DatePicker
 
 DatePicker has `enableMask` property that provides the option to enable the built-in date masking support. Also, you must inject the MaskedDateTime module to enable the masking support.
 

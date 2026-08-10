@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Tab component | Syncfusion
-description:  Checkout and learn about Getting started with React Tab component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Tab | Syncfusion
+description: Learn how to get started with the Syncfusion React Tab control. Explore setup, features, examples, and customization options.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Tab Component
+# Getting Started with React Tab
 
 This section explains how to create a simple **Tab** component and configure the Tab header content in a React application.
 

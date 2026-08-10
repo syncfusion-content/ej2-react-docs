@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Date range in React Datepicker component | Syncfusion
-description: Learn here all about Date range in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Date Range in React DatePicker | Syncfusion
+description: Restrict selectable dates in the React DatePicker using the min and max properties and validate with strictMode.
 control: Date range 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date range in React Datepicker component
+# Date Range in React DatePicker
 
-The DatePicker component restricts date selection to a specified range using the [`min`](https://ej2.syncfusion.com/react/documentation/api/datepicker/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/datepicker/#max) properties. The `min` value must be less than the `max` value.
+The DatePicker component restricts date selection to a specified range using the [`min`](https://ej2.syncfusion.com/react/documentation/api/datepicker#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/datepicker#max) properties. The `min` value must be less than the `max` value.
 
 When a selected date is out-of-range or invalid, the model value is set to the out-of-range value or `null` respectively, and the input is highlighted with an `error` class to indicate the date validation failure.
 

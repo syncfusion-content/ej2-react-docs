@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load content through post in React Accordion component | Syncfusion
-description: Learn here all about Load content through post in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: How to load content through Ajax in React Accordion | Syncfusion
+description: Load external content into a Syncfusion React Accordion pane from a remote URL using the Ajax module.
 control: Load content through post 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load content through post in React Accordion component
+# How to load content through Ajax in React Accordion
 
 Accordion supports to load external contents through `AJAX` library. Refer the below steps.
 

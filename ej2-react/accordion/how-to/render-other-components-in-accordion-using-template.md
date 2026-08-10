@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Render other components in accordion using template in React Accordion component | Syncfusion
-description: Learn here all about Render other components in accordion using template in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: How to embed other components in React Accordion | Syncfusion
+description: Embed other React components inside a Syncfusion React Accordion pane by assigning a JSX template to the item.
 control: Render other components in accordion using template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render other components in accordion using template in React Accordion component
+# How to embed other components in React Accordion
 
 You can render other components inside Accordion using React **template**. Through this, we can add content as other components directly with all functionalities to our Accordion. Follow the below guidelines for using the other components as template in Accordion.
 

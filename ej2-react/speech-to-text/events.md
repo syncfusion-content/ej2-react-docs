@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React SpeechToText component | Syncfusion
-description: Checkout and learn about Events with React SpeechToText component of Syncfusion Essential JS 2 and more details.
+title: Events in React Speech To Text | Syncfusion®
+description: Handle Syncfusion React Speech To Text lifecycle with events for created, onStart, onStop, onError, and transcriptChanged during recognition.
 control: SpeechToText
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in ##Platform_Name## SpeechToText Component
+# Events in ##Platform_Name## Speech To Text
 
 This section describes the events that are triggered when performing actions with the SpeechToText component. The following events are available:
  

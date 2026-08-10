@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with React Tooltip component | Syncfusion
+title: Getting Started with React Tooltip | Syncfusion
 description: Checkout and learn about Getting started with React Tooltip component of Syncfusion Essential JS 2 and more details.
 control: Getting started
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Tooltip component
+# Getting Started with React Tooltip
 
 This section explains the steps required to create a simple React Tooltip component and demonstrate its basic usage in a React environment.
 

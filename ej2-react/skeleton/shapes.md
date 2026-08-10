@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Shapes in React Skeleton component | Syncfusion
-description: Learn here all about Shapes in Syncfusion React Skeleton component of Syncfusion Essential JS 2 and more.
+title: Shapes in React Skeleton | Syncfusion
+description: Render React Skeleton placeholders as Circle, Square, Rectangle, or Text shapes to preview avatars, thumbnails, or paragraphs.
 control: Skeleton
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in React Skeleton component
+# Shapes in React Skeleton
 
-The Skeleton component supports multiple shape variants that enable you to create skeletal previews matching your content layout. Use the [`shape`](https://ej2.syncfusion.com/react/documentation/api/skeleton/#shape) property to display placeholder loading states for different content types. Shape selection affects both visual appearance and perceived loading context, helping users understand what content is loading.
+The Skeleton component supports multiple shape variants that enable you to create skeletal previews matching your content layout. Use the [`shape`](https://ej2.syncfusion.com/react/documentation/api/skeleton#shape) property to display placeholder loading states for different content types. Shape selection affects both visual appearance and perceived loading context, helping users understand what content is loading.
 
 ## Available skeleton shapes
 

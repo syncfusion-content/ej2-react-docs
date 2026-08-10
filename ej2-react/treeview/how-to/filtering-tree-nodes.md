@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering tree nodes in React TreeView component | Syncfusion
-description: Learn here all about Filtering tree nodes in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: How to filter tree nodes in React Tree View | Syncfusion
+description: Search and filter the Syncfusion React TreeView nodes by typing a search term that matches the fields.text value.
 control: Filtering tree nodes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering tree nodes in React TreeView component
+# How to filter tree nodes in React Tree View
 
 You can filter the tree nodes based on their text using the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) plugin and the [`fields`](https://ej2.syncfusion.com/react/documentation/api/treeview#fields) property of the TreeView.
 

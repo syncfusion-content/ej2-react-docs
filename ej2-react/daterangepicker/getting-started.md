@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Daterangepicker component | Syncfusion
-description:  Checkout and learn about Getting started with React Daterangepicker component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React DateRangePicker | Syncfusion
+description: Set up the React DateRangePicker in a Vite or CRA project and let users select start and end dates from a single input.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React DateRangePicker component
+# Getting Started with React DateRangePicker
 
 This section explains the steps required to create a simple React DateRangePicker component and demonstrate its basic usage in a React environment.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Render with rule in React Query builder component | Syncfusion
-description: Learn here all about Render with rule in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
+title: How to render with rules in React Query Builder UI | Syncfusion
+description: Preload the React Query Builder UI with rules at startup using the rule property to render saved or template-based query conditions immediately.
 control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render with rule in React Query Builder component
+# How to render with rules in React Query Builder UI
 
-Initialize the Query Builder with predefined rules using the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#rule) property. This allows you to load saved or template-based query conditions on component initialization.
+Initialize the Query Builder with predefined rules using the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder#rule) property. This allows you to load saved or template-based query conditions on component initialization.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

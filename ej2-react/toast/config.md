@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Config in React Toast component | Syncfusion
-description: Learn here all about Config in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: Config in React Toast | Syncfusion
+description: Configure React Toast titles, content, target containers, close buttons, progress bars, and stacking order via built-in properties.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toast configuration
+# Config in React Toast
 
 This section explains how to customize Toast appearance, layout, and behavior using built-in properties and events. Configure titles, content, positioning, progress display, and stacking order to match your application's notification requirements.
 
 ## Title and content
 
-Toast notifications display messages using the [`title`](https://ej2.syncfusion.com/react/documentation/api/toast/#title) property for headlines and the [`content`](https://ej2.syncfusion.com/react/documentation/api/toast/#content) property for message body. Both properties are responsive and adapt to various screen sizes and orientations. You can provide titles and content as plain text, HTML strings, or element references for flexible content presentation.
+Toast notifications display messages using the [`title`](https://ej2.syncfusion.com/react/documentation/api/toast#title) property for headlines and the [`content`](https://ej2.syncfusion.com/react/documentation/api/toast#content) property for message body. Both properties are responsive and adapt to various screen sizes and orientations. You can provide titles and content as plain text, HTML strings, or element references for flexible content presentation.
 
 `[Class-component]`
 
@@ -44,19 +44,19 @@ Toast notifications display messages using the [`title`](https://ej2.syncfusion.
 
 ## Custom target container
 
-By default, toasts render within the document body. Render toasts within a specific container element using the [`target`](https://ej2.syncfusion.com/react/documentation/api/toast/#target) property. Specifying a custom target enables scoped notifications within modal dialogs, panels, or specific application regions. Toast [`position`](https://ej2.syncfusion.com/react/documentation/api/toast/#position) is calculated relative to the target container.
+By default, toasts render within the document body. Render toasts within a specific container element using the [`target`](https://ej2.syncfusion.com/react/documentation/api/toast#target) property. Specifying a custom target enables scoped notifications within modal dialogs, panels, or specific application regions. Toast [`position`](https://ej2.syncfusion.com/react/documentation/api/toast#position) is calculated relative to the target container.
 
 ## Close button
 
-Enable manual toast dismissal by setting [`showCloseButton`](https://ej2.syncfusion.com/react/documentation/api/toast/#showclosebutton) to `true`. This adds a close button allowing users to dismiss toasts before automatic timeout expiration. Close buttons are particularly useful for persistent notifications or static toasts where manual dismissal is the primary interaction method.
+Enable manual toast dismissal by setting [`showCloseButton`](https://ej2.syncfusion.com/react/documentation/api/toast#showclosebutton) to `true`. This adds a close button allowing users to dismiss toasts before automatic timeout expiration. Close buttons are particularly useful for persistent notifications or static toasts where manual dismissal is the primary interaction method.
 
 ## Progress bar
 
-Display visual timeout feedback using the [`showProgressBar`](https://ej2.syncfusion.com/react/documentation/api/toast/#showprogressbar) property. When enabled, a progress bar appears indicating remaining toast display time, helping users anticipate dismissal. Configure progress bar direction using [`progressDirection`](https://ej2.syncfusion.com/react/documentation/api/toast/#progressDirection) to display from right-to-left (RTL, default) or left-to-right (LTR).
+Display visual timeout feedback using the [`showProgressBar`](https://ej2.syncfusion.com/react/documentation/api/toast#showprogressbar) property. When enabled, a progress bar appears indicating remaining toast display time, helping users anticipate dismissal. Configure progress bar direction using [`progressDirection`](https://ej2.syncfusion.com/react/documentation/api/toast#progressDirection) to display from right-to-left (RTL, default) or left-to-right (LTR).
 
 ## Stacking order
 
-Control the order toasts appear on screen using the [`newestOnTop`](https://ej2.syncfusion.com/react/documentation/api/toast/#newestontop) property. When enabled, new toasts appear above existing ones. When disabled (default), new toasts append below existing notifications, creating a growing stack.
+Control the order toasts appear on screen using the [`newestOnTop`](https://ej2.syncfusion.com/react/documentation/api/toast#newestontop) property. When enabled, new toasts appear above existing ones. When disabled (default), new toasts append below existing notifications, creating a growing stack.
 
 Here below sample demonstrates the combination of `target`, `showCloseButton`, `showProgressBar` and `newestOnTop` properties in toast.
 
@@ -88,7 +88,7 @@ Here below sample demonstrates the combination of `target`, `showCloseButton`, `
 
 ## Width and height
 
-we can set toast dimensions through [`width`](https://ej2.syncfusion.com/react/documentation/api/toast/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/toast/#height) property. The height and width can be applied for specific set of toasts. So you can create different toasts with custom dimension.
+we can set toast dimensions through [`width`](https://ej2.syncfusion.com/react/documentation/api/toast#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/toast#height) property. The height and width can be applied for specific set of toasts. So you can create different toasts with custom dimension.
 
 In default toast can be rendered with '300px' width with 'auto' height
 
@@ -125,5 +125,5 @@ Both width and height property allows setting pixels/numbers/percentage. The num
 
 ## See Also
 
-[Prevent duplicate toasts](./how-to/prevent-duplicate-toast-display/)
-[Customize the progress bar](./how-to/customize-progress-bar-theme-and-sizing/)
+[Prevent duplicate toasts](./how-to/prevent-duplicate-toast-display)
+[Customize the progress bar](./how-to/customize-progress-bar-theme-and-sizing)

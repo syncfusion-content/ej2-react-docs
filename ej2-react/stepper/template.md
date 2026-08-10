@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in React Stepper component | Syncfusion
-description:  Checkout and learn about Template with Syncfusion React Stepper component of Syncfusion Essential JS 2 and more.
+title: Template in React Stepper | Syncfusion
+description: Customize the Syncfusion React Stepper step appearance with the `template` property, passing the step model and current index into the render context.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in React Stepper component
+# Template in React Stepper
 
 The Stepper component allows you to customize the default appearance and content of each step, creating a personalized experience for the user. You can use the [template](https://ej2.syncfusion.com/react/documentation/api/stepper#template) propety to set the template content for the steps.
 

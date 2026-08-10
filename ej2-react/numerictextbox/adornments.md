@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adornments in React NumericTextBox component | Syncfusion
-description: Learn here all about adornments in Syncfusion React NumericTextBox component of Syncfusion Essential JS 2 and more.
+title: Adornments in React NumericTextBox | Syncfusion
+description: Add currency symbols, unit labels, or action icons to the React NumericTextBox using prependTemplate and appendTemplate.
 platform: ej2-react
 control: Adornments
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adornments in React NumericTextBox component
+# Adornments in React NumericTextBox
 
 Enhance the NumericTextBox component with prepended or appended visual elements using `prependTemplate` and `appendTemplate` properties. Adornments include currency symbols, unit labels, or action icons that provide context and improve the user input experience without affecting numeric validation or behavior.
 

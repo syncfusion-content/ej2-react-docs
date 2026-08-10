@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Limits in React Range Slider component | Syncfusion
-description: Learn here all about Limits in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: Limits in React Slider | Syncfusion
+description: Restrict React Slider thumb movement within a sub-range using the limits object with enabled, minStart, minEnd, maxStart, and maxEnd.
 control: Limits 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Limits in React Range Slider component
+# Limits in React Slider
 
 Slider limits restrict the thumb movement within a specific range. This is useful when higher or lower values could affect the process or product using the Slider.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React 3D Chart component | Syncfusion
-description: Learn here all about accessibility in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Accessibility in React 3D Chart | Syncfusion
+description: Learn how Syncfusion React 3D Chart support accessibility with WAI-ARIA roles, attributes, and keyboard navigation for screen readers.
+control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React 3D Chart control
+# Accessibility in React 3D Chart
 
 Accessibility is achieved in the 3D chart control through WAI-ARIA standard and keyboard navigation. The 3D chart features can be effectively accessed through assistive technologies such as screen readers.
 

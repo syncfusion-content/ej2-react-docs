@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Avatar component | Syncfusion
-description:  Checkout and learn about Getting Started with React Avatar component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Avatar | Syncfusion
+description: Learn how to set up the Syncfusion React Avatar in a Vite project, customize its appearance, and render five built-in size variants.
 control: Avatar
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Avatar component
+# Getting Started with React Avatar
 
 This section explains the steps required to create a simple React Avatar component and demonstrate its basic usage in a React environment.
 

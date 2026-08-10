@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form submit in React List box component | Syncfusion
-description: Learn here all about Form submit in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
-control: Form submit 
+title: How to Submit a Form in React ListBox | Syncfusion
+description: Submit selected React ListBox values with a native HTML form by placing the ListBox inside a form element and reading the form data on submit.
+control: Form submit
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form submit in React List box component
+# How to Submit a Form in React ListBox
 
 The following example demonstrates how selected values are submitted with a form:
 

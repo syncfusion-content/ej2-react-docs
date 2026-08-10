@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value bar in React Bullet chart component | Syncfusion
-description: Learn here all about Value bar in Syncfusion React Bullet chart component of Syncfusion Essential JS 2 and more.
-control: Value bar 
+title: Actual Bar in React Bullet Chart | Syncfusion
+description: Learn how to render the actual bar in the Syncfusion React Bullet Chart Component to show a primary value.
+control: Actual bar
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value bar in React Bullet chart component
+# Actual Bar in React Bullet Chart
 
 To display the primary data or the current value of the data being measured known as the **Feature Measure** that should be encoded as a bar. This is called as the **Actual Bar** or the **Feature Bar** in the Bullet Chart, and to display the actual bar the [`valueField`](https://ej2.syncfusion.com/react/documentation/api/bullet-chart#valuefield) should be mapped to the appropriate field from the data source.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Signature component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Signature component of Syncfusion Essential JS 2 and more.
+title: Customization in React Signature | Syncfusion
+description: Customize the React Signature stroke width, color, velocity, and background image for a realistic signature drawing experience.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Signature component
+# Customization in React Signature
 
 The Signature component draws strokes using moveTo() and lineTo() methods to create smooth paths on the canvas. You can customize the stroke width, color, and background color or image.
 

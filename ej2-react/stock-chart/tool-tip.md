@@ -1,14 +1,14 @@
 ﻿---
 layout: post
-title: Tool tip in React Stock chart component | Syncfusion
-description: Learn here all about Tool tip in Syncfusion React Stock chart component of Syncfusion Essential JS 2 and more.
-control: Tool tip 
+title: Tooltip in React Stock Chart | Syncfusion
+description: Learn how to enable and customize tooltips on the Syncfusion React Stock Chart Component with template, and shared tooltip options.
+control: Tooltip
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool tip in React Stock chart component
+# Tooltip in React Stock Chart
 
 <!-- markdownlint-disable MD036 -->
 

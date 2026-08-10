@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Range Area Chart in React Charts | Syncfusion
-description: Learn here all about Spline Range Area Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Spline Range Area Chart 
+title: Spline Range Area Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Spline Range Area series in Syncfusion React Chart to display continuous high-low value ranges with smooth curved boundaries.
+control: Spline Range Area Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Spline Range Area Chart in React Charts
+# Spline Range Area Chart in React Chart
 
 ## Spline Range Area
 

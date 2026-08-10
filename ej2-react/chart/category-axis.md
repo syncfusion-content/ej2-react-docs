@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Category axis in React Chart component | Syncfusion
-description: Learn here all about Category axis in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Category axis 
+title: Category Axis in React Chart | Syncfusion
+description: Learn how to use the category axis in Syncfusion React Chart to plot string-based values, customize label placement, set visible range, and enable indexed category axis.
+control: Category axis
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Category axis in React Chart component
+# Category Axis in React Chart
 
 The category axis is used to represent string-based values instead of numeric values. It is commonly used for displaying discrete categories such as names, labels, or textual groupings along an axis.
 

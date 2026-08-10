@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Strict mode in React Datetimepicker component | Syncfusion
-description: Learn here all about Strict mode in Syncfusion React Datetimepicker component of Syncfusion Essential JS 2 and more.
+title: Strict Mode in React DateTime Picker | Syncfusion
+description: Enforce strict date-time validation in the React DateTime Picker so out-of-range or invalid entries are auto-clamped or rejected.
 control: Strict mode 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Strict mode in React Datetimepicker component
+# Strict Mode in React DateTime Picker
 
 When [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#strictmode) is enabled, the DateTimePicker validates user input against specified min/max constraints. The following behaviors apply:
 

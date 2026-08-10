@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timezone Behavior in React Datetimepicker | Syncfusion
-description: Learn here all about Timezone Behavior in Syncfusion React Datetimepicker component of Syncfusion Essential JS 2 and more.
+title: Timezone Behavior in React DateTime Picker | Syncfusion
+description: Handle client and server time zones in the React DateTime Picker with the serverTimezoneOffset property for accurate time display.
 control: Timezone Behavior 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timezone Behavior in DateTimePicker Control
+# Timezone Behavior in React DateTime Picker
 
 The DateTimePicker component displays and maintains date and time values based on the client system's local time zone. When a user selects a date and time, it is stored using the system's time zone at the time of selection, ensuring consistent and predictable behavior.
 

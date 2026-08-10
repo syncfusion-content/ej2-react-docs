@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dynamic badge content in React Badge component | Syncfusion
-description: Learn here all about Dynamic badge content in Syncfusion React Badge component of Syncfusion Essential JS 2 and more.
+title: How to add dynamic badge content in React Badge | Syncfusion
+description: Update React Badge values at runtime using React state and hooks to reflect real-time notification counts or status changes.
 control: Badge
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dynamic badge content in React Badge component
+# How to add dynamic badge content in React Badge
 
 Many applications require badges to reflect real-time data changes—such as notification counts, status indicators, or activity counters. This guide demonstrates how to update badge content dynamically using React state management. The following example uses React hooks to maintain state and update the badge value when user actions occur, such as clicking an increment button. This pattern is fundamental for building interactive, responsive UI components.
 

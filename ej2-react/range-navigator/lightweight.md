@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Lightweight in React Range navigator component | Syncfusion
-description: Learn here all about Lightweight in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
-control: Lightweight 
+title: Lightweight in React Range Navigator | Syncfusion
+description: Learn how to render the lightweight Syncfusion React Range Navigator Component for simpler styling and faster performance.
+control: Lightweight
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Lightweight in React Range navigator component
+# Lightweight in React Range Navigator
 
 By default, when the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#datasource) for [`series`](https://ej2.syncfusion.com/react/documentation/api/range-navigator#series) is empty, a lightweight Range Selector will be shown without Chart.
 

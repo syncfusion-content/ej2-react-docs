@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Range Slider | Syncfusion
-description: Learn how to get started with the React Range Slider component in Syncfusion, including installation with Vite, configuration, and required styles.
+title: Getting Started with React Slider | Syncfusion
+description: Set up a Vite-based React project, install the Syncfusion Slider, and render a basic two-handle range slider with min, max, and value.
 control: Range Slider 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Slider component
+# Getting Started with React Slider
 
 This section explains the steps required to create a simple React Slider component and demonstrate its basic usage in a React environment.
 

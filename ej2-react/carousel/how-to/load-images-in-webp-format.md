@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load webp format image in React Carousel component | Syncfusion
-description: Learn here all about how to load webp format image in Syncfusion React Carousel component of Syncfusion Essential JS 2 and more.
+title: How to load WebP format images in React Carousel | Syncfusion
+description: Load smaller WebP images into the Syncfusion React Carousel for faster page loads and reduced bandwidth without losing visual quality.
 control: Load images in webp format 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load webp format image in React carousel component
+# How to load WebP format images in React Carousel
 
 You can load the carousel image in the webp format, which aims to create smaller, better-looking images. Choosing webp as your image format can significantly improve your website's performance without sacrificing visual quality. webp images are significantly smaller in file size compared to formats like JPEG and PNG. This results in faster load times and less data usage. To achieve this, you can convert your image format to webp and pass them to Carousel items. The following sample illustrates how to load a carousel image in the webp format component.
 

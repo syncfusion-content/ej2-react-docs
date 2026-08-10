@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Multi select component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React MultiSelect Dropdown | Syncfusion
+description: Bind the React MultiSelect Dropdown to local arrays of strings or objects, or to remote OData and Web API sources via the dataSource property and DataManager adaptors.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Multi select component
+# Data Binding in React MultiSelect Dropdown
 
 The MultiSelect loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/multi-select/#datasource) property. It supports both `array` and `DataManager` data types.
 

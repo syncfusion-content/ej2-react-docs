@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Clone Group/Rule in React Query builder component | Syncfusion
-description: Learn here all about Clone Group/Rule in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
+title: Clone Group/Rule in React Query Builder UI | Syncfusion
+description: Duplicate rules or entire groups in the React Query Builder UI as exact copies via cloneRule and cloneGroup, with showButtons control.
 control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clone Group/Rule in React Query Builder component
+# Clone Group/Rule in React Query Builder UI
 
-The Query Builder allows you to duplicate individual rules or entire groups, creating exact copies adjacent to the originals. This feature streamlines the construction of complex queries by eliminating the need to manually recreate similar rule structures. Control the visibility of cloning buttons using the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#showbuttons) property.
+The Query Builder allows you to duplicate individual rules or entire groups, creating exact copies adjacent to the originals. This feature streamlines the construction of complex queries by eliminating the need to manually recreate similar rule structures. Control the visibility of cloning buttons using the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/query-builder#showbuttons) property.
 
 Clone groups and rules through the user interface or programmatically:
 
-* Use the [`cloneGroup`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#clonegroup) method to clone a group.
-* Use the [`cloneRule`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#clonerule) method to clone a rule.
+* Use the [`cloneGroup`](https://ej2.syncfusion.com/react/documentation/api/query-builder#clonegroup) method to clone a group.
+* Use the [`cloneRule`](https://ej2.syncfusion.com/react/documentation/api/query-builder#clonerule) method to clone a rule.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

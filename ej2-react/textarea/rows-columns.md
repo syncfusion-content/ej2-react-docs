@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rows and Columns count in React TextArea component | Syncfusion
-description: Checkout and learn about Adjusting the size of the React TextArea component of Syncfusion Essential JS 2 and more.
+title: Rows and Columns in React TextArea | Syncfusion
+description: Set the React TextArea dimensions with the rows and cols properties to control visible line count and character width per line.
 control: Rows and Columns Count
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rows and Columns in React TextArea Component
+# Rows and Columns in React TextArea
 
 The Essential<sup style="font-size:70%">&reg;</sup> `rows` and `cols` attributes control TextArea dimensions. The `rows` attribute sets the initial visible number of lines (vertical size), while the `cols` attribute specifies the visible width in characters per line (horizontal size).
 

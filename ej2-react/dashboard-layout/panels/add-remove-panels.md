@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add remove panels in React Dashboard Layout component | Syncfusion
-description: Learn here all about Add remove panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
+title: Adding or Removing Panels in React Dashboard Layout | Syncfusion
+description: Add or remove Syncfusion React Dashboard Layout panels at runtime with addPanel, removePanel, and removeAll public methods.
 control: Dashboard Layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Adding and Removing Panels in React Dashboard Layout Component
+# Adding or Removing Panels in React Dashboard Layout
 
 Dashboard applications frequently require updating displayed data, including dynamically dynamically adding or removing widgets for scenarios such as user customization, real-time data monitoring, or role-based content display. The Dashboard Layout component supports these scenarios through the [`addPanel`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#addpanel) and [`removePanel`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#removepanel) public methods of the component.
 

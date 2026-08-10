@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Labels in React Range navigator component | Syncfusion
-description: Learn here all about Labels in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
-control: Labels 
+title: Labels in React Range Navigator | Syncfusion
+description: Learn how to configure and customize labels in the Syncfusion React Range Navigator Component using labelFormat, labelStyle, and labelIntersectAction.
+control: Labels
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Labels in React Range navigator component
+# Labels in React Range Navigator
 
 ## Multilevel labels
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adornments in ##Platform_Name## MaskedTextBox control | Syncfusion
-description: Learn here all about Adornments in Syncfusion ##Platform_Name## MaskedTextBox control of Syncfusion Essential JS 2 and more.
+title: Adornments in React MaskedTextBox | Syncfusion
+description: Add icons, labels, or action buttons to the React MaskedTextBox using prependTemplate and appendTemplate to guide and enhance input.
 platform: ej2-react
 control: Adornments
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adornments in ##Platform_Name## MaskedTextBox control
+# Adornments in React MaskedTextBox
 
 Adornments in the MaskedTextBox allow you to add custom elements before or after the masked input using the `prependTemplate` and `appendTemplate` properties. These elements can include prefixes, suffixes, labels, or action icons to provide context, guide input, and enable quick actions while preserving mask validation and float label behavior.
 

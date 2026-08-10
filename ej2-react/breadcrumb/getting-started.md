@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Breadcrumb component | Syncfusion
-description:  Checkout and learn about Getting started with React Breadcrumb component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Breadcrumb | Syncfusion
+description: Learn how to get started with the Syncfusion React Breadcrumb control. Explore setup, features, examples, and customization options.
 control: Breadcrumb  
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Breadcrumb component
+# Getting Started with React Breadcrumb
 
 This section explains how to create a simple Breadcrumb and configure its available functionalities in React.
 

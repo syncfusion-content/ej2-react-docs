@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotation in React Accumulation chart component | Syncfusion
-description: Learn here all about Annotation in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
+title: Annotation in React Accumulation Chart | Syncfusion
+description: Learn how to add text, shape, or image annotations to the Syncfusion React Accumulation Chart using region, coordinate units, and alignment options.
 control: Annotation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation in React Accumulation chart component
+# Annotation in React Accumulation Chart
 
 The annotations are used to mark the specific area of interest in the chart area with texts, shapes or images.
 

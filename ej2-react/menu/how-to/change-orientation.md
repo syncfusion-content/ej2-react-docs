@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change orientation in React Menu component | Syncfusion
-description: Learn here all about Change orientation in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: How to change Menu orientation in React Menu | Syncfusion
+description: Switch the Syncfusion React Menu between horizontal and vertical layouts by setting the `orientation` property to `Horizontal` or `Vertical`.
 control: Change orientation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change orientation in React Menu component
+# How to change Menu orientation in React Menu
 
 Orientation in menu items can be changed horizontally or vertically using the [`orientation`](https://ej2.syncfusion.com/react/documentation/api/menu/#orientation) property. By default, it is horizontally aligned.
 

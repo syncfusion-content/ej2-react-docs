@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date format in React Daterangepicker component | Syncfusion
-description: Learn here all about Date format in Syncfusion React Daterangepicker component of Syncfusion Essential JS 2 and more.
+title: Date Format in React DateRangePicker | Syncfusion
+description: Customize the React DateRangePicker input format with the format property to display both start and end dates consistently.
 control: Date format 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date format in React Daterangepicker component
+# Date Format in React DateRangePicker
 
 Date format defines how date values are displayed in the input field. By default, the DateRangePicker format is based on the current culture. You can set a custom format using the [`format`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#format) property.
 

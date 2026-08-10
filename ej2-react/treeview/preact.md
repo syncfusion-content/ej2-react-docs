@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Preact Framework and React TreeView | Syncfusion
-description: Check out and learn about getting started with the Preact Framework and React TreeView Component of Syncfusion Essential JS 2 and more details.
+description: Use the Syncfusion React TreeView in a Preact application by importing the same ej2-react-navigations package and TreeView component.
 control: Preact
 platform: ej2-react
 documentation: ug

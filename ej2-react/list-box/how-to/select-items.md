@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Select items in React List box component | Syncfusion
-description: Learn here all about Select items in Syncfusion React List box component of Syncfusion Essential JS 2 and more.
-control: Select items 
+title: How to Select Items in React ListBox | Syncfusion
+description: Programmatically select a React ListBox item (for example Bugatti Chiron) at runtime by calling the selectItems method with the item value.
+control: Select items
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Select items in React List box component
+# How to Select Items in React ListBox
 
 Use the [`selectItems`](https://ej2.syncfusion.com/react/documentation/api/list-box/#selectitems) method to select items in the ListBox. In the following example, `Bugatti Chiron` is selected:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Docking Sidebar in React Sidebar component | Syncfusion
-description: Learn here all about Docking Sidebar in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+title: Dock in React Sidebar | Syncfusion
+description: Dock the Syncfusion React Sidebar so a fixed width remains visible in the collapsed state, showing icons only, via `enableDock` and `dockSize`.
 control: Docking Sidebar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Docking Sidebar in React Sidebar component
+# Dock in React Sidebar
 
 Dock state of the Sidebar reserves some space on the page that always remains in a visible state when the Sidebar is collapsed. It is used to show the short term of a content like icons alone instead of lengthy text. To achieve this , set [`enableDock`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#enabledock) as true along with required [`dockSize`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#docksize).
 

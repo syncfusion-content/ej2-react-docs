@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Remote data bind in React Drop down list component | Syncfusion
-description: Learn here all about Remote data bind in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to get total count for remote data in React Dropdown List | Syncfusion
+description: Get the total item count from a remote data source via the actionComplete event before render, or getItems method after render.
 control: Remote data bind 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remote data bind in React Drop down list component
+# How to get total count for remote data in React Dropdown List
 
 Before component rendering, retrieve the total items count using the [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#actioncomplete) &nbsp;event and its result arguments.
 

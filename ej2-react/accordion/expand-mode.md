@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Expand mode in React Accordion component | Syncfusion
-description: Learn here all about Expand mode in Syncfusion React Accordion component of Syncfusion Essential JS 2 and more.
+title: Expand Mode in React Accordion | Syncfusion
+description: Single (one pane at a time) or Multiple modes that control how panes open and close in the Syncfusion React Accordion.
 control: Expand mode 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Expand mode in React Accordion component
+# Expand Mode in React Accordion
 
  The Accordion supports the two listed types of expand modes while expanding or collapsing the item.
 
@@ -19,7 +19,7 @@ domainurl: ##DomainURL##
 
 The property enables to expand only one Accordion item at a time. If you expand any new item, the previously expanded one is collapsed and new item changed to expanded state.
 
-You can also choose which accordion pane is expanded state at initial rendering by enabling the [`expanded`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItemModel/#expanded) property on accordion items.
+You can also choose which accordion pane is expanded state at initial rendering by enabling the [`expanded`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItemModel#expanded) property on accordion items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -37,7 +37,7 @@ You can also choose which accordion pane is expanded state at initial rendering 
 
 ## Multiple
 
-Default [`expandMode`](https://ej2.syncfusion.com/react/documentation/api/accordion/#expandmode) of the Accordion is `Multiple`. It enables you to expand more than one Accordion item at a time. Expand/collapse action can also be toggled by clicking on it again. For example, expanded item is collapsed when you click on it again.
+Default [`expandMode`](https://ej2.syncfusion.com/react/documentation/api/accordion#expandmode) of the Accordion is `Multiple`. It enables you to expand more than one Accordion item at a time. Expand/collapse action can also be toggled by clicking on it again. For example, expanded item is collapsed when you click on it again.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

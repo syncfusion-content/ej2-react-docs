@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in React Sankey Chart component | Syncfusion
-description: Learn here all about Appearance in Syncfusion React Sankey Chart component of Syncfusion Essential JS 2 and more.
+title: Appearance in React Sankey Chart | Syncfusion
+description: Learn how to customize the appearance of the Syncfusion React Sankey Chart Component with dimensions, background, border, margin, and theme.
 control: Appearance
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in React Sankey Chart component
+# Appearance in React Sankey Chart
 
 The Sankey Chart provides comprehensive customization options to control visual appearance, dimensions, responsiveness, colors, borders, and themes. These appearance settings enable you to create diagrams that match your application's design system and user experience requirements.
 

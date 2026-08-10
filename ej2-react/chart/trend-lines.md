@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Trend lines in React Chart component | Syncfusion
-description: Learn here all about Trend lines in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Trend lines 
+title: Trend lines in React Chart | Syncfusion
+description: Learn how to add linear, exponential, logarithmic, power, moving average and polynomial trend lines to Syncfusion React Chart to highlight data direction.
+control: Trend lines
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Trend lines in React Chart component
+# Trend lines in React Chart
 
 Trendlines help identify patterns, direction, and overall trends in numerical data. They project the general movement of data values and are widely used in analytics, forecasting, and financial charts. Trendlines can be added to Cartesian series types such as Line, Column, Scatter, Area, Candle, and Hilo (excluding bar series). Multiple trendlines can be added to a single series based on the analysis needs.
 

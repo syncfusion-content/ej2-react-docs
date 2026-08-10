@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in React Calendar component | Syncfusion
-description: Learn here all about Customization in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: Customization in React Calendar | Syncfusion
+description: Customize the React Calendar day cells with CSS and the renderDayCell event to disable weekends or highlight specific dates.
 control: Customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in React Calendar component
+# Customization in React Calendar
 
 The Calendar allows customization of the appearance using custom CSS and the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event to modify each day cell.
 

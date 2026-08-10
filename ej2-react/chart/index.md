@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in React Chart component | Syncfusion
-description: Learn here all about Index in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Index 
+title: About Syncfusion React Chart | Syncfusion
+description: Learn how to use the Syncfusion React Chart control with a quick tour of Annotations, Axes, Trendlines, DataLabels, and other essential building blocks.
+control: Index
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Chart component
+# About Syncfusion React Chart
 
 The Chart control is used to visualize the data with user interactivity and provides customizing options to configure the data visually.
 It can bind data from  datasource such as array of JSON objects , OData web services or [`DataManager`](http://ej2.syncfusion.com/documentation/data/api-dataManager.html). All chart elements are rendered using Scalable Vector Graphics (SVG).

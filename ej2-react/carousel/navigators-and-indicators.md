@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Navigators and indicators in React Carousel component | Syncfusion
-description: Learn here all about Navigators and indicators in Syncfusion React Carousel component of Syncfusion Essential JS 2 and more.
+title: Navigators and Indicators in React Carousel | Syncfusion
+description: Show, hide, or hover-reveal previous and next buttons, customize them with templates, and configure indicator visibility in the Syncfusion React Carousel.
 control: Navigators and indicators 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigators and indicators in React Carousel component
+# Navigators and Indicators in React Carousel
 
 The navigators and indicators are used to transition the slides manually.
 

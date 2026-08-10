@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Drop down list component | Syncfusion
-description: Learn here all about Style in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
-control: Style 
+title: Customization in React Dropdown List | Syncfusion
+description: Customize the React Dropdown List wrapper, input, dropdown icon, and focus state via the .e-ddl CSS classes.
+control: Style
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Drop down list component
+# Customization in React Dropdown List
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

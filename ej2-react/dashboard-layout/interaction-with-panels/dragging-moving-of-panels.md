@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dragging panels in React Dashboard Layout component | Syncfusion
-description: Learn here all about Dragging moving of panels in Syncfusion React Dashboard Layout  component of Syncfusion Essential JS 2 and more.
+title: Drag and Drop in React Dashboard Layout | Syncfusion
+description: Drag and reorder Syncfusion React Dashboard Layout panels with collision-pushing, custom drag handles, and an allowDragging toggle.
 control: Dashboard Layout
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dragging and Moving Dashboard Layout Panels in React
+# Drag and Drop in React Dashboard Layout
 
 The Dashboard Layout component provides dragging functionality to reorder panels within the layout. While dragging a panel, a highlighted holder appears beneath it, providing a visual preview of where the panel will be placed upon release. This visual feedback helps determine whether to drop the panel in the new position or return it to its original location without disrupting the layout.
 

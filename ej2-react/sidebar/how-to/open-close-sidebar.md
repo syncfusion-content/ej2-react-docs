@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open close Sidebar in React Sidebar component | Syncfusion
-description: Learn here all about Open close Sidebar in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to open and close Sidebar in React Sidebar | Syncfusion
+description: Open, close, or toggle the Syncfusion React Sidebar programmatically by calling the `show`, `hide`, and `toggle` public methods.
 control: Open close Sidebar 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open close Sidebar in React Sidebar component
+# How to open and close Sidebar in React Sidebar
 
 Opening and closing the Sidebar can be achieved with built-in public methods.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Menu component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React Menu | Syncfusion
+description: CSS class reference for customizing the Syncfusion React Menu wrapper, popup, items, and caret icons.
 control: Style and appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Menu component
+# Style and Appearance in React Menu
 
 To modify the Menu appearance, you need to override the default CSS of Menu component. Please find the list of CSS classes and its corresponding section in Menu component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

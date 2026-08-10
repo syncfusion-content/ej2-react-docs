@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Mention component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Mention component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Mention | Syncfusion
+description: Configure WAI-ARIA support, full keyboard navigation, and WCAG 2.2 / Section 508 compliance for the React Mention component.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Mention component
+# Accessibility in React Mention
 
 Web accessibility makes web content and web applications more accessible for people with disabilities. Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendent`.
 

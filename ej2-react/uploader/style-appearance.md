@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in React Uploader component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React File Upload | Syncfusion
+description: Override the React File Upload's default CSS classes to customize the wrapper, file list, and buttons to match your application's design.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in React Uploader component
+# Style and Appearance in React File Upload
 
 The following CSS selectors and classes enable customization of the Uploader component's visual appearance to match specific design requirements.
 

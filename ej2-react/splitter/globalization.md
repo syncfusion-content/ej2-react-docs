@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React Splitter component | Syncfusion
-description: Learn here all about Globalization in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
+title: Globalization in React Splitter | Syncfusion
+description: Enable right-to-left rendering in the Syncfusion React Splitter for Arabic and Hebrew languages by setting enableRtl to true.
 control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Splitter component
+# Globalization in React Splitter
 
 The React Splitter component supports globalization features, including right-to-left (RTL) rendering needed for languages such as Arabic and Hebrew.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Prevent opening of the dialog in React Dialog component | Syncfusion
-description: Learn here all about Prevent opening of the dialog in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
+title: How to open on condition in React Dialog | Syncfusion
+description: Conditionally open or prevent a React Dialog by setting the beforeOpen event's cancel argument to true based on a runtime check.
 control: Prevent opening of the dialog 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prevent opening of the dialog in React Dialog component
+# How to open on condition in React Dialog
 
-You can prevent the dialog from opening by setting the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog/#beforeopen) event argument cancel value to `true`. In the following sample, the success dialog opens only when a username with a minimum of 4 characters is entered. Otherwise, the dialog will not open.
+You can prevent the dialog from opening by setting the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog#beforeopen) event argument cancel value to `true`. In the following sample, the success dialog opens only when a username with a minimum of 4 characters is entered. Otherwise, the dialog will not open.
 
 `[Class-component]`
 

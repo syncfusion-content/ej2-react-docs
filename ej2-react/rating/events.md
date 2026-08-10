@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events with React Rating component | Syncfusion
-description:  Learn here all about Events in Syncfusion React Rating component of Syncfusion Essential JS 2 and more.
+title: Events in React Rating | Syncfusion
+description: Handle React Rating lifecycle events such as beforeItemRender, created, and valueChange to react to item rendering and selection.
 control: Events
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React Rating Component
+# Events in React Rating
 
 This section describes the rating events that will be triggered when appropriate actions are performed. The following events are available in the rating component.
 

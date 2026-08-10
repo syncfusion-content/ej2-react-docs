@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in React Calendar component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React Calendar | Syncfusion
+description: Apply CSS to the React Calendar to change background, borders, hover, focus, and selected-day styles with .e-calendar selectors.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in React Calendar component
+# Style and Appearance in React Calendar
 
 The following CSS examples show how to modify the Calendar control's appearance to match user preferences. Apply these rules with appropriate specificity to override default styles.
 

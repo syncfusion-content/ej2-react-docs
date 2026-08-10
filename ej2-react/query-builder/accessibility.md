@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Query Builder component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Query Builder component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in React Query Builder UI | Syncfusion
+description: The React Query Builder UI meets WCAG 2.2, Section 508, and ADA accessibility standards, with screen reader, keyboard, and RTL support.
+control: QueryBuilder
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Query Builder component
+# Accessibility in React Query Builder UI
 
 The Query Builder component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate web accessibility.
 

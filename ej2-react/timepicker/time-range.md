@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Time range in React Timepicker component | Syncfusion
-description: Learn here all about Time range in Syncfusion React Timepicker component of Syncfusion Essential JS 2 and more.
+title: Time Range in React TimePicker | Syncfusion
+description: Restrict the React TimePicker selection using the min and max properties and validate with strictMode for time input.
 control: Time range 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Time range in React Timepicker component
+# Time Range in React TimePicker
 
 The [`min`](https://ej2.syncfusion.com/react/documentation/api/timepicker/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/timepicker/#max) properties define the valid time selection range in the TimePicker. The minimum value must be less than the maximum value.
 

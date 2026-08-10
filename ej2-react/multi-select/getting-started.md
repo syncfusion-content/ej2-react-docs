@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React MultiSelect component | Syncfusion
-description: Checkout and learn about Getting started with React MultiSelect component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React MultiSelect Dropdown | Syncfusion
+description: Learn how to get started with the Syncfusion React MultiSelect Dropdown. Install the npm package, import the theme CSS, and render your first multi-select list in a Vite project.
 control: MultiSelect
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React MultiSelect component
+# Getting Started with React MultiSelect Dropdown
 
 This section explains the steps required to create a simple React MultiSelect component and demonstrate its basic usage in a React environment.
 

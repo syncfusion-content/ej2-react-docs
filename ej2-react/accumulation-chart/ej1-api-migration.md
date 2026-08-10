@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ej1 api migration in React Accumulation chart component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
+title: Migration from Essential JS 1 in React Accumulation Chart | Syncfusion
+description: Learn how to migrate the Syncfusion React Accumulation Chart from Essential JS 1 to EJ2 with API mapping and code rewrite guidance.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ej1 api migration in React Accumulation chart component
+# Migration from Essential JS 1 in React Accumulation Chart
 
 This article describes the API migration process of Chart component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

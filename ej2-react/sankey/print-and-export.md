@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print and Export in React Sankey Chart component | Syncfusion
-description: Learn here all about Print and Export in Syncfusion React Sankey Chart component of Syncfusion Essential JS 2 and more.
+title: Print and Export in React Sankey Chart | Syncfusion
+description: Learn how to print or export the Syncfusion React Sankey Chart Component to PDF, image, or SVG using the public print and export methods.
 control: Print and Export
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print and Export in React Sankey Chart component
+# Print and Export in React Sankey Chart
 
 The Sankey Chart provides comprehensive print and export functionality, enabling users to generate static files in multiple formats (PNG, JPEG, SVG, PDF) or print the diagram directly. This is useful for reports, documentation, sharing, and offline access.
 

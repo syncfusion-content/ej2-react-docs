@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integrate UI Elements into React Card Component | Syncfusion
-description: Learn here all about Integrate other component inside the card in Syncfusion React Card component of Syncfusion Essential JS 2 and more.
+title: How to integrate other components in card in React Card | Syncfusion
+description: Host any React component inside a Syncfusion Card content area, demonstrated by embedding a ListView to build a structured To-Do interface.
 control: Card
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate other component inside the card in React Card component
+# How to integrate other components in the card in React Card
 
 The Card component provides a flexible container that can host any other component within its content area, enabling the creation of rich, interactive interfaces. By combining the structured layout benefits of cards with the functionality of other components. Here, the ListView component is integrated inside the card to create an organized To-Do list interface, illustrating how cards can enhance content presentation and user experience.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with React Menu component | Syncfusion
+title: Getting Started with React Menu | Syncfusion
 description: Learn to create and configure the Syncfusion React Menu component in a Vite project with step-by-step instructions.
 control: Menu
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Menu component
+# Getting Started with React Menu
 
 This section explains how to create a simple Menu and configure its available functionalities in React.
 

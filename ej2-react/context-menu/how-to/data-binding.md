@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Context menu component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: How to bind data in React Context Menu | Syncfusion
+description: Populate the React Context Menu dynamically by binding local array data to the `items` property of the component.
 control: Context Menu 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Populate menu items with data source in React Context menu component
+# How to bind data in React Context Menu
 
 The ContextMenu component supports data binding through the [`items`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel/#items) property, allowing you to populate menu items dynamically from local data sources. This approach is particularly useful when menu content needs to be generated from arrays, objects, or other structured data formats, providing flexibility for dynamic menu scenarios.
 

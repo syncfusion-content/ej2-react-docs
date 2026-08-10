@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Splitter component | Syncfusion
-description: Learn here all about Style in Syncfusion React Splitter component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React Splitter | Syncfusion
+description: Customize the Syncfusion React Splitter appearance by overriding CSS for the split bar, resize handle, hover, and active states.
 control: Splitter 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Splitter component
+# Style and Appearance in React Splitter
 
 This guide outlines the CSS structure used to customize the appearance of the React Splitter component based on user preferences.
 

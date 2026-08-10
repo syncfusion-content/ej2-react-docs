@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Badge component | Syncfusion
-description:  Checkout and learn about Getting started with React Badge component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Badge | Syncfusion
+description: Get started with the Syncfusion React Badge — install the npm package, set up a Vite project, and add badges to your UI in minutes.
 control: Badge
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Badge component
+# Getting Started with React Badge
 
 This section explains the steps required to create a simple React Badge component and demonstrate its basic usage in a React environment.
 

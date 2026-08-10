@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Title and subtitle in React Chart component | Syncfusion
-description: Learn here all about Title and subtitle in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
+title: Title and subtitle in React Chart | Syncfusion
+description: Learn how to add a title, subtitle, and custom text to Syncfusion React Chart with options for alignment, font, and background styling.
 control: Title and subtitle
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Title and Subtitle in React Chart Component
+# Title and subtitle in React Chart
 
 Chart titles and subtitles help provide context for the visualized data. The title typically indicates the main subject or metric represented in the chart, while the subtitle adds supporting details such as data sources, time ranges, or explanatory notes. Both elements can be customized in terms of position, alignment, and style to align with application design requirements.
 

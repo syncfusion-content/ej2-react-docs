@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React Timepicker component | Syncfusion
-description: Learn here all about Globalization in Syncfusion React Timepicker component of Syncfusion Essential JS 2 and more.
+title: Globalization in React TimePicker | Syncfusion
+description: Adapt the React TimePicker to global cultures with Internationalization, localization, and UNICODE CLDR data for time formats.
 control: Globalization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Timepicker component
+# Globalization in React TimePicker
 
 Globalization combines [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (date and number parsing/formatting) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (language-specific text and formatting). The TimePicker component adapts to different languages and cultures through these mechanisms.
 

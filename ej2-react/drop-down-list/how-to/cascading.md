@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cascading in React Drop down list component | Syncfusion
-description: Learn here all about Cascading in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
-control: Cascading 
+title: How to configure cascading in React Dropdown List | Syncfusion
+description: Build a chain of dependent React Dropdown Lists where the child loads its data from the parent's change event handler, demonstrating country, state, and city filtering.
+control: Cascading
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Cascading in React Drop down list component
+# How to configure cascading in React Dropdown List
 
 A cascading DropDownList is a series of interdependent DropDownLists where the value of one DropDownList depends on the selection in another. Configure this behavior using the [`change`](https://ej2.syncfusion.com/react/documentation/api/combo-box/#change) event of the parent DropDownList. In the change event handler, load data into the child DropDownList based on the parent's selected value.
 

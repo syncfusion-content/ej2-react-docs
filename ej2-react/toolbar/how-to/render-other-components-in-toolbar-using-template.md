@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Render other components in toolbar using template in React Toolbar component | Syncfusion
-description: Learn here all about Render other components in toolbar using template in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: How to embed other components in Toolbar | Syncfusion
+description: Embed other React components inside the Syncfusion React Toolbar by assigning a function or string template to an item.
 control: Render other components in toolbar using template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render other components in toolbar using template in React Toolbar component
+# How to embed other components in Toolbar
 
 You can render other components inside Toolbar using React **template**. Through this, we can add content as other components directly with all functionalities to our Toolbar. Follow the below guidelines for using the other components as template in Toolbar.
 

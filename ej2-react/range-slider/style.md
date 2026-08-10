@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Range Slider component | Syncfusion
-description: Learn here all about Style in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: Style in React Slider | Syncfusion
+description: Override React Slider CSS classes like e-slider-track, e-handle, and e-tick to customize the track, thumb, and ticks appearance.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Range Slider component
+# Style in React Slider
 
 This content provides the exact CSS structure you can use to modify the component's appearance based on your preferences.
 

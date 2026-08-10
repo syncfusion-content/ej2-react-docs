@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Animation in React Progress bar component | Syncfusion
-description: Learn here all about Animation in Syncfusion React Progress bar component of Syncfusion Essential JS 2 and more.
+title: Animation in React Progress Bar | Syncfusion
+description: Learn how to animate the React Progress Bar using the animation property to enable smooth transitions and control the duration speed.
 control: Animation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in React Progress bar component
+# Animation in React Progress Bar
 
 Progress Bar support to animate the progress by using `animation` property. Enable the animation by setting **enable** property and also you can control the speed by using **duration** property.
 

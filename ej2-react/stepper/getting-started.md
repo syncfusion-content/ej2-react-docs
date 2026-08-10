@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Stepper component | Syncfusion
-description: Checkout and learn about Getting started with React Stepper component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Stepper | Syncfusion
+description: Learn how to get started with the Syncfusion React Stepper control. Explore setup, features, examples, and customization options.
 control: Stepper
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Stepper component
+# Getting Started with React Stepper
 
 This section explains the steps required to create a simple React Stepper component and demonstrate its basic usage in a React environment.
 

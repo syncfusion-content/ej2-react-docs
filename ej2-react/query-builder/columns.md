@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Columns in React Query builder component | Syncfusion
-description: Learn here all about Columns in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
+title: Column Binding in React Query Builder UI | Syncfusion
+description: Bind JavaScript arrays or DataManager sources to React Query Builder UI columns. Define fields, labels, operators, and types for each rule schema.
 control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Columns in React Query Builder component
+# Column Binding in React Query Builder UI
 
-Column definitions define the schema for the Query Builder, controlling how fields appear and behave. These definitions map to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource) and directly influence all query operations, including rule and group creation and deletion. The [`field`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#field) property is essential for binding data source values to query builder columns.
+Column definitions define the schema for the Query Builder, controlling how fields appear and behave. These definitions map to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder#datasource) and directly influence all query operations, including rule and group creation and deletion. The [`field`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#field) property is essential for binding data source values to query builder columns.
 
-> If the column field is not specified in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource), the column values will remain empty.
+> If the column field is not specified in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder#datasource), the column values will remain empty.
 
 ## Auto generation
 
-When the [`columns`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#columns) property is empty or undefined during initialization, the Query Builder automatically generates columns from all fields in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource).
+When the [`columns`](https://ej2.syncfusion.com/react/documentation/api/query-builder#columns) property is empty or undefined during initialization, the Query Builder automatically generates columns from all fields in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder#datasource).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,15 +29,15 @@ When the [`columns`](https://ej2.syncfusion.com/react/documentation/api/query-bu
 
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs1" %}
 
-> When columns are auto-generated, the column type is inferred from the first record in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#datasource).
+> When columns are auto-generated, the column type is inferred from the first record in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder#datasource).
 
 ## Labels
 
-By default, the column label is derived from the column [`field`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#field) name. To customize the label, define the [`label`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#label) property.
+By default, the column label is derived from the column [`field`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#field) name. To customize the label, define the [`label`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#label) property.
 
 ## Operators
 
-Define the available operators for each column using the [`operators`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#operators) property. The following operators are supported based on data type:
+Define the available operators for each column using the [`operators`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#operators) property. The following operators are supported based on data type:
 
 | Operators | Description | Supported Types |
 | ------------ | ----------------------- | ------------------ |
@@ -57,11 +57,11 @@ Define the available operators for each column using the [`operators`](https://e
 
 ## Step
 
-The Query Builder allows you to set the step values to the number fields. So that you can easily access the numeric textbox. Use the [`step`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#step) property, to set the step value for number values.
+The Query Builder allows you to set the step values to the number fields. So that you can easily access the numeric textbox. Use the [`step`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#step) property, to set the step value for number values.
 
 ## Format
 
-The Query Builder formats date and number values. Use the [`format`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#format) property to format date and number values.
+The Query Builder formats date and number values. Use the [`format`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#format) property to format date and number values.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -76,7 +76,7 @@ The Query Builder formats date and number values. Use the [`format`](https://ej2
 
 ## Validations
 
-Validation allows you to validate the conditions and it display errors for invalid fields while using  the [`validateFields`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#validatefields) method.  To enable validation in the query builder , set the allowValidation to true. Column fields are validated after setting [`allowValidation`](https://ej2.syncfusion.com/react/documentation/api/query-builder/#allowvalidation) as to true. So, you should manually configure the validation for Operator and, Value fields through [`validation`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#validation).
+Validation allows you to validate the conditions and it display errors for invalid fields while using  the [`validateFields`](https://ej2.syncfusion.com/react/documentation/api/query-builder#validatefields) method.  To enable validation in the query builder , set the allowValidation to true. Column fields are validated after setting [`allowValidation`](https://ej2.syncfusion.com/react/documentation/api/query-builder#allowvalidation) as to true. So, you should manually configure the validation for Operator and, Value fields through [`validation`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#validation).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -89,5 +89,5 @@ Validation allows you to validate the conditions and it display errors for inval
 
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs3" %}
 
-> Set [`isRequired`](https://ej2.syncfusion.com/react/documentation/api/query-builder/validation/#isrequired) validation for Operator and Value fields.
-> Set [`min`](https://ej2.syncfusion.com/react/documentation/api/query-builder/validation/#min), [`max`](https://ej2.syncfusion.com/react/documentation/api/query-builder/validation/#max) values for number values.
+> Set [`isRequired`](https://ej2.syncfusion.com/react/documentation/api/query-builder/validation#isrequired) validation for Operator and Value fields.
+> Set [`min`](https://ej2.syncfusion.com/react/documentation/api/query-builder/validation#min), [`max`](https://ej2.syncfusion.com/react/documentation/api/query-builder/validation#max) values for number values.

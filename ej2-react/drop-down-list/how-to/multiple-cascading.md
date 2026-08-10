@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple cascading in React Drop down list component | Syncfusion
-description: Learn here all about Multiple cascading in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to preselect items in multiple cascading in React Dropdown List | Syncfusion
+description: Preselect list items across multiple cascading React Dropdown Lists by binding the value from the parent to the child in the change event.
 control: Multiple cascading 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple cascading in React Drop down list component
+# How to preselect items in multiple cascading in React Dropdown List
 
 The following example demonstrates how to preselect list items in multiple cascading DropDownLists:
 

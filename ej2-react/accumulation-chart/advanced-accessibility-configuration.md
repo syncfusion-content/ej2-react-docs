@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility customization | Syncfusion
-description: Learn here all about Accessibility customization in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
+title: Accessibility Customization in React Accumulation Chart | Syncfusion
+description: Learn how to configure advanced accessibility options in the Syncfusion React Accumulation Chart with custom ARIA attributes, roles, and keyboard patterns.
 control: Accessibility customization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility customization
+# Accessibility Customization in React Accumulation Chart
 
 The Syncfusion® React Accumulation Chart control is structured to visualize data in a graphical manner. It provides robust customization options for accessibility, allowing you to enhance the user experience for those with disabilities. The main attributes of the React Accumulation Chart control's accessibility customization are briefly explained in this section.
 

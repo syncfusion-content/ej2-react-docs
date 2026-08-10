@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set tool tip for tree nodes in React TreeView component | Syncfusion
-description: Learn here all about Set tool tip for tree nodes in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: How to set a tooltip for tree nodes in React | Syncfusion
+description: Show a Syncfusion Tooltip on each Syncfusion React TreeView node by setting the tooltip property on the fields mapping.
 control: Set tool tip for tree nodes 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set tool tip for tree nodes in React TreeView component
+# How to set a tooltip for tree nodes in React
 
 TreeView component allows you to set tooltip option to tree nodes using the [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#tooltip) property. The following code example demonstrates how to set tooltip for TreeView nodes.
 

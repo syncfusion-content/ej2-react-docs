@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change animation settings in React Context menu component | Syncfusion
-description: Learn here all about Change animation settings in Syncfusion React Context menu component of Syncfusion Essential JS 2 and more.
+title: How to change animation settings in React | Syncfusion
+description: Configure the React Context Menu open and close animation by setting `effect`, `duration`, and `easing` on the `animationSettings` property.
 control: Context Menu
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change animation settings in React Context menu component
+# How to change animation settings in React
 
 The ContextMenu component provides customizable animation effects through the [`animationSettings`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuAnimationSettingsModel/) property. This allows you to control how the context menu appears and disappears, enhancing the user experience with smooth visual transitions.
 

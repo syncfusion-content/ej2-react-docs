@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api in React Chart component | Syncfusion
-description: Learn here all about Api in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Api 
+title: API in React Chart | Syncfusion
+description: Learn how to use the Syncfusion React Chart API reference, including the public classes, interfaces, and members exposed by the component.
+control: Api
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api in React Chart component
+# API in React Chart
 
 ## Components
 

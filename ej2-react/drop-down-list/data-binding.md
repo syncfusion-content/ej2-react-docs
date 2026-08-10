@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in React Drop down list component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React Dropdown List | Syncfusion
+description: Bind local arrays, JSON objects, or remote OData and Web API sources to the React Dropdown List using dataSource and DataManager adaptors.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in React Drop down list component
+# Data Binding in React Dropdown List
 
 The DropDownList loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#datasource) property. It supports both `array` and `DataManager` data types.
 

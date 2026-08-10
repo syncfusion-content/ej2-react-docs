@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in React Datepicker component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React DatePicker | Syncfusion
+description: Customize the React DatePicker wrapper, input, icon, and popup styles with the .e-input-group and .e-datepicker CSS selectors.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in React Datepicker component
+# Style and Appearance in React DatePicker
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

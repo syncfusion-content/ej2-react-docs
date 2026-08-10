@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in React Dropdown Tree component | Syncfusion
-description: Learn here all about Templates in Syncfusion React Drop down tree component of Syncfusion Essential JS 2 and more.
+title: Templates in React Dropdown Tree | Syncfusion
+description: Customize React Dropdown Tree items, selected value, header, and footer with itemTemplate, valueTemplate, and headerTemplate template properties.
 control: Dropdown Tree
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React Dropdown Tree component
+# Templates in React Dropdown Tree
 
 The Dropdown Tree provides support for customizing each list item, header, and footer elements.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Setting dimension in React Tooltip component | Syncfusion
-description: Learn here all about Setting dimension in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+title: Setting Dimension in React Tooltip | Syncfusion
+description: Set the React Tooltip width and height in pixels or auto to control the outer dimensions, with optional scroll mode for tall content.
 control: Setting dimension 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Setting dimension in React Tooltip component
+# Setting Dimension in React Tooltip
 
 ## Height and width
 

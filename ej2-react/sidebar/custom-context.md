@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom context in React Sidebar component | Syncfusion
-description: Learn here all about Custom context in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+title: Target in React Sidebar | Syncfusion
+description: Mount the Syncfusion React Sidebar inside any HTML element instead of the page body by setting the `target` property.
 control: Custom context 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom context in React Sidebar component
+# Target in React Sidebar
 
 By default, Sidebar initializes target to the body element. Using the [target](https://ej2.syncfusion.com/react/documentation/api/sidebar/#target) property, set target element to initialize the Sidebar inside any HTML element apart from the body element.
 

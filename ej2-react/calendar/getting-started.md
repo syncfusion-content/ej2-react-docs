@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Calendar Component | Syncfusion
-description: Checkout and learn about getting started with Syncfusion Essential React Calendar component, it's elements, and more.
+title: Getting Started with React Calendar | Syncfusion
+description: Set up the React Calendar component in a Vite or CRA project and render dates with month, year, and decade views in minutes.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Calendar component
+# Getting Started with React Calendar
 
 This section explains the steps required to create a simple React Calendar component and demonstrate its basic usage in a React environment.
 

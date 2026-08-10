@@ -1,7 +1,7 @@
 ---
 layout: post
-title: End user Capabilities in ##Platform_Name## Image Editor component | Syncfusion
-description: Learn here all about End user Capabilities in Syncfusion ##Platform_Name## Image Editor component of Syncfusion Essential JS 2 and more.
+title: End User Capabilities in React Image Editor | Syncfusion
+description: Discover the end-user operations in the React Image Editor, including open, zoom, pan, crop, transform, annotate, filter, undo, redo, reset, and export.
 platform: ej2-react
 control: End user Capabilities
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# End User Capabilities in the Image Editor component
+# End User Capabilities in React Image Editor
 
 The following operations are available for end-users and the same is explained briefly in these sections.
 

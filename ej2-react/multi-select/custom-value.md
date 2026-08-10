@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom value in React Multi select component | Syncfusion
-description: Learn here all about Custom value in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Custom Value in React MultiSelect Dropdown | Syncfusion
+description: Let users add new options not present in the original React MultiSelect Dropdown dataset by enabling allowCustomValue and handling the customValueSelection event.
 control: Custom value 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom value in React Multi select component
+# Custom Value in React MultiSelect Dropdown
 
 The MultiSelect enables users to add new custom options not present in the original dataset when [`allowCustomValue`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#allowcustomvalue) is enabled. When a custom value is selected, the `customValueSelection` event is triggered.
 

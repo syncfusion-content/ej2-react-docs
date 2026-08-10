@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date time format in React Datetimepicker component | Syncfusion
-description: Learn here all about Date time format in Syncfusion React Datetimepicker component of Syncfusion Essential JS 2 and more.
+title: DateTime Format in React DateTime Picker | Syncfusion
+description: Customize the React DateTime Picker format with the format property to render both date and time in patterns like yyyy-MM-dd hh:mm.
 control: Date time format 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date time format in React Datetimepicker component
+# DateTime Format in React DateTime Picker
 
 Date-time format defines how date and time values are displayed in the input field. By default, the DateTimePicker format is based on the current culture. You can set a custom format using the [`format`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#format) property.
 

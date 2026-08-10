@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Labels in React Sankey Chart component | Syncfusion
-description: Learn here all about Labels in Syncfusion React Sankey Chart component of Syncfusion Essential JS 2 and more.
+title: Labels in React Sankey Chart | Syncfusion
+description: Learn how to configure and customize labels on nodes and links in the Syncfusion React Sankey Chart Component using labelSettings.
 control: Labels
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Labels in React Sankey Chart component
+# Labels in React Sankey Chart
 
 Labels display descriptive text associated with nodes in the Sankey Chart, making the diagram more understandable and interpretable. The Sankey Chart provides comprehensive label customization options including visibility control, font styling, individual label configuration, and dynamic rendering events.
 

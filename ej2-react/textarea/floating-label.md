@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Floating Label in React TextArea component | Syncfusion
-description: Checkout and learn about Floating Label in React TextArea component of Syncfusion Essential JS 2 and more.
+title: Floating Label in React TextArea | Syncfusion
+description: Animate the React TextArea label above the input on focus or input using the floatLabelType property set to Auto, Always, or Never.
 control: Floating Label 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Floating Label in React TextArea Component
+# Floating Label in React TextArea
 
 The floating label functionality in the TextArea component allows the placeholder text to float above the TextArea while the user interacts with it, providing a more intuitive user experience. This feature can be achieved using the [floatLabelType](https://ej2.syncfusion.com/react/documentation/api/textarea/#floatLabelType) API, which offers various options for defining the floating behavior:
 

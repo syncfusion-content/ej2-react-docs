@@ -1,14 +1,14 @@
 ---
 layout: post
-title: EJ1 API Migration in React Daterangepicker component | Syncfusion
-description: Learn here all about EJ1 API Migration in Syncfusion React Daterangepicker component of Syncfusion Essential JS 2 and more.
+title: EJ1 API Migration in React DateRangePicker | Syncfusion
+description: Map Essential JS 1 DateRangePicker properties, methods, and events to their React DateRangePicker EJ2 equivalents during migration.
 control: EJ1 API Migration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# EJ1 API Migration in React Daterangepicker component
+# EJ1 API Migration in React DateRangePicker
 
 This article describes the API migration process for upgrading DateRangePicker components from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2. Review the following sections to map EJ1 properties, methods, and events to their EJ2 equivalents.
 

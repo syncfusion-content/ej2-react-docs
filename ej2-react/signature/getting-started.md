@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React Signature component | Syncfusion
-description:  Checkout and learn about Getting Started with React Signature component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Signature | Syncfusion
+description: Set up a Vite-based React project, install the Syncfusion Signature, and render a basic signature pad for capturing user-drawn signatures.
 control: Signature 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Signature component
+# Getting Started with React Signature
 
 This section explains the steps required to create a simple React Signature component and demonstrate its basic usage in a React environment.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in React Range navigator component | Syncfusion
-description: Learn here all about Index in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
-control: Index 
+title: About Syncfusion React Range Navigator | Syncfusion
+description: Learn here all about Index in Syncfusion React Range Navigator component of Syncfusion Essential JS 2 and more.
+control: Index
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Range navigator component
+# About Syncfusion React Range Navigator
 
 RangeNavigator is a data visualization control. It allows you to scroll and navigate through the data. This control easily combines with other controls such as Chart, Data Grid, etc., to create rich and powerful dashboards.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Area Chart in React Charts | Syncfusion
-description: Learn here all about Stacked Area Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
-control: Stacked Area Chart 
+title: Stacked Area Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Stacked Area series in Syncfusion React Chart to show each series contribution to a total over time.
+control: Stacked Area Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Stacked Area Chart in React Charts
+# Stacked Area Chart in React Chart
 
 ## Stacked Area
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React Query builder component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
+title: Styles and Appearances in React Query Builder UI | Syncfusion
+description: Style the React Query Builder UI by overriding CSS classes for group headers, rule containers, buttons, and joining lines, or use Theme Studio.
 control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and appearance in React Query Builder component
+# Styles and Appearances in React Query Builder UI
 
 Customize the Query Builder appearance by overriding its default CSS styles. The following table lists the CSS classes and their corresponding Query Builder components. Additionally, you can create custom themes using the [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
 

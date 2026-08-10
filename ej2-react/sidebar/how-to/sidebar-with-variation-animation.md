@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Variation animation in React Sidebar component | Syncfusion
-description: Learn here all about Sidebar with variation animation in Syncfusion React Sidebar component of Syncfusion Essential JS 2 and more.
+title: How to use custom animation in Sidebar in React | Syncfusion
+description: Apply custom CSS animation to the Syncfusion React Sidebar expand and collapse so the transition matches any custom width you set.
 control: Sidebar with variation animation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sidebar with variation animation in React Sidebar component
+# How to use custom animation in Sidebar in React
 
 In the following example, the Sidebar is rendered with custom animation effects. Click the buttons available in the main content area to check how the custom animations works with sidebar.
 

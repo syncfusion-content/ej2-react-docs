@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change animation settings in React Menu component | Syncfusion
-description: Learn here all about Change animation settings in Syncfusion React Menu component of Syncfusion Essential JS 2 and more.
+title: How to change Menu animation settings in React | Syncfusion
+description: Configure the Syncfusion React Menu open animation by setting `effect`, `duration`, and `easing` on the `animationSettings` property.
 control: Change animation settings 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change animation settings in React Menu component
+# How to change Menu animation settings in React
 
 To change the animation of the Menu, [`animationSettings`](https://ej2.syncfusion.com/react/documentation/api/menu/menuAnimationSettingsModel/) property is used. The supported effects for Menu are,
 

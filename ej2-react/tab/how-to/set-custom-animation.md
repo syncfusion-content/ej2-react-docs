@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set custom animation in React Tab component | Syncfusion
-description: Learn here all about Set custom animation in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to set custom animation in Tab in React | Syncfusion
+description: Configure the show and hide animation of the Syncfusion React Tab content by setting animation previous and next effects.
 control: Set custom animation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set custom animation in React Tab component
+# How to set custom animation in Tab in React
 
 Tab supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The [`animation`](https://ej2.syncfusion.com/react/documentation/api/tab/#animation) property also allows you to set [`easing`](https://ej2.syncfusion.com/react/documentation/api/tab/tabActionSettings/#easing), [`duration`](https://ej2.syncfusion.com/react/documentation/api/tab/tabActionSettings/#duration), and various other [`effect`](https://ej2.syncfusion.com/react/documentation/api/tab/tabActionSettings/#effect).
 

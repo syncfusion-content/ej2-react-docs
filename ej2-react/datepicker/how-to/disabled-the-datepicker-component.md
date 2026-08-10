@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Disable the DatePicker component in React Datepicker component | Syncfusion
-description: Learn here all about Disable the DatePicker component in Syncfusion React Datepicker component of Syncfusion Essential JS 2 and more.
+title: How to disable the DatePicker in React DatePicker | Syncfusion
+description: Disable the React DatePicker by setting the enabled property to false so users cannot interact with the input or popup.
 control: Disable the DatePicker component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable the DatePicker component in React Datepicker component
+# How to disable the DatePicker in React DatePicker
 
-The DatePicker component can be disabled by setting the [`enabled`](https://ej2.syncfusion.com/react/documentation/api/datepicker/#enabled) property to `false`. A disabled DatePicker prevents user interaction and appears visually distinct from an enabled state.
+The DatePicker component can be disabled by setting the [`enabled`](https://ej2.syncfusion.com/react/documentation/api/datepicker#enabled) property to `false`. A disabled DatePicker prevents user interaction and appears visually distinct from an enabled state.
 
 The following example demonstrates a disabled DatePicker component:
 

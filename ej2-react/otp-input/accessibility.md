@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React OTP Input component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React OTP Input component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React OTP Input | Syncfusion
+description: Review the React OTP Input compliance with WCAG 2.2, Section 508, WAI-ARIA, and screen reader accessibility standards.
 platform: ej2-react
 control: OTP Input 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React OTP Input component
+# Accessibility in React OTP Input
 
 The OTP Input component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and common WAI-ARIA roles used to evaluate accessibility.
 

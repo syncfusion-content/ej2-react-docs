@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validate file input requirement in React Uploader component | Syncfusion
-description: Learn here all about validating file input requirement in Syncfusion React Uploader component of Syncfusion Essential JS 2 and more.
+title: How to determine if File Upload has files in React File Upload | Syncfusion
+description: Require at least one file in the React File Upload by setting the required attribute and showing a data-required-message on form submit.
 control: Validate file input requirement 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validate file input requirement in React Uploader component
+# How to determine if File Upload has files in React File Upload
 
 Enforce file selection requirement by applying the **required** attribute to the Uploader input element. This validates that at least one file must be selected before form submission. In the following sample, the required attribute is applied to the Uploader input element and a validation message is displayed using the `data-required-message` attribute.
 

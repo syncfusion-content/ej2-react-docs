@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Slider limits in React Range Slider component | Syncfusion
-description: Learn here all about Customize Slider limits in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to customize the Slider limits in React Slider | Syncfusion
+description: Style the React Slider limit bar by overriding the e-limits CSS class to highlight a restricted sub-range within the slider.
 control: Customize Slider limits 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Slider limits in React Range Slider component
+# How to customize the Slider limits in React Slider
 
 The Slider appearance can be customized using CSS by overriding Slider CSS classes. By default, the Slider uses the `e-limits` class for the limit bar. You can override this class with custom color values as shown below:
 

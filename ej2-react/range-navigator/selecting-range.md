@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selecting range in React Range navigator component | Syncfusion
-description: Learn here all about Selecting range in Syncfusion React Range navigator component of Syncfusion Essential JS 2 and more.
-control: Selecting range 
+title: Range in React Range Navigator | Syncfusion
+description: Learn how to select a range in the Syncfusion React Range Navigator Component by dragging the thumbs, tapping the labels, or setting the value.
+control: Selecting range
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selecting range in React Range navigator component
+# Range in React Range Navigator
 
 The Range Selector's left and right thumbs are used to indicate the selected range in the large collection of data. A range can be selected in the following ways:
 

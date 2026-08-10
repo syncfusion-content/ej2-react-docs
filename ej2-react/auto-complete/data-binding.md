@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data Binding in React AutoComplete component | Syncfusion
-description: Learn here all about Data Binding in Syncfusion React AutoComplete component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React AutoComplete | Syncfusion
+description: Learn how to bind the Syncfusion React AutoComplete to local arrays, remote services, or complex objects using the dataSource property and field mapping.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data Binding in React AutoComplete component
+# Data Binding in React AutoComplete
 
 The AutoComplete component loads data either from local data sources or remote data services using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#datasource) property. It supports the data type of array or `DataManager`.
 

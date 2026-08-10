@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Legend in React Accumulation chart component | Syncfusion
-description: Learn here all about Legend in Syncfusion React Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Legend 
+title: Legend in React Accumulation Chart | Syncfusion
+description: Learn how to enable and customize the legend in the Syncfusion React Accumulation Chart to identify each slice, with options for position, shape, and more.
+control: Legend
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Legend in React Accumulation chart component
+# Legend in React Accumulation Chart
 
 As like a chart, the legend is also available for accumulation charts, which gives information about the points.
 By default, the legend will be placed on the right, if the width of the chart is high or will be placed on the bottom, if the height of the chart is high. Other customization features regarding the legend element are same as the [`chart legend`](http://ej2.syncfusion.com/documentation/chart/legend.html#position-and-alignment).

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates with React Rating component | Syncfusion
-description:  Learn here all about Templates in Syncfusion React Rating component of Syncfusion Essential JS 2 and more.
+title: Templates in React Rating | Syncfusion
+description: Replace React Rating item symbols with custom content using the emptyTemplate and fullTemplate for personalized star or icon designs.
 control: Templates
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React Rating Component
+# Templates in React Rating
 
 Customize the appearance of rating items using templates. Templates allow you to specify a custom layout for rating items with any content, creating a personalized rating experience.
 

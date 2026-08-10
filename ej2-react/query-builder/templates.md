@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in React Query builder component | Syncfusion
-description: Learn here all about Templates in Syncfusion React Query builder component of Syncfusion Essential JS 2 and more.
+title: Templates in React Query Builder UI | Syncfusion
+description: Customize the React Query Builder UI header and per-column inputs with React component templates for rules, operators, and values.
 control: QueryBuilder 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React Query Builder component
+# Templates in React Query Builder UI
 
 Templates enable you to define customized headers and custom user interface elements for column values and filtering interactions.
 
@@ -84,7 +84,7 @@ Create customized input widgets by implementing templates as React components. T
 
 ## Rule Template
 
-Rule Template allows to define your own user interface for columns. To implement [`ruleTemplate`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel/#ruletemplate), you can create the user interface as `React` component and assign the values through `actionBegin` event.
+Rule Template allows to define your own user interface for columns. To implement [`ruleTemplate`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#ruletemplate), you can create the user interface as `React` component and assign the values through `actionBegin` event.
 
 In the following sample, dropdown and slider are used as the custom component and applied `greaterthanorequal` operator to `Age` column.
 

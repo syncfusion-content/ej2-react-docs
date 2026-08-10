@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization using cssclass in React Daterangepicker component | Syncfusion
-description: Learn here all about Customization using cssclass in Syncfusion React Daterangepicker component of Syncfusion Essential JS 2 and more.
+title: How to customize using CSSClass in React DateRangePicker | Syncfusion
+description: Apply custom CSS to the React DateRangePicker with the cssClass property and a list of .e-date-range-wrapper class targets.
 control: Customization using cssclass 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization using cssclass in React Daterangepicker component
+# How to customize using CSSClass in React DateRangePicker
 
 The [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#cssclass) property enables UI customization by adding a custom CSS class to the DateRangePicker root element. This allows you to override default component styles with custom styling rules.
 

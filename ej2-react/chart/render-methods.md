@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Render methods in React Chart component | Syncfusion
-description: Learn here all about Render methods in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Render methods 
+title: Render methods in React Chart | Syncfusion
+description: Learn how to use the render and refresh methods on Syncfusion React Chart to re-render the chart manually after data or option changes.
+control: Render methods
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 <!-- markdownlint-disable MD036 -->
 
-# Render methods in React Chart component
+# Render methods in React Chart
 
 Chart uses following two rendering methods.
 

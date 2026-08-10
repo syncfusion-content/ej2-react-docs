@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create wizard using tab in React Tab component | Syncfusion
-description: Learn here all about Create wizard using tab in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to create a wizard using Tab in React Tab | Syncfusion
+description: Build a multi-step form wizard in the Syncfusion React Tab by enabling and selecting tab items in response to user input.
 control: Create wizard using tab 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create wizard using tab in React Tab component
+# How to create a wizard using Tab in React Tab
 
 Tab items can be disabled dynamically by passing the index and boolean value with the [`enableTab`](https://ej2.syncfusion.com/react/documentation/api/tab/#enabletab) method and also passing index or HTML element to select an item from the tab using [`select`](https://ej2.syncfusion.com/react/documentation/api/tab/#select) method.
 

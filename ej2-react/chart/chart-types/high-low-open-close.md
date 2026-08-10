@@ -1,14 +1,14 @@
 ---
 layout: post
-title: High Low Open Close Chart in React Charts | Syncfusion
-description: Learn here all about High Low Open Close Chart in Syncfusion React Charts component of Syncfusion Essential JS 2 and more.
+title: High Low Open Close Chart in React Chart | Syncfusion
+description: Learn to render, customize, and bind Hilo Open Close series in Syncfusion React Chart to visualize stock price movements with high, low, open, and close values.
 control: High Low Open Close
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# High Low Open Close Chart in React Charts
+# High Low Open Close Chart in React Chart
 
 ## High Low Open Close
 

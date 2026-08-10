@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print and Export in React 3D Chart component | Syncfusion
-description: Learn here all about print and export in Syncfusion React 3D Chart component of Syncfusion Essential JS 2 and more.
-control: 3D Chart
+title: Print and Export in React 3D Chart | Syncfusion
+description: Learn how to print or export the Syncfusion React 3D Chart to PDF, image, or SVG using the public print and export methods on the chart instance.
+control: Print
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print and Export in React 3D Chart control
+# Print and Export in React 3D Chart 
 
 ## Print
 

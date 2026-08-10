@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Adornments in React TextBox component | Syncfusion
-description: Learn here all about adornments in Syncfusion React TextBox component of Syncfusion Essential JS 2 and more.
+title: Adornments in React TextBox | Syncfusion
+description: Add icons, text labels, or action buttons to the React TextBox using prependTemplate and appendTemplate for richer form inputs.
 platform: ej2-react
 control: Adornments
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adornments in React TextBox component
+# Adornments in React TextBox
 
 Enhance the TextBox component with prepended or appended visual elements using `prependTemplate` and `appendTemplate` properties. Adornments include icons, text labels, or interactive buttons that provide visual context and improve the user input experience.
 

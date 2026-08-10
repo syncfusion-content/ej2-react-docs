@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Sankey Chart component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Sankey Chart component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Sankey Chart | Syncfusion
+description: Learn how the Syncfusion React Sankey Chart Component supports accessibility with WAI-ARIA, Section 508, WCAG 2.2, and keyboard navigation.
 control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Sankey Chart component
+# Accessibility in React Sankey Chart
 
 The Sankey Chart component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22), and relevant [WAI-ARIA](https://www.w3.org/TR/wai-aria#roles) roles.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Tooltip in React Drop down list component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: How to show a tooltip on each item in React Dropdown List | Syncfusion
+description: Show a tooltip on each React Dropdown List item by integrating the ej2-tooltip component and binding it to the popup's mouseenter event.
 control: Tooltip 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tooltip in React Drop down list component
+# How to show a tooltip on each item in React Dropdown List
 
 Achieve this behavior using the `ej2-tooltip` component. When you hover the mouse over a DropDownList option, the tooltip displays details related to that list item.
 

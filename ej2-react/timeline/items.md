@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Items in React Timeline component | Syncfusion
-description:  Checkout and learn about Items with Syncfusion React Timeline component of Syncfusion Essential JS 2 and more.
+title: Items in React Timeline | Syncfusion
+description: Configure Syncfusion React Timeline items with content, oppositeContent, dotCss, disabled, and cssClass for string or templated entries.
 control: Timeline
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Items in React Timeline component
+# Items in React Timeline
 
 The Timeline items can be configured using the `ItemDirective` tag. Each item supports multiple configuration options including `content`, `oppositeContent`, `dotCss`, `disabled`, and `cssClass` properties to create rich, interactive timeline experiences.
 

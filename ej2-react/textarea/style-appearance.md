@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style and appearance in React TextArea component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion React TextArea component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React TextArea | Syncfusion
+description: Customize the React TextArea size and styling by adding e-small or e-bigger CSS classes to render compact or larger inputs.
 control: Style and Appearance
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sizing in React TextArea Component
+# Style and Appearance in React TextArea
 
 You can adjust the TextArea size by applying specific classes:
 

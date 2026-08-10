@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Orientation in React Tab component | Syncfusion
-description: Learn here all about Orientation in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: Orientation in React Tab | Syncfusion
+description: Place the Syncfusion React Tab header at the top, bottom, left, or right of the content area with the headerPlacement property.
 control: Orientation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Orientation in React Tab component
+# Orientation in React Tab
 
 This section explains about modifying the position and modes of Tab header.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Nodes in React Sankey Chart component | Syncfusion
-description: Learn here all about Nodes in Syncfusion React Sankey Chart component of Syncfusion Essential JS 2 and more.
+title: Nodes in React Sankey Chart | Syncfusion
+description: Learn how to add and customize nodes in the Syncfusion React Sankey Chart Component with custom color, width, and opacity.
 control: Nodes
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Nodes in React Sankey Chart component
+# Nodes in React Sankey Chart
 
 Nodes are the fundamental building blocks of a Sankey Chart, representing sources, targets, and intermediate entities in flow diagrams. The Sankey Chart provides extensive customization options for node appearance, enabling you to create visually meaningful and interactive flow diagrams.
 

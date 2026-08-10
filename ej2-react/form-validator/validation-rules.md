@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation rules in React Form validator component | Syncfusion
-description: Learn here all about Validation rules in Syncfusion React Form validator component of Syncfusion Essential JS 2 and more.
+title: Validation Rules in React Form Validation Library | Syncfusion
+description: Apply built-in React Form Validation Library rules such as required, email, url, date, range, maxLength, and regex to your form inputs.
 control: Validation rules 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation rules in React Form validator component
+# Validation Rules in React Form Validation Library
 
 ## Default Rules
 
@@ -31,12 +31,12 @@ The `FormValidator` provides the following default validation rules for form val
 | `min` | Input value must have greater than or equal to `min` number | if `min: 4`, **5** is valid and **2** is invalid |
 | `regex` | Input value must have valid `regex` format | if `regex: '^[A-z]+$'`, **a** is valid and **1** is invalid |
 
-> The [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator/#rules) option must map the input element's `name` attribute.
+> The [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator#rules) option must map the input element's `name` attribute.
 > The `FormValidator` validates only the mapped input elements.
 
 ## Defining Custom Rules
 
-You can define custom rules in the [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator/#rules) property to validate the form with custom logic.
+You can define custom rules in the [`rules`](https://ej2.syncfusion.com/documentation/api/form-validator#rules) property to validate the form with custom logic.
 
 The custom validation method must return a boolean value to indicate validation success or failure.
 
@@ -53,7 +53,7 @@ The custom validation method must return a boolean value to indicate validation 
 
 ## Adding or Removing Rules
 
-After creating a `FormValidator` instance, you can add rules to an input element using the [`addRules`](https://ej2.syncfusion.com/documentation/api/form-validator/#addrules) method, or remove existing rules using the [`removeRules`](https://ej2.syncfusion.com/documentation/api/form-validator/#removerules) method.
+After creating a `FormValidator` instance, you can add rules to an input element using the [`addRules`](https://ej2.syncfusion.com/documentation/api/form-validator#addrules) method, or remove existing rules using the [`removeRules`](https://ej2.syncfusion.com/documentation/api/form-validator#removerules) method.
 
 ```ts
 

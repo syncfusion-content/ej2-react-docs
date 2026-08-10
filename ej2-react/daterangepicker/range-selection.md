@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Range selection in React Daterangepicker component | Syncfusion
-description: Learn here all about Range selection in Syncfusion React Daterangepicker component of Syncfusion Essential JS 2 and more.
+title: Range Restriction in React DateRangePicker | Syncfusion
+description: Restrict the React DateRangePicker selection using min, max, and rangeSpan to enforce a fixed or sliding date range.
 control: Range selection 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range selection in React Daterangepicker component
+# Range Restriction in React DateRangePicker
 
 Range selection in the DateRangePicker can be customized with specific restrictions based on application requirements.
 

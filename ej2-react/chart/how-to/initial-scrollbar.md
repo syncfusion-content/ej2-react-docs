@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Initial scrollbar in React Chart component | Syncfusion
-description: Learn here all about Initial scrollbar in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Initial scrollbar 
+title: How to set initial scrollbar in React Chart | Syncfusion
+description: Learn how to make the scrollbar visible on initial render of Syncfusion React Chart for zoomed chart views.
+control: Initial scrollbar
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Initial scrollbar in React Chart component
+# How to set initial scrollbar in React Chart
 
 By setting `zoomFactor` in primaryXAxis and `isZoomed` value as `true` in [`load`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#load) event and `enableScrollbar` value as `true` in`zoomSettings`, you can make the scrollbar visible in initial rendering of chart.
 

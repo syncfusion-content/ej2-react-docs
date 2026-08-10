@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Bullet chart component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Bullet chart component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in React Bullet Chart | Syncfusion
+description: Learn how the Syncfusion React Bullet Chart Component supports accessibility with WAI-ARIA, Section 508, WCAG 2.2, and keyboard navigation.
+control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Bullet chart component
+# Accessibility in React Bullet Chart
 
 The Bullet chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 

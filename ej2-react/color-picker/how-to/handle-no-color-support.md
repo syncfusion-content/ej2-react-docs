@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Handle no color support in React Color picker component | Syncfusion
-description: Learn here all about Handle no color support in Syncfusion React Color picker component of Syncfusion Essential JS 2 and more.
+title: How to handle no color support in React Color Picker | Syncfusion
+description: Add a no-color tile to the React Color Picker palette by setting noColor to true so users can clear the selected color.
 control: Handle no color support 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handle no color support in React Color picker component
+# How to handle no color support in React Color Picker
 
 The ColorPicker component supports a no-color feature. When you click the no-color tile in the palette, the selected color becomes empty, indicating that no color has been selected.
 
 ## Default no color
 
-To enable this feature, set the [`noColor`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#nocolor) property to `true`.
+To enable this feature, set the [`noColor`](https://ej2.syncfusion.com/react/documentation/api/color-picker#nocolor) property to `true`.
 
 In the following sample, the first tile of the palette represents the no-color option. Click it to clear the color selection.
 
@@ -29,7 +29,7 @@ In the following sample, the first tile of the palette represents the no-color o
 
  {% previewsample "page.domainurl/code-snippet/colorpicker/no-color/default-cs1" %}
 
->When the [`noColor`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#nocolor) property is enabled, ensure that the [`modeSwitcher`](https://ej2.syncfusion.com/react/documentation/api/color-picker/#modeswitcher) property is disabled.
+>When the [`noColor`](https://ej2.syncfusion.com/react/documentation/api/color-picker#nocolor) property is enabled, ensure that the [`modeSwitcher`](https://ej2.syncfusion.com/react/documentation/api/color-picker#modeswitcher) property is disabled.
 
 ## Custom no color
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disabled Items in React MultiSelect component | Syncfusion
-description: Learn here all about Disabled Items in Syncfusion React MultiSelect component of Syncfusion Essential JS 2 and more.
+title: Disabled Items in React MultiSelect Dropdown | Syncfusion
+description: Disable individual React MultiSelect Dropdown items by mapping the disabled data field, calling the disableItem method, or disabling the whole component with the enabled property set to false.
 control: Disabled Items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disabled Items in React MultiSelect component
+# Disabled Items in React MultiSelect Dropdown
 
 The MultiSelect supports enabling or disabling individual items as needed. Map the [disabled](https://ej2.syncfusion.com/react/documentation/api/multi-select/#fields) field from your data source to control item availability. Disabled items cannot be selected. Configure the disabled state mapping using the `fields.disabled` property.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multi select in React Calendar component | Syncfusion
-description: Learn here all about Multi select in Syncfusion React Calendar component of Syncfusion Essential JS 2 and more.
+title: Multi Selection in React Calendar | Syncfusion
+description: Enable multi date selection in the React Calendar using the isMultiSelection and values properties for range-based picking.
 control: Multi select 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multi select in React Calendar component
+# Multi Selection in React Calendar
 
 The Calendar provides options for single or multiple date selection using the `isMultiSelection` and `values` properties. By default, `isMultiSelection` is disabled.
 

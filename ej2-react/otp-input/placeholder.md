@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Placeholder in React OTP Input component | Syncfusion
-description:  Checkout and learn about Placeholder with React OTP Input component of Syncfusion Essential JS 2 and more.
+title: Placeholder in React OTP Input | Syncfusion
+description: Display a placeholder hint character in each React OTP Input field until the user enters a value to guide the expected format.
 platform: ej2-react
 control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Placeholder in React OTP Input component
+# Placeholder in React OTP Input
 
 The placeholder in OTP Input displays text as a hint until the user enters a value. It provides guidance regarding the expected input format or purpose.
 

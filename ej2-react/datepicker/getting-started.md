@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React DatePicker component | Syncfusion
-description: Check out and learn the steps to get started with the React DatePicker component of Syncfusion Essential JS 2.
+title: Getting Started with React DatePicker | Syncfusion
+description: Set up the React DatePicker in a Vite or CRA project and add a fully interactive date input to your forms in minutes.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React DatePicker component
+# Getting Started with React DatePicker
 
 This section explains the steps required to create a simple React DatePicker component and demonstrate its basic usage in a React environment.
 

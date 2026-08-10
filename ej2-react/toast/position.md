@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position in React Toast component | Syncfusion
-description: Learn here all about Position in Syncfusion React Toast component of Syncfusion Essential JS 2 and more.
+title: Position in React Toast | Syncfusion
+description: Place React Toasts at nine predefined positions or custom X/Y coordinates for precise notification placement on screen.
 control: Toast
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toast position
+# Position in React Toast
 
 Configure where toasts appear on the screen using predefined positions or custom coordinate values. Position settings determine toast placement relative to the viewport or target container, affecting user attention and notification visibility.
 

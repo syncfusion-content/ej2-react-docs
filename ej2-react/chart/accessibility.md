@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Chart component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in React Chart | Syncfusion
+description: Learn how to make Syncfusion React Chart accessible with WCAG 2.2, Section 508, WAI-ARIA attributes, and full keyboard navigation support.
+control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Chart component
+# Accessibility in React Chart
 
 The Chart component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22), and relevant [WAI-ARIA](https://www.w3.org/TR/wai-aria#roles) roles.
 

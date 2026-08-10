@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in React Toolbar component | Syncfusion
-description: Learn here all about Style in Syncfusion React Toolbar component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React Toolbar | Syncfusion
+description: CSS class reference for customizing the Syncfusion React Toolbar wrapper, items, separators, and active or hover states.
 control: Style 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in React Toolbar component
+# Style and Appearance in React Toolbar
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 

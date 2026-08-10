@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Time range Slider in React Range Slider component | Syncfusion
-description: Learn here all about Time range Slider in Syncfusion React Range Slider component of Syncfusion Essential JS 2 and more.
+title: How to format time values in React Slider | Syncfusion
+description: Format React Slider tick and tooltip values as time using the renderingTicks and change events for a time range slider.
 control: Time range Slider 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Time range Slider in React Range Slider component
+# How to format time values in React Slider
 
 Time formatting can be achieved similarly to date formatting using the [`renderingTicks`](https://ej2.syncfusion.com/react/documentation/api/slider/#renderingticks) and [`change`](https://ej2.syncfusion.com/react/documentation/api/slider/#change) events. The following example demonstrates time formatting.
 

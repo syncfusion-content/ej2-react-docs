@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation events in React Form validator component | Syncfusion
-description: Learn here all about Validation events in Syncfusion React Form validator component of Syncfusion Essential JS 2 and more.
+title: Validation Events in React Form Validation Library | Syncfusion
+description: Hook into the React Form Validation Library validationBegin and validationComplete events to react to validation lifecycle stages.
 control: Validation events 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation events in React Form validator component
+# Validation Events in React Form Validation Library
 
 The FormValidator supports two types of validation events:
 

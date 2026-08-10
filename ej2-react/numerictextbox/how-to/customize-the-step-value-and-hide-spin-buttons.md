@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize the step value and hide spin buttons in React Numerictextbox component | Syncfusion
-description: Learn here all about Customize the step value and hide spin buttons in Syncfusion React Numerictextbox component of Syncfusion Essential JS 2 and more.
+title: How to customize step and hide spin buttons in React NumericTextBox | Syncfusion
+description: Customize the React NumericTextBox increment value with step and show or hide the spin buttons with showSpinButton.
 control: Customize the step value and hide spin buttons 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the step value and hide spin buttons in React NumericTextBox component
+# How to customize step and hide spin buttons in React NumericTextBox
 
 Control the increment/decrement behavior of the NumericTextBox by customizing the step value and controlling the visibility of spin buttons. Use the [`step`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#step-number) property to define the increment value, and the [`showSpinButton`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#showspinbutton-boolean) property to show or hide the spin buttons.
 

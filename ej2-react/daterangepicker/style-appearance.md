@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style appearance in React Daterangepicker component | Syncfusion
-description: Learn here all about Style appearance in Syncfusion React Daterangepicker component of Syncfusion Essential JS 2 and more.
+title: Style and Appearance in React DateRangePicker | Syncfusion
+description: Customize the React DateRangePicker wrapper, input, and separator appearance with the .e-date-range-wrapper CSS selectors.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style appearance in React Daterangepicker component
+# Style and Appearance in React DateRangePicker
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

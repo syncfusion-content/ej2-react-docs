@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Internationalization in React Chart component | Syncfusion
-description: Learn here all about Internationalization in Syncfusion React Chart component of Syncfusion Essential JS 2 and more.
-control: Internationalization 
+title: Internationalization in React Chart | Syncfusion
+description: Learn how to localize Syncfusion React Chart for global users with right-to-left layouts, locale-specific number formats, and culture data.
+control: Internationalization
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Internationalization in React Chart component
+# Internationalization in React Chart
 
 Chart provides support for internationalization for the following elements:
 

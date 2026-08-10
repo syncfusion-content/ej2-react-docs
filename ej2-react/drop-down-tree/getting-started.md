@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Dropdown Tree component | Syncfusion
-description: Checkout and learn about Getting started with React Dropdown Tree component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Dropdown Tree | Syncfusion
+description: Learn how to get started with the Syncfusion React Dropdown Tree control. Explore setup, features, examples, and customization options.
 control: Dropdown Tree
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Dropdown Tree component
+# Getting Started with React Dropdown Tree
 
 This section explains how to create a simple Dropdown Tree component and demonstrate its basic usage.
 

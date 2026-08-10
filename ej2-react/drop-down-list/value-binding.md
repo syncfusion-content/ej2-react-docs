@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Value binding in React Drop down list component | Syncfusion
-description: Learn here all about Value binding in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Value Binding in React Dropdown List | Syncfusion
+description: Bind primitive or complex object values to the React Dropdown List component, with optional allowObjectBinding for mapping selected items to data objects.
 control: Value binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Value binding in DropDownList
+# Value Binding in React Dropdown List
 
 Value binding in the DropDown List control allows you to associate data values with each list item. This facilitates managing and retrieving selected values efficiently. The DropDown List component provides flexibility in binding both primitive data types and complex objects.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibilitywith React Rating component | Syncfusion
-description:  Learn here all about Accessibility in Syncfusion React Rating component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Rating | Syncfusion
+description: Review the React Rating compliance with WCAG 2.2, Section 508, WAI-ARIA, and screen reader accessibility standards.
 control: Accessibility
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Rating component
+# Accessibility in React Rating
 
 The Rating component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

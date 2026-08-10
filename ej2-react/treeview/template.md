@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in React TreeView component | Syncfusion
-description: Learn here all about Template in Syncfusion React TreeView component of Syncfusion Essential JS 2 and more.
+title: Template in React Tree View | Syncfusion
+description: Render a custom React template inside each Syncfusion React TreeView node with the nodeTemplate property, with access to node data.
 control: Template 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in React TreeView component
+# Template in React Tree View
 
 The TreeView component allows you to customize the look of TreeView nodes by using the [nodeTemplate](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodetemplate) property. This property accepts either `template string` or HTML element ID.
 

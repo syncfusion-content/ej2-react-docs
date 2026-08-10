@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection with React Rating component | Syncfusion
-description:  Learn here all about Selection in Syncfusion React Rating component of Syncfusion Essential JS 2 and more.
+title: Selection in React Rating | Syncfusion
+description: Configure React Rating selection behavior with min, enable or disable reset, and customize how users select a rating value.
 control: Selection
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in React Rating Component
+# Selection in React Rating
 
 The Rating component enables users to select a rating value through visual interaction or code. It supports a minimum value setting, reset functionality, and customization options for selection behavior.
 

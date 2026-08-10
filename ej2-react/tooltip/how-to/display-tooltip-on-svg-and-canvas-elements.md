@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Display Tooltip on svg and canvas elements in React Tooltip component | Syncfusion
-description: Learn here all about Display Tooltip on svg and canvas elements in Syncfusion React Tooltip component of Syncfusion Essential JS 2 and more.
+description: Attach a React Tooltip to SVG or Canvas elements such as data visualization shapes by setting the target selector to the element's id or class.
 control: Display Tooltip on svg and canvas elements 
 platform: ej2-react
 documentation: ug

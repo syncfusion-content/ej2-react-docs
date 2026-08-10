@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load content through post in React Tab component | Syncfusion
-description: Learn here all about Load content through post in Syncfusion React Tab component of Syncfusion Essential JS 2 and more.
+title: How to load content through Ajax in React Tab | Syncfusion
+description: Load Syncfusion React Tab content from a remote URL by importing the Ajax module from ej2-base and using the Success event.
 control: Load content through post 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load content through post in React Tab component
+# How to load content through Ajax in React Tab
 
 The Tab supports to load external contents through `AJAX` library. Refer to the following steps.
 
