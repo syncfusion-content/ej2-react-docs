@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integration of Microsoft Bot With React Chat UI component | Syncfusion
-description:  Checkout and learn about Integration of Microsoft Bot Framework With React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Microsoft Bot Framework in React Chat UI | Syncfusion®
+description: Connect the React Chat UI to a Microsoft Bot Framework bot hosted on Azure using a Direct Line token server for secure message exchange.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Microsoft Bot Framework with React Chat UI Component
+# Microsoft Bot Framework in React Chat UI
 
 The Chat UI component integrates with a [Microsoft Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0) bot hosted on Azure, enabling a custom chat interface for seamless user interaction. The process involves setting up a secure backend token server, configuring Direct Line in Azure, and integrating the Chat UI in the application.
 

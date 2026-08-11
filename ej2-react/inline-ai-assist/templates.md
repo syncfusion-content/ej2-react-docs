@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template customization in React Inline AI Assist | Syncfusion
-description:  Checkout and learn about templates with React Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Templates in React Inline AI Assist | Syncfusion®
+description: Customize the React Inline AI Assist with editor and response templates to fully control the footer area and the display of generated responses.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template customization in React Inline AI Assist component
+# Templates in React Inline AI Assist
 
 The Inline AI Assist provides the template options to customize the response and footer items.
 

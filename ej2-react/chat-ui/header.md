@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header in React Chat UI component | Syncfusion
-description: Checkout and learn about Header with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Header in React Chat UI | Syncfusion®
+description: Configure the React Chat UI header with a title, icon, and toolbar items using headerText, headerIconCss, and headerToolbar properties.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header in React Chat UI component
+# Header in React Chat UI
 
 ## Header visibility
 

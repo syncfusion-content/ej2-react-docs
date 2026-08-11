@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mention Integration in React Chat UI component | Syncfusion
-description: Checkout and learn about Mention Integration with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Mention in React Chat UI | Syncfusion®
+description: Enable user mentions in the React Chat UI using the @ character with a suggestion dropdown, customizable trigger, and predefined mention support.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Mention Integration in React Chat UI component
+# Mention in React Chat UI
 
 The Syncfusion ChatUI allows users to mention others in messages using the `@` character, with dropdown for selecting users. The following sections explain how to configure mentions
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Attachments in React AI AssistView component | Syncfusion
-description: Checkout and learn about attachments with React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: File Attachments in React AI AssistView | Syncfusion®
+description: Enable file attachments in the React AI AssistView, configure upload endpoints, restrict file types and sizes, and set the maximum attachment count.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File Attachments in React AI AssistView component
+# File Attachments in React AI AssistView
 
 The AI AssistView component supports file attachments, allowing users to include files along with their prompts to provide additional context and enhance interactions. Users can upload documents, images, and other file types to supplement their queries. Enable this functionality using the `enableAttachments` property and customize the behavior through the `attachmentSettings` configuration.
 

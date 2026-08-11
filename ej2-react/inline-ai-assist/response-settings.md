@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Response actions in React Inline AI Assist | Syncfusion
-description:  Checkout and learn about response items with React Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Response Settings in React Inline AI Assist | Syncfusion®
+description: Configure the React Inline AI Assist response action popup with built-in accept and discard items plus custom response items and selection events.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Response actions in React Inline AI Assist component
+# Response Settings in React Inline AI Assist
 
 You can render response action popup by using the `items` property in the [responseSettings](../api/inline-ai-assist#responsesettings) property. This feature enables users to accept, discard, or perform custom actions on AI-generated responses.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React Inline AI Assist | Syncfusion
-description:  Checkout and learn about events with React Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Events in React Inline AI Assist | Syncfusion®
+description: Handle user interactions in the React Inline AI Assist using events for creation, prompt requests, and component popup open and close actions.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React Inline AI Assist component
+# Events in React Inline AI Assist
 
 This section describes the Inline AI Assist events that will be triggered when appropriate actions are performed. The following events are available in the Inline AI Assist component.
 

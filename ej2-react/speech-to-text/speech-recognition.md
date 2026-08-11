@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Speech recognition in React SpeechToText component | Syncfusion
-description: Checkout and learn about Speech recognition with React SpeechToText component of Syncfusion Essential JS 2 and more details.
+title: Speech recognition in React Speech To Text | Syncfusion®
+description: Configure Syncfusion React Speech To Text recognition: get transcripts, set language, enable interim results, manage listening state, and handle errors.
 control: SpeechToText
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Speech recognition in ##Platform_Name## SpeechToText component
+# Speech recognition in ##Platform_Name## Speech To Text
 
 ## Retrieving Transcripts
 

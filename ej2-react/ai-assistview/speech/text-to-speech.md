@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text-to-Speech With React AI AssistView component | Syncfusion
-description:  Checkout and learn about configuration of Text-to-Speech With Azure OpenAI in React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Text to Speech in React AI AssistView | Syncfusion®
+description: Enable text-to-speech in the React AI AssistView to read AI responses aloud using the browser Speech Synthesis API with customizable voice settings.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text to Speech in AI AssistView 
+# Text to Speech in React AI AssistView
 
 The Syncfusion React AI AssistView component provides built-in `Text-to-Speech` (TTS) support using the browser's Web Speech API, specifically the [SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) interface. This allows AI-generated responses into spoken audio, enhancing accessibility and user interaction.
 

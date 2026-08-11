@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Lite LLM Model in React Inline AI Assist | Syncfusion
-description: Learn about Integration of Lite LLM Model with React Inline AI Assist component of Syncfusion Essential JS 2.
+title: Lite LLM in React Inline AI Assist | Syncfusion®
+description: Connect the React Inline AI Assist to LiteLLM proxy for unified access to multiple LLM providers through a single OpenAI-compatible API endpoint.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate React Inline AI Assist With Lite LLM
+# Lite LLM in React Inline AI Assist
 
 The **Inline AI Assist** component can also be integrated with [LiteLLM](https://docs.litellm.ai/docs), an open-source proxy that provides a unified, OpenAI-compatible API for multiple LLM providers such as [OpenAI](https://openai.com) and [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai).
 

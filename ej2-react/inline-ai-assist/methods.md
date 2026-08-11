@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Methods in React Inline AI Assist | Syncfusion
-description:  Checkout and learn about methods with React Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Methods in React Inline AI Assist | Syncfusion®
+description: Programmatically add responses, execute prompts, and show or hide the React Inline AI Assist and command popups using built-in methods.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Methods in React Inline AI Assist component
+# Methods in React Inline AI Assist
 
 ## Adding response
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Messages in React Chat UI component | Syncfusion
-description:  Checkout and learn about Messages with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Messages in React Chat UI | Syncfusion®
+description: Add and configure messages in the React Chat UI with options for pinning, replying, forwarding, and enabling compact mode for group conversations.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Messages in the React Chat UI Component
+# Messages in React Chat UI
 
 The Chat UI allows to add messages using the `MessagesDirective` tag. The message collection stores all the messages being sent and received.
 

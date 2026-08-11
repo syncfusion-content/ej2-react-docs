@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Azure OpenAI With React AI AssistView component | Syncfusion
-description:  Checkout and learn about Integration of Azure OpenAI With React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Azure OpenAI in React AI AssistView | Syncfusion®
+description: Connect the React AI AssistView to Azure OpenAI service for advanced conversational AI features using API key, endpoint, and deployment configuration.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Azure OpenAI with React AI AssistView Component
+# Azure OpenAI in React AI AssistView
 
 The AI AssistView component integrates with [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai) to enable advanced conversational AI features in your React applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
 

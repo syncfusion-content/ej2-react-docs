@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Generative UI in React AI AssistView control | Syncfusion
-description: Checkout and learn about generative UI with React AI AssistView control of Syncfusion Essential JS 2 and more.
+title: Generative UI in React AI AssistView | Syncfusion®
+description: Render dynamic, interactive UI elements in the React AI AssistView by registering custom tools and returning structured blocks from your AI service.
 platform: ej2-react
-control: AI AssistView 
+control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Generative UI in React AI AssistView component
+# Generative UI in React AI AssistView
 
 The `Generative UI` in AI AssistView allows you to render dynamic tools and UI elements within the AI AssistView. This enables seamless integration of interactive components based on AI-generated responses.
 

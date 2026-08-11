@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Security concerns in React SpeechToText component | Syncfusion
-description: Checkout and learn about Security concerns with React SpeechToText component of Syncfusion Essential JS 2 and more details.
+title: Security concerns in React Speech To Text | Syncfusion®
+description: Review the security risks of Syncfusion React Speech To Text, including third-party audio transmission, MITM attacks, and microphone permissions.
 control: SpeechToText
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Security concerns in ##Platform_Name## SpeechToText component
+# Security concerns in ##Platform_Name## Speech To Text
 
 ## Online dependency
 

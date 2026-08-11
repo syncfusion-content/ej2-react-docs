@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Methods in React AI AssistView component | Syncfusion
-description:  Checkout and learn about Methods with React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Methods in React AI AssistView | Syncfusion®
+description: Programmatically add prompts, responses, and execute prompts in the React AI AssistView using the addPromptResponse and executePrompt methods.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Methods in React AI AssistView component
+# Methods in React AI AssistView
 
 ## Adding prompt response
 
