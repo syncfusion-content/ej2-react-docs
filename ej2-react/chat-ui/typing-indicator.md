@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Typing Indicator in React Chat UI component | Syncfusion
-description:  Checkout and learn about Typing Indicator with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Typing Indicator in React Chat UI | Syncfusion®
+description: Display real-time typing indicators in the React Chat UI by populating the typingUsers property to show active participants composing a message.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Typing Indicator in React Chat UI Component
+# Typing Indicator in React Chat UI
 
 The typing indicator provides real-time visual feedback to show when other users are composing a message. This feature enhances the user experience by making conversations feel more interactive and responsive, indicating that a reply is in progress.
 

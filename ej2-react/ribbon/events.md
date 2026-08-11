@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React Ribbon component | Syncfusion
-description:  Checkout and learn about Events in Syncfusion React Ribbon component of Syncfusion Essential JS 2 and more.
+title: Events in React Ribbon | Syncfusion
+description: Learn about the events triggered by the React Ribbon in response to user interactions such as tab selection, item clicks, and ribbon expansion.
 control: Ribbon
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React Ribbon component
+# Events in React Ribbon
 
 The React Ribbon component triggers a variety of events in response to user interactions, such as selecting a tab, clicking a button, or expanding the ribbon. This section provides detailed explanations and code examples for each available event.
 

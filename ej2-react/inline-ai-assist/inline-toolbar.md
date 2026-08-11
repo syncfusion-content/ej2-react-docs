@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Inline toolbar configurations in React Inline AI Assist | Syncfusion
-description:  Checkout and learn about inline toolbar with React Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Inline Toolbar in React Inline AI Assist | Syncfusion®
+description: Add and customize inline toolbar items in the React Inline AI Assist with configurable positioning, button types, icons, and click event handling.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar configuration in React Inline AI Assist component
+# Inline Toolbar in React Inline AI Assist
 
 The inline toolbar provides a customizable interface for users to interact with the Inline AI Assist component. You can render inline toolbar items by using the `items` property in the [inlineToolbarSettings](../api/inline-ai-assist#inlinetoolbarsettings) property.
 

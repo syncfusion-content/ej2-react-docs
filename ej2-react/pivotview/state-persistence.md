@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # State persistence in React Pivot Table
 
-State persistence enables users to automatically retain the entire configuration of the Pivot Table component in the browser's local storage (cookies). This includes the current layout, field arrangements, sorting, applied filters, and the expanded or collapsed states of fields. By enabling the [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enablepersistence) property in the Pivot Table component, all these interactive states and settings are saved automatically. As a result, users can refresh the browser or navigate to different pages and return at any time, knowing that all modified report settings will be retained—ensuring a seamless and uninterrupted data analysis experience.
+State persistence enables users to automatically retain the entire configuration of the Pivot Table component in the browser's local storage. This includes the current layout, field arrangements, sorting, applied filters, and the expanded or collapsed states of fields. By enabling the [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enablepersistence) property in the Pivot Table component, all these interactive states and settings are saved automatically. As a result, users can refresh the browser or navigate to different pages and return at any time, knowing that all modified report settings will be retained—ensuring a seamless and uninterrupted data analysis experience.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -33,6 +33,14 @@ State persistence enables users to automatically retain the entire configuration
 
 In addition to automatic state persistence, the Pivot Table component allows you to save and restore the current layout programmatically. By using the [`getPersistData`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#getpersistdata) method, you can retrieve the complete state of the Pivot Table component as a serialized string. This string can be stored and later re-applied to the component by passing it to the [`loadPersistData`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#loadpersistdata) method. This approach offers flexibility for saving user-specific layouts, restoring previous configurations, or implementing custom workflows for managing and reloading the component’s state as needed.
 
+> The sample below uses **Save** and **Load** buttons built with the `@syncfusion/ej2-react-buttons` package. Install it first:
+>
+> ```bash
+> npm install @syncfusion/ej2-react-buttons --save
+> ```
+>
+> Persist the string returned by `getPersistData()` across page refreshes by writing it to `localStorage`, a server endpoint, or any other application-controlled store before re-applying it through `loadPersistData()`.
+
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/pivot-table/default-cs287/app/App.jsx %}
@@ -49,3 +57,7 @@ In addition to automatic state persistence, the Pivot Table component allows you
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs287" %}
+
+## See Also
+
+* [Save and load report](./save-and-load)

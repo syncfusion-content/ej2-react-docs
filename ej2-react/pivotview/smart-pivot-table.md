@@ -618,7 +618,7 @@ Return predictable responses and leave the report unchanged after a failure:
 | 401 | Missing or invalid bearer token | `{ "error": "Authentication is required." }` |
 | 403 | Authenticated user cannot access the report | `{ "error": "Access to this report is denied." }` |
 | 422 | Unsupported or invalid action | `{ "error": "Try one of the supported Pivot actions." }` |
-| 429 | Application request limit | `{ "error": "Too many requests. Try again shortly." }` |
+| 429 | Application request limit reached | `{ "error": "Too many requests. Try again shortly." }` |
 | 429 | OpenAI billing quota exhausted | `{ "error": "The OpenAI API project has no available quota. Check API billing." }` |
 | 502 | Invalid provider output | `{ "error": "The AI service returned an invalid action." }` |
 | 503 | Provider, Redis, or JWKS unavailable | `{ "error": "The assistant service is temporarily unavailable." }` |
@@ -738,7 +738,7 @@ To see the complete implementation, check the sample project on [GitHub](https:/
 
 This guide explains the integration and shows focused excerpts. The repository contains the complete runnable client, server, environment templates, schemas, reducers, tests, and CI configuration.
 
-## See also
+## See Also
 
 - [React Pivot Table getting started](https://ej2.syncfusion.com/react/documentation/pivotview/getting-started)
 - [React AI AssistView getting started](https://ej2.syncfusion.com/react/documentation/ai-assistview/getting-started)

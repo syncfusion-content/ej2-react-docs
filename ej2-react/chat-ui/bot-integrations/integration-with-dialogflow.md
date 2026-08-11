@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integration of Dialogflow With React Chat UI component | Syncfusion
-description:  Checkout and learn about Integration of Google Dialogflow With React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Dialogflow in React Chat UI | Syncfusion®
+description: Connect the React Chat UI to Google Dialogflow via a Node.js backend to deliver natural language support bot responses in your application.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Google Dialogflow with React Chat UI Component
+# Dialogflow in React Chat UI
 
 The Chat UI component integrates with [Google Dialogflow](https://cloud.google.com/dialogflow/docs) to enable advanced conversational AI features in your React applications. The component acts as a user interface for a support bot, where user prompts are sent to the Dialogflow service via API calls, providing natural language understanding and context-aware responses.
 

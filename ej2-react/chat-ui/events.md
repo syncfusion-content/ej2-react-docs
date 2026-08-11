@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React Chat UI component | Syncfusion
-description:  Checkout and learn about Events with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Events in React Chat UI | Syncfusion®
+description: Handle user interactions in the React Chat UI using events for creation, message send, typing, and the full attachment upload lifecycle.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React Chat UI component
+# Events in React Chat UI
 
 This section describes the events that the Chat UI component triggers when specific actions are performed. The following events are available:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Speech-to-Text With React Chat UI component | Syncfusion
-description:  Checkout and learn about configuration of Speech-to-Text With React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Speech to Text in React Chat UI | Syncfusion®
+description: Add voice-to-text input to the React Chat UI using the Web Speech API, transcribing microphone audio directly into the editable footer.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Speech-to-Text in React Chat UI 
+# Speech to Text in React Chat UI
 
 The Syncfusion React Chat UI component integrates `Speech-to-Text` functionality through the browser's [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). This enables the conversion of spoken words into text using the device's microphone, allowing users to interact with the Chat UI through voice input.
 

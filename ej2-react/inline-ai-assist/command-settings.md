@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Commands configuration in React Inline AI Assist | Syncfusion
-description:  Checkout and learn about command items with React Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Command Settings in React Inline AI Assist | Syncfusion®
+description: Configure the React Inline AI Assist command popup with custom command items, grouped prompts, configurable dimensions, and item selection events.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Commands configuration in React Inline AI Assist component
+# Command Settings in React Inline AI Assist
 
 You can render and use the command action popup by using the `commands` property in the [commandSettings](../api/inline-ai-assist#commandsettings) property. This property helps to supply commands, component popup dimensions, and customize behavior.
 

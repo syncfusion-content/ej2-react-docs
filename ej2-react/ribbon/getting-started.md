@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Ribbon component | Syncfusion
-description:  Checkout and learn about Getting started with Syncfusion React Ribbon component of Syncfusion Essential JS 2 and more.
-control: Ribbon 
+title: Getting Started with React Ribbon | Syncfusion
+description: Learn how to get started with the React Ribbon and explore setup, configuration, and core feature examples for building ribbon interfaces.
+control: Ribbon
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React Ribbon Component
+# Getting Started with React Ribbon
 
 This section explains how to create a simple [React Ribbon](https://www.syncfusion.com/react-components/react-ribbon) component and demonstrate its basic usage in a React environment.
 

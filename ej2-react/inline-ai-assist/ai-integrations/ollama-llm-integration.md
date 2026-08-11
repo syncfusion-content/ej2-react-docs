@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ollama LLM in React Inline AI Assist | Syncfusion
-description: Learn about Integration of Ollama LLM with React Inline AI Assist component of Syncfusion Essential JS 2.
+title: Ollama LLM in React Inline AI Assist | Syncfusion®
+description: Connect the React Inline AI Assist to locally hosted LLM models via Ollama, enabling private, on-device natural language AI responses.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate LLM via Ollama With React Inline AI Assist component
+# Ollama LLM in React Inline AI Assist
 
 The Inline AI Assist component integrates with [LLM via Ollama](https://ollama.com) to enable advanced conversational AI features in your application. The component acts as a user interface where user prompts are sent to the selected LLM model via API calls, providing natural language understanding and context-aware responses.
 

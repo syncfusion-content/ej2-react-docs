@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Methods in React Chat UI component | Syncfusion
-description:  Checkout and learn about Methods with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Methods in React Chat UI | Syncfusion®
+description: Programmatically add, update, and scroll messages in the React Chat UI using the addMessage, updateMessage, and scrollToBottom methods.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Methods in React Chat UI component
+# Methods in React Chat UI
 
 ## Add message
 

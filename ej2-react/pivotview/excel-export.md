@@ -16,7 +16,7 @@ The Pivot Table component supports exporting pivot data to **Excel** and **CSV**
 
 Pivot Table data can be exported to an Excel file (.xlsx format) while preserving all formatting and structure. This format is compatible with Microsoft Excel and other spreadsheet applications. To export the data to Excel, invoke the [`excelExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#excelexport) method.
 
-> The Pivot Table component can be exported to Excel format using options available in the toolbar. For more details, [`refer`](./tool-bar) here.
+> The Pivot Table component can be exported to Excel format using options available in the toolbar. For more details, see the [Toolbar](./tool-bar) documentation.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -39,7 +39,7 @@ Pivot Table data can be exported to an Excel file (.xlsx format) while preservin
 
 Pivot Table data can be exported to a plain text CSV file. The CSV format is lightweight and compatible with most spreadsheet and data analysis applications. To export the data to CSV, invoke the [`csvExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#csvexport) method.
 
-> The Pivot Table component can be exported to CSV format using options available in the toolbar. For more details, [`refer`](./tool-bar) here.
+> The Pivot Table component can be exported to CSV format using options available in the toolbar. For more details, see the [Toolbar](./tool-bar) documentation.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -215,11 +215,11 @@ Row headers can be excluded from the exported Excel file when only values and co
 
 ## Exclude hidden columns during export
 
-By default, all columns in the Pivot Table, including hidden ones, are exported. To exclude hidden columns, set the `includeHiddenColumn` property to **false** in `excelExportProperties`.
+By default, all columns in the Pivot Table, including hidden ones, are exported. To exclude hidden columns, set the `includeHiddenColumn` property to `false` in `excelExportProperties`.
 
 To hide a column, use the [`columnRender`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridsettings#columnrender) event in [`gridSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#gridsettings) to set the `visible` property of the target column to **false**. For more information, see the [Hide Specific Columns in Pivot Table](https://ej2.syncfusion.com/react/documentation/pivotview/how-to/hide-specific-columns-in-pivot-table) documentation.
 
-After hiding the columns, set `includeHiddenColumn` to **false** in `excelExportProperties` to exclude them from the exported file. The exported file will then match the column structure shown in the Pivot Table UI.
+After hiding the columns, set `includeHiddenColumn` to `false` in `excelExportProperties` to exclude them from the exported file. The exported file will then match the column structure shown in the Pivot Table UI.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -393,6 +393,8 @@ By default, the Pivot Table exports all data records, which can result in larger
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs74" %}
 
 ## Events
+
+The Pivot Table provides the following events to monitor and customize the Excel export process. Use them to alter cell content, style, or capture export completion.
 
 ### ExcelQueryCellInfo
 

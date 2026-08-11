@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chain of Thoughts in React AI AssistView component | Syncfusion
-description: Checkout and learn about Chain of Thoughts with React AI AssistView component of Syncfusion Essential JS 2 and more.
+title: Chain of Thoughts in React AI AssistView | Syncfusion®
+description: Render Chain of Thoughts reasoning blocks in the React AI AssistView to visualize step-by-step model thinking with collapsible stages and status indicators.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chain of Thoughts in React AI AssistView component
+# Chain of Thoughts in React AI AssistView
 
 The AI AssistView supports rendering **Chain of Thoughts** (also called `Thinking`) blocks, allowing you to visualize the model's reasoning process step by step before the final response is generated. The injectable module is ideal for extended reasoning models (such as Claude 3.5, GPT‑o1, and similar), which expose intermediate reasoning stages.
 

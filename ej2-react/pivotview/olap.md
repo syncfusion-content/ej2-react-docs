@@ -16,7 +16,7 @@ This section explains the steps to create a simple **Pivot Table** with an OLAP 
 
 ### Dependencies
 
-Understanding the dependency structure helps you identify the required packages for implementing the Pivot Table component with OLAP data in your React application. The Pivot Table component relies on a structured hierarchy of dependencies that provide essential functionality for data processing, user interface elements, and export capabilities.
+The Pivot Table component relies on a structured set of sub-packages. Install only the main package; npm resolves the rest automatically.
 
 The following dependency tree shows the required packages for the React Pivot Table component:
 
@@ -48,17 +48,13 @@ The main package `@syncfusion/ej2-react-pivotview` serves as the primary React w
 
 ### Setup for Local Development
 
-To set up a React application for using the Pivot Table component with OLAP data, use `create-vite-app`. This tool provides a fast and efficient development environment with smaller bundle sizes and optimized builds. For detailed steps, refer to the Vite [installation guide](https://vitejs.dev/guide/).
+> **Prerequisites:** Node.js 18.17+ and npm 9+ (or Yarn 1.22+). Verify with `node -v` and `npm -v`.
 
-> **Note:** To create a React application using `create-react-app`, refer to this [guide](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+To set up a React application for using the Pivot Table component with OLAP data, use the `create-vite` command. This tool provides a fast and efficient development environment with smaller bundle sizes and optimized builds. For detailed steps, refer to the Vite [installation guide](https://vitejs.dev/guide/).
 
-To create a new React application, open your terminal and run the following command:
+> **Note:** To create a React application using `create-react-app` instead, refer to this [guide](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
-```bash
-npm create vite@latest my-app
-```
-
-To set up a React application with TypeScript, use this command:
+To create a new React application with TypeScript, open your terminal and run:
 
 ```bash
 npm create vite@latest my-app -- --template react-ts
@@ -66,9 +62,7 @@ cd my-app
 npm run dev
 ```
 
-This command creates a TypeScript-based React application, navigates to the project folder, and starts the development server.
-
-To set up a React application with JavaScript, use this command:
+To create a new React application with JavaScript, run:
 
 ```bash
 npm create vite@latest my-app -- --template react
@@ -76,7 +70,7 @@ cd my-app
 npm run dev
 ```
 
-This command creates a JavaScript-based React application, navigates to the project folder, and starts the development server.
+Both commands scaffold a new project, install dependencies, and start the Vite dev server (default `http://localhost:5173`).
 
 ### Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Packages
 
@@ -108,7 +102,7 @@ To style the [Pivot Table](https://www.syncfusion.com/react-components/react-piv
 
 These styles ensure the [Pivot Table](https://www.syncfusion.com/react-components/react-pivot-table) and its related components, such as buttons and dropdowns, display correctly. You can also use other themes like **bootstrap**, **fabric**, or **high-contrast** to match your application's look. For details on individual component styles, refer to the [Syncfusion theme documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio).
 
-Next, import the **App.css** file into your application by adding the following line in the **src/App.ts** (for TypeScript) or **src/App.js** (for JavaScript) file:
+Next, import the **App.css** file into your application by adding the following line in the **src/App.tsx** (for TypeScript) or **src/App.jsx** (for JavaScript) file:
 
 ```js
 import './App.css';
@@ -147,11 +141,12 @@ Here's the complete code to initialize the Pivot Table with an OLAP data source:
 
 ```ts
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
+import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import * as React from 'react';
 import './App.css';
 
 function App() {
-    let dataSourceSettings = {
+    let dataSourceSettings: DataSourceSettingsModel = {
         catalog: 'Adventure Works DW 2008 SE',
         cube: 'Adventure Works',
         enableSorting: true,
@@ -168,7 +163,7 @@ export default App;
 
 ### Adding OLAP Cube Elements to Row, Column, Value, and Filter Axes
 
-After initializing the Pivot Table and assigning a sample OLAP data source, you can organize the [OLAP cube elements](#olap-cube-elements) to define how your data is displayed using the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#rows), [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#columns), [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#values), and [`filters`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#filters) properties in the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasourcesettings) option.
+After initializing the Pivot Table and assigning a sample OLAP data source, you can organize the [OLAP cube elements](#olap-cube-elements) to define how your data is displayed using the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#rows), [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#columns), [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#values), and [`filters`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#filters) properties in the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#datasourcesettings) option.
 
 You can use these four main axes to arrange OLAP cube elements from your data source and control how the Pivot Table displays the information.
 
@@ -179,8 +174,8 @@ You can use these four main axes to arrange OLAP cube elements from your data so
 
 To specify each [OLAP cube element](#olap-cube-elements) in the required axis, set the following options:
 
-- [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions/#name): Specifies the unique name of the hierarchy, named set, measure, or calculated member from the OLAP data source. The name must be entered exactly as it appears in the data source. If the name is not matched, the Pivot Table will be empty.
-- [`caption`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions/#caption): Specifies a caption or display name for the item in the Pivot Table. If a caption is not set, the unique name appears by default.
+- [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions#name): Specifies the unique name of the hierarchy, named set, measure, or calculated member from the OLAP data source. The name must be entered exactly as it appears in the data source. If the name is not matched, the Pivot Table will be empty.
+- [`caption`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions#caption): Specifies a caption or display name for the item in the Pivot Table. If a caption is not set, the unique name appears by default.
 
 For example, in the sample below, the element "Product Categories" is assigned to the columns axis, "Customer Geography" is assigned to the rows axis, and both "Customer Count" and "Internet Sales Amount" are set in the values axis.
 
@@ -197,9 +192,9 @@ For example, in the sample below, the element "Product Categories" is assigned t
 
 ### Applying Formatting to a Value Field
 
-You can change how values in the Pivot Table are displayed by applying formatting. For example, you can display values as currency by using the **C** format string. To apply formatting, use the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings/#formatsettings) property within [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings), and define both the [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings/#name) (the value field to format) and the [`format`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings/#format) (the format to apply).
+You can change how values in the Pivot Table are displayed by applying formatting. For example, you can display values as currency by using the **C** format string. To apply formatting, use the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings#formatsettings) property within [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings), and define both the [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings#name) (the value field to format) and the [`format`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings#format) (the format to apply).
 
-In the following example, the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) property is used to apply the **C0** format to the **[Measures].[Internet Sales Amount]** field. This causes its values to be displayed as currency, showing the currency symbol without any decimal places. You can add formatting for other value fields in a similar way by including them in the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings/#formatsettings) array.
+In the following example, the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) property is used to apply the **C0** format to the **[Measures].[Internet Sales Amount]** field. This causes its values to be displayed as currency, showing the currency symbol without any decimal places. You can add formatting for other value fields in a similar way by including them in the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatSettings#formatsettings) array.
 
 > Only fields from the value section containing numeric data can be formatted.
 
@@ -218,7 +213,7 @@ In the following example, the [`formatSettings`](https://ej2.syncfusion.com/reac
 
 The grouping bar lets users easily organize [OLAP cube elements](#olap-cube-elements) from the connected data source. Users can drag these cube elements between different axes, such as [rows](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#rows), [columns](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#columns), [values](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#values), and [filters](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#filters), to quickly change how data is shown in the Pivot Table. It also allows sorting, filtering, and removing of elements directly from the grouping bar, making it simple to customize the Pivot Table layout at runtime.
 
-To display the grouping bar, set the [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#showgroupingbar) property to **true** in the [Pivot Table](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default)  component, and make sure to inject the **GroupingBar** module as shown below.
+To display the grouping bar, set the [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel#showgroupingbar) property to **true** in the [Pivot Table](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default)  component, and make sure to inject the **GroupingBar** module as shown below.
 
 > Note: If the **GroupingBar** module is not injected, the grouping bar will not appear in the Pivot Table component.
 
@@ -237,7 +232,7 @@ To display the grouping bar, set the [`showGroupingBar`](https://ej2.syncfusion.
 
 The Pivot Table control includes a built-in Field List, similar to the one in Microsoft Excel. This Field List allows users to add or remove [OLAP cube elements](#olap-cube-elements), and to move them between different axes: [rows](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#rows), [columns](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#columns), [values](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#values), and [filters](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#filters). Users can also filter and sort these elements as needed, all during runtime.
 
-To display the Field List, set the [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#showfieldlist) property to **true** on the Pivot Table. It is also necessary to inject the [`FieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/FieldList/) module.
+To display the Field List, set the [`showFieldList`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel#showfieldlist) property to **true** on the Pivot Table. It is also necessary to inject the `FieldList` module.
 
 > Note: If the **FieldList** module is not injected, the Field List will not appear in the Pivot Table.
 
@@ -278,16 +273,16 @@ There are two types of calculated fields:
 - **Calculated Measure** – Creates a new measure by using a custom expression.
 - **Calculated Dimension** – Creates a new dimension by using a custom expression.
 
-You can define calculated fields in your code by using the [`calculatedFieldsSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings/#calculatedfieldsettings) property in the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings) configuration. The available options for calculated fields are:
+You can define calculated fields in your code by using the [`calculatedFieldsSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings#calculatedfieldsettings) property in the [dataSourceSettings](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings) configuration. The available options for calculated fields are:
 
-- [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings/#name): Sets a unique name for the new calculated field.
-- [`formula`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings/#formula): Allows you to set the expression for the calculated field.
-- [`hierarchyUniqueName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings/#hierarchyuniquename): Specifies the dimension’s unique name, so that only hierarchies within that dimension are used in the expression. This option applies only to calculated dimensions.
-- [`formatString`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings/#formatstring): Sets the format for the calculated field result.
+- [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings#name): Sets a unique name for the new calculated field.
+- [`formula`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings#formula): Allows you to set the expression for the calculated field.
+- [`hierarchyUniqueName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings#hierarchyuniquename): Specifies the dimension’s unique name, so that only hierarchies within that dimension are used in the expression. This option applies only to calculated dimensions.
+- [`formatString`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedFieldSettings#formatstring): Sets the format for the calculated field result.
 
-When adding calculated fields to an axis in your code, set the [`isCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions/#iscalculatedfield) property to **true**.
+When adding calculated fields to an axis in your code, set the [`isCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions#iscalculatedfield) property to **true**.
 
-You can also add calculated fields at runtime through the built-in dialog. To enable this dialog, set the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#allowcalculatedfield) property to **true** and add the **CalculatedField** module. This will display a button in the Field List UI, letting users open the calculated field dialog and create or edit calculated fields as needed.
+You can also add calculated fields at runtime through the built-in dialog. To enable this dialog, set the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel#allowcalculatedfield) property to **true** and add the **CalculatedField** module. This will display a button in the Field List UI, letting users open the calculated field dialog and create or edit calculated fields as needed.
 
 > If the **CalculatedField** module is not added, the calculated field dialog will not be shown with the Pivot Table component. Also, calculated measures can be added only to the value axis.
 
@@ -420,7 +415,7 @@ If you make edits while creating or modifying a calculated field, you can easily
 
 Virtual scrolling helps you view large amounts of data smoothly in the Pivot Table. It loads and displays only the rows and columns currently visible in the viewport. As you scroll vertically or horizontally, new data is brought into view automatically, ensuring good performance even with a large data source.
 
-To enable virtual scrolling, set the [`enableVirtualization`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enablevirtualization) option to **true**. Also, be sure to inject the [`VirtualScroll`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#virtualscrollservice) module into the Pivot Table.
+To enable virtual scrolling, set the [`enableVirtualization`](https://ej2.syncfusion.com/react/documentation/api/pivotview#enablevirtualization) option to **true**. Also, be sure to inject the [`VirtualScroll`](https://ej2.syncfusion.com/react/documentation/api/pivotview#virtualscrollservice) module into the Pivot Table.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -435,20 +430,22 @@ To enable virtual scrolling, set the [`enableVirtualization`](https://ej2.syncfu
 
 #### Limitations for Virtual Scrolling
 
-- When using virtual scrolling, the [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/#columnwidth) property under [`gridSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings/) must be set in pixels; percentage values are not supported.
+- When using virtual scrolling, the [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings#columnwidth) property under [`gridSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/gridSettings) must be set in pixels; percentage values are not supported.
 - Resizing columns or setting width to individual columns affects the calculation used to pick the correct page on scrolling.
 - With OLAP data, subtotals and grand totals are shown only when measures are placed at the end of the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#rows) or [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#columns) axes within [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings). If measures appear elsewhere, data will display without summary totals.
 - If the width and height of the Pivot Table are set to large values, the amount of data loaded in the current, previous, and next pages increases. This may impact loading performance during scrolling.
 
 ### Run the Application
 
-Running the Pivot Table application allows you to see your changes and data in real time directly in the browser, making it easy to check your results.
+Running the Pivot Table application lets you see your changes and data in real time directly in the browser.
 
-To start the application, open a command prompt in your project folder and run the following command. This will compile the project and automatically open it in your browser.
+To start the application, open a command prompt in your project folder and run the Vite dev server:
 
 ```sh
-npm start
+npm run dev
 ```
+
+By default the dev server listens on `http://localhost:5173`. If you are using `create-react-app` instead, use `npm start` (default `http://localhost:3000`).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -463,14 +460,14 @@ npm start
 
 ## Data Binding
 
-To connect an OLAP data source to the Pivot Table, use the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasourcesettings) property. Several options within `dataSourceSettings` must be specified to bind data correctly:
+To connect an OLAP data source to the Pivot Table, use the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#datasourcesettings) property. Several options within `dataSourceSettings` must be specified to bind data correctly:
 
 | Property | Description |
 |----------|-------------|
-| [`cube`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#cube "cube") | Specifies the name of the OLAP cube to use from the database. |
-| [`providerType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#providertype "providerType") | Indicates the type of provider, helping the Pivot Table determine how to connect to the data source. |
+| [`cube`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#cube "cube") | Specifies the name of the OLAP cube to use from the database. |
+| [`providerType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#providertype "providerType") | Indicates the type of provider, helping the Pivot Table determine how to connect to the data source. |
 | [`url`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#url "url") | The URL of the OLAP service. Use this to establish an online connection to the cube. |
-| [`catalog`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#catalog "catalog") | The database or catalog name containing the cube data. |
+| [`catalog`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#catalog "catalog") | The database or catalog name containing the cube data. |
 
 Below are sample code files showing how to bind an OLAP data source in React:
 
@@ -489,7 +486,7 @@ Below are sample code files showing how to bind an OLAP data source in React:
 
 #### Measures in the Row Axis
 
-By default, measures are shown on the columns axis in the Pivot Table. If you would like to display measures on the rows axis instead, you can do this using the [grouping bar](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showgroupingbar) or the [field list](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#showfieldlist) UI. Simply drag the "Measures" button and drop it onto the rows axis.
+By default, measures are shown on the columns axis in the Pivot Table. If you would like to display measures on the rows axis instead, you can do this using the [grouping bar](https://ej2.syncfusion.com/react/documentation/api/pivotview#showgroupingbar) or the [field list](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#showfieldlist) UI. Simply drag the "Measures" button and drop it onto the rows axis.
 
 Alternatively, you can set up the measure directly in your code by configuring the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings) option, as shown in the code below:
 
@@ -506,7 +503,7 @@ Alternatively, you can set up the measure directly in your code by configuring t
 
 #### Measures in Different Positions
 
-You can choose where to place measures on either the row or column axis through code behind or the user interface. In this example, the **measures** are set before the dimension field on the column axis. To achieve this, specify the order of the fields within the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasourcesettings) property.
+You can choose where to place measures on either the row or column axis through code behind or the user interface. In this example, the **measures** are set before the dimension field on the column axis. To achieve this, specify the order of the fields within the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#datasourcesettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -523,7 +520,7 @@ You can choose where to place measures on either the row or column axis through 
 
 A named set is a multidimensional expression (MDX) that provides a predefined group of members from a dimension. It is created by combining cube data with arithmetic operators, numbers, or functions.
 
-To display a named set in the Pivot Table, set its unique name using the [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions/#name) property within either the row or column axis in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasourcesettings). Additionally, set the [`isNamedSet`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions/#isnamedset) property to **true**. In the example below, the "Core Product Group" named set is added to the column axis.
+To display a named set in the Pivot Table, set its unique name using the [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions#name) property within either the row or column axis in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#datasourcesettings). Additionally, set the [`isNamedSet`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions#isnamedset) property to **true**. In the example below, the "Core Product Group" named set is added to the column axis.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -538,23 +535,23 @@ To display a named set in the Pivot Table, set its unique name using the [`name`
 
 ### Configuring Authentication
 
-To connect to an OLAP data source that requires authentication, users can provide basic authentication details through the [`authentication`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#authentication) property within the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasourcesettings) option of the Pivot Table. The authentication options include:
+To connect to an OLAP data source that requires authentication, users can provide basic authentication details through the [`authentication`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#authentication) property within the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#datasourcesettings) option of the Pivot Table. The authentication options include:
 
-- [`userName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/authenticationModel/#username): Enter the username required for access to the OLAP server.
-- [`password`](https://ej2.syncfusion.com/react/documentation/api/pivotview/authenticationModel/#password): Enter the password associated with the username.
+- [`userName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/authenticationModel#username): Enter the username required for access to the OLAP server.
+- [`password`](https://ej2.syncfusion.com/react/documentation/api/pivotview/authenticationModel#password): Enter the password associated with the username.
 
 > If authentication details are not provided, the browser will display a default pop-up window prompting users to enter the required information.
+
+> **Security note:** Do not hard-code production credentials in client-side source. Use a server-side proxy or environment variables to inject credentials at build or runtime.
 
 Below is an example of how to configure authentication settings in the Pivot Table:
 
 ```ts
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { FieldList, PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 
 function App() {
-    let dataSourceSettings: DataSourceSettingsModel = {
+    const dataSourceSettings = {
         catalog: 'Adventure Works DW 2008 SE',
         cube: 'Adventure Works',
         providerType: 'SSAS',
@@ -587,10 +584,8 @@ function App() {
             password: 'password'
         }
     };
-    let pivotObj: PivotViewComponent;
     return (
         <PivotViewComponent
-            ref={d => (pivotObj = d)}
             id='PivotView'
             height={350}
             dataSourceSettings={dataSourceSettings}
@@ -602,23 +597,21 @@ function App() {
 }
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ### Roles
 
 SQL Server Analysis Services (SSAS) uses [roles](https://learn.microsoft.com/en-us/analysis-services/multidimensional-models/roles-and-permissions-analysis-services?view=asallproducts-allversions) to control user access to the data inside an OLAP cube. Each role is defined with a set of permissions that can be assigned to individual users or groups. By assigning roles, you can restrict access to sensitive data and also determine who can view or modify information in the cube.
 
-In the Syncfusion React Pivot Table, you can specify roles using the [`roles`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#roles) property within the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#datasourcesettings) object. This allows you to provide one or more role names for connecting to an OLAP cube. If you want to use multiple roles, list them as a comma-separated string.
+In the Syncfusion React Pivot Table, you can specify roles using the [`roles`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#roles) property within the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings#datasourcesettings) object. This allows you to provide one or more role names for connecting to an OLAP cube. If you want to use multiple roles, list them as a comma-separated string.
 
 ```ts
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 
 function App() {
-    let dataSourceSettings: DataSourceSettingsModel = {
+    const dataSourceSettings: DataSourceSettingsModel  = {
         catalog: 'Adventure Works DW 2008 SE',
         cube: 'Adventure Works',
         roles: 'Role1',
@@ -637,10 +630,8 @@ function App() {
             { name: '[Measures].[Internet Sales Amount]', caption: 'Internet Sales Amount' }
         ]
     };
-    let pivotObj: PivotViewComponent;
     return (
         <PivotViewComponent
-            ref={d => (pivotObj = d)}
             id='PivotView'
             height={350}
             dataSourceSettings={dataSourceSettings}
@@ -649,7 +640,6 @@ function App() {
 }
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 ## OLAP Cube: Elements
@@ -734,13 +724,12 @@ In the field list, each node uses a specific icon to help users quickly identify
 
 ### BeforeServiceInvoke
 
-The [`beforeServiceInvoke`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#beforeserviceinvoke) event is triggered before initiating any service communication with the OLAP server in the Pivot Table and Field List components.
+The [`beforeServiceInvoke`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel#beforeserviceinvoke) event is triggered before initiating any service communication with the OLAP server in the Pivot Table and Field List components.
 
 * This event allows you to inject custom properties or additional parameters dynamically before a request is made to the OLAP server.
-
 * It is particularly useful for passing contextual data such as user tokens, custom filters, or localization information along with the original server request.
 
-When the [`beforeServiceInvoke`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#beforeserviceinvoke) event is triggered, the event argument provides access to the request details and includes a [`customProperties`](https://ej2.syncfusion.com/react/documentation/api/pivotview/beforeServiceInvokeEventArgs/#customproperties) field.
+The event argument provides access to the request details, including a [`customProperties`](https://ej2.syncfusion.com/react/documentation/api/pivotview/beforeServiceInvokeEventArgs#customproperties) field. See the Syncfusion API for the full list of available parameters.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -755,13 +744,12 @@ When the [`beforeServiceInvoke`](https://ej2.syncfusion.com/react/documentation/
 
 ### AfterServiceInvoke
 
-The [`afterServiceInvoke`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#afterserviceinvoke) event is triggered in the Pivot Table and Field List components during the onSuccess phase of every OLAP service request.
+The [`afterServiceInvoke`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel#afterserviceinvoke) event is triggered in the Pivot Table and Field List components during the success phase of every OLAP service request.
 
 * This event is useful for performing post-processing, logging actions, or updating the UI after receiving a successful response from the OLAP server.
-
 * You may use it to audit data, trigger notifications, or handle custom response-handling logic.
 
-When the [`afterServiceInvoke`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#afterserviceinvoke) event is triggered, the event argument provides access to the server response details, including properties such as the action performed and the result data returned from the OLAP server.
+The event argument provides access to the server response details, including properties such as the action performed and the result data returned from the OLAP server. See the Syncfusion API for the full list of available parameters.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -773,3 +761,9 @@ When the [`afterServiceInvoke`](https://ej2.syncfusion.com/react/documentation/a
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/olap-afterServiceInvoke" %}
+
+## See Also
+
+* [Data binding in React Pivot Table](./data-binding) — Configure relational and OLAP data sources.
+* [Calculated field in React Pivot Table](./calculated-field) — Add custom measures and dimensions to the Pivot Table.
+* [Pivot chart in React Pivot Table](./pivot-chart) — Visualize the OLAP data as a chart.

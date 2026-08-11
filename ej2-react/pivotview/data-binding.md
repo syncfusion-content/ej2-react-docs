@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data binding in React Pivot Table
 
-To get start quickly with Data Binding, you can check on this video:
+To get started quickly with Data Binding, you can check out this video:
 
 {% youtube "https://www.youtube.com/watch?v=_sKndiVl5w0" %}
 
@@ -68,13 +68,16 @@ import { Uploader } from '@syncfusion/ej2-inputs';
 import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 
 function App() {
-  
+
   // Step 1: Initialize the file uploader
   let uploadObj: Uploader = new Uploader({
   });
   uploadObj.appendTo('#fileupload');
 
   let input = document.querySelector('input[type="file"]');
+  let pivotObj: PivotViewComponent;
+  let dataSourceSettings: DataSourceSettingsModel;
+
   // Step 2: Add the event listener that triggers when the *.JSON file is uploaded
   input.addEventListener('change', function (e: Event) {
     // Step 3: Initialize the file reader
@@ -82,15 +85,15 @@ function App() {
     reader.onload = function () {
       // Step 4: Get the string output and parse it as JSON
       let result: any = JSON.parse(reader.result as string);
-      let dataSourceSettings: DataSourceSettingsModel = {
-        // Step 5: Bind the JSON result as data source
-        dataSource: result
-        // Step 6: Provide the appropriate report configuration here
-      };
-      reader.readAsText((input as any).files[0]);
+      // Step 5: Bind the JSON result as data source
+      dataSourceSettings = { dataSource: result };
+      // Step 6: Provide the appropriate report configuration here
+      pivotObj.dataSourceSettings = dataSourceSettings;
     };
+    // Step 7: Read the selected file as text (must be called before onload fires)
+    reader.readAsText((input as any).files[0]);
   });
-  let pivotObj: PivotViewComponent;
+
   return <PivotViewComponent ref={d => pivotObj = d} id='PivotView' height={350} dataSourceSettings={dataSourceSettings}></PivotViewComponent>;
 }
 

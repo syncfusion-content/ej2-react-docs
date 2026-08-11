@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Show or hide grand totals
 
-Allows to show or hide grand totals in rows and columns using the [`showGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showgrandtotals) property. To hide the grand totals in rows and columns, set the property [`showGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showgrandtotals) in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) to **false**. End user can also hide grand totals for row or columns separately by setting the property [`showRowGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showrowgrandtotals) or [`showColumnGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showcolumngrandtotals) in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) to **false** respectively.
+Use the [`showGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showgrandtotals) property in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) to show or hide grand totals in rows and columns. To hide both, set `showGrandTotals: false`. To hide row or column grand totals separately, set [`showRowGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showrowgrandtotals) or [`showColumnGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showcolumngrandtotals) to **false** in `dataSourceSettings`.
 
-> By default, [`showGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showgrandtotals), [`showRowGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showrowgrandtotals) and [`showColumnGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showcolumngrandtotals) properties in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) are set as **true**.
+> By default, [`showGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showgrandtotals), [`showRowGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showrowgrandtotals), and [`showColumnGrandTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showcolumngrandtotals) in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) are all **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -29,9 +29,9 @@ Allows to show or hide grand totals in rows and columns using the [`showGrandTot
 
 ## Show or hide sub-totals
 
-Allows to show or hide sub-totals in rows and columns using the [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals) property. To hide all the sub-totals in rows and columns, set the property [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals) in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) to **false**. End user can also hide sub-totals for rows or columns separately by setting the property [`showRowSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showrowsubtotals) or [`showColumnSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showcolumnsubtotals) in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) to **false** respectively.
+Use the [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals) property in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) to show or hide sub-totals in rows and columns. To hide all sub-totals, set `showSubTotals: false`. To hide row or column sub-totals separately, set [`showRowSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showrowsubtotals) or [`showColumnSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showcolumnsubtotals) to **false** in `dataSourceSettings`.
 
-> By default, [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals), [`showRowSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showrowsubtotals) and [`showColumnSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showcolumnsubtotals) properties in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) are set as **true**.
+> By default, [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals), [`showRowSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showrowsubtotals), and [`showColumnSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showcolumnsubtotals) in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) are all **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -46,9 +46,9 @@ Allows to show or hide sub-totals in rows and columns using the [`showSubTotals`
 
 ## Show/hide sub-totals for specific fields
 
-Allows to show or hide sub-totals for specific fields in rows and columns using the [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals) property. To hide sub-totals for a specific field in row or column axis, set the property [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals) in [`row`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#rows) or [`column`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#columns) to **false** respectively.
+Hide sub-totals for individual fields by setting `showSubTotals: false` on the specific field entry inside the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#rows) or [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#columns) array of [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings). This is useful when you want to suppress sub-totals for some fields but not all.
 
-> By default, [`showSubTotals`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#showsubtotals) property in [`row`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#rows) or [`column`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#columns) is set as **true**.
+> By default, `showSubTotals` on every field in both the [`rows`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#rows) and [`columns`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettingsmodel#columns) arrays is **true**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -60,7 +60,12 @@ Allows to show or hide sub-totals for specific fields in rows and columns using 
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs290" %}
+## See Also
 
+* [Getting started with the React Pivot Table](./getting-started)
+* [Show or hide totals](./show-hide-totals)
+* [Aggregation in React Pivot Table](./aggregation)
+* [Grouping in React Pivot Table](./grouping)
 ## Show sub-totals at top or bottom
 
 Allows to show sub-totals either at top or bottom of the header group in rows and columns by using the [`subTotalsPosition`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#subtotalsposition) property. By default, [`subTotalsPosition`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#subtotalsposition) property is set to **Auto**, which means that column sub-totals are displayed at the bottom and row sub-totals are displayed at the top of the header group in the pivot table.
@@ -93,9 +98,11 @@ To show sub-totals at bottom of the header group in rows and columns, set the [`
 
 ## Show or hide totals using toolbar
 
-It can also be achieved using built-in toolbar options by setting the [`showToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#showtoolbar) property to **true**. Also, include the items **GrandTotal** and **SubTotal** within the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#toolbar) property. End user can now see "Show/Hide Grand totals" and "Show/Hide Sub totals" icons in toolbar UI automatically.
+Users can toggle grand totals and sub-totals from the Pivot Table's built-in toolbar. Set the [`showToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#showtoolbar) property to **true** and include `GrandTotal` and `SubTotal` in the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#toolbar) array. The toolbar then shows "Show/Hide Grand Totals" and "Show/Hide Subtotals" icons that toggle the totals at runtime.
 
-The grand totals and sub-totals can be dynamically displayed at the top or bottom of the pivot table's row and column axes by using the built-in options "Grand totals position" and "Subtotals position" available in the grand totals and sub-totals drop down menus, respectively.
+> The `Toolbar` service must be injected into the `PivotViewComponent` via `<Inject services={[Toolbar]} />`.
+
+The grand totals and sub-totals can be dynamically displayed at the top or bottom of the Pivot Table's row and column axes by using the built-in **Grand Totals Position** and **Subtotals Position** options in the grand totals and sub-totals drop-down menus, respectively.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

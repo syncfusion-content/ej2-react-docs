@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in React Chat UI component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Chat UI component of Syncfusion Essential JS 2 and more.
+title: Accessibility in React Chat UI | Syncfusion®
+description: Discover the React Chat UI accessibility features, including WCAG 2.2 compliance, WAI-ARIA attributes, and full keyboard navigation support.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Chat UI Component
+# Accessibility in React Chat UI
 
 The Chat UI component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 

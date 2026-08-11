@@ -31,7 +31,7 @@ Container nodes require specific configuration to enable child element managemen
 
 ### Setting a Header
 
-Headers provide textual identification for containers and can be fully customized for appearance and behavior. The [`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/containerModel#header) property accepts text content, while the header's [`style`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#style) property controls visual formatting including fonts, colors, and alignment.
+Headers provide textual identification for containers and can be fully customized for appearance and behavior. The [`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/containerModel#header) property accepts text content, while the header's [`style`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#style) property controls visual formatting including fonts and colors. The `header` property is configured under the node's `shape` property when the shape `type` is set to `Container`.
 
 The following example shows header configuration with custom styling:
 
@@ -50,7 +50,7 @@ N> Double-click the header region to enable inline text editing functionality.
 
 ### Container from Symbol Palette
 
-Preconfigured container templates can be added to the symbol palette for reusable across diagrams. This approach standardizes container designs and accelerates diagram creation workflows.
+Preconfigured container templates can be added to the symbol palette for reuse across diagrams. This approach standardizes container designs and accelerates diagram creation workflows.
 
 For detailed symbol palette integration steps, refer to the [Symbol Palette](./symbol-palette) documentation.
 
@@ -58,19 +58,20 @@ For detailed symbol palette integration steps, refer to the [Symbol Palette](./s
 
 The diagram supports drag-and-drop operations for adding elements to containers at runtime. When elements approach a container's boundary, visual feedback indicates drop zones, and the container automatically expands to accommodate new children while maintaining proper spacing.
 
+To remove an element from a container, select the child and drag it outside the container's boundary, or delete it using the keyboard shortcut (`Delete`).
+
 ![Container](images/container.gif)
 
 ## Interaction
 
-Containers support the same interactions as regular nodes—such as selection, dragging, resizing, and rotating. For more information refer to the [`nodes interactions`](./nodes-interaction)
+Containers support the same interactions as regular nodes, such as selection, dragging, resizing, and rotating. For more information, refer to the [`nodes interactions`](./nodes-interaction).
 
 ## Events
 
-The events triggered when interacting with container nodes are similar to those for individual nodes. For more information, refer to the [`nodes events`](./nodes-events)
+The events triggered when interacting with container nodes are similar to those for individual nodes. For more information, refer to the [`nodes events`](./nodes-events).
 
 ## See Also
 
-* [How to add nodes to the symbol palette.](./symbol-palette)
 * [How to customize nodes.](./nodes-customization)
 * [How to add ports to the node.](./ports)
 * [How to enable/disable the behavior of the node.](./constraints)

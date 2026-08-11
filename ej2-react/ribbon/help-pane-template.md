@@ -1,16 +1,16 @@
 ---
 layout: post
-title: HelpPaneTemplate in React Ribbon component | Syncfusion
-description:  Checkout and learn about HelpPaneTemplate in Syncfusion React Ribbon component of Syncfusion Essential JS 2 and more.
+title: Help Pane Template in React Ribbon | Syncfusion
+description: Learn how to customize the help pane in the React Ribbon to display custom content such as document permissions, sharing options, or user information.
 control: Ribbon
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Help Pane in React Ribbon Component
+# Help Pane Template in React Ribbon
 
-The Ribbon component includes a help pane, a dedicated area on the right side for displaying custom content. The [helpPaneTemplate](https://ej2.syncfusion.com/react/documentation/api/ribbon/#helppanetemplate) property allows for the definition of this content, or other useful information like document permissions or sharing features.
+The Ribbon component includes a help pane, a dedicated area on the right side for displaying custom content. The [helpPaneTemplate](https://ej2.syncfusion.com/react/documentation/api/ribbon#helppanetemplate) property allows for the definition of this content, or other useful information like document permissions or sharing features.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

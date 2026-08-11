@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in React Chat UI component | Syncfusion
-description:  Checkout and learn about Templates with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Templates in React Chat UI | Syncfusion®
+description: Customize the React Chat UI with templates for empty chat, messages, time breaks, typing users, and suggestions for a tailored user experience.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React Chat UI component
+# Templates in React Chat UI
 
 Elevate the user experience by fully customizing the Syncfusion React Chat UI component. With templating support for key areas like the conversation window, messages, and typing indicators, you can create a unique and personalized chat interface that aligns perfectly with your application's design.
 

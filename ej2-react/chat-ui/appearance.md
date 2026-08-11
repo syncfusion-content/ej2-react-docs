@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in React Chat UI component | Syncfusion
-description:  Checkout and learn about Appearance with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Appearance in React Chat UI | Syncfusion®
+description: Customize the React Chat UI appearance with placeholder text, width, height, and custom CSS classes for a unique, branded chat interface.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in React Chat UI component
+# Appearance in React Chat UI
 
 ## Setting placeholder
 

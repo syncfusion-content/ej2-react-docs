@@ -25,15 +25,15 @@ The following code example illustrates how to create phase.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Phase-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Phase-cs1" %}
 
-### Dynamically Add and Remove Phases from Lanes
+### Dynamically add and remove phases from lanes
 
 Phases can be added at runtime using the [`addPhases`](https://ej2.syncfusion.com/react/documentation/api/diagram#addphases) method and removed using the [`removePhase`](https://ej2.syncfusion.com/react/documentation/api/diagram#removephase) method. This dynamic functionality allows for flexible workflow management as process requirements change.
 
 The following code example illustrates how to add and remove phases at runtime.
 
-  {% tabs %}
+{% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/swimlane/es5PhaseCustomize-cs3/app/index.jsx %}
 {% endhighlight %}
@@ -42,7 +42,7 @@ The following code example illustrates how to add and remove phases at runtime.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs3" %}
+{% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs3" %}
 
 ### Customizing Phase Appearance and Properties
 
@@ -52,6 +52,7 @@ Phase appearance and behavior can be customized through several properties:
 * Each phase region can include descriptive text through the [`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel) property of the phase.
 * The height of phases can be increased using the [`phaseSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimLaneModel#phaseSize) property of swimlane.
 * Additional information can be stored with phases using the [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel#addInfo) property of the phase.
+* The appearance of a phase can be customized using the [`style`](https://ej2.syncfusion.com/react/documentation/api/diagram/phaseModel#style) property of the phase.
 
 The following code example illustrates how to customize the phase in swimlane.
 
@@ -64,9 +65,9 @@ The following code example illustrates how to customize the phase in swimlane.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs4" %}
+{% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs4" %}
 
-#### Dynamic Customization of Phases
+### Dynamic Customization of Phases
 
 Phase style and text properties can be customized dynamically during runtime. This capability enables responsive design adjustments based on user interactions or changing data requirements.
 
@@ -81,7 +82,7 @@ The following code example illustrates how to customize the phase at runtime.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs5" %}
+{% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5PhaseCustomize-cs5" %}
 
 ### Phase Interaction Capabilities
 
@@ -90,10 +91,7 @@ The following code example illustrates how to customize the phase at runtime.
 * Phases can be resized using their selection handles.
 * The phase header must be selected first to enable phase selection.
 * When a phase is resized, the associated lane size updates automatically to maintain layout consistency.
-
-#### Resizing Helper Functionality
-
-* A specialized resize selector is used for phase resizing operations.
+* A specialized resize selector (the selection handle on the phase boundary) is used for phase resizing operations.
 * The resize cursor appears in different directions based on swimlane orientation: left and bottom directions for horizontal swimlanes, and top and bottom directions for vertical swimlanes.
 
 #### Phase Header Editing

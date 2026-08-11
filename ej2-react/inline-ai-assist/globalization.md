@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React Inline AI Assist | Syncfusion
-description:  Checkout and learn about globalization with React Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Globalization in React Inline AI Assist | Syncfusion®
+description: Localize the React Inline AI Assist for any culture with custom text translations, RTL layout support, and configurable default English text.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Inline AI Assist component
+# Globalization in React Inline AI Assist
 
 ## Localization
 

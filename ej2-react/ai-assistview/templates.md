@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in React AI AssistView component | Syncfusion
-description:  Checkout and learn about Templates with React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Templates in React AI AssistView | Syncfusion®
+description: Customize the React AI AssistView with templates for the banner, prompt items, response items, prompt suggestions, and footer areas.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in React AI AssistView component
+# Templates in React AI AssistView
 
 The AI AssistView component offers several template options to customize the banner, prompt items, response items, suggestions, and footer.
 

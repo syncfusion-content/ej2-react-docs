@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Inline AI Assist component | Syncfusion
-description:  Checkout and learn about Getting started with React Inline AI Assist component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Inline AI Assist | Syncfusion®
+description: Learn how to set up the Syncfusion React Inline AI Assist component, including React version requirements, local development setup, and a basic example.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React Inline AI Assist Component
+# Getting Started with React Inline AI Assist
 
 This section explains how to create a simple [React Inline AI Assist](https://www.syncfusion.com/react-components/react-inline-ai-assist) component and demonstrate its basic usage in a React environment.
 

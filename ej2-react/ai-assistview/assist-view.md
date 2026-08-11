@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Assist view in React AI AssistView component | Syncfusion
-description:  Checkout and learn about Assist view with React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Assist View in React AI AssistView | Syncfusion®
+description: Configure the React AI AssistView assist view with prompt text, placeholders, prompt-response collections, markdown rendering, and suggestion prompts.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Assist view in React AI AssistView component
+# Assist View in React AI AssistView
 
 ## Setting prompt text
 

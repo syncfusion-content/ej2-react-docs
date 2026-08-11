@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Chat UI component | Syncfusion
-description:  Checkout and learn about Getting started with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Chat UI | Syncfusion®
+description: Learn how to set up the Syncfusion React Chat UI component, including React version requirements, local development setup, and a basic example.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Chat UI component
+# Getting Started with React Chat UI
 
 This section explains how to create a simple [React Chat UI](https://www.syncfusion.com/react-components/react-chat-ui) component and demonstrate its basic usage in a React environment.
 

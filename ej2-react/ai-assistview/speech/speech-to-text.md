@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Speech-to-Text With React AI AssistView component | Syncfusion
-description:  Checkout and learn about configuration of Speech-to-Text With Azure OpenAI in React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Speech to Text in React AI AssistView | Syncfusion®
+description: Add voice input to the React AI AssistView using the Web Speech API, with configurable language, interim results, and customizable microphone button.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Speech-to-Text in React AI AssistView 
+# Speech to Text in React AI AssistView
 
 The Syncfusion React AI AssistView component integrates `Speech-to-Text` functionality through the browser's [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). This enables the conversion of spoken words into text using the device's microphone, allowing users to interact with the AI AssistView through voice input
 

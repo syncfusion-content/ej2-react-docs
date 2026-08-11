@@ -1,13 +1,13 @@
 ---
 layout: post
-title: LiteLLM With React AI AssistView component | Syncfusion
-description:  Checkout and learn about Integration of LiteLLM With React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Lite LLM in React AI AssistView | Syncfusion®
+description: Connect the React AI AssistView to LiteLLM proxy for unified access to multiple LLM providers through a single OpenAI-compatible API endpoint.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Integrate AI AssistView with LiteLLM
+# Lite LLM in React AI AssistView
 
 The **AI AssistView** component can also be integrated with [LiteLLM](https://docs.litellm.ai/docs), an open-source proxy that provides a unified, OpenAI-compatible API for multiple LLM providers such as [OpenAI](https://openai.com) and [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai).
 

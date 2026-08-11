@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Footer in React Chat UI component | Syncfusion
-description:  Checkout and learn about Footer with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Footer in React Chat UI | Syncfusion®
+description: Show or hide the message input footer in the React Chat UI and customize its layout with custom footer templates for advanced use cases.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Footer in the React Chat UI component
+# Footer in React Chat UI
 
 The footer of the Syncfusion React Chat UI component is the area at the bottom that typically contains the message input field and the send button. It is enabled by default to provide a standard chat interface where users can type and send messages.
 
