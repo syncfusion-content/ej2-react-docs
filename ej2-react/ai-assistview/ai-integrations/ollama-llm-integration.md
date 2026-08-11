@@ -1,14 +1,14 @@
 ---
 layout: post
-title: LLM Model With React AI AssistView component | Syncfusion
-description:  Checkout and learn about Integration of LLM Model With React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Ollama LLM in React AI AssistView | Syncfusion®
+description: Connect the React AI AssistView to locally hosted LLM models via Ollama, enabling private, on-device natural language AI responses.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate LLM via Ollama with React AI AssistView Component
+# Ollama LLM in React AI AssistView
 
 The AI AssistView component integrates with [LLM via Ollama](https://ollama.com) to enable advanced conversational AI features in your React application. The component acts as a user interface where user prompts are sent to the selected LLM model via API calls, providing natural language understanding and context-aware responses.
 

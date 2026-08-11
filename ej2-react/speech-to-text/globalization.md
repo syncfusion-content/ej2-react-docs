@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React SpeechToText component | Syncfusion
-description: Checkout and learn about Globalization with React SpeechToText component of Syncfusion Essential JS 2 and more details.
+title: Globalization in React Speech To Text | Syncfusion®
+description: Localize the Syncfusion React Speech To Text UI for any culture with L10n.load, error messages, ARIA labels, and right-to-left layout support.
 control: SpeechToText
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in ##Platform_Name## SpeechToText component
+# Globalization in ##Platform_Name## Speech To Text
 
 ## Localization
 
@@ -45,7 +45,7 @@ The SpeechToText component can be localized for any culture. By default, its loc
 
 ## RTL
 
-The Right-to-Left (RTL) feature provides support for languages that are read from right to left, such as Arabic, Hebrew, or Persian. Set the [enableRtl](../api/speech-to-text/#enableRtl) property to `true` to reverse the component's layout and text direction, ensuring proper alignment and readability for RTL cultures.
+The Right-to-Left (RTL) feature provides support for languages that are read from right to left, such as Arabic, Hebrew, or Persian. Set the [enableRtl](../api/speech-to-text#enableRtl) property to `true` to reverse the component's layout and text direction, ensuring proper alignment and readability for RTL cultures.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

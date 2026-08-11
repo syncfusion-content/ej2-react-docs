@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React SpeechToText component | Syncfusion
-description: Checkout and learn about Getting started with React SpeechToText component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Speech To Text | Syncfusion®
+description: Set up the Syncfusion React Speech To Text component in a Vite app, install the package, register a license, and run a working sample.
 control: SpeechToText
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React SpeechToText Component
+# Getting Started with React Speech To Text
 
 This section explains how to create a simple [React SpeechToText](https://www.syncfusion.com/react-components/react-speech-to-text) component and demonstrate its basic usage in a React environment.
 

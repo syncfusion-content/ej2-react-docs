@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Azure OpenAI in React Inline AI Assist | Syncfusion
-description: Learn about Integration of Azure OpenAI with React Inline AI Assist component of Syncfusion Essential JS 2.
+title: Azure OpenAI in React Inline AI Assist | Syncfusion®
+description: Connect the React Inline AI Assist to Azure OpenAI service for advanced conversational AI features using API key, endpoint, and deployment configuration.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Azure OpenAI With React Inline AI Assist component
+# Azure OpenAI in React Inline AI Assist
 
 The Inline AI Assist component integrates with [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai/) to enable advanced conversational AI features in your applications. The component acts as a user interface, where user prompts are sent to the Azure OpenAI service via API calls, providing natural language understanding and context-aware responses.
 

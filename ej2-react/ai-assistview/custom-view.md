@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom views in React AI AssistView component | Syncfusion
-description:  Checkout and learn about Custom views with React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Custom Views in React AI AssistView | Syncfusion®
+description: Organize content in the React AI AssistView by adding custom views with distinct types, header names, and icon styling using the ViewsDirective.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom views in React AI AssistView component
+# Custom Views in React AI AssistView
 
 The AI AssistView component supports multiple views that allow you to organize different types of content within the same component.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Gemini AI in React Inline AI Assist | Syncfusion
-description: Learn about Integration of Gemini AI with React Inline AI Assist component of Syncfusion Essential JS 2.
+title: Gemini AI in React Inline AI Assist | Syncfusion®
+description: Connect the React Inline AI Assist to Google Gemini API for natural language understanding and context-aware conversational responses in your app.
 platform: ej2-react
 control: Inline AI Assist
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate Gemini AI With React Inline AI Assist component
+# Gemini AI in React Inline AI Assist
 
 The Inline AI Assist component integrates with Google's [Gemini](https://ai.google.dev/gemini-api/docs) API to deliver intelligent conversational interfaces. It leverages advanced natural language understanding to interpret user input, maintain context throughout interactions, and provide accurate, relevant responses. By configuring secure authentication and data handling, developers can unlock powerful AI-driven communication features that elevate user engagement and streamline support experiences.
 

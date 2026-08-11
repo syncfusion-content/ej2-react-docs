@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load on-demand in React Chat UI component | Syncfusion
-description:  Checkout and learn about Load on-demand with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Load On-Demand in React Chat UI | Syncfusion®
+description: Enable load-on-demand in the React Chat UI to dynamically load older messages as users scroll up, improving performance for long conversations.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load on-demand in React Chat UI component
+# Load On-Demand in React Chat UI
 
 Load on-demand functionality allows messages to be loaded dynamically when users scroll to the top of the message list. This feature significantly improves application performance and reduces initial load times, especially beneficial for conversations with extensive message history. Instead of loading the entire conversation at once, messages are fetched progressively as needed, ensuring optimal user experience and resource utilization.
 

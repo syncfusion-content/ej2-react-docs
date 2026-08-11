@@ -1,14 +1,14 @@
 ---
 layout: post
-title: TimeBreaks in React Chat UI component | Syncfusion
-description:  Checkout and learn about Timebreaks with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Time Breaks in React Chat UI | Syncfusion®
+description: Show date-wise separators between messages in the React Chat UI to improve readability and conversation organization with custom time break templates.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Time break in React Chat UI component
+# Time Breaks in React Chat UI
 
 ## Show or hide time breaks
 

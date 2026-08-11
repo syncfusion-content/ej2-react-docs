@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in React AI AssistView component | Syncfusion
-description:  Checkout and learn about Events with React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Events in React AI AssistView | Syncfusion®
+description: Handle user interactions in the React AI AssistView using events for creation, prompt requests, prompt changes, and attachment upload lifecycle.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in React AI AssistView component
+# Events in React AI AssistView
 
 The React AI AssistView component provides a comprehensive set of events that enable developers to customize behavior and handle user interactions effectively. The following events are available in the AI AssistView component.
 

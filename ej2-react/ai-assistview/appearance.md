@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in React AI AssistView component | Syncfusion
-description:  Checkout and learn about Appearance with React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Appearance in React AI AssistView | Syncfusion®
+description: Customize the React AI AssistView appearance by setting width, height, and custom CSS classes for the component root element.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in React AI AssistView component
+# Appearance in React AI AssistView
 
 The Syncfusion AI AssistView for React allows for customization of its dimensions and overall look and feel. This can be achieved by setting the component's width and height or by applying custom CSS styles.
 

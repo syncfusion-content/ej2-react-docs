@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar items in React AI AssistView component | Syncfusion
-description:  Checkout and learn about Toolbar items with React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Toolbar Items in React AI AssistView | Syncfusion®
+description: Add and customize footer, response, and prompt toolbar items in the React AI AssistView using built-in and custom items with click event handling.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar items in React AI AssistView component
+# Toolbar Items in React AI AssistView
 
 You can render the AI AssistView toolbar items by using the `items` property in the [toolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#toolbarsettings), [responseToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#responsetoolbarsettings), [promptToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#prompttoolbarsettings) & [footerToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#footertoolbarsettings) properties.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in React Chat UI component | Syncfusion
-description:  Checkout and learn about Globalization with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Globalization in React Chat UI | Syncfusion®
+description: Localize the React Chat UI for any culture with custom text translations, RTL layout support, and globalized typing indicator messages.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Chat UI component
+# Globalization in React Chat UI
 
 The Syncfusion Chat UI component is designed with globalization in mind, allowing it to serve users in various regions and languages.
 

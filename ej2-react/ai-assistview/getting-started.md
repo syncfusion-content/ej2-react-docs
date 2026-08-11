@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React AI AssistView component | Syncfusion
-description:  Checkout and learn about Getting started with React AI AssistView component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React AI AssistView | Syncfusion®
+description: Learn how to set up the Syncfusion React AI AssistView component, including React version requirements, local development setup, and a basic example.
 platform: ej2-react
 control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React AI AssistView
+# Getting Started with React AI AssistView
 
 This section explains the steps required to create a simple [React AI AssistView](https://www.syncfusion.com/react-components/react-ai-assistview) component and demonstrate its basic usage in a React environment.
 

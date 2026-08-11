@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Timestamp in React Chat UI component | Syncfusion
-description:  Checkout and learn about Timestamp with React Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Timestamp in React Chat UI | Syncfusion®
+description: Enable or disable message timestamps in the React Chat UI and customize their display format using standard date and time formatting rules.
 platform: ej2-react
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Timestamp in  the React Chat UI Component
+# Timestamp in React Chat UI
 
 ## Show or Hide Timestamp
 
