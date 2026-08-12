@@ -24,19 +24,23 @@ The following table demonstrates port positioning with different offset values:
 
 | Offset values | Output |
 | -------- | -------- |
-| (0,0) | ![Port offset (0,0)](images/port0-0.png) |
-| (0,0.5) | ![Port offset (0,0.5)](images/port0-0.5.png) |
-| (0,1) | ![Port offset (0,1)](images/port0-1.png) |
-| (0.5,0) | ![Port offset (0.5,0)](images/port0.5-0.png) |
-| (0.5,0.5) |![Port offset (0.5,0.5)](images/port0.5-0.5.png) |
-| (0.5,1) | ![Port offset (0.5,1)](images/port0.5-1.png) |
-| (1,0) | ![Port offset (1,0)](images/port1-0.png) |
-| (1,0.5) | ![Port offset (1,0.5)](images/port1-0.5.png) |
-| (1,1) | ![Port offset (1,1)](images/port1-1.png) |
+| (0,0) | ![Port offset 0 0](images/port0-0.png) |
+| (0,0.5) | ![Port offset 0 0.5](images/port0-0.5.png) |
+| (0,1) | ![Port offset 0 1](images/port0-1.png) |
+| (0.5,0) | ![Port offset 0.5 0](images/port0.5-0.png) |
+| (0.5,0.5) | ![Port offset 0.5 0.5](images/port0.5-0.5.png) |
+| (0.5,1) | ![Port offset 0.5 1](images/port0.5-1.png) |
+| (1,0) | ![Port offset 1 0](images/port1-0.png) |
+| (1,0.5) | ![Port offset 1 0.5](images/port1-0.5.png) |
+| (1,1) | ![Port offset 1 1](images/port1-1.png) |
+
+For finer positioning control via alignment, see [Horizontal and Vertical Alignment Options](#horizontal-and-vertical-alignment-options).
 
 ## Horizontal and Vertical Alignment Options
 
-The [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/horizontalAlignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/verticalAlignment) properties provide fine-grained control over port positioning at the specified offset coordinates. These properties determine how the port aligns relative to its calculated position.
+The [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/horizontalAlignment) and [`verticalAlignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/verticalAlignment) properties provide fine-grained control over port positioning at the specified offset coordinates. The `horizontalAlignment` property accepts `Left`, `Center`, or `Right`; the `verticalAlignment` property accepts `Top`, `Center`, or `Bottom`. These properties determine how the port aligns relative to its calculated position.
+
+The alignment combinations shown below use offset (0, 0) as a representative example; the same alignment behavior applies to other offset values.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -49,26 +53,23 @@ The [`horizontalAlignment`](https://ej2.syncfusion.com/react/documentation/api/d
 
 {% previewsample "page.domainurl/code-snippet/diagram/ports/ports-pos1" %}
 
-
 The following table shows all possible alignment combinations when using offset (0, 0):
 
-| Horizontal Alignment | Vertical Alignment | Output with Offset(0,0) |
+| Horizontal Alignment | Vertical Alignment | Output with Offset (0, 0) |
 | -------- | -------- | -------- |
 | Left | Top | ![Left Top Position](images/port-in-lefttop-position.png) |
 | Center | Top | ![Center Top Position](images/port-in-centertop-position.png) |
-| Right | Top |  ![Right Top Position](images/port-in-righttop-position.png) |
+| Right | Top | ![Right Top Position](images/port-in-righttop-position.png) |
 | Left | Center | ![Left Center Position](images/port-in-leftcenter-position.png) |
-| Center | Center| ![Center Center Position](images/port-in-centercenter-position.png) |
+| Center | Center | ![Center Center Position](images/port-in-centercenter-position.png) |
 | Right | Center | ![Right Center Position](images/port-in-rightcenter-position.png) |
 | Left | Bottom | ![Left Bottom Position](images/port-in-leftbottom-position.png) |
 | Center | Bottom | ![Center Bottom Position](images/port-in-centerbottom-position.png) |
-| Right |Bottom |![Right Bottom Position](images/port-in-rightbottom-position.png) |
-
-
+| Right | Bottom | ![Right Bottom Position](images/port-in-rightbottom-position.png) |
 
 ## Adding Margin Spacing to Ports
 
-[`Margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/marginModel) property applies additional spacing around ports using absolute pixel values. Margin creates blank space on any or all four sides of the port, allowing for precise positioning adjustments beyond the basic offset and alignment settings.
+The [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/marginModel) property applies additional spacing around ports using absolute pixel values (default: `{ left: 0, right: 0, top: 0, bottom: 0 }`). Margin is applied additively to the position calculated from offset and alignment, allowing precise adjustments on any or all four sides of the port.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -83,8 +84,6 @@ The following table shows all possible alignment combinations when using offset 
 
 ## See also
 
-* [How to interact with the ports.](./ports-interaction)
-
-* [How to customize the ports.](./ports-appearance)
-
-* [How to create connector port.](./ports-connector-port)
+* [How to interact with the ports](./ports-interaction)
+* [How to customize the ports](./ports-appearance)
+* [How to create connector port](./ports-connector-port)

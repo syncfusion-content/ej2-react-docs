@@ -19,10 +19,14 @@ The commands in diagram control are used to perform various interactions within 
 * Sizing commands
 * Clipboard commands
 * Grouping commands
+* Rotate commands
 * Z-order commands
 * Zoom commands
 * Nudge commands
+* BringIntoView commands
+* BringToCenter commands
 * FitToPage commands
+* Command manager commands
 * Undo/Redo commands
 
 ## Alignment Commands
@@ -71,13 +75,13 @@ The following code example illustrates how to align all the selected objects at 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/alignMode-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/alignMode-cs1" %}
 
 ![Align Sample](images/Commands_img1.png)
 
 ## Distribute Commands
 
-The [`distribute`](https://ej2.syncfusion.com/react/documentation/api/diagram#distribute) method enable you to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary. The `distribute` method parameters are explained below.
+The [`distribute`](https://ej2.syncfusion.com/react/documentation/api/diagram#distribute) method enables you to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary. The `distribute` method parameters are explained below.
 
 ### Distribute Options
 
@@ -109,7 +113,7 @@ The following code example illustrates how the nodes are distributed using the *
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/distribute-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/distribute-cs1" %}
 
 ![Distribute Sample](images/Commands_img2.png)
 
@@ -142,13 +146,13 @@ The following code example illustrates how to execute the size commands.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/sizing-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/sizing-cs1" %}
 
 ![Sizing Sample](images/Commands_img3.png)
 
 ## Clipboard Commands
 
-Clipboard commands are used to cut, copy, or paste selected elements in the diagram using the [`cut`](https://ej2.syncfusion.com/react/documentation/api/diagram#cut), [`copy`](https://ej2.syncfusion.com/react/documentation/api/diagram#copy), and [`paste`](https://ej2.syncfusion.com/react/documentation/api/diagram#paste) methods. You can also use keyboard shortcuts for these actions. For detailed information on using these methods refer to the table below.
+Clipboard commands are used to cut, copy, or paste selected elements in the diagram using the [`cut`](https://ej2.syncfusion.com/react/documentation/api/diagram#cut), [`copy`](https://ej2.syncfusion.com/react/documentation/api/diagram#copy), and [`paste`](https://ej2.syncfusion.com/react/documentation/api/diagram#paste) methods. You can also use keyboard shortcuts for these actions. For detailed information on using these methods, refer to the table below.
 
 | Command (Shortcut key) | Description |
 |---------|-------------|
@@ -169,7 +173,7 @@ The following code illustrates how to execute the clipboard commands.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/es5clipboard-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/es5clipboard-cs1" %}
 
 ## Grouping Commands
 
@@ -191,7 +195,7 @@ The following code examples demonstrate how to use the grouping commands in diag
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/es5grouping-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/es5grouping-cs1" %}
 
 ## Rotate Commands
 
@@ -201,10 +205,10 @@ The [`rotate`](https://ej2.syncfusion.com/react/documentation/api/diagram#rotate
 |----------|-------|-------------|
 | obj | NodeModel / ConnectorModel/ SelectorModel | The objects to be rotated. |
 | angle | number | The angle by which the objects should be rotated (in degrees). |
-| pivot (optional)   | PointModel| The reference point with respect to which the objects will be rotated. |
-| rotateUsingHandle (optional) | boolean | Whether to rotate using the handle. |
+| pivot (optional)   | PointModel| The reference point with respect to which the objects will be rotated. The default value is the center of the object. |
+| rotateUsingHandle (optional) | boolean | Whether to rotate using the handle. The default value is **false**. |
 
-You can also use CTRL+R to rotate clockwise and CTRL+L to rotate anti-clockwise. The following example shows how to rotate nodes in clockwise and anti-clockwise directions.
+You can also use CTRL+R to rotate clockwise and CTRL+L to rotate counter-clockwise. The following example shows how to rotate nodes in clockwise and counter-clockwise directions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -215,9 +219,9 @@ You can also use CTRL+R to rotate clockwise and CTRL+L to rotate anti-clockwise.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/rotate-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/rotate-cs1" %}
 
-## Z-Order Command
+## Z-Order Commands
 
 **Z-Order Commands** enable you to visually arrange the selected objects such as nodes and connectors on the diagram page.
 
@@ -234,7 +238,7 @@ The [`bringToFront`](https://ej2.syncfusion.com/react/documentation/api/diagram#
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/es5bringfront-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/es5bringfront-cs1" %}
 
 ### Send To Back Command
 
@@ -249,7 +253,7 @@ The [`sendToBack`](https://ej2.syncfusion.com/react/documentation/api/diagram#se
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/es5sendback-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/es5sendback-cs1" %}
 
 ### Move Forward Command
 
@@ -264,7 +268,7 @@ The [`moveForward`](https://ej2.syncfusion.com/react/documentation/api/diagram#m
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/es5moveforward-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/es5moveforward-cs1" %}
 
 ### Send Backward Command
 
@@ -279,7 +283,7 @@ The [`sendBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram#
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/es5sendbackward-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/es5sendbackward-cs1" %}
 
  
 The Z-order commands can also be performed using keyboard shortcuts. For more information, refer to the [`keyboard commands`](./interaction#keyboard).
@@ -290,11 +294,10 @@ The [`zoom`](https://ej2.syncfusion.com/react/documentation/api/diagram#zoom) co
 
 The following code illustrates how to zoom-in/zoom out the diagram.
 
-```ts
+```
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    Diagram,
     DiagramComponent,
 } from "@syncfusion/ej2-react-diagrams";
 let diagramInstance: DiagramComponent;
@@ -322,11 +325,11 @@ const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
 ```
-For more information about zoom refer to the [zoom](./scroll-settings#update-zoom-at-runtime)
+For more information about zoom refer to the [zoom](./scroll-settings#update-zoom-at-runtime).
 
 ## Nudge Command
 
-The [`nudge`](https://ej2.syncfusion.com/react/documentation/api/diagram#nudge) commands move the selected elements towards up, down, left, or right by 1 pixel.The parameters of the `nudge` method is explained below.
+The [`nudge`](https://ej2.syncfusion.com/react/documentation/api/diagram#nudge) commands move the selected elements towards up, down, left, or right by 1 pixel. The parameters of the `nudge` method is explained below.
 
 | Parameter    | Type           | Description                                                      |
 |--------------|-----------|-----------|
@@ -353,7 +356,7 @@ The following code illustrates how to execute the nudge command.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/nudge-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/nudge-cs1" %}
 
 ### Nudge by Using Arrow Keys
 
@@ -365,7 +368,7 @@ Nudge commands are particularly useful for accurate placement of elements.
 
 N> The position change event will not trigger when using keyboard keys to move a node or connector.
 
-## BringIntoView
+## Bring Into View
 
 The [`bringIntoView`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringintoview) command brings the specified rectangular region into the viewport of the diagram, ensuring that it is visible within the current view.
 
@@ -382,9 +385,9 @@ The following code illustrates how to execute the `bringIntoView` command.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/bringIntoView-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/bringIntoView-cs1" %}
 
-## BringToCenter
+## Bring To Center
 
 The [`bringToCenter`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringtocenter) command centers the specified rectangular region of the diagram content within the viewport.
 
@@ -401,7 +404,7 @@ The following code illustrates how to execute the `bringToCenter` command.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/bringToCenter-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/bringToCenter-cs1" %}
 
 ## FitToPage
 
@@ -432,19 +435,19 @@ The following code illustrates how to execute `FitToPage` command.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/fitToPage-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/fitToPage-cs1" %}
 
 ## Command Manager
 
-The Diagram provides support for mapping or binding command execution to specific key gestures. It includes built-in commands and allows for the definition of custom commands through the [`CommandManager`](https://ej2.syncfusion.com/react/documentation/api/diagram/commandManager#commandManager) Custom commands are executed when the specified key gesture is recognized.
+The Diagram provides support for mapping or binding command execution to specific key gestures. It includes built-in commands and allows for the definition of custom commands through the [`CommandManager`](https://ej2.syncfusion.com/react/documentation/api/diagram/commandManager#commandManager). Custom commands are executed when the specified key gesture is recognized.
 
-## Custom Command
+### Custom Command
 
 To define a custom command, you need to specify the following properties:
 
 * [`execute`](https://ej2.syncfusion.com/react/documentation/api/diagram/command#execute): A method to be executed when the command is triggered.
 * [`canExecute`](https://ej2.syncfusion.com/react/documentation/api/diagram/command#canexecute): A method to define whether the command can be executed at the moment.
-* [`gesture`](https://ej2.syncfusion.com/react/documentation/api/diagram/keyGestureModel#gesture): A combination of [`keys`](https://ej2.syncfusion.com/react/documentation/api/diagram/keys#key) and [`KeyModifiers`](https://ej2.syncfusion.com/react/documentation/api/diagram/keyModifiers#keymodifiers).that defines the key gesture for the command.
+* [`gesture`](https://ej2.syncfusion.com/react/documentation/api/diagram/keyGestureModel#gesture): A combination of [`keys`](https://ej2.syncfusion.com/react/documentation/api/diagram/keys#key) and [`KeyModifiers`](https://ej2.syncfusion.com/react/documentation/api/diagram/keyModifiers#keymodifiers) that defines the key gesture for the command.
 * [`parameter`](https://ej2.syncfusion.com/react/documentation/api/diagram/command#parameter):  Any additional parameters required at runtime for the command.
 * [`name`](https://ej2.syncfusion.com/react/documentation/api/diagram/command#name): The name of the command.
 
@@ -461,7 +464,7 @@ The following code example illustrates how to use the command manager to clone a
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/customCommand-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/customCommand-cs1" %}
 
 ### Disable/Modify the Existing Command
 
@@ -478,11 +481,11 @@ The following code example illustrates how to disable the default cut and delete
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/commands/modifyCommand-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/commands/modifyCommand-cs1" %}
 
 ## Undo-Redo
 
-Undo/redo commands can be executed through shortcut keys. Shortcut key for undo is **Ctrl+z** and shortcut key for redo is **Ctrl+y**. For more information refer to the [`undo-redo`](./undo-redo)
+Undo/redo commands can be executed through shortcut keys. Shortcut key for undo is **Ctrl+Z** and shortcut key for redo is **Ctrl+Y**. For more information refer to the [`undo-redo`](./undo-redo).
 
 ## See Also
 

@@ -25,15 +25,27 @@ The following properties control the expand and collapse behavior of nodes:
 
 N> Icons are only created when the node has outgoing edges (outEdges).
 
-For detailed API information, refer to [`expandIcon`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#expandicon) and [`collapseIcon`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#collapseicon).
+For detailed API information, refer to [`expandIcon`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#expandicon) and [`collapseIcon`] (https://ej2.syncfusion.com/react/documentation/api/diagram/node#collapseicon).
 
 ## Customizing expand and collapse icons
 
 ### Size and shape configuration
 
+Both `expandIcon` and `collapseIcon` must be defined on a node before its icons can be customized.
+
 Define the size of icons using the [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#height) properties.
 
-The [`shape`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#shape) property of expandIcon and collapseIcon allows customization of the icon appearance.
+The [`shape`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#shape) property of expandIcon and collapseIcon allows customization of the icon appearance. The following `shape` values are supported:
+
+* `None`
+* `ArrowDown`
+* `ArrowUp`
+* `ArrowLeft`
+* `ArrowRight`
+* `Minus`
+* `Plus`
+* `Template`
+* `Path`
 
 The following code example demonstrates how to create icons with various shapes:
 
@@ -50,16 +62,19 @@ The following code example demonstrates how to create icons with various shapes:
 
 ### Styling and appearance
 
-Customize the visual appearance of icons using the following properties:
- [`borderColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#bordercolor), [`borderWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#borderwidth), and [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#fill) properties.
+Customize the visual appearance of icons using the [`borderColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#bordercolor), [`borderWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#borderwidth), and [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#fill) properties.
 
-The corner radius can be set using the [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#cornerradius) property of the icon.
-
-The icon can be aligned relative to the node boundaries. It has margin, offset, horizontalAlignment, and verticalAlignment settings. It is quite tricky, when all four alignments are used together but gives you more control over alignment.
-
-The [`iconColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#iconcolor) property can be used to set the strokeColor of the Icon.
+The corner radius can be set using the [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#cornerRadius) property of the icon.
 
 Icons can be precisely positioned relative to node boundaries using margin, offset, horizontalAlignment, and verticalAlignment settings. While combining all four alignment properties provides maximum control, it requires careful consideration of their interactions.
+
+For example, to align an icon to the right with a small margin:
+
+```
+expandIcon: { shape: 'ArrowDown', width: 20, height: 15, horizontalAlignment: 'Right', margin: { left: 5 } }
+```
+
+The [`iconColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/iconShapeModel#iconcolor) property can be used to set the icon's stroke/foreground color.
 
 The following code example illustrates the customization of icons.
 
@@ -76,22 +91,20 @@ The following code example illustrates the customization of icons.
 
 ## Managing node expansion state
 
-The [`isExpanded`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#isexpanded)property controls whether a node displays its child nodes. When set to `true`, child nodes are visible; when **false**, they are hidden.
-
-**Default value:** **true**
+The [`isExpanded`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#isexpanded) property controls whether a node displays its child nodes. **Default value:** `true`. When set to `true`, child nodes are visible; when `false`, they are hidden.
 
 The following example demonstrates how to configure the expansion state of nodes:
 
-```ts
+```
+import { NodeModel } from '@syncfusion/ej2-react-diagrams';
 
-let node:NodeModel =  {
+let node: NodeModel = {
         id: 'Start', width: 140, height: 50, offsetX: 300, offsetY: 50,
         //Expand state of node
-        isExpanded:false
+        isExpanded: false,
         expandIcon: {shape: 'ArrowDown',   width: 20,
         height: 15},
         collapseIcon: {shape: 'ArrowUp',  width: 20,
         height: 15}
     }
-
 ```

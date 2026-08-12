@@ -15,9 +15,9 @@ The header of a symbol palette serves as a label that identifies the category or
 
 The [`title`](https://ej2.syncfusion.com/react/documentation/api/diagram/paletteModel#title) property displayed as the header text of palette.
 
-The [`expanded`](https://ej2.syncfusion.com/react/documentation/api/diagram/paletteModel#expanded) property of the palette allows users to expand or collapse its palette items.
+The [`expanded`](https://ej2.syncfusion.com/react/documentation/api/diagram/paletteModel#expanded) property of the palette allows users to expand or collapse the items of the palette.
 
-The [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/paletteModel#height) property of palette sets the height of the palette / symbol group.
+The [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/paletteModel#height) property of the palette sets the height of the palette / symbol group.
 
 The [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/diagram/paletteModel#iconcss) property sets the icon to be rendered with the title.
 
@@ -36,7 +36,7 @@ The following code example illustrates how to customize palette headers.
 
 ## Animation
 
-The expand and collapse operations of the symbol palette can be animated by utilizing the [`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#enableanimation) property of the symbol palette. The following example demonstrates how to enable and disable animation for the symbol palette.
+The expand and collapse operations of the symbol palette can be animated by utilizing the [`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#enableanimation) property of the symbol palette. The following example demonstrates how to enable and disable animation for the symbol palette. By default, `enableAnimation` is set to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,7 +50,7 @@ The expand and collapse operations of the symbol palette can be animated by util
  {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/palette-animate" %}
 
 ## Description for Symbols
-The [`description`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription) property defines the descriptive text that appears beneath each symbol in the palette. This text provides additional information about the symbol's purpose or usage within the diagramming context. The description can be dynamically retrieved and defined using the [`getSymbolInfo`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getsymbolinfo) property, allowing information to assist users in understanding the function or meaning of each symbol.
+The [`description`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription) property defines the descriptive text that appears beneath each symbol in the palette. This text provides additional information about the symbol's purpose or usage within the diagramming context. The description can be dynamically retrieved and defined using the [`getSymbolInfo`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getsymbolinfo) method, allowing information to assist users in understanding the function or meaning of each symbol.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -65,7 +65,7 @@ The [`description`](https://ej2.syncfusion.com/react/documentation/api/diagram/s
 
 ### Text wrapping and Text Overflow
 The descriptive text that appears beneath each symbol can vary in length. In cases where the text might overlap neighboring symbols in the palette, text wrapping is employed. Text wrapping is controlled using the symbolInfo's [`description`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#symboldescription) property [`wrap`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#wrap) , which supports three modes: `Wrap`, `NoWrap`, `WrapWithOverflow`. By default, text wrapping is set to '`Wrap`'.
-Additionally, to handle overflowing text, the [`overflow`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#overflow) property can be used. By default, textOverflow is set to '`Ellipsis`', which truncates overflowing text with an ellipsis (...).
+Additionally, to handle overflowing text, the [`overflow`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#overflow) property can be used. By default, textOverflow is set to '`Ellipsis`', which truncates overflowing text with an ellipsis (...). These are properties of the `description` object returned by the `getSymbolInfo` method.
 
 The following example demonstrates how text wrapping and text overflow are applied based on the symbol ID:
 
@@ -145,11 +145,11 @@ The [`symbolDragSize`](https://ej2.syncfusion.com/react/documentation/api/diagra
 
  {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/symbol-dragSize" %}
 
-N> If the size of the symbol is not defined, the default size will be determined based on its shape.
+N> If the size of the symbol is not defined, the default size will be determined based on its shape. If `symbolDragSize` is not defined, the symbol's default size is used.
 
 ## Expand Mode
 
-The [`expandMode`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#expandmode) property of the symbol palette allows you to customize whether to expand all palettes simultaneously or to expand only one palette at a time.
+The [`expandMode`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#expandmode) property of the symbol palette allows you to customize whether to expand all palettes simultaneously or to expand only one palette at a time. `expandMode` accepts `Multiple` (default) or `Single`.
 
 The following example demonstrates how to set the `expandMode` property to control the expansion behavior of the palettes:
 
@@ -165,7 +165,7 @@ The following example demonstrates how to set the `expandMode` property to contr
  {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/expandMode" %}
 
 ### Restrict Expand/Collapse of the Palette
-The symbol palette panel can be restricted from expanding. When the expand icon of the palette is clicked, the [paletteExpanding](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPaletteModel#paletteexpanding) event is triggered. In this event, we can determine whether the palette's panel should be expanded or collapsed by utilizing the **cancel** argument of the event. By default, the panel is expanded. This restriction can be applied to each palette in the symbol palette as desired.
+The symbol palette panel can be restricted from expanding. When the expand icon of the palette is clicked, the [paletteExpanding](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolPaletteModel#paletteexpanding) event is triggered. In this event, we can determine whether the palette's panel should be expanded or collapsed by utilizing the **cancel** argument of the event. See the [paletteExpanding event arguments reference](https://ej2.syncfusion.com/react/documentation/api/diagram/iPaletteExpandEventArgs) for the full event argument list. By default, the panel is expanded. This restriction can be applied to each palette in the symbol palette as desired.
 
 In the following code example, the basic shapes palette is restricted from expanding, and the flow shapes palette is restricted from collapsing, whereas the swimlane shapes palette can be expanded or collapsed:
 
@@ -187,10 +187,10 @@ The symbol palette supports displaying tooltips when the mouse hovers over symbo
 When hovering over symbols in the symbol palette, the default tooltip displays the symbol's ID.
 Refer to the image below for an illustration of the tooltip behavior in the symbol palette.
 
-![SymmbolPaletteTooltip](./images/SymbolPalatteTooltip.gif)
+![SymbolPaletteTooltip](./images/SymbolPaletteTooltip.gif)
 
 ### Custom Tooltip for Symbols
-To customize tooltips for symbols in the symbol palette, assign a custom tooltip to the [`content`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#content) property of [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel#tooltip) for each symbol. Once you define the custom tooltip, enable the [`Tooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) constraints for each symbol, ensuring that the tooltips are displayed when users hover over them.
+To customize tooltips for symbols in the symbol palette, assign a custom tooltip to the [`content`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#content) property of [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel#tooltip) for each symbol. Per-symbol tooltip constraints are sufficient; no separate palette-level tooltip configuration is required. Once you define the custom tooltip, enable the [`Tooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) constraints for each symbol, ensuring that the tooltips are displayed when users hover over them. The snippet below defines the per-symbol `tooltip` property whose `content` is shown on hover.
 The code provided below demonstrates how to define tooltip content for symbols within a symbol palette.
 
 {% tabs %}
@@ -206,7 +206,7 @@ The code provided below demonstrates how to define tooltip content for symbols w
 
 ### How to enable or disable the default tooltip for shapes in the symbol palette
 
-By default, the symbol ID is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolInfo#showTooltip) property within the [`getSymbolInfo`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getsymbolinfo) method. The `showTooltip` property is set to **true** by default, which enables the tooltip.
+By default, the symbol ID is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolInfo#showTooltip) property within the [`getSymbolInfo`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getsymbolinfo) method. The `showTooltip` property is set to **true** by default, which enables the tooltip. This property is effective only when tooltip constraints are disabled for the symbol palette element.
 
 The following example demonstrates how to configure selective tooltip display:
 
@@ -221,19 +221,17 @@ The following example demonstrates how to configure selective tooltip display:
 
 {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/tooltip-custom" %}
 
-N> This property is effective only when tooltip constraints are disabled for the symbol palette element.
 
-
-### How to provide different tooltip for Symbol palette and diagram elements.
+### Provide Different Tooltip for Symbol Palette and Diagram Elements
 
 When a custom tooltip is defined for a symbol, it will be displayed for both the symbol and the dropped node in the diagram canvas. 
 
-However, to provide distinct tooltips for symbols in the palette and dropped nodes, capture the dragEnter event and assign specific tooltips dynamically.  
+However, to provide distinct tooltips for symbols in the palette and dropped nodes, capture the Diagram's `dragEnter` event handler and assign specific tooltips dynamically.  
 
-When a symbol is dragged from the symbol palette onto the diagram canvas, the [`DragEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram#dragenter), event is triggered. This event provides an argument of type [`IDragEnterEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragEnterEventArgs). Within this event, you can define a custom tooltip for the dropped node by assigning content to its tooltip property, allowing you to display context-specific information.
+When a symbol is dragged from the symbol palette onto the diagram canvas, the [`DragEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram#dragenter) event is triggered. This event provides an argument of type [`IDragEnterEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iDragEnterEventArgs). Within this event, you can define a custom tooltip for the dropped node by assigning content to its tooltip property, allowing you to display context-specific information.
 
 The following image illustrates the differentiation of tooltips displayed in the Symbol Palette and the Diagram.
-![SymmbolPaletteCustomTooltip](./images/different-tooltip.gif)
+![SymbolPaletteCustomTooltip](./images/different-tooltip.gif)
 The following code snippet demonstrates how to define two different tooltips for symbols in the symbol palette and dropped nodes in the diagram canvas.
 
 {% tabs %}
@@ -249,7 +247,7 @@ The following code snippet demonstrates how to define two different tooltips for
 
 ## Localization
 
-To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#locale) property of the symbol palette with the preferred culture. In the example below, **'de-DE'** is used, which is the locale code for German as used in Germany.
+To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#locale) property of the symbol palette with the preferred culture. In the example below, the German (Germany) locale code is applied. Additionally, import `L10n` from `@syncfusion/ej2-base` and use `L10n.load(...)` to load the required culture strings.
 The following code shows how to localize symbol palette.
 
 {% tabs %}
@@ -264,7 +262,7 @@ The following code shows how to localize symbol palette.
  {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/locale" %}
 
 ## Restrict Symbol Dragging from Palette
-You can restrict the symbols getting dragged from the symbol palette by setting the [`allowDrag`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#allowdrag) property of symbol palette as **false**. By default, the allowDrag is set as **true**.
+You can restrict the symbols getting dragged from the symbol palette by setting the [`allowDrag`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#allowdrag) property of the symbol palette to **false**. By default, `allowDrag` is set to **true**.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -277,8 +275,10 @@ You can restrict the symbols getting dragged from the symbol palette by setting 
 
  {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/restrict-drag" %}
 
+N> The diagram provides support to cancel the drag and drop operation from the symbol palette to the diagram when the ESC key is pressed.
+
 ## Search Symbol
-The diagram provides support for enabling the search option in the palette. The [`enableSearch`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#enablesearch) property of the palette is used to show or hide the search textbox in the palette. You can search for symbols in the palette by entering the symbol ID (e.g., “rectangle”) and search keywords into the search text box. The symbols are retrieved by matching the value of the ID property with the string entered in the search textbox.
+The diagram provides support for enabling the search option in the palette. The [`enableSearch`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#enablesearch) property of the palette is used to show or hide the search textbox in the palette. You can search for symbols in the palette by entering the symbol ID (e.g., “rectangle”) and search keywords into the search text box. The symbols are retrieved by matching the search text against each symbol's `id` field by default.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -307,7 +307,7 @@ In the following example, the symbol with the ID 'plus' is ignored, so it will n
  {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/symbol-search-ig" %}
 
 ## Filter Search
-You can filter the search results based on your specific requirements. To achieve this, customize the [`filterSymbols`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#filtersymbols) method of the symbol palette according to your needs. In the following example, the results are filtered to display only flow shapes in the search palette.
+You can filter the search results based on your specific requirements. To achieve this, customize the [`filterSymbols`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#filtersymbols) method of the symbol palette as needed. The `filterSymbols` method receives the search input and the symbol list to be filtered. In the following example, the results are filtered to display only flow shapes in the search palette.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -319,8 +319,6 @@ You can filter the search results based on your specific requirements. To achiev
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/symbol-filter" %}
-
-N> The diagram provides support to cancel the drag and drop operation from the symbol palette to the diagram when the ESC key is pressed.
 
 ## See Also
 

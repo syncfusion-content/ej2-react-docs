@@ -30,7 +30,7 @@ The following images illustrate how the diagram displays node information during
 
 ### Disable Default Tooltip
 
-The default tooltip that appears while interacting with nodes can be disabled by removing the tooltip constraints from the [`selectorConstraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/selectorConstraints) of the [`selectedItems`](https://helpej2.syncfusion.com/react/documentation/api/diagram/selectorModel) property of the diagram.
+The default tooltip that appears while interacting with nodes can be disabled by removing the `Tooltip` constraint from the [`selectorConstraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/selectorConstraints) of the [`selectedItems`](https://helpej2.syncfusion.com/react/documentation/api/diagram/selectorModel) property of the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -45,7 +45,7 @@ The default tooltip that appears while interacting with nodes can be disabled by
 
 ## Tooltip for a Specific Node/Connector
 
-The tooltip can be customized for each node and connector. Remove the **InheritTooltip** option from the [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram#constraints) of that node/connector. The following code example illustrates how to customize the tooltip for individual elements.
+The tooltip can be customized for each node and connector. Remove the **InheritTooltip** option from the [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram#constraints) of that node/connector, then set its `tooltip` property to a custom tooltip object. The following code example illustrates how to customize the tooltip for individual elements.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -77,48 +77,48 @@ The diagram supports inheriting the diagram tooltip when the mouse hovers over a
 
 The tooltip on mouse over can be disabled by assigning the diagram's `tooltip` property as **null**. The following code example illustrates how to disable the mouse over tooltip at runtime.
 
-```ts
+```
 
 //Initializes the diagram component
-  <DiagramComponent id="container" width={'650px'} height={'350px'} 
+  <DiagramComponent id="container" width={'650px'} height={'350px'}
     //Defines nodes
     nodes={node} connectors={connector}
     //Disables mouse over tooltip at runtime
-    tooltip = {null}
+    tooltip={null}
     />
 
 ```
 
 ## Tooltip for Ports
 
-The tooltip feature has been implemented to support Ports, providing the ability to display information or descriptions when the mouse hovers over them.
+The diagram supports tooltips for ports, displaying information or descriptions when the mouse hovers over them.
 
-To display tooltips on mouseover, set the desired tooltip [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#content) by utilizing the `tooltip` property.
+To display tooltips on mouse over, set the desired tooltip [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#content) by utilizing the `tooltip` property.
 
 Tooltips for Ports can be enabled or disabled using the [`PortConstraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/port#constraints) Tooltip property.
 
-```js
+```
 let ports: [{
         offset: {x: 1,y: 0.5},
-        tooltip: {content: 'Port Tootip'},
-        
+        tooltip: {content: 'Port Tooltip'},
+
         //enable Port Tooltip Constraints
         constraints: PortConstraints.Default | PortConstraints.ToolTip,
-        
+
         //disable Port Tooltip Constraints
-        constraints: PortConstraints.Default ~& PortConstraints.ToolTip
+        constraints: PortConstraints.Default & ~PortConstraints.ToolTip
     }]
 ```
 
 Dynamic modification of tooltip content is supported, allowing you to change the displayed tooltip content during runtime.
 
-```js
-{
-    //change tooltip content at run time
-    diagram.nodes[0].ports[0].tooltip.content = 'New Tooltip Content';
-    diagram.databind;
-}
 ```
+// Change tooltip content at runtime
+diagram.nodes[0].ports[0].tooltip.content = 'New Tooltip Content';
+diagram.dataBind();
+```
+
+N> Call `dataBind()` to apply runtime changes to the tooltip content.
 
 Here, the code provided below demonstrates the port tooltip Interaction.
 
@@ -139,7 +139,7 @@ The following image illustrates how the diagram displays tooltips during an inte
 
 ## Tooltip Template Content
 
-The tooltip template content allows you to customize the tooltip by using HTML templates. This means you can define the structure and style of the tooltip using HTML, providing greater flexibility and control over its appearance. By leveraging HTML templates, you can include rich content such as formatted text, images, and other HTML elements within the tooltip, enhancing the user experience with more informative and visually appealing tooltips.
+The tooltip template content allows you to customize the tooltip using HTML templates, giving you the flexibility to include formatted text, images, and other HTML elements within the tooltip.
 
 The following code example illustrates how to add formatted HTML content to the tooltip.
 
@@ -158,7 +158,9 @@ The following code example illustrates how to add formatted HTML content to the 
 
 ### Tooltip Relative to Object
 
-The diagram provides support to show tooltip around the node/connector that is hovered by the mouse. The tooltip can be aligned by using the [`position`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#position) property.  The [`relativeMode`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#relativemode) property of the tooltip defines whether the tooltip has to be displayed around the object or at the mouse position.
+The diagram provides support to show tooltip around the node/connector that is hovered by the mouse. The tooltip can be aligned by using the [`position`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#position) property. The [`relativeMode`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#relativemode) property of the tooltip defines whether the tooltip has to be displayed around the object or at the mouse position.
+
+N> Valid `position` values include `TopLeft`, `TopCenter`, `TopRight`, `MiddleLeft`, `Center`, `MiddleRight`, `BottomLeft`, `BottomCenter`, and `BottomRight`.
 
 The following code example illustrates how to position the tooltip around object.
 
@@ -194,7 +196,7 @@ The following code example illustrates how to show tooltip at mouse position.
 
 To animate the tooltip, a set of specific animation effects are available, and it can be controlled by using the [`animation`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#animation) property. The animation property also allows you to set delay, duration, and various other effects of your choice.
 
-Refer the following sample where we used zoomIn animation for tooltip open and zoomOut animation for tooltip close with delay and duration. 
+Refer to the following sample, which uses a zoomIn animation to open and a zoomOut animation to close the tooltip, with delay and duration. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

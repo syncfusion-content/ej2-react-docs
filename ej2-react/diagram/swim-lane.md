@@ -17,6 +17,8 @@ Swimlanes are specialized diagram nodes that visualize business processes by org
 ## Create a Swimlane
 To create a swimlane, set the node's shape type to [`swimlane`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimLaneModel). Swimlanes are arranged horizontally by default and require proper configuration of headers and lanes to function correctly.
 
+N> When setting a swimlane's ID, ensure that it does not contain whitespace or special characters, including underscores (_), and does not begin with a number.
+
 The following code example demonstrates how to define a basic swimlane object:
 
 {% tabs %}
@@ -29,8 +31,6 @@ The following code example demonstrates how to define a basic swimlane object:
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/swimlane/es5Swimlaneheader-cs1" %}
- 
-N> When setting a Swimlane's ID, ensure that it does not contain white spaces, does not start with numbers or special characters, and does not include special characters like underscores (_) or spaces.
 
 ## Orientation
 
@@ -58,7 +58,7 @@ Lanes are arranged from left to right, with the header positioned at the top. Th
 
 The header serves as the primary identifying element of a swimlane, providing a title or description for the entire swimlane container. The [`header`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel) property allows customization of both content and appearance.
 
-N> By using this header, the swimlane interaction will be performed, like selection, dragging,etc.
+N> Use the header to select and drag the swimlane.
 
 The following code example illustrates how to define a swimlane header.
 
@@ -75,7 +75,7 @@ The following code example illustrates how to define a swimlane header.
 
 ### Header Customization
 
-Swimlane headers can be extensively customized to match design requirements and improve visual clarity. The dimensions can be controlled using [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#height) properties. Visual styling, including background color and text formatting, can be applied through the [`style`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#style) property. The swimlane's orientation can be controlled using the [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimlanemodel#orientation) property.
+Swimlane headers can be extensively customized to match design requirements and improve visual clarity. The dimensions can be controlled using [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#height) properties. Visual styling, including background color and text formatting, can be applied through the [`style`](https://ej2.syncfusion.com/react/documentation/api/diagram/headerModel#style) property. The swimlane's orientation can be controlled using the [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/swimLaneModel#orientation) property. See the [Orientation](#orientation) section for details.
 
 N> By default, the swimlane orientation is **Horizontal**.
 
@@ -109,11 +109,17 @@ Headers can be modified programmatically during runtime to respond to user inter
 
 ### Header Editing
 
-Diagram provides the support to edit swimlane headers at runtime. We achieve the header editing by double click event. Double clicking the header label will enables the editing of that. The following image illustrates how to edit the swimlane header.
-![Header Editing](images/swimlane-header-edit.gif).
+The Diagram component supports editing swimlane headers at runtime. Double-click the header label to edit it. The following image illustrates swimlane header editing.
 
-
+![Header Editing](images/swimlane-header-edit.gif)
 
 ## Limitations
 
 * Connectors cannot be added directly to swimlane.
+
+## See Also
+
+* [Nodes](nodes.md)
+* [Connectors](connectors.md)
+* [Symbol Palette](symbol-palette.md)
+* [Swimlane Palette](swimlane-palette.md)

@@ -26,17 +26,17 @@ Many organizations maintain existing diagrams created using Microsoft Visio. Rec
 
 This integration enables seamless collaboration between desktop‑based Visio tools and web‑based diagramming applications.
 
-## Visio support in the React Diagram
+## Visio Support in the React Diagram
 
 The Syncfusion Essential React Diagram component supports Microsoft Visio integration by allowing **.vsdx** files to be imported into the Diagram component and diagrams to be exported back to Visio format. During import, Visio shapes, connectors, and annotations are mapped to their corresponding Diagram elements, while export converts the diagram content into a valid **.vsdx** file.
 
-N>To enable Visio import and export functionality, inject the `ImportAndExportVisio` module into the Diagram component.
+N> To enable Visio import and export functionality, inject the `ImportAndExportVisio` module into the Diagram component.
 
-## Import Visio files in React Diagram
+## Import Visio files into the React Diagram
 
 ### How Visio import works
 
-A Visio file can be selected from the local file system or retrieved from a server or cloud storage. Once the **.vsdx** file is available, it is passed to the Diagram component as a **File** object using the [`importFromVisio`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#importfromvisio) method.
+A Visio file can be selected from the local file system or retrieved from a server or cloud storage. Once the **.vsdx** file is available, it is passed to the Diagram component as a **File** object using the [`importFromVisio`](https://helpej2.syncfusion.com/react/documentation/api/diagram/index-default#importfromvisio) method.
 
 During the import process:
 
@@ -47,7 +47,7 @@ During the import process:
 
 ### Import a Visio file
 
-The following example imports a Visio (**.vsdx**) file by passing a **File** object to the `importFromVisio` method. The method returns a collection of warnings when certain Visio features are not fully supported during import.
+The following example imports a Visio (**.vsdx**) file by passing a **File** object to the `importFromVisio` method. The method is asynchronous and returns a Promise that resolves to a collection of warnings when certain Visio features are not fully supported during import.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -62,7 +62,7 @@ The following example imports a Visio (**.vsdx**) file by passing a **File** obj
 
 ### Import options
 
-Import behavior can be customized using the `VisioImportOptions` object.
+Import behavior can be customized using the `VisioImportOptions` object, passed as the second argument to the `importFromVisio` method.
 
 | Property | Description |
 |--------|-------------|
@@ -70,7 +70,7 @@ Import behavior can be customized using the `VisioImportOptions` object.
 
 ### Import lifecycle event
 
-The [`diagramImporting`](https://ej2.syncfusion.com/react/documentation/api/diagram/iimportingeventargs) event is triggered during the Visio import process. This event provides information about the current import status, available pages, warnings or errors, and supports page selection or cancellation of the import operation.
+The [`diagramImporting`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iimportingeventargs) event is triggered during the Visio import process. This event provides information about the current import status, available pages, warnings or errors, and supports page selection or cancellation of the import operation.
 
 **Event arguments:**
 
@@ -88,13 +88,14 @@ N> The `selectedPage` property is configurable only when the import `status` is 
 
 The import operation can be canceled during the initial stage by setting the `cancel` property to **true**.
 
+N> `IImportingEventArgs` is imported from `@syncfusion/ej2-react-diagrams`.
+
 ```ts
 diagramImporting: function (args: IImportingEventArgs) {
   if (args.status === 'started') {
     args.cancel = true;
   }
 }
-
 ```
 
 #### Select a page during import
@@ -114,11 +115,11 @@ diagramImporting: function (args: IImportingEventArgs) {
 
 ### How Visio export works
 
-The Diagram component supports exporting diagrams to Microsoft Visio format using the [`exportToVisio`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#exporttovisio) method. This method generates a **.vsdx** file and automatically downloads it through the browser.
+The Diagram component supports exporting diagrams to Microsoft Visio format using the [`exportToVisio`](https://helpej2.syncfusion.com/react/documentation/api/diagram/index-default#exporttovisio) method. This method generates a **.vsdx** file and automatically downloads it through the browser.
 
 ### Exporting a diagram
 
-The following example exports an React Diagram to a Microsoft Visio (**.vsdx**) file using the `exportToVisio` method.
+The following example exports a React Diagram to a Microsoft Visio (**.vsdx**) file using the `exportToVisio` method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -136,13 +137,13 @@ The following example exports an React Diagram to a Microsoft Visio (**.vsdx**) 
 Export behavior can be controlled using the `VisioExportOptions` object.
 
 | Property | Description |
-|------|------|
+|--------|-------------|
 | `fileName` | Specifies the name of the exported Visio file. The default value is **Sample.vsdx**. |
 | `pageName` | Specifies the name of the Visio page. The default value is **Page-1**. |
 
 ### Export lifecycle event
 
-The [`diagramExporting`](https://ej2.syncfusion.com/react/documentation/api/diagram/iexportingeventargs) event provides status updates, reports warnings or errors, and supports cancellation of the export operation.
+The [`diagramExporting`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iexportingeventargs) event provides status updates, reports warnings or errors, and supports cancellation of the export operation.
 
 **Event arguments:**
 
@@ -156,13 +157,14 @@ The [`diagramExporting`](https://ej2.syncfusion.com/react/documentation/api/diag
 
 The export operation can be canceled at the start of the process by setting the `cancel` property to **true**.
 
+N> `IExportingEventArgs` is imported from `@syncfusion/ej2-react-diagrams`.
+
 ```ts
   diagramExporting: function (args: IExportingEventArgs) {
     if (args.status === 'started') {
       args.cancel = true;
     }
   }
-
 ```
 
 ## Limitations
