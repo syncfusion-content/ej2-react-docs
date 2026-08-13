@@ -90,6 +90,7 @@ The [`addInfo`](https://ej2.syncfusion.com/react/documentation/api/diagram/layer
 The following code illustrates how to add additional information to layers:
 
 ```ts
+import { DiagramComponent, NodeModel, ConnectorModel } from "@syncfusion/ej2-react-diagrams";
 
 // A node is created and stored in nodes array.
 let nodes: NodeModel[] = [{
@@ -141,12 +142,11 @@ function App() {
       nodes={nodes}
       connectors={connectors}
       // Add layer
-      layers = {
-            [
+      layers={[
                 {
                     id: 'layer1',
                     visible: true,
-                    objects: ['node1', 'node2'],
+                    objects: ['node1'],
                     addInfo: addInfo
                 },
                 {
@@ -154,8 +154,7 @@ function App() {
                     visible: true,
                     objects: ['node2'],
                 }
-            ]
-        }
+            ]}
       // render initialized Diagram
     />
   );
@@ -205,7 +204,7 @@ The following code illustrates how to remove a layer.
 {% previewsample "page.domainurl/code-snippet/diagram/layers/layers-cs5" %}
 
 
-### MoveObjects
+## Move Objects
 
 You can move objects from one layer to another dynamically using the [`moveObjects`](https://ej2.syncfusion.com/react/documentation/api/diagram#moveobjects) public method of the diagram control. This can be useful for managing complex diagrams with multiple layers where you need to update the categorization of elements based on user interaction or other dynamic conditions.
 
@@ -229,9 +228,9 @@ The following code illustrates how to move objects from one layer to another lay
 
 ### Bring Layer Forward
 
-Move a layer forward in the stacking order using the  [`bringLayerForward`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringlayerforward) public method.
+Move a layer forward in the stacking order using the [`bringLayerForward`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringlayerforward) public method.
 
-The following code illustrates how to bring forward to layer.
+The following code illustrates how to bring a layer forward.
 
 ```ts
 
@@ -248,7 +247,6 @@ Move a layer backward in the stacking order using the [`sendLayerBackward`](http
 ```ts
 // move the layer backward
 diagram.sendLayerBackward('layer1');
-  
 ```
 
 The following code illustrates how to send the layer forward/backward to another layer.
@@ -264,7 +262,7 @@ The following code illustrates how to send the layer forward/backward to another
 
 {% previewsample "page.domainurl/code-snippet/diagram/layers/layers-cs7" %}
 
-### Layer and Objects Rendering Order
+## Layer and Objects Rendering Order
 
 The rendering of diagram elements with layer properties involves grouping them within a `diagram_diagramLayer` for basic shape nodes and `diagram_nativeLayer_svg` for SVG-native elements. Even if different types of nodes are added within the same layer, the rendering at the DOM level occurs in separate layers. Therefore, when executing layering commands like [`bringLayerForward`](https://ej2.syncfusion.com/react/documentation/api/diagram#bringlayerforward) and [`sendLayerBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram#sendlayerbackward), the native SVG elements will always render above the basic shape elements. 
 
@@ -272,11 +270,11 @@ The order of rendering is as follows: HTML shapes -> SVG shapes -> Path data sha
 
 ## Clone Layer
 
-Layers can be cloned with its object by using the [`cloneLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#clonelayer) public method.This creates an identical copy of the layer and all its assigned elements.
+Layers can be cloned with their objects by using the [`cloneLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#clonelayer) public method. This creates an identical copy of the layer and all its assigned elements.
 
 **Use case**: Create template layers or duplicate complex layer configurations for reuse in different diagram sections.
 
-The following code illustrates how clone the layer.
+The following code illustrates how to clone the layer.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -299,7 +297,7 @@ The active layer represents the layer with the highest z-index in a diagram. Whe
 
 Retrieve the current active layer of the diagram using the [`getActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#getactivelayer) public method.
 
-The following code illustrates how fetch active layer from the diagram
+The following code illustrates how to fetch the active layer from the diagram:
 
 ```ts
     
@@ -312,7 +310,7 @@ diagram.getActiveLayer();
 
 You can set any layer to be the active layer of the diagram by using the [`setActiveLayer`](https://ej2.syncfusion.com/react/documentation/api/diagram#setactivelayer) public method.
 
-The following code illustrates how to set active layer for diagram
+The following code illustrates how to set the active layer for the diagram:
 
 ```ts
 // set the active layer

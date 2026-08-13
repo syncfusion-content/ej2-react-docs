@@ -28,14 +28,16 @@ An annotation can be added to a node or connector by defining the annotation obj
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Annotation-cs1" %}
- 
-N> When setting an Annotation's ID, ensure that it does not contain white spaces, does not start with numbers or special characters, and does not include special characters like underscores (_) or spaces.
+
+By default, an annotation is positioned at the center of the node/connector. For details on offset, margin, and alignment, see [Label Appearance](./label-appearance).
 
 ## Add annotations at runtime
 
 Annotations can be added at runtime by using the client-side method [`addLabels`](https://ej2.syncfusion.com/react/documentation/api/diagram#addlabels). The following code illustrates how to add an annotation to a node.
 
 The annotation's [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/annotationModel#id) property is used to define the name of the annotation and is further used to find the annotation at runtime and perform any customization.
+
+N> When setting an Annotation's ID, ensure that it does not contain white spaces, does not start with a number or a special character, and does not include special characters such as underscores (_).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,4 +82,9 @@ A collection of annotations can be removed from the node by using the diagram me
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Update-cs1" %}
+
+## See also
+
+* [How to customize Label appearance](./label-appearance)
+* [How to perform Label interaction](./label-interaction)
 

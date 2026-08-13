@@ -49,14 +49,12 @@ The following code example demonstrates how to handle the [`selectionChange`](ht
  You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iselectionchangeeventargs) to **true**, as shown in the code snippet below:
 
 ```js
-  selectionChange= {  (args) => {
-    if (args.state == 'Changing') {
-      //Prevents selection
-      args.cancel = true;
-    }
-   }
-  },
-
+selectionChange = {(args) => {
+  if (args.state == 'Changing') {
+    // Prevents selection
+    args.cancel = true;
+  }
+}},
 ```
 
 ## Position Change Event
@@ -78,15 +76,13 @@ The following code example demonstrates how to handle the  [`positionChange`](ht
 
  You can prevent dragging by setting the `cancel` property of [`DraggingEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iDraggingEventArgs) to **true**, as shown in the code snippet below.
 
- ```js
-   positionChange={  (args) => {
-    if (args.state == 'Progress') {
-      //Prevents dragging
-      args.cancel = true;
-    }
-   }
-  },
-
+```js
+positionChange = {(args) => {
+  if (args.state == 'Progress') {
+    // Prevents dragging
+    args.cancel = true;
+  }
+}},
 ```
 
 ## Connection Change Event
@@ -108,7 +104,7 @@ The following code example demonstrates how to handle the  [`connectionChange`](
 
 ## Source Point Change Event
 
-Triggers when a connector's source point is modified through dragging or programmatic changes. This event enables validation of source connections and implementation of custom connection rules.
+Triggers when a connector's source point is modified through dragging or programmatic changes. This event enables validation of source connections and implementation of custom connection rules. Point dragging requires the appropriate connector drag/edit constraints to be enabled.
 
 The following code example demonstrates how to handle the [`sourcePointChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs) event in the diagram.
 
@@ -126,57 +122,53 @@ The following code example demonstrates how to handle the [`sourcePointChange`](
  You can prevent source point dragging by setting the `cancel` property of [`EndChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs) to **true**, as shown in the code snippet below:
 
 ```javascript
-
- sourcePointChange={  (args) => {
-    if (args.state === 'Progress') {
-      //Prevents source point dragging
-      args.cancel = true;
-      //Customize
-      }
-    }
-  },
-
+sourcePointChange = {(args) => {
+  if (args.state === 'Progress') {
+    // Prevents source point dragging
+    args.cancel = true;
+    // Customize
+  }
+}},
 ```
 
 ## Target Point Change Event
 
-Triggers when a connector's target point is modified through dragging or programmatic changes. This event allows validation of target connections and enforcement of connection constraints.
+Triggers when a connector's target point is modified through dragging or programmatic changes. This event allows validation of target connections and enforcement of connection constraints. Point dragging requires the appropriate connector drag/edit constraints to be enabled.
 
 The following code example demonstrates how to handle the [`targetPointChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs) event in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/diagram/connectors/es5TargetPontChange-cs1/app/index.jsx %}
+{% include code-snippet/diagram/connectors/es5TargetPointChange-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/diagram/connectors/es5TargetPontChange-cs1/app/index.tsx %}
+{% include code-snippet/diagram/connectors/es5TargetPointChange-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5TargetPontChange-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5TargetPointChange-cs1" %}
 
  You can prevent target point dragging by setting the `cancel` property of [`EndChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iEndChangeEventArgs) to **true**, as shown in the code snippet below.
 
 ```javascript
-
-targetPointChange={  (args) => {
-    if (args.state === 'Progress') {
-      //Prevents target point dragging
-      args.cancel = true;
-      //Customize
-      }
-    }
-  },
-
+targetPointChange = {(args) => {
+  if (args.state === 'Progress') {
+    // Prevents target point dragging
+    args.cancel = true;
+    // Customize
+  }
+}},
 ```
 
 ## Segment Collection Change Event
 
 Triggers when connector segments are added or removed at runtime. This event is essential for tracking dynamic changes to connector paths and implementing custom segment management logic.
 
-The following code example demonstrates how to handle the [`segmentCollectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSegmentCollectionChangeEventArgs) event in the diagram: 
+This event requires the `ConnectorEditing` module and appropriate connector editing constraints such as `DragSegmentThumb`.
 
-Use **CTRL+Shift+Click** on connector to add/remove segments.
+The following code example demonstrates how to handle the [`segmentCollectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSegmentCollectionChangeEventArgs) event in the diagram:
+
+Use **CTRL+Shift+Click** on a connector to add or remove segments when segment editing is enabled.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -208,16 +200,15 @@ The following code example demonstrates how to handle the [`segmentChange`](http
 
  You can prevent segment editing by setting the `cancel` property of [`SegmentChangeEventArgs`](https://helpej2.syncfusion.com/react/documentation/api/diagram/iSegmentChangeEventArgs) to **true**, as shown in the code snippet below:
 
-``` javascript
- segmentChange={  (args) => {
-    if (args.state === 'Start') {
-      //Prevents the segment editing
-      args.cancel = true;
-      }
-    }
-  },
-
+```javascript
+segmentChange = {(args) => {
+  if (args.state === 'Start') {
+    // Prevents the segment editing
+    args.cancel = true;
+  }
+}},
 ```
+
 
 ## Collection Change Event
 
@@ -240,11 +231,10 @@ You can prevent changes to the diagram collection, such as adding or deleting co
 
 ``` javascript
 collectionChange={  (args) => {
-    if (args.state === 'Changing') {
-      //Prevents collection change - Prevents Adding or deleting connectors
-      args.cancel = true;
-      }
+  if (args.state === 'Changing') {
+    //Prevents collection change - Prevents Adding or deleting connectors
+    args.cancel = true;
     }
-  },
+}},
 
 ````

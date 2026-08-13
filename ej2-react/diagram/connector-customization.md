@@ -20,9 +20,9 @@ Decorators are visual elements that appear at the starting and ending points of 
 
 * Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or path. The connection end points can be decorated with the [`sourceDecorator`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#sourcedecorator) and [`targetDecorator`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#targetdecorator) properties of the connector.
 
-* The [`shape`](https://helpej2.syncfusion.com/react/documentation/api/diagram/decoratorShapes) property of `sourceDecorator` allows to define the shape of the decorators. Similarly, the `shape` property of `targetDecorator` allows to define the shape of the decorators.
+* The [`shape`](https://helpej2.syncfusion.com/react/documentation/api/diagram/decoratorShapes) property of `sourceDecorator` allows you to define the shape of the decorators. Similarly, the `shape` property of `targetDecorator` allows you to define the shape of the decorators.
 
-* To create custom shape for source decorator, use the [`pathData`](https://helpej2.syncfusion.com/react/documentation/api/diagram/decorator#pathdata) property to define SVG path strings for both source and target decorators.
+* To create a custom shape for the source decorator, use the [`pathData`](https://helpej2.syncfusion.com/react/documentation/api/diagram/decorator#pathdata) property to define SVG path strings for both source and target decorators.
 
 * The following code example illustrates how to create decorators of various shapes.
 
@@ -43,7 +43,7 @@ The visual appearance of decorators can be customized using stroke and fill prop
 
 * The source decorator's [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokeStyle#strokecolor), [`strokeWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokeStyle#strokewidth), and [`strokeDashArray`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokeStyle#strokedasharray) properties are used to customize the color, width, and appearance of the decorator.
 
-* To set the border stroke color, stroke width, and stroke dash array for the target decorator, use [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokeStyle#strokecolor), `strokeWidth` , and `strokeDashArray`.
+* To set the border stroke color, stroke width, and stroke dash array for the target decorator, use [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/strokeStyle#strokecolor), `strokeWidth`, and `strokeDashArray`.
 
 * To set the size for source and target decorator, use width and height properties.
 
@@ -89,7 +89,7 @@ The connector's `strokeWidth`, `strokeColor`, `strokeDashArray`, and [`opacity`]
 
 The [`visible`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#visible) property of the connector enables or disables the visibility of the connector.
 
-Default values for all connectors can be set using the `getConnectorDefaults` properties. This is useful when all connectors share the same type or properties, allowing common settings to be centralized.
+Default values for all connectors can be set using the diagram's `getConnectorDefaults` callback. This is useful when all connectors share the same type or properties, allowing common settings to be centralized.
 
 ## Spacing and Padding Controls
 
@@ -170,14 +170,6 @@ Corner radius creates connectors with rounded corners instead of sharp angles, p
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectorsCornerRadius-cs1" %}
 
-## Connector Appearance
-
-* The connector’s `strokeWidth`, `strokeColor`, `strokeDashArray`, and `opacity` properties are used to customize the appearance of the connector segments.
-
-* The [`visible`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#visible) property of the connector enables or disables the visibility of connector.
-
-* Default values for all the `connectors` can be set using the `getConnectorDefaults` properties. For example, if all connectors have the same type or having the same property then such properties can be moved into `getConnectorDefaults`.
-
 ### Segment Appearance
 
 The following code example illustrates how to customize the segment appearance.
@@ -195,9 +187,9 @@ The following code example illustrates how to customize the segment appearance.
 
 ## Connector Constraints and Behavior
 
-* The [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#constraints) property of connector allows to enable/disable certain features of connectors.
+* The [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#constraints) property of a connector allows enabling or disabling specific connector features.
 
-* To enable or disable the constraints, refer `constraints`.
+* Use connector constraint flags on the `constraints` property to enable or disable specific behaviors.
 
 The following code illustrates how to disable selection for a connector.
 
@@ -233,7 +225,7 @@ var connectors = {
 
 ## ZIndex for Connector
 
-The connectors [`zIndex`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#zindex) property specifies the stack order of connectors. A connector with a greater stack order appears in front of connectors with lower stack orders, enabling precise control over visual layering.
+The connector's [`zIndex`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#zindex) property specifies the stack order of connectors. A connector with a greater stack order appears in front of connectors with lower stack orders, enabling precise control over visual layering.
 
 The following code illustrates how to render connectors based on stack order.
 
@@ -303,7 +295,7 @@ The [`resetSegments`](https://helpej2.syncfusion.com/react/documentation/api/dia
 
 Connector splitting allows creating new connections when a node is dropped onto an existing connector. The connector splits at the drop point, creating connections between the new node and the existing connected nodes. Enable this feature by setting [`enableConnectorSplit`](https://helpej2.syncfusion.com/react/documentation/api/diagram#enableconnectorsplit) to **true**. The default value is **false**.
 
-The following code illustrates how to enable connector splitting functionality..
+The following code illustrates how to enable connector splitting functionality.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -320,7 +312,7 @@ The following code illustrates how to enable connector splitting functionality..
 
 ### Preserve Connector Styling During Splitting
 
-When splitting a connector using [`enableConnectorSplit`](https://helpej2.syncfusion.com/react/documentation/api/diagram#enableconnectorsplit), the newly created connector appears as a default connector without inheriting the original connector's styling. To maintain consistent styling, use the collectionChange event to apply the original connector's properties to the new connector.
+When splitting a connector using [`enableConnectorSplit`](https://helpej2.syncfusion.com/react/documentation/api/diagram#enableconnectorsplit), the newly created connector appears as a default connector without inheriting the original connector's styling. To maintain consistent styling, use the [`collectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram#collectionchange) event to apply the original connector's properties to the new connector.
 
 The following example demonstrates how to preserve the original connector's styling for newly created connectors during splitting:
 

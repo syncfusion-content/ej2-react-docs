@@ -111,9 +111,7 @@ The layout orientation determines the primary direction in which the layout flow
 |BottomToTop|Aligns the layout from bottom to top. All root nodes are placed at the bottom of the diagram.|
 |RightToLeft|Aligns the layout from right to left. All root nodes are placed at the right of the diagram.|
 
-Diagram provides support to customize the  [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#orientation) property can be customized to match specific design requirements or cultural reading patterns.
-
-N> In the diagram the default orientation is **TopToBottom**.
+The [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#orientation) property can be customized to match specific design requirements or cultural reading patterns.
 
 The following code demonstrates how to set the initial orientation for the layout and how to change it dynamically at runtime.
 
@@ -129,6 +127,8 @@ The following code demonstrates how to set the initial orientation for the layou
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-orientation-cs1" %}
+
+N> In the diagram, the default orientation is **TopToBottom**.
 
 
 ## Exclude From Layout
@@ -198,6 +198,16 @@ Expand and collapse operations can be animated by applying transitions during la
 
 Animation provides visual continuity and helps users track changes in the layout structure. By default, `enableAnimation` is set to **true**.
 
+The `LayoutAnimation` module must be injected into the diagram to enable layout animation. The following snippet shows how to import the module and inject it via the `Inject` component:
+
+```
+import { DiagramComponent, Inject, HierarchicalTree, DataBinding, LayoutAnimation } from '@syncfusion/ej2-react-diagrams';
+
+<DiagramComponent id="container" width={'100%'} height={'550px'} layout={{ type: 'HierarchicalTree', enableAnimation: true }}>
+  <Inject services={[DataBinding, HierarchicalTree, LayoutAnimation]} />
+</DiagramComponent>
+```
+
 The following example demonstrates how layout animation enhances the visual experience during expand and collapse operations:
 
 {% tabs %}
@@ -212,8 +222,6 @@ The following example demonstrates how layout animation enhances the visual expe
 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/layout-animation-cs1" %}
 
-
-N> To enable layout animation, inject the LayoutAnimation module in the diagram.
 
 ## Parent - Child Relation with Dropped Nodes from Symbol Palette
 
@@ -268,7 +276,7 @@ The diagram supports refreshing layouts at runtime to reflect structural or data
 This functionality is essential when nodes are added, removed, or modified programmatically, ensuring the layout remains consistent with the updated structure.
 
 
-```typescript
+```
 //To refresh layout
 diagramInstance.doLayout();
 ```

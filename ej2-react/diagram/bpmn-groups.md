@@ -33,8 +33,7 @@ To create a BPMN group, set the [`shape`](https://ej2.syncfusion.com/react/docum
 
 ## See Also
 
-* [BPMN Shapes](https://ej2.syncfusion.com/react/documentation/diagram/bpmn-shapes)
-* [BPMN Events](https://ej2.syncfusion.com/react/documentation/diagram/bpmn-events)
-* [BPMN Activities](https://ej2.syncfusion.com/react/documentation/diagram/bpmn-activities)
-* [BPMN Flows](https://ej2.syncfusion.com/react/documentation/diagram/bpmn-flows)
-* [Getting Started with React Diagram](https://ej2.syncfusion.com/react/documentation/diagram/getting-started)
+* [BPMN Shapes](./bpmn-shapes)
+* [BPMN Events](./bpmn-events)
+* [BPMN Activities](./bpmn-activities)
+* [BPMN Flows](./bpmn-flows)

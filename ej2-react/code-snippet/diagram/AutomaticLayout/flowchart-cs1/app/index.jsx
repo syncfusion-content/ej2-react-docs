@@ -68,6 +68,19 @@ let data = [
 
 let items = new DataManager(data, new Query().take(7));
 
+//Initialize layout settings for the diagram
+const layout = {
+    //Sets layout type
+    type: 'Flowchart'
+};
+
+//Configures data source for diagram
+const dataSourceSettings = {
+    id: 'id',
+    parentId: 'parentId',
+    dataSource: items
+};
+
 export default function App() {
 
     return (
@@ -78,17 +91,10 @@ export default function App() {
                 height={"550px"}
 
                 //Uses layout to auto-arrange nodes on the diagram page
-                layout={{
-                    //Sets layout type
-                    type: 'Flowchart'
-                }}
+                layout={layout}
 
                 //Configures data source for diagram
-                dataSourceSettings={{
-                    id: 'id',
-                    parentId: 'parentId',
-                    dataSource: items
-                }}
+                dataSourceSettings={dataSourceSettings}
 
                 //Sets the default properties for nodes
                 getNodeDefaults={(node) => {

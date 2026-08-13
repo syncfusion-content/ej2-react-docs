@@ -123,6 +123,20 @@ let data = [
 ];
 let items = new DataManager(data, new Query().take(7));
 
+//Uses layout to auto-arrange nodes on the diagram page
+let layout = {
+    //set layout type
+    type: 'RadialTree',
+    root: 'parent'
+};
+
+//Configures data source for diagram
+let dataSourceSettings = {
+    id: 'Id',
+    parentId: 'ReportingPerson',
+    dataSource: items
+};
+
 export default function App() {
     return (
         <DiagramComponent
@@ -132,18 +146,10 @@ export default function App() {
             snapSettings={{ constraints: 0 }}
 
             //Uses layout to auto-arrange nodes on the diagram page
-            layout={{
-                //set layout type
-                type: 'RadialTree',
-                root: 'parent'
-            }}
+            layout={layout}
 
             //Configures data source for diagram
-            dataSourceSettings={{
-                id: 'Id',
-                parentId: 'ReportingPerson',
-                dataSource: items
-            }}
+            dataSourceSettings={dataSourceSettings}
 
             //Sets the default properties for nodes
             getNodeDefaults={(node) => {

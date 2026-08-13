@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { DiagramComponent, Inject, NodeModel, ConnectorModel, DataBinding, ComplexHierarchicalTree, LineDistribution } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, Inject, NodeModel, ConnectorModel, DataBinding, ComplexHierarchicalTree, LineDistribution, LayoutModel, DataSourceModel } from "@syncfusion/ej2-react-diagrams";
 import { DataManager, Query } from "@syncfusion/ej2-data";
 
 
@@ -24,6 +24,20 @@ let data: object[] = [
 
 let items: DataManager = new DataManager(data as JSON[], new Query().take(7));
 
+//Initialize layout settings for the diagram
+const layout: LayoutModel = {
+  //Sets layout type
+  type: 'ComplexHierarchicalTree',
+  enableRouting: true
+};
+
+//Configures data source for diagram
+const dataSourceSettings: DataSourceModel = {
+  id: 'Name',
+  parentId: 'ReportingPerson',
+  dataSource: items
+};
+
 export default function App() {
 
   return (
@@ -34,18 +48,10 @@ export default function App() {
         height={"700px"}
 
         //Uses layout to auto-arrange nodes on the diagram page
-        layout={{
-          //Sets layout type
-          type: 'ComplexHierarchicalTree',
-          enableRouting: true
-        }}
+        layout={layout}
 
         //Configures data source for diagram
-        dataSourceSettings={{
-          id: 'Name',
-          parentId: 'ReportingPerson',
-          dataSource: items
-        }}
+        dataSourceSettings={dataSourceSettings}
 
         //Sets the default properties for nodes
         getNodeDefaults={(node: NodeModel) => {

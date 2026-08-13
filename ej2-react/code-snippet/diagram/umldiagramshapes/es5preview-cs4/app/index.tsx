@@ -11,6 +11,8 @@ import {
   SymbolInfo,
   NodeConstraints,
   SymbolPaletteComponent,
+  MarginModel,
+  PaletteModel
 } from "@syncfusion/ej2-react-diagrams";
 //Initialize the basicshapes for the symbol palette
 let diagramInstance:any;
@@ -69,6 +71,24 @@ export function getUmlShapes(): NodeModel[] {
   return umlShapes;
 }
 
+//Sets the symbol margin
+const symbolMargin: MarginModel = {
+  left: 12,
+  right: 12,
+  top: 12,
+  bottom: 12,
+};
+
+//Initializes the palettes for the symbol palette
+const palettes: PaletteModel[] = [
+  {
+    id: 'uml',
+    expanded: true,
+    symbols: getUmlShapes(),
+    title: 'UML Shapes',
+  },
+];
+
 //Initializes the symbol palette
 function App() {
   return (
@@ -76,23 +96,10 @@ function App() {
         <div id="palette-space" className="sb-mobile-palette">
         <SymbolPaletteComponent
             id="container"
-            palettes={[
-            {
-                id: 'uml',
-                expanded: true,
-                symbols: getUmlShapes(),
-                title: 'UML Shapes',
-            },
-            ]}
+            palettes={palettes}
             symbolHeight={80}
             symbolWidth={80}
-            //Sets the margin of the dragging helper relative to the mouse cursor
-            symbolMargin={{
-            left: 12,
-            right: 12,
-            top: 12,
-            bottom: 12,
-            }}
+            symbolMargin={symbolMargin}
             getNodeDefaults={(symbol: NodeModel): void => {
               symbol.width = 100;
               symbol.height = 100;

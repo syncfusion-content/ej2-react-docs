@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { DiagramComponent, Inject, NodeModel, ConnectorModel, DataBinding, FlowchartLayout } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, Inject, NodeModel, ConnectorModel, DataBinding, FlowchartLayout, LayoutModel } from "@syncfusion/ej2-react-diagrams";
 
 
   //Initialize nodes for diagram
@@ -28,6 +28,11 @@ import { DiagramComponent, Inject, NodeModel, ConnectorModel, DataBinding, Flowc
     { id: 'connector8', sourceID: '7', targetID: '8' }
   ];
 
+//Initialize layout settings for the diagram
+const layout: LayoutModel = {
+  //Sets layout type
+  type: 'Flowchart'
+};
 export default function App() {
 
   return (
@@ -40,10 +45,7 @@ export default function App() {
         connectors={connectors}
         
         //Uses layout to auto-arrange nodes on the diagram page
-        layout={{
-          //Sets layout type
-          type: 'Flowchart'
-        }}
+        layout={layout}
 
         //Sets the default properties for nodes
         getNodeDefaults={(node: NodeModel) => {

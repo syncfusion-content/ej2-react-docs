@@ -14,11 +14,11 @@ domainurl: ##DomainURL##
 
 The React Diagram component provides comprehensive styling options to customize label appearance. Labels can be enhanced with various font properties, colors, decorations, and visual effects to match application requirements.
 
-Font styling properties such as [`fontSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#fontsize), [`fontFamily`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#fontfamily), [`color`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#color) control the basic text appearance. Additional text formatting is available through [`bold`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#bold), [`italic`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#italic), and [`textDecoration`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#textdecoration) properties are used to style the label’s text.
+Font styling properties such as [`fontSize`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#fontsize), [`fontFamily`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#fontfamily), [`color`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#color) control the basic text appearance. Additional text formatting is available through the [`bold`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#bold), [`italic`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#italic), and [`textDecoration`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#textdecoration) properties to style the label’s text.
 
-Background and border styling can be applied using [`fill`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#fill), [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#strokecolor), and [`strokeWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#strokewidth) properties are used to define the background color and border color of the annotation and the [`opacity`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#opacity) property controls label transparency.
+Background and border styling can be applied using the [`fill`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#fill), [`strokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#strokecolor), and [`strokeWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#strokewidth) properties to define the background color and border color of the annotation, and the [`opacity`](https://helpej2.syncfusion.com/react/documentation/api/diagram/textStyleModel#opacity) property controls label transparency.
 
-The [`visible`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#visibility) property, which enables or disables label display.
+The [`visibility`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#visibility) property enables or disables label display.
 
 The following code demonstrates comprehensive label appearance customization:
 
@@ -81,9 +81,9 @@ The following example demonstrates label positioning using [`margin`](https://he
 
 ## Hyperlink
 
-Labels can include interactive [`hyperlink`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#hyperlink) for both nodes and connectors. Hyperlink behavior and appearance can be customized with several properties.
+Labels can include an interactive [`hyperlink`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#hyperlink) for both nodes and connectors. The `hyperlink` object is configured inside the annotation entry of either a node's or a connector's `annotations` collection — the same properties apply in both cases. Hyperlink behavior and appearance can be customized with several properties.
 
-The [`hyperlinkOpenState`](https://helpej2.syncfusion.com/react/documentation/api/diagram/hyperlinkModel#hyperlinkopenstate) property controls how the hyperlink opens - in a new window, the same tab, or a new tab.
+The [`link`](https://helpej2.syncfusion.com/react/documentation/api/diagram/hyperlinkModel#link) property defines the URL the hyperlink navigates to, and the [`hyperlinkOpenState`](https://helpej2.syncfusion.com/react/documentation/api/diagram/hyperlinkModel#hyperlinkopenstate) property controls how the hyperlink opens. Valid values are `NewWindow` (opens in a new browser tab/window) and `SameTab` (opens in the same browser tab).
 
 Hyperlink appearance is controlled through the [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/hyperlinkModel#content) property for display text, [`color`](https://helpej2.syncfusion.com/react/documentation/api/diagram/hyperlinkModel#color) for text color, and [`textDecoration`](https://helpej2.syncfusion.com/react/documentation/api/diagram/hyperlinkModel#textdecoration ) for styling effects like **Underline**, **LineThrough**, **Overline**.
 
@@ -102,7 +102,7 @@ The following example shows hyperlink implementation and customization:
 
 ## Rotate Annotation
 
-Labels can be rotated to any angle using the [`rotateAngle`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapeAnnotationModel#rotateangle) property. This feature is useful for creating dynamic label orientations that match specific design requirements.
+Labels can be rotated to any angle using the [`rotateAngle`](https://helpej2.syncfusion.com/react/documentation/api/diagram/shapeAnnotationModel#rotateangle) property, which is available on both node (Shape) and connector (Path) annotations. This feature is useful for creating dynamic label orientations that match specific design requirements.
 
 The following example demonstrates label rotation:
 {% tabs %}
@@ -116,7 +116,7 @@ The following example demonstrates label rotation:
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5RotateAngle-cs1" %}
 
-## Template support for annotation
+## Template support for Annotation
 
 Diagram provides template support for annotation. You can either define a string template and assign it to [`template`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#template) property of annotation or define a annotation template in html file and assign it to the [`annotationTemplate`](https://helpej2.syncfusion.com/react/documentation/api/diagram#annotationtemplate) property of the diagram.
 
@@ -141,9 +141,9 @@ N> Specify width and height for labels when using templates to ensure proper ali
 
 ### Annotation template
 
-HTML-based templates provide more complex content structures by defining templates in separate HTML files. Assign the template to the `annotationTemplate` property of the diagram. This template system works with both nodes and connectors.
+HTML-based templates provide more complex content structures by defining a template inside a `<script>` tag and assigning its ID to the `annotationTemplate` property of the diagram. This template system works with both nodes and connectors.
 
-The following code demonstrates HTML template usage for labels:
+Define the template markup inside a `<script>` tag with a unique `id`, then bind that `id` to the diagram's `annotationTemplate` property. The following code demonstrates HTML template usage for labels:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -158,7 +158,7 @@ The following code demonstrates HTML template usage for labels:
 
 ### Functional template
 
-We can define a function which would return a string template and assign that method to the `annotationTemplate` property of diagram. Inside that function we can do customizations based on the id of the annotation.
+Define a function that returns a string template and assign that method to the `annotationTemplate` property of the diagram. Inside the function, customize the output based on the id of the annotation.
 
 The following code illustrates how to define a functional template.
 
@@ -232,7 +232,7 @@ Available overflow options include:
 - **Ellipsis** - Overflowing content is replaced with three dots (...).
 - **Wrap** - Content renders with vertical overflow and horizontal wrapping.
 
-Types of text overflow are shown in below table.
+The types of text overflow are shown in the following table.
 
 |TextOverflow|output image|
 |-----|-----|
@@ -250,4 +250,10 @@ Types of text overflow are shown in below table.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/annotations/es5Overflow-cs1" %}
+
+## See also
+
+* [Labels](./labels)
+* [Label interaction](./label-interaction)
+* [Label events](./label-events)
  

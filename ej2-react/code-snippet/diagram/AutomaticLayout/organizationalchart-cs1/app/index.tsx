@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { DiagramComponent, Inject, ConnectorModel, DataBinding, NodeModel, HierarchicalTree } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, Inject, ConnectorModel, DataBinding, NodeModel, HierarchicalTree, LayoutModel, DataSourceModel } from "@syncfusion/ej2-react-diagrams";
 import { DataManager, Query } from "@syncfusion/ej2-data";
 
 
@@ -109,6 +109,19 @@ let data: object[] = [
 
 let items: DataManager = new DataManager(data as JSON[], new Query().take(7));
 
+//Uses layout to auto-arrange nodes on the diagram page
+const layout: LayoutModel = {
+  //set layout type
+  type: 'OrganizationalChart'
+};
+
+//Configures data source for diagram
+const dataSourceSettings: DataSourceModel = {
+  id: 'Id',
+  parentId: 'Team',
+  dataSource: items as DataManager
+};
+
 export default function App() {
   return (
     <DiagramComponent
@@ -118,17 +131,10 @@ export default function App() {
       snapSettings={{ constraints: 0 }}
 
       //Uses layout to auto-arrange nodes on the diagram page
-      layout={{
-        //set layout type
-        type: 'OrganizationalChart'
-      }}
+      layout={layout}
 
       //Configures data source for diagram
-      dataSourceSettings={{
-        id: 'Id',
-        parentId: 'Team',
-        dataSource: items
-      }}
+      dataSourceSettings={dataSourceSettings}
 
       //Sets the default properties for nodes
       getNodeDefaults={(node: NodeModel) => {

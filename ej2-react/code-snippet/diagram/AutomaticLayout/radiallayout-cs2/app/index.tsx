@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { DiagramComponent, Inject, ConnectorModel, DataBinding, NodeModel, RadialTree, DecoratorModel } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, Inject, ConnectorModel, DataBinding, NodeModel, RadialTree, DecoratorModel, LayoutModel } from "@syncfusion/ej2-react-diagrams";
 
 
 //Initializes Nodes for diagram
@@ -122,6 +122,13 @@ let connectors: ConnectorModel[] = [
   }
 ];
 
+//Uses layout to auto-arrange nodes on the diagram page
+const layout: LayoutModel = {
+  //set layout type
+  type: 'RadialTree',
+  root: 'parent'
+};
+
 export default function App() {
   return (
     <DiagramComponent
@@ -133,11 +140,7 @@ export default function App() {
       snapSettings={{ constraints: 0 }}
       
       //Uses layout to auto-arrange nodes on the diagram page
-      layout={{
-        //set layout type
-        type: 'RadialTree',
-        root: 'parent'
-      }}
+      layout={layout}
 
       //Sets the default properties for nodes
       getNodeDefaults={(node: NodeModel) => {

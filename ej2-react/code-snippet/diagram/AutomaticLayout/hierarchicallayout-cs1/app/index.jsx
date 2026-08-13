@@ -3,6 +3,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { DiagramComponent, Inject, DataBinding, HierarchicalTree } from "@syncfusion/ej2-react-diagrams";
 
+//Uses layout to auto-arrange nodes on the diagram page
+let layout = {
+    //Sets layout type
+    type: 'HierarchicalTree'
+};
+
 //Initialize nodes for diagram
 let nodes = [
     {
@@ -73,10 +79,7 @@ export default function App() {
                 nodes={nodes}
                 connectors={connectors}
                 //Uses layout to auto-arrange nodes on the diagram page
-                layout={{
-                    //Sets layout type
-                    type: 'HierarchicalTree'
-                }}
+                layout={layout}
 
                 //Sets the default properties for nodes
                 getNodeDefaults={(node) => {
