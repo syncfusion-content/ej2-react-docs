@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Integrate Syncfusion React Components with Redux Form | Syncfusion
+title: Redux Form in React Components | Syncfusion
 description: Learn how to integrate Syncfusion React components with Redux Form for managing form state, validation, and submission in React applications.
-control: Redux 
+control: common
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integration of Syncfusion® React Components in Redux Form
+# Integrating Syncfusion® React Components with Redux Form
 
 [Redux Form](https://redux-form.com/) is a library for managing form state in React applications. It integrates with the Redux state management library ([Redux Store](https://redux.js.org/api/store)) and provides a straightforward way to handle form inputs, validation, submission, and synchronization with Redux.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Icons in React Appearance component | Syncfusion
-description: Learn about the predefined icon library, usage, CDN and npm references, and customization options for Syncfusion React components.
-control: Icons 
+title: Icons in React | Syncfusion
+description: Learn how to reference, use, and customize Syncfusion React font-based icons from npm or CDN, including sizing and color overrides across themes.
+control: Icons
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Predefined icons library in Syncfusion® React components
+# Icons in Syncfusion® React Components
 
 Syncfusion's icon library provides an extensive collection of pre-designed, font-based icons (embedded as base64 in themes) to enhance user interfaces in React applications. These icons ensure visual consistency across Syncfusion components and are available via npm or CDN with minimal setup.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: npm Packages for Syncfusion React Components | Syncfusion
+title: NPM Package in React Installation | Syncfusion
 description: Learn about the npm packages available for Syncfusion React components, including package structure and installation commands.
 control: Npm package
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# npm Packages for Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# NPM Packages for Syncfusion® React Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React components are available as individual [npm packages](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-react). The npm packages are organized based on component functionality and usage.
 

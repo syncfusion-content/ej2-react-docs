@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing Syncfusion React (JavaScript) Linux Installer | Syncfusion
+title: Install React Linux Installer | Syncfusion
 description: Step-by-step guide to installing the Syncfusion React (JavaScript) Linux installer, extracting the contents, and registering the license key.
 control: Installation using Linux installer
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript) Linux Installer
+# Install Syncfusion® React Linux Installer
 
 The Linux distribution is provided as a `.zip` archive; installation consists of extracting the archive to a directory of your choice. There is no executable installer to run.
 

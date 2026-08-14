@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React getting started with Preact | Syncfusion
-description: Check out and learn about how to create and integrate Syncfusion React UI components in Preact project.
+description: Set up a Preact project with JavaScript and integrate Syncfusion React UI components, including the Grid with Tailwind 3 theme and example code.
 control: Preact
 platform: ej2-react
 documentation: ug

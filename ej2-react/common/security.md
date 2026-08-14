@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Security Considerations in React Common control | Syncfusion
+title: Security in React Components | Syncfusion
 description: Learn about security considerations in Syncfusion React components, including CSP, XSS prevention, HTML sanitization, and secure data handling.
 platform: ej2-react
 control: common
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> React components - Security
+# Security in Syncfusion® React Components
 
 Security is critical in web applications. Best practices include using HTTPS, validating and sanitizing user input, and enforcing strong authentication such as multi-factor authentication.
 

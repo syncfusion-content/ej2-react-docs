@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Size modes in React Appearance component | Syncfusion
-description: Learn about size modes (normal and touch) for Syncfusion React components and how to enable and customize them.
-control: Size modes 
+title: Size Modes in React | Syncfusion
+description: Learn how to enable and customize normal and touch size modes for Syncfusion React components to optimize UI sizing for different devices.
+control: Size modes
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Size modes for Syncfusion<sup style="font-size:70%">&reg;</sup> React components
+# Size modes for Syncfusion® React components
 
 Modern web applications must deliver consistent experiences across devices. Syncfusion<sup style="font-size:70%">&reg;</sup> React components provide two size modes to support this requirement: **normal** (default) and **touch** (bigger). These modes adapt the interface for mouse/keyboard and touch interactions, enhancing usability and accessibility.
 
