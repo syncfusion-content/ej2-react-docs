@@ -527,7 +527,7 @@ This tells the adaptor where to find the result data and the total count within 
 
 This defines the GraphQL query for fetching data along with all data operations:
 
-```graphql
+```bash
 query GetOrders() {
   orders() {
     result {
