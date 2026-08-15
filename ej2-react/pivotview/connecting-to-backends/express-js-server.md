@@ -781,19 +781,19 @@ function App(): React.ReactElement {
 
 The following image illustrates the new product record passed from the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) to the **createProduct** API endpoint.
 
-![createProduct API request payload](../images/expressjs-insert.png)
+![New product record in the createProduct API request payload](../images/expressjs-insert.png)
 
 ##### Update details included in the request payload
 
 The following image illustrates the updated product record passed from the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) to the **updateProduct** API endpoint.
 
-![updateProduct API request payload](../images/expressjs-update.png)
+![Edited product record in the updateProduct API request payload](../images/expressjs-update.png)
 
 ##### Delete details included in the request payload
 
 The following image illustrates the product key passed from the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) to the **deleteProduct** API endpoint.
 
-![deleteProduct API request payload](../images/expressjs-delete.png)
+![Product key in the deleteProduct API request payload](../images/expressjs-delete.png)
 
 #### Enable edit settings
 
