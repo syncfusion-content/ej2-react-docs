@@ -20,9 +20,9 @@ The Member Sorting functionality enables you to arrange field members in the row
 
 ### Enabling Member Sorting
 
-To enable member sorting, set the [`enableSorting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#enablesorting) property in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) to **true**. Once enabled, you can click the sort icon next to each field in the row or column axis within the **Field List** or **Grouping Bar** UI to reorder members in ascending or descending order.
+To enable member sorting, set the [`enableSorting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel#enablesorting) property in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) to **true**. Once enabled, you can click the sort icon next to each field in the row or column axis within the **Field List** or **Grouping Bar** UI to reorder members in ascending or descending order.
 
-> By default, the [`enableSorting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#enablesorting) property in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) is set to **true**. If you set it to **false**, the field members are arranged in the pivot table in their data-source order, and the sort icons in the grouping bar and field list buttons are removed.
+> By default, the [`enableSorting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel#enablesorting) property in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) is set to **true**. If you set it to **false**, the field members are arranged in the pivot table in their data-source order, and the sort icons in the grouping bar and field list buttons are removed.
 
 #### Visual Reference
 
@@ -37,12 +37,12 @@ To enable member sorting, set the [`enableSorting`](https://ej2.syncfusion.com/r
 
 ### Configuring Member Sorting Code Behind
 
-You can also configure member sorting during initial rendering using the [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#sortsettings) property in code behind. The required settings are:
+You can also configure member sorting during initial rendering using the [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel#sortsettings) property in code behind. The required settings are:
 
-* [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel/#name): Specifies the name of the field to sort.
-* [`order`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel/#order): Defines the sort direction, either **Ascending** or **Descending**.
+* [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModelname): Specifies the name of the field to sort.
+* [`order`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel#order): Defines the sort direction, either **Ascending** or **Descending**.
 
-> By default, the [`order`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel/#order) property in the [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#sortsettings) is set to **Ascending**. You can arrange the field members in their data-source order by setting `order` to **None**; in that case, the sort icons in the grouping bar and field list buttons for the corresponding field are removed.
+> By default, the [`order`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel#order) property in the [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel#sortsettings) is set to **Ascending**. You can arrange the field members in their data-source order by setting `order` to **None**; in that case, the sort icons in the grouping bar and field list buttons for the corresponding field are removed.
 
 The following example demonstrates how to configure the Pivot Table to enable member sorting and set the "Year" field to sort in descending order:
 
@@ -65,9 +65,9 @@ The following example demonstrates how to configure the Pivot Table to enable me
 
 ### Alphanumeric Sorting
 
-Usually, string sorting is applied to field members even if their names start with numbers. To sort field members numerically based on the numbers at the beginning of their names, you can set the [`dataType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions/#datatype) property to **number** for the specific field. This enables numeric sorting instead of alphabetical sorting, allowing for better logical ordering of numbered items.
+Usually, string sorting is applied to field members even if their names start with numbers. To sort field members numerically based on the numbers at the beginning of their names, you can set the [`dataType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions#datatype) property to **number** for the specific field. This enables numeric sorting instead of alphabetical sorting, allowing for better logical ordering of numbered items.
 
-When [`dataType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions/#datatype) is set to **number**, the component intelligently sorts members like '71-AJ', '209-FB', '36-SW' in the correct numerical sequence (36-SW, 71-AJ, 209-FB) rather than alphabetical order (209-FB, 36-SW, 71-AJ).
+When [`dataType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptions#datatype) is set to **number**, the component intelligently sorts members like '71-AJ', '209-FB', '36-SW' in the correct numerical sequence (36-SW, 71-AJ, 209-FB) rather than alphabetical order (209-FB, 36-SW, 71-AJ).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -88,13 +88,13 @@ When [`dataType`](https://ej2.syncfusion.com/react/documentation/api/pivotview/f
 
 ### Custom Sorting
 
-Custom sorting allows you to sort field members (also referred to as headers) in rows and columns based on a user-defined order rather than an alphabetical or numerical sequence. This functionality is configured using the [`membersOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel/#membersorder) property within the [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel/) during component initialization.
+Custom sorting allows you to sort field members (also referred to as headers) in rows and columns based on a user-defined order rather than an alphabetical or numerical sequence. This functionality is configured using the [`membersOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel#membersorder) property within the [`sortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel) during component initialization.
 
 To set up custom sorting, use the following properties:
 
-- [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel/#name): Specifies the field name to apply custom sorting.
-- [`membersOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel/#membersorder): An array of member values arranged in the user-defined sequence.
-- [`order`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel/#order): Determines whether the specified member array should be arranged in ascending or descending order.
+- [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel#name): Specifies the field name to apply custom sorting.
+- [`membersOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel#membersorder): An array of member values arranged in the user-defined sequence.
+- [`order`](https://ej2.syncfusion.com/react/documentation/api/pivotview/sortModel#order): Determines whether the specified member array should be arranged in ascending or descending order.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -115,13 +115,13 @@ To set up custom sorting, use the following properties:
 
 ## Value Sorting
 
-Value sorting allows users to sort a specific value field and its aggregated values in either the row or column axis, in ascending or descending order. To enable this functionality, set the [`enableValueSorting`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enablevaluesorting) property to **true**. Once enabled, users can sort values by clicking the header of a value field in the pivot table's row or column axis.
+Value sorting allows users to sort a specific value field and its aggregated values in either the row or column axis, in ascending or descending order. To enable this functionality, set the [`enableValueSorting`](https://ej2.syncfusion.com/react/documentation/api/pivotview#enablevaluesorting) property to **true**. Once enabled, users can sort values by clicking the header of a value field in the pivot table's row or column axis.
 
-You can also configure value sorting programmatically using the [`valueSortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel/#valuesortsettings) option. The required settings are:
+You can also configure value sorting programmatically using the [`valueSortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettingsModel#valuesortsettings) option. The required settings are:
 
-* [`headerText`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel/#headertext): It allows to set the header names with delimiters, that is used for value sorting. The header names are arranged from Level 1 to Level N, down the hierarchy with a delimiter for better specification.
-* [`headerDelimiter`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel/#headerdelimiter): It allows to set the delimiters string to separate the header text between levels.
-* [`sortOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel/#sortorder): It allows to set the sort direction of the value field.
+* [`headerText`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel#headertext): It allows to set the header names with delimiters, that is used for value sorting. The header names are arranged from Level 1 to Level N, down the hierarchy with a delimiter for better specification.
+* [`headerDelimiter`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel#headerdelimiter): It allows to set the delimiters string to separate the header text between levels.
+* [`sortOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel#sortorder): It allows to set the sort direction of the value field.
 
 > Value fields are set to the column axis by default. In such cases, the value sorting applied will have an effect on the column alone. You need to place the value fields in the row axis to do so in row wise. For more information, please [`refer here`](https://ej2.syncfusion.com/react/documentation/pivotview/data-binding#values-in-row-axis).
 
@@ -144,13 +144,13 @@ You can also configure value sorting programmatically using the [`valueSortSetti
 
 ### Multiple Axis Sorting
 
-Multiple axis sorting allows simultaneous sorting of value fields in both row and column axes for more flexible and precise data analysis. Apply this functionality using the following settings in [`valueSortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel/):
+Multiple axis sorting allows simultaneous sorting of value fields in both row and column axes for more flexible and precise data analysis. Apply this functionality using the following settings in [`valueSortSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel):
 
-* [`columnHeaderText`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel/#columnheadertext): Specifies the column header hierarchy for value sorting. Header levels are defined from Level 1 to N using a delimiter for clarity.
-* [`headerDelimiter`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel/#headerdelimiter): It allows to set the delimiters string to separate the header text between levels.
-* [`columnSortOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel/#columnsortorder): Determines the sorting direction for the specified column header.
-* [`rowHeaderText`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel/#rowheadertext): Defines the specific row header for which the value sorting should be applied.
-* [`rowSortOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel/#rowsortorder): Determines the sorting direction for the specified row header.
+* [`columnHeaderText`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel#columnheadertext): Specifies the column header hierarchy for value sorting. Header levels are defined from Level 1 to N using a delimiter for clarity.
+* [`headerDelimiter`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel#headerdelimiter): It allows to set the delimiters string to separate the header text between levels.
+* [`columnSortOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel#columnsortorder): Determines the sorting direction for the specified column header.
+* [`rowHeaderText`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel#rowheadertext): Defines the specific row header for which the value sorting should be applied.
+* [`rowSortOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/valueSortSettingsModel#rowsortorder): Determines the sorting direction for the specified row header.
 
 > Note: This feature is applicable only to relational data sources and operates exclusively with client-side engine.
 
@@ -175,19 +175,19 @@ Multiple axis sorting allows simultaneous sorting of value fields in both row an
 
 ### OnHeadersSort
 
-The [`onHeadersSort`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#onheaderssort) event is triggered each time a row or column header cell is rendered after sorting is applied. This event enables users to customize the order of headers(also referred to as members) in the pivot table. It provides the following parameters:
+The [`onHeadersSort`](https://ej2.syncfusion.com/react/documentation/api/pivotview#onheaderssort) event is triggered each time a row or column header cell is rendered after sorting is applied. This event enables users to customize the order of headers(also referred to as members) in the pivot table. It provides the following parameters:
 
-* [`fieldName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/headersSortEventArgs/#fieldname): It holds the field name where the sort settings are applied.
+* [`fieldName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/headersSortEventArgs#fieldname): It holds the field name where the sort settings are applied.
 
-* [`sortOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/headersSortEventArgs/#sortorder): It holds the current sort order of the field.
+* [`sortOrder`](https://ej2.syncfusion.com/react/documentation/api/pivotview/headersSortEventArgs#sortorder): It holds the current sort order of the field.
 
-* [`members`](https://ej2.syncfusion.com/react/documentation/api/pivotview/headersSortEventArgs/#members): It holds the sorted headers according to the specified sort order.
+* [`members`](https://ej2.syncfusion.com/react/documentation/api/pivotview/headersSortEventArgs#members): It holds the sorted headers according to the specified sort order.
 
-* [`levelName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/headersSortEventArgs/#levelname): It holds the specific field's unique level name. **Note:** This option is applicable only for OLAP data.
+* [`levelName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/headersSortEventArgs#levelname): It holds the specific field's unique level name. **Note:** This option is applicable only for OLAP data.
 
-* [`isOrderChanged`](https://ej2.syncfusion.com/react/documentation/api/pivotview/headersSortEventArgs/#isorderchanged): By setting this boolean property to **true**, it allows to display the modified members order.
+* [`isOrderChanged`](https://ej2.syncfusion.com/react/documentation/api/pivotview/headersSortEventArgs#isorderchanged): By setting this boolean property to **true**, it allows to display the modified members order.
 
-The example below demonstrates how to use the [`onHeadersSort`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#onheaderssort) event in the Pivot Table component to customize the header order for specific fields, such as **Country** and **Year**.
+The example below demonstrates how to use the [`onHeadersSort`](https://ej2.syncfusion.com/react/documentation/api/pivotview#onheaderssort) event in the Pivot Table component to customize the header order for specific fields, such as **Country** and **Year**.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
