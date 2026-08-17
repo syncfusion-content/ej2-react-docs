@@ -7,17 +7,18 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
+
 # Line Chart in React Chart
 
 <!-- markdownlint-disable MD036 -->
 
 ## Line
 
-To render a [line](https://www.syncfusion.com/react-components/react-charts/chart-types/line-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+Follow these steps to render a [line](https://www.syncfusion.com/react-components/react-charts/chart-types/line-chart) series, which is ideal for visualizing trends over time or across categories.
 
-1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `Line` in your chart configuration. This indicates that the data should be represented as a line chart, which is ideal for visualizing trends over time or across categories.
+1. **Set the series type**: Set the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#type) to `Line` in the series configuration.
 
-2. **Inject the LineSeries module**: Inject `LineSeries` module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering line series are available in your chart.
+2. **Inject the LineSeries module**: Add `LineSeries` to the `services` array of the `Inject` component inside `ChartComponent`. This registers the functionality required to render a line series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -38,7 +39,7 @@ To render a [line](https://www.syncfusion.com/react-components/react-charts/char
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#yname) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#yname) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,11 +60,18 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 ## Series customization
 
-The following properties can be used to customize the `line` series.
+Customize the line's appearance with the following properties. Defaults are taken from the standard [`Series`](https://ej2.syncfusion.com/react/documentation/api/chart/series) model.
 
-**Fill**
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) | string | `null` | Color applied to the line. Accepts a CSS color or a gradient model. |
+| [`opacity`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#opacity) | number | `1` | Transparency of the fill (0 to 1). |
+| [`dashArray`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#dasharray) | string | `''` | SVG dash-array pattern. |
+| [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#width) | number | `1` | Stroke width of the line, in pixels. |
 
-The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property determines the color applied to the series.
+**Solid fill**
+
+The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) property determines the color applied to the line.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -81,6 +89,8 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs13" %}
+
+**Gradient fill**
 
 The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the line series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
@@ -103,7 +113,7 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 **Opacity**
 
-The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
+The [`opacity`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -124,7 +134,7 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 **Dash array**
 
-The [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#dasharray) property determines the pattern of dashes and gaps in the series.
+The [`dashArray`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#dasharray) property determines the pattern of dashes and gaps in the line. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -145,7 +155,7 @@ The [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/seriesM
 
 **Width**
 
-The [width](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#width) property specifies the stroke width applied to the series.
+The [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#width) property specifies the stroke width applied to the line, in pixels.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -164,13 +174,40 @@ The [width](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs75" %}
 
+## Multicolored line
+
+Follow these steps to render a multicolored line series, where each segment of the line can have a distinct color.
+
+1. **Set the series type**: Set the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#type) to `MultiColoredLine` in the series configuration.
+
+2. **Inject the MultiColoredLineSeries module**: Add `MultiColoredLineSeries` (and `LineSeries`) to the `services` array of the `Inject` component inside `ChartComponent`. This registers the functionality required to render a multicolored line.
+
+3. **Map individual colors**: Use the [`pointColorMapping`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#pointcolormapping) property to point at a field in your data source whose value is a CSS color name or hex code (e.g., `pointColorMapping='color'` and each data item has a `color: 'red'` entry).
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/chart/code-path/series/line-cs12/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/chart/code-path/series/line-cs12/app/index.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/code-path/series/line-cs12/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/code-path/series/line-cs12/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs12" %}
+
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `undefined` values are considered empty. By default (`mode: 'Gap'`), empty points leave a gap in the line; the `mode` property lets you change how they are handled.
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -191,7 +228,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -212,7 +249,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -231,38 +268,11 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs77A" %}
 
-## Multicolored Line
-
-To render a multicolored line series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
-
-1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `MultiColoredLine` in your chart configuration. This specifies that the series should be rendered as a multicolored line chart, with different segments of the line having distinct colors.
-
-2. **Inject the MultiColoredLineSeries module**: Inject `LineSeries` module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering line series are available in your chart.
-
-3. **Map individual colors**: Utilize the `pointColorMapping` property to assign individual colors to each data point. This allows you to customize the color of each segment of the line based on your data.
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/code-path/series/line-cs12/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/code-path/series/line-cs12/app/index.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/code-path/series/line-cs12/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/code-path/series/line-cs12/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs12" %}
-
 ## Events
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered and lets you modify series properties such as data, fill, or name. For a line series, use it to change the line color per render or to swap data sources on the fly.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -283,7 +293,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires before each data point is drawn, letting you customize per-point marker shape, border, or fill. For a line series, use it to color each segment differently or to apply conditional formatting per vertex.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -302,7 +312,9 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs79" %}
 
-## See Also
+## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
+* [Axis customization](../axis-customization)
+* [Legend](../legend)

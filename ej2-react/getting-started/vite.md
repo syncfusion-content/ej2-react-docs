@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React getting started with Vite | Syncfusion
-description: Check out and learn about how to create and integrate Syncfusion React UI components in Vite projects.
+description: Set up a Vite project with JavaScript and integrate Syncfusion React components using the Syncfusion CLI or Vite CLI, with theme and Grid examples.
 control: Vite
 platform: ej2-react
 documentation: ug

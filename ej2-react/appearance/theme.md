@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Theme in React Appearance component | Syncfusion
-description: Explore Syncfusion React built-in themes including Tailwind 3.4, Material 3, Fluent 2, and Bootstrap 5.3 with optimized CSS and customization options.
-control: Theme 
+title: Theme in React | Syncfusion
+description: Explore Syncfusion React built-in themes including Tailwind 3.4, Material 3, Fluent 2, and Bootstrap 5.3, with optimized CSS and customization options.
+control: Theme
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Themes in Syncfusion® Components
+# Built-in Themes in React
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components provide a comprehensive set of built-in themes to deliver a consistent, modern, and visually appealing appearance across applications. The following table lists all currently supported themes in the Syncfusion<sup style="font-size:70%">&reg;</sup> React components library:
 

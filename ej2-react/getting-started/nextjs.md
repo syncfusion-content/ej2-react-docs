@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React getting started with Next.js | Syncfusion
-description: Check out and learn about how to create and integrate Syncfusion React UI components in Next.js projects.
+description: Create a Next.js application and integrate Syncfusion React components, including the Grid with Tailwind 3 theme and App Router client rendering.
 control: Next.js
 platform: ej2-react
 documentation: ug

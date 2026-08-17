@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing React Components Using Offline Installer | Syncfusion
+title: Install React Offline Installer | Syncfusion
 description: Step-by-step guide to installing Syncfusion React (JavaScript - EJ2) components using the offline installer, including UI and silent mode installation.
 control: Installation using offline installer 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installation using Offline Installer
+# Install Syncfusion® React Offline Installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline installer supports the following frameworks:
 

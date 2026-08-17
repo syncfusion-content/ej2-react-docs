@@ -2,8 +2,9 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AxisModel, BorderModel, BoxAndWhiskerSeries, Category } from '@syncfusion/ej2-react-charts';
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel, BorderModel } from "@syncfusion/ej2-react-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, BoxAndWhiskerSeries, Category } from '@syncfusion/ej2-react-charts';
 import { data } from './datasource';
 
 function App() {
@@ -17,10 +18,11 @@ function App() {
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
-  
+
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 
 

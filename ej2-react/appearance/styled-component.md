@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Styled-Components Support in React | Syncfusion
-description: Learn how to use styled-components for advanced CSS-in-JS styling of Syncfusion Essential JS 2 React components, including dynamic prop-based styling.
+description: Learn how to use styled-components for advanced CSS-in-JS styling of Syncfusion React components, including dynamic prop-based styling.
 control: Styled component
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styled-Component support
+# Styled-Components Support in React
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React components support advanced customization using the [styled-components](https://styled-components.com/) library — a popular CSS-in-JS solution for defining component-scoped styles in JavaScript.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Suggestion Customization with ##Platform_Name## Smart Textarea component | Syncfusion
-description:  Checkout and learn here all about Suggestion Customization with ##Platform_Name## Smart Textarea component of Syncfusion Essential JS 2 and more details.
+title: Customization in React Smart TextArea | Syncfusion
+description: Control how AI suggestions appear in the React Smart TextArea by toggling the ShowSuggestionOnPopup property to display them in a popup or inline.
 platform: ej2-react
 control: Customization 
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing Appearance of Suggestions
+# Customization in React Smart TextArea
 
 The [ShowSuggestionOnPopup](https://ej2.syncfusion.com/react/documentation/api/smart-textarea#aisuggestionhandler) property in Syncfusion<sup style="font-size:70%">&reg;</sup> React Smart TextArea allows you to control how text suggestions are displayed to the users.
 

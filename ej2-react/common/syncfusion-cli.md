@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion CLI | Syncfusion
+title: Syncfusion CLI in React | Syncfusion
 description: Learn to use Syncfusion CLI to create and manage React apps with Syncfusion components, templates, themes, and AI-powered tools.
 control: Syncfusion CLI
 platform: common
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> CLI
+# Syncfusion® CLI in React
 
 The **Syncfusion<sup style="font-size:70%">&reg;</sup> CLI** is a command-line tool that helps developers create, configure, and manage React projects with Syncfusion<sup style="font-size:70%">&reg;</sup> React components. It simplifies project setup by enabling developers to scaffold React applications, add ready-to-use Syncfusion<sup style="font-size:70%">&reg;</sup> React components, configure themes, set up Syncfusion<sup style="font-size:70%">&reg;</sup> MCP assistants, and install Syncfusion<sup style="font-size:70%">&reg;</sup> component skills.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template in React Common control | Syncfusion
+title: Template in React Components | Syncfusion
 description: Learn how to use templates in Syncfusion React components to customize layouts, render data, and optimize performance with stateless templates.
 control: common
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Template in Syncfusion® React Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React components support templates that let developers customize component layout and presentation. Templates provide a flexible way to render content and to inject tailored markup or behavior into a component while keeping the component API surface consistent.
 

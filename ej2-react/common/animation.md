@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Animation in React Common control | Syncfusion
+title: Animation in React Components | Syncfusion
 description: Learn how to use the Animation utility in Syncfusion React components to create element transition effects, control timing, and configure global animation settings.
 control: common
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Animation in React
+# Animation in Syncfusion® React Components
 
 The Animation utility creates smooth visual transitions for HTML elements by applying CSS-based animation effects over time, enhancing the user experience and interface responsiveness.
 

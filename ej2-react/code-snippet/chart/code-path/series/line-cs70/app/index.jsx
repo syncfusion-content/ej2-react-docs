@@ -1,8 +1,8 @@
 {% raw %}
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, ColumnSeries } from '@syncfusion/ej2-react-charts';
+import * as ReactDOM from "react-dom/client";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Category, ColumnSeries } from '@syncfusion/ej2-react-charts';
 import { columnData } from './datasource';
 function App() {
     const primaryxAxis = { valueType: 'Category', title: 'Countries' };
@@ -11,7 +11,7 @@ function App() {
       args.fill = '#ff6347';
     };
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Olympic Medals'  seriesRender={seriesRender}>
-      <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Category]}/>
+      <Inject services={[ColumnSeries, Category]}/>
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={columnData} xName='country' yName='gold' type='Column'>
         </SeriesDirective>
@@ -20,6 +20,7 @@ function App() {
 }
 ;
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);
 
 {% endraw %}

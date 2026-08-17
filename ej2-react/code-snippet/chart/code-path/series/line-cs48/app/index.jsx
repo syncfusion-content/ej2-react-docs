@@ -1,16 +1,12 @@
 {% raw %}
 
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import {
   ChartComponent,
   SeriesCollectionDirective,
   SeriesDirective,
   Inject,
-  Legend,
-  Category,
-  Tooltip,
-  DataLabel,
   AreaSeries,
 } from '@syncfusion/ej2-react-charts';
 import { areaData } from './datasource';
@@ -36,7 +32,7 @@ function App() {
       primaryYAxis={primaryyAxis}
       title="Average Sales Comparison"
     >
-      <Inject services={[AreaSeries, Legend, Tooltip, DataLabel, Category]} />
+      <Inject services={[AreaSeries]} />
       <SeriesCollectionDirective>
         <SeriesDirective
           dataSource={areaData}
@@ -44,7 +40,6 @@ function App() {
           yName="y"
           name="Product A"
           marker={{visible: true}}
-          dashArray="2,5"
           type="Area"
           emptyPointSettings={emptyPoint}
         ></SeriesDirective>
@@ -53,6 +48,7 @@ function App() {
   );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('charts'));
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);
 
 {% endraw %}

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Theme Studio in React Appearance component | Syncfusion
-description: Learn how to customize Syncfusion themes using Theme Studio for React components, including exporting customized styles and importing settings.
-control: Theme studio 
+title: Theme Studio in React | Syncfusion
+description: Learn how to customize Syncfusion React themes using Theme Studio, export custom CSS, and import previously changed settings or Figma tokens.
+control: Theme studio
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

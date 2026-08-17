@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 ## Pareto
 
-Pareto charts are used to find the cumulative values of data in different categories. It is a combination of `Column` and `Line` series, where the initial values are represented by the column chart and the cumulative values are represented by the line chart.
+A Pareto chart displays the cumulative contribution of each category to a total, sorted in descending order. It combines a `Column` series (the per-category values) with a `Line` series (the cumulative percentage). The data is sorted automatically and a secondary value axis for the cumulative line is added by default.
 
-To render a `pareto` series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+Follow these steps to render a Pareto series:
 
-1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `Pareto` in your chart configuration. This indicates that the data should be represented as a pareto chart, will use a combination of column and line series.
+1. **Set the series type**: Set the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#type) to `Pareto` in the series configuration. Map the category to `xName` and the numeric value to `yName`.
 
-2. **Inject the necessary modules**: inject `ParetoSeries` `ColumnSeries` and  `LineSeries` module. This step is essential, as it ensures that the necessary functionalities for rendering pareto series are available in your chart.
+2. **Inject the necessary modules**: Add `ParetoSeries`, `ColumnSeries`, and `LineSeries` to the `services` array of the `Inject` component inside `ChartComponent`. This registers the functionality required to render a Pareto series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -39,7 +39,7 @@ To render a `pareto` series in your chart, you need to follow a few steps to con
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#yname) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#yname) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,9 +60,21 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 ## Pareto customization
 
+Customize the cumulative line's appearance by passing a [`paretoOptions`](https://ej2.syncfusion.com/react/documentation/api/chart/series#paretooptions) object to the series. The `paretoOptions` model supports the following properties:
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/paretooptions#fill) | string | null | Color applied to the cumulative line. |
+| [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/paretooptions#width) | number | `1` | Stroke width of the cumulative line, in pixels. |
+| [`dashArray`](https://ej2.syncfusion.com/react/documentation/api/chart/paretooptions#dasharray) | string | `'0'` | SVG dash-array pattern (e.g., `'5 5'`). |
+| [`marker`](https://ej2.syncfusion.com/react/documentation/api/chart/paretooptions#marker) | [MarkerSettingsModel](https://ej2.syncfusion.com/react/documentation/api/chart/markersettingsmodel) | `null` | Marker settings for the cumulative line. |
+| [`showAxis`](https://ej2.syncfusion.com/react/documentation/api/chart/paretooptions#showaxis) | boolean | `true` | When `true`, a secondary value axis is rendered for the cumulative line. |
+
+The underlying column and line series can also be styled using the standard `ColumnSeries` and `LineSeries` properties.
+
 ### Fill
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions#fill) property to apply a color to the pareto line. By default, a color based on the theme is used.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/paretooptions#fill) property to apply a color to the cumulative line. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -83,7 +95,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/pareto
 
 ### Width
 
-Use the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions#width) property to control the thickness of the line for the pareto series, which affects its visual weight on the chart.
+Use the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/paretooptions#width) property to control the thickness of the cumulative line, in pixels. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -104,7 +116,7 @@ Use the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/paret
 
 ### Dash array
 
-The [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions#dasharray) property determines the pattern of dashes and gaps in the pareto line series.
+The [`dashArray`](https://ej2.syncfusion.com/react/documentation/api/chart/paretooptions#dasharray) property determines the pattern of dashes and gaps in the cumulative line.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -125,7 +137,7 @@ The [dashArray](https://ej2.syncfusion.com/react/documentation/api/chart/paretoO
 
 ### Marker
 
-Use the [`marker`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions#marker) property to display and customize markers for individual points in a pareto line.
+Use the [`marker`](https://ej2.syncfusion.com/react/documentation/api/chart/paretooptions#marker) property to display and customize markers for individual points in the cumulative line.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -146,7 +158,7 @@ Use the [`marker`](https://ej2.syncfusion.com/react/documentation/api/chart/pare
 
 ### Show axis
 
-Use the [`showAxis`](https://ej2.syncfusion.com/react/documentation/api/chart/paretoOptions#showaxis) property to show or hide the secondary axis for the pareto series.
+Use the [`showAxis`](https://ej2.syncfusion.com/react/documentation/api/chart/paretooptions#showaxis) property to show or hide the secondary value axis for the cumulative line.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -167,11 +179,11 @@ Use the [`showAxis`](https://ej2.syncfusion.com/react/documentation/api/chart/pa
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `undefined` values are considered empty. By default (`mode: 'Gap'`), empty points leave a gap in the series; the `mode` property lets you change how they are handled.
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -192,7 +204,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -213,7 +225,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -236,7 +248,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered and lets you modify series properties such as data, fill, or name. For a Pareto chart, use it to change the cumulative line color or to swap data sources on the fly.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -257,7 +269,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires before each data point is drawn, letting you customize per-point marker shape, border, or fill. For a Pareto chart, use it to color the column and line points differently.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -278,5 +290,7 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 ## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
+* [Axis customization](../axis-customization)
+* [Legend](../legend)

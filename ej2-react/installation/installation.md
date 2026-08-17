@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Installing Syncfusion React Components via npm | Syncfusion
-description: Learn how to install Syncfusion React components using npm CLI or package.json for Essential JS 2 packages.
-control: Installation 
+title: Installation of React Components via NPM | Syncfusion
+description: Install Syncfusion React components as npm packages using the npm CLI or by declaring them in package.json, then verify and register the license key.
+control: Installation
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installation
+# Installation of Syncfusion® React Components via NPM
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React npm packages can be added to a project using either of the following methods:
 

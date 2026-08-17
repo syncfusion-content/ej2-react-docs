@@ -1,16 +1,15 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, MultiColoredAreaSeries, SegmentsDirective,
-         Legend, StepAreaSeries, SegmentDirective }
+import * as ReactDOM from "react-dom/client";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, MultiColoredAreaSeries, SegmentsDirective, SegmentDirective }
 from'@syncfusion/ej2-react-charts';
 import { data } from './datasource';
 
 function App() {
 
   return <ChartComponent id='charts'>
-      <Inject services={[StepAreaSeries, Legend, MultiColoredAreaSeries]} />
+      <Inject services={[MultiColoredAreaSeries]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={data} xName='x' yName='y' name='England' type='MultiColoredArea' segmentAxis='X' >
           <SegmentsDirective>
@@ -24,6 +23,7 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 

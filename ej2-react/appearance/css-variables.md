@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Themes using CSS Variables in React component | Syncfusion
-description: Learn how to use and customize Syncfusion React component themes with CSS variables (Material 3, Fluent 2, Bootstrap 5.3), including light/dark mode switching, primary color overrides, and runtime adjustments for better accessibility and user preferences.
+title: Themes using CSS Variables in React | Syncfusion
+description: Customize Syncfusion React themes with CSS variables for Material 3, Fluent 2, Bootstrap 5.3, and Tailwind 3.4, including light/dark and color overrides.
 control: Themes using CSS Variables
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# About CSS variables in themes
+# Themes using CSS Variables in React
 
 [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), also known as custom properties, allow authors to define reusable values in CSS files. Variable names start with two hyphens (`--`) followed by an identifier and can store values such as colors, lengths, or fonts. Reference these variables using the `var()` function across stylesheets.
 

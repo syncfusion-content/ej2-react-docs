@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to resolve Content Security Policy in Syncfusion
+title: How to resolve CSP errors in React Components | Syncfusion
 description: Learn how to resolve Content Security Policy (CSP) issues with Syncfusion React components, including license banner base64 image handling and required directives for inline styles and fonts.
 platform: ej2-react
 control: common
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to resolve Content Security Policy (CSP) errors
+# How to resolve CSP errors in Syncfusion® React Components
 
 [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (CSP) is a browser security feature that helps prevent cross-site scripting (XSS) and data injection attacks by restricting the sources from which content can be loaded or executed.
 

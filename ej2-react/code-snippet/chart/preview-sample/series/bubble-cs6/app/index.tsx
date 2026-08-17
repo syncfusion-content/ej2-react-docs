@@ -2,17 +2,22 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-         BubbleSeries, IPointRenderEventArgs}
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel, IPointRenderEventArgs } from "@syncfusion/ej2-react-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
+         BubbleSeries }
 from'@syncfusion/ej2-react-charts';
 import { data } from './datasource';
-import { EmitType } from '@syncfusion/ej2-base';
+import type { EmitType } from '@syncfusion/ej2-base';
 function App() {
 const primaryxAxis: AxisModel= { title: 'Literacy Rate', minimum: 60, maximum: 100, interval: 5 }  ;
 const primaryyAxis: AxisModel= { title: 'GDP growth rate', minimum: -2, maximum: 16, interval: 2 }  ;
 const pointRender: EmitType<IPointRenderEventArgs> = (args: IPointRenderEventArgs): void => {
-  args.fill = '#ff6347';
+  if (args.point.y < 7.5) {
+    args.fill = '#ff6347';
+  } else {
+    args.fill = '#009cb8';
+  }
 };
   return <ChartComponent id='charts'
            primaryXAxis={ primaryxAxis }
@@ -27,6 +32,7 @@ const pointRender: EmitType<IPointRenderEventArgs> = (args: IPointRenderEventArg
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 

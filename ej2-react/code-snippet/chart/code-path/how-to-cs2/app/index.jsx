@@ -20,7 +20,7 @@ function App() {
       <AnnotationsDirective>
         <AnnotationDirective content={content} coordinateUnits='Point' x='Wed' y={20}>
         </AnnotationDirective>
-        <AnnotationDirective content={content} coordinateUnits='Pixel' x={440} y={600}>
+        <AnnotationDirective content={content} coordinateUnits='Pixel' x={440} y={330}>
         </AnnotationDirective>
       </AnnotationsDirective>
       <SeriesCollectionDirective>

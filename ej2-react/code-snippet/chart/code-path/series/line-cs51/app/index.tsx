@@ -1,23 +1,20 @@
 {% raw %}
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import {
-  AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-  Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, AreaSeries, Selection, ISeriesRenderEventArgs
-}
-  from '@syncfusion/ej2-react-charts';
-import { EmitType } from '@syncfusion/ej2-base';
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel, ISeriesRenderEventArgs } from "@syncfusion/ej2-react-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AreaSeries } from '@syncfusion/ej2-react-charts';
+import type { EmitType } from '@syncfusion/ej2-base';
 import { areaData } from './datasource';
 function App() {
-  const primaryxAxis = {
+  const primaryxAxis: AxisModel = {
     title: 'Year',
     minimum: 1900,
     maximum: 2000,
     interval: 10,
     edgeLabelPlacement: 'Shift',
   };
-  const primaryyAxis = {
+  const primaryyAxis: AxisModel = {
     minimum: 2,
     maximum: 5,
     interval: 0.5,
@@ -34,7 +31,7 @@ function App() {
     title="Average Sales Comparison"
     seriesRender={seriesRender}
   >
-    <Inject services={[AreaSeries, Legend, Tooltip, DataLabel, Category]} />
+    <Inject services={[AreaSeries]} />
     <SeriesCollectionDirective>
       <SeriesDirective
         dataSource={areaData}
@@ -48,7 +45,8 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 
 {% endraw %}

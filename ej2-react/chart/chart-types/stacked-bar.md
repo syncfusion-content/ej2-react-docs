@@ -2,20 +2,20 @@
 layout: post
 title: 100% Stacked Bar Chart in React Chart | Syncfusion
 description: Learn to render, customize, and bind 100% Stacked Bar series in Syncfusion React Chart to compare proportional segment contributions across categories.
-control: 100% Stacked Bar chart
+control: 100% Stacked Bar Chart
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 # 100% Stacked Bar Chart in React Chart
 
-## 100% Stacked Bar
+## 100% stacked bar
 
-To render a [100% stacked bar](https://www.syncfusion.com/react-components/react-charts/chart-types/100-stacked-bar-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+Follow these steps to render a [100% stacked bar](https://www.syncfusion.com/react-components/react-charts/chart-types/100-stacked-bar-chart) series, which stacks multiple bar series within each category and normalizes them to a percentage of the total. Use this when comparing proportional contributions across categories; for absolute totals, use `StackingBar` instead.
 
-1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `StackingBar100` in your chart configuration. This indicates that the data should be represented as a 100% stacked bar chart, with segments that show the percentage contribution of each part.
+1. **Set the series type**: Set the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#type) to `StackingBar100` in the series configuration.
 
-2. **Inject the StackingBarSeries module**: Inject `StackingBarSeries` module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering the 100% stacked bar series are available in your chart.
+2. **Inject the StackingBarSeries module**: Add `StackingBarSeries` to the `services` array of the `Inject` component inside `ChartComponent`. This registers the functionality required to render a 100% stacked bar series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,7 +36,7 @@ To render a [100% stacked bar](https://www.syncfusion.com/react-components/react
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#yname) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#yname) properties. The example below uses the same `StackingBar100` configuration shown above with a typical JSON dataset and the `xName`/`yName` mapping applied.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,11 +57,18 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 ## Series customization
 
-The following properties can be used to customize the `100% stacked bar` series.
+Customize the 100% stacked bar series appearance with the following properties. Defaults are taken from the standard [`Series`](https://ej2.syncfusion.com/react/documentation/api/chart/series) model.
 
-**Fill**
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) | string | `null` | Color applied to the series. Accepts a CSS color or a gradient reference. |
+| [`opacity`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#opacity) | number | `1` | Transparency of the fill (0 to 1). |
+| [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#border) | [`BorderModel`](https://ej2.syncfusion.com/react/documentation/api/chart/bordermodel) | `null` | Border settings: `width`, `color`, and `dashArray`. |
+| [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/series#cornerradius) | [`CornerRadiusModel`](https://ej2.syncfusion.com/react/documentation/api/chart/cornerradiusmodel) | `null` | Per-corner radius for the bar segments (`topLeft`, `topRight`, `bottomLeft`, `bottomRight`). |
 
-The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property determines the color applied to the series.
+**Solid fill**
+
+The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) property determines the color applied to the series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,7 +87,9 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedbar-cs" %}
 
-The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the 100% stacked bar series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+**Gradient fill**
+
+The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) property can be set to a CSS gradient reference such as `url(#gradient)` to apply a gradient color that transitions across the series. Define the gradient in an SVG `<defs>` block and reference it from the `fill` prop.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -101,7 +110,7 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 **Opacity**
 
-The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
+The [`opacity`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#opacity) property controls the transparency of the fill (0 to 1) and affects how the series blends with background or overlapping series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -122,7 +131,7 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 **Border**
 
-Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#border) property to configure the border width, color, and dasharray of the 100% stacked bar series.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#border) property to configure the border `width`, `color`, and `dashArray` of the 100% stacked bar series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -143,7 +152,7 @@ Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 ## 100% Cylindrical stacked bar chart
 
-To render a 100% cylindrical stacked bar chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnfacet) property to `Cylinder` in the chart series.
+To render a 100% stacked bar with cylindrical (rounded) ends instead of a flat shape, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#columnfacet) property to `Cylinder` on the chart series. The default value is `Rect`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -164,11 +173,11 @@ To render a 100% cylindrical stacked bar chart, set the [`columnFacet`](https://
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `undefined` values are considered empty. By default (`mode: 'Gap'`), empty points leave a gap in the stack; the `mode` property on `emptyPointSettings` lets you change how they are handled. When the total at a point is `0`, all series for that point are omitted.
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -189,7 +198,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -210,7 +219,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -231,7 +240,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 ## Corner radius
 
-The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/series#cornerradius) property in the chart series is used to customize the corner radius for 100% stacked bar series. This allows you to create 100% stacked bars with rounded corners, giving your chart a more polished appearance. You can customize each corner of the 100% stacked bars using the topLeft, topRight, bottomLeft, and bottomRight properties.
+The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/series#cornerradius) property on the chart series is used to round the corners of 100% stacked bar segments. Each corner can be customized individually using `topLeft`, `topRight`, `bottomLeft`, and `bottomRight`; values are in pixels.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -252,7 +261,7 @@ The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/se
 
 ### Point corner radius
 
-You can customize the corner radius for individual points in the chart series using the [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event by setting the [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs#cornerradius) property in its event argument.
+You can override the corner radius for individual 100% stacked bar points by using the [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event and setting the `cornerRadius` property on the event-args object. Use this to apply conditional rounding (for example, larger radius on the topmost segment of each stack).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -275,7 +284,7 @@ You can customize the corner radius for individual points in the chart series us
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered and lets you modify series properties such as `data`, `fill`, or `name`. For a 100% stacked bar series, use it to vary per-series fill or `stackingGroup` between renders.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -296,7 +305,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires before each data point is drawn, letting you customize per-point marker shape, border, fill, or corner radius. For a 100% stacked bar series, use it to apply conditional formatting on individual bar segments.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -319,5 +328,7 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 ## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
+* [Axis customization](../axis-customization)
+* [Legend](../legend)

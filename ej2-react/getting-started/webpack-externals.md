@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Webpack externals with React Getting started component | Syncfusion
-description:  Check out and learn about Webpack externals with React Getting started component of Syncfusion Essential JS 2 and more details.
-control: Webpack externals 
+title: React Getting Started with Webpack Externals | Syncfusion
+description: Configure a React app to load Syncfusion React UI components via Webpack Externals with CDN scripts, including the Grid and Tailwind 3 theme.
+control: Webpack Externals
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion® React using Webpack Externals
+# Getting Started with Syncfusion® React Components in Webpack Externals
 
 This article provides a step-by-step guide for configuring a React application to use Syncfusion<sup style="font-size:70%">&reg;</sup> React components with [Webpack Externals](https://webpack.js.org/configuration/externals/). Webpack Externals instruct Webpack to treat specified dependencies as external, loading them via CDN or global variables instead of bundling them into your app.
 

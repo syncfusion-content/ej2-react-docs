@@ -82,7 +82,7 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 **Opacity**
 
-The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
+The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series. For example, `opacity={0.5}` makes each bubble semi-transparent.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -103,7 +103,7 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 ## Size mapping
 
-Use the [`size`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#size) property to map the size of each bubble to the value specified in the data source.
+Use the [`size`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#size) property to map the size of each bubble to a numeric field in the data source. For example, `size='size'` maps a numeric field from the data source to the bubble size, allowing relative comparison between data points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -124,11 +124,11 @@ Use the [`size`](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `undefined` values are considered empty. Empty data points are not plotted on the chart.
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyPointSettingsModel#mode) property of `emptyPointSettings` to control how empty points are rendered. Available modes are `Gap` (leave a break, the default), `Drop` (Ignores the empty point during rendering), `Zero` (plot as zero), and `Average` (plot as the average of neighboring points).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -149,7 +149,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyPointSettingsModel#fill) property of `emptyPointSettings` to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -170,7 +170,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyPointSettingsModel#border) property of `emptyPointSettings` to customize the border width and color for empty points, for example `border={{ width: 1.5, color: 'green' }}`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -193,7 +193,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered. Use its event arguments to modify the series data, fill, or name dynamically before rendering.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -214,7 +214,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires for each data point before it is drawn. Use its event arguments to customize the appearance of individual points before they are rendered.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -233,7 +233,7 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/bubble-cs6" %}
 
-## See Also
+## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)

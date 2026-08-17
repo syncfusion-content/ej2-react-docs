@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Browser support for React | Syncfusion
-description: Learn about browser support and required polyfills for Syncfusion Essential JS 2 React components.
-control: Browser 
+title: Browser Support in React Components | Syncfusion
+description: Learn about browser support requirements and necessary polyfills for Syncfusion EJ2 React components across browsers.
+control: Browser Support
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Browser support
+# Browser Support in Syncfusion® React Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Essential JS 2 components are supported in modern browsers. Supported browser families and general support notes:
 

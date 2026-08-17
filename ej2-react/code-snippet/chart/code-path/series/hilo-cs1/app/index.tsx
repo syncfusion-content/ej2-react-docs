@@ -2,10 +2,9 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,LegendSettingsModel,
-    HiloSeries, Category, Tooltip, ILoadedEventArgs, Zoom,
-    Crosshair, ChartTheme }
-from'@syncfusion/ej2-react-charts';
+import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, LegendSettingsModel,
+    HiloSeries, Category, Tooltip, Zoom, Crosshair }
+from '@syncfusion/ej2-react-charts';
 import { chartData } from './datasource';
 
 function App() {

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to trace events in React Progress Button | Syncfusion
-description: Hook into React Progress Button lifecycle events: begin, progress, end, and fail. Update indicators, validate, or revert UI as progress advances.
+description: Hook into React Progress Button lifecycle events begin, progress, end, and fail. Update indicators, validate, or revert UI as progress advances.
 control: Trace events of progress button 
 platform: ej2-react
 documentation: ug
@@ -14,10 +14,10 @@ Monitor ProgressButton lifecycle events to execute custom logic at different sta
 
 The following events are available in the ProgressButton component:
 
-* [`begin`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#begin) - Triggers when progress starts; use to initialize progress parameters or update UI.
-* [`progress`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#progress) - Triggers periodically as progress advances; use to update progress indicators or perform intermediate validations.
-* [`end`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#end) - Triggers when progress completes; use to show completion states or enable follow-up actions.
-* [`fail`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#fail) - Triggers when an operation fails; use to show error messages or revert UI changes.
+* [`begin`](https://ej2.syncfusion.com/react/documentation/api/progress-button/index-default#begin) - Triggers when progress starts; use to initialize progress parameters or update UI.
+* [`progress`](https://ej2.syncfusion.com/react/documentation/api/progress-button/index-default#progress) - Triggers periodically as progress advances; use to update progress indicators or perform intermediate validations.
+* [`end`](https://ej2.syncfusion.com/react/documentation/api/progress-button/index-default#end) - Triggers when progress completes; use to show completion states or enable follow-up actions.
+* [`fail`](https://ej2.syncfusion.com/react/documentation/api/progress-button/index-default#fail) - Triggers when an operation fails; use to show error messages or revert UI changes.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
