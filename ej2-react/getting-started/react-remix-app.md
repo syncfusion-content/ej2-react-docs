@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React remix app with React Getting started component | Syncfusion
-description:  Checkout and learn about React remix app with React Getting started component of Syncfusion Essential JS 2 and more details.
-control: React remix app 
+title: React getting started with Remix | Syncfusion
+description: Create a Remix application and integrate Syncfusion React UI components, including the Grid with Tailwind 3 theme and server-side rendering setup.
+control: Remix
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion® React Components in a Remix
+# Getting Started with Syncfusion® React Components in Remix
 
 This guide provides a step-by-step workflow for integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React components into a new Remix application.
 

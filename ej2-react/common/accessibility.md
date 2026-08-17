@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility Support for React Components | Syncfusion
+title: Accessibility in React Components | Syncfusion
 description: Learn about accessibility standards, WCAG 2.2 compliance, Section 508, WAI-ARIA, keyboard navigation, and screen reader support in Syncfusion React components.
 control: common
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Accessibility in Syncfusion® React Components
 
 ## Accessibility Overview
 

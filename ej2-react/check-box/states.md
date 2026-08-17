@@ -1,7 +1,7 @@
 ---
 layout: post
 title: States in React Checkbox | Syncfusion
-description: Use the three React Checkbox states: checked, unchecked, and indeterminate. The indeterminate state is set via property and is common in hierarchical lists.
+description: Use the three React Checkbox states checked, unchecked, and indeterminate. The indeterminate state is set via property and is common in hierarchical lists.
 control: States 
 platform: ej2-react
 documentation: ug

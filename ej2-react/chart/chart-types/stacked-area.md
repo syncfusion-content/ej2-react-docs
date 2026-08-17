@@ -9,13 +9,13 @@ domainurl: ##DomainURL##
 ---
 # 100% Stacked Area Chart in React Chart
 
-## 100% Stacked Area
+## 100% stacked area
 
-To render a [100% stacked area](https://www.syncfusion.com/react-components/react-charts/chart-types/100-stacked-area-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+Follow these steps to render a [100% stacked area](https://www.syncfusion.com/react-components/react-charts/chart-types/100-stacked-area-chart) series, which stacks multiple area series so that each one is normalized to a percentage of the total at every x value. Use this when comparing proportional contributions over time or across categories; for absolute totals, use `StackingArea` instead.
 
-1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `StackingArea100` in your chart configuration. This indicates that the data should be represented as a 100% stacked area chart, where the cumulative values for each data point are expressed as a percentage of the total. This ensures that the sum of all series at each point is always 100%.
+1. **Set the series type**: Set the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#type) to `StackingArea100` in the series configuration.
 
-2. **Inject the StackingAreaSeries module**: Inject `StackingAreaSeries` module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering 100% stacked area series are available in your chart.
+2. **Inject the StackingAreaSeries module**: Add `StackingAreaSeries` to the `services` array of the `Inject` component inside `ChartComponent`. This registers the functionality required to render a 100% stacked area series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,7 +36,7 @@ To render a [100% stacked area](https://www.syncfusion.com/react-components/reac
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#yname) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#yname) properties. The example below uses the same `StackingArea100` configuration shown above with a typical JSON dataset and the `xName`/`yName` mapping applied.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,11 +57,17 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 ## Series customization
 
-The following properties can be used to customize the `100% stacked area` series.
+Customize the 100% stacked area series appearance with the following properties. Defaults are taken from the standard [`Series`](https://ej2.syncfusion.com/react/documentation/api/chart/series) model.
 
-**Fill**
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) | string | `null` | Color applied to the series. Accepts a CSS color or a gradient reference. |
+| [`opacity`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#opacity) | number | `1` | Transparency of the fill (0 to 1). |
+| [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#border) | [`BorderModel`](https://ej2.syncfusion.com/react/documentation/api/chart/bordermodel) | `null` | Border settings: `width`, `color`, and `dashArray`. |
 
-The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property determines the color applied to the series.
+**Solid fill**
+
+The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) property determines the color applied to the series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,8 +86,10 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs" %}
 
-The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the 100% stacked area series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
- 
+**Gradient fill**
+
+The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) property can be set to a CSS gradient reference such as `url(#gradient)` to apply a gradient color that transitions across the series. Define the gradient in an SVG `<defs>` block and reference it from the `fill` prop.
+
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/chart/code-path/series/100-stackedarea-cs1/app/index.jsx %}
@@ -101,7 +109,7 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 **Opacity**
 
-The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
+The [`opacity`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#opacity) property controls the transparency of the fill (0 to 1) and affects how the series blends with background or overlapping series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -122,7 +130,7 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 **Border**
 
-Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#border) property to configure the border width, color, and dasharray of the 100 % stacked area series.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#border) property to configure the border `width`, `color`, and `dashArray` of the 100% stacked area series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -143,11 +151,11 @@ Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `undefined` values are considered empty. By default (`mode: 'Gap'`), empty points leave a gap in the stack; the `mode` property on `emptyPointSettings` lets you change how they are handled. When the total at a point is `0`, all series for that point are omitted.
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -168,7 +176,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -189,7 +197,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -212,7 +220,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered and lets you modify series properties such as `data`, `fill`, or `name`. For a 100% stacked area series, use it to vary per-series fill or to swap data sources between renders.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -233,7 +241,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires before each data point is drawn, letting you customize per-point marker shape, border, or fill. For a 100% stacked area series, use it to highlight specific points or apply conditional formatting based on percentage values.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -252,7 +260,9 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/100-stackedarea-cs8" %}
 
-## See Also
+## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
+* [Axis customization](../axis-customization)
+* [Legend](../legend)

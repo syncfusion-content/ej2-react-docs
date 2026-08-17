@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 ## Polar Chart
 
-To render a [polar](https://www.syncfusion.com/react-components/react-charts/chart-types/polar-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+Follow these steps to render a [polar](https://www.syncfusion.com/react-components/react-charts/chart-types/polar-chart) series, which plots data points on a circular graph.
 
-1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `Polar` in your chart configuration. This indicates that the data should be represented as a polar chart, which is ideal for plotting data points on a circular graph.
+1. **Set the series type**: Set the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#type) to `Polar` in the series configuration.
 
-2. **Inject the PolarSeries module**: Inject `PolarSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering polar series are available in your chart.
+2. **Inject the PolarSeries module**: Add `PolarSeries` to the `services` array of the `Inject` component inside `ChartComponent`. This registers the functionality required to render a polar series.
 
 To get start quickly with React Polar and Radar Charts, you can check on this video:
 
@@ -41,7 +41,7 @@ To get start quickly with React Polar and Radar Charts, you can check on this vi
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#yname) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#yname) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,19 +60,15 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs1" %}
 
-## Draw Types
+## Draw type
 
-Use the [`drawType`](../../api/chart/series#drawtype) property to change the series plotting type in a Polar chart to line, column, area, range column, spline, scatter, stacking area, spline area, or stacking column. The default value of `drawType` is `Line`.
+Use the [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) property to change the series plotting type in a polar chart to `Line`, `Spline`, `Area`, `StackingArea`, `Column`, `StackingColumn`, `RangeColumn`, `Scatter`, or `SplineArea`. The default value of `drawType` is `Line`. Each subsection below shows the `drawType` value to set and the additional module to inject alongside `PolarSeries`.
 
 ### Line
 
-To render a line draw type, you need to follow a few steps to configure it correctly.
+Set the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) to `Line` and inject `LineSeries` alongside `PolarSeries`. The lines connect each data point around the polar axis.
 
-1. **Set the Series Type**: Define the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#drawtype) as `Line` in your chart configuration. This indicates that the data should be represented as a polar line chart, with lines connecting each data point.
-
-2. **Inject the LineSeries Module**: Inject `LineSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering polar line series are available in your chart.
-
-The [`isClosed`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#isclosed) property specifies whether to join the start and end points of a line series used in a polar chart to form a closed path. The default value of `isClosed` is **true**.
+The [`isClosed`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#isclosed) property specifies whether to join the start and end points of a line series used in a polar chart to form a closed path. The default value of `isClosed` is `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -93,11 +89,7 @@ The [`isClosed`](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 ### Spline
 
-To render a spline draw type, you need to follow a few steps to configure it correctly.
-
-1. **Set the Series Type**: Define the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#drawtype) as `Spline` in your chart configuration. This indicates that the data should be represented as a polar spline chart, with smooth, curved lines connecting each data point.
-
-2. **Inject the SplineSeries Module**: Inject `SplineSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering polar spline series are available in your chart.
+Set the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) to `Spline` and inject `SplineSeries` alongside `PolarSeries`. Smooth, curved lines connect each data point. The `isClosed` property is also applicable to this type.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -118,11 +110,7 @@ To render a spline draw type, you need to follow a few steps to configure it cor
 
 ### Area
 
-To render an area draw type, you need to follow a few steps to configure it correctly.
-
-1. **Set the Series Type**: Define the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#drawtype) as `Area` in your chart configuration. This indicates that the data should be represented as a polar area chart, with filled areas below the lines connecting each data point.
-
-2. **Inject the AreaSeries Module**: Inject `AreaSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering polar area series are available in your chart.
+Set the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) to `Area` and inject `AreaSeries` alongside `PolarSeries`. The area beneath the line is filled with color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -141,13 +129,9 @@ To render an area draw type, you need to follow a few steps to configure it corr
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs3" %}
 
-### Stacked Area
+### Stacked area
 
-To render a stacked area draw type, you need to follow a few steps to configure it correctly.
-
-1. **Set the Series Type**: Define the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#drawtype) as `StackingArea` in your chart configuration. This indicates that the data should be represented as a polar stacked area chart, with areas stacked on top of each other, displaying the cumulative value of multiple series.
-
-2. **Inject the StackingAreaSeries Module**: Inject `StackingAreaSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering polar stacked area series are available in your chart.
+Set the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) to `StackingArea` and inject `StackingAreaSeries` alongside `PolarSeries`. Areas are stacked on top of each other to display the cumulative value of multiple series; add at least two series to see the stacking effect.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -168,11 +152,7 @@ To render a stacked area draw type, you need to follow a few steps to configure 
 
 ### Column
 
-To render a column draw type, you need to follow a few steps to configure it correctly.
-
-1. **Set the Series Type**: Define the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#drawtype) as `Column` in your chart configuration. This indicates that the data should be represented as a polar column chart, allowing for the comparison of values across categories.
-
-2. **Inject the ColumnSeries Module**: Inject `ColumnSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering polar column series are available in your chart.
+Set the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) to `Column` and inject `ColumnSeries` alongside `PolarSeries`. Polar columns let you compare values across categories.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -191,13 +171,9 @@ To render a column draw type, you need to follow a few steps to configure it cor
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs5" %}
 
-### Stacked Column
+### Stacked column
 
-To render a stacked column draw type, you need to follow a few steps to configure it correctly.
-
-1. **Set the Series Type**: Define the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#drawtype) as `StackingColumn` in your chart configuration. This indicates that the data should be represented as a polar stacked column chart, with each column consisting of multiple segments stacked on top of each other.
-
-2. **Inject the StackingColumnSeries Module**: Inject `StackingColumnSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering polar stacked column series are available in your chart.
+Set the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) to `StackingColumn` and inject `StackingColumnSeries` alongside `PolarSeries`. Each column is composed of multiple segments stacked on top of each other; add at least two series to see the stacking effect.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -216,13 +192,9 @@ To render a stacked column draw type, you need to follow a few steps to configur
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs6" %}
 
-### Range Column
+### Range column
 
-To render a range column draw type, you need to follow a few steps to configure it correctly.
-
-1. **Set the Series Type**: Define the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#drawtype) as `RangeColumn` in your chart configuration. This indicates that the data should be represented as a polar range column chart, where each column spans a range of values.
-
-2. **Inject the RangeColumnSeries Module**: Inject `RangeColumnSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering polar range column series are available in your chart.
+Set the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) to `RangeColumn` and inject `RangeColumnSeries` alongside `PolarSeries`. Each column spans a range of values, requiring `high` and `low` data fields.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -243,11 +215,7 @@ To render a range column draw type, you need to follow a few steps to configure 
 
 ### Scatter
 
-To render a scatter draw type, you need to follow a few steps to configure it correctly.
-
-1. **Set the Series Type**: Define the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#drawtype) as `Scatter` in your chart configuration. This indicates that the data should be represented as a polar scatter chart.
-
-2. **Inject the ScatterSeries Module**: Inject `ScatterSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering polar scatter series are available in your chart.
+Set the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) to `Scatter` and inject `ScatterSeries` alongside `PolarSeries`. Data points are rendered as markers without connecting lines.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -268,11 +236,7 @@ To render a scatter draw type, you need to follow a few steps to configure it co
 
 ### Spline area
 
-To render an spline area draw type, you need to follow a few steps to configure it correctly.
-
-1. **Set the Series Type**: Define the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#drawtype) as `SplineArea` in your chart configuration. This indicates that the data should be represented as a polar spline area chart, where the series is drawn with smooth, curved lines connecting each data point, and the area beneath the line is filled with color.
-
-2. **Inject the SplineAreaSeries Module**: inject `SplineAreaSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering polar spline area series are available in your chart.
+Set the series [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) to `SplineArea` and inject `SplineAreaSeries` alongside `PolarSeries`. Smooth, curved lines connect each data point and the area beneath the line is filled with color.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -293,9 +257,11 @@ To render an spline area draw type, you need to follow a few steps to configure 
 
 ## Series customization
 
-### Start Angle
+Customize the polar chart's geometry with the following properties on the chart's primary X axis.
 
-You can customize the start angle of the polar series using [`startAngle`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#startangle) property. By default, `startAngle` is 0 degree.
+### Start angle
+
+Configure the [`startAngle`](https://ej2.syncfusion.com/react/documentation/api/chart/axismodel#startangle) on the chart's primary X axis to rotate the polar plot. By default, `startAngle` is 0 degrees.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -316,7 +282,7 @@ You can customize the start angle of the polar series using [`startAngle`](https
 
 ### Radius
 
-You can customize the radius of the polar series using [`coefficient`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#coefficient) property. By default, `coefficient` is 100.
+Configure the [`coefficient`](https://ej2.syncfusion.com/react/documentation/api/chart/axismodel#coefficient) on the chart's primary X axis to scale the polar radius. The value ranges from 0 to 100, where 100 fills the available chart area.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -337,11 +303,11 @@ You can customize the radius of the polar series using [`coefficient`](https://e
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `undefined` values are considered empty. By default (`mode: 'Gap'`), empty points leave a gap in the series; the `mode` property lets you change how they are handled.
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#coefficient) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -362,7 +328,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/axisMo
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -383,7 +349,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -406,7 +372,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered and lets you modify series properties such as data, fill, or name. For a polar series, use it to change a polygon color or swap data sources on the fly.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -427,7 +393,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires before each data point is drawn, letting you customize per-point marker shape, border, or fill. For a polar series, use it to apply conditional formatting to each vertex of the polygon.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -446,7 +412,9 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs17" %}
 
-## See Also
+## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
+* [Axis customization](../axis-customization)
+* [Legend](../legend)

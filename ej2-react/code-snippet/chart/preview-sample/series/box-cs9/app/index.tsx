@@ -2,15 +2,16 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-         BoxAndWhiskerSeries, Category, ISeriesRenderEventArgs}
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel, ISeriesRenderEventArgs } from "@syncfusion/ej2-react-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
+         BoxAndWhiskerSeries, Category }
 from'@syncfusion/ej2-react-charts';
-import { EmitType } from '@syncfusion/ej2-base';
+import type { EmitType } from '@syncfusion/ej2-base';
 import { data } from './datasource';
 
 function App() {
-  const primaryxAxis: AxisModel = { valueType: 'Category', majorGridLines: { width: 0 }, };
+  const primaryxAxis: AxisModel = { valueType: 'Category', majorGridLines: { width: 0 } };
   const primaryyAxis: AxisModel = { minimum: 10, maximum: 60, interval: 10, majorGridLines: { width: 0 }, majorTickLines: { width: 0 } };
   const marker = { visible: true };
   const seriesRender: EmitType<ISeriesRenderEventArgs> = (args: ISeriesRenderEventArgs): void => {
@@ -18,7 +19,7 @@ function App() {
   };
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}
-      primaryYAxis={primaryxAxis}
+      primaryYAxis={primaryyAxis}
       title='Employee Age Group in Various Department' seriesRender={seriesRender}>
       <Inject services={[Category, BoxAndWhiskerSeries]} />
       <SeriesCollectionDirective>
@@ -30,7 +31,8 @@ function App() {
   
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 
 

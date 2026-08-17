@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 ## Histogram Series
 
-To render a [histogram](https://www.syncfusion.com/react-components/react-charts/chart-types/histogram-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+Follow these steps to render a [histogram](https://www.syncfusion.com/react-components/react-charts/chart-types/histogram-chart) series, which displays the distribution of large datasets by automatically grouping values into bins.
 
-1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `Histogram` in your chart configuration. This indicates that the data should be represented as a histogram chart, providing a visual display of large amounts of data that are difficult to understand in a tabular or spreadsheet format.
+1. **Set the series type**: Set the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#type) to `Histogram` in the series configuration.
 
-2. **Inject the HistogramSeries module**: Inject `HistogramSeries`  module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering histogram series are available in your chart.
+2. **Inject the HistogramSeries module**: Add `HistogramSeries` to the `services` array of the `Inject` component inside `ChartComponent`. This registers the functionality required to render a histogram series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -39,7 +39,7 @@ To render a [histogram](https://www.syncfusion.com/react-components/react-charts
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered and lets you modify series properties such as data, fill, or name. Use it to change a series color or to swap its data source on the fly.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,7 +60,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires before each data point is drawn, letting you customize per-point marker shape, border, or fill. Use it to apply conditional formatting based on the point's value.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,7 +79,21 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/waterfall-cs7" %}
 
-## See Also
+## Histogram-specific properties
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+The histogram series supports the following properties in addition to the standard series options:
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| [`binInterval`](https://ej2.syncfusion.com/react/documentation/api/chart/series#bininterval) | number | `null` | Width of each bin along the x-axis. When omitted, the chart calculates an interval automatically based on the data range. |
+| [`showNormalDistribution`](https://ej2.syncfusion.com/react/documentation/api/chart/series#shownormaldistribution) | boolean | `false` | When `true`, overlays a normal distribution curve on the bins. |
+| [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/series#columnwidth) | number | `null` (histogram default `1`) | Width of each bin column as a ratio of the bin interval. Use values close to `1` so adjacent bins touch. |
+
+Provide the data as a flat array of numeric values and map only `yName` (for example, `yName='y'`); do not set `xName`.
+
+## See also
+
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
+* [Axis customization](../axis-customization)
+* [Legend](../legend)

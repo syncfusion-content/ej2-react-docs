@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Installing React Components Using Web Installer | Syncfusion
+title: Install React Web Installer | Syncfusion
 description: Step-by-step guide to installing Syncfusion React (JavaScript - EJ2) components using the web installer, including installation and uninstallation procedures.
-control: Installation using web installer 
+control: Installation using web installer
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installing React (JavaScript - EJ2) components using web installer
+# Install Syncfusion® React Web Installer
 
 ## Overview
 

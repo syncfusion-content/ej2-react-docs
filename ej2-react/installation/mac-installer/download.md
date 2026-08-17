@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Download Mac Installer for React Components | Syncfusion
+title: Download React Mac Installer | Syncfusion
 description: Learn how to download the Syncfusion React (JavaScript) Mac installer for trial and licensed versions.
-control: Download 
+control: Download
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download Syncfusion<sup style="font-size:70%">&reg;</sup> React Mac Installer
+# Download Syncfusion® React Mac Installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) Mac installer can be downloaded from the Syncfusion<sup style="font-size:70%">&reg;</sup> website. Depending on your license type, you can download either the licensed installer or the trial installer.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: State persistence in React Common control | Syncfusion
+title: State Persistence in React Components | Syncfusion
 description: Learn about state persistence for Syncfusion React components (localStorage-based persistence and `enablePersistence`).
 control: common
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# State Persistence in Syncfusion<sup style="font-size:70%">&reg;</sup> React components
+# State Persistence in Syncfusion® React Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components support persisting their state across page refreshes and navigation events. Enable this behavior by setting the `enablePersistence` property to `true` on the desired component instance. When enabled, the component serializes supported state to the browser's `localStorage` during the page unload lifecycle (for example, the `beforeunload` or `unload` events) and restores it when the component initializes. Persisted keys are namespaced by component and instance. To reset persisted state, remove the corresponding key from `localStorage` or set the `enablePersistence` property to `false` to disable persistence. For example, persistence can be enabled for the Grid component as shown below:
 

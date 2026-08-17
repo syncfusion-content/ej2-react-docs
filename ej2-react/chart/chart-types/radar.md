@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 ## Radar
 
-To render a [radar](https://www.syncfusion.com/react-components/react-charts/chart-types/radar-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+Follow these steps to render a [radar](https://www.syncfusion.com/react-components/react-charts/chart-types/radar-chart) series, which plots data points on a circular grid.
 
-1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `Radar` in your chart configuration. This indicates that the data should be represented as a radar chart, which is ideal for plotting data points on a circular grid.
+1. **Set the series type**: Set the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#type) to `Radar` in the series configuration.
 
-2. **Inject the RadarSeries module**: Inject `RadarSeries` module into services. This step is essential, as it ensures that the necessary functionalities for rendering radar series are available in your chart.
+2. **Inject the RadarSeries module**: Add `RadarSeries` to the `services` array of the `Inject` component inside `ChartComponent`. This registers the functionality required to render a radar series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,9 +35,9 @@ To render a [radar](https://www.syncfusion.com/react-components/react-charts/cha
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/polar-cs9" %}
 
-### Draw Type
+## Draw type
 
-Similar to the polar chart, use the [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#drawtype) property to change the series plotting type in a Radar chart to line, column, area, range column, spline, scatter, stacking area, spline area, or stacking column. The default value of `drawType` is `Line`.
+Use the [`drawType`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#drawtype) property to change the series plotting type in a radar chart to `Line`, `Column`, `Area`, `RangeColumn`, `Spline`, `Scatter`, `StackingColumn`, `StackingArea`, or `SplineArea`. The default value of `drawType` is `Line`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -58,7 +58,7 @@ Similar to the polar chart, use the [`drawType`](https://ej2.syncfusion.com/reac
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#yname) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#yname) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,9 +79,9 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 ## Series customization
 
-### Start Angle
+### Start angle
 
-You can customize the start angle of the radar series using [`startAngle`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#startangle) property. By default, `startAngle` is 0 degree.
+Configure the [`startAngle`](https://ej2.syncfusion.com/react/documentation/api/chart/axismodel#startangle) on the chart's primary X axis to rotate the radar. By default, `startAngle` is 0 degrees.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -102,7 +102,7 @@ You can customize the start angle of the radar series using [`startAngle`](https
 
 ### Radius
 
-You can customize the radius of the radar series using [`coefficient`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#coefficient) property. By default, `coefficient` is 100.
+Configure the [`coefficient`](https://ej2.syncfusion.com/react/documentation/api/chart/axismodel#coefficient) on the chart's primary X axis to scale the radar radius. The value ranges from 0 to 100, where 100 fills the available chart area.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -127,7 +127,7 @@ Data points with `null` or `undefined` values are considered empty. Empty data p
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#mode     ) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -148,7 +148,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -169,7 +169,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -192,7 +192,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered and lets you modify series properties such as data, fill, or name. For a radar series, use it to change a polygon color or swap data sources on the fly.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -213,8 +213,8 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
-
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires before each data point is drawn, letting you customize per-point marker shape, border, or fill. For a radar series, use it to apply conditional formatting to each vertex of the polygon.
+ 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/chart/code-path/series/polar-cs22/app/index.jsx %}
@@ -234,5 +234,7 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 ## See Also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
+* [Axis customization](../axis-customization)
+* [Legend](../legend)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with React Mention | Syncfusion
-description: Learn how to set up the Syncfusion React Mention in a Vite project: install packages, import styles, and bind a data source.
+description: Learn how to set up the Syncfusion React Mention in a Vite project by installing packages, importing styles, and binding a data source.
 control: Mention
 platform: ej2-react
 documentation: ug

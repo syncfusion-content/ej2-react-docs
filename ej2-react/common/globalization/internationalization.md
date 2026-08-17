@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Internationalization for Syncfusion React Components
+title: Internationalization in React Components | Syncfusion
 description: Learn how to implement internationalization in Syncfusion React components using CLDR data to format and parse dates, numbers, and currencies across different cultures and locales.
 control: common
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Internationalization
+# Internationalization in Syncfusion® React Components
 
 The Internationalization library enables formatting and parsing of date and number values according to culture-specific rules using official [Unicode CLDR](https://cldr.unicode.org/) JSON data. The default culture is `en-US` and the default currency code is `USD` for all Syncfusion<sup style="font-size:70%">&reg;</sup> React UI Components.
 

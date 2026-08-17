@@ -7,12 +7,11 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
 # Vertical Chart in React Chart
 
 ## Vertical
 
-To draw a chart in a vertical manner, change the orientation of the axis using the [`isTransposed`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#istransposed) property, which is supported by all series types.
+To render a chart in a vertical orientation, set the [`isTransposed`](https://ej2.syncfusion.com/react/documentation/api/chart/chartmodel#istransposed) property to `true`. This swaps the X and Y axes so categorical values appear on the Y axis and numeric values on the X axis. The setting is supported by all series types.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,7 +32,7 @@ To draw a chart in a vertical manner, change the orientation of the axis using t
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#yname) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#xname) and [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#yname) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -55,11 +54,11 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `undefined` values are considered empty. By default (`mode: 'Gap'`), empty points leave a gap in the series; the `mode` property on `emptyPointSettings` lets you change how they are handled.
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -80,7 +79,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -101,7 +100,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -124,7 +123,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 ### Series render
 
-The [`seriesRender`]([../../api/chart#seriesrender](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs)) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered and lets you modify series properties such as `data`, `fill`, or `name`. For a vertical chart, use it to vary per-series fill or to swap data sources between renders.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -145,7 +144,7 @@ The [`seriesRender`]([../../api/chart#seriesrender](https://ej2.syncfusion.com/r
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires before each data point is drawn, letting you customize per-point marker shape, border, or fill. For a vertical chart, use it to highlight specific points or apply conditional formatting.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -164,7 +163,9 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/vertical-cs4" %}
 
-## See Also
+## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
+* [Axis customization](../axis-customization)
+* [Legend](../legend)

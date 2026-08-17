@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, BarSeries, DataLabel } from '@syncfusion/ej2-react-charts';
 import { data1, data2, data3, data4, data5, data6 } from './datasource';
 
@@ -64,4 +64,5 @@ function App() {
 }
 ;
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);

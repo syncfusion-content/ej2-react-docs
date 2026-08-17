@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Download Web Installer for React Components | Syncfusion
+title: Download React Web Installer | Syncfusion
 description: Learn how to download the Syncfusion React (JavaScript - EJ2) web installer for both trial and licensed versions.
-control: Download 
+control: Download
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download React (JavaScript - EJ2) Web Installer
+# Download Syncfusion® React Web Installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 web installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/react-ui-components) website. Depending on your license type, you can download either the licensed installer or the trial installer.
 

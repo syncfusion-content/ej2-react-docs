@@ -1,8 +1,8 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Category, BarSeries } from '@syncfusion/ej2-react-charts';
+import * as ReactDOM from "react-dom/client";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, BarSeries } from '@syncfusion/ej2-react-charts';
 import { customData } from './datasource';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     primaryXAxis={primaryxAxis}
     primaryYAxis={primaryyAxis}
     title='Unemployment rate (%)'>
-    <Inject services={[BarSeries, Category]} />
+    <Inject services={[BarSeries]} />
     <SeriesCollectionDirective>
       <SeriesDirective dataSource={customData} xName='x' yName='y' type='Bar' border={border}>
       </SeriesDirective>
@@ -24,6 +24,7 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);
 
 

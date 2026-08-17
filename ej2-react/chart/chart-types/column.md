@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 To render a [column](https://www.syncfusion.com/javascript-ui-controls/js-charts/chart-types/column-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 
-1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `Column` in your chart configuration. This indicates that the data should be represented as a column chart, which is ideal for visualizing for comparing different categories of data or tracking changes over time.
+1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/series#type) as `Column` in your chart configuration. This indicates that the data should be represented as a column chart, which is ideal for comparing different categories of data or tracking changes over time.
 
 2. **Inject the ColumnSeries module**: Inject `ColumnSeries` module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering column series are available in your chart.
 
@@ -58,9 +58,9 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 ## Series customization
 
-The following properties can be used to customize the `column` series.
+Use the following properties to customize the appearance of a `column` series.
 
-**Fill**
+**Solid fill**
 
 The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property determines the color applied to the series.
 
@@ -81,7 +81,9 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs25" %}
 
-The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the column series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+**Gradient fill**
+
+The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/series#fill) property can be used to apply a gradient color to the column series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -102,7 +104,7 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 **Opacity**
 
-The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
+The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/series#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -123,7 +125,7 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 **Border**
 
-Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#border) property to configure the border width, color, and dasharray of the column series.
+Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series#border) property to configure the width, color, and dasharray of the column borders.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -142,11 +144,11 @@ Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs66" %}
 
-## Column space and width
+## Column spacing and width
 
-### Column space
+### Column spacing
 
-Use the [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnspacing) property in the series to adjust the space between columns.
+Use the [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/chart/series#columnspacing) property in the series to adjust the space between columns. Accepts a value from `0` to `1`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -165,10 +167,9 @@ Use the [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs38" %}
 
-
 ### Column width
 
-Use the [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnwidth) property in the series to adjust the width of the columns.
+Use the [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/series#columnwidth) property in the series to adjust the width of the columns. Accepts a value from `0` to `1`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -189,7 +190,7 @@ Use the [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/chart
 
 ### Column width in pixel
 
-Use the [`columnWidthInPixel`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnwidthinpixel) property in the series to define the exact width of the columns in pixels. This property ensures that each column maintains the specified width, providing a uniform appearance throughout the chart.
+Use the [`columnWidthInPixel`](https://ej2.syncfusion.com/react/documentation/api/chart/series#columnwidthinpixel) property in the series to define the exact width of the columns in pixels. This property ensures that each column maintains the specified width, providing a uniform appearance throughout the chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -208,9 +209,9 @@ Use the [`columnWidthInPixel`](https://ej2.syncfusion.com/react/documentation/ap
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs38B" %}
 
-## Grouped column
+## Grouped columns
 
-Use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#groupname) property to group the data points in column type charts. Data points with the same group name will be grouped together in the chart, making it easy to compare different sets of data.
+Use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/chart/series#groupname) property to group the data points in column type charts. Data points with the same group name will be grouped together in the chart, making it easy to compare different sets of data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -231,7 +232,7 @@ Use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/chart/s
 
 ## Cylindrical column chart
 
-To render a cylindrical column chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnfacet) property to `Cylinder` in the chart series. This property transforms the regular columns into cylindrical shapes, enhancing the visual representation of the data.
+To render a cylindrical column chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/series#columnfacet) property to `Cylinder` in the chart series. This property transforms the regular columns into cylindrical shapes, enhancing the visual representation of the data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -252,11 +253,11 @@ To render a cylindrical column chart, set the [`columnFacet`](https://ej2.syncfu
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `undefined` values are considered empty. By default (`Gap` mode) empty data points are skipped and leave a gap on the chart; the `mode` and `fill` properties of `emptyPointSettings` let you override this behavior.
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyPointSettingsModel#mode) property to control handling of empty points. Available modes are `Gap` (leave a break, the default), `Drop` (ignores the empty point during rendering), `Zero` (plot as zero), and `Average` (plot as the average of neighboring points).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -277,7 +278,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -298,7 +299,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -319,7 +320,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 ## Corner radius
 
-The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/series#cornerradius) property in the chart series is used to customize the corner radius for bar series. This allows you to create bars with rounded corners, giving your chart a more polished appearance. You can customize each corner of the bars using the topLeft, topRight, bottomLeft, and bottomRight properties.
+The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/series#cornerradius) property in the chart series is used to customize the corner radius for column series. This allows you to create columns with rounded corners, giving your chart a more polished appearance. You can customize each corner of the columns using the `topLeft`, `topRight`, `bottomLeft`, and `bottomRight` properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -384,7 +385,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, border or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -406,5 +407,5 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 ## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)

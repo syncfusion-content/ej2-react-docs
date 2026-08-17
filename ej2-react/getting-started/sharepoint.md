@@ -1,14 +1,14 @@
 ---
 layout: post
 title: React getting started with SharePoint | Syncfusion
-description: Learn all about integrating Syncfusion Essential JS 2 React UI components in SharePoint, and much more, here.
-control: SharePoint 
+description: Set up a SharePoint Framework (SPFx) project and integrate Syncfusion React UI components, including the Grid with Tailwind 3 theme and CDN theming.
+control: SharePoint
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React UI Components in the SharePoint Framework
+# Getting Started with Syncfusion® React Components in SharePoint
 
 This article provides a step-by-step guide for setting up a [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 

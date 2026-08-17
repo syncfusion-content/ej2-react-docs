@@ -2,8 +2,9 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel } from "@syncfusion/ej2-react-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          BubbleSeries}
 from'@syncfusion/ej2-react-charts';
 import { data } from './datasource';
@@ -25,6 +26,7 @@ const primaryyAxis: AxisModel= { title: 'GDP growth rate', minimum: -2, maximum:
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 {% endraw %}

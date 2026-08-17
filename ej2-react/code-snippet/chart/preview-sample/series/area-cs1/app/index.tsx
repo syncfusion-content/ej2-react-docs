@@ -1,10 +1,10 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel } from "@syncfusion/ej2-react-charts";
 import {
-  AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-  Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, AreaSeries, Selection
+  ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AreaSeries
 }
   from '@syncfusion/ej2-react-charts';
 import { data } from './datasource';
@@ -21,7 +21,7 @@ function App() {
     primaryXAxis={primaryxAxis}
     primaryYAxis={primaryyAxis}
     title='Average Sales Comparison'>
-    <Inject services={[AreaSeries, Legend, Tooltip, DataLabel, Category]} />
+    <Inject services={[AreaSeries]} />
     <SeriesCollectionDirective>
       <SeriesDirective dataSource={data} xName='x' yName='y' name='Product A' fill='#69D2E7'
         opacity={0.6} type='Area'>
@@ -31,6 +31,7 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 

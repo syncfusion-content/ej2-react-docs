@@ -1,14 +1,14 @@
 ---
 layout: post
 title: React getting started with Gatsby | Syncfusion
-description: Check out and learn about how to create an application with Syncfusion React UI components in Gatsby framework.
+description: Create a Gatsby static site and integrate Syncfusion React UI components, including the Grid with Tailwind 3 theme and bundler-based styling.
 control: Gatsby
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion® React Components in a Gatsby
+# Getting Started with Syncfusion® React Components in Gatsby
 
 This article provides a step-by-step guide for creating a [Gatsby](https://www.gatsbyjs.com) application and integrating Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components.
 

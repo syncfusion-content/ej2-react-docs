@@ -10,13 +10,34 @@ domainurl: ##DomainURL##
 
 # How to prevent data labels in React Chart
 
-To prevent the chart data label when the data value is 0, follow the given steps:
+To stop a data label from rendering when its point's value is `0`, hook the [`textRender`](https://ej2.syncfusion.com/react/documentation/api/chart#textrender) callback on the chart and set `args.cancel`. The callback fires for every data label; gate the cancel on a check of `args.text` and `args.point.y` so only the zero values are filtered.
 
-**Step 1**:
+## Cancel the label
 
-Get the point value and check whether the `args.point.y` value is zero or not by using the [`textRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#textrender) event. If the value is zero, then set the `args.cancel` to true.
+The `textRender` callback receives an `args` object with two relevant fields:
 
-The output will appear as follows,
+| Field | Meaning |
+| --- | --- |
+| `args.text` | The formatted label string (for example, `'0'`, `'0.0'`, `'-0'`). |
+| `args.point.y` | The numeric value of the point. |
+
+The example gates the cancel on both fields — first it checks that the formatted text is `'0'`, then it sets `args.cancel` to a boolean expression that re-checks the underlying numeric value:
+
+```
+const textRender = (args) => {
+    if (args.text === '0') {
+        args.cancel = args.point.y === 0;
+    }
+};
+```
+
+Bind the callback on the `<ChartComponent>`:
+
+```
+<ChartComponent id='charts' textRender={textRender} … >
+```
+
+The two-condition guard is deliberate: the outer `if (args.text === '0')` makes sure the rest of the callback only runs for the labels we care about, and the inner `args.point.y === 0` produces a true `boolean` for `args.cancel` rather than a stringified comparison.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -34,3 +55,14 @@ The output will appear as follows,
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/how-to-cs8" %}
+
+## Troubleshooting
+
+* **"Every data label disappears"** — the `if (args.text === '0')` guard is missing. `textRender` fires for every label; without the guard you are cancelling all of them.
+* **"The zero-value label still appears"** — `args.cancel` is being set to a string (for example, `args.cancel = '0'`) instead of a boolean. Assign a boolean expression: `args.cancel = args.point.y === 0`.
+
+## See also
+
+* [Getting started](../getting-started)
+* [Data label](../data-labels)
+* [Chart annotations](../chart-annotations)

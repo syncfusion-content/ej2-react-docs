@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Installation in React Installation md component | Syncfusion
-description: Learn how to install Syncfusion React packages (Essential JS 2), including SystemJS configuration and a quick-start example.
+title: Installation in React | Syncfusion
+description: Learn how to install Syncfusion React packages, including SystemJS configuration and a quick-start example.
 control: Installation 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installation
+# Installation of Syncfusion® React Packages
 
 ## Installing the package
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Individual Components Script Dependency | Syncfusion
+title: Script Dependency for React Components | Syncfusion
 description: Learn about the script dependencies for each Syncfusion React component, including CDN links and required NPM package references.
 control: common
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Individual Components Script Dependency
+# Script Dependencies for Individual Components
 
 When using `Webpack externals`, it is important to specify the correct script reference order and dependencies. Syncfusion<sup style="font-size:70%">&reg;</sup> React components have specific dependencies, which may include other Syncfusion<sup style="font-size:70%">&reg;</sup> packages.
 

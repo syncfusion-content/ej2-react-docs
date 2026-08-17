@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rendering Engine of Syncfusion React Components | Syncfusion
+title: Rendering Engine in React Components | Syncfusion
 description: Learn about the rendering engine architecture of Syncfusion React components and how they integrate with React's virtual DOM.
 control: common
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rendering Engine of Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Rendering Engine of Syncfusion® React Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React components function as wrapper components that encapsulate the underlying JavaScript implementation. These components render their user interfaces using an internal JavaScript-based rendering system, where all component features and functionalities are implemented in JavaScript. This architecture enables efficient component development and execution.
 

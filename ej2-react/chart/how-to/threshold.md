@@ -10,13 +10,41 @@ domainurl: ##DomainURL##
 
 # How to add a threshold line in React Chart
 
-You can mark a threshold in chart by using the `stripline`.
+To mark a horizontal reference value on the chart, set the `stripLines` array on the y-axis config. Each entry draws a band between `start` and `end`; a narrow band (a fraction of a unit) reads as a single line, while a wider band highlights a region.
 
-To mark a threshold in chart, follow the given steps:
+You also need to register `StripLine` in the chart's `<Inject services={[…]}>>` array; without it the `stripLines` array has no visible effect.
 
-**Step 1**:
+## Add the strip line
 
-By using the start and end properties of `striplines` object in vertical axis, you can mark the threshold for y values of the series.
+`stripLines` lives on the y-axis config. Each entry accepts the following properties:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `start` | number | The starting y value of the band. |
+| `end` | number | The ending y value of the band. |
+| `color` | string | The fill color of the band. Accepts a CSS color. |
+| `visible` | boolean | Whether the strip line is drawn. Defaults to `true`. |
+| `dashArray` | string | Stroke pattern; pass a value like `'4 2'` for a dashed line. |
+| `size` | number | The band height (overrides the `end - start` range when set). |
+
+The example draws a thin red line at `y = 15` by setting `start` and `end` 0.1 apart:
+
+```
+const primaryyAxis = {
+    title: 'Runs',
+    stripLines: [
+        { start: 15, end: 15.1, color: '#ff512f', visible: true }
+    ]
+};
+```
+
+Pass the config to the chart:
+
+```
+<ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} ... >
+```
+
+The complete example below wires the `stripLines` array on the y-axis config to a thin red line at `y = 15`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -34,3 +62,16 @@ By using the start and end properties of `striplines` object in vertical axis, y
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/how-to-cs11" %}
+
+## Troubleshooting
+
+* **"The threshold line does not appear"** — `StripLine` is missing from the chart's `<Inject services={[…]}>>` array, or the `stripLines` array is not on the y-axis config.
+* **"The band is too thick to read as a line"** — increase the gap between `start` and `end`. The example uses `0.1`; raise it to `0.5` or `1` if your y-axis range is wider.
+* **"The line is hidden behind the series"** — the `color` is the same as the line series' fill. Pick a contrasting color (the example uses red `#ff512f`).
+* **"The line is positioned wrong"** — the value passed to `start` and `end` is on the y-axis scale, not the data range. Make sure the threshold value falls inside `primaryYAxis.minimum` and `primaryYAxis.maximum`.
+
+## See also
+
+* [Getting started](../getting-started)
+* [Strip line](../strip-line)
+* [Chart annotations](../chart-annotations)

@@ -1,9 +1,9 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-         Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, AreaSeries,  Selection}
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel } from "@syncfusion/ej2-react-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AreaSeries }
 from'@syncfusion/ej2-react-charts';
 import { areaData } from './datasource';
 
@@ -14,13 +14,12 @@ function App() {
     edgeLabelPlacement: 'Shift'
   };
   const primaryyAxis: AxisModel = { minimum: 2, maximum: 5, interval: 0.5, title: 'Sales Amount in Millions' };
-  const border = { color: 'red', width: 2 };
 
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}
       primaryYAxis={primaryyAxis}
       title='Average Sales Comparison'>
-      <Inject services={[AreaSeries, Legend, Tooltip, DataLabel, Category]} />
+      <Inject services={[AreaSeries]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={areaData} xName='x' yName='y' name='Product A'
           fill='green' type='Area'>
@@ -30,6 +29,7 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 

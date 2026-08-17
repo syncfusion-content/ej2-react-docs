@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization Overview
+# Globalization in Syncfusion® React Components
 
 Globalization is the process of designing applications that adapt seamlessly to different cultures, languages, and regional preferences. It combines two essential aspects:
 

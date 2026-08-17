@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization and Translation Support for React Components | Syncfusion
+title: Localization in React Components | Syncfusion
 description: Learn how to localize and translate Syncfusion React components into different languages using the L10n library for multi-language UI support.
 control: common
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization
+# Localization in Syncfusion® React Components
 
 The localization library enables translation of static UI text in Syncfusion React UI Components into different languages. This allows applications to display component text—such as button labels, tooltips, error messages, and placeholders—in languages other than English.
 

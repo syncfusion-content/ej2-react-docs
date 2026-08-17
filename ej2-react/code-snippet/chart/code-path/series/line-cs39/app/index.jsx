@@ -1,8 +1,8 @@
 {% raw %}
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, DataLabel, BarSeries } from '@syncfusion/ej2-react-charts';
+import * as ReactDOM from "react-dom/client";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, BarSeries } from '@syncfusion/ej2-react-charts';
 import { cylindricalData } from './datasource';
 function App() {
     const primaryxAxis = { minimum: 2005, maximum: 2012, interval: 1 };
@@ -13,7 +13,7 @@ function App() {
       title: 'Percentage'
     };
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Unemployment rate in percentage'>
-      <Inject services={[BarSeries, Legend, Tooltip, DataLabel, Category]}/>
+      <Inject services={[BarSeries, Legend]}/>
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={cylindricalData} xName='x' yName='y' name='India' type='Bar' columnFacet='Cylinder'>
         </SeriesDirective>
@@ -22,6 +22,7 @@ function App() {
 }
 ;
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);
 
 {% endraw %}

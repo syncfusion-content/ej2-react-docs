@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Introduction to the Figma UI Kit | Syncfusion
-description: Check out and learn about the Figma UI Kit for Syncfusion React components and how to export design tokens for implementation.
+title: Figma UI Kits in React | Syncfusion
+description: Learn how to use Syncfusion Figma UI kits for React components to align design and code, customize tokens, and export CSS variables for your application.
+control: Figma
 platform: ej2-react
-control: Figma 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Figma UI Kits for Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Figma UI Kits for Syncfusion® React Components
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides [Figma UI kits](https://www.figma.com/@syncfusion) to enable efficient collaboration between designers and developers. The Figma UI kits are available in four themes: [Material 3](https://www.figma.com/community/file/1454123774600129202/syncfusion-ui-kit-material-3-theme), [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-ui-kit-fluent-theme), [Tailwind](https://www.figma.com/community/file/1385969065626384098/syncfusion-ui-kit-tailwind-theme), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272/syncfusion-ui-kit-bootstrap-5-theme). These kits align with the themes implemented in Syncfusion<sup style="font-size:70%">&reg;</sup> React components.
 

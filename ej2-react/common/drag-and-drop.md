@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Drag and drop in React Common control | Syncfusion
+title: Drag and Drop in React Components | Syncfusion
 description: Learn how to enable drag-and-drop interactions in Syncfusion React components using Draggable and Droppable utilities.
 control: common
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and Drop in React
+# Drag and Drop in Syncfusion® React Components
 
 Drag and drop enables users to select one or more items and move them to a different location or onto another interface element by dragging with a mouse, touch, or pen input and releasing at the desired target location.
 

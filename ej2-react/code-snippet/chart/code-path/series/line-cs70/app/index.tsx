@@ -1,11 +1,12 @@
 {% raw %}
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-         Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, ColumnSeries,  Selection, ISeriesRenderEventArgs}
-from'@syncfusion/ej2-react-charts';
-import { EmitType } from '@syncfusion/ej2-base';
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel, ISeriesRenderEventArgs } from "@syncfusion/ej2-react-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
+         Category, ColumnSeries }
+from '@syncfusion/ej2-react-charts';
+import type { EmitType } from '@syncfusion/ej2-base';
 import { columnData } from './datasource';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       primaryYAxis={primaryyAxis}
       title='Olympic Medals'
       seriesRender={seriesRender}>
-      <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Category]} />
+      <Inject services={[ColumnSeries, Category]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={columnData} xName='country' yName='gold' type='Column'>
         </SeriesDirective>
@@ -29,6 +30,7 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 {% endraw %}

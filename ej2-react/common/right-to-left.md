@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Right to Left (RTL) in React Common control | Syncfusion
+title: Right to Left (RTL) in React Components | Syncfusion
 description: Learn how to enable Right-to-Left (RTL) support in Syncfusion React components for languages like Arabic and Hebrew.
 control: common
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right-To-Left Support in Syncfusion<sup style="font-size:70%">&reg;</sup> React Components
+# Right to Left (RTL) in Syncfusion® React Components
 
 Right-to-Left (RTL) support is essential for applications serving users who read and write in languages that flow from right to left, such as Arabic, Hebrew, and Persian. RTL rendering ensures that UI elements, text alignment, and navigation patterns align with the natural reading direction of these languages, providing an intuitive and culturally appropriate user experience.
 

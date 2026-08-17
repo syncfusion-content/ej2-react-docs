@@ -2,7 +2,7 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import {
   ChartComponent,
   SeriesCollectionDirective,
@@ -148,7 +148,8 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 
 {% endraw %}
