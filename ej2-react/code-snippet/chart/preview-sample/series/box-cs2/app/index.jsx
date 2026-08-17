@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, BoxAndWhiskerSeries, Category } from '@syncfusion/ej2-react-charts';
 import { boxData } from './datasource';
 function App() {
@@ -9,11 +9,12 @@ function App() {
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Employee Age Group in Various Department'>
       <Inject services={[Category, BoxAndWhiskerSeries]}/>
       <SeriesCollectionDirective>
-        <SeriesDirective dataSource={boxData} xName='x' yName='y' type='BoxAndWhisker' name='Department' marker={marker}>
+        <SeriesDirective dataSource={boxData} xName='x' yName='y' type='BoxAndWhisker' name='Department' boxPlotMode='Inclusive' marker={marker}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>;
 }
 ;
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts'));
+root.render(<App />);

@@ -13,11 +13,18 @@ domainurl: ##DomainURL##
 
 Trendlines help identify patterns, direction, and overall trends in numerical data. They project the general movement of data values and are widely used in analytics, forecasting, and financial charts. Trendlines can be added to Cartesian series types such as Line, Column, Scatter, Area, Candle, and Hilo (excluding bar series). Multiple trendlines can be added to a single series based on the analysis needs.
 
-Charts support six types of trendlines: **Linear**, **Exponential**, **Logarithmic**, **Polynomial**, **Power**, and **Moving Average**.
+The React Chart component supports six types of trendlines:
+
+* **Linear** - A straight, best-fit line for data with a constant rate of change.
+* **Exponential** - A curved line for data that rises or falls at increasingly higher rates (requires positive y-values).
+* **Logarithmic** - A best-fit curved line for data whose rate of change quickly levels out (supports positive and negative values).
+* **Polynomial** - A curved line that models fluctuating data; degree is controlled by [`polynomialOrder`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#polynomialorder).
+* **Power** - A curved line for datasets where measurements increase at a specific rate (requires positive y-values).
+* **Moving Average** - A smoothed trendline that uses the [`period`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#period) property to control the window size.
 
 ## Linear
 
-A linear trendline is a straight, best‑fit line used to describe data with a constant rate of increase or decrease. Set the trendline [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Linear` and inject the `Trendlines` module using `Chart.Inject(Trendlines)`.
+A linear trendline is a straight, best-fit line used to describe data with a constant rate of change. Set the trendline [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Linear` and inject the `Trendlines` module using `<Inject services={[Trendlines]} />`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,9 +39,9 @@ A linear trendline is a straight, best‑fit line used to describe data with a c
 
 ## Exponential
 
-An exponential trendline displays a curved pattern useful when data rises or falls at increasing rates. Exponential trendlines cannot be generated if the dataset includes zero or negative values.
+An exponential trendline is a curved line that is most useful when data values rise or fall at increasingly higher rates. Exponential trendlines cannot be generated if the dataset contains zero or negative y-values.
 
-Set the trendline [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Exponential` and inject the `Trendlines` module.
+Set the trendline [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Exponential` and inject the `Trendlines` module using `<Inject services={[Trendlines]} />`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -49,9 +56,9 @@ Set the trendline [`type`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 ## Logarithmic
 
-A logarithmic trendline is a best‑fit curved line suitable when the data increases or decreases quickly and then stabilizes. It supports both positive and negative values.
+A logarithmic trendline is a best-fit curved line that is most useful when the rate of change in the data increases or decreases quickly and then levels out. A logarithmic trendline can use positive and/or negative values.
 
-Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Logarithmic` and inject the `Trendlines` module.
+Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Logarithmic` and inject the `Trendlines` module using `<Inject services={[Trendlines]} />`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -66,9 +73,9 @@ Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineM
 
 ## Polynomial
 
-A polynomial trendline is useful when data fluctuates. It uses a curved line that can model more complex datasets.
+A polynomial trendline is a curved line that is used when data fluctuates.
 
-Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Polynomial` and inject the `Trendlines` module. Use [`polynomialOrder`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#polynomialorder) to define the degree of the polynomial.
+Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Polynomial` and inject the `Trendlines` module using `<Inject services={[Trendlines]} />`. Use [`polynomialOrder`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#polynomialorder) to define the degree of the polynomial. Recommended values are `2` to `6`; higher orders risk overfitting and may render slowly on large datasets.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -83,9 +90,9 @@ Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineM
 
 ## Power
 
-A power trendline is ideal for datasets where measurements increase at a constant rate. It displays a curved line that best fits exponential growth or decay patterns.
+A power trendline is a curved line that is best used with data sets that compare measurements that increase at a specific rate. Power trendlines cannot be generated if the dataset contains zero or negative y-values.
 
-Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Power` and inject the `Trendlines` module.
+Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Power` and inject the `Trendlines` module using `<Inject services={[Trendlines]} />`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -106,9 +113,9 @@ Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineM
 
 ## Moving Average
 
-A moving average trendline smooths fluctuations to reveal overall trends more clearly. The [`period`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#period) property specifies the number of data points used to calculate each average.
+A moving average trendline smooths fluctuations in data to show a pattern or trend more clearly. The [`period`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#period) property specifies the number of data points used to calculate each average. Choose a `period` that is at least `2` and less than the total number of data points; the first `period - 1` points will not have a moving-average value rendered.
 
-Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `MovingAverage` and inject the `Trendlines` module.
+Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `MovingAverage` and inject the `Trendlines` module using `<Inject services={[Trendlines]} />`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -121,9 +128,9 @@ Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineM
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs6" %}
 
-**Customization of Trendline**
+## Customization of Trendline
 
-Customize trendline appearance using the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#fill) property for color and the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#width) property for line thickness.
+Customize the trendline appearance using the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#fill) property for color and the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#width) property for line thickness. Use [`dashArray`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#dasharray) to render the trendline as a dashed line.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -138,9 +145,9 @@ Customize trendline appearance using the [`fill`](https://ej2.syncfusion.com/rea
 
 ## Forecasting
 
-Trendline forecasting extends the existing trendline to estimate future and past values.
+Trendline forecasting extends the existing trendline to estimate future and past values. Forecasting is supported for all six trendline types: **Linear**, **Exponential**, **Logarithmic**, **Polynomial**, **Power**, and **Moving Average**. Specify a positive integer for either property to forecast that many data points beyond the chart's actual data range.
 
-## Forward Forecasting
+### Forward Forecasting
 
 Use the [`forwardForecast`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#forwardforecast) property to extend the trendline into the future.
 
@@ -155,7 +162,7 @@ Use the [`forwardForecast`](https://ej2.syncfusion.com/react/documentation/api/c
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs8" %}
 
-## Backward Forecasting
+### Backward Forecasting
 
 Use the [`backwardForecast`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#backwardforecast) property to extend the trendline into past data points.
 
@@ -170,9 +177,112 @@ Use the [`backwardForecast`](https://ej2.syncfusion.com/react/documentation/api/
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/trendlines-cs9" %}
 
+## Multiple Trendlines
+
+Multiple trendlines can be added to a single series to compare different fits. Pass an array of trendline objects to the `trendlines` property of the series. Each trendline must specify a unique `name` so it can be identified in the legend.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+```jsx
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, LineSeries, Trendlines } from '@syncfusion/ej2-react-charts';
+import * as React from 'react';
+
+const data = [
+  { x: 1, y: 10 },
+  { x: 2, y: 18 },
+  { x: 3, y: 15 },
+  { x: 4, y: 25 },
+  { x: 5, y: 30 },
+  { x: 6, y: 28 }
+];
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <ChartComponent id="charts" primaryXAxis={{ valueType: 'Double' }}>
+        <Inject services={[LineSeries, Trendlines]} />
+        <SeriesCollectionDirective>
+          <SeriesDirective dataSource={data} xName="x" yName="y" type="Line"
+            trendlines={[
+              { type: 'Linear', name: 'Linear Trend', fill: '#0066CC', width: 2 },
+              { type: 'Exponential', name: 'Exponential Trend', fill: '#CC0000', width: 2 },
+              { type: 'MovingAverage', name: 'Moving Average', period: 3, fill: '#009933', width: 2 }
+            ]}>
+          </SeriesDirective>
+        </SeriesCollectionDirective>
+      </ChartComponent>
+    );
+  }
+}
+```
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+```tsx
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, LineSeries, Trendlines } from '@syncfusion/ej2-react-charts';
+import * as React from 'react';
+
+const data: Object[] = [
+  { x: 1, y: 10 },
+  { x: 2, y: 18 },
+  { x: 3, y: 15 },
+  { x: 4, y: 25 },
+  { x: 5, y: 30 },
+  { x: 6, y: 28 }
+];
+
+export default class App extends React.Component<{}, {}> {
+  render() {
+    return (
+      <ChartComponent id="charts" primaryXAxis={{ valueType: 'Double' }}>
+        <Inject services={[LineSeries, Trendlines]} />
+        <SeriesCollectionDirective>
+          <SeriesDirective dataSource={data} xName="x" yName="y" type="Line"
+            trendlines={[
+              { type: 'Linear', name: 'Linear Trend', fill: '#0066CC', width: 2 },
+              { type: 'Exponential', name: 'Exponential Trend', fill: '#CC0000', width: 2 },
+              { type: 'MovingAverage', name: 'Moving Average', period: 3, fill: '#009933', width: 2 }
+            ]}>
+          </SeriesDirective>
+        </SeriesCollectionDirective>
+      </ChartComponent>
+    );
+  }
+}
+```
+{% endhighlight %}
+{% endtabs %}
+
+## General Properties
+
+The following properties apply to all trendline types.
+
+### Name
+
+Use the [`name`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#name) property to assign a descriptive name to a trendline. The name is displayed in the chart legend and used to identify the trendline in tooltips. When multiple trendlines are added, a unique `name` is required for each.
+
+### Marker
+
+Customize trendline data points using the [`marker`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#marker) property. You can configure the shape, size, fill, and border of the markers.
+
+### Tooltip
+
+Use [`enableTooltip`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#enabletooltip) (default `true`) to control whether the trendline displays a tooltip on hover.
+
+### Animation
+
+Trendline rendering supports animation through the [`animation`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#animation) property. See the [AnimationModel API](https://ej2.syncfusion.com/react/documentation/api/chart/animationmodel) for general configuration options.
+
+### Legend Shape
+
+Use [`legendShape`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#legendshape) to customize the shape that represents the trendline in the legend.
+
+### Intercept
+
+Use [`intercept`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#intercept) to specify a fixed intercept value for the trendline equation.
+
 ## Show or hide a trendline
 
-Control visibility using the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#visible) property of the trendline.
+Control the visibility of a trendline by setting the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#visible) property to `true` or `false`. When set to `false`, the trendline is hidden from the chart but its legend entry is also removed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and Appearances in ##Platform_Name## Smart Paste Button control | Syncfusion
-description:  Checkout and learn here all about Styles and Appearances in Syncfusion ##Platform_Name## Smart Paste Button control of Syncfusion Essential JS 2 and more.
+title: Customization in React Smart Paste Button | Syncfusion
+description: Customize the React Smart Paste Button using the inherited styles, types, and appearance options of the Syncfusion React Button component.
 platform: ej2-react
 control: Customization 
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types and Appearance
+# Customization in React Smart Paste Button
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React Smart Paste Button component fully inherits all the properties, types, and styling options of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Button component. This means that you can leverage the existing features of the Syncfusion<sup style="font-size:70%">&reg;</sup> React Button while benefiting from the enhanced functionality of the Smart Paste Button.
 

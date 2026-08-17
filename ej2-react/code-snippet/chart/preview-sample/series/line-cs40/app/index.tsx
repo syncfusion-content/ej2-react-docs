@@ -1,10 +1,11 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel, TooltipSettingsModel } from "@syncfusion/ej2-react-charts";
 import {
-  AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, TooltipSettingsModel,
-  Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, ColumnSeries, Selection
+  ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
+  Category, Tooltip, ColumnSeries
 }
   from '@syncfusion/ej2-react-charts';
 import { cylindricalData } from './datasource';
@@ -19,7 +20,7 @@ function App() {
     primaryYAxis={primaryyAxis}
     tooltip={tooltip}
     title='Olympic Gold Medal Counts - RIO'>
-    <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, Category]} />
+    <Inject services={[ColumnSeries, Category, Tooltip]} />
     <SeriesCollectionDirective>
       <SeriesDirective dataSource={cylindricalData} xName='country' yName='gold' type='Column' columnFacet='Cylinder' tooltipMappingName='tooltipMappingName'>
       </SeriesDirective>
@@ -28,6 +29,7 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 

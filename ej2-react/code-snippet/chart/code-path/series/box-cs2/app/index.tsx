@@ -2,8 +2,9 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel } from "@syncfusion/ej2-react-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
          BoxAndWhiskerSeries, Category}
 from'@syncfusion/ej2-react-charts';
 import { boxData } from './datasource';
@@ -21,14 +22,15 @@ function App() {
       <Inject services={[Category, BoxAndWhiskerSeries]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={boxData} xName='x' yName='y' type='BoxAndWhisker' name='Department'
-          marker={marker}>
+          boxPlotMode='Inclusive' marker={marker}>
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 
 {% endraw %}

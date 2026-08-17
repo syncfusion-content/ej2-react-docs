@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with React Smart Paste Button component | Syncfusion
-description:  Checkout and learn about Getting started with React Smart Paste Button component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Smart Paste Button | Syncfusion
+description: Learn how to get started with the Syncfusion React Smart Paste Button component. Explore setup, features, examples, and customization options.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Smart Paste Button Component
+# Getting Started with React Smart Paste Button
 
 The `Smart Paste Button` is a user interface component designed to simplify and improve the experience of pasting text into form fields. It comes with smart features such as automatic text formatting, validation, and integration with various form components. It is especially useful in applications where users frequently paste text from other sources and where data consistency is important.
 

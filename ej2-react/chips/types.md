@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Types in React Chips | Syncfusion
-description: Use the four React Chips types: input, choice, filter, and action. Each serves a different purpose from tagging data to triggering actions.
+description: Use the four React Chips types input, choice, filter, and action. Each serves a different purpose from tagging data to triggering actions.
 control: Types 
 platform: ej2-react
 documentation: ug
@@ -42,7 +42,7 @@ The following example demonstrates how to create input chips:
 
 ## Choice chip
 
-Allow users to select a single chip from a set of options by setting the [selection](https://ej2.syncfusion.com/react/documentation/api/chips/selection/) property to `Single`. Choice chips are ideal for radio-button-like selection patterns where only one option can be active at a time. Common use cases include view options, sorting preferences, or theme selection.
+Allow users to select a single chip from a set of options by setting the [selection](https://ej2.syncfusion.com/react/documentation/api/chips/selection) property to `Single`. Choice chips are ideal for radio-button-like selection patterns where only one option can be active at a time. Common use cases include view options, sorting preferences, or theme selection.
 
 The following example demonstrates single selection with choice chips:
 
@@ -65,7 +65,7 @@ The following example demonstrates single selection with choice chips:
 
 ## Filter chip
 
-Enable users to select multiple chips from a set of options by setting the [selection](https://ej2.syncfusion.com/react/documentation/api/chips/selection/) property to `Multiple`. Filter chips are ideal for checkbox-like selection patterns where multiple options can be active simultaneously. Use cases include category filtering, skill selection, or preference checkboxes.
+Enable users to select multiple chips from a set of options by setting the [selection](https://ej2.syncfusion.com/react/documentation/api/chips/selection) property to `Multiple`. Filter chips are ideal for checkbox-like selection patterns where multiple options can be active simultaneously. Use cases include category filtering, skill selection, or preference checkboxes.
 
 The following example demonstrates multiple selection with filter chips:
 
@@ -109,7 +109,7 @@ Action chips trigger specific events or actions when interacted with. Unlike sel
 
 ### Deletable chip
 
-Enable users to remove chips from the list by setting the [enableDelete](https://ej2.syncfusion.com/react/documentation/api/chips/#enabledelete) property to `true`. A delete icon appears on each chip, allowing users to remove items by clicking it. This feature works with input chips and filter chips to provide a dismissible, user-controlled list.
+Enable users to remove chips from the list by setting the [enableDelete](https://ej2.syncfusion.com/react/documentation/api/chips/index-default#enabledelete) property to `true`. A delete icon appears on each chip, allowing users to remove items by clicking it. This feature works with input chips and filter chips to provide a deletable, user-controlled list.
 
 The following example demonstrates deletable chips:
 

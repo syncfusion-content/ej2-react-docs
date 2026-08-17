@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { AxisModel, ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject,
-ColumnSeries, Legend, DateTime, Tooltip, DataLabel, Zoom, Crosshair, LineSeries, Selection}
+import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
+ColumnSeries, Legend, DateTime, Tooltip, DataLabel, LineSeries}
 from'@syncfusion/ej2-react-charts';
 import { dateTimeData } from './datasource';
 

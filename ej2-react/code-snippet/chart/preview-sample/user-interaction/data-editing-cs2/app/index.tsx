@@ -6,9 +6,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
   ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-  Legend, Category, Tooltip, DataLabel, ColumnSeries, LineSeries, DataEditing
+  Legend, Category, Tooltip, DataLabel, ColumnSeries, DataEditing
 } from '@syncfusion/ej2-react-charts';
-import { columnData, lineData } from './datasource';
+import { columnData } from './datasource';
 
 function App() {
   return (
@@ -32,16 +32,12 @@ function App() {
         majorTickLines: { width: 0 },
         minorTickLines: { width: 0 }
       }}
-      chartArea={{
-        border: {
-          width: 0,
-        },
-      }}
+      chartArea={{ border: { width: 0 } }}
       title="Sales Prediction of Products"
       tooltip={{ enable: true }}
     >
       <Inject
-        services={[ ColumnSeries, Legend, Tooltip, DataLabel, Category, LineSeries, DataEditing ]}
+        services={[ColumnSeries, Legend, Tooltip, DataLabel, Category, DataEditing]}
       />
       <SeriesCollectionDirective>
         <SeriesDirective
@@ -50,17 +46,13 @@ function App() {
           yName="y"
           name="Product A"
           type="Column"
-          dragSettings={{ enable: true }}
+          dragSettings={{
+            enable: true,
+            fill: 'red',
+            minY: 0,
+            maxY: 100
+          }}
           marker={{ visible: true, width: 10, height: 10 }}
-        />
-        <SeriesDirective
-          dataSource={lineData}
-          xName="x"
-          yName="y"
-          name="Product B"
-          type="Line"
-          marker={{ visible: true, width: 10, height: 10 }}
-          dragSettings={{ enable: true }}
         />
       </SeriesCollectionDirective>
     </ChartComponent>

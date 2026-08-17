@@ -60,7 +60,7 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 The following properties can be used to customize the `bar` series.
 
-**Fill**
+**Solid fill**
 
 The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property determines the color applied to the series.
 
@@ -81,7 +81,9 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs30" %}
 
-The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the bar series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+**Gradient fill**
+
+The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property accepts an SVG gradient reference, allowing you to apply a smooth color transition to the bar series. Define the gradient with a unique ID, and assign it to the `fill` property using the `url(#gradientId)` syntax. The bar fill then transitions between the gradient stops.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -142,11 +144,11 @@ Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs55" %}
 
-## Bar space and width
+## Bar spacing and width
 
-### Bar space
+### Bar spacing
 
-Use the [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnspacing) property in the series to adjust the space between bars.
+Use the [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnspacing) property in the series to adjust the space between bars. The value must be between `0` and `1` and represents the spacing between bars as a fraction of the bar width. For example, `columnSpacing=0.5` applies spacing equal to half the bar width. 
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -167,7 +169,7 @@ Use the [`columnSpacing`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 ### Bar width
 
-Use the [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnwidth) property in the series to adjust the width of the bars.
+Use the [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnwidth) property in the series to adjust the width of the bars. The value must be between `0` and `1` and determines the relative width of each bar within the space allocated to its category. For example, `columnWidth=0.8` uses 80% of the available category width.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -186,9 +188,9 @@ Use the [`columnWidth`](https://ej2.syncfusion.com/react/documentation/api/chart
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs59" %}
 
-### Bar width in pixel
+### Bar width in pixels
 
-Use the [`columnWidthInPixel`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnwidthinpixel) property in the series to define the exact width of the bars in pixels. This property ensures that each bar maintains the specified width, providing a uniform appearance throughout the chart.
+Use the [`columnWidthInPixel`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnwidthinpixel) property in the series to define the exact width of the bars in pixels. This property ensures that each bar maintains the specified width, providing a uniform appearance throughout the chart. For example, `columnWidthInPixel={50}` renders each bar 50 pixels wide.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -207,9 +209,9 @@ Use the [`columnWidthInPixel`](https://ej2.syncfusion.com/react/documentation/ap
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs60" %}
 
-## Grouped bar
+## Grouped bars
 
-Use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#groupname) property to group the data points in bar type charts. Data points with the same group name will be grouped together in the chart, making it easy to compare different sets of data.
+Use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#groupname) property to group the data points in bar type charts. Data points with the same group name will be grouped together in the chart, making it easy to compare different sets of data. For example, two series that both set `groupName='A'` are rendered side-by-side within the same group, while a series with `groupName='B'` is rendered in a separate group.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -230,7 +232,7 @@ Use the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/chart/s
 
 ## Cylindrical bar chart
 
-To render a cylindrical bar chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnfacet) property to `Cylinder` in the chart series. This property transforms the regular bars into cylindrical shapes, enhancing the visual representation of the data.
+To render a cylindrical bar chart, set the [`columnFacet`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#columnfacet) property to `Cylinder` in the chart series. This property transforms the regular bars into cylindrical shapes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -249,14 +251,13 @@ To render a cylindrical bar chart, set the [`columnFacet`](https://ej2.syncfusio
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs39" %}
 
-
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `undefined` values are considered empty. Empty data points are not plotted on the chart.
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyPointSettingsModel#mode) property of `emptyPointSettings` to control how empty points are rendered. Available modes are `Gap` (leave a break, the default), `Drop` (Ignores the empty point during rendering), `Zero` (plot as zero), and `Average` (plot as the average of neighboring points).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -277,7 +278,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyPointSettingsModel#fill) property of `emptyPointSettings` to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -298,7 +299,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyPointSettingsModel#border) property of `emptyPointSettings` to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -319,7 +320,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 ## Corner radius
 
-The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/series#cornerradius) property in the chart series is used to customize the corner radius for bar series. This allows you to create bars with rounded corners, giving your chart a more polished appearance. You can customize each corner of the bars using the topLeft, topRight, bottomLeft, and bottomRight properties.
+The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/series#cornerradius) property in the chart series is used to customize the corner radius for bar series. This allows you to create bars with rounded corners, giving your chart a more polished appearance. You can customize each corner of the bars using the `topLeft`, `topRight`, `bottomLeft`, and `bottomRight` properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -340,7 +341,7 @@ The [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/se
 
 ### Point corner radius
 
-You can customize the corner radius for individual points in the chart series using the [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event by setting the [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs#cornerradius) property in its event argument.
+You can customize the corner radius for individual points in the chart series using the [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event by setting the `cornerRadius` property on its event argument, for example `args.cornerRadius = { topLeft: 8, topRight: 8, bottomLeft: 0, bottomRight: 0 }`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -363,7 +364,7 @@ You can customize the corner radius for individual points in the chart series us
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered. Use its event arguments to modify the series data, fill, or name dynamically before rendering.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -384,7 +385,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires for each data point before it is drawn. Use its event arguments to customize the appearance of individual points before they are rendered.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -403,9 +404,8 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/line-cs61" %}
 
-
 ## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
 * [Color a Particular Bar](https://support.syncfusion.com/kb/article/21515/how-to-color-a-particular-bar-in-react-chart-component)

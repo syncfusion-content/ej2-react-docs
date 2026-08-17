@@ -7,17 +7,16 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
+
 # Range Area Chart in React Chart
 
-## Range Area
+## Range area
 
-To render a [range area](https://www.syncfusion.com/react-components/react-charts/chart-types/range-area-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+Follow these steps to render a [range area](https://www.syncfusion.com/react-components/react-charts/chart-types/range-area-chart) series, which fills the area between an upper and lower bound for each data point. Use it to visualize data with a value range, such as temperature or stock prices.
 
-1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `RangeArea` in your chart configuration. This indicates that the data should be represented as a range area chart, which is ideal for visualizing a range of values for each data point. This type of chart is particularly useful for displaying data that has a range between a minimum and maximum value, such as temperature ranges, stock price ranges, or any other type of data that varies within a specific interval.
+1. **Set the series type**: Set the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#type) to `RangeArea` in the series configuration.
 
-2. **Inject the RangeAreaSeries module**: Inject `RangeAreaSeries` module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering range area series are available in your chart.
-
-3. **Provide high and low values**: The `RangeArea` series requires two y-values for each data point, you need to specify both the high and low values. The high value represents the maximum range, while the low value represents the minimum range for each data point. These values define the upper and lower boundaries of the area for each point on the chart.
+2. **Inject the RangeAreaSeries module**: Add `RangeAreaSeries` to the `services` array of the `Inject` component inside `ChartComponent`. This registers the functionality required to render a range area series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -38,7 +37,7 @@ To render a [range area](https://www.syncfusion.com/react-components/react-chart
 
 ## Binding data with series
 
-You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname), [`high`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#high), and [`low`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#low) properties.
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series `xName`, `high`, and `low` properties. The `RangeArea` series requires two y-values per point: `high` defines the upper bound and `low` the lower bound of the filled area. Each data point should also have an `xName` value for the x-axis category.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,11 +58,17 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 ## Series customization
 
-The following properties can be used to customize the `range area` series.
+Customize the range area's appearance with the following properties. Defaults are taken from the standard [`Series`](https://ej2.syncfusion.com/react/documentation/api/chart/series) model.
 
-**Fill**
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) | string | `null` | Color applied to the area. Accepts a CSS color or a gradient model. |
+| [`opacity`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#opacity) | number | `1` | Transparency of the fill (0 to 1). |
+| [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#border) | [`BorderModel`](https://ej2.syncfusion.com/react/documentation/api/chart/bordermodel) | `null` | Border settings: `width`, `color`, and `dashArray` (e.g., `'5 5'`). |
 
-The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property determines the color applied to the series.
+**Solid fill**
+
+The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) property determines the color applied to the area.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,7 +87,9 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangearea-cs1" %}
 
-The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the range area series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+**Gradient fill**
+
+The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#fill) property can be set to a CSS gradient reference such as `url(#gradient)` to apply a gradient color that transitions smoothly across the area. Define the gradient in an SVG `<defs>` block and reference it from the `fill` prop.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -103,7 +110,7 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 **Opacity**
 
-The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
+The [`opacity`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#opacity) property controls the transparency of the fill and affects how the series blends with background or overlapping series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -124,7 +131,7 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 **Border**
 
-Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#border) property to configure the border width, color, and dasharray of the range area series.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#border) property to configure the border `width`, `color`, and `dashArray` of the range area series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -145,11 +152,11 @@ Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null` or `undefined` values are considered empty. By default (`mode: 'Gap'`), empty points leave a gap in the area; the `mode` property lets you change how they are handled.
 
 **Mode**
 
-Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
+Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#mode) property to control handling of empty points. Available modes: `Gap`, `Drop`, `Zero`, `Average`. The default mode is `Gap`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -170,7 +177,7 @@ Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Fill**
 
-Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#fill) property to set the fill color for empty points.
+Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#fill) property to set the fill color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -191,7 +198,7 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/accumulation
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/emptyPointSettingsModel#border) property to customize the border width and color for empty points.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptypointsettingsmodel#border) property to customize the border width and color for empty points.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -214,7 +221,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/accumulati
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered and lets you modify series properties such as data, fill, or name. For a range area series, use it to change the area color or to swap data sources on the fly.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -235,7 +242,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires before each data point is drawn, letting you customize per-point marker shape, border, or fill. For a range area series, use it to color the upper and lower bounds differently.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -254,7 +261,9 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/rangearea-cs10" %}
 
-## See Also
+## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)
+* [Axis customization](../axis-customization)
+* [Legend](../legend)

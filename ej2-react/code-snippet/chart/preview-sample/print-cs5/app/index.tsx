@@ -8,8 +8,8 @@ from'@syncfusion/ej2-react-charts';
 import { data, data1 } from './datasource';
 function App() {
 
-  const chartInstance: ChartComponent;
-  const chartInstance1:ChartComponent;
+  let chartInstance: ChartComponent;
+  let chartInstance1:ChartComponent;
   function clickHandler() { chartInstance.exportModule.export('PNG', 'sample', null, [chartInstance, chartInstance1]);
    }
   const primaryxAxis: AxisModel = { valueType: 'Category' };

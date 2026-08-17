@@ -8,7 +8,7 @@ ColumnSeries, Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, LineSeries,
 from'@syncfusion/ej2-react-charts';
 import { data } from './datasource';
 function App() {
-  const chartInstance: ChartComponent;
+  let chartInstance: ChartComponent;
   function clickHandler() {
     chartInstance.print();
   }

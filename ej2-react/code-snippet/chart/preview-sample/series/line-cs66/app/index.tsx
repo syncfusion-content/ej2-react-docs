@@ -1,8 +1,9 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AxisModel, BorderModel, Category, ColumnSeries } from '@syncfusion/ej2-react-charts';
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel, BorderModel } from "@syncfusion/ej2-react-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Category, ColumnSeries } from '@syncfusion/ej2-react-charts';
 import { columnData } from './datasource';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
   const primaryxAxis: AxisModel = { valueType: 'Category', title: 'Countries' };
   const primaryyAxis: AxisModel = { minimum: 0, maximum: 80, interval: 20, title: 'Medals' };
   const border: BorderModel = { width: 2, color: '#FFA500', dashArray: '5,5' };
-  
+
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}
       primaryYAxis={primaryyAxis}
@@ -24,6 +25,8 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
+
 
 

@@ -16,9 +16,13 @@ Error bars are graphical representations of the variability of data and are used
 
 To render error bars for the series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 
-1. **Set visibility**: Set the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#visible) property to **true** for the error bars to be displayed.
+1. **Configure error bars on the series**: Add an [`errorBar`](https://ej2.syncfusion.com/react/documentation/api/chart/series#errorbar) property on the `SeriesDirective` and set the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#visible) property to **true** to display the error bars. For example:
 
-2. **Inject the ErrorBar module**: Inject `ErrorBar` module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering error bar series are available in your chart.
+   ```ts
+   <SeriesDirective errorBar={{ visible: true }} />
+   ```
+
+2. **Inject the ErrorBar module**: Import `ErrorBar` from `@syncfusion/ej2-react-charts` and add it to `<Inject services={...} />` so that the error bar functionality is available.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -37,9 +41,9 @@ To render error bars for the series in your chart, you need to follow a few step
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs1" %}
 
-## Error Bar Type
+## Error bar type
 
-To change the error bar rendering type using [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#type) option of error bar. To change the error bar line length you can use [`verticalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#verticalerror) property.
+Use the [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#type) option to change the error bar rendering type. Available values are `Fixed`, `Percentage`, `StandardDeviation`, `StandardError`, and `Custom`. To change the error bar line length, use the [`verticalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#verticalerror) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,7 +64,11 @@ To change the error bar rendering type using [`type`](https://ej2.syncfusion.com
 
 ## Customizing error bar type
 
-To customize the error bar type, set the error bar [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#type) to `Custom`, and then change the horizontal or vertical positive and negative error values for the error bar.
+Set the error bar [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#type) to `Custom` and then override the per-direction error values using the horizontal/vertical and positive/negative error properties:
+
+* [`verticalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#verticalerror) / [`horizontalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#horizontalerror) — shorthand that sets both the positive and negative error to the same value.
+* [`verticalPositiveError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#verticalpositiveerror) and [`verticalNegativeError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#verticalnegativeerror) — set the positive/negative error independently.
+* [`horizontalPositiveError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#horizontalpositiveerror) and [`horizontalNegativeError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#horizontalnegativeerror) — set the horizontal positive/negative error independently.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -81,7 +89,7 @@ To customize the error bar type, set the error bar [`type`](https://ej2.syncfusi
 
 ## Error bar mode
 
-The error bar mode is used to define whether the error bar line is drawn horizontally, vertically or on both sides. To change the error bar mode, use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#mode) option.
+The error bar mode is used to define whether the error bar line is drawn horizontally, vertically, or on both sides. Use the [`mode`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#mode) option. Available values are `Vertical` (default), `Horizontal`, and `Both`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -102,7 +110,7 @@ The error bar mode is used to define whether the error bar line is drawn horizon
 
 ## Error bar direction
 
-To change the direction of the error bars to plus, minus, or both sides, use the [`direction`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#direction) property.
+To change the direction of the error bars, use the [`direction`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#direction) property. Available values are `Plus` (positive only), `Minus` (negative only), and `Both` (default).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -123,7 +131,11 @@ To change the direction of the error bars to plus, minus, or both sides, use the
 
 ## Customizing error bar cap
 
-To customize the length, width, opacity, and fill color of the error bar caps, you can use the [`errorBarCap`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#errorbarcap) property.
+To customize the appearance of the error bar caps, use the [`errorBarCap`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#errorbarcap) property. The cap object accepts `length`, `width`, `opacity`, and `color` properties, for example:
+
+```ts
+errorBarCap: { length: 10, width: 10, opacity: 1, color: 'black' }
+```
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -144,7 +156,13 @@ To customize the length, width, opacity, and fill color of the error bar caps, y
 
 ## Customizing error bar color
 
-To customize the error bar color for individual errors, use the [`errorBarColorMapping`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#errorbarcolormapping) property. You can also customize the vertical error, horizontal error, horizontal negative and positive error, and vertical negative and positive error for an individual point using the [`verticalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#verticalerror), [`horizontalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#horizontalerror), [`horizontalNegativeError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#horizontalnegativeerror), [`horizontalPositiveError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#horizontalpositiveerror), [`verticalNegativeError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#verticalnegativeerror), and [`verticalPositiveError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorBarSettings#verticalpositiveerror) properties.
+To customize the error bar color for individual points, use the [`errorBarColorMapping`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#errorbarcolormapping) property and point it to a field name in the data source. For example, with a data field named `color`, set `errorBarColorMapping: 'color'` and the chart will apply each point's `color` value as its error bar stroke.
+
+You can also customize the per-point error values directly on the data record using these properties:
+
+* [`verticalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#verticalerror) and [`horizontalError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#horizontalerror) — shorthand for both positive and negative.
+* [`verticalPositiveError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#verticalpositiveerror) and [`verticalNegativeError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#verticalnegativeerror).
+* [`horizontalPositiveError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#horizontalpositiveerror) and [`horizontalNegativeError`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#horizontalnegativeerror).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -167,7 +185,7 @@ To customize the error bar color for individual errors, use the [`errorBarColorM
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -188,7 +206,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event provides a hook to customize each data point (for example, border or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -207,7 +225,7 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/errorbar-cs9" %}
 
-## See Also
+## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)

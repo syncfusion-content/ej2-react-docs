@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Box and Whisker Chart in React Chart | Syncfusion
-description: Learn to render, customize, and bind Box and Whisker series in Syncfusion React Chart to visualize statistical distributions with plot modes and mean indicators.
+description: Learn to render and customize Box and Whisker series in Syncfusion React Chart to visualize statistical distributions with plot modes and mean indicators.
 control: Box and Whisker
 platform: ej2-react
 documentation: ug
@@ -15,9 +15,9 @@ To render a `box and whisker` series in your chart, you need to follow a few ste
 
 1. **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type) as `BoxAndWhisker` in your chart configuration. This indicates that the data should be represented as a box and whisker chart, which will plot segments to illustrate the statistical distribution of the data.
 
-2. **Inject the BoxAndWhiskerSeries module**: Inject the `BoxAndWhisker` module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering box and whisker series are available in your chart.
+2. **Inject the BoxAndWhiskerSeries module**: Inject the `BoxAndWhiskerSeries` module into the `services`. This step is essential, as it ensures that the necessary functionalities for rendering box and whisker series are available in your chart.
 
-3. **Data requirements**: The y field of the Box and Whisker series requires a specific number of data points, with a minimum of five values needed to plot a segment.
+3. **Data requirements**: The `y` field of the Box and Whisker series requires a specific number of data points, with a minimum of five values needed to plot a segment (minimum, lower quartile, median, upper quartile, and maximum).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -61,7 +61,7 @@ You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.c
 
 The following properties can be used to customize the `box and whisker` series.
 
-*Fill**
+**Solid fill**
 
 The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property determines the color applied to the series.
 
@@ -82,7 +82,9 @@ The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs4" %}
 
-The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property can be used to apply a gradient color to the box and whisker series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+**Gradient fill**
+
+The [fill](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#fill) property accepts an SVG gradient reference, allowing you to apply a smooth color transition to the box and whisker series. Define the gradient with a unique ID, and assign it to the `fill` property using the `url(#gradientId)` syntax. The series fill then transitions between the gradient stops.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -124,7 +126,7 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 **Border**
 
-Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#border) property to configure the border width, color, and dasharray of the box and whisker series.
+Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#border) property to configure the border width, color, and dasharray of the box and whisker series. Pass it as an object on the series, for example `border={{ width: 2, color: '#962D18', dashArray: '5,5' }}`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -145,8 +147,7 @@ Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/series
 
 ## Box plot
 
-You can change the rendering mode of the Box and Whisker series using the `boxPlotMode` property.
-The default boxPlotMode is `exclusive`.The other boxPlotMode available are `inclusive` and `normal`.
+You can change the rendering mode of the Box and Whisker series using the [`boxPlotMode`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#boxplotmode) property. The default mode is `exclusive`, which renders a single line for outliers only when they fall outside the whiskers. The other available modes are `inclusive` and `normal`, which use different quartile calculation methods to determine the box and whisker positions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -167,7 +168,7 @@ The default boxPlotMode is `exclusive`.The other boxPlotMode available are `incl
 
 ## Show mean
 
-In the box and whisker series, the [`showMean`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#showmean) property is used to display the average value of the box and whisker. The default value of `showMean` is **false**.
+Use the [`showMean`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#showmean) property to display the average value of the distribution. Set `showMean={true}` to render a marker at the mean position of each box.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -190,7 +191,7 @@ In the box and whisker series, the [`showMean`](https://ej2.syncfusion.com/react
 
 ### Series render
 
-The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iSeriesRenderEventArgs) event enables modification of series properties (for example, data, fill, or name) immediately before rendering. Use this event to adjust series appearance or to dynamically swap data sources.
+The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iseriesrendereventargs) event fires before each series is rendered. Use its event arguments to modify the series data, fill, or name dynamically before rendering.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -211,7 +212,7 @@ The [`seriesRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iS
 
 ### Point render
 
-The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPointRenderEventArgs) event provides a hook to customize each data point (for example, marker shape, border, or fill) before it is drawn. Use this to apply per-point styling rules or conditional formatting.
+The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/ipointrendereventargs) event fires for each data point before it is drawn. Use its event arguments to customize the appearance of individual points before they are rendered.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -230,7 +231,7 @@ The [`pointRender`](https://ej2.syncfusion.com/react/documentation/api/chart/iPo
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/box-cs10" %}
 
-## See Also
+## See also
 
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Data label](../data-labels)
+* [Tooltip](../tool-tip)

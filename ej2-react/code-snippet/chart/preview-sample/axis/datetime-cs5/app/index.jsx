@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Legend, DateTime, Tooltip, DataLabel, LineSeries } from '@syncfusion/ej2-react-charts';
 import { dateTimeData } from './datasource';
 function App() {
-    const primaryxAxis = { valueType: 'DateTime', title: 'Sales Across Years', intervalType: 'Years' };
+    const primaryxAxis = { valueType: 'DateTime', title: 'Sales Across Years', interval: 2, intervalType: 'Years' };
     const primaryyAxis = { title: 'Sales Amount in millions(USD)' };
     return <ChartComponent id='charts' primaryXAxis={primaryxAxis} primaryYAxis={primaryyAxis} title='Average Sales Comparison'>
       <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, DateTime]}/>

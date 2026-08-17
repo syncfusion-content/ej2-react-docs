@@ -107,14 +107,13 @@ Each Timeline item is defined using the `ItemDirective`, which must be placed in
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 
-```ts
 import { TimelineComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-layouts';
 import * as React from 'react';
 import './App.css';
 
 function App() {
   return (
-    <div id="timeline" style={{ height: '350px' }}>
+    <div id="timeline">
       <TimelineComponent>
         <ItemsDirective>
           <ItemDirective />
@@ -128,8 +127,11 @@ function App() {
 }
 
 export default App;
-
-```
+{% endhighlight %}
+{% highlight css tabtitle="App.css" %}
+#timeline {
+  height: 350px;
+}
 {% endhighlight %}
 {% endtabs %}
 

@@ -12,6 +12,8 @@ domainurl: ##DomainURL##
 
 The crosshair feature displays vertical and horizontal guide lines that intersect at the mouse or touch position, helping to identify the corresponding axis values precisely.
 
+> Note: To use the crosshair feature, the `Crosshair` module must be injected into the `services`.
+
 Crosshair lines can be enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings#enable) property in the `crosshair` settings.
 
 {% tabs %}
@@ -55,7 +57,7 @@ Axis tooltip labels can be enabled by setting the [`enable`](https://ej2.syncfus
 ## Customization
 
 The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltip#fill) and [`textStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairTooltip#textstyle) properties of `crosshairTooltip` are used to customize the background color and font style of the crosshair label.
-The color and width of the crosshair lines can be customized by using the [`line`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettingsModel#line) property in the crosshair settings.
+The color and width of the crosshair lines can be customized by using the [`line`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings#line) property in the crosshair settings.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -74,8 +76,6 @@ The color and width of the crosshair lines can be customized by using the [`line
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/crosshair-cs3" %}
 
-> Note: To use crosshair feature, we need to inject `Crosshair` module into the `services`.
-
 ## Crosshair label customization
 
 The [`crosshairLabelRender`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#crosshairlabelrender) event fires before each crosshair axis label is rendered, allowing you to customize the label's appearance or content, or to prevent it from being displayed.
@@ -86,8 +86,8 @@ Event arguments:
 * `value` – The data value at the crosshair position.
 * `axisName` – The axis identifier (e.g., `primaryXAxis`).
 * `axisOrientation` – Either `Horizontal` or `Vertical`.
-* `textStyle` – Font properties for customization.
-* `fill` – Background color of the label.
+* `textStyle` – Font properties for the crosshair label (set on the event argument).
+* `fill` – Background color of the label (set on the event argument).
 * `cancel` – Set to **true** to skip rendering the label.
 
 {% tabs %}
@@ -108,8 +108,8 @@ Event arguments:
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/crosshair-label-render" %}
 
 ## Snap to data
-Enabling the [`snapToData`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettingsModel#snaptodata) property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
-By enabling the [`snapToData`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettingsModel#snaptodata) property, the crosshair snaps to the nearest data point instead of following the exact mouse position. This improves accuracy when inspecting values.
+
+Enabling the [`snapToData`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettingsModel#snaptodata) property in the crosshair aligns it with the nearest data point instead of following the exact mouse position. This improves accuracy when inspecting values.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -132,7 +132,7 @@ By enabling the [`snapToData`](https://ej2.syncfusion.com/react/documentation/ap
 
 The trackball feature tracks the data point closest to the mouse or touch position. A trackball marker highlights the nearest point, and the trackball tooltip displays detailed information about that point.
 
-To use trackball feature, we need to inject `Crosshair` and `Tooltip` module into the `services`.
+To use the trackball feature, the `Crosshair` and `Tooltip` modules must be injected into the `services`.
 Trackball functionality can be enabled by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings#enable) property of the crosshair to **true** and the [`shared`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettings#shared) property of the tooltip to **true**.
 
 {% tabs %}
@@ -155,7 +155,8 @@ Trackball functionality can be enabled by setting the [`enable`](https://ej2.syn
 ## Crosshair highlight
 
 The [`highlightCategory`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings#highlightcategory) property highlights the background of the entire category when the crosshair is moved over the chart.
-The crosshair line color can be customized using the [`color`](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel#color) property within the [`line`](https://ej2.syncfusion.com/react/documentation/api/chart/borderModel) configuration.
+
+The crosshair line color can be customized using the [`color`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings#line) property within the [`line`](https://ej2.syncfusion.com/react/documentation/api/chart/crosshairSettings#line) configuration.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

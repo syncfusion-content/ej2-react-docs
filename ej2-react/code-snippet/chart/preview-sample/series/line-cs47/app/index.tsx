@@ -1,28 +1,28 @@
 
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
+import type { AxisModel, EmptyPointSettingsModel } from "@syncfusion/ej2-react-charts";
 import {
-  AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
-  Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, AreaSeries, Selection
+  ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, AreaSeries
 }
   from '@syncfusion/ej2-react-charts';
 import { areaData } from './datasource';
 function App() {
-  const primaryxAxis = {
+  const primaryxAxis: AxisModel = {
     title: 'Year',
     minimum: 1900,
     maximum: 2000,
     interval: 10,
     edgeLabelPlacement: 'Shift',
   };
-  const primaryyAxis = {
+  const primaryyAxis: AxisModel = {
     minimum: 2,
     maximum: 5,
     interval: 0.5,
     title: 'Sales Amount in Millions',
   };
-  const emptyPoint = { mode: 'Gap' };
+  const emptyPoint: EmptyPointSettingsModel = { mode: 'Gap' };
 
   return <ChartComponent
   id="charts"
@@ -30,7 +30,7 @@ function App() {
   primaryYAxis={primaryyAxis}
   title="Average Sales Comparison"
 >
-  <Inject services={[AreaSeries, Legend, Tooltip, DataLabel, Category]} />
+  <Inject services={[AreaSeries]} />
   <SeriesCollectionDirective>
     <SeriesDirective
       dataSource={areaData}
@@ -38,7 +38,6 @@ function App() {
       yName="y"
       name="Product A"
       marker={{visible: true}}
-      dashArray="2,5"
       type="Area"
       emptyPointSettings={emptyPoint}
     ></SeriesDirective>
@@ -47,6 +46,7 @@ function App() {
 
 };
 export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+const root = ReactDOM.createRoot(document.getElementById('charts') as HTMLElement);
+root.render(<App />);
 
 
