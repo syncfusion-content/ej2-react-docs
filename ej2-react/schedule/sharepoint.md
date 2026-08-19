@@ -78,7 +78,7 @@ require('@syncfusion/ej2-schedule/styles/bootstrap5.css');
 {% endhighlight %}
 {% endtabs %}
 
-Update the TypeScript configuration `tsconfig.json` to map Syncfusion package paths for proper module resolution in the SPFx project:
+Update the TypeScript configuration to map Syncfusion package paths for proper module resolution in the SPFx project:
 
 {% tabs %}
 {% highlight json tabtitle="tsconfig.json" %}
