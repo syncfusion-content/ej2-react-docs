@@ -100,7 +100,7 @@ The above problem occurs when missing CSS references for the scheduler in a proj
     <meta name="description" content="Syncfusion React UI Components" />
     <meta name="author" content="Syncfusion" />
 
-      <! –– scheduler CSS is referred from this link ––>
+      <!-- Include Scheduler CSS from CDN -->
     <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
 
 </head>
