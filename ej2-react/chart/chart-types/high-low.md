@@ -68,7 +68,7 @@ The following properties can be used to customize the Hilo series.
 
 The [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/series#fill) property determines the color applied to the series, for example:
 
-```tsx
+```
 <SeriesDirective fill="red" />
 ```
 

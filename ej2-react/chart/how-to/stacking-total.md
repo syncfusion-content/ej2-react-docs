@@ -30,6 +30,7 @@ Each annotation is a child of `<AnnotationsDirective>` inside `<ChartComponent>`
 
 The `content` prop of `<AnnotationDirective>` is a JSX function reference, not an id string. Declare a regular React function that returns the JSX you want to display, and pass that function as `content`:
 
+{% raw %}
 ```
 function chartTemplate1() {
     return (
@@ -41,6 +42,7 @@ function chartTemplate1() {
     );
 }
 ```
+{% endraw %}
 
 Repeat the function once per annotation (the example defines `chartTemplate1`, `chartTemplate2`, `chartTemplate3` — one per category) and assign each to a different annotation's `content`.
 

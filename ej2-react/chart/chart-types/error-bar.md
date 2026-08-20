@@ -18,9 +18,11 @@ To render error bars for the series in your chart, you need to follow a few step
 
 1. **Configure error bars on the series**: Add an [`errorBar`](https://ej2.syncfusion.com/react/documentation/api/chart/series#errorbar) property on the `SeriesDirective` and set the [`visible`](https://ej2.syncfusion.com/react/documentation/api/chart/errorbarsettings#visible) property to **true** to display the error bars. For example:
 
+{% raw %}
    ```ts
    <SeriesDirective errorBar={{ visible: true }} />
    ```
+{% endraw %}
 
 2. **Inject the ErrorBar module**: Import `ErrorBar` from `@syncfusion/ej2-react-charts` and add it to `<Inject services={...} />` so that the error bar functionality is available.
 

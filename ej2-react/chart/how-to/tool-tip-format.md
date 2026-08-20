@@ -68,6 +68,7 @@ Choose a format that matches the precision and readability required by the chart
 
 Pass the `tooltip` object to the `ChartComponent`:
 
+{% raw %}
 ```jsx
 <ChartComponent
     id="charts"
@@ -78,6 +79,7 @@ Pass the `tooltip` object to the `ChartComponent`:
     }}
 >
 ```
+{% endraw %}
 
 The completed example is shown below:
 
@@ -102,7 +104,7 @@ The completed example is shown below:
 
 Use the [`tooltipRender`](https://ej2.syncfusion.com/react/documentation/api/chart#tooltiprender) callback when the tooltip text must change according to custom runtime conditions that cannot be expressed as a static format string. The callback fires before each tooltip is rendered, and assigning to `args.text` overrides the default content.
 
-The chart needs `tooltip={{ enable: true }}` on `<ChartComponent>` - without that flag the `tooltipRender` callback never fires.
+Ensure that the `tooltip` is enabled on the `<ChartComponent>`. Otherwise, the `tooltipRender` callback will never fire.
 
 ### `args` fields
 
@@ -127,12 +129,14 @@ const tooltipRender = (args) => {
 
 Bind the callback on the `<ChartComponent>`:
 
+{% raw %}
 ```
 <ChartComponent id='charts'
     primaryXAxis={{ valueType: 'DateTime' }}
     tooltip={{ enable: true }}
     tooltipRender={tooltipRender}>
 ```
+{% endraw %}
 
 The completed example is shown below:
 
