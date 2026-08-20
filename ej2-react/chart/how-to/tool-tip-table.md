@@ -18,6 +18,7 @@ You also need to register `Tooltip` in the chart's `<Inject services={[…]}>>` 
 
 Declare a regular React function that returns the JSX you want inside the tooltip. The function receives an `args` object whose `args.x` and `args.y` are the hovered point's x and y values. The example uses these to render a small table:
 
+{% raw %}
 ```
 function chartTemplate(args) {
     return (
@@ -32,6 +33,7 @@ function chartTemplate(args) {
     );
 }
 ```
+{% endraw %}
 
 The function is plain JSX, so you can use any HTML or React constructs inside it — `<table>`, `<img>`, conditional rendering, and so on. The chart re-runs the function for every hovered point, so the values stay in sync with the data.
 

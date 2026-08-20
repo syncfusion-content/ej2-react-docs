@@ -19,7 +19,7 @@ The following image highlights the primary elements of a chart:
 ## Series
 
 A series represents a group of data points plotted on the chart. Charts can include one or more series, and each series can use a different chart type — for example, line, column, area, or any other supported visualization.  
-For more details, see the [Chart types](https://ej2.syncfusion. com/react/documentation/chart/chart-series) section.
+For more details, see the [Chart types](https://ej2.syncfusion.com/react/documentation/chart/chart-series) section.
 
 ## Axes
 
@@ -48,7 +48,7 @@ For more details, see the [Data label](https://ej2.syncfusion.com/react/document
 
 ## Annotations
 
-Annotations overlay arbitrary HTML or SVG content on the chart — for example, footers, watermarks, reference lines, or callouts. They are useful when you need to draw the user's attention to a specific area of the chart that the other building blocks cannot express.  
+Annotations overlay arbitrary HTML or SVG content on the chart — for example, footers, watermarks, reference lines, or callout elements. They are useful when you need to draw the user's attention to a specific area of the chart that the other building blocks cannot express.  
 For more details, see the [Chart annotations](https://ej2.syncfusion.com/react/documentation/chart/chart-annotations) section.
 
 ## Next steps

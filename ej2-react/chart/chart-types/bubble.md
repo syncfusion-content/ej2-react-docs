@@ -170,7 +170,13 @@ Use the [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyP
 
 **Border**
 
-Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyPointSettingsModel#border) property of `emptyPointSettings` to customize the border width and color for empty points, for example `border={{ width: 1.5, color: 'green' }}`.
+Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/emptyPointSettingsModel#border) property of `emptyPointSettings` to customize the border width and color for empty points, for example
+
+{% raw %}
+```
+ border={{ width: 1.5, color: 'green' }}
+```
+{% endraw %}
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

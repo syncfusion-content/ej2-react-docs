@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 To show each slice's percentage share in a pie tooltip, hook the [`tooltipRender`](https://ej2.syncfusion.com/react/documentation/api/chart#tooltiprender) callback on the chart and assign the formatted string to `args.text`. The callback fires once per hovered slice.
 
-You also need to register `PieSeries` and `AccumulationTooltip` inside `<Inject services={[…]}>>`, and enable tooltips on the chart with `tooltip={{ enable: true }}`; without that flag, the `tooltipRender` callback never fires.
+You also need to register `PieSeries` and `AccumulationTooltip` inside `<Inject services={[...]} />`, and enable tooltip support on the chart by setting the tooltip's `enable` property to `true`. Without enabling tooltips, the `tooltipRender` callback will not be triggered.
 
 ## Calculate and assign the percentage
 
@@ -34,9 +34,11 @@ const tooltipRender = (args) => {
 
 Bind the callback on the `<AccumulationChartComponent>`:
 
+{% raw %}
 ```
 <AccumulationChartComponent id='charts' tooltip={{ enable: true }} tooltipRender={tooltipRender}>
 ```
+{% endraw %}
 
 The complete example is shown below:
 
@@ -59,7 +61,7 @@ The complete example is shown below:
 
 ## Troubleshooting
 
-* **"The tooltip shows the raw value instead of a percentage"** — the `tooltipRender` callback is not bound on `<AccumulationChartComponent>`, or `tooltip={{ enable: true }}` is missing. Both are required for the callback to fire.
+* **"The tooltip shows the raw value instead of a percentage"** — the `tooltipRender` callback is not bound on `<AccumulationChartComponent>`, or tooltip support has not been enabled on the chart. Both are required for the callback to fire.
 * **"The tooltip shows `NaN%` for every slice"** — `args.series.sumOfPoints` is `0`. Either populate the data source with non-zero values or guard the division.
 * **"The slices do not add up to exactly 100%"** — the example uses `Math.ceil`, which rounds up. Switch to `Math.round` if you need exact totals.
 
