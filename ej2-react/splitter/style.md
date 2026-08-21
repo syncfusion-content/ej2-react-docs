@@ -119,7 +119,7 @@ To remove the resize handle from the split bar, apply the following CSS:
 ### Hide the horizontal split bar resize arrow
 
 ```css
-.e-splitter .e-split-bar.e-split-bar-horizontal .e-resize-handler {
+.e-splitter .e-split-bar.e-split-bar-horizontal .e-navigate-arrow {
     display: none;
 }
 ```
@@ -127,7 +127,7 @@ To remove the resize handle from the split bar, apply the following CSS:
 ### Hide the vertical split bar resize arrow
 
 ```css
-.e-splitter .e-split-bar.e-split-bar-vertical .e-resize-handler {
+.e-splitter .e-split-bar.e-split-bar-vertical .e-navigate-arrow {
     display: none;
 }
 ```

@@ -28,6 +28,12 @@ import { DiagramComponent, Inject, DataBinding, FlowchartLayout } from "@syncfus
     { id: 'connector8', sourceID: '7', targetID: '8' }
   ];
 
+//Initialize layout settings for the diagram
+const layout = {
+    //Sets layout type
+    type: 'Flowchart'
+};
+
 export default function App() {
 
     return (
@@ -40,10 +46,7 @@ export default function App() {
                 connectors={connectors}
 
                 //Uses layout to auto-arrange nodes on the diagram page
-                layout={{
-                    //Sets layout type
-                    type: 'Flowchart'
-                }}
+                layout={layout}
 
                 //Sets the default properties for nodes
                 getNodeDefaults={(node) => {

@@ -32,6 +32,7 @@ The following table outlines accessibility compliance for the Diagram component:
         margin: 0.5em 0;
     }
 </style>
+
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
@@ -40,13 +41,16 @@ The following table outlines accessibility compliance for the Diagram component:
 
 ## WAI-ARIA Attributes
 
-The Diagram component follows [WAI-ARIA] patterns to meet accessibility requirements. The following ARIA attributes are used in the Diagram component:
+The Diagram component follows [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) patterns to meet accessibility requirements. The following ARIA attributes are used in the Diagram component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `aria-label` | Provides an accessible name for the Diagram Objects. |
 
-## Aria-Label
+The Diagram component provides WAI-ARIA support by default. No additional configuration is required for assistive technologies to receive the accessible names provided by the component’s aria-label attributes.
+
+### aria-label
+
 The `aria-label` attribute provides text labels with default descriptions for the following elements in the Diagram component:
 
 <!-- markdownlint-disable MD033 -->
@@ -57,35 +61,35 @@ The `aria-label` attribute provides text labels with default descriptions for th
 </tr>
 <tr>
 <td>ResizeNorthWest</td>
-<td>Thumb to resize the selected object on the top-left corner.</td>
+<td>Thumb to resize the selected object in the top-left direction.</td>
 </tr>
 <tr>
 <td>ResizeNorthEast</td>
-<td>Thumb to resize the selected object on the top-right side direction.</td>
+<td>Thumb to resize the selected object in the top-right direction.</td>
 </tr>
 <tr>
 <td>ResizeSouthWest</td>
-<td>Thumb to resize the selected object on the bottom-left side direction.</td>
+<td>Thumb to resize the selected object in the bottom-left direction.</td>
 </tr>
 <tr>
 <td>ResizeSouthEast</td>
-<td>Thumb to resize the selected object on the bottom-right side direction.</td>
+<td>Thumb to resize the selected object in the bottom-right direction.</td>
 </tr>
 <tr>
 <td>ResizeNorth</td>
-<td>Thumb to resize the selected object on the top side direction.</td>
+<td>Thumb to resize the selected object in the top direction.</td>
 </tr>
 <tr>
 <td>ResizeSouth</td>
-<td>Thumb to resize the selected object on the bottom side direction.</td>
+<td>Thumb to resize the selected object in the bottom direction.</td>
 </tr>
 <tr>
 <td>ResizeWest</td>
-<td>Thumb to resize the selected object on the left side direction.</td>
+<td>Thumb to resize the selected object in the left direction.</td>
 </tr>
 <tr>
 <td>ResizeEast</td>
-<td>Thumb to resize the selected object on the right side direction.</td>
+<td>Thumb to resize the selected object in the right direction.</td>
 </tr>
 <tr>
 <td>ConnectorSourceThumb</td>
@@ -101,50 +105,47 @@ The `aria-label` attribute provides text labels with default descriptions for th
 </tr>
 </table>
 
-
-### Screen Reader Support
+## Screen Reader Support
 
 The Diagram component supports screen readers, and its information is properly conveyed by screen readers based on ARIA attributes and content structure.
 
-### Mobile Device Support
+## Mobile Device Support
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component is designed to be user-friendly and accessible on mobile devices, including for users with disabilities. The component is responsive, adapts to various screen sizes and orientations, and provides touch-friendly interactions.
 
-
-
-### Keyboard Navigation Support
+## Keyboard Navigation Support
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component supports keyboard navigation, allowing users who rely on assistive technologies to navigate and interact with the component effectively.
 
-## Keyboard Interaction
+### Keyboard Interaction
 
-The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) guidelines, making it accessible for users who rely on keyboard navigation. The following keyboard shortcuts are supported:
+The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) guidelines, making it accessible for users who rely on keyboard navigation. Keyboard shortcuts are enabled by default in the Diagram component and require no additional configuration. The following keyboard shortcuts are supported:
 
 **Selection and Clipboard Operations**
 
 | **Command** | **Action** |
 | --- | --- |
-| Ctrl + A | Select All |
-| Ctrl + X | Cut |
-| Ctrl + C | Copy |
-| Ctrl + V | Paste |
+| <kbd>Ctrl + A</kbd> | Select All |
+| <kbd>Ctrl + X</kbd> | Cut |
+| <kbd>Ctrl + C</kbd> | Copy |
+| <kbd>Ctrl + V</kbd> | Paste |
 
 **Edit Operations**
 
 | **Command** | **Action** |
 | --- | --- |
-| Ctrl + Z | Undo |
-| Ctrl + Y | Redo |
-| Delete | Delete |
+| <kbd>Ctrl + Z</kbd> | Undo |
+| <kbd>Ctrl + Y</kbd> | Redo |
+| <kbd>Delete</kbd> | Delete |
 
 **Navigation and Movement**
 
 | **Command** | **Action** |
 | --- | --- |
-| <kbd>Up Arrow </kbd> | Move selected object to up |
-| <kbd>Down Arrow</kbd> | Move selected object to down |
-| <kbd>Left Arrow</kbd> | Move selected object to left |
-| <kbd>Right Arrow</kbd> | Move selected object to right |
+| <kbd>Up Arrow</kbd> | Move selected object up |
+| <kbd>Down Arrow</kbd> | Move selected object down |
+| <kbd>Left Arrow</kbd> | Move selected object left |
+| <kbd>Right Arrow</kbd> | Move selected object right |
 
 **Annotation Editing**
 
@@ -152,8 +153,6 @@ The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG
 | --- | --- |
 | <kbd>Enter</kbd> | Start Annotation Edit |
 | <kbd>Escape</kbd> | End Annotation Edit |
-
-
 
 ## Ensuring Accessibility
 

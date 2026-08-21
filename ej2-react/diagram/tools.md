@@ -22,9 +22,11 @@ The diagram control offers three primary tool categories:
 
 These tools are essential for building complex diagrams and provide the foundation for user interaction within the diagram environment.
 
+These categories map to the `DiagramTools` enum values, which include `ContinuousDraw`, `DrawOnce`, `ZoomPan`, `MultipleSelect`, `SingleSelect`, and `None`.
+
 ## Drawing Tools
 
-Drawing tools enable real-time creation of diagram elements by clicking and dragging on the diagram canvas. All drawing operations are configured through the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram#drawingobject) property and activated using the [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram#tool) property.
+Drawing tools enable real-time creation of diagram elements by clicking and dragging on the diagram canvas. All drawing operations are configured through the [`drawingObject`](https://ej2.syncfusion.com/react/documentation/api/diagram#drawingobject) property and activated via the [`tool`](https://ej2.syncfusion.com/react/documentation/api/diagram#tool) property.
 
 ### Draw Nodes
 
@@ -41,6 +43,8 @@ To draw shapes during runtime, configure the JSON representation of the desired 
 
  {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs1" %}
 
+N> After a single draw, the tool resets to `SingleSelect` unless `ContinuousDraw` is set.
+
 Path shapes can be drawn using the same approach with custom path data. The following example shows how to draw a path shape:
 
 {% tabs %}
@@ -56,8 +60,7 @@ Path shapes can be drawn using the same approach with custom path data. The foll
 
 ### Text Nodes
 
-Similarly, you can draw a text node by setting the type of shape as 'Text' in the `drawingObject` property. The [`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/textModel) node includes a content property that defines the displayed text. Users can add or modify the content after completing the drawing operation:
-
+Similarly, you can draw a text node by setting the type of shape as 'Text' in the `drawingObject` property. The [`text`](https://ej2.syncfusion.com/react/documentation/api/diagram/textModel) node includes a content property that defines the displayed text. The following example demonstrates drawing a text node:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -105,9 +108,7 @@ The diagram supports interactive polygon creation through point-and-click intera
 
 ### Polyline Connectors
 
-Polyline connectors enable creation of multi-segment connections with straight lines and angled vertices. Users can interactively add control points by clicking on the diagram canvas. To draw polyline connectors, set the `drawingObject` type as **Polyline**:
-
-The following code illustrates how to draw a polyline connector.
+Polyline connectors enable creation of multi-segment connections with straight lines and angled vertices. Users can interactively add control points by clicking on the diagram canvas. To draw polyline connectors, set the `drawingObject` type as **Polyline**. The following example illustrates drawing a polyline connector.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -128,7 +129,7 @@ N> To make the segment thumb visible, inject the [`ConnectorEditing`](https://ej
 
 ### Freehand Drawing
 
-The diagram supports free-hand drawing, allowing users to draw anything independently on the diagram page. Free-hand drawing is enabled by setting the type of the `drawingObject` property to '`Freehand`'.
+The diagram supports free-hand drawing, allowing users to create a freehand-drawn connector path on the diagram page. Free-hand drawing is enabled by setting the type of the `drawingObject` property to '`Freehand`'.
 
 The following code illustrates how to perform freehand drawing:
 
@@ -157,7 +158,7 @@ The following table shows the precedence order from highest to lowest priority:
 
 |Precedence|Tool|Description|
 |----------|-----|-----------|
-|1st|ContinuesDraw|Enables continuous drawing mode. Once activated, prevents all other interactions until deactivated.|
+|1st|ContinuousDraw|Enables continuous drawing mode. Once activated, keeps the drawing tool active after each draw.|
 |2nd|DrawOnce|Allows drawing a single element. After completion, automatically enables SingleSelect and MultipleSelect tools.|
 |3rd|ZoomPan|Enables diagram panning. When combined with SingleSelect, panning activates when cursor hovers over empty diagram areas.|
 |4th|MultipleSelect|Enables selection of multiple elements. When combined with ZoomPan, selection takes priority over panning when hovering over elements.|
@@ -183,9 +184,13 @@ The pan tool enables users to navigate large diagrams by dragging the view area.
 
 N> Please note that panning the diagram is not possible when 'multiplePage' is set to false if any diagram object (node or connector) is outside the defined page break area.
 
+N> Combine `ZoomPan` with `SingleSelect` or `MultipleSelect` to enable simultaneous pan and select behavior. See the [precedence table](#tool-precedence-hierarchy) for priority order.
+
 ## Events
 
 The [`elementDraw`](https://ej2.syncfusion.com/react/documentation/api/diagram#elementdraw) event triggers whenever users create nodes or connectors using drawing tools. This event provides access to the newly created element and enables custom logic during the drawing process:
+
+N> For other diagram events such as `collectionChange` and `click`, see the [Diagram events](./nodes-events) topic.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

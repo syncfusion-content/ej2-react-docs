@@ -41,15 +41,15 @@ The `association` property allows you to define the type of association. The fol
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Association-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Association-cs1" %}
 
 The following table demonstrates the visual representation of association flows.
 
 | Association | Image |
 | -------- | -------- |
-| Default | ![Default BPMN FlowShapes](images/Default1.png) |
-| Directional | ![Directional BPMN FlowShapes](images/Directional1.png) |
-| BiDirectional | ![BiDirectional BPMN FlowShapes](images/BiDirectional.png) |
+| Directional | ![Directional BPMN Flow Shape](images/Directional1.png) |
+| BiDirectional | ![BiDirectional BPMN Flow Shape](images/BiDirectional.png) |
+| Default | ![Default BPMN Flow Shape](images/Default1.png) |
 
 N> The default value for the property `association` is **default**.
 
@@ -74,15 +74,15 @@ The `sequence` property allows you to define the type of sequence flow. The foll
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Sequence-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Sequence-cs1" %}
 
 The following table contains various representations of sequence flows:
 
 | Sequence | Image |
 | -------- | -------- |
-| Default | ![Default Sequence BPMN Shpae](images/Default2.png) |
-| Conditional | ![Conditional Sequence BPMN Shpae](images/Conditional.png) |
-| Normal | ![Normal Sequence BPMN Shpae](images/Normal.png) |
+| Normal | ![Normal Sequence BPMN Shape](images/Normal.png) |
+| Conditional | ![Conditional Sequence BPMN Shape](images/Conditional.png) |
+| Default | ![Default Sequence BPMN Shape](images/Default2.png) |
 
 N> The default value for the property `sequence` is **normal**.
 
@@ -107,14 +107,20 @@ The `message` property allows you to define the type of message flow. The follow
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Message-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/bpmnShapes/es5Message-cs1" %}
 
 The following table contains various representations of message flows:
 
 | Message | Image |
 | -------- | -------- |
-| Default | ![Default Message BPMN Shape](images/Message-default.png) |
 | InitiatingMessage | ![InitiatingMessage Message BPMN Shape](images/IMessage.png) |
 | NonInitiatingMessage | ![NonInitiatingMessage Message BPMN Shape](images/NIMessage.png) |
+| Default | ![Default Message BPMN Shape](images/Message-default.png) |
 
 N> The default value for the property `message` is **default**.
+
+## See also
+
+* [BPMN Activities](./bpmn-activities)
+* [BPMN Events](./bpmn-events)
+* [BPMN Shapes](./bpmn-shapes)

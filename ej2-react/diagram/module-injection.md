@@ -14,29 +14,29 @@ The Diagram component is divided into feature-based modules. To enable a specifi
 
 ## Available Modules
 
-The following table lists commonly used modules and their purposes:
+The following list shows commonly used modules and their purposes:
 
+* `AvoidLineOverlapping` - Inject this provider to prevent connector lines from overlapping.
 * `BpmnDiagrams` - Inject this provider to add built-in BPMN Shapes to diagrams.
+* `ComplexHierarchicalTree` - Inject this provider to use complex hierarchical tree-like structures.
 * `ConnectorBridging` - Inject this provider to add bridges to connectors.
 * `ConnectorEditing` - Inject this provider to edit the segments for connectors.
-* `ComplexHierarchicalTree` - Inject this provider to use complex hierarchical tree-like structures.
 * `DataBinding` - Inject this provider to populate nodes from given data source.
 * `DiagramCollaboration` - Inject this provider to enable real-time collaborative editing features.
 * `DiagramContextMenu` - Inject this provider to manipulate context menu.
+* `Ej1Serialization` - Inject this provider to load ej1 diagram json in ej2 diagram.
+* `FlowchartLayout` - Inject this provider to use flowchart-style layouts.
 * `HierarchicalTree` - Inject this provider to use hierarchical tree-like structures.
+* `ImportAndExportVisio` - Inject this provider to import and export Visio diagrams.
 * `LayoutAnimation` - Inject this provider to add animation to layouts.
+* `LineDistribution` - Inject this provider to distribute connector lines evenly.
+* `LineRouting` - Inject this provider to route connectors automatically and avoid overlapping.
 * `MindMap` - Inject this provider to use mind map layouts.
 * `PrintAndExport` - Inject this provider to print or export the objects.
 * `RadialTree` - Inject this provider to use radial tree-like structures.
-* `Snapping` - Inject this provider to snap the objects.
-* `SymmetricLayout` - Inject this provider to render layouts in symmetrical method.
-* `UndoRedo` - Inject this provider to revert and restore the changes.
-* `Ej1Serialization` - Inject this provider to load ej1 diagram json in ej2 diagram.
-* `LineRouting` - Inject this provider to route connectors automatically and avoid overlapping.
-* `AvoidLineOverlapping` - Inject this provider to prevent connector lines from overlapping.
-* `LineDistribution` - Inject this provider to distribute connector lines evenly.
-* `FlowchartLayout` - Inject this provider to use flowchart-style layouts.
-* `ImportAndExportVisio` - Inject this provider to import and export Visio diagrams.
+* `Snapping` - Inject this provider to snap objects to grid lines during interaction.
+* `SymmetricLayout` - Inject this provider to render layouts symmetrically.
+* `UndoRedo` - Inject this provider to undo and redo changes.
 
 ## Inject Modules into Diagram
 

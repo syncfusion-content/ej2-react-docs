@@ -4,6 +4,12 @@ import * as ReactDOM from 'react-dom';
 import { DiagramComponent, Inject, DataBinding, HierarchicalTree } from "@syncfusion/ej2-react-diagrams";
 import { DataManager, Query } from "@syncfusion/ej2-data";
 
+//Uses layout to auto-arrange nodes on the diagram page
+let layout = {
+    //Sets layout type
+    type: 'HierarchicalTree'
+};
+
 //Initializes data source
 let data = [
     { Name: "Steve-Ceo" },
@@ -17,6 +23,13 @@ let data = [
 
 let items = new DataManager(data, new Query().take(7));
 
+//Configures data source for diagram
+let dataSourceSettings = {
+    id: 'Name',
+    parentId: 'ReportingPerson',
+    dataSource: items
+};
+
 export default function App() {
 
     return (
@@ -27,17 +40,10 @@ export default function App() {
                 height={"550px"}
 
                 //Uses layout to auto-arrange nodes on the diagram page
-                layout={{
-                    //Sets layout type
-                    type: 'HierarchicalTree'
-                }}
+                layout={layout}
 
                 //Configures data source for diagram
-                dataSourceSettings={{
-                    id: 'Name',
-                    parentId: 'ReportingPerson',
-                    dataSource: items
-                }}
+                dataSourceSettings={dataSourceSettings}
 
                 //Sets the default properties for nodes
                 getNodeDefaults={(node) => {

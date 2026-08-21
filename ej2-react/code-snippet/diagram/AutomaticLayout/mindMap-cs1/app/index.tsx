@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { DiagramComponent, Inject, ConnectorModel, DataBinding, NodeModel, MindMap } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, Inject, ConnectorModel, DataBinding, NodeModel, MindMap, LayoutModel, DataSourceModel } from "@syncfusion/ej2-react-diagrams";
 import { DataManager, Query } from "@syncfusion/ej2-data";
 
 //Initializes data source
@@ -18,12 +18,12 @@ let data: object[] = [
   { id: 9, Label: "Text Block", parentId: 5 },
 ];
 let items: DataManager = new DataManager(data as JSON[], new Query().take(7));
-const layout = {
+const layout: LayoutModel = {
   //Sets layout type
   type: "MindMap",
   orientation: "Horizontal"
 };
-const dataSourceSettings = {
+const dataSourceSettings: DataSourceModel = {
   id: "id",
   parentId: "parentId",
   dataManager: items,
