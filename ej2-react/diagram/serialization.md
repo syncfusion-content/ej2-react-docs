@@ -31,17 +31,19 @@ The [`saveDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/i
 
 The following code illustrates how to save the diagram:
 
-```ts
+```
 
 let saveData: string;
-//returns serialized string of the Diagram
+// Returns the serialized JSON string of the diagram.
 saveData = diagramInstance.saveDiagram();
 
 ```
 
+N> The `saveDiagram()` method returns an empty string when the diagram contains no elements.
+
 The serialized JSON string can be stored in various storage systems. The following example demonstrates local storage implementation:
 
-```ts
+```
 //Saves the string in to local storage
 localStorage.setItem('fileName', saveData);
 
@@ -60,7 +62,7 @@ The diagram can also be saved as raster or vector image files. For more informat
 
 The [`loadDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaddiagram) method recreates the diagram from serialized JSON data. This method accepts the previously saved JSON string as a parameter.
 
-```ts
+```
 
 /*
  * Loads the diagram from saved JSON data.
@@ -73,17 +75,21 @@ diagramInstance.loadDiagram(saveData);
 
 N> Before loading a new diagram, the existing diagram content is automatically cleared.
 
+N> To load diagrams created with Essential JS 1, pass `true` as the second parameter. See [Migrating from ej1](./ej1-migration).
+
 ### Handling Load Completion
 
 The [`loaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaded) event triggers when all diagram elements finish loading through the [`loadDiagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaddiagram) method. Use this event to perform post-load customizations or validations.
 
-```ts
+```
+<DiagramComponent
   loaded={(args) => {
-      //You can use this event to customize diagram elements during the loading process
+      // Customize diagram elements after loading is complete
   }}
-
+/>
 ```
 
+Refer to the [`loaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaded) event arguments for customizing diagram elements after load.
 
 The loaded event provides the following arguments:
 
@@ -114,13 +120,13 @@ When enabled, only explicitly set properties are included in the JSON output, si
 {% endhighlight %}
 {% endtabs %}
 
-## Detect unsaved changes
+## Detect Unsaved Changes
 
 The [`isModified`](https://ej2.syncfusion.com/react/documentation/api/diagram#ismodified) property indicates whether the diagram has unsaved changes. It becomes **true** when the diagram is changed, such as when nodes, connectors, or diagram properties are updated, or when undo and redo actions are performed.
 
 This property can be used to show save indicators or to display a warning before unsaved changes are discarded.
 
-```ts
+```
 // Check whether the diagram has unsaved changes.
 if (diagramInstance.isModified) {
     const confirmed = confirm('There are unsaved changes. Discard them?');
@@ -130,6 +136,8 @@ if (diagramInstance.isModified) {
     }
 }
 ```
+
+N> The `confirm()` call above is illustrative; replace it with your application's confirmation dialog.
 
 N> Transient interactions such as zooming, panning, or selecting elements do not affect the `isModified` state.
 
@@ -142,7 +150,9 @@ JSON files can be uploaded and processed using the uploader component. Configure
 The uploader requires:
 - `saveUrl` property for receiving and storing uploaded files.
 - `removeUrl` property for handling file deletion operations.
-- File parsing logic to extract JSON data from uploaded files.
+- Parse the uploaded file to extract the JSON diagram data for loading.
+
+For more on configuring the uploader, see the [Uploader component](https://ej2.syncfusion.com/react/documentation/uploader/getting-started) documentation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -164,15 +174,17 @@ The [`Diagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/index
 
 This functionality supports:
 - Mind maps
-- Flowcharts  
+- Flowcharts
 - UML sequence diagrams
+
+For supported Mermaid syntax, refer to the [Mermaid documentation](https://mermaid.js.org/intro/). Only a subset of syntax is supported for Flowchart, Mind map, and UML Sequence layouts.
 
 ### Saving Diagrams as Mermaid Syntax
 
 The [`saveDiagramAsMermaid`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#savediagramasmermaid) method converts compatible diagrams into Mermaid syntax format. This method works specifically with Flowchart and Mind map layouts.
 
- ```javascript
-//returns the serialized Mermaid string of the Diagram
+```
+// Returns the serialized Mermaid string of the diagram.
 let data = diagramInstance.saveDiagramAsMermaid();
 
 ```
@@ -180,7 +192,6 @@ let data = diagramInstance.saveDiagramAsMermaid();
 ### Load Diagram from Mermaid Syntax
 
 The [`loadDiagramFromMermaid`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#loaddiagramfrommermaid) method creates diagrams from Mermaid syntax data, automatically generating the appropriate layout and styling.
-data.
 
 #### Load Flowchart Layout
 

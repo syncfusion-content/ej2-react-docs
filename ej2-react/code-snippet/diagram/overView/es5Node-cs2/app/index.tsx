@@ -35,7 +35,7 @@ function App() {
         id="overview"
         sourceID="container"
         width={'300px'}
-        height={'150ppx'}
+        height={'150px'}
       />
     </div>
   </div>

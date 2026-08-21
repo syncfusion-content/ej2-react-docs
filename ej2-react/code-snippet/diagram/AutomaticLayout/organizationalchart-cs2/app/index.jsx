@@ -125,6 +125,12 @@ let connectors = [
     },
 ];
 
+//Uses layout to auto-arrange nodes on the diagram page
+const layout = {
+    //set layout type
+    type: 'OrganizationalChart'
+};
+
 export default function App() {
     return (
         <DiagramComponent
@@ -136,10 +142,7 @@ export default function App() {
             snapSettings={{ constraints: 0 }}
 
             //Uses layout to auto-arrange nodes on the diagram page
-            layout={{
-                //set layout type
-                type: 'OrganizationalChart'
-            }}
+            layout={layout}
 
             //Sets the default properties for nodes
             getNodeDefaults={(node) => {

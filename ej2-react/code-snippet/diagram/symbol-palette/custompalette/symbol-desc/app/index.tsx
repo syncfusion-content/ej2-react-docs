@@ -38,7 +38,7 @@ export function getBasicShapes(): NodeModel[] {
     ];
     return basicShapes;
 }
-const palettes: PaletteModel = [{
+const palettes: PaletteModel[] = [{
     id: 'basic',
     symbols: getBasicShapes(),
     title: 'Basic Shapes',

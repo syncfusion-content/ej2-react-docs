@@ -57,6 +57,24 @@ export function getUmlShapes() {
     ];
     return umlShapes;
 }
+//Sets the symbol margin
+const symbolMargin = {
+    left: 12,
+    right: 12,
+    top: 12,
+    bottom: 12,
+};
+
+//Initializes the palettes for the symbol palette
+const palettes = [
+    {
+        id: 'uml',
+        expanded: true,
+        symbols: getUmlShapes(),
+        title: 'UML Shapes',
+    },
+];
+
 //Initializes the symbol palette
 let diagramInstance;
 function App() {
@@ -65,26 +83,13 @@ function App() {
             <div id="palette-space" className="sb-mobile-palette">
             <SymbolPaletteComponent
                 id="container"
-                palettes={[
-                {
-                    id: 'uml',
-                    expanded: true,
-                    symbols: getUmlShapes(),
-                    title: 'UML Shapes',
-                },
-                ]}
+                palettes={palettes}
                 symbolHeight={80}
                 symbolWidth={80}
+                symbolMargin={symbolMargin}
                 getNodeDefaults={(symbol) => {
                 symbol.width = 100;
                 symbol.height = 100;
-                }}
-                //Sets the margin of the dragging helper relative to the mouse cursor
-                symbolMargin={{
-                left: 12,
-                right: 12,
-                top: 12,
-                bottom: 12,
                 }}
                 getSymbolInfo={(symbol) => {
                 //Defines the symbol description

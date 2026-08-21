@@ -109,6 +109,19 @@ let data = [
 
 let items = new DataManager(data, new Query().take(7));
 
+//Uses layout to auto-arrange nodes on the diagram page
+const layout = {
+    //set layout type
+    type: 'OrganizationalChart'
+};
+
+//Configures data source for diagram
+const dataSourceSettings = {
+    id: 'Id',
+    parentId: 'Team',
+    dataSource: items
+};
+
 export default function App() {
     return (
         <DiagramComponent
@@ -118,17 +131,10 @@ export default function App() {
             snapSettings={{ constraints: 0 }}
 
             //Uses layout to auto-arrange nodes on the diagram page
-            layout={{
-                //set layout type
-                type: 'OrganizationalChart'
-            }}
+            layout={layout}
 
             //Configures data source for diagram
-            dataSourceSettings={{
-                id: 'Id',
-                parentId: 'Team',
-                dataSource: items
-            }}
+            dataSourceSettings={dataSourceSettings}
 
             //Sets the default properties for nodes
             getNodeDefaults={(node) => {

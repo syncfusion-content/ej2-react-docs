@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { DiagramComponent, Inject, NodeModel, ConnectorModel, DataBinding, FlowchartLayout } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, Inject, NodeModel, ConnectorModel, DataBinding, FlowchartLayout, LayoutModel } from "@syncfusion/ej2-react-diagrams";
 
 
 //Initialize nodes for diagram
@@ -21,7 +21,7 @@ let connectors: ConnectorModel[] = [
   { id: 'connector4', sourceID: '4', targetID: '5', },
 ];
 
-const layout = {
+const layout: LayoutModel = {
   //Sets layout type
   type: 'Flowchart',
 

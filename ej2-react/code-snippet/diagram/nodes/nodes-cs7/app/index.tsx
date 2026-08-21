@@ -22,6 +22,7 @@ function App() {
       else{
         diagramInstance.nodes[0].style.fill = '#6AA8D7';
       }
+      diagramInstance.dataBind();
   };
   const size = () => {
     if(diagramInstance.nodes[0].width === 100){
@@ -30,6 +31,7 @@ function App() {
       else{
         diagramInstance.nodes[0].width =100;
       }
+      diagramInstance.dataBind();
   };
   return (
     <div>

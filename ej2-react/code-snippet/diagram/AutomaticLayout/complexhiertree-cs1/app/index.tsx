@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { DiagramComponent, Inject, NodeModel, ConnectorModel, DataBinding,
-  ComplexHierarchicalTree } from "@syncfusion/ej2-react-diagrams";
+  ComplexHierarchicalTree, LayoutModel } from "@syncfusion/ej2-react-diagrams";
 
 
 //Initialize nodes for diagram
@@ -25,6 +25,12 @@ let connectors: ConnectorModel[] = [
   { id: 'node5-node6', sourceID: 'node6', targetID: 'node7' },
 ];
 
+//Initialize layout settings for the diagram
+const layout: LayoutModel = {
+  //Sets layout type
+  type: 'ComplexHierarchicalTree',
+};
+
 export default function App() {
 
   return (
@@ -37,10 +43,7 @@ export default function App() {
         connectors={connectors}
 
         //Uses layout to auto-arrange nodes on the diagram page
-        layout={{
-          //Sets layout type
-          type: 'ComplexHierarchicalTree',
-        }}
+        layout={layout}
 
         //Sets the default properties for nodes
         getNodeDefaults={(node: NodeModel) => {

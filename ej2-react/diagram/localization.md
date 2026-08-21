@@ -14,7 +14,15 @@ The EJ2 React Diagram component supports localization functionality, allowing de
 
 ## Localize Diagram Context Menu
 
-To localize the diagram context menu, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#locale) property of the diagram with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
+To localize the diagram context menu, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#locale) property of the diagram with our preferred culture. In the example below, we use **'de-DE'**, which is the locale code for German as used in Germany.
+
+First, import the required modules from `@syncfusion/ej2-base`:
+
+```
+import { setCulture, L10n } from '@syncfusion/ej2-base';
+```
+
+The following code example shows how to set the `locale` property of the diagram to 'de-DE':
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -26,7 +34,7 @@ Next, call the `setCulture('de')` function to set the default culture for all EJ
 
 Define the localized text for the context menu items to replace the default English text:
 
-```javascript
+```
 
 // Set the default culture to German
 setCulture('de')
@@ -34,23 +42,23 @@ setCulture('de')
 // Load locale text for the diagram context menu
 L10n.load({
   'de-DE': {
-    diagram: {
-      Cut: 'Corte',
-      Copy: 'Copia',
-      Paste: 'Pasta',
-      Undo: 'Deshacer',
-      Redo: 'Rehacer',
-      SelectAll: 'Seleccionar todo',
-      Grouping: 'Agrupación',
-      Group: 'Grupo',
-      Ungroup: 'Desagrupar',
-      Order: 'Fin',
-      BringToFront: 'Traer a delante',
-      MoveForward: 'Movimiento adelante',
-      SendToBack: 'Enviar a espalda',
-      SendBackward: 'Enviar hacia atrás',
-    },
-  },
+      diagram: {
+      Cut: 'Ausschneiden',
+      Copy: 'Kopieren',
+      Paste: 'Einfügen',
+      Undo: 'Rückgängig',
+      Redo: 'Wiederholen',
+      SelectAll: 'Alle auswählen',
+      Grouping: 'Gruppierung',
+      Group: 'Gruppe',
+      Ungroup: 'Gruppierung aufheben',
+      Order: 'Reihenfolge',
+      BringToFront: 'In den Vordergrund',
+      MoveForward: 'Nach vorne',
+      SendToBack: 'In den Hintergrund',
+      SendBackward: 'Nach hinten'
+      }
+  }
 });
 
 ```
@@ -66,7 +74,7 @@ The following code example demonstrates the complete locale settings for the con
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/localization/es5localeContextMenu-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/localization/es5localeContextMenu-cs1" %}
 
 ## Localize Symbol Palette
 
@@ -76,7 +84,7 @@ To localize the symbol palette search box, define the [`locale`](https://ej2.syn
 
 The following code demonstrates symbol palette localization:
 
-```javascript
+```
 // Set the default culture to German
 setCulture('de')
 
@@ -94,7 +102,7 @@ L10n.load({
     //Set locale
     locale='de-DE'
     enableSearch={true}
-    expandMode={"Multiple"} 
+    expandMode={"Multiple"}
     palettes={[
             {
                 id: "basic",
@@ -119,7 +127,7 @@ The following code example summarizes the locale settings for the symbol palette
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/diagram/localization/es5localeSymbolpalette-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/localization/es5localeSymbolpalette-cs1" %}
 
 Refer [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) for more information.
 

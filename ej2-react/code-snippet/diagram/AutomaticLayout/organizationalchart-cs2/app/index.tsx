@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { DiagramComponent, Inject, ConnectorModel, DataBinding, NodeModel, HierarchicalTree } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, Inject, ConnectorModel, DataBinding, NodeModel, HierarchicalTree, LayoutModel } from "@syncfusion/ej2-react-diagrams";
 
 
 //Initialize nodes for diagram
@@ -126,6 +126,12 @@ let connectors: ConnectorModel[] = [
   },
 ];
 
+//Uses layout to auto-arrange nodes on the diagram page
+const layout: LayoutModel = {
+  //set layout type
+  type: 'OrganizationalChart'
+};
+
 export default function App() {
   return (
     <DiagramComponent
@@ -137,10 +143,7 @@ export default function App() {
       snapSettings={{ constraints: 0 }}
 
       //Uses layout to auto-arrange nodes on the diagram page
-      layout={{
-        //set layout type
-        type: 'OrganizationalChart'
-      }}
+      layout={layout}
 
       //Sets the default properties for nodes
       getNodeDefaults={(node: NodeModel) => {
