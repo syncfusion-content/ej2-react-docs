@@ -57,7 +57,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are av
 npm install @syncfusion/ej2-react-schedule --save
 ```
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-Themes for Syncfusion® React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more detail.
+Themes for Syncfusion React components can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more detail.
 
 This example demonstrates importing the `Bootstrap` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/`:
 
@@ -78,7 +78,7 @@ require('@syncfusion/ej2-schedule/styles/bootstrap5.css');
 {% endhighlight %}
 {% endtabs %}
 
-Update the TypeScript configuration `tsconfig.json` to map Syncfusion package paths for proper module resolution in the SPFx project:
+Update the TypeScript configuration to map Syncfusion package paths for proper module resolution in the SPFx project:
 
 {% tabs %}
 {% highlight json tabtitle="tsconfig.json" %}

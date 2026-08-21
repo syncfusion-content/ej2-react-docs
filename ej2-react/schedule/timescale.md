@@ -13,8 +13,8 @@ domainurl: ##DomainURL##
 Time slots are the cells displayed in the Day, Week, and Work Week views of the Scheduler (in vertical views on the leftmost position and in timeline views at the top). The [`timeScale`](https://ej2.syncfusion.com/react/documentation/api/schedule#timescale) property lets you control the duration of these slots. It includes these sub-options:
 
 * [`enable`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#enable) - When set to `true`, allows the Scheduler to display the appointments accurately against the exact time duration. If set to `false`, all the appointments of a day will be displayed one below the other with no grid lines displayed. Its default value is `true`.
-* [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#interval) – Defines the time duration on which the time axis to be displayed either in 1 hour or 30 minutes interval and so on. It accepts the values in minutes and defaults to 60.
-* [`slotCount`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#slotcount) – Decides the number of slot count to be split for the specified time interval duration. It defaults to 2, thus displaying two slots to represent an hour(each slot depicting 30 minutes duration).
+* [`interval`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#interval) - Defines the time duration on which the time axis to be displayed either in 1 hour or 30 minutes interval and so on. It accepts the values in minutes and defaults to 60.
+* [`slotCount`](https://ej2.syncfusion.com/react/documentation/api/schedule/timeScale#slotcount) - Decides the number of slot count to be split for the specified time interval duration. It defaults to 2, thus displaying two slots to represent an hour(each slot depicting 30 minutes duration).
 
 >Note: The upper limit for rendering slots within a single day, utilizing the **interval** and **slotCount** properties of the **timeScale**, stands at 1000. This constraint aligns with the maximum **colspan** value permissible for the **table** element, also capped at 1000. This particular restriction is relevant exclusively to the `TimelineDay`, `TimelineWeek` and `TimelineWorkWeek` views.
 
@@ -90,7 +90,7 @@ By default, Scheduler indicates current date with a highlighted date header on a
 {% include code-snippet/schedule/timescale-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/schedule/timescale-cs4" %}
 
 > You can refer to our [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/material/schedule/overview) to knows how to present and manipulate data.
