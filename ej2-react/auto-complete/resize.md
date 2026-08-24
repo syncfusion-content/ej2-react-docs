@@ -25,6 +25,9 @@ You can dynamically adjust the size of the popup in the AutoComplete component b
 {% endtabs %}
 
 
+ {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs30" %}
+
+
 `[Functional-component]`
 
 {% tabs %}
@@ -36,6 +39,8 @@ You can dynamically adjust the size of the popup in the AutoComplete component b
 {% endhighlight %}
 {% endtabs %}
 
+
+ {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs31" %}
 
 
 ![Resizing in AutoComplete Component](../images/autocomplete-resize.gif)

@@ -52,7 +52,8 @@ When the user clicks the submit button, the renderer validates the form. If vali
 
 The following example renders a Form Renderer with email, password, and remember-me fields, along with a submit button. When the user clicks **Submit**, the `submit` event is raised with the form data and the validation status:
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
 import { FormRendererComponent, Schema } from '@syncfusion/ej2-react-form-renderer';
 
 export default function App() {
@@ -117,7 +118,8 @@ export default function App() {
     <FormRendererComponent schema={schema} submit={onSubmit} />
   );
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Resetting the form
 
@@ -142,7 +144,8 @@ The `reset` button does not raise an event. Clicking it triggers the browser's n
 
 The following example renders a Form Renderer with email, password, and remember-me fields, along with a reset button. When the user clicks **Reset**, every field is restored to its initial state:
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
 import { FormRendererComponent, Schema } from '@syncfusion/ej2-react-form-renderer';
 
 export default function App() {
@@ -201,7 +204,8 @@ export default function App() {
     <FormRendererComponent schema={schema} />
   );
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Adding custom click actions
@@ -233,7 +237,8 @@ When the user clicks a `buttonType: "button"` button, the renderer raises the `b
 
 The following example renders a Form Renderer with email, password, and remember-me fields, along with a custom click button. When the user clicks **Cancel**, the `buttonClick` event is raised with the button's name, label, and the original click event:
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
 import { FormRendererComponent, Schema } from '@syncfusion/ej2-react-form-renderer';
 
 export default function App() {
@@ -296,7 +301,8 @@ export default function App() {
     <FormRendererComponent schema={schema} buttonClick={onButtonClick} />
   );
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Detecting the field change
 
@@ -319,7 +325,8 @@ When the value of a field changes, the renderer:
 
 The following example renders a Form Renderer with textbox and checkbox fields. Whenever the value of any field changes, the `change` event is raised with the changed field's name, label, and new value:
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
 import { FormRendererComponent, Schema } from '@syncfusion/ej2-react-form-renderer';
 
 export default function App() {
@@ -371,7 +378,8 @@ export default function App() {
     <FormRendererComponent schema={schema} change={onChange} />
   );
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Customizing the form once the control is rendered
 
@@ -379,7 +387,8 @@ The `created` event fires **once**, after the form has finished rendering and ev
 
 The following example renders a Form Renderer with email, password, and remember-me fields. Once the form has finished rendering, the `created` event is raised with an empty payload:
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
 import { FormRendererComponent, Schema } from '@syncfusion/ej2-react-form-renderer';
 
 export default function App() {
@@ -431,7 +440,8 @@ export default function App() {
     <FormRendererComponent schema={schema} created={onCreated} />
   );
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 
 ## See also

@@ -1059,7 +1059,7 @@ If issues persist, use the browser's **Developer Tools** (**F12**) to inspect th
 
 ## Complete sample repository
 
-For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-with-express-server).
+For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-table-express-server).
 
 ## See also
 

@@ -994,7 +994,7 @@ If the issue continues, use the browser's **Developer Tools** (**F12**) and revi
 
 ## Complete sample repository
 
-For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-with-nextjs-server).
+For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-table-nextjs-server).
 
 ## See also
 

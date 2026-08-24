@@ -1048,7 +1048,7 @@ If the issue continues, use the browser's **Developer Tools** (**F12**) to inspe
 
 ## Complete sample repository
 
-For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-with-flask-api).
+For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-table-flask-api).
 
 ## See also
 
