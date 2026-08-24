@@ -54,7 +54,7 @@ A title can be added to an axis using the [`title`](https://ej2.syncfusion.com/r
 
 ## Title Rotation
 
-The orientation of the axis title can be adjusted using the [`titleRotation`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#titlerotation) property. This property supports rotation values from 0 to 360 degrees, allowing better alignment based on the chart layout and available space.
+The orientation of the axis title can be adjusted using the [`titleRotation`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#titlerotation) property. This property supports rotation in degrees, with a default value of `0`, allowing better alignment based on the chart layout and available space. It applies to both the X and Y axes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -75,7 +75,7 @@ The orientation of the axis title can be adjusted using the [`titleRotation`](ht
 
 ## Tick Lines Customization
 
-The appearance of both major and minor tick lines can be customized using the [`majorTickLines`](https://ej2.syncfusion.com/react/documentation/api/chart/majorTickLines) and [`minorTickLines`](https://ej2.syncfusion.com/react/documentation/api/chart/minorTickLines) properties. These properties allow customization of the `width`, `color`, and `size` of tick lines to enhance chart readability.
+The appearance of both major and minor tick lines can be customized using the [`majorTickLines`](https://ej2.syncfusion.com/react/documentation/api/chart/majorTickLines) and [`minorTickLines`](https://ej2.syncfusion.com/react/documentation/api/chart/minorTickLines) properties. These properties allow customization of the `width`, `color`, and `height` of tick lines to enhance chart readability. Note that minor tick lines are rendered only when [`minorTicksPerInterval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#minorticksperinterval) is set on the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -96,7 +96,7 @@ The appearance of both major and minor tick lines can be customized using the [`
 
 ## Grid Lines Customization
 
-Grid lines can be styled using the [`majorGridLines`](https://ej2.syncfusion.com/react/documentation/api/chart/majorGridLines) and [`minorGridLines`](https://ej2.syncfusion.com/react/documentation/api/chart/minorGridLines) properties. These options support customization of `width`, `color`, and `dashArray`, helping users distinguish data points and scales more effectively.
+Grid lines can be styled using the [`majorGridLines`](https://ej2.syncfusion.com/react/documentation/api/chart/majorGridLines) and [`minorGridLines`](https://ej2.syncfusion.com/react/documentation/api/chart/minorGridLines) properties. These options support customization of `width`, `color`, and `dashArray` (for example, `"5,5"` to produce a dashed pattern), helping users distinguish data points and scales more effectively. Note that minor grid lines are rendered only when [`minorTicksPerInterval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#minorticksperinterval) is set on the axis.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -117,7 +117,7 @@ Grid lines can be styled using the [`majorGridLines`](https://ej2.syncfusion.com
 
 ## Multiple Axis
 
-In addition to the primary X and Y axes, multiple additional axes can be added to a chart. Each series can be associated with a specific axis by mapping it to the axis using a unique axis name. This is useful for visualizing datasets with different units or scales within the same chart.
+In addition to the primary X and Y axes, multiple additional axes can be added to a chart. Each series can be mapped to a specific axis using a unique axis name. This is useful for visualizing datasets with different units or scales within the same chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -138,7 +138,7 @@ In addition to the primary X and Y axes, multiple additional axes can be added t
 
 ## Inversed Axis
 
-When an axis is inversed, the highest value is displayed closer to the origin, and the lowest value appears farther away. This behavior can be enabled by setting the [`isInversed`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#isinversed) property to `true`. Inversed axes are commonly used in scenarios such as ranking or inverted value representations.
+When an axis is inversed, the highest value is displayed closer to the origin, and the lowest value appears farther away. This behavior can be enabled by setting the [`isInversed`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#isinversed) property to `true`. Inverted axes are commonly used in scenarios such as ranking or inverted value representations.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -160,6 +160,7 @@ When an axis is inversed, the highest value is displayed closer to the origin, a
 ## Opposed Position
 
 An axis can be placed on the opposite side of its default position by setting the [`opposedPosition`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#opposedposition) property to `true`. This option is useful when displaying multiple axes or when optimizing space usage in complex chart layouts.
+
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/chart/code-path/series/line-cs2/app/index.jsx %}

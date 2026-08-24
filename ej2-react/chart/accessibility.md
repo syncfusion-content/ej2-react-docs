@@ -41,11 +41,16 @@ The Chart component's accessibility compliance is outlined below.
 
 ## WAI-ARIA attributes
 
-The Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert) patterns to meet the accessibility. The following ARIA attributes are used in the Chart component:
+The Chart component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert) patterns to meet the accessibility requirements. The following ARIA attributes are used in the Chart component:
+
+**Roles:**
 
 * img (role)
 * button (role)
 * region (role)
+
+**Attributes:**
+
 * aria-label (attribute)
 * aria-hidden (attribute)
 * aria-pressed (attribute)
@@ -58,15 +63,15 @@ The Chart component follows the [keyboard interaction](https://www.w3.org/WAI/AR
 | <kbd>Alt + J</kbd> | Moves the focus to the chart element. |
 | <kbd>Tab</kbd> | Moves the focus to the next element in the chart. |
 | <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the chart. |
-| <kbd>Down Arrow</kbd> | Moves the focus to the data point left side from the selected point. |
-| <kbd>Up Arrow</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>Left Arrow</kbd> | Moves the focus to the next series in the chart. |
-| <kbd>Right Arrow</kbd> | Moves the focus to the previous series in the chart. |
-| <kbd>ESC</kbd> | Cancel the tooltip for the data point. |
+| <kbd>Down Arrow</kbd> | Moves the focus to the next data point from the selected point. |
+| <kbd>Up Arrow</kbd> | Moves the focus to the previous data point from the selected point. |
+| <kbd>Left Arrow</kbd> | Moves the focus to the previous series in the chart. |
+| <kbd>Right Arrow</kbd> | Moves the focus to the next series in the chart. |
+| <kbd>ESC</kbd> | Cancels the tooltip for the data point. |
 | <kbd>Enter/Space</kbd> | Selects the data point in the series. |
-| <kbd>Down/Left Arrow</kbd> | Moves the focus to the legend left side from the selected legend. |
-| <kbd>Up/Right Arrow</kbd> | Moves the focus to the legend right side from the selected legend. |
-| <kbd>Enter/Space</kbd> | Toggles the visibility of the corresponding series. |
+| <kbd>Down/Left Arrow</kbd> | When a legend item is focused, moves the focus to the previous legend item. |
+| <kbd>Up/Right Arrow</kbd> | When a legend item is focused, moves the focus to the next legend item. |
+| <kbd>Enter/Space</kbd> | When a legend item is focused, toggles the visibility of the corresponding series. |
 | <kbd>Ctrl + +</kbd> | Zoom in the chart. |
 | <kbd>Ctrl + -</kbd> | Zoom out the chart. |
 | <kbd>Down/Up Arrow</kbd> | Pan the chart vertically. |
@@ -85,3 +90,4 @@ The accessibility compliance of the Chart component is shown in the following sa
 ## See also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility)
+* [Accessibility customization in React Chart component](./advanced-accessibility-configuration)

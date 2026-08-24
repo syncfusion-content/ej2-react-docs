@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Custom color palette
 
-Customize the default color of series or points by providing a custom color palette using the  [`palettes`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#palettes) property.
+Customize the default color of series or points by providing a custom color palette using the [`palettes`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#palettes) property. The `palettes` property accepts an array of color strings that the chart applies in order to each series or point.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -37,7 +37,7 @@ The color of individual data point or data points within a range can be customiz
 
 ### Point color mapping
 
-You can bind the color for the points from [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/series#datasource) for the series using [`pointColorMapping`](https://ej2.syncfusion.com/react/documentation/api/chart/series#pointcolormapping) property.
+You can bind a color for each point from the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/series#datasource) of the series using the [`pointColorMapping`](https://ej2.syncfusion.com/react/documentation/api/chart/series#pointcolormapping) property. Each value in the mapped field is read as a valid CSS color string.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -102,9 +102,7 @@ Marker, data label, and fill color of individual data points can be customized u
 
 ## Chart area customization
 
-<!-- markdownlint-disable MD036 -->
-
-**Customize the chart background**
+### Customize the chart background
 
 <!-- markdownlint-disable MD013 -->
 Use the [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#background) and [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#border) properties on the chart to change its background color and border.
@@ -126,7 +124,7 @@ Use the [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs2" %}
 
-**Chart margin**
+### Chart margin
 
 Set the chart margin relative to its container using the [`margin`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#margin) property.
 
@@ -147,9 +145,9 @@ Set the chart margin relative to its container using the [`margin`](https://ej2.
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs3" %}
 
-**Chart area customization**
+### Plot area appearance
 
-To customize the plotting region (chart area), use the `chartArea` properties: [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAreaModel#background) and [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/chartareamodel#border) change the chart area's appearance, and [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAreaModel#width) adjusts its size.
+To customize the plotting region (chart area), use the `chartArea` properties: [`background`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAreaModel#background) and [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/chartareamodel#border) change the chart area's appearance. You can additionally set the plot area's [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/chartareamodel#width) and height to adjust its size.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -168,9 +166,9 @@ To customize the plotting region (chart area), use the `chartArea` properties: [
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/column-cs4" %}
 
-**Chart area margin**
+### Chart area margin
 
-You can customize the space between the chart area from its chart container through [`margin`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAreaModel#margin) property.
+You can customize the space between the chart area and its chart container through the [`margin`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAreaModel#margin) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -191,7 +189,7 @@ You can customize the space between the chart area from its chart container thro
 
 ## Animation
 
-Customize animation for a series using the [`animation`](https://ej2.syncfusion.com/react/documentation/api/chart/animationModel) property. Use `enable` to turn animation on or off; `duration` controls the animation length and `delay` sets when the animation starts.
+Customize animation for a series using the [`animation`](https://ej2.syncfusion.com/react/documentation/api/chart/animationModel) property. Use `enable` to turn animation on or off; `duration` controls the animation length, and `delay` sets when the animation starts.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -212,7 +210,7 @@ Customize animation for a series using the [`animation`](https://ej2.syncfusion.
 
 ### Fluid animation
 
-Fluid animation used to animate series with updated dataSource continues animation rather than animation whole series. You can customize animation for a particular series using [`animate`] method.
+Fluid animation is used to animate a series when its `dataSource` is updated, so the animation continues from the previous state rather than re-animating the whole series. You can customize animation for a particular series by calling the chart's [`animate`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#animate) method.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -234,4 +232,4 @@ Fluid animation used to animate series with updated dataSource continues animati
 
 ## See also
 
-* [Customize the series points using patterns](./how-to#customize-the-series-points-by-using-patterns)
+* [Customize the series points using patterns](./how-to/points-customization)

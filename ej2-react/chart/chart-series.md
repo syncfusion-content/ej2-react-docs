@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 ## Multiple Series
 
 Multiple series can be added to a chart by using the [`series`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel) property. Each series represents a distinct set of data, and all configured series are rendered in the same chart area for easy comparison.
-The series are rendered in the same order in which they are defined in the `series` collection. This ordering determines the visual stacking of series when multiple series overlap.
+
+The series are rendered in the same order in which they are defined in the `series` collection. This ordering controls the draw order of the series when they overlap; it does not, by itself, cause stacking. To stack series, use a stacking-compatible series type (for example, `StackingColumn`) and assign a common `stackingGroup` value to the related series. See the [`SeriesModel`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel) API for the full list of available series options such as [`xName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#xname), [`yName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#yname), [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#datasource), and [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#type).
+
+> Note: When configuring multiple series, make sure to inject the corresponding modules (for example, `ColumnSeries`, `LineSeries`, `Category`) into the `services` array. The sample below uses the [`Category`](https://ej2.syncfusion.com/react/documentation/api/chart/index-default#categorymodule) axis, so the `Category` module is required. For project setup, refer to the [Getting Started](getting-started) documentation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -34,7 +37,11 @@ The series are rendered in the same order in which they are defined in the `seri
 
 ## Combination Series
 
-A combination chart allows different series types, such as Line and Column, to be rendered together in a single chart. This is useful for comparing multiple datasets that have different visual representation requirements.
+A combination chart allows different series types, such as Column, Line, Spline, Area, and StackingColumn, to be rendered together in a single chart. This is useful for comparing multiple datasets that have different visual encodings on a shared set of category values.
+
+For combined series to align properly, all series must share a common `xName` (and corresponding X values) on the primary X axis. When the series have different value ranges, consider using a [Multiple Panes](multiple-panes) or a secondary Y axis.
+
+> Note: Bar series cannot be combined with other series types because Bar uses a transposed axis (`isTransposed: true`), which is incompatible with the standard axis orientation of the other series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -53,4 +60,9 @@ A combination chart allows different series types, such as Line and Column, to b
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/combination-cs1" %}
 
-> Note: Bar series cannot be combined with other series types because their axis orientation differs from other series.
+## See also
+
+* [Category Axis](category-axis) - Configure the X axis when sharing category values across series.
+* [Markers](data-markers) - Customize the appearance of points on combined series.
+* [Legend](legend) - Identify each series in a multi-series or combination chart.
+* [Multiple Panes](multiple-panes) - Render series with different value ranges on separate axes.
