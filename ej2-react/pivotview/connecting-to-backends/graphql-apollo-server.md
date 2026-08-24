@@ -1335,7 +1335,7 @@ If you encounter issues, use the browser's **Developer Tools** (**F12**) to insp
 
 ## Complete sample repository
 
-For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-with-apollo-server).
+For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-table-graphql-apollo).
 
 ## See Also
 

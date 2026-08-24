@@ -771,7 +771,7 @@ The following table lists common issues and their resolutions when working with 
 
 ## Complete sample repository
 
-For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/odatav4-adaptor-with-pivot-table).
+For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-table-odatav4-adaptor).
 
 ## See Also
 

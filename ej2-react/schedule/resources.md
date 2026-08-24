@@ -275,7 +275,7 @@ It groups the number of resources under each date and is applicable only on the 
 ## Working with shared events
 
 Multiple resources can share the same events. CRUD actions performed on one shared event instance are reflected across all related instances. To enable such option, set [`allowGroupEdit`](https://ej2.syncfusion.com/react/documentation/api/schedule/group#allowgroupedit) option to `true` within the [`group`](https://ej2.syncfusion.com/react/documentation/api/schedule/group) property. With this property enabled, a single appointment
-object will be maintained within the appointment collection, even if it is shared by more than one resource – whereas the resource fields of such appointment object will hold the IDs of the multiple resources.
+object will be maintained within the appointment collection, even if it is shared by more than one resource, whereas the resource fields of such appointment object will hold the IDs of the multiple resources.
 
 > Any actions such as create, edit or delete held on any one of the shared event instances, will be reflected on all other related instances visible on the UI.
 
@@ -510,7 +510,7 @@ Some of the default changes made for compact Scheduler to render in desktop devi
 * View options displayed in the Navigation drawer.
 * Plus icon is added to the header for new event creation.
 * Today icon is added to the header instead of the Today button.
-* With Multiple resources – only one resource has been shown to enhance the view experience of resource events details clearly. To switch to other resources, there is a TreeView on the left that lists all other available resources, clicking on which will display that particular resource and its related events.
+* With Multiple resources - only one resource has been shown to enhance the view experience of resource events details clearly. To switch to other resources, there is a TreeView on the left that lists all other available resources, clicking on which will display that particular resource and its related events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
