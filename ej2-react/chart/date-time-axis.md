@@ -54,7 +54,7 @@ The DateTimeCategory axis is used to render date-time values with non-linear int
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs3" %}
 
-> Note: To use the DateTimeCategory axis, inject `DateTimeCategory` into the `services` option and set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#valuetype) property of the axis to `DateTimeCategory`. The axis range can be controlled using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#maximum), and [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#interval) properties.
+> Note: To use the DateTimeCategory axis, inject the `DateTimeCategory` module via the `<Inject>` component (e.g., `<Inject services={[DateTimeCategory]} />`) and set the [`valueType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#valuetype) property of the axis to `DateTimeCategory`. The axis range can be controlled using the [`minimum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#minimum), [`maximum`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#maximum), and [`interval`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#interval) properties.
 
 ### Range
 
@@ -115,7 +115,8 @@ Padding can be applied to the minimum and maximum values of the axis range using
 * Round
 * Additional
 
-**DateTime – None**
+#### DateTime with None
+
 When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#rangepadding) property is set to `None`, the minimum and maximum values of the axis are calculated directly from the data values.
 
 {% tabs %}
@@ -135,7 +136,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs6" %}
 
-**DateTime – Round**
+#### DateTime with Round
 
 When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#rangepadding) property is set to `Round`, the minimum and maximum values are rounded to the nearest interval boundary. For example, if the minimum value is January 15 and the interval type is set to `Months` with an interval of `1`, the axis minimum is adjusted to January 1.
 
@@ -156,7 +157,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/cha
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/datetime-cs7" %}
 
-**DateTime – Additional**
+#### DateTime with Additional
 
 When the [`rangePadding`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#rangepadding) property is set to `Additional`, an additional interval is added before the minimum and after the maximum values of the axis range to provide extra spacing.
 
@@ -200,6 +201,8 @@ Date values displayed on the DateTime axis can be formatted using the [`labelFor
 
 The following table illustrates the output produced by applying commonly used date-time format strings to the `labelFormat` property.
 
+> Note: The actual label text depends on the page's culture/locale. 12-hour versus 24-hour time, the month/day order, and the day/month names are all affected by the current culture. Use the [`skeleton`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#skeleton) and [`skeletonType`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#skeletontype) properties for culture-aware formatting.
+
 <table>
 <tr>
 <td><b>Label Value</b></td>
@@ -229,12 +232,12 @@ The following table illustrates the output produced by applying commonly used da
 <td>new Date(2000, 03, 10)</td>
 <td>hm</td>
 <td>12:00 AM</td>
-<td>Time of the date value is displayed as label</td>
+<td>The time portion of the date value is displayed as the label (hour and minute)</td>
 </tr>
 <tr>
 <td>new Date(2000, 03, 10)</td>
 <td>hms</td>
 <td>12:00:00 AM</td>
-<td>Displays the abbreviated month name</td>
+<td>Displays time in hour:minute:second format</td>
 </tr>
 </table>

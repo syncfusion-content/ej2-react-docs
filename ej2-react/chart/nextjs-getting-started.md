@@ -19,12 +19,11 @@ Before getting started with the Next.js application, ensure the following prereq
 * [Node.js 18.17](https://nodejs.org/en) or later (required by Next.js 14/15).
 * [Next.js](https://nextjs.org) 14 or 15.
 * React 18 or 19.
-* `@syncfusion/ej2-react-charts` 27.2.x or later (compatible with React 18/19).
-* The application is compatible with macOS, Windows, and Linux operating systems.
+* `@syncfusion/ej2-react-charts` 30.x or later (compatible with React 18/19).
 
 ## Step 1: Create a Next.js application
 
-To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
+This guide uses the Next.js App Router. To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -41,7 +40,7 @@ yarn create next-app
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-chart`.
+1. Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-nextjs-chart`. When prompted, also select **TypeScript: Yes** so that the project uses the App Router with a `src/app/page.tsx` file.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -51,7 +50,7 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-2.Select the required packages.
+2. Select the required packages.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -61,9 +60,9 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-By selecting default packages, all essential packages for Next.js will be installed.
+By selecting the recommended Next.js defaults, all essential Next.js packages (App Router, TypeScript, ESLint, and Tailwind CSS) will be installed.
 
-3.Once complete the above mentioned steps to create `ej2-nextjs-chart`, navigate to the directory using the below command:
+3. Once the project is created, navigate to the project directory using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -84,7 +83,7 @@ Here, the [React Chart component](https://www.syncfusion.com/react-components/re
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npm install @syncfusion/ej2-react-charts --save
+npm install @syncfusion/ej2-react-charts
 
 {% endhighlight %}
 {% highlight bash tabtitle="YARN" %}
@@ -96,7 +95,9 @@ yarn add @syncfusion/ej2-react-charts
 
 ## Step 3: Add the Chart component
 
-Replace the contents of `src/app/page.tsx` with the following code. The example below uses typed data, registers the Syncfusion license, imports a theme stylesheet, and renders the chart as columns.
+Replace the contents of `src/app/page.tsx` with the following code. The example below uses typed data and renders the chart as columns.
+
+> To register a Syncfusion license, call `registerLicense('YOUR_LICENSE_KEY')` from `@syncfusion/ej2-base` at app startup. To apply a theme, import a stylesheet such as `@syncfusion/ej2-react-charts/styles/material.css`. Both are optional during local development but required for production builds.
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -120,6 +121,7 @@ export default function Home() {
     { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
     { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 },
   ];
+  // `as const` narrows the string literal to 'Category', matching Syncfusion's `ValueType` union type.
   const primaryXAxis = { valueType: 'Category' } as const;
 
   return (
@@ -157,11 +159,11 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-Open the URL printed in the terminal (for example, `http://localhost:3000/`) in a browser. The application displays the chart as shown below:
+Open the URL printed in the terminal (for example, `http://localhost:3000`) in a browser. If port 3000 is already in use, Next.js falls back to the next available port (for example, `http://localhost:3001`). The application displays the chart as shown in the following image:
 
 ![NextJS Chart in Next.js](./images/Getting-Started.png)
 
-To learn more about the functionality of the Chart component, refer to the [documentation](https://ej2.syncfusion.com/react/documentation/chart/getting-started#module-injection).
+To learn more about the functionality of the Chart component, refer to the [React Chart documentation](https://ej2.syncfusion.com/react/documentation/chart/getting-started).
 
 > [View the Next.js Chart sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-chart-component-in-nextjs).
 
@@ -169,6 +171,14 @@ To learn more about the functionality of the Chart component, refer to the [docu
 
 - **Chart does not render (blank page)**
   - Confirm `src/app/page.tsx` begins with `'use client';`.
+  - Confirm `registerLicense('YOUR_LICENSE_KEY')` is called with a valid key from the [Syncfusion License Dashboard](https://www.syncfusion.com/account/downloads). A missing or invalid key still renders, but logs a console warning.
+  - Verify that a theme stylesheet (for example, `@syncfusion/ej2-react-charts/styles/material.css`) is imported.
 
 - **`Module not found: Can't resolve '@syncfusion/ej2-react-charts'`**
   - Run `npm install @syncfusion/ej2-react-charts` (or `yarn add @syncfusion/ej2-react-charts`) in the project root.
+
+- **Hydration mismatch / `use client` error**
+  - Chart uses browser-only APIs and must be rendered in a Client Component. Ensure the file that exports the component begins with `'use client';` and that the component is not imported into a Server Component.
+
+- **Port 3000 is already in use**
+  - Next.js automatically falls back to the next available port (3001, 3002, and so on). Use the URL printed in the terminal output.

@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 The legend provides information about the series rendered in the chart and helps users identify each series by its color, shape, or style.
 
-To get started quickly with legends in React Charts, refer to this video:
+Watch this video to get started quickly with legends in React Charts:
 
 {% youtube "https://www.youtube.com/watch?v=7VYeN4W_wMc" %}
 
 ## Position and alignment
 
-By using the [`position`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#position) property, the legend can be positioned at the left, right, top, or bottom of the chart. By default, the legend is positioned at the bottom of the chart.
+Use the [`position`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#position) property to place the legend at the left, right, top, or bottom of the chart. By default, it is placed at the bottom.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -37,7 +37,7 @@ By using the [`position`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/category-cs13" %}
 
-Custom positioning allows the legend to be placed anywhere in the chart using `x` and `y` coordinates.
+Custom positioning allows you to place the legend anywhere in the chart using `x` and `y` coordinates.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,7 +79,7 @@ Use the [`reverse`](https://ej2.syncfusion.com/react/documentation/api/chart/leg
 
 <!-- markdownlint-disable MD036 -->
 
-**Legend alignment**
+### Legend alignment
 
 <!-- markdownlint-disable MD036 -->
 
@@ -125,7 +125,7 @@ To change the legend icon shape, use the [`legendShape`](https://ej2.syncfusion.
 
 ### Legend size
 
-By default, the legend occupies approximately 20%–25% of the chart height when positioned at the top or bottom, and 20%–25% of the chart width when positioned at the left or right. Change the default size using the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#height) properties of `legendSettings`.
+By default, the legend occupies approximately 20%–25% of the chart height when positioned at the top or bottom, and 20%–25% of the chart width when positioned at the left or right. Customize the default size using the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#height) properties of `legendSettings`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -272,7 +272,7 @@ By default, clicking a legend item toggles the visibility of its series. To sele
 
 ## Enable animation
 
-Enable or disable animation during legend interactions by setting `enableAnimation` to `true` or `false` in the chart.
+Enable or disable animation during legend interactions by setting the [`enableAnimation`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#enableanimation) property of `legendSettings` to `true` or `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -291,9 +291,9 @@ Enable or disable animation during legend interactions by setting `enableAnimati
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/category-cs22" %}
 
-## Collapsing legend item
+## Hiding a legend item
 
-By default, the series name is displayed as a legend item. To omit a legend item for a particular series, set the series name to an empty string.
+By default, the series name is displayed as a legend item. To hide a legend item for a particular series, set the series name to an empty string.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -314,7 +314,7 @@ By default, the series name is displayed as a legend item. To omit a legend item
 
 ## Legend title
 
-Set a title for the legend using the `title` property in `legendSettings`. The title can be customized using `fontStyle`, `size`, `fontWeight`, `color`, `textAlignment`, `fontFamily`, `opacity`, and `textOverflow`. Use `titlePosition` to place the title at `Top`, `Left`, or `Right`. The `maximumTitleWidth` property sets the width of the legend title and defaults to `100px`.
+Set a title for the legend using the [`title`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#title) property in `legendSettings`. The title can be customized using [`fontStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/fontModel#fontstyle), [`size`](https://ej2.syncfusion.com/react/documentation/api/chart/fontModel#size), [`fontWeight`](https://ej2.syncfusion.com/react/documentation/api/chart/fontModel#fontweight), [`color`](https://ej2.syncfusion.com/react/documentation/api/chart/fontModel#color), [`textAlignment`](https://ej2.syncfusion.com/react/documentation/api/chart/fontModel#textalignment), [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/chart/fontModel#fontfamily), [`opacity`](https://ej2.syncfusion.com/react/documentation/api/chart/fontModel#opacity), and [`textOverflow`](https://ej2.syncfusion.com/react/documentation/api/chart/fontModel#textoverflow). Use [`titlePosition`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#titleposition) to place the title at `Top`, `Left`, or `Right`. The [`maximumTitleWidth`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#maximumtitlewidth) property sets the width of the legend title and defaults to `100px`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -335,7 +335,7 @@ Set a title for the legend using the `title` property in `legendSettings`. The t
 
 ## Arrow page navigation
 
-When legend paging is enabled, page numbers are shown by default. To display only left and right arrows for navigation, set `enablePages` to `false`.
+When legend paging is enabled, page numbers are shown by default. To display only left and right arrows for navigation, set [`enablePages`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#enablepages) to `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -400,7 +400,9 @@ The [`layout`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSe
 
 Legend templates allow you to replace default legend icons and text with custom HTML for each series. This enables branded styles, richer content (icons, multi-line text, badges), improved readability, and localization.
 
-You can customize the legend items by using the [`template`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel). Legend interactions (click to toggle series) remain unless [`ToggleVisibility`] (https://ej2.syncfusion.com/react/documentation/api/chart/legendsettings#togglevisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+You can customize the legend items by using the [`template`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel) property of [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel). Legend interactions (click to toggle series) remain unless [`toggleVisibility`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettings#togglevisibility) is set to false. Templates work with all legend positions, alignments, and paging.
+
+Inside the template, the legend item data is available through the template context, where you can access the series `name`, `shape`, and the underlying `point` data. Use these fields to render branded icons, multi-line labels, or badges for each series.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -419,9 +421,21 @@ You can customize the legend items by using the [`template`](https://ej2.syncfus
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/legend-cs7" %}
 
-> Note: To use legend features, inject the `Legend` module into the `services`.
+> Note: To use legend features, inject the `Legend` module into the chart's `services` using `<Inject services={[Legend]} />` alongside the `ChartComponent`. For example:
+>
+> ```tsx
+> import { ChartComponent, Inject, Legend, SeriesCollectionDirective, SeriesDirective } from '@syncfusion/ej2-react-charts';
+> ```
+>
+> ```tsx
+> <ChartComponent>
+>   <Inject services={[Legend]} />
+>   <SeriesCollectionDirective>
+>     <SeriesDirective ... />
+>   </SeriesCollectionDirective>
+> </ChartComponent>
+> ```
 
 ## See Also
 
-* [Customize each shape in legend](./how-to#customize-each-shape-in-legend)
 * [Add Custom Legend Using SVG](https://support.syncfusion.com/kb/article/21530/how-to-add-custom-legend-using-svg-in-react-chart)

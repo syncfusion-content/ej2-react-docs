@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility Customization in React Chart | Syncfusion
-description: Learn how to customize accessibility in Syncfusion React Chart with descriptions, roles, focus borders, and tab order for chart elements, series, title, and legend.
+description: Learn how to customize accessibility in Syncfusion React Chart with descriptions, roles, focus borders, and tab order for charts and legends.
 control: Accessibility customization
 platform: ej2-react
 documentation: ug
@@ -10,9 +10,11 @@ domainurl: ##DomainURL##
 
 # Accessibility Customization in React Chart
 
-The [React Charts](https://www.syncfusion.com/react-components/react-charts) component visualizes data graphically and provides accessibility customization options to improve usability for people with disabilities. The primary accessibility attributes are described in this section.
+The [React Charts](https://www.syncfusion.com/react-components/react-charts) component visualizes data graphically and provides accessibility customization options to improve usability for people with disabilities. This section describes the primary accessibility attributes.
 
-The chart component exposes attributes that enable accessibility customization, including:
+> Before customizing accessibility attributes, ensure that the Chart component's accessibility is enabled (it is enabled by default). For more details, see [Accessibility in React Chart component](./accessibility).
+
+The Chart component exposes attributes that enable accessibility customization, including:
 
 * [`accessibilityDescription`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilitydescription) - Provides a text description for the chart, improving support for screen readers.
 * [`accessibilityRole`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilityrole) - Specifies the role of the chart, helping screen readers to identify the element appropriately.
@@ -68,7 +70,7 @@ The [`series`](https://ej2.syncfusion.com/react/documentation/api/chart#series) 
 
 ## Title and subtitle
 
-In the React chart control, the [`titleStyle`](https://ej2.syncfusion.com/react/documentation/api/chart#titlestyle) and [`subTitleStyle`](https://ej2.syncfusion.com/react/documentation/api/chart#subtitlestyle) attributes allow you to customize the accessibility of the chart's title and subtitle. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/titleSettingsModel#accessibility) properties in [`titleStyle`](https://ej2.syncfusion.com/react/documentation/api/chart#titlestyle) and [`subTitleStyle`](https://ej2.syncfusion.com/react/documentation/api/chart#subtitlestyle) can be customized for accessibility:
+In the React Chart component, the [`titleStyle`](https://ej2.syncfusion.com/react/documentation/api/chart#titlestyle) and [`subTitleStyle`](https://ej2.syncfusion.com/react/documentation/api/chart#subtitlestyle) attributes allow you to customize the accessibility of the chart's title and subtitle. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/titleSettingsModel#accessibility) properties in [`titleStyle`](https://ej2.syncfusion.com/react/documentation/api/chart#titlestyle) and [`subTitleStyle`](https://ej2.syncfusion.com/react/documentation/api/chart#subtitlestyle) can be customized:
 
 * [`accessibilityDescription`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilitydescription) - Provides a text description for the chart title and subtitle, enhancing support for screen readers.
 * [`accessibilityRole`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilityrole) - Specifies the role of the chart title and subtitle, helping screen readers to identify the element appropriately.
@@ -94,7 +96,7 @@ In the React chart control, the [`titleStyle`](https://ej2.syncfusion.com/react/
 
 ## Annotations
 
-The [`annotations`](https://ej2.syncfusion.com/react/documentation/api/chart#annotations) property allows you to add annotations to the chart in specific regions. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAnnotationSettingsModel#accessibility) properties in [`annotations`](https://ej2.syncfusion.com/react/documentation/api/chart#annotations) can be customized for accessibility:
+The [`annotations`](https://ej2.syncfusion.com/react/documentation/api/chart#annotations) property allows you to add descriptive text to specific regions of the chart. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/chartAnnotationSettingsModel#accessibility) properties in [`annotations`](https://ej2.syncfusion.com/react/documentation/api/chart#annotations) can be customized:
 
 * [`accessibilityDescription`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilitydescription) - Provides a text description for the annotation, enhancing support for screen readers.
 * [`accessibilityRole`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilityrole) - Specifies the role of the annotation, helping screen readers to identify the element appropriately.
@@ -120,7 +122,7 @@ The [`annotations`](https://ej2.syncfusion.com/react/documentation/api/chart#ann
 
 ## Trendline
 
-The [`trendlines`](https://ej2.syncfusion.com/react/documentation/api/chart#trendlinemodule) property allows you to display trends in the data. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#accessibility) properties in [`trendlines`](https://ej2.syncfusion.com/react/documentation/api/chart#trendlinemodule) can be customized for accessibility:
+The [`trendlines`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel) property allows you to display trends in the data. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#accessibility) properties in [`trendlines`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel) can be customized for accessibility:
 
 * [`accessibilityDescription`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilitydescription) - Provides a text description for the trendline, enhancing support for screen readers.
 * [`accessibilityRole`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilityrole) - Specifies the role of the trendline, helping screen readers to identify the element appropriately.
@@ -140,7 +142,7 @@ The [`trendlines`](https://ej2.syncfusion.com/react/documentation/api/chart#tren
 
 ## Zooming
 
-The [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#zoomsettings) attributes allow you to adjust the chart's zooming capability. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/zoomSettingsModel#accessibility) properties in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#zoomsettings) offer the parameters for accessibility customization:
+The [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#zoomsettings) attributes allow you to adjust the chart's zooming capability. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/zoomSettingsModel#accessibility) properties in [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#zoomsettings) can be customized:
 
 * [`accessibilityDescription`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilitydescription) - Provides a text description for the zoom toolkit items, enhancing support for screen readers.
 * [`accessibilityRole`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilityrole) - Specifies the role of the zoom toolkit items, helping screen readers to identify the element appropriately.
@@ -160,7 +162,7 @@ The [`zoomSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#zo
 
 ## Technical indicators
 
-The [`indicators`](https://ej2.syncfusion.com/react/documentation/api/chart#indicators) property allows you to analyze the trends and patterns in the data. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/technicalIndicatorModel#accessibility) properties in [`indicators`](https://ej2.syncfusion.com/react/documentation/api/chart#indicators) can be customized for accessibility:
+The [`indicators`](https://ej2.syncfusion.com/react/documentation/api/chart#indicators) property allows you to analyze the trends and patterns in the data. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/technicalIndicatorModel#accessibility) properties in [`indicators`](https://ej2.syncfusion.com/react/documentation/api/chart#indicators) can be customized:
 
 * [`accessibilityDescription`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilitydescription) - Provides a text description for the indicators, enhancing support for screen readers.
 * [`accessibilityRole`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilityrole) - Specifies the role of the indicators, helping screen readers to identify the element appropriately.
@@ -186,7 +188,7 @@ The [`indicators`](https://ej2.syncfusion.com/react/documentation/api/chart#indi
 
 ## Legend
 
-The [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#legendsettings) provide information about the series shown in the chart. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel#accessibility) properties in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#legendsettings) can be used to alter the accessibility of the chart's legend:
+The [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#legendsettings) provides information about the series shown in the chart. The following [`accessibility`](https://ej2.syncfusion.com/react/documentation/api/chart/legendSettingsModel#accessibility) properties in [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#legendsettings) can be used to alter the accessibility of the chart's legend:
 
 * [`accessibilityDescription`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilitydescription) - Provides a text description for the legend root element, enhancing support for screen readers.
 * [`accessibilityRole`](https://ej2.syncfusion.com/react/documentation/api/chart/accessibilityModel#accessibilityrole) - Specifies the role of the legend items to screen readers, providing appropriate context.
@@ -209,3 +211,8 @@ The [`legendSettings`](https://ej2.syncfusion.com/react/documentation/api/chart#
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/series/accessibility-cs8" %}
+
+## See also
+
+* [Accessibility in React Chart component](./accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](https://ej2.syncfusion.com/react/documentation/common/accessibility)

@@ -12,11 +12,26 @@ domainurl: ##DomainURL##
 
 The chart displays detailed information about a data point through a tooltip when the mouse pointer moves over the point.
 
+> Note: The examples in this section assume that the `@syncfusion/ej2-react-charts` package is installed. Import `ChartComponent`, `SeriesCollectionDirective`, `SeriesDirective`, and `Inject` from the package, and add `Tooltip` to the `services` array of `Inject`. For setup details, see [Getting started with React Chart](https://ej2.syncfusion.com/react/documentation/chart/getting-started).
+
 <!-- markdownlint-disable MD036 -->
 
-## Default tooltip
+## Default Tooltip
 
-By default, the tooltip is not visible. You can enable the tooltip by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#enable) property to **true** and by injecting `Tooltip` into the `provide`.
+By default, the tooltip is disabled. Enable it by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#enable) property to **true** on the `tooltip` settings and by adding the `Tooltip` module to the `services` array of `Inject`, as shown in the following example:
+
+```jsx
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Tooltip } from '@syncfusion/ej2-react-charts';
+
+const tooltip = { enable: true };
+
+<ChartComponent tooltip={tooltip}>
+    <Inject services={[Tooltip]} />
+    <SeriesCollectionDirective>
+        <SeriesDirective />
+    </SeriesCollectionDirective>
+</ChartComponent>
+```
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,9 +50,16 @@ By default, the tooltip is not visible. You can enable the tooltip by setting th
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs1" %}
 
-## Fixed tooltip
+## Fixed Tooltip
 
-By default, the tooltip tracks the mouse movement. You can render the tooltip at a fixed position by using the [`location`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#location) property.
+By default, the tooltip tracks the mouse movement. Use the [`location`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#location) property to render the tooltip at a fixed position. The `location` property accepts an object with `x` and `y` pixel offsets measured from the chart's top-left corner:
+
+```js
+const tooltip = {
+    enable: true,
+    location: { x: 120, y: 20 }
+};
+```
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -56,7 +78,7 @@ By default, the tooltip tracks the mouse movement. You can render the tooltip at
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs11" %}
 
-## Format the tooltip
+## Format the Tooltip
 
 By default, the tooltip displays the x- and y-values of a data point. Additional information can be shown by specifying a custom format. For example, the format `${series.name} ${point.x}` displays the series name along with the x-value of the data point.
 
@@ -77,9 +99,7 @@ By default, the tooltip displays the x- and y-values of a data point. Additional
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs2" %}
 
-<!-- markdownlint-disable MD013 -->
-
-## Individual series format
+## Individual Series Format
 
 Each series tooltip can be formatted separately by using the series [`tooltipFormat`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#tooltipformat) property.
 
@@ -102,9 +122,7 @@ Each series tooltip can be formatted separately by using the series [`tooltipFor
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs3" %}
 
-<!-- markdownlint-disable MD013 -->
-
-## Inline tooltip formatting
+## Inline Tooltip Formatting
 
 The tooltip content can be formatted directly within the [`format`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipsettings#format) property by adding DateTime or number format specifiers to supported tooltip tokens. This allows you to control how point and series values are displayed without using additional events.
 
@@ -121,35 +139,39 @@ const tooltip = {
 
 In the above example, `point.x` is displayed in month-year format, `point.y` is displayed with two decimal places, `point.size` displays the size value of the data point, and `series.opacity` displays the opacity value applied to the series.
 
-Inline formatting can be applied to the following tooltip tokens:
+### Supported Tokens
 
-- `point.x` – Specifies the x-value of the data point, such as DateTime or category values.
-- `point.y` – Specifies the numeric y-value of the data point.
-- `point.size` – Specifies the size value of the data point, commonly used in bubble series.
-- `point.high` and `point.low` – Specify the high and low values, commonly used in range and financial series.
-- `point.open` and `point.close` – Specify the open and close values, commonly used in financial series.
-- `point.volume` – Specifies the volume value, commonly used in financial series.
-- `point.minimum` – Specifies the minimum value, commonly used in box and whisker series.
-- `point.maximum` – Specifies the maximum value, commonly used in box and whisker series.
-- `point.median` – Specifies the median value, commonly used in box and whisker series.
-- `point.lowerQuartile` – Specifies the lower quartile value, commonly used in box and whisker series.
-- `point.upperQuartile` – Specifies the upper quartile value, commonly used in box and whisker series.
-- `point.outliers` – Specifies the outlier values, commonly used in box and whisker series.
-- `series.name` – Specifies the name assigned to the series.
-- `series.type` – Specifies the rendering type of the series, such as `Line`, `Spline`, or `Column`.
-- `series.opacity` – Specifies the opacity value applied to the series. This value controls the visual transparency of the series and can be customized in the series configuration.
+The following tokens can be combined with a format specifier:
 
-**Important:** The availability of point-specific tokens depends on the series type and the values configured in the data source. For example, `point.size` is applicable to bubble series, while `point.median`, `point.lowerQuartile`, and `point.upperQuartile` are applicable to box and whisker series. The `series.name` and `series.type` tokens return string values, so DateTime or number formatting is not applied to these tokens.
+| Token | Description | Series type |
+| --- | --- | --- |
+| `point.x` | x-value of the data point (DateTime or category). | All |
+| `point.y` | Numeric y-value of the data point. | All |
+| `point.size` | Size value of the data point. | Bubble |
+| `point.high`, `point.low` | High and low values. | Range, financial |
+| `point.open`, `point.close` | Open and close values. | Financial |
+| `point.volume` | Volume value. | Financial |
+| `point.minimum`, `point.maximum` | Minimum and maximum values. | Box and whisker |
+| `point.median` | Median value. | Box and whisker |
+| `point.lowerQuartile`, `point.upperQuartile` | Lower and upper quartile values. | Box and whisker |
+| `point.outliers` | Outlier values. | Box and whisker |
+| `series.name` | Name assigned to the series (string). | All |
+| `series.type` | Rendering type of the series (string). | All |
+| `series.opacity` | Opacity value configured in the series settings. | All |
 
-The following format types are supported:
+> **Important:** The availability of point-specific tokens depends on the series type and the values configured in the data source. The `series.name` and `series.type` tokens return string values, so DateTime or number formatting is not applied to these tokens.
 
-- DateTime formats such as `MMM yyyy`, `MM:yy`, and `dd MMM`
-- Number formats such as:
+### Supported Format Types
+
+The following format types can be appended after the colon (`:`) for any numeric or DateTime token:
+
+- **DateTime formats** such as `MMM yyyy`, `MM:yy`, and `dd MMM`
+- **Number formats** such as:
   - `n2` – number with two decimal places
   - `n0` – number without decimals
   - `c2` – currency format
   - `p1` – percentage format
-  - `e1` – exponential notation 
+  - `e1` – exponential notation
 
 If the specified format does not match the resolved value type, the original value is displayed.
 
@@ -170,7 +192,7 @@ If the specified format does not match the resolved value type, the original val
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs14" %}
 
-## Tooltip template
+## Tooltip Template
 
 Custom HTML content can be rendered in the tooltip by using the [`template`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#template) property. The `${x}` and `${y}` placeholders can be used within the template to display the x- and y-values of the corresponding data point.
 
@@ -191,7 +213,7 @@ Custom HTML content can be rendered in the tooltip by using the [`template`](htt
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs4" %}
 
-## Enable highlight
+## Series Highlight on Tooltip
 
 By setting the [`enableHighlight`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#enablehighlight) property to **true**, all points in the hovered series are highlighted while the remaining points are dimmed. This behavior improves focus and readability during data analysis.
 
@@ -212,7 +234,7 @@ By setting the [`enableHighlight`](https://ej2.syncfusion.com/react/documentatio
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs12" %}
 
-## Tooltip mapping name
+## Tooltip Mapping Name
 
 By default, the tooltip displays only the x- and y-values of a data point. Additional information from the data source can be shown by using the [`tooltipMappingName`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#tooltipmappingname) property of the series. Use the `${point.tooltip}` placeholder in the tooltip format to display the mapped value.
 
@@ -233,13 +255,51 @@ By default, the tooltip displays only the x- and y-values of a data point. Addit
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs5" %}
 
-## Customize the appearance of tooltip
+## Tooltip Header
+
+Use the [`header`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#header) property to display a title at the top of the tooltip. The value can be a static string or a placeholder such as `${point.x}` that is resolved per data point.
+
+```js
+const tooltip = {
+    enable: true,
+    header: '${point.x}',
+    format: '${series.name} : ${point.y}'
+};
+```
+
+## Shared Tooltip
+
+The [`shared`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#shared) property merges the values of all visible series for the hovered x-value into a single tooltip. This is useful for comparing multiple series at a specific point. To render one tooltip per series instead, use the [`split`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#split) property described in [Split Tooltip](#split-tooltip).
+
+```js
+const tooltip = {
+    enable: true,
+    shared: true
+};
+```
+
+## Tooltip Animation
+
+The [`duration`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#duration) property controls the duration (in milliseconds) of the tooltip's open and close animations. The default is `500`.
+
+```js
+const tooltip = {
+    enable: true,
+    duration: 1000
+};
+```
+
+Use the [`fadeInDuration`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#fadeinduration) and [`fadeOutDuration`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#fadeoutduration) properties to configure the fade-in and fade-out durations independently.
+
+## Customize the Appearance of Tooltip
 
 The appearance of the tooltip can be customized by using the following properties:
 - [`fill`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#fill) to set the background color
 - [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#border) to configure the tooltip border
 - [`textStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#textstyle) to customize the tooltip text style
-The [`highlightColor`](https://ej2.syncfusion.com/react/documentation/api/chart#highlightcolor) property is used to change the color of a data point when it is highlighted during tooltip interaction.
+- [`opacity`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#opacity) to set the opacity of the tooltip background (value between `0` and `1`)
+
+The [`highlightColor`](https://ej2.syncfusion.com/react/documentation/api/chart#highlightcolor) property is used to change the color of a data point when it is highlighted during tooltip interaction. To enable the highlight effect itself, see [Series Highlight on Tooltip](#series-highlight-on-tooltip).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -258,7 +318,7 @@ The [`highlightColor`](https://ej2.syncfusion.com/react/documentation/api/chart#
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs6" %}
 
-## Closest tooltip
+## Closest Tooltip
 
 The [`showNearestTooltip`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#shownearesttooltip) property displays the tooltip for the data point nearest to the pointer, even when the pointer is not directly positioned over the point.
 
@@ -279,17 +339,17 @@ The [`showNearestTooltip`](https://ej2.syncfusion.com/react/documentation/api/ch
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/tooltip-cs13" %}
 
-## Split tooltip
+## Split Tooltip
 
-The split tooltip displays a separate tooltip for each series at the same data point, making it easier to compare values across multiple series.
+The split tooltip displays a separate tooltip for each series at the same data point, making it easier to compare values across multiple series. Use [`split`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#split) to render one tooltip per series; use [`shared`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#shared) to merge all series for the current x-value into a single tooltip.
 
-Enable this feature by setting the [`split`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#split) property to **true**:
+Enable the split tooltip by setting the `split` property to **true**:
 
 ```js
-tooltip: { 
-    enable: true, 
-    split: true 
-}
+const tooltip = {
+    enable: true,
+    split: true
+};
 ```
 
 {% tabs %}
@@ -299,21 +359,27 @@ tooltip: {
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/code-path/user-interaction/split-tooltip/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/code-path/user-interaction/split-tooltip/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/code-path/user-interaction/split-tooltip/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/split-tooltip" %}
 
-## Follow pointer
+## Follow Pointer
 
 The follow pointer feature enables the tooltip to follow the mouse cursor or touch pointer as users interact with the chart. This provides a more dynamic and intuitive experience by keeping the tooltip close to the user's point of interaction.
 
 Enable this feature by setting the [`followPointer`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#followpointer) property to **true**:
 
 ```js
-tooltip: { 
-    enable: true, 
-    followPointer: true 
-}
+const tooltip = {
+    enable: true,
+    followPointer: true
+};
 ```
 
 {% tabs %}
@@ -323,21 +389,27 @@ tooltip: {
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/chart/code-path/user-interaction/follow-pointer/app/index.tsx %}
 {% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/chart/code-path/user-interaction/follow-pointer/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/chart/code-path/user-interaction/follow-pointer/app/datasource.tsx %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/user-interaction/follow-pointer" %}
 
-## Tooltip distance
+## Tooltip Distance
 
 The tooltip distance property controls the spacing between the tooltip and the mouse pointer or target data point. This prevents the tooltip from overlapping with the cursor or nearby chart elements, improving readability.
 
 Set the [`distance`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#distance) property to specify the gap in pixels:
 
 ```js
-tooltip: { 
-    enable: true, 
-    distance: 25 
-}
+const tooltip = {
+    enable: true,
+    distance: 25
+};
 ```
 
 {% tabs %}
@@ -362,3 +434,5 @@ tooltip: {
 * [Format the Tooltip Value](./how-to/tool-tip-format)
 * [Create a Table in Tooltip](./how-to/tool-tip-table)
 * [Show Tooltip Template on Button Click](https://support.syncfusion.com/kb/article/21534/how-to-show-tooltip-template-on-button-click-using-react-chart)
+* [Chart accessibility](https://ej2.syncfusion.com/react/documentation/chart/accessibility)
+* [Cross-hair and trackball](https://ej2.syncfusion.com/react/documentation/chart/cross-hair-and-track-ball)

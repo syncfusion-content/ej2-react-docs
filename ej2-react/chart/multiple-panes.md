@@ -18,7 +18,7 @@ To split the chart area vertically into multiple rows, use the [`rows`](https://
 
 - Space for each row can be allocated by using the [`height`](https://ej2.syncfusion.com/react/documentation/api/chart/row#height) property. The value can be specified either in pixels or as a percentage.
 - To associate a vertical axis with a specific row, assign the corresponding index using the [`rowIndex`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#rowindex) property of the axis.
-- To customize the bottom line of each row, use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#border) property.
+- To customize the bottom border (separator) of each row, use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/row#border) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -59,11 +59,10 @@ To span a vertical axis across multiple rows, use the [`span`](https://ej2.syncf
 ## Columns
 
 To split the chart area horizontally into multiple columns, use the [`columns`](https://ej2.syncfusion.com/react/documentation/api/chart/column) property of the chart.
-  property.*
 
 - Space for each column can be allocated using the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/column#width) property. The width can be specified either in pixels or as a percentage.
 - To associate a horizontal axis with a specific column, assign the corresponding index using the [`columnIndex`](https://ej2.syncfusion.com/react/documentation/api/chart/axis#columnindex) property of the axis.
-- To customize the bottom line of each column, use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/column#border) property.
+- To customize the border (separator line) of each column, use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/column#border) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -100,3 +99,10 @@ To span a horizontal axis across multiple columns, use the [`span`](https://ej2.
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/chart/preview-sample/axis/multiple-panes-cs4" %}
+
+## See Also
+
+- [Axis Customization](./axis-customization)
+- [Chart Dimensions](./chart-dimensions)
+- [Stock Chart Multiple Panes](../stock-chart/multiple-panes)
+- [Chart API Reference](https://ej2.syncfusion.com/react/documentation/api/chart)
