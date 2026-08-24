@@ -1169,7 +1169,7 @@ If you encounter issues, use the browser's **Developer Tools** (**F12**) to insp
 
 ## Complete sample repository
 
-For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/react-pivot-table-graphql-nextjs).
+For a complete working implementation, refer to the [GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pivot-table-graphql-node-js).
 
 ## See Also
 
