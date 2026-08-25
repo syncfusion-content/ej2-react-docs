@@ -69,7 +69,6 @@ The following steps show how to register the Syncfusion<sup style="font-size:70%
 
   **License message:** <br /> (INFO) Syncfusion<sup style="font-size:70%">&reg;</sup> License imported successfully.
 
-* Remove the `.cache` folder from `node_modules` in the application.
 
 * Now run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors) to resolve it. Also, find the most frequently asked license registration questions at this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot).
 
@@ -133,7 +132,6 @@ The following steps show how to set the environment variable in different operat
 
   **License message:** <br /> (INFO) Syncfusion<sup style="font-size:70%">&reg;</sup> License imported successfully.
 
-* Remove the `.cache` folder from `node_modules` in the application.
 
 * Now run the application. If you encounter a license validation error, refer to this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-errors) to resolve it. Also, find the most frequently asked license registration questions at this [link](https://ej2.syncfusion.com/react/documentation/licensing/licensing-troubleshoot).
 
