@@ -1,0 +1,10 @@
+@import "@syncfusion/ej2-tailwind3-theme/styles/treeview/index.css";
+
+#treeparent {
+    display: block;
+    max-width: 350px;
+    margin: auto;
+    overflow: auto;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+}
