@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Export, Legend, Category, Tooltip, DataLabel, LineSeries } from '@syncfusion/ej2-react-charts';
 import { data } from './datasource';
 function App() {
-    const chartInstance;
+    let chartInstance;
     const beforeExportEvent = (args) => {
       args.excelProperties.rows[0].cells[0].value = 'Changed Title';
       args.excelProperties.rows[1].cells[0].value = 'X Title';
@@ -13,7 +13,7 @@ function App() {
       args.excelProperties.rows[2].cells[1].value = args.excelProperties.rows[2].cells[1].value + 2;
   };
     function clickHandler() {
-        chartInstance.exportModule.export('PNG', 'sample');
+        chartInstance.exportModule.export('XLSX', 'sample');
     }
     const primaryxAxis = { valueType: 'Category' };
     return (<div><button value='print' onClick={clickHandler.bind(this)}>Export</button>

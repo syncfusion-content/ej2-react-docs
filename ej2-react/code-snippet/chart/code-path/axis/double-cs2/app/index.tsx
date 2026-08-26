@@ -2,10 +2,14 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject,
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
 ColumnSeries, Legend, Tooltip, DataLabel, TooltipSettingsModel, AxisModel }
 from'@syncfusion/ej2-react-charts';
-import { loadCldr, setCurrencyCode } from '@syncfusion/ej2-base';
+import { loadCldr, setCurrencyCode } from '@syncfusion/ej2-base';
+// For non en-US cultures, install @syncfusion/ej2-cldr-data and load the CLDR JSON:
+// import * as currencyData from '@syncfusion/ej2-cldr-data/main/en/currencies.json';
+// import * as numbersData from '@syncfusion/ej2-cldr-data/main/en/numbers.json';
+// loadCldr(currencyData, numbersData);
 import { data } from './datasource';
 setCurrencyCode('EUR');
 
@@ -14,7 +18,7 @@ function App() {
   const primaryxAxis: AxisModel = { edgeLabelPlacement: 'Shift', title: 'Years' };
   const primaryyAxis: AxisModel = { labelFormat: 'c', title: 'Sales Amount in Millions' };
   const marker = { dataLabel: { visible: true } };
-  const tooltip: TooltipSettingsModel = { enable: true, format: '${point.x} : ${point.y}' };
+  const tooltip: TooltipSettingsModel = { enable: true, header: '${point.x}', format: '${point.y}' };
 
   return <ChartComponent id='charts'
       primaryXAxis={primaryxAxis}

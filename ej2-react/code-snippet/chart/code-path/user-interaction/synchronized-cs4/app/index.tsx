@@ -2,7 +2,7 @@
 
 
 import * as ReactDOM from "react-dom";
-import { Chart, SplineSeries, LineSeries, DateTime, Zoom, IZoomCompleteEventArgs, Selection, ISelectionCompleteEventArgs, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject } from '@syncfusion/ej2-react-charts';
+import { Chart, SplineSeries, LineSeries, DateTime, Zoom, Selection, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject } from '@syncfusion/ej2-react-charts';
 import { synchronizedData } from './datasource';
 import * as React from "react";
 import { Browser } from '@syncfusion/ej2-base';

@@ -16,7 +16,7 @@ function App() {
         content: 'Chart Footer',
         fontSize: 15,
     };
-    chartInstance.exportModule.export('PDF', 'Chart', 1, [chartInstance], null, null, true, header, footer);
+    chartInstance.exportModule.export('PDF', 'Chart', 'portrait', [chartInstance], null, null, true, header, footer);
     }
     const primaryxAxis = {
       title: 'Manager',

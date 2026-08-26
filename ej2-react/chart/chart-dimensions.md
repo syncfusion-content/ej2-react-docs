@@ -12,40 +12,21 @@ domainurl: ##DomainURL##
 
 ## Size for Container
 
-The chart can render to its container size. Set the size via inline styles or CSS as shown below.
+The chart renders based on its container size. Set the size using inline styles or CSS, as shown below.
 
-```
- <div id="charts" style="width:650px; height:350px"></div>
-```
-
-
-
-```ts
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject,
-ColumnSeries, Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, LineSeries, Selection}
-from'@syncfusion/ej2-react-charts';
-
-function App() {
-
-        return <ChartComponent id='charts'>
-        </ChartComponent>
-  
-};
-export default App;
-ReactDOM.render(<App />, document.getElementById("charts"));
+```html
+<div id="charts" style="width:650px; height:350px"></div>
 ```
 
 ```ts
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ChartComponent } from '@syncfusion/ej2-react-charts';
+
 function App() {
-    return <ChartComponent id='charts'>
-        </ChartComponent>;
+    return <ChartComponent id='charts' />;
 }
-;
+
 export default App;
 ReactDOM.render(<App />, document.getElementById("charts"));
 ```
@@ -70,50 +51,58 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 ## Size for Chart
 
 Set the chart size directly using the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#width) and
-[`height`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#height) properties.
+[`height`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#height) properties (in pixels or percentages). For example:
+
+```tsx
+<ChartComponent id='charts' width='650px' height='350px'>
+  {/* ... */}
+</ChartComponent>
+```
+
+Values can be specified as strings with units (for example, `'650px'`, `'50%'`) or as numbers, which are treated as pixels. By default, the chart uses a height of `450px` and a width that fills the container.
 
 <!-- markdownlint-disable MD036 -->
-**In Pixel**
+### In Pixel
 <!-- markdownlint-disable MD036 -->
 
-You can set the size of chart in pixel as demonstrated below.
+You can set the chart size in pixels, as demonstrated below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/code-path/getting-started/datasource-cs1/app/index.jsx %}
+{% include code-snippet/chart/code-path/dimensions/size-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/code-path/getting-started/datasource-cs1/app/index.tsx %}
+{% include code-snippet/chart/code-path/dimensions/size-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/code-path/getting-started/datasource-cs1/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/dimensions/size-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/code-path/getting-started/datasource-cs1/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/dimensions/size-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/datasource-cs1" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/dimensions/size-cs1" %}
 
-**In Percentage**
+### In Percentage
 
 When percentage values are used, the chart dimensions are relative to the container. For example, a height of `50%` renders the chart to half the container height.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/chart/code-path/getting-started/datasource-cs2/app/index.jsx %}
+{% include code-snippet/chart/code-path/dimensions/size-cs2/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/chart/code-path/getting-started/datasource-cs2/app/index.tsx %}
+{% include code-snippet/chart/code-path/dimensions/size-cs2/app/index.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/chart/code-path/getting-started/datasource-cs2/app/datasource.jsx %}
+{% include code-snippet/chart/code-path/dimensions/size-cs2/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/chart/code-path/getting-started/datasource-cs2/app/datasource.tsx %}
+{% include code-snippet/chart/code-path/dimensions/size-cs2/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chart/preview-sample/getting-started/datasource-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/preview-sample/dimensions/size-cs2" %}
 
-> Note:  When you do not specify the size, it takes `450px` as the height and window size as its width.
+> Note: When you do not specify a size, the chart uses `450px` height and the container's width.
