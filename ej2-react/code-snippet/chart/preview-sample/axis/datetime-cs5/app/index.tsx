@@ -9,7 +9,7 @@ import { dateTimeData } from './datasource';
 
 function App() {
 
-  const primaryxAxis: AxisModel = { valueType: 'DateTime', title: 'Sales Across Years', intervalType: 'Years' };
+  const primaryxAxis: AxisModel = { valueType: 'DateTime', title: 'Sales Across Years', interval: 2, intervalType: 'Years' };
   const primaryyAxis: AxisModel = { title: 'Sales Amount in millions(USD)' };
 
   return <ChartComponent id='charts'

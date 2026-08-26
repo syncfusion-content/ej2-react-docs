@@ -7,7 +7,7 @@ ColumnSeries, Export, Legend, Category, Tooltip, DataLabel, Zoom, Crosshair, Lin
 from'@syncfusion/ej2-react-charts';
 import { data } from './datasource';
 function App() {
-  const chartInstance: ChartComponent;
+  let chartInstance: ChartComponent;
   function clickHandler() {
     chartInstance.exportModule.export('PNG', 'sample');
   }

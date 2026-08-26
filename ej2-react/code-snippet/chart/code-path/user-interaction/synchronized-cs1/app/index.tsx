@@ -3,7 +3,7 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Chart, AreaSeries, LineSeries, DateTime, Tooltip, IMouseEventArgs, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject } from '@syncfusion/ej2-react-charts';
+import { Chart, AreaSeries, LineSeries, DateTime, Tooltip, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject } from '@syncfusion/ej2-react-charts';
 import { synchronizedData } from './datasource';
 import { Browser } from '@syncfusion/ej2-base';
 

@@ -74,7 +74,7 @@ function App() {
         </SeriesDirective>
       </SeriesCollectionDirective>
     </ChartComponent>
-    <AccumulationChartComponent id='charts' ref={chart => chartInstance2 = chart} title='Project Cost Breakdown' enableSmartLabels='true' legendSettings={legendSettings}>
+    <AccumulationChartComponent id='charts' ref={chart => chartInstance2 = chart} title='Project Cost Breakdown' enableSmartLabels={true} legendSettings={legendSettings}>
       <Inject services={[PieSeries, AccumulationDataLabel, AccumulationLegend]} />
       <AccumulationSeriesCollectionDirective>
         <AccumulationSeriesDirective dataSource={data4} xName='x' yName='y' type='Pie' dataLabel={datalabel} radius='70%'>

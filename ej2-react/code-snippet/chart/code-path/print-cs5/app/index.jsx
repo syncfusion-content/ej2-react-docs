@@ -5,8 +5,8 @@ import * as ReactDOM from "react-dom";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Export, Legend, Category, Tooltip, DataLabel, LineSeries } from '@syncfusion/ej2-react-charts';
 import { data, data1 } from './datasource';
 function App() {
-    const chartInstance;
-    const chartInstance1;
+    let chartInstance;
+    let chartInstance1;
     function clickHandler() {
         chartInstance.exportModule.export('PNG', 'sample', null, [chartInstance, chartInstance1]);
     }

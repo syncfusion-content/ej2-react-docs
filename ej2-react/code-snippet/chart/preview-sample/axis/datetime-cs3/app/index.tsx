@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { AxisModel, ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject,
-ColumnSeries, Legend, DateTimeCategory, Tooltip, DataLabel, Zoom, Crosshair, LineSeries, Selection}
+import { AxisModel, ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject,
+Legend, DateTimeCategory, Tooltip, DataLabel, LineSeries}
 from'@syncfusion/ej2-react-charts';
 import { dateTimeCategoryData } from './datasource';
 
@@ -16,7 +16,7 @@ function App() {
       primaryXAxis={primaryxAxis}
       primaryYAxis={primaryyAxis}
       title='Average Sales Comparison'>
-      <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, DateTimeCategory]} />
+      <Inject services={[Legend, Tooltip, DataLabel, LineSeries, DateTimeCategory]} />
       <SeriesCollectionDirective>
         <SeriesDirective dataSource={dateTimeCategoryData} xName='x' yName='y' name='Sales' type='Line'>
         </SeriesDirective>
