@@ -14,6 +14,7 @@ domainurl: ##DomainURL##
 
 The tooltip is useful for showing the selected data. Enable the tooltip by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeTooltipSettingsModel#enable) property to `true` in the [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/range-navigator/rangeNavigatorModel#tooltip) object, and by injecting the `RangeTooltip` module into the `services` as shown below.
 
+{% raw %}
 ```javascript
 import { RangeNavigatorComponent, AreaSeries, DateTime, RangeTooltip, Inject } from "@syncfusion/ej2-react-charts";
 import * as React from "react";
@@ -28,6 +29,7 @@ function App() {
 
 export default App;
 ```
+{% endraw %}
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

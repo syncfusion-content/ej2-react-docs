@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in React MultiSelect Dropdown | Syncfusion
-description: Customize the React MultiSelect Dropdown popup with item, value, group, header, footer, and no-records templates for richer item layouts, selected-value formatting, and empty-state messaging.
+description:  Customize the React MultiSelect Dropdown list items, group headers, selected value, header, footer, and summary tag using template engine support.
 control: Templates 
 platform: ej2-react
 documentation: ug
@@ -14,7 +14,7 @@ The MultiSelect provides comprehensive template support to customize list items,
 
 ## Item template
 
-Customize the content of each list item using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#itemtemplate) property. This allows you to create custom layouts for displaying data in each item.
+Customize the content of each list item using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#itemtemplate) property. This allows you to create custom layouts for displaying data in each item.
 
 In the following example, each list item displays data in a two-column layout.
 
@@ -46,7 +46,7 @@ In the following example, each list item displays data in a two-column layout.
 
 ## Value template
 
-Customize how selected values appear in the MultiSelect input using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#valuetemplate) property. This controls the display format of selected items.
+Customize how selected values appear in the MultiSelect input using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#valuetemplate) property. This controls the display format of selected items.
 
 In the following example, the selected value combines `FirstName` and `City` fields, separated by a hyphen.
 
@@ -78,7 +78,7 @@ In the following example, the selected value combines `FirstName` and `City` fie
 
 ## Group template
 
-Customize group header titles using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#grouptemplate) property. This template applies to both inline and floating group headers, allowing consistent group header styling.
+Customize group header titles using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#grouptemplate) property. This template applies to both inline and floating group headers, allowing consistent group header styling.
 
 In the following example, employees are grouped by their city.
 
@@ -110,7 +110,7 @@ In the following example, employees are grouped by their city.
 
 ## Header template
 
-Add a static header to the top of the popup list using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#headertemplate) property. This allows you to place custom elements such as titles, filters, or other controls in the header area.
+Add a static header to the top of the popup list using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#headertemplate) property. This allows you to place custom elements such as titles, filters, or other controls in the header area.
 
 In the following example, list items and their headers display in a two-column layout similar to a data grid.
 
@@ -142,7 +142,7 @@ In the following example, list items and their headers display in a two-column l
 
 ## Footer template
 
-The MultiSelect has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#footertemplate) property.
+The MultiSelect has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#footertemplate) property.
 
 In the following sample, footer element displays the total number of list items present in the MultiSelect.
 
@@ -175,7 +175,7 @@ In the following sample, footer element displays the total number of list items 
 ## No records template
 
 The MultiSelect is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of
-[noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#norecordstemplate) property.
+[noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#norecordstemplate) property.
 
 In the following sample, popup list content displays the notification of no data available.
 
@@ -207,8 +207,8 @@ In the following sample, popup list content displays the notification of no data
 
 ## Action failure template
 
-There is also an option to custom design the popup list content when the data fetch requestfails at the remote server. This can be achieved using the
-[actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#actionfailuretemplate) property.
+There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the
+[actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#actionfailuretemplate) property.
 
 In the following sample, when the data fetch request fails, the MultiSelect displays the notification.
 
@@ -238,8 +238,55 @@ In the following sample, when the data fetch request fails, the MultiSelect disp
 
  {% previewsample "page.domainurl/code-snippet/multiselect/norecords-template-cs4" %}
 
+## Summary Tag Template
+
+The Summary Tag Template feature displays selected items as a formatted summary text in the input field instead of listing all selections individually. This is especially useful in CheckBox mode when working with large datasets and using the SelectAll option, as it significantly improves performance.
+
+The [summaryTagCount](../api/multi-select#summarytagcount) property sets a threshold—when the number of selected items exceeds this threshold, the [summaryTagTemplate](../api/multi-select#summarytagtemplate) displays a custom formatted text instead of individual items.
+
+### Template Placeholder Properties
+
+The following properties are available for use in the summary template placeholders:
+
+| Placeholder | Description |
+|-------------|-------------|
+| `${selectedCount}` | Total count of currently selected items |
+| `${totalCount}` | Total number of items in the data source |
+
+In the following sample, the Summary Tag Template displays the count of selected items when the threshold is exceeded.
+
+`[Class-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/multiselect/summary-tag-template-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/multiselect/summary-tag-template-cs1/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/multiselect/summary-tag-template-cs1" %}
+
+`[Functional-component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/multiselect/summary-tag-template-cs2/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/multiselect/summary-tag-template-cs2/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/multiselect/summary-tag-template-cs2" %}
+
+> **Limitation:** The Summary Tag Template feature only works in CheckBox mode because it has a built-in SelectAll option for bulk selection, which triggers the need for performance optimization. Other modes (Default, Box, Delimiter) don't support SelectAll and use different display formats, making template-based formatting unnecessary.
+
+> **Note:** When you set a threshold value and preselected items exceed it, the summary template displays formatted text instead of individual items. If `summaryTagTemplate` and `summaryTagCount` are not provided, the Summary Tag Template feature is automatically enabled when records or preselected items exceed 1000, displaying a default summary format for better performance.
+
 ## See Also
 
-* [How to bind the data](./data-binding/)
-* [How to group the data using header](./grouping/)
-* [How to customize the options in MultiSelect](./chip-customization/)
+* [How to bind the data](./data-binding)
+* [How to group the data using header](./grouping)
+* [How to customize the options in MultiSelect](./chip-customization)

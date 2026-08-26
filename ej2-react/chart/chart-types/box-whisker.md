@@ -126,7 +126,13 @@ The [opacity](https://ej2.syncfusion.com/react/documentation/api/chart/seriesMod
 
 **Border**
 
-Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#border) property to configure the border width, color, and dasharray of the box and whisker series. Pass it as an object on the series, for example `border={{ width: 2, color: '#962D18', dashArray: '5,5' }}`.
+Use the [border](https://ej2.syncfusion.com/react/documentation/api/chart/seriesModel#border) property to configure the border width, color, and dasharray of the box and whisker series. Pass it as an object on the series, for example 
+
+{% raw %}
+```
+border={{ width: 2, color: '#962D18', dashArray: '5,5' }}
+```
+{% endraw %}
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

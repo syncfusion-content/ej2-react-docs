@@ -423,11 +423,11 @@ Inside the template, the legend item data is available through the template cont
 
 > Note: To use legend features, inject the `Legend` module into the chart's `services` using `<Inject services={[Legend]} />` alongside the `ChartComponent`. For example:
 >
-> ```tsx
+> ```
 > import { ChartComponent, Inject, Legend, SeriesCollectionDirective, SeriesDirective } from '@syncfusion/ej2-react-charts';
 > ```
 >
-> ```tsx
+> ```
 > <ChartComponent>
 >   <Inject services={[Legend]} />
 >   <SeriesCollectionDirective>

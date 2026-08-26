@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Speech recognition in React Speech To Text | Syncfusion®
-description: Configure Syncfusion React Speech To Text recognition: get transcripts, set language, enable interim results, manage listening state, and handle errors.
+description: Configure Syncfusion React Speech-to-Text to capture transcripts, set language, enable interim results, manage listening state, and handle errors.
 control: SpeechToText
 platform: ej2-react
 documentation: ug

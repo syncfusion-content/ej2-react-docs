@@ -100,7 +100,7 @@ Align the chart title to the near, center, or far side of the chart using the [`
 
 Customize the title's appearance using the [`textStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/titleSettingsModel#textstyle) property. Options include `size`, `color`, `fontFamily`, `fontWeight`, `fontStyle`, and `opacity` to control the title's font and color.
 
-```jsx
+```
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, ColumnSeries, Category, Legend } from '@syncfusion/ej2-react-charts';
 
 const titleStyle = {
@@ -161,7 +161,7 @@ Customize the subtitle's appearance, position, and alignment using [`subTitleSty
 
 Use the [`position`](https://ej2.syncfusion.com/react/documentation/api/chart/titleSettingsModel#position) property within [`subTitleStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#subtitlestyle) to place the subtitle at the top, bottom, left, or right of the chart. The default position is at the top, directly below the title.
 
-```jsx
+```
 const subTitleStyle = { position: 'Bottom' };
 ```
 
@@ -169,7 +169,7 @@ const subTitleStyle = { position: 'Bottom' };
 
 Align the subtitle to the near, center, or far side of the chart using the [`textAlignment`](https://ej2.syncfusion.com/react/documentation/api/chart/titleSettingsModel#textalignment) property within `subTitleStyle`.
 
-```jsx
+```
 const subTitleStyle = { position: 'Top', textAlignment: 'Center' };
 ```
 
@@ -177,7 +177,7 @@ const subTitleStyle = { position: 'Top', textAlignment: 'Center' };
 
 Customize the subtitle's appearance using the [`textStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/titleSettingsModel#textstyle) property of `subTitleStyle`. It accepts the same `size`, `color`, `fontFamily`, `fontWeight`, `fontStyle`, and `opacity` options as the title.
 
-```jsx
+```
 const subTitleStyle = {
     textStyle: {
         fontFamily: 'Arial',
@@ -193,7 +193,7 @@ const subTitleStyle = {
 
 For complete control over the subtitle markup, use the [`subTitleTemplate`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#subtitletemplate) property to supply a custom HTML string. The template can include inline styles or a reference to a CSS class defined in the application.
 
-```jsx
+```
 <ChartComponent
     id='charts'
     title='Sales by Region'

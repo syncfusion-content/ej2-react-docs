@@ -153,7 +153,7 @@ Use the [`border`](https://ej2.syncfusion.com/react/documentation/api/chart/seri
 
 **Step**
 
-Use the [`step`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#step) property to change the position of the steps in a stacked step area series. Valid values are `Left`     (default), `Center`, and `Right`.
+Use the [`step`](https://ej2.syncfusion.com/react/documentation/api/chart/seriesmodel#step) property to change the position of the steps in a stacked step area series. Valid values are `Left`(default), `Center`, and `Right`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

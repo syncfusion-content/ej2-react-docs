@@ -16,12 +16,14 @@ When you let the user drag-select a region of the chart, the [`dragComplete`](ht
 
 Set `selectionMode` to one of the `Drag*` values on the chart to enable a draggable selection rectangle. The example uses `'DragXY'`, which selects both the x range and the y range.
 
+{% raw %}
 ```
 <ChartComponent id='charts'
     selectionMode='DragXY'
     legendSettings={{ visible: true, toggleVisibility: false }}
     dragComplete={dragComplete.bind(this)}>
 ```
+{% endraw %}
 
 `legendSettings.toggleVisibility: false` is deliberate: it stops the user from accidentally hiding the series by clicking its legend entry, which would also clear the selection state.
 
