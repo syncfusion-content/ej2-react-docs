@@ -22,7 +22,7 @@ The `point.x` token represents the x-value of the hovered data point. When the x
 
 **Format a date only**
 
-```jsx
+```
 const tooltip = {
     enable: true,
     format: '${point.x:MMM dd, yyyy}'
@@ -31,7 +31,7 @@ const tooltip = {
 
 **Format a date and the y-value together**
 
-```jsx
+```
 const tooltip = {
     enable: true,
     format: '${point.x:MMM dd, yyyy} : ${point.y}'
@@ -40,7 +40,7 @@ const tooltip = {
 
 **Include the series name**
 
-```jsx
+```
 const tooltip = {
     enable: true,
     format: '${series.name}<br>${point.x:MMM dd, yyyy} : ${point.y:n2}'
@@ -69,7 +69,7 @@ Choose a format that matches the precision and readability required by the chart
 Pass the `tooltip` object to the `ChartComponent`:
 
 {% raw %}
-```jsx
+```
 <ChartComponent
     id="charts"
     primaryXAxis={{ valueType: 'DateTime' }}

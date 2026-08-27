@@ -108,7 +108,7 @@ Multiple levels of labels can be displayed on an axis using the `multiLevelLabel
 
 >Note: To use the multilevel label feature, we need to inject `MultiLevelLabel` module into the `services`.
 
-```jsx
+```
 import { MultiLevelLabel } from '@syncfusion/ej2-react-charts';
 
 <ChartComponent services={[MultiLevelLabel]}>
@@ -232,7 +232,7 @@ Using the `border` property, the `width`, `color`, and `type` of the multilevel 
 
 The chart’s data source can be sorted using the `sort` method of the chart. The arguments required for the `sort` method are the chart data and a `sortField` object that specifies whether sorting is performed on the `x` or `y` field, along with an `isDescending` flag (default `false`) to sort in `ascending` or `descending` order. The method signature is:
 
-```jsx
+```
 chart.sort(data, 'x', false); // ascending by x
 chart.sort(data, 'y', true);  // descending by y
 ```
@@ -300,7 +300,7 @@ The [`labelStyle`](https://ej2.syncfusion.com/react/documentation/api/chart/axis
 
 Specific axis label text can be customized using the `axisLabelRender` event, which allows conditional formatting or dynamic text updates during label rendering. The event provides an `args` object with properties such as `text`, `value`, `labelStyle`, and `axis`, which can be modified before the label is rendered.
 
-```jsx
+```
 const axisLabelRender = (args) => {
   if (args.value === 50) {
     args.text = 'Custom Label';
@@ -371,7 +371,7 @@ The line break feature is used to display long axis label text across multiple l
 
 The axis label template allows axis labels to be customized using HTML content. This enables conditional styling and the inclusion of dynamic elements such as icons, images, or additional contextual data. This customization is enabled by setting the template content in the [`labelTemplate`](https://ej2.syncfusion.com/react/documentation/api/chart/axisModel#labeltemplate) property of the `AxisModel`. The template string supports placeholders such as `${value}` to reference axis values.
 
-```jsx
+```
 const labelTemplate = '<div style="background:#e0f7fa;padding:2px 6px;border-radius:3px;">${value}</div>';
 ```
 

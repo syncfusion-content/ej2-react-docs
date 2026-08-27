@@ -20,7 +20,7 @@ The chart displays detailed information about a data point through a tooltip whe
 
 By default, the tooltip is disabled. Enable it by setting the [`enable`](https://ej2.syncfusion.com/react/documentation/api/chart/tooltipSettingsModel#enable) property to **true** on the `tooltip` settings and by adding the `Tooltip` module to the `services` array of `Inject`, as shown in the following example:
 
-```jsx
+```
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Tooltip } from '@syncfusion/ej2-react-charts';
 
 const tooltip = { enable: true };
