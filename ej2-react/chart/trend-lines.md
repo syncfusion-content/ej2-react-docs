@@ -75,7 +75,7 @@ Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineM
 
 A polynomial trendline is a curved line that is used when data fluctuates.
 
-Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Polynomial` and inject the `Trendlines` module using `<Inject services={[Trendlines]} />`. Use [`polynomialOrder`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#polynomialorder) to define the degree of the polynomial. Recommended values are `2` to `6`; higher orders risk overfitting and may render slowly on large datasets.
+Set [`type`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#type) to `Polynomial` and inject the `Trendlines` module using `<Inject services={[Trendlines]} />`. Use [`polynomialOrder`](https://ej2.syncfusion.com/react/documentation/api/chart/trendlineModel#polynomialorder) to define the degree of the polynomial. Recommended values are `2` to `6`; higher orders risk over fitting and may render slowly on large datasets.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -183,6 +183,7 @@ Multiple trendlines can be added to a single series to compare different fits. P
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
+{% raw %}
 ```jsx
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, LineSeries, Trendlines } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -215,8 +216,11 @@ export default class App extends React.Component {
   }
 }
 ```
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
+
+{% raw %}
 ```tsx
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, LineSeries, Trendlines } from '@syncfusion/ej2-react-charts';
 import * as React from 'react';
@@ -249,6 +253,7 @@ export default class App extends React.Component<{}, {}> {
   }
 }
 ```
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

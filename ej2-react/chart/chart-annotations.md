@@ -109,7 +109,9 @@ The `ChartAnnotationSettingsModel` exposes additional properties to align and st
 
 The following snippet customizes an annotation with alignment, offset, and opacity:
 
-```tsx
+{% raw %}
+
+```
 <AnnotationDirective
   content='Target'
   coordinateUnits='Point'
@@ -121,6 +123,7 @@ The following snippet customizes an annotation with alignment, offset, and opaci
   opacity={0.85}>
 </AnnotationDirective>
 ```
+{% endraw %}
 
 See the [ChartAnnotationSettingsModel API reference](https://ej2.syncfusion.com/react/documentation/api/chart/chartAnnotationSettingsModel) for the full list of properties.
 
@@ -128,7 +131,7 @@ See the [ChartAnnotationSettingsModel API reference](https://ej2.syncfusion.com/
 
 Add multiple annotations to the same chart by including more than one `AnnotationDirective` inside `AnnotationsDirective`. Each annotation can use its own `x`, `y`, `region`, `content`, and styling.
 
-```tsx
+```
 <AnnotationsDirective>
   <AnnotationDirective
     content='70 Gold Medals'

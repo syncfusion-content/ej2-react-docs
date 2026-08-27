@@ -53,7 +53,7 @@ ReactDOM.render(<App />, document.getElementById("charts"));
 Set the chart size directly using the [`width`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#width) and
 [`height`](https://ej2.syncfusion.com/react/documentation/api/chart/chartModel#height) properties (in pixels or percentages). For example:
 
-```tsx
+```
 <ChartComponent id='charts' width='650px' height='350px'>
   {/* ... */}
 </ChartComponent>
