@@ -2,7 +2,7 @@
 layout: post
 title: How to show list items with icons in React Dropdown List | Syncfusion
 description: Display icons next to React Dropdown List list items by mapping an iconCss class field, which renders a styled span inside each item.
-control: Icons support 
+control: Icons support
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to show list items with icons in React Dropdown List
 
-Render **icons** to list items by mapping the [iconCss](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#fields) &nbsp;field. The `iconCss` field creates a span element in each list item with the mapped class name for custom styling.
+Render **icons** in list items by mapping the [iconCss](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#fields) &nbsp;field. The `iconCss` field creates a span element in each list item with the mapped class name for custom styling.
 
-In the following sample, icon classes are mapped with `iconCss` field.
+In the following sample, icon classes are mapped to the `iconCss` field.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

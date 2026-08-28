@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Customization in React Dropdown List
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following content provides the exact CSS structure that can be used to modify the control's appearance based on user preference.
 
 ## Customizing the appearance of wrapper element
 
-Use the following CSS to customize the appearance of wrapper element.
+Use the following CSS to customize the appearance of the wrapper element.
 
 ```css
 .e-ddl.e-input-group.e-control-wrapper .e-input {

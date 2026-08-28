@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The DropDownList includes built-in filtering support when `allowFiltering` is enabled. Filtering begins immediately as you type characters in the search box.
 
-To display filtered items in the popup, handle the [filtering](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#filtering) event to filter your data source and return results using the `updateData` method.
+To display filtered items in the popup, handle the [filtering](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#filtering) event to filter your data source and return results using the `updateData` method.
 
 The following example shows how to filter the data source and display results through the `updateData` method in the `filtering` event.
 
@@ -140,9 +140,9 @@ The following example shows how to perform case-sensitive filter.
 
 ## Diacritics Filtering
 
-DropDownList supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#ignoreaccent) is enabled.
+DropDownList supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and make it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#ignoreaccent) is enabled.
 
-In the following sample,data with diacritics are bound as dataSource for DropDownList.
+In the following sample, data with diacritics are bound as dataSource for DropDownList.
 
 `[Class-component]`
 
@@ -170,11 +170,11 @@ In the following sample,data with diacritics are bound as dataSource for DropDow
 
  {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs24" %}
 
-> You can also explore our [React DropDownList Filtering example]( https://ej2.syncfusion.com/react/demos/#/material/drop-down-list/filtering) that shows how to render the DropDownList Filter in React.
+> You can also explore our [React DropDownList Filtering example](https://ej2.syncfusion.com/react/demos/#/material/drop-down-list/filtering) that shows how to render the DropDownList Filter in React.
 
 ## Debounce delay
 
-You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience. By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 `[Class-component]`
 

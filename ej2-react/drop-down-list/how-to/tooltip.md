@@ -2,7 +2,7 @@
 layout: post
 title: How to show a tooltip on each item in React Dropdown List | Syncfusion
 description: Show a tooltip on each React Dropdown List item by integrating the ej2-tooltip component and binding it to the popup's mouseenter event.
-control: Tooltip 
+control: Tooltip
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to show a tooltip on each item in React Dropdown List
 
-Achieve this behavior using the `ej2-tooltip` component. When you hover the mouse over a DropDownList option, the tooltip displays details related to that list item.
+Achieve this behavior using the `ej2-tooltip` component. When you hover the mouse over a DropDownList option, the tooltip displays details about that list item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
