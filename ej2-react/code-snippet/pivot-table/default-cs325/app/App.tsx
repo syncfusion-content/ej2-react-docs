@@ -23,7 +23,7 @@ function App() {
   }
   let pivotObj: PivotViewComponent;
 
-  return (<div><div className="col-md-9"> <PivotViewComponent ref={(d: PivotViewComponent) => pivotObj = d} id='PivotView' height={350} gridSettings={gridSettings} allowPdfExport={true} enableVirtualization={true}
+  return (<div><div className="col-md-9"> <PivotViewComponent ref={(d: PivotViewComponent) => pivotObj = d} id='PivotView' height={350} gridSettings={gridSettings} allowPdfExport={true}
     dataSourceSettings={dataSourceSettings}><Inject services={[PDFExport]} /></PivotViewComponent></div>
     <div className='col-lg-3 property-section'><ButtonComponent cssClass='e-primary' onClick={btnClick.bind(this)}>Export</ButtonComponent></div></div>);
 

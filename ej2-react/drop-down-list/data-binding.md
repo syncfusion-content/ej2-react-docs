@@ -10,26 +10,25 @@ domainurl: ##DomainURL##
 
 # Data Binding in React Dropdown List
 
-The DropDownList loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#datasource) property. It supports both `array` and `DataManager` data types.
+The DropDownList loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#datasource) property. It supports both `array` and `DataManager` data types.
 
 The component also supports various data services including OData, OData V4, and Web API, with support for XML, JSON, and JSONP formats through `DataManager` adaptors.
 
-| Fields | Type | Description |
+| Field | Type | Description |
 |------|------|-------------|
-| text |  `string` | Specifies the display text of each list item. |
-| value |  `number or string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
-| groupBy |  `string` | Specifies the category under which the list item has to be grouped. |
-| iconCss |  `string` | Specifies the icon class of each list item. |
-
-> When binding complex data to the DropDownList, fields should be mapped correctly. Otherwise, the selected item remains undefined.
+| text | `string` | Specifies the display text of each list item. |
+| value | `number or string` | Specifies the hidden data value mapped to each list item; should be unique. |
+| groupBy | `string` | Specifies the category under which the list item has to be grouped. |
+| iconCss | `string` | Specifies the icon class of each list item. |
+| disabled | `boolean` | Specifies whether the item is disabled and cannot be selected. |
 
 ## Binding local data
 
-Local data can be represented in two ways as described below.
+The DropDownList can bind to local data in three forms: arrays of primitive values, arrays of objects, and arrays of nested objects. Use [fields](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#fields) when the source is an array of objects so `text`, `value`, and other display properties can be resolved.
 
-### 1. Array of simple data
+### Array of primitive data
 
-The DropDownList supports loading arrays of primitive data such as strings and numbers. In this case, the value and text fields represent the same data.
+The DropDownList supports loading arrays of primitive data such as strings and numbers. In this case, the value and text fields are derived from the same item.
 
 `[Class-component]`
 
@@ -57,9 +56,9 @@ The DropDownList supports loading arrays of primitive data such as strings and n
 
  {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs8" %}
 
-### 2. Array of JSON data
+### Array of objects
 
-The DropDownList generates list items from arrays of objects. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#fields) property.
+The DropDownList generates list items from arrays of objects. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#fields) property.
 
 In the following example, the `Id` column is mapped to the `value` field and the `Game` column is mapped to the `text` field.
 
@@ -89,9 +88,9 @@ In the following example, the `Id` column is mapped to the `value` field and the
 
  {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs10" %}
 
-### 3. Array of Complex data
+### Array of complex data
 
-The DropDownList generates list items from arrays of complex objects by mapping nested properties to the [fields](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#fields) property.
+The DropDownList generates list items from arrays of complex objects by mapping nested properties to the [fields](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#fields) property.
 
 In the following example, `Code.Id` is mapped to the `value` field and `Country.Name` is mapped to the `text` field.
 
@@ -123,10 +122,9 @@ In the following example, `Code.Id` is mapped to the `value` field and `Country.
 
 ## Binding remote data
 
-The DropDownList supports retrieval of data from remote data services with the help of `DataManager` component. The [Query](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#query) property
-is used to fetch data from the database and bind it to the DropDownList.
+The DropDownList supports retrieval of data from remote data services with the help of the `DataManager` component. The [Query](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#query) property is used to fetch data from the database and bind it to the DropDownList.
 
-The following sample displays the first 6 contacts from “Customers” table of the `Northwind` Data Service.
+The following sample displays the first 6 contacts from the “Customers” table of the `Northwind` Data Service.
 
 `[Class-component]`
 
@@ -139,7 +137,7 @@ The following sample displays the first 6 contacts from “Customers” table of
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs13" %}
+  {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs13" %}
 
 `[Functional-component]`
 

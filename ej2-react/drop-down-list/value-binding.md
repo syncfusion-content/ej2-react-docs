@@ -14,7 +14,7 @@ Value binding in the DropDown List control allows you to associate data values w
 
 ## Primitive Data Types
 
-The DropDown List control provides flexible binding for primitive data types such as strings and numbers. Bind local primitive data arrays, remote data sources, or custom data to the [value](../api/drop-down-list/#value) property of the DropDown List.
+The DropDown List control provides flexible binding for primitive data types such as strings and numbers. Bind local primitive data arrays, remote data sources, or custom data to the [value](../api/drop-down-list#value) property of the DropDown List.
 
 Supported primitive data types include:
 
@@ -22,6 +22,8 @@ Supported primitive data types include:
 * Number
 * Boolean
 * Null
+
+> When the `value` property is set to `null` or `undefined`, no item is selected and the input clears.
 
 The following example demonstrates preselecting values for primitive data types:
 
@@ -41,7 +43,7 @@ The following example demonstrates preselecting values for primitive data types:
 
 ## Object Data Types
 
-Object binding in the DropDown List control enables you to bind datasets of objects. When [`allowObjectBinding`](../api/drop-down-list/#allowobjectbinding) is enabled, the control's value is an object of the same type as the selected item in the [value](../api/drop-down-list/#value) property. Bind local object arrays, remote endpoints, or custom data sources.
+Object binding in the DropDown List control enables you to bind datasets of objects. When [`allowObjectBinding`](../api/drop-down-list#allowobjectbinding) is enabled, the control's value is an object of the same type as the selected item in the [value](../api/drop-down-list#value) property. Bind local object arrays, remote endpoints, or custom data sources.
 
 The following example demonstrates preselecting values for object data types:
 
