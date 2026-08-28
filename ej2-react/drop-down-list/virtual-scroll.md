@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in React Dropdown List | Syncfusion
-description: Render large datasets efficiently in the React Dropdown List using enableVirtualization, which reuses DOM elements during scroll and supports remote DataManager binding.
+description: Render large datasets efficiently in React Dropdown List with virtualization, reusing DOM elements during scrolling and supporting remote DataManager data.
 control: Virtualization
 platform: ej2-react
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Virtualization in React Dropdown List
 
-Dropdown list virtualization is a technique used to efficiently render extensive lists of items while minimizing the impact on performance. This method is particularly advantageous when dealing with large datasets because it ensures that only a fixed number of DOM (Document Object Model) elements are created. When scrolling through the list, existing DOM elements are reused to display relevant data instead of generating new elements for each item. This recycling process is managed internally.
+Dropdown List virtualization is a technique used to efficiently render extensive lists of items while minimizing the impact on performance. This method is particularly advantageous when dealing with large datasets because it ensures that only a fixed number of DOM (Document Object Model) elements are created. When scrolling through the list, existing DOM elements are reused to display relevant data instead of generating new elements for each item. This recycling process is managed internally.
  
-During virtual scrolling, the data retrieved from the data source depends on the popup height and the calculation of the list item height. Enabling the [enableVirtualization](../api/drop-down-list/#enableVirtualization) option in a dropdown list activates this virtualization technique.
+During virtual scrolling, the data retrieved from the data source depends on the popup height and the calculation of the list item height. Enabling the [enableVirtualization](../api/drop-down-list#enableVirtualization) option in a dropdown list activates this virtualization technique.
  
-When fetching data from the data source, the [actionBegin](../api/drop-down-list/#actionbegin) event is triggered before data retrieval begins. Then, the [actionComplete](../api/drop-down-list/#actioncomplete) event is triggered once the data is successfully fetched.
+When fetching data from the data source, the [actionBegin](../api/drop-down-list#actionbegin) event is triggered before data retrieval begins. Then, the [actionComplete](../api/drop-down-list#actioncomplete) event is triggered once the data is successfully fetched.
 
 Furthermore, Incremental Search is supported with virtualization in the DropDownList component. When a key is typed, the focus is moved to the respective element, and the value is updated in the component in the open popup state. In the closed popup state, the respective value is updated in the component based on the typed key. The Incremental Search functionality is well-suited for scenarios involving remote data binding.
 
@@ -22,7 +22,7 @@ When the enableVirtualization property is enabled, the `skip` and `take` propert
 
 ## Binding local data
 
-The DropDownList generates list items from an array of complex data by mapping appropriate columns to the [fields](../api/drop-down-list/#fields) property. With virtual scrolling, the list updates based on scroll offset, triggering data requests from the server. The `actionBegin` event fires before data retrieval begins, and the `actionComplete` event fires when data retrieval completes.
+The DropDownList generates list items from an array of complex data by mapping appropriate columns to the [fields](../api/drop-down-list#fields) property. With virtual scrolling, the list updates based on scroll offset, triggering data requests from the server. The `actionBegin` event fires before data retrieval begins, and the `actionComplete` event fires when data retrieval completes.
 
 In the following example, the `id` and `text` columns are mapped to the `value` and `text` fields respectively.
 
@@ -79,7 +79,7 @@ The following example demonstrates customizing items count in virtualization:
 
 ## Grouping
 
-The DropDownList component supports grouping with virtualization. Organize elements into groups based on categories using the [groupBy](../api/drop-down-list/#fields) field in the data table. After grouping, virtualization functions like local data binding. When binding to remote data, an initial request retrieves all data for grouping purposes. Subsequently, the grouped data works the same way as virtualized local data.
+The DropDownList component supports grouping with virtualization. Organize elements into groups based on categories using the [groupBy](../api/drop-down-list#fields) field in the data table. After grouping, virtualization functions like local data binding. When binding to remote data, an initial request retrieves all data for grouping purposes. Subsequently, the grouped data works the same way as virtualized local data.
 
 The following example demonstrates grouping with virtualization: 
 
@@ -98,7 +98,7 @@ The following example demonstrates grouping with virtualization:
 
 ## Filtering with Virtualization
 
-The DropDownList component supports filtering with virtualization. When [`allowFiltering`](../api/drop-down-list/#allowfiltering) is enabled, the component filters data based on typed characters. The DropDownList sends requests to the server using the full data source for filtering. The `actionBegin` event fires before the request, and the `actionComplete` event fires after successful data retrieval. Initial data loads when the popup opens, and the popup closes after selection or filtering completion.
+The DropDownList component supports filtering with virtualization. When [`allowFiltering`](../api/drop-down-list#allowfiltering) is enabled, the component filters data based on typed characters. The DropDownList sends requests to the server using the full data source for filtering. The `actionBegin` event fires before the request, and the `actionComplete` event fires after successful data retrieval. Initial data loads when the popup opens, and the popup closes after selection or filtering completion.
 
 The following example demonstrates filtering with virtualization:
 

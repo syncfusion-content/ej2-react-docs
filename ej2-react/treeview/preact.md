@@ -73,7 +73,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —
 ```
 
-5\. Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
+4\. Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
 
 ```bash
 cd my-project
@@ -119,7 +119,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 > The order of importing CSS styles should be in line with its dependency graph.
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React TreeView component to the Vite project:
+Follow the below steps to add the React TreeView component to the Preact project:
 
 1\. Before adding the TreeView component to your markup, import the TreeView component in the **src/index.jsx** file.
 
@@ -131,7 +131,7 @@ import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the TreeView component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/treeview#datasource) property. Declare the values for the `dataSource` property.
+2\. Then, define the TreeView component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treeview#datasource) property. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}

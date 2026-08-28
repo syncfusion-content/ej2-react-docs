@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Center the dialog based on current scroll position in React Dialog component | Syncfusion
+title: How to center the dialog on scroll in React Dialog | Syncfusion
 description: Learn here all about Center the dialog based on current scroll position in Syncfusion React Dialog component of Syncfusion Essential JS 2 and more.
 control: Center the dialog based on current scroll position 
 platform: ej2-react
@@ -8,11 +8,20 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Center the dialog based on current scroll position in React Dialog component
+# How to center the dialog on scroll in React Dialog
 
-By default, the dialog is centered based on the target container. If the target is not specified, the dialog is rendered in the body and centered according to the current viewport. 
+By default, the dialog is centered based on the target container. If the target is not specified, the dialog is rendered in the body and centered according to the current viewport.
 
-In the following sample, the modal dialog is centered based on the page's current scroll position, ensuring it remains visible as the user scrolls the page content.
+Use the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog#position) property to place the dialog, and the [`open`](https://ej2.syncfusion.com/react/documentation/api/dialog#open) event to recalculate the position on scroll. The `position` property accepts `X` and `Y` values (numbers in pixels, or strings such as `'center'`, `'top'`, `'bottom'`, `'left'`, `'right'`).
+
+| Property | Description |
+| --- | --- |
+| X | Horizontal position (e.g., `'center'`, `'left'`, `'right'`, or a pixel value). |
+| Y | Vertical position (e.g., `'center'`, `'top'`, `'bottom'`, or a pixel value). |
+
+> The [`overlayClick`](https://ej2.syncfusion.com/react/documentation/api/dialog#overlayclick) event is raised when the modal overlay is clicked. In the sample below, `onOverlayClick` and `dialogClose` both hide the dialog; this duplication is intentional so the dialog closes whether the user clicks the overlay, the close icon, or a programmatic close action.
+
+In the following sample, the modal dialog is centered based on the page's current scroll position, ensuring the dialog stays visible as the user scrolls the page content.
 
 `[Class-component]`
 

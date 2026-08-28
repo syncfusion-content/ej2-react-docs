@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # How to preview images before upload in React File Upload
 
-Display image previews before upload to allow users to verify their selection, or after successful server upload for confirmation. Create previews by reading file data using the selected event (client-side preview) or the success event (post-upload preview). This improves user experience by providing visual feedback during the upload workflow.
+Display image previews before upload to allow users to verify their selection, or after successful server upload for confirmation. Create previews by reading file data using the [selected](https://ej2.syncfusion.com/react/documentation/api/uploader#selected) event (client-side preview) or the [success](https://ej2.syncfusion.com/react/documentation/api/uploader#success) event (post-upload preview). This improves user experience by providing visual feedback during the upload workflow.
+
+For client-side previews, read each file with `FileReader.readAsDataURL(file)` and assign the resulting data URL to the `src` of an image element. For post-upload previews, use the file path returned by the server (typically via `Response.StatusDescription`) and set the image `src` to that URL.
 
 Refer to the following link to explore a complete image preview implementation:
 

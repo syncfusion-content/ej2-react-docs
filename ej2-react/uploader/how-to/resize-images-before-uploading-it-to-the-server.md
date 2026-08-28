@@ -269,8 +269,8 @@ public render() {
                   success={this.onSuccess}
                   removing={this.onRemoveFile}
                   selected={this.onFileSelect}
-                  progress={this.onFileUpload} // Triggres when upload is in progress
-                  failure={this.onUploadFailed} // Triggres when upload got failed
+                  progress={this.onFileUpload} // Triggers when upload is in progress
+                  failure={this.onUploadFailed} // Triggers when upload fails
                   dropArea={
                     document.getElementsByClassName("template_wrapper")[0] as HTMLElement
                   }

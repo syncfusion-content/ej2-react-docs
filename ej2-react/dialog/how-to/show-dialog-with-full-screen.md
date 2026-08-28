@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to show with fullscreen in React Dialog
 
-The dialog can be displayed in fullscreen mode by passing `true` as an argument to the dialog [show](https://ej2.syncfusion.com/react/documentation/api/dialog#show) method.
+The dialog can be displayed in full-screen mode by passing `true` as an argument to the dialog [`show`](https://ej2.syncfusion.com/react/documentation/api/dialog#show) method. The `show(isFullScreen)` method accepts an optional boolean argument: `show(true)` opens the Dialog in full-screen mode, while `show(false)` or `show()` opens it in normal mode. The method returns `void`.
 
 `[Class-component]`
 

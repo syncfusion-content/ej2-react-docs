@@ -12,10 +12,10 @@ domainurl: ##DomainURL##
 
 The uploader component allows you to upload the files asynchronously. The upload process requires save and remove action URL to manage the upload process in the server.
 
-       * The save action is necessary to handle the upload operation.
-       * The remove action is optional, one which handle the removed files from server.
+* The save action is necessary to handle the upload operation.
+* The remove action is optional, to handle the removed files from server.
 
-The File can be upload automatically or manually. For more information, you can refer to the **Auto Upload** section from the documentation.
+The files can be uploaded automatically or manually. For more information, refer to the [Auto Upload](#auto-upload) section.
 
 ## Multiple file upload
 
@@ -83,14 +83,12 @@ The following example explains about single file upload settings.
 
 ## Save action
 
-Configure the [saveUrl](https://ej2.syncfusion.com/react/documentation/api/uploader/asyncSettingsModel/#saveurl) property to specify the server endpoint that handles file uploads. The save handler receives submitted files and manages the server-side save process. Upon successful upload, the file name displays in green and the remove icon changes to a delete icon.
+Configure the [saveUrl](https://ej2.syncfusion.com/react/documentation/api/uploader/asyncSettingsModel#saveurl) property to specify the server endpoint that handles file uploads. The save handler receives submitted files and manages the server-side save process. Upon successful upload, the server should return a response (empty body or a success message) so the client marks the file as uploaded; the file name displays in green and the remove icon changes to a delete icon.
 
-    *   When the file is uploaded successfully, the event “success” triggers to handle the
-        operation after upload.
-    *   When the file is failed to upload, the event “failure” triggers with information,
-        which cause this failure
+* When the file is uploaded successfully, the `success` event triggers to handle the operation after upload.
+* When the file fails to upload, the `failure` event triggers with information about the failure.
 
-You can cancel the upload process by setting the upload event argument **eventargs.cancel** to true.
+You can cancel the upload process by setting the upload event argument **eventargs.cancel** to `true`.
 
 `[Class-component]`
 
@@ -237,12 +235,12 @@ The following example demonstrates the client-side action for saving files on th
 
 ## Remove action
 
-The remove action is optional. Specify the URL to handle remove process from server. The remove handler receives the posted files and handle the remove operation in server.
+The remove action is optional. Specify the URL to handle the remove process from the server. The remove handler receives the posted files and handles the remove operation on the server.
 
-    * When the files are removed successfully from server, the success event triggers to denote the process has completed.
-    * When remove action fails, the event “failure” triggers with information, which cause failure in remove process.
+* When the files are removed successfully from server, the `success` event triggers to denote the process has completed.
+* When the remove action fails, the `failure` event triggers with information about the cause of the failure.
 
-> You can differentiate the file operation whether the success event triggers from save or remove action in its arguments **eventArgs.operation** .
+> You can differentiate the file operation—whether the success event triggers from save or remove action—using the **eventArgs.operation** argument.
 
 You can remove the files which is not uploaded yet from locally by clicking the remove icon. In this case, the success or failure events will not be triggered.
 
@@ -274,7 +272,7 @@ You can remove the files which is not uploaded yet from locally by clicking the 
 
 ### Server-side configuration for remove action
 
-To remove an uploaded file from the server, it is sufficient to send only the file name. You can achieve this by setting the [`postRawFile`](https://ej2.syncfusion.com/react/documentation/api/uploader/removingEventArgs/#postrawfile) property of the `RemovingEventArgs` to `false` during the [`removing`](https://ej2.syncfusion.com/react/documentation/api/uploader#removing) event. This ensures that only the file name is sent to the server in the Remove action.
+To remove an uploaded file from the server, it is sufficient to send only the file name. You can achieve this by setting the [`postRawFile`](https://ej2.syncfusion.com/react/documentation/api/uploader/removingEventArgs#postrawfile) property of the `RemovingEventArgs` to `false` during the [`removing`](https://ej2.syncfusion.com/react/documentation/api/uploader#removing) event. This ensures that only the file name is sent to the server in the Remove action.
 
 Here is an example:
 
@@ -374,9 +372,9 @@ public void Remove(IFormFile UploadFiles)
 
 ## Auto upload
 
-By default, the uploader processes the files to upload once the files are selected and added in upload queue.
-To upload manually, disable the **autoUpload** property. When you disable this property, you can use the action buttons to call upload all or clear all actions manually.
-You can change those buttons text using the **buttons** property in the uploader component.
+By default, the uploader processes the files to upload once the files are selected and added to the upload queue.
+
+To upload manually, disable the **autoUpload** property. When you disable this property, you can use the action buttons to call upload all or clear all actions manually. You can change those button texts using the **buttons** property in the uploader component.
 
 `[Class-component]`
 
@@ -406,7 +404,7 @@ You can change those buttons text using the **buttons** property in the uploader
 
 ## Sequential upload
 
-By default, the uploader component process multiple files to upload simultaneously. When you enable the [sequentialUpload](https://ej2.syncfusion.com/react/documentation/api/uploader/#sequentialupload) property, the selected files will process sequentially (one after the other) to the server. If the file uploaded successfully or failed, the next file will upload automatically in this sequential upload. This feature helps to reduce the upload traffic and reduce the failure of file upload.
+By default, the uploader component process multiple files to upload simultaneously. When you enable the [sequentialUpload](https://ej2.syncfusion.com/react/documentation/api/uploader#sequentialupload) property, the selected files will process sequentially (one after the other) to the server. If the file uploaded successfully or failed, the next file will upload automatically in this sequential upload. This feature helps to reduce the upload traffic and reduce the failure of file upload.
 
 `[Class-component]`
 
@@ -434,14 +432,15 @@ By default, the uploader component process multiple files to upload simultaneous
 
  {% previewsample "page.domainurl/code-snippet/uploader/sequential-upload-cs2" %}
 
-## Preloaded files
+### Preloaded files
 
-The uploader component allows you to preloaded the list of files that are uploaded in the server. The preloaded files are useful to view and remove the files from server that can be achieved by the **files** property. By default, the files are configured with uploaded successfully state on rendering file list.
+The uploader component allows you to preload the list of files that are uploaded on the server. The preloaded files are useful to view and remove the files from server that can be achieved by the `files` property. By default, the files are configured with uploaded successfully state on rendering file list.
+
 The following properties are mandatory to configure the preloaded files:
 
-    *   Name
-    *   Size
-    *   Type
+* Name
+* Size
+* Type
 
 `[Class-component]`
 
@@ -496,8 +495,10 @@ export default class App extends React.Component<{}, {}> {
 
   public render(): JSX.Element {
     return (
-       <UploaderComponent  ref = {upload => this.uploadObj = upload !}
-          asyncSettings={this.path} uploading={this.addHeaders=this.addHeaders.bind(this)} removing={this.addHeaders=this.addHeaders.bind(this)} />
+       <UploaderComponent ref={(upload: UploaderComponent) => { this.uploadObj = upload! }}
+          asyncSettings={this.path}
+          uploading={this.addHeaders.bind(this)}
+          removing={this.addHeaders.bind(this)} />
     );
   }
 }
@@ -512,7 +513,7 @@ import { UploaderComponent, UploadingEventArgs } from '@syncfusion/ej2-react-inp
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
-function App(){
+function App() {
     let uploadObj: UploaderComponent;
     const path: object = {
         saveUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Save',

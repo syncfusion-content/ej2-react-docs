@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to set custom animation in Tab in React
 
-Tab supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The [`animation`](https://ej2.syncfusion.com/react/documentation/api/tab/#animation) property also allows you to set [`easing`](https://ej2.syncfusion.com/react/documentation/api/tab/tabActionSettings/#easing), [`duration`](https://ej2.syncfusion.com/react/documentation/api/tab/tabActionSettings/#duration), and various other [`effect`](https://ej2.syncfusion.com/react/documentation/api/tab/tabActionSettings/#effect).
+Tab supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The [`animation`](https://ej2.syncfusion.com/react/documentation/api/tab#animation) property also allows you to set [`easing`](https://ej2.syncfusion.com/react/documentation/api/tab/tabActionSettings#easing), [`duration`](https://ej2.syncfusion.com/react/documentation/api/tab/tabActionSettings#duration), and various other [`effect`](https://ej2.syncfusion.com/react/documentation/api/tab/tabActionSettings#effect).
 
-Default animation is given as `SlideLeftIn` for [`previous`](https://ej2.syncfusion.com/react/documentation/api/tab/tabAnimationSettingsModel/#previous) tab animation and `SlideRightIn` for [`next`](https://ej2.syncfusion.com/react/documentation/api/tab/tabAnimationSettingsModel/#next) tab animation. You can also disable the animation by setting the animation effect as `None`. Also, please use the following CSS to disable indicator animation for animation effect as `None`.
+Default animation is given as `SlideLeftIn` for both the [`previous`](https://ej2.syncfusion.com/react/documentation/api/tab/tabAnimationSettingsModel#previous) and [`next`](https://ej2.syncfusion.com/react/documentation/api/tab/tabAnimationSettingsModel#next) tab animation. You can disable the animation by setting the animation effect to `None`. Also, use the following CSS to disable the indicator animation when the animation effect is set to `None`.
 
 ```css
 

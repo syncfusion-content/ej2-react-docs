@@ -1,5 +1,5 @@
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { IDataSet, PivotViewComponent, VirtualScroll, Inject, PDFExport, PivotChart } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent, Inject, PDFExport, PivotChart } from '@syncfusion/ej2-react-pivotview';
 import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { PdfExportProperties } from '@syncfusion/ej2-grids';
 import { ChartSettings } from '@syncfusion/ej2-pivotview/src/pivotview/model/chartSettings';
@@ -23,9 +23,9 @@ function App() {
   }
   let pivotObj: PivotViewComponent;
   
-  return (<div><div className="col-md-9"> <PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} allowPdfExport={true} enableVirtualization={true} 
+  return (<div><div className="col-md-9"> <PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} allowPdfExport={true}
     dataSourceSettings={dataSourceSettings} displayOption={{ view: 'Both' }} chartSettings={chartSettings}>
-      <Inject services={[VirtualScroll, PivotChart, PDFExport]}/></PivotViewComponent></div>
+      <Inject services={[PivotChart, PDFExport]}/></PivotViewComponent></div>
     <div className='col-lg-3 property-section'><ButtonComponent cssClass='e-primary' onClick={btnClick.bind(this)}>Export</ButtonComponent></div></div>);
 
   function btnClick(): void {

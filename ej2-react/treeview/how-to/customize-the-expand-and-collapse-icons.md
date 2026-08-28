@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize expand/collapse icons in React
 
-You can customize TreeView expand and collapse icons by using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/treeview/#cssclass)&nbsp;property of TreeView. Refer to the sample to customize expand/collapse icons.
+You can customize TreeView expand and collapse icons by applying a custom CSS class to the TreeView component using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/treeview/#cssclass)&nbsp;property and then overriding the default icon styles. Refer to the sample to customize expand/collapse icons.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

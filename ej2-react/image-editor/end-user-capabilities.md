@@ -19,7 +19,7 @@ To open an image in the image editor, do the following steps.
 
 * Click the Open icon from the left side of the toolbar.
 
-* The file explorer lists only JPEG, PNG, JPG, SVG, WEBP and BMP format files.
+* The file explorer lists only JPEG/JPG (.jpeg, .jpg), PNG (.png), SVG (.svg), WEBP (.webp), and BMP (.bmp) format files.
 
 * Select the image from the list of the images from the file explorer window.
 
@@ -41,7 +41,7 @@ Image zooming can be performed in the following ways.
 
 To zoom in or out the image in the image editor, do the following steps. 
 
-* The Zoom In/ Out option only enabled after opening the image. 
+* The Zoom In/Out option is enabled only after opening an image. 
 
 ### Using pinch 
 
@@ -55,17 +55,15 @@ To zoom in or out the image in the image editor, do the following steps.
 
 To zoom in or out the image in the image editor, do the following steps. 
 
-* Press the ctrl key and scroll the mouse wheel to perform zooming. 
+* Press the Ctrl key and scroll the mouse wheel to perform zooming (use Cmd on macOS). 
 
-* The zoom in and out controlled by the mouse wheel. 
+* Zooming is controlled by the mouse wheel. 
 
 ### Using keyboard 
 
 To zoom in or out the image in the image editor, do the following steps. 
 
-* Press the ctrl key with ‘+’ button from the keyboard to zoom in an image. 
-
-* Press the ctrl key with ‘-’ button from the keyboard to zoom out an image.
+* Press Ctrl + '+' to zoom in; Ctrl + '-' to zoom out. Use Cmd instead of Ctrl on macOS.
 
 ![Zoom an image](images/zoom.jpg)
 
@@ -73,13 +71,13 @@ To zoom in or out the image in the image editor, do the following steps.
 
 To pan an image in the image editor, do the following steps.  
 
-* Click on the image and do dragging to move or pan the image. 
+* Click and drag on the image to pan the image. 
 
-* Panning option will be enabled in the following two cases. 
+* Panning is enabled in the following cases. 
 
-    * If the selection is applied for cropping an image. 
+    * If a selection is applied for cropping an image. 
 
-    * If the image size exceeds the canvas size while zooming an image.
+    * If the image size exceeds the canvas size while zooming.
 
 ![Pan an image](images/pan.gif)
 
@@ -97,23 +95,25 @@ To crop an image in the image editor, do the following steps.
 
 * Utilize the rotate and flip buttons along with the straighten slider to perform image transformations, including any inserted annotations.
 
-* Once the cropping region is finalized in the image click the tick icon at the top right of the toolbar to crop the image.
+* Once the cropping region is finalized, click the tick (Apply) icon or the Apply/OK button at the top right of the toolbar to crop the image.
 
 ![Crop transform an image](images/crop.jpg)
 
 ## Annotations
 
-To add annotations to an image in the image editor, do the following steps. 
+To add annotations to an image in the image editor, do the following steps.
 
-* To add annotation, click the annotation button in the toolbar and select the type of annotations such as Line, Rectangle, Ellipse, Path, Arrow, Text, or Freehand drawing to be inserted to the image editor. 
+* To add an annotation, click the Annotation button in the toolbar and select a type (Line, Rectangle, Ellipse, Path, Arrow, Text, or Freehand).
 
-* Once the annotation is added to the image, that can be repositioned by clicking and dragging the annotations using mouse as well as resized by clicking and resizing the selection circle to be placed around the annotations. 
+* Once added, annotations can be repositioned by clicking and dragging, and resized using the selection handles.
 
-* To rotate annotations, you can simply grab the circle located at the bottom of the annotation. The rotation can be applicable to all the annotations except text annotation. 
+* To rotate annotations, drag the rotation handle (usually shown below the annotation). Rotation applies to all annotations except text.
 
-* Customize the annotations by changing their color, stroke width, font family, and font size through the contextual toolbar. The contextual toolbar will be enabled whenever the annotations are selected. 
+* Customize annotations (color, stroke width, font family, font size) via the contextual toolbar, which appears when an annotation is selected.
 
-* When annotations are selected in the Image Editor, the quick access toolbar becomes active, providing convenient access to various actions such as duplicating, deleting, or editing text associated with the selected annotation. This toolbar enables users to perform these common operations quickly and efficiently, streamlining their workflow and enhancing the overall editing experience.
+* To edit text annotations after insertion, double-click the text or use the quick access toolbar's edit-text action.
+
+* When annotations are selected, the quick access toolbar becomes active, providing actions such as duplicate, delete, and edit text.
 
 ![Image annotation](images/annotation.jpg)
 
@@ -157,28 +157,22 @@ To undo and redo the actions performed in an image editor, do the following step
 
 To revert all the changes done in an image editor, do the following steps. 
 
-* Click the reset button which is located on the right side of the toolbar. 
+* Click the Reset button located on the right side of the toolbar. 
 
-* This will revert all the changes performed in the image editor.
+* This will revert all changes performed in the image editor.
 
 ## Export an image 
 
 To save the modified image in the Image Editor, follow these steps:
 
-* Click the Save Button
-    * Locate the Save button on the right side of the toolbar and click it.
+* Click the Save button (right side of the toolbar) to open the Export dialog.
 
-* Select the File Format
-    * In the export popup, choose your preferred file format (PNG, JPEG, SVG, or WEBP) to save the image with all 
-applied modifications.
+* In the Export dialog, select the file `Format` (PNG, JPEG, SVG, or WEBP).
 
-* Adjust Image Quality (JPEG Format Only)
-    * If saving in JPEG, use the Image Quality slider to set the desired quality level (0-100). A higher value retains more detail but increases file size.
+* If saving as JPEG, adjust `Image Quality` (0–100) to balance quality and file size.
 
-* Download the Image
-    * Click Download to save the modified image to your device.
+* Click `Download` to save the modified image to your device.
 
-* Use Keyboard Shortcut (Ctrl + S)
-    * Press Ctrl + S to download the image in the same format as the loaded image without opening the Save dialog. For example, if the loaded image is PNG, it will be saved as PNG.
+* Press `Ctrl + S` to save quickly in the same format as the loaded image (uses the original filename by default); use `Cmd + S` on macOS.
 
 ![Export an image](images/save.jpg)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to filter tree nodes in React Tree View
 
-You can filter the tree nodes based on their text using the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) plugin and the [`fields`](https://ej2.syncfusion.com/react/documentation/api/treeview#fields) property of the TreeView.
+You can filter the tree nodes based on their text by combining the TreeView's [`fields`](https://ej2.syncfusion.com/react/documentation/api/treeview#fields) configuration with the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) plugin (typically by re-querying the data and replacing the bound data source whenever the search text changes).
 
 The following code example demonstrates how to filter the tree nodes in a TreeView.
 

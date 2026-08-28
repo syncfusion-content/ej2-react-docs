@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to detect Tab selection in React Tab
 
-We can able to find the tab selection whether it is selected by user interaction or programmatically way in the [`selecting`](https://ej2.syncfusion.com/react/documentation/api/tab/#selecting) and [`selected`](https://ej2.syncfusion.com/react/documentation/api/tab/#selected) event argument with the field of `isInteracted`. When the user changes the tab through click actions it will return true otherwise, it will return false. The following code example depicts to find the tab selecting the state in selecting and selected events.
+You can detect whether a Tab was selected by the user or programmatically by reading the `isInteracted` field of the [`selecting`](https://ej2.syncfusion.com/react/documentation/api/tab#selecting) and [`selected`](https://ej2.syncfusion.com/react/documentation/api/tab#selected) event arguments. The field returns `true` when the user changes the tab through click actions, and `false` when the change is performed programmatically. The following code example demonstrates how to read the Tab selection state from both events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

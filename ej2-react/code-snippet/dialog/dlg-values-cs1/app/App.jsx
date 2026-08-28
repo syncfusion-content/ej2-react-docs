@@ -24,7 +24,7 @@ class App extends React.Component {
         this.innerDialogInstance.hide();
         this.dialogInstance.show();
     }
-    footerbuttonclick() {
+    footerButtonClick() {
         this.innerDialogInstance.hide();
     }
     dialogContent() {
@@ -34,7 +34,7 @@ class App extends React.Component {
             <input type='name' className='form-control' id='name' ref={n => this.nameInput = n}/>
         </div>
         <div className='form-group'>
-            <label>Email Id:</label>
+            <label>Email ID:</label>
             <input type='email' placeholder='user@syncfusion.com' className='form-control' id='email' ref={e => this.emailInput = e}/>
         </div>
         <div className='form-group'>
@@ -49,7 +49,7 @@ class App extends React.Component {
     dlgbuttonClick() {
         this.dialogInstance.hide();
         this.innerDialogInstance.content = this.getDynamicContent();
-        this.innerDialogInstance.buttons = [{ click: this.footerbuttonclick.bind(this), buttonModel: { content: 'Yes', isPrimary: true } },
+        this.innerDialogInstance.buttons = [{ click: this.footerButtonClick.bind(this), buttonModel: { content: 'Yes', isPrimary: true } },
             { click: this.nestedbuttonClick.bind(this), buttonModel: { content: 'No', isPrimary: true } }];
         this.innerDialogInstance.show();
     }

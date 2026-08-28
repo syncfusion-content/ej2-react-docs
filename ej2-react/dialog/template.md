@@ -14,19 +14,19 @@ The Dialog supports templating for the header, content, and footer sections. Tex
 
 ## Header
 
-The Dialog header content is provided through the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog#header) property, which accepts both text and HTML content as a string. A close button is also provided as built-in support and can be enabled through the [`showCloseIcon`](https://ej2.syncfusion.com/react/documentation/api/dialog#showcloseicon) property.
+The Dialog header content is provided through the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog#header) property, which accepts both text and HTML content as a string or a React node/function (JSX) for full control over the header layout. A built-in close button can be enabled via the [`showCloseIcon`](https://ej2.syncfusion.com/react/documentation/api/dialog#showcloseicon) property.
 
 ## Footer
 
-The Dialog footer can be enabled by adding built-in [`buttons`](https://ej2.syncfusion.com/react/documentation/api/dialog#buttons) or providing any HTML string through the [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/dialog#footertemplate).
+The Dialog footer can be enabled using the built-in [`buttons`](https://ej2.syncfusion.com/react/documentation/api/dialog#buttons) collection or by providing any HTML string/React node through the [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/dialog#footertemplate).
 
 > The [`buttons`](https://ej2.syncfusion.com/react/documentation/api/dialog#buttons) and [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/dialog#footertemplate) properties can't be used at the same time.
 
 ## Content
 
-The Dialog content is provided through the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property, which accepts both text and HTML strings.
+The Dialog content is provided through the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property, which accepts both text and HTML strings, or by placing child JSX elements directly inside the `<DialogComponent>`.
 
-The following example demonstrates the usage of header, footer, and content templates in the Dialog.
+The following example demonstrates the usage of header, footer, and content templates in the Dialog. In the example, the header is set via a React function returning JSX, the footer is set through the `footerTemplate` property returning JSX, and the content is added as child JSX elements within the `DialogComponent`.
 
 `[Class-component]`
 

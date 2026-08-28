@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header in React Tab
+# Header Styles and Settings in React Tab
 
 This section explains about modifying the style of Tab header, and configuring its icons and positions.
 
@@ -35,12 +35,14 @@ You can customize header styles by adding predefined classes in the Tab root ele
 
 ## Icon positions
 
-You can customize the position of the Tab header icons using the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/tab/header/#iconposition) property.  This property depends on the header items [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/tab/header/#iconcss) property.  By default, Tab header icon is placed on left position.  The position values are as follows:
+You can customize the position of the Tab header icons using the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/tab/header#iconposition) property.  This property depends on the header items [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/tab/header#iconcss) property.  By default, Tab header icon is placed on left position.  The position values are as follows:
 
 * **Left**: Icon is placed on the left of the Tab header item.
 * **Right**: Icon is placed on the right of the Tab header item.
 * **Top**: Icon is placed on the top of the Tab header item.
 * **Bottom**: Icon is placed on the bottom of the Tab header item.
+
+The following example shows a left-position icon using `iconCss="e-icon e-folder"` on each header item:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -55,4 +57,4 @@ You can customize the position of the Tab header icons using the [`iconPosition`
 
 ## See Also
 
-* [How to customize selected tab styles](./how-to/customize-selected-tab-styles/)
+* [How to customize selected tab styles](./how-to/customize-selected-tab-styles)

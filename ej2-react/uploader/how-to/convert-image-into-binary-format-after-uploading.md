@@ -16,6 +16,11 @@ To retrieve the binary format of uploaded image files, convert the posted file's
 
 ```csharp
 
+using System;
+using System.IO;
+using System.Linq;
+using System.Web;
+
 [AcceptVerbs("Post")]
 public void Save()
 {
@@ -54,6 +59,12 @@ public void Save()
     }
 }
 
+```
+
+## See Also
+
+* [How to open and edit the uploaded files](./open-and-edit-the-uploaded-files)
+* [How to resize images before uploading it to the server](./resize-images-before-uploading-it-to-the-server)
 ```
 
 >You can also explore [React File Upload](https://www.syncfusion.com/react-components/react-file-upload) feature tour page for its groundbreaking features. You can also explore our [React File Upload example](https://ej2.syncfusion.com/react/demos/#/material/uploader/default) to understand how to browse the files which you want to upload to the server.

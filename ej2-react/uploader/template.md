@@ -14,9 +14,9 @@ You can customize the default appearance of the uploader using a template along 
 
 ## File list template
 
-The **template**property is used to customize the default appearance of each file in the list. It can be represented as the HTML element or string. The selected or dropped files are displayed as per the template layout provided. The remove and progress bar action is handled using the corresponding events when the template is defined.
+The **template** property is used to customize the default appearance of each file in the list. It can be represented as an HTML element or a string. The selected or dropped files are displayed as per the template layout provided. The remove and progress bar actions are handled using the [success](https://ej2.syncfusion.com/react/documentation/api/uploader#success), [failure](https://ej2.syncfusion.com/react/documentation/api/uploader#failure), and [progress](https://ej2.syncfusion.com/react/documentation/api/uploader#progress) events when the template is defined.
 
-For example, you can display file type icon along with the default UI elements.
+For example, you can display a file type icon along with the default UI elements.
 
 `[Class-component]`
 
@@ -46,7 +46,7 @@ For example, you can display file type icon along with the default UI elements.
 
 ## Custom template
 
-You can design the own template by preventing the default file list including buttons. When you use custom template to upload or remove the files, pass the custom UI argument as true to call `upload`/`remove` public method as follows:
+You can design your own template by suppressing the default file list including buttons. When you use a custom template to upload or remove the files, pass the custom UI argument as `true` to call the `upload`/`remove` public methods as follows:
 
 * UploaderObj.**upload**(filesData, true);
 

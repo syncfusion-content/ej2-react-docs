@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React DropDownList component.
 
-`Preact` is a fast and lightweight JavaScript library for building user interfaces, often used as an alternative to larger frameworks like React. Preact is designed for smaller file sizes and faster performance, making it ideal for projects where load times and bundle size are critical. 
+Preact is a fast and lightweight JavaScript library for building user interfaces, often used as an alternative to larger frameworks like React. Preact is designed for smaller file sizes and faster performance, making it ideal for projects where load times and bundle size are critical. 
 
 ## Prerequisites
 
@@ -73,7 +73,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —
 ```
 
-5\. After completing the setup steps for `my-project`, run the following command to navigate to the project directory:
+4\. After completing the setup steps for `my-project`, run the following command to navigate to the project directory:
 
 ```bash
 cd my-project
@@ -141,7 +141,7 @@ function App() {
     // define the array of data
     const sportsData = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Hockey', 'Rugby', 'Snooker', 'Tennis'];
     return (
-    // specifies the tag for render the DropDownList component
+    // specifies the tag for rendering the DropDownList component
     <DropDownListComponent id="ddlelement" dataSource={sportsData} placeholder="Select a game"/>);
 }
 render(<App />, document.querySelector('#app'));

@@ -38,9 +38,9 @@ The Uploader component adheres to industry accessibility standards, including [A
 
 ## Keyboard interaction
 
-The following are the standard keys that works on uploader component.
+The following are the standard keys that work on the Uploader component.
 
-| **Keyboard shortcuts** | **Actions** |
+| **Keyboard shortcuts** | **Actions** |
 | --- | --- |
 | <kbd>Tab</kbd> | Move focus to the next element. |
 | <kbd>Shift + Tab</kbd> | Move focus to the previous element. |

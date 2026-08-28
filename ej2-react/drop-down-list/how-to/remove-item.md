@@ -2,7 +2,7 @@
 layout: post
 title: How to remove item in React Dropdown List | Syncfusion
 description: Remove a specific item from the React Dropdown List by calling the removeItem method with the item value, text, or HTML element.
-control: Remove item 
+control: Remove item
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Dropdown List
 
-The DropDownList component is built according to `WAI-ARIA` specifications, incorporating WAI-ARIA roles, states, properties, and comprehensive keyboard support. The component provides complete keyboard navigation and ARIA accessibility, enabling users of assistive technologies and keyboard-only users to interact effectively.
+The DropDownList component is built according to WAI-ARIA specifications, incorporating the appropriate roles, states, properties, and comprehensive keyboard support. It provides complete keyboard navigation and ARIA accessibility, enabling users of assistive technologies and keyboard-only users to interact effectively.
 
-The DropDownList component adheres to established accessibility standards and guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles).
+The DropDownList component adheres to established accessibility standards and guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). See the [WAI-ARIA](https://www.w3.org/TR/wai-aria/#roles) roles section below for details on the specific pattern used.
 
 The accessibility compliance for the DropDownList component is outlined below.
 
@@ -42,17 +42,17 @@ The accessibility compliance for the DropDownList component is outlined below.
 
 ## WAI-ARIA attributes
 
-The DropDownList component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/) patterns to meet the accessibility. The following ARIA attributes are used in the DropDownList component:
+The DropDownList component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only) patterns to meet the accessibility requirements. The following ARIA attributes are used in the DropDownList component:
 
 | **Properties** | **Functionalities** |
 | --- | --- |
-| aria-haspopup | Indicates whether the DropDownList input element has a popup list or not. |
-| aria-expanded | Indicates whether the popup list has expanded or not. |
+| aria-haspopup | Indicates whether the DropDownList input element has the popup or not. |
+| aria-expanded | Indicates whether the popup has expanded or not. |
 | aria-selected | Indicates the selected option. |
 | aria-readonly | Indicates the readonly state of the DropDownList element. |
 | aria-disabled | Indicates whether the DropDownList component is in a disabled state or not. |
-| aria-activedescendent | This attribute holds the ID of the active list item  to focus its descendant child element. |
-| aria-owns | This attribute contains the ID of the popup list to indicate popup as a child element. |
+| aria-activedescendant | This attribute holds the ID of the active list item to focus that element's descendant child element. |
+| aria-owns | This attribute contains the ID of the popup to indicate the popup as a child element. |
 
 ## Keyboard interaction
 
@@ -60,20 +60,20 @@ You can use the following key shortcuts to access the DropDownList without inter
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Arrow Down</kbd> | Selects the first item in the DropDownList when no item selected. Otherwise, selects the item next to the currently selected item. |
+| <kbd>Arrow Down</kbd> | Selects the first item in the DropDownList when no item is selected. Otherwise, selects the item next to the currently selected item. |
 | <kbd>Arrow Up</kbd> | Selects the item previous to the currently selected one. |
-| <kbd>Page Down</kbd> | Scrolls down to the next page and selects the first item when popup list opens. |
-| <kbd>Page Up</kbd> | Scrolls up to the previous page and selects the first item when popup list opens. |
-| <kbd>Enter</kbd> | Selects the focused item, and when it is in an open state the popup list closes. Otherwise, toggles the popup list. |
-| <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
-| <kbd>Shift + tab </kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
-| <kbd>Alt + Down</kbd> | Opens the popup list. |
-| <kbd>Alt + Up</kbd> | Closes the popup list. |
-| <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
+| <kbd>Page Down</kbd> | Scrolls down to the next page and selects the first item of the new page when the popup opens. |
+| <kbd>Page Up</kbd> | Scrolls up to the previous page and selects the first item of the new page when the popup opens. |
+| <kbd>Enter</kbd> | Selects the focused item, and when it is in an open state the popup closes. Otherwise, toggles the popup. |
+| <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup and moves focus to the next focusable element. |
+| <kbd>Shift + Tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup and moves focus to the previous focusable element. |
+| <kbd>Alt + Down</kbd> | Opens the popup. |
+| <kbd>Alt + Up</kbd> | Closes the popup. |
+| <kbd>Escape</kbd> | Closes the popup when it is in an open state and the currently selected item remains the same. |
 | <kbd>Home</kbd> | Selects the first item. |
 | <kbd>End</kbd> | Selects the last item. |
 
-> In the below sample, <kbd>alt+t</kbd> keys are used to focus the DropDownList component.
+> In the following sample, press <kbd>Alt + t</kbd> to focus the DropDownList component.
 
 `[Class-component]`
 
@@ -109,6 +109,6 @@ The accessibility compliance of the DropDownList component is shown in the follo
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/drop-down-list.html" %}
 
-## See also
+## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility)

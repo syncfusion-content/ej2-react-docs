@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in React Dropdown List | Syncfusion
-description: Customize React Dropdown List list items, group titles, selected values, headers, and footers using itemTemplate, valueTemplate, groupTemplate, and related template properties.
+description: Customize React Dropdown List items, group headers, selected values, headers, and footers using item, value, group, header, and footer templates.
 control: Templates 
 platform: ej2-react
 documentation: ug
@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 The DropDownList provides several options to customize list items, group titles, selected values, headers, and footer elements.
 
-To get started with React DropDownList templates, you can check on this video:
+To get started with React DropDownList templates, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=nhtzCMJZqqc" %}
 
 ## Item template
 
-Customize the content of each list item using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#itemtemplate) property.
+Customize the content of each list item using the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#itemtemplate) property.
 
 In the following example, each list item is divided into two columns to display relevant data.
 
@@ -50,7 +50,7 @@ In the following example, each list item is divided into two columns to display 
 
 ## Value template
 
-Customize the currently selected value displayed in the DropDownList input element using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#valuetemplate) property.
+Customize the currently selected value displayed in the DropDownList input element using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#valuetemplate) property.
 
 In the following example, the selected value displays combined text from the `FirstName` and `City` fields, separated by a hyphen.
 
@@ -82,7 +82,7 @@ In the following example, the selected value displays combined text from the `Fi
 
 ## Group template
 
-Customize group header titles using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#grouptemplate) property. This template applies to both inline and floating group header modes.
+Customize group header titles using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#grouptemplate) property. This template applies to both inline and fixed group header modes.
 
 In the following example, employees are grouped by their city.
 
@@ -114,7 +114,7 @@ In the following example, employees are grouped by their city.
 
 ## Header template
 
-Display a static header element at the top of the popup list using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#headertemplate) property to place custom elements.
+Display a static header element at the top of the popup list using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#headertemplate) property to place custom elements.
 
 In the following example, list items and headers are displayed as two columns similar to a data grid.
 
@@ -146,7 +146,7 @@ In the following example, list items and headers are displayed as two columns si
 
 ## Footer template
 
-Display a footer element at the bottom of the popup list using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#footertemplate) property to place custom content.
+Display a footer element at the bottom of the popup list using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#footertemplate) property to place custom content.
 
 In the following example, the footer displays the total number of list items in the DropDownList.
 
@@ -178,7 +178,7 @@ In the following example, the footer displays the total number of list items in 
 
 ## No records template
 
-Customize the popup list content when no data is found or no search matches exist using the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#norecordstemplate) property.
+Customize the popup list content when no data is found or no search matches exist using the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#norecordstemplate) property.
 
 In the following example, the popup displays a notification when no data is available.
 
@@ -210,7 +210,7 @@ In the following example, the popup displays a notification when no data is avai
 
 ## Action failure template
 
-Customize the popup list content when a data fetch request fails at the remote server using the [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#actionfailuretemplate) property.
+Customize the popup list content when a data fetch request fails at the remote server using the [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#actionfailuretemplate) property.
 
 In the following example, the DropDownList displays a notification when the data fetch request fails.
 

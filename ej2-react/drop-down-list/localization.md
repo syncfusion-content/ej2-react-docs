@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in React Dropdown List
 
-The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/#actionfailuretemplate) &nbsp;properties according to the culture currently assigned to the DropDownList.
+The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#actionfailuretemplate) &nbsp;properties according to the culture assigned to the DropDownList.
 
 | Locale key | en-US (default)  |
 |------|------|
@@ -19,7 +19,7 @@ The Localization library allows you to localize static text content of the [noRe
 
 ## Loading translations
 
-Load translation objects into your application using the load function of the **L10n** class.
+Load translation objects into your application using the load function of the **L10n** class. Import the `L10n` class from the `@syncfusion/ej2-base` package in your application before calling the `load` function.
 
 In the following example, the DropDownList is configured for French culture with no data loaded. The `noRecordsTemplate` property displays its text in French culture initially, and when run offline, the `actionFailureTemplate` property displays its text accordingly.
 
@@ -51,5 +51,5 @@ In the following example, the DropDownList is configured for French culture with
 
 ## See Also
 
-* [Accessibility](./accessibility/)
-* [How to bind the data to the combobox](./data-binding/)
+* [Accessibility](./accessibility)
+* [How to bind the data to the DropDownList](./data-binding)

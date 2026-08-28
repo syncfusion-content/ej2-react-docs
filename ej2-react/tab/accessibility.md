@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Tab
 
-The Tab component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Tab component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Tab component is outlined below.
 
@@ -54,7 +54,7 @@ Tab component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/
 | aria-labelledby       | Attribute is set to the Tab content element to indicates the associated Tab header for the content. |
 | aria-controls       | Attribute is set to the Tab items element to indicates the associated `tabpanel` for the header. |
 | aria-haspopup       | Attribute is set to the Popup element  to indicates the popup mode in the Tab. The default value of this attribute is false. If popup mode is enabled, the attribute value is set to true. |
-| aria-disabled       | Attribute set to the Tab items to It indicates the disabled state of the Tab. |
+| aria-disabled       | Attribute set to the Tab items to indicate the disabled state of the Tab. |
 
 ## Keyboard interaction
 

@@ -33,7 +33,7 @@ public nestedbuttonClick() {
     this.dialogInstance.show();
 }
 
-public footerbuttonclick() {
+public footerButtonClick() {
     this.innerDialogInstance.hide();
 }
 
@@ -45,7 +45,7 @@ public dialogContent(): JSX.Element {
             <input type='name' className='form-control' id='name' ref={n => this.nameInput = n!}/>
         </div>
         <div className='form-group'>
-            <label>Email Id:</label>
+            <label>Email ID:</label>
             <input type='email' placeholder='user@syncfusion.com' className='form-control' id='email'  ref={e => this.emailInput = e!}/>
         </div>
         <div className='form-group'>

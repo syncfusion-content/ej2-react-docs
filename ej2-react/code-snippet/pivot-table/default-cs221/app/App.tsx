@@ -1,5 +1,5 @@
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { IDataSet, PivotViewComponent, VirtualScroll, Inject, ExportCompleteEventArgs, PDFExport } from '@syncfusion/ej2-react-pivotview';
+import { IDataSet, PivotViewComponent, Inject, ExportCompleteEventArgs, PDFExport } from '@syncfusion/ej2-react-pivotview';
 import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/datasourcesettings-model';
 import { PdfExportProperties } from '@syncfusion/ej2-grids';
 import * as React from 'react';
@@ -18,7 +18,7 @@ function App() {
   }
   let pivotObj: PivotViewComponent;
   
-  return (<div><div className="col-md-9"> <PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} allowPdfExport={true} enableVirtualization={true} dataSourceSettings={dataSourceSettings} exportComplete={exportComplete.bind(this)}><Inject services={[VirtualScroll, PDFExport]}/></PivotViewComponent></div>
+  return (<div><div className="col-md-9"> <PivotViewComponent  ref={ (d: PivotViewComponent) => pivotObj = d } id='PivotView' height={350} allowPdfExport={true} dataSourceSettings={dataSourceSettings} exportComplete={exportComplete.bind(this)}><Inject services={[PDFExport]}/></PivotViewComponent></div>
     <div className='col-lg-3 property-section'><ButtonComponent cssClass='e-primary' onClick={btnClick.bind(this)}>Export</ButtonComponent></div></div>);
 
   function exportComplete(args: ExportCompleteEventArgs): void {

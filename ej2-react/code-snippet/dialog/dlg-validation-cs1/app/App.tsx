@@ -51,7 +51,7 @@ class App extends React.Component<{}, {}> {
           alert("Enter the password")
       } else if (this.userName.value.length < 4) {
           args.cancel= true;
-          alert("Username must be minimum 4 characters")
+          alert("Username must be at least 4 characters")
       } else {
           args.cancel= false;
           this.userName.value = "";

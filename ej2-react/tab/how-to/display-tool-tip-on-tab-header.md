@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to show tooltip on Tab header in React Tab
 
-You can display tooltip for the tab component header using [`beforeRender`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#beforerender) event of React Tooltip component which can be viewed as hint texts on mouse hovers over tab.
+You can display a tooltip for each Tab header using the [`beforeRender`](https://ej2.syncfusion.com/react/documentation/api/tooltip#beforerender) event of the React Tooltip component. The tooltip appears as a hint text when the pointer hovers over a Tab item. Attach the Tooltip to the Tab header element (for example, `.e-tab .e-tab-header .e-toolbar-item`) within the `beforeRender` handler.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
