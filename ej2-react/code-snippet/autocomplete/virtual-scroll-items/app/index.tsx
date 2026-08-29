@@ -27,7 +27,7 @@ export default class App extends React.Component<{}, {}> {
 
   public render() {
     return (
-      // specifies the tag for render the DropDownList component
+      // specifies the tag for render the AutoComplete component
       <AutoCompleteComponent id="datas" dataSource={this.records} placeholder="e.g. Item 1" query={this.query} actionBegin={this.Begin} enableVirtualization={true} fields={this.fields} popupHeight="200px" >
       <Inject services={[VirtualScroll]}/>
   </AutoCompleteComponent>

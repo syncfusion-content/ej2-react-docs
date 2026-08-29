@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Filtering in React MultiSelect Dropdown
 
-The MultiSelect includes built-in filtering support when `allowFiltering` is enabled. Filtering begins immediately as you type characters in the input field.
+The MultiSelect includes built-in filtering support when `allowFiltering` is set to `true`. Filtering begins as you type characters in the input field, after the configured `debounceDelay` has elapsed.
 
-To display filtered items in the popup, handle the [filtering](https://ej2.syncfusion.com/react/documentation/api/multi-select/#filtering) event to filter your data source and return results using the [updateData](https://ej2.syncfusion.com/angular/documentation/api/drop-down-list/filteringEventArgs/#updatedata) method.
+To display filtered items in the popup, handle the [filtering](https://ej2.syncfusion.com/react/documentation/api/multi-select/#filtering) event to filter your data source and return results using the [updateData](https://ej2.syncfusion.com/react/documentation/api/multi-select/filteringEventArgs/#updatedata) method.
 
 The following example shows how to filter the data source and display results through the `updateData` method in the `filtering` event.
 
@@ -44,7 +44,7 @@ The following example shows how to filter the data source and display results th
 
 ## Limit the minimum filter character
 
-Control filtering performance by setting a minimum character count before issuing remote requests. Use manual validation in the filter event handler to enforce this limit.
+Control filtering performance by setting a minimum character count before issuing remote requests. Use manual validation in the [filtering](https://ej2.syncfusion.com/react/documentation/api/multi-select/#filtering) event handler to enforce this limit.
 
 In the following example, the component does not fetch data until at least three characters are typed.
 
@@ -76,9 +76,9 @@ In the following example, the component does not fetch data until at least three
 
 ## Change the filter type
 
-Customize filter behavior by changing the filter type to `contains`, `startsWith`, or `endsWith` within the filter event handler.
+Customize filter behavior by changing the filter type to `contains`, `startsWith`, or `endsWith` within the filter event handler. You can pass any of these filter types to the `where` clause of the DataManager as the second argument.
 
-The following examples demonstrate filtering with the `endsWith` type.
+The following examples demonstrate filtering with the `endsWith` type. Replace `endsWith` with `contains` or `startsWith` to use the corresponding filter behavior.
 
 `[Class-component]`
 
@@ -108,9 +108,9 @@ The following examples demonstrate filtering with the `endsWith` type.
 
 ## Case sensitive filtering
 
-Data items can be filtered either with or without case sensitivity using the DataManager. This can be done by passing the fourth optional parameter of the `where` clause.
+Data items can be filtered either with or without case sensitivity using the DataManager. This can be done by passing the fourth optional parameter of the `where` clause, which sets the `ignoreCase` flag. When `ignoreCase` is `false`, the filter performs a case-sensitive match; when `true`, the match is case-insensitive. This is independent of the component's built-in filtering behavior and applies to the DataManager query you construct inside the `filtering` event handler.
 
-The following example shows how to perform case-sensitive filter.
+The following example shows how to perform a case-sensitive filter.
 
 `[Class-component]`
 
@@ -138,13 +138,13 @@ The following example shows how to perform case-sensitive filter.
 
  {% previewsample "page.domainurl/code-snippet/multiselect/basic-cs18" %}
 
-## Diacritics Filtering
+## Diacritics filtering
 
-MultiSelect supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/multi-select/#ignoreaccent) is enabled.
+MultiSelect supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/multi-select/#ignoreaccent) is enabled. Set `ignoreAccent={true}` on the MultiSelect component to enable this behavior.
 
-In the following sample,data with diacritics are bound as dataSource for MultiSelect.
+In the following sample, data with diacritics are bound as dataSource for MultiSelect.
 
-`[Class-compponent]`
+`[Class-component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -172,7 +172,7 @@ In the following sample,data with diacritics are bound as dataSource for MultiSe
 
 ## Debounce delay
 
-You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/multi-select/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/multi-select/#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience. By default, a debounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 `[Class-component]`
 

@@ -44,12 +44,11 @@ The Dropdown Tree component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=listbox` | All list items are contained within the element. |
-| `aria-disabled` | Indicates element is perceivable but disabled. |
-| `aria-owns` | This attribute contains the ID of the popup list to indicate popup as a child element. |
+| `aria-disabled` | Indicates the element is perceivable but disabled. |
+| `aria-owns` | Contains the ID of the popup list to indicate the popup is a child of the input. |
 | `aria-haspopup` | Indicates whether the Dropdown Tree input element has a popup list or not. |
 | `aria-expanded` | Indicates the state of the popup list for Dropdown Tree and the parent node's expansion status for TreeView. |
-| `aria-activedescendent` | This attribute holds the ID of the active list item to focus its descendant child element. |
+| `aria-activedescendant` | Contains the ID of the currently active descendant element within the widget. |
 | `aria-labelledby` | This attribute points to the element(s) labeling the element it's applied to. |
 | `aria-describedby` | This attribute points to the element(s) describing the one it's set on. |
 | `role=tree` | All tree nodes are contained within the element. |
@@ -61,7 +60,6 @@ The Dropdown Tree component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 | `aria-level` | Indicates the level of node in TreeView. |
 | `aria-checked` | Indicates the current checked state of TreeView checkbox. |
 | `aria-label` | Indicates the contextual message for the TreeView checkbox and Dropdown Tree. |
-| `aria-activedescendant` | Identifies the currently active element when focusing on the TreeView. |
 
 ## Keyboard interaction
 
@@ -72,14 +70,14 @@ The Dropdown Tree component follows the [keyboard interaction](https://www.w3.or
 | <kbd>Alt + Down</kbd> | Opens the popup. |
 | <kbd>Alt + Up</kbd> | Closes the popup. |
 | <kbd>Esc (Escape)</kbd> | Closes the popup when it is in an open state. |
-| <kbd>Arrow Up</kbd> | Goes to the previous item in the popup. |
-| <kbd>Arrow Down</kbd> | Goes to the next item in the popup. |
+| <kbd>Arrow Up</kbd> | Moves focus to the previous item in the popup. |
+| <kbd>Arrow Down</kbd> | Moves focus to the next item in the popup. |
 | <kbd>Arrow Right</kbd> | Expands the current item in the popup. |
 | <kbd>Arrow Left</kbd> | Collapses the current item in the popup. |
-| <kbd>Home</kbd> | Goes to the first item in the popup. |
-| <kbd>End</kbd> | Goes to the last item in the popup. |
+| <kbd>Home</kbd> | Moves focus to the first item in the popup. |
+| <kbd>End</kbd> | Moves focus to the last item in the popup. |
 | <kbd>Enter</kbd> | Selects the focused item in the popup. |
-| <kbd>Space</kbd> | Checks the current item in the popup. |
+| <kbd>Space</kbd> | Toggles checkbox state when checkboxes are enabled; otherwise selects the focused item. |
 
 ## Ensuring accessibility
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to use React Hooks with Tab in React Tab
 
-You can prevent the React JSX component reload issue on state changes by rendering the React JSX component as children of Tab component. In the below example, we have prevented the re-rending of textbox component on state changes in Tab component.
+You can prevent the React JSX component reload issue on state changes by rendering the React JSX component as a child of the Tab component. In the following example, the re-rendering of a TextBox component on Tab state changes is prevented by passing its element as a Tab item child.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

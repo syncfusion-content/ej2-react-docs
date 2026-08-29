@@ -19,7 +19,7 @@ export default class App extends React.Component {
     render() {
         return (
         // specifies the tag for render the MultiSelect component
-        <MultiSelectComponent id="checkbox" dataSource={this.sportsData} fields={this.fields} placeholder="Select game" mode="CheckBox" enableSelectionOrder={false}>
+        <MultiSelectComponent id="checkbox" dataSource={this.sportsData} fields={this.fields} placeholder="Select game" mode="CheckBox" enableSelectionOrder={true}>
                 <Inject services={[CheckBoxSelection]}/>
             </MultiSelectComponent>);
     }

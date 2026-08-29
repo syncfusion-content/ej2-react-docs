@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Templates in React AutoComplete
 
-The AutoComplete has been provided with several options to customize each list items, group title, header and footer elements.
+The AutoComplete provides several options to customize each list item, group header, header, and footer elements. Each template property accepts a JSX string or a function that receives the current item's `data` object (for example, `data.value`, `data.City`, `data.LastName`). The fields available on `data` depend on the bound `dataSource` and `fields` mapping.
 
-To get started with React AutoComplete templates, you can check on this video:
+To get started with React AutoComplete templates, watch the following video, which demonstrates how to configure item, group, header, and footer templates:
 
 {% youtube "https://www.youtube.com/watch?v=ZAVhnVvM2Dw" %}
 
@@ -20,9 +20,9 @@ To get started with React AutoComplete templates, you can check on this video:
 
 The content of each list item within the AutoComplete can be customized with the help of the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#itemtemplate) property.
 
-In the following sample, each list item is split into two columns to showcase relevant data.
+In the following sample, each list item is split into two columns to showcase the employee's first name and city.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,7 +35,7 @@ In the following sample, each list item is split into two columns to showcase re
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/item-template-cs1" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,11 +50,11 @@ In the following sample, each list item is split into two columns to showcase re
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customized with the help of the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#grouptemplate) property. This template is common for both inline and floating group header templates.
+The group header that categorizes list items can be customized with the help of the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#grouptemplate) property. This template applies to both inline and floating group headers.
 
-In the following sample, employees are grouped according to their city.
+In the following sample, employees are grouped by city. The data is fetched from a remote `DataManager` and also filtered to specific cities (London and Seattle) using a `Predicate`. For an introduction to remote data binding, see [Binding remote data](./data-binding#binding-remote-data).
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -67,7 +67,7 @@ In the following sample, employees are grouped according to their city.
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs26" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -84,9 +84,9 @@ In the following sample, employees are grouped according to their city.
 
 The header element is shown statically at the top of the suggestion list items within the AutoComplete, and any custom element can be placed as a header element using the [`headerTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#headertemplate) property.
 
-In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
+In the following sample, the list items and their headers are displayed in two columns similar to a grid layout.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -99,7 +99,7 @@ In the following sample, the list items and its headers are designed and display
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/header-template-cs1" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -114,11 +114,11 @@ In the following sample, the list items and its headers are designed and display
 
 ## Footer template
 
-The AutoComplete has options to show a footer element at the bottom of the list items in the suggestion list. Here, you can place any custom element as a footer element using the [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#footertemplate) property.
+The AutoComplete has options to show a footer element at the bottom of the list items in the suggestion list. You can place any custom element as the footer using the [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#footertemplate) property.
 
 In the following sample, the footer element displays the total number of list items present in the AutoComplete.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -131,7 +131,7 @@ In the following sample, the footer element displays the total number of list it
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/footer-template-cs1" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -144,13 +144,13 @@ In the following sample, the footer element displays the total number of list it
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/footer-template-cs2" %}
 
-## No Records template
+## No records template
 
-The AutoComplete is provided with support to custom design the suggestion list content when no data is found and no matches are found on search with the help of the [`noRecordsTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#norecordstemplate) property.
+The AutoComplete is provided with support to customize the content shown when no records match the search, with the help of the [`noRecordsTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#norecordstemplate) property. The default text is "No Records Found".
 
-In the following sample, popup list content displays the notification of no data available.
+In the following sample, the popup list content displays a notification that no data is available.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -163,7 +163,7 @@ In the following sample, popup list content displays the notification of no data
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/norecords-template-cs1" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -176,13 +176,13 @@ In the following sample, popup list content displays the notification of no data
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/norecords-template-cs2" %}
 
-## Action Failure template
+## Action failure template
 
-There is also an option to custom design the suggestion list content when the data fetch request fails at the remote server. This can be achieved using the [`actionFailureTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#actionFailureTemplate) property.
+You can customize the content shown when a remote data fetch fails, using the [`actionFailureTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#actionfailuretemplate) property. The default text is "The Request Failed".
 
 In the following sample, when the data fetch request fails, the AutoComplete displays the notification.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -195,7 +195,7 @@ In the following sample, when the data fetch request fails, the AutoComplete dis
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/norecords-template-cs3" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -208,7 +208,7 @@ In the following sample, when the data fetch request fails, the AutoComplete dis
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/norecords-template-cs4" %}
 
-## See Also
+## See also
 
 * [How to achieve filtering](./filtering)
 * [How to group the data using header](./grouping#grouping)

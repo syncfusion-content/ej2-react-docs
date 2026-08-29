@@ -18,7 +18,7 @@ function App() {
     const fields = { text: 'Game', value: 'Id' };
     return (
     // specifies the tag for render the MultiSelect component
-    <MultiSelectComponent id="checkbox" dataSource={sportsData} fields={fields} placeholder="Select game" mode="CheckBox" enableSelectionOrder={false}>
+    <MultiSelectComponent id="checkbox" dataSource={sportsData} fields={fields} placeholder="Select game" mode="CheckBox" enableSelectionOrder={true}>
             <Inject services={[CheckBoxSelection]}/>
         </MultiSelectComponent>);
 }

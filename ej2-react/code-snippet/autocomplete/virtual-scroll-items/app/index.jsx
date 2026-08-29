@@ -17,12 +17,12 @@ export default class App extends React.Component {
     query = new Query().take(40);
 
     Begin(args) {
-        args.Query = new Query().take(45);
-      }
+        args.query = new Query().take(45);
+    }
 
     render() {
         return (
-            // specifies the tag for render the DropDownList component
+            // specifies the tag for render the AutoComplete component
             <AutoCompleteComponent id="datas" dataSource={this.records} placeholder="e.g. Item 1" enableVirtualization={true} query={this.query} actionBegin={this.Begin} fields={this.fields} popupHeight="200px" >
                 <Inject services={[VirtualScroll]} />
             </AutoCompleteComponent>);

@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # How to customize Tab content height in React
 
-You can change the Tab content height by using the [`heightAdjustMode`](https://ej2.syncfusion.com/react/documentation/api/tab/#heightadjustmode) property. By default, the Tab content [`heightAdjustMode`](https://ej2.syncfusion.com/react/documentation/api/tab/#heightadjustmode) property is set to `Content` value.
+You can change the Tab content height by using the [`heightAdjustMode`](https://ej2.syncfusion.com/react/documentation/api/tab#heightadjustmode) property. By default, the Tab content [`heightAdjustMode`](https://ej2.syncfusion.com/react/documentation/api/tab#heightadjustmode) property is set to `Content`.
 
-* **None**: Each tab content height is set based on the Tab height. This value is used only the tab component having the [`height`](https://ej2.syncfusion.com/react/documentation/api/tab/#height) property.
-* **Auto**: Each tab content height will take the maximum height of all other tabs content.
-* **Content**: Each tab content height is set based on their own content.
-* **Fill**: Each tab content height is set based on the full height of Tabs parent element.
+* **None**: Each Tab content height is set based on the Tab height. This value is used only when the Tab component has the [`height`](https://ej2.syncfusion.com/react/documentation/api/tab#height) property set.
+* **Auto**: Each Tab content height takes the maximum height of all Tab contents.
+* **Content**: Each Tab content height is set based on its own content.
+* **Fill**: Each Tab content height is set based on the full height of the Tab's parent element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

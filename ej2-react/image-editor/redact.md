@@ -16,41 +16,41 @@ The redact feature in an Image Editor is a valuable tool that empowers users to 
 
 The Image Editor control includes a [`drawRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawRedact) method, which allows you to draw redaction on an image. This method takes six parameters that define how the redact should be carried out:
 
-* type: Specifies the type of redaction to be drawn on the image such as blur or pixelate. If not specified, the redaction drawing is initiated with the default blur value.
+* type: Specifies the type of redaction to be drawn on the image such as `blur` or `pixelate`. If not specified, the default type is `blur`.
 
-* x: Specifies x-coordinate of redaction. If not specified, the redaction drawing is initiated with the first parameter.
+* x: Specifies the x-coordinate of the redact area in pixels. If not specified, the redact is positioned at the horizontal center of the image.
 
-* y: Specifies y-coordinate of redaction. If not specified it draws redaction from the center point of the image.
+* y: Specifies the y-coordinate of the redact area in pixels. If not specified, the redact is positioned at the vertical center of the image.
 
-* width: Specifies the width of redaction. The default value is 100.
+* width: Specifies the width of the redact area in pixels. The default value is 100.
 
-* height: Specifies the height of redaction. The default value is 50.
+* height: Specifies the height of the redact area in pixels. The default value is 50.
 
-* value: Specifies the blur value for blur-type redaction or the pixel size for pixelate-type redaction. Defaults to 20 since the default redaction is blur.
+* value: Specifies the blur radius (pixels) for `blur` type or the pixel size for `pixelate` type. The default value is 20 (pixels).
 
 ## Selecting a redact
 
-The Image Editor control includes a [`selectRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#selectRedact) method, which allows you to select a redaction based on the given redaction id. Use [`getRedacts`](https://ej2.syncfusion.com/react/documentation/api/image-editor#getRedacts) method to get the redaction id which is then passed to perform selection. This method takes one parameter that define how the redact should be carried out:
+Use the [`selectRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#selectRedact) method to select a redact by id. Use `getRedacts()` to obtain redact objects (with ids). This method takes one parameter that defines how the redact should be selected:
 
-* id: Specifies the shape id to select a redact on an image.
+* id: Specifies the shape id of the redact to select.
 
 ## Deleting a redact
 
-The Image Editor control includes a [`deleteRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#deleteRedact) method, which allows you to delete a redaction based on the given redaction id. Use [`getRedacts`](https://ej2.syncfusion.com/react/documentation/api/image-editor#getRedacts) method to get the redaction id which is then passed to perform selection. This method takes one parameter that define how the redact should be carried out:
+Use the [`deleteRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#deleteRedact) method to delete a redact by id. Use `getRedacts()` to obtain redact objects (with ids). This method takes one parameter that defines how the redact should be deleted:
 
-* id: Specifies the shape id to delete a redact on an image.
+* id: Specifies the shape id of the redact to delete.
 
 ## Updating a redact
 
-The Image Editor control includes a [`updateRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#updateRedact) method, which allows you to update the existing redacts by changing its height, width, blur, and pixel size in the component. Use [`getRedacts`](https://ej2.syncfusion.com/react/documentation/api/image-editor#getRedacts) method to get the redacts which is then passed to change the options of a redacts. This method takes two parameters that define how the redact should be carried out:
+Use the [`updateRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#updateRedact) method to update an existing redact. Use `getRedacts()` to obtain redact objects. This method takes two parameters that define how the redact should be updated:
 
-* setting: Specifies the redact settings to be updated for the shape on an image.
+* setting: Specifies the redact settings to update for the shape.
 
-* isSelected: Specifies to show the redacts in the selected state.
+* isSelected: Specifies whether to show the redact in the selected state.
 
 ## Getting redacts
 
-The Image Editor control includes a [`getRedacts`](https://ej2.syncfusion.com/react/documentation/api/image-editor#getRedacts) method, which allows you to get all the redact details which is drawn on an image editor.
+Use the [`getRedacts`](https://ej2.syncfusion.com/react/documentation/api/image-editor#getRedacts) method to get all redact details that are drawn on the image editor.
 
 Here's an example demonstrating how to draw, select, delete, update, and get redacts on an image using the [`drawRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawRedact), [`selectRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#selectRedact), [`deleteRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#deleteRedact), [`updateRedact`](https://ej2.syncfusion.com/react/documentation/api/image-editor#updateRedact) and [`getRedacts`](https://ej2.syncfusion.com/react/documentation/api/image-editor#getRedacts) methods.
 

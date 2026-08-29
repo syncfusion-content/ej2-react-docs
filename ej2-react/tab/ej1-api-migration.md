@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migration from EJ1 in React Tab | Syncfusion
-description: Side-by-side mapping of Essential JS 1 Tab APIs to their Syncfusion React Tab replacements.
+description: Side-by-side mapping of Essential JS 1 Tab APIs to their Syncfusion React Tab replacements and equivalents.
 control: Ej1 api migration 
 platform: ej2-react
 documentation: ug
@@ -79,7 +79,7 @@ This article describes the API migration process of Tab component from Essential
 |Add Items |**Method** : addItem(url, displayLabel, index, cssClass, id) <br/> `<EJ.Tab id="Tab"></EJ.Tab>`<br/> <br/>var obj=$('#Tab').ejTab('instance')<br/>obj.addItem("#new", "New Item", 3, "myClass", "newItem");| **Method** :addTab(items, index) <br/> `<TabComponent  id="tab"  ref = {(scope) => {this.TabObj = scope}}> </TabComponent >`<br/> <br/>  constructor(props: {}) {<br/> this.TabObj.addTab([{header: { text: 'Tab1' },content: 'contents' }], 1  ); }|
 |BeforeAdd | <b>Not Applicable</b>  | **Event:** adding<br/> `<TabComponent  id="tab" adding={onadding.bind(this)}> </TabComponent >`<br/> <br/> onadding(event){  }  |
 |AfterAdd | **Event:** itemAdd<br/> `<EJ.Tab id='tab' itemAdd={this.onitemAdd}></EJ.Tab>`<br/> <br/> onitemAdd(event){  }  | **Event:** added <br/> `<TabComponent  id="tab" added={onadded.bind(this)}></TabComponent >`<br/> <br/> onadded(event){  } |
-|Remove Item |**Method** : removeItem(index) <br/> `<EJ.Tab id="Tab"  ></EJ.Tab>`<br/> <br/>var obj=$('#Tab').ejTab('instance')<br/>obj.removeItem(0); }| **Method** :addItem(items, index) <br/> `<TabComponent  id="tab" ref = {(scope) => {this.TabObj = scope}}> </TabComponent >`<br/> <br/>  constructor(props: {}) {<br/> this.TabObj.addItem([{ header: 'App', content: 'text' }], 0);}|
+|Remove Item |**Method** : removeItem(index) <br/> `<EJ.Tab id="Tab"  ></EJ.Tab>`<br/> <br/>var obj=$('#Tab').ejTab('instance')<br/>obj.removeItem(0); }| **Method** :removeTab(items, index) <br/> `<TabComponent  id="tab" ref = {(scope) => {this.TabObj = scope}}> </TabComponent >`<br/> <br/>  constructor(props: {}) {<br/> this.TabObj.removeTab([{ header: { text: 'App' }, content: 'text' }], 0);}|
 |BeforeRemove | **Event:** beforeItemRemove <br/> `<EJ.Tab id='tab' beforeItemRemove={this.onbeforeItemRemove}></EJ.Tab>`<br/> <br/> onbeforeItemRemove(event){  }  | **Event:** removing <br/> `<TabComponent  id="tab" removing={onremoving.bind(this)}></TabComponent >`<br/> <br/> onremoving(event){  } |
 |AfterRemove | **Event:** afterRemove <br/> `<EJ.Tab id='tab' itemRemove={this.onitemRemove}></EJ.Tab>`<br/> <br/> onitemRemove(event){  }  | **Event:** removed <br/> `<TabComponent  id="tab" removed={onremoved.bind(this)} ></TabComponent >`<br/> <br/> onremoved(event){  } |
 |Select item |<b>Not Applicable</b>| **Method** :select(index)<br/> `<TabComponent  id="tab" ref = {(scope) => {this.TabObj = scope}} > </TabComponent >`<br/> <br/>  constructor(props: {}) {<br/> this.TabObj.select(1);}|
@@ -100,14 +100,14 @@ This article describes the API migration process of Tab component from Essential
 | ------------ | ------------------------- | ------------------------- |
 |Collapse active item | **Property** : collapsible <br/> `<EJ.Tab id="tab" collapsible={true}> </EJ.Tab>`| <b>Not Applicable</b> |
 |Custom class | **Property** : cssClass <br/> `<EJ.Tab id="tab" cssClass="customClass" > </EJ.Tab>`| **Property** : cssClass <br/> `<TabComponent  id="tab" cssClass="customClass" > </TabComponent >` |
-|Enabled | **Property** : enabled <br/> `<EJ.Tab id="tab" enabled={false}> </EJ.Tab>`| **Method** : disable(false)<br/> `<EJ.Tab id="Tab"></EJ.Tab>`<br/> <br/>constructor(props: {}) {<br/> this.TabObj.disable(false); |
+|Enabled | **Property** : enabled <br/> `<EJ.Tab id="tab" enabled={false}> </EJ.Tab>`| **Method** : disable(false)<br/> `<TabComponent  id="Tab" ref={(scope) => { this.TabObj = scope; }}></TabComponent >`<br/> <br/>constructor(props: {}) {<br/> this.TabObj.disable(false); } |
 |Persistence | **Property** : enablePersistence <br/> `<EJ.Tab id="tab" enablePersistence={false} > </EJ.Tab>`| **Property** : enablePersistence <br/> `<TabComponent  id="tab" enablePersistence={false} > </TabComponent >` |
 |Events | **Property** : events <br/> `<EJ.Tab id="tab" events="click" > </EJ.Tab>`| <b>Not Applicable</b> |
 |Height | **Property** : height <br/> `<EJ.Tab id="Tab" height="100%" > </EJ.Tab>`| **Property** : height <br/> `<TabComponent  id="Tab" height="100%" > </TabComponent >` |
 |HeightAdjustMode | **Property** : heightAdjustMode <br/> `<EJ.Tab id="Tab" heightAdjustMode="Content" > </EJ.Tab>`| **Property** : heightAdjustMode <br/> `<TabComponent  id="Tab" heightAdjustMode="Content" > </TabComponent >` |
 |HtmlAttributes | **Property** : htmlAttributes <br/> `<EJ.Tab id="Tab" [htmlAttributes]="attributes" > </EJ.Tab>`<br/> <br/> this.attributes = {class: "my-class"};|<b>Not Applicable</b>|
 |ID prefix | **Property** : idPrefix <br/> `<EJ.Tab id="Tab" [idPrefix]="EJ.Tab-" > </EJ.Tab>`| <b>Not Applicable</b>|
-|ShowCloseButton | **Property** : showCloseButton <br/> `<EJ.Tab id="Tab" showCloseButton={true} > </EJ.Tab>`| **Property** : showCloseButton <br/> `<TabComponent  id="Tab" {showCloseButton}="true" > </TabComponent >`|
+|ShowCloseButton | **Property** : showCloseButton<br/> `<EJ.Tab id="Tab" showCloseButton={true} > </EJ.Tab>`| **Property** : showCloseButton<br/> `<TabComponent  id="tab" showCloseButton={true} > </TabComponent >`|
 |showReloadIcon | **Property** : showReloadIcon <br/> `<EJ.Tab id="Tab" showReloadIcon={true} > </EJ.Tab>`| <b>Not Applicable</b> |
 |ShowRounderCorner | **Property** : showRoundedCorner <br/> `<EJ.Tab id="Tab" showRoundedCorner={true} > </EJ.Tab>`| <b>Not Applicable</b> |
 |Destroy | **Method** : destroy() <br/> `<EJ.Tab id="Tab"></EJ.Tab>`<br/> <br/>var obj=$('#Tab').ejTab('instance')<br/>obj.destroy(); | **Method** : destroy() <br/> `<TabComponent  id="tab"></TabComponent >`<br/> <br/>constructor(props: {}) {<br/> this.TabObj.destroy(); |

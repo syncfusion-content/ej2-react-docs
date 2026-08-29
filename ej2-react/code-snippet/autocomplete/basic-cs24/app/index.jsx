@@ -17,7 +17,7 @@ export default class App extends React.Component {
     // take 0 item to showcase noRecordsTemplate property.
     query = new Query().select(['ContactName', 'CustomerID']).take(0);
     // set locale culture to AutoComplete
-    componentWillMount() {
+    componentDidMount() {
         L10n.load({
             'fr-BE': {
                 'dropdowns': {

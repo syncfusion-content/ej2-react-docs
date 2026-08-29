@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Transform in React Image Editor
 
-The Image Editor provides a range of transformation options for manipulating both the image and its annotations. These options include rotation, flipping, zooming, and panning. These transformations offer flexibility in adjusting the image and enhancing its visual appearance. 
+The Image Editor provides rotation, flipping, zooming, and panning for manipulating both the image and its annotations, offering flexibility to adjust and enhance visuals.
 
 ## Rotate an image
 
-The Image Editor allows to rotate the image and its annotations by a specific number of degrees clockwise or anti-clockwise using [`rotate`](https://ej2.syncfusion.com/react/documentation/api/image-editor#rotate) method. This method takes a single parameter: the angle of rotation in degrees. A positive value will rotate the image clockwise, while a negative value will rotate it anti-clockwise.
+The Image Editor allows you to rotate the image and its annotations by a specific number of degrees (clockwise or counterclockwise) using the [`rotate`](https://ej2.syncfusion.com/react/documentation/api/image-editor#rotate) method. This method accepts a single parameter: the rotation angle in degrees (positive rotates clockwise; negative rotates counterclockwise).
 
-`Note:` It is recommended to pass values in multiples of 90° (e.g., 90, 180, -90) for proper rotation alignment.
+Note: For best alignment, use multiples of 90° (for example, 90, 180, -90).
 
 Here is an example of rotating an image in a button click event.
 
@@ -80,7 +80,7 @@ Here is an example of straightening the image.
 
 ## Zoom in or out an image 
 
-The Image Editor allows to magnify an image using the [`zoom`](https://ej2.syncfusion.com/react/documentation/api/image-editor#zoom) method. This method allows one to zoom in and out of the image and provides a more detailed view of the image's hidden areas. This method takes two parameters to perform zooming. 
+The Image Editor allows you to magnify an image using the [`zoom`](https://ej2.syncfusion.com/react/documentation/api/image-editor#zoom) method. This method enables zooming in and out and provides a more detailed view of image regions. It accepts two parameters to perform zooming.
 
 * zoomFactor - Specifies a value to controlling the level of magnification applied to the image. 
 
@@ -90,7 +90,7 @@ The Image Editor allows to magnify an image using the [`zoom`](https://ej2.syncf
 
 The [`minZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel#minzoomfactor) property allows you to specify the minimum level of zoom that is allowed for an image. By setting this property, you can prevent the image from being zoomed out beyond a certain point, ensuring that it remains visible and usable even at the smallest zoom level. 
 
-By default, the `minZoomFactor` value is set to 0.1, meaning that the image can be zoomed out up to 10 times its original size. 
+By default, the `minZoomFactor` value is set to 0.1, meaning the image can be zoomed out to 10% of its original size.
 
 The [`maxZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel#maxzoomfactor) property is a useful feature in the Image Editor that allows you to define the maximum level of zoom permitted for an image. This property sets a limit on how much the image can be magnified, preventing excessive zooming that may result in a loss of image quality or visibility. 
 

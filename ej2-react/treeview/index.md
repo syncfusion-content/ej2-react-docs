@@ -24,7 +24,7 @@ The **TreeView** component is used to represent hierarchical data in a tree like
 
 * **[Node Editing](https://ej2.syncfusion.com/react/documentation/treeview/node-editing)**: Allows you to change the text of a node in TreeView.
 
-* **[Sorting](https://ej2.syncfusion.com/react/documentation/treeview/ej1-api-migration#common)**: Allows display of the TreeView nodes in an `ascending`
+* **[Sorting](https://ej2.syncfusion.com/react/documentation/treeview/sorting)**: Allows display of the TreeView nodes in an `ascending`
 or a `descending` order.
 
 * **[Template](https://ej2.syncfusion.com/react/documentation/treeview/template)**: Allows you to customize the nodes in TreeView.

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Checkbox in React MultiSelect Dropdown
 
-The MultiSelect includes built-in checkbox support to select multiple values. Enable this feature by setting the [`mode`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#mode) property to `CheckBox`.
+The MultiSelect includes built-in checkbox support to select multiple values. To enable this feature, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#mode) property to `CheckBox`.
 
-To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
+When using checkbox mode, inject the `CheckBoxSelection` module into the MultiSelect. This injection is required specifically when the `mode` property is set to `CheckBox`; it is not required for the default mode.
 
 `[Class-component]`
 
@@ -44,9 +44,9 @@ To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 
 The MultiSelect component includes a `Select All` option in the header to select all list items at once.
 
-When the [`showSelectAll`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#showselectall) property is set to **true**, the Select All option is displayed by default. Customize the label text using the [`selectAllText`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#selectalltext) property.
+By default, the [`showSelectAll`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#showselectall) property is set to **false**. When set to **true**, the Select All option is displayed in the popup header. Customize the Select All label text using the [`selectAllText`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#selectalltext) property.
 
-Similarly, you can customize the unselect all label using the [`unSelectAllText`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#unselectalltext) property.
+Similarly, you can customize the unselect-all label using the [`unSelectAllText`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#unSelectAllText) property.
 
 `[Class-component]`
 
@@ -76,7 +76,7 @@ Similarly, you can customize the unselect all label using the [`unSelectAllText`
 
 ## Selection Limit
 
-Restrict the number of items that can be selected by setting the [`maximumSelectionLength`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#maximumselectionlength) property. This prevents users from selecting more items than the specified limit.
+Restrict the number of items that can be selected by setting the [`maximumSelectionLength`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#maximumselectionlength) property. Once the specified limit is reached, the remaining unselected items are disabled and no further items can be selected until an already selected item is removed.
 
 `[Class-component]`
 
@@ -104,9 +104,9 @@ Restrict the number of items that can be selected by setting the [`maximumSelect
 
  {% previewsample "page.domainurl/code-snippet/multiselect/checkbox-cs6" %}
 
-## Selection Reordering
+## Selection Order
 
-Enable the [`enableSelectionOrder`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#enableselectionorder) property to automatically reorder selected items within the popup list, displaying them in the order they were selected.
+Set the [`enableSelectionOrder`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#enableselectionorder) property to **true** to automatically reorder selected items within the popup list, displaying them in the order they were selected. When set to **false** (the default), selected items remain in the order defined by the data source.
 
 `[Class-component]`
 
@@ -136,7 +136,12 @@ Enable the [`enableSelectionOrder`](https://ej2.syncfusion.com/react/documentati
 
 ## See Also
 
+
 * [How to bind the data](./data-binding)
 * [How to filter the bound data](./filtering)
 * [How to add custom value to the MultiSelect](./custom-value)
-* [How to render grouping with checkbox](./grouping#grouping-with-checkbox).
+* [How to render grouping with checkbox](./grouping#grouping-with-checkbox)
+
+## Troubleshooting
+
+If checkboxes do not render in the popup, verify that the `CheckBoxSelection` module is injected into the MultiSelect component via the `Inject` directive and that the `mode` property is set to `CheckBox`. For initial setup and prerequisites, see the [getting started](./getting-started) topic.
