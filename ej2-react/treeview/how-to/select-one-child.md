@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to select one child per parent in React
 
-TreeView allows both single and multiple selections. If your application needs to select one child at a time under one specific parent, refer to the following example. Here, you can achieve this in the [`nodeSelecting`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodeselecting) event of TreeView. However, you can reset the selected child and make another selection by pressing Ctrl + selected nodes.
+TreeView allows both single and multiple selections. If your application needs to select one child at a time under one specific parent, refer to the following example. You can achieve this in the [`nodeSelecting`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodeselecting) event of the TreeView by clearing any previously selected sibling before the new selection is applied. The sample below also shows how to reset the selected child and re-select another sibling by holding **Ctrl** while clicking.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

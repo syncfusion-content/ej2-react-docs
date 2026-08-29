@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to render other components in Tab in React
 
-You can render other components inside Tab using React **template**. Through this, we can add content as other components directly with all functionalities to our Tab. Follow the below guidelines for using the other components as template in tab.
+You can render other components inside Tab using a React **template**. Through this, you can add content as other components directly with all their functionalities to your Tab. Follow the guidelines below for using other components as a template in the Tab.
 
-* Declare a template within the function returns jsx element. If the template does not need arguments no need to pass the properties.
+* Declare a template within a function that returns a JSX element. If the template does not need arguments, there is no need to pass any properties.
 
-* Assign the function as value for the template property.
+* Assign the function as the value for the template property.
 
 To quickly get started with integrating UI components inside the React Tabs component, you can check out this video:
 

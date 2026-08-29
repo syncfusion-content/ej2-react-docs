@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to load Tab from a data source in React
 
-You can bind any data object to Tab items, by mapping it to a [`header`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem/#header) and [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem/#content) property.
+You can bind any data object to Tab items by mapping its fields to the [`header`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#header) and [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#content) properties.
 
-In the below demo, Data is fetched from an `OData` service using `DataManager`. The result data is formatted as a JSON object with `header` and `content` fields, which is set to [`items`](https://ej2.syncfusion.com/react/documentation/api/accordion/#items) property of Tab.
+In the following demo, data is fetched from an `OData` service using `DataManager`. The result is formatted as a JSON array of objects with `header` and `content` fields, which is set as the [`items`](https://ej2.syncfusion.com/react/documentation/api/tab#items) collection of the Tab.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Toolbar in React Image Editor
 
-The toolbars in the Image Editor are a key component for interacting with and editing images. They provide a range of tools and options that can be customized to suit specific needs and preferences. You can add or remove items from the toolbar to create a personalized set of tools, or even create a custom toolbar from scratch. This flexibility and customization enable a unique image editing experience tailored to specific needs and workflows. 
-
-In the Image Editor, the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor#toolbar) property provides the ability to customize the toolbar by adding or removing items, as well as defining a completely custom toolbar. This feature is valuable for creating a personalized image editing experience that aligns with specific requirements and workflows. 
+Toolbars in the Image Editor provide tools and options you can customize to suit your workflow; use the [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor#toolbar) property to add, remove, or replace items and create a personalized toolbar.
 
 ## Built-in toolbar items
 
@@ -40,9 +38,9 @@ Specifies the toolbar items to perform UI interactions. Refer to the built-in to
 
 ## Add a custom toolbar item
 
-The [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor#toolbar) property in the Image Editor allows to add or remove toolbar items to include only the tools they frequently use, streamlining the editing process and reducing clutter. 
+The [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor#toolbar) property allows you to add or remove toolbar items so you show only the tools you need, streamlining the editing process.
 
-Here is an example of adding custom toolbar items to rotate and flip transformation using `toolbar` property. 
+Here is an example of adding custom toolbar items to rotate and flip transformations using the `toolbar` property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -100,9 +98,9 @@ Here is an example of hiding the cropping and selection toolbar items using `too
 
 ## Enable or disable a toolbar item
 
-The [`toolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor#toolbar) property is employed to enable or disable toolbar items in the Image Editor. By default, the `toolbar` property includes the default toolbar items, and these items cannot be disabled. However, if you have defined custom toolbar items using the toolbarItemModel, you can enable or disable them by configuring their respective properties within the `toolbar` property. This provides the flexibility to control the availability and functionality of custom toolbar items based on your specific requirements. 
+The `toolbar` property is used to configure toolbar items. By default the editor shows the built-in toolbar items; to remove or replace them provide an explicit `toolbar` array (for example, an empty array hides the toolbar). Built-in items are not disabled individually via `toolbar`; to control availability of custom items, define them with a `toolbarItemModel` and set their `disabled` property.
 
-Here is an example of disabling the custom toolbar item using `toolbar` property.
+Here is an example of disabling a custom toolbar item using the `toolbar` property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -41,7 +41,7 @@ In the following example, the `allowMultiSelection` property is enabled.
 
 You can get or set the selected nodes in TreeView at initial rendering and dynamically by using the [selectedNodes](https://ej2.syncfusion.com/react/documentation/api/treeview/#selectednodes) property. It will return the selected node’s ID as an array.
 
-* The [`nodeselecting`](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodeselecting) event is triggered before a node is selected/unselected which can be used to prevent the selection.
+* The [`nodeSelecting`](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodeselecting) event is triggered before a node is selected/unselected which can be used to prevent the selection.
 
 * The [`nodeSelected`](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodeselected) event is triggered once a node is successfully selected/unselected.
 

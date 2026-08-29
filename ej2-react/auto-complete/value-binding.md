@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Value Binding in React AutoComplete
 
-Value binding in the AutoComplete control allows you to associate data values with each list item. This facilitates managing and retrieving selected values efficiently. The AutoComplete component provides flexibility in binding both primitive data types and complex objects.
+Value binding in the AutoComplete component allows you to associate data values with each list item. This makes it easier to manage and retrieve the selected value. The AutoComplete component provides flexibility in binding both primitive data types and complex objects. To read the selected value at runtime, handle the [`change`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#change) event and read the `event.value` property; for object binding, `event.value` returns the full selected object (not just `fields.value`).
 
-## Primitive Data Types
+## Primitive data types
 
-The AutoComplete control provides flexible binding capabilities for primitive data types like strings and numbers. You can effortlessly bind local primitive data arrays, fetch and bind data from remote sources, and even custom data binding to suit specific requirements. Bind the value of primitive data to the [value](../api/auto-complete#value) property of the AutoComplete.
+The AutoComplete supports binding primitive values such as strings and numbers. You can bind local primitive arrays, fetch remote sources, or implement custom binding to suit specific requirements. Bind the value of primitive data to the [`value`](../api/auto-complete#value) property of the AutoComplete.
 
 Primitive data types include:
 
@@ -23,9 +23,11 @@ Primitive data types include:
 * Boolean
 * Null
 
-The following sample demonstrates preselect values for primitive data types.
+> When the `value` property is set to `null` or an empty string, the AutoComplete clears any preselected item and renders with no value.
 
-`[Class-component]`
+The following sample demonstrates setting a preselected value for primitive data types.
+
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -38,13 +40,13 @@ The following sample demonstrates preselect values for primitive data types.
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/primitive" %}
 
-## Object Data Types
+## Object data types
 
-In the AutoComplete control, object binding allows you to bind to a dataset of objects. When [`allowObjectBinding`](../api/auto-complete#allowobjectbinding) is enabled, the value of the control will be an object of the same type as the selected item in the [value](../api/auto-complete#value) property. This feature seamlessly binds arrays of objects, whether sourced locally, retrieved from remote endpoints, or customized to suit specific application needs.
+In the AutoComplete component, object binding allows you to bind to a dataset of objects. When [`allowObjectBinding`](../api/auto-complete#allowobjectbinding) is enabled (set to `true`), the value of the component will be an object of the same type as the selected item in the [`value`](../api/auto-complete#value) property. When `allowObjectBinding` is enabled, set `allowObjectBinding` and the `fields` mapping before the `value` prop, so the component can resolve the object against the `dataSource`; the full selected object (not just `fields.value`) is returned in `value`. This feature binds arrays of objects, whether sourced locally or retrieved from remote endpoints, using the same approach shown below.
 
-The following sample demonstrates preselect values for object data types.
+The following sample demonstrates setting a preselected value for object data types.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -23,7 +23,7 @@ export default class App extends React.Component<{}, {}> {
     private query: Query = new Query().select(['ContactName', 'CustomerID']).take(0);
 
     // set locale culture to AutoComplete
-    public componentWillMount() {
+    public componentDidMount() {
         L10n.load({
             'fr-BE': {
                 'dropdowns': {

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Grouping in React AutoComplete
 
-The AutoComplete supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
+The AutoComplete supports grouping flat data items based on a category field. The category of each list item can be mapped through the [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) field in the data source. The `groupBy` value should map to a string field in the data; for an overview of field mapping, see [Field mapping](./data-binding#field-mapping). The group header is displayed as both an inline and a fixed header. The fixed group header updates dynamically to reflect the category of the items currently in view while scrolling.
 
-In the following sample, vegetables are grouped based on their category using the `groupBy` field.
+In the following sample, vegetables are grouped based on their category using the `groupBy` field. The `Category` field name used here is an example; you can map `groupBy` to any field in your data.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ In the following sample, vegetables are grouped based on their category using th
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs21" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,10 +40,10 @@ In the following sample, vegetables are grouped based on their category using th
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs22" %}
 
-## Customization
+## Customizing the group header
 
-The grouping header is also provided with customization options. This allows custom designing using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/auto-complete#grouptemplate) property for both inline and fixed headers.
+You can customize the group header using the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#grouptemplate) property. This allows custom rendering using the `groupTemplate` property for both inline and fixed headers.
 
-## See Also
+## See also
 
-* [Group Template support to AutoComplete](./templates#group-template).
+* [Group Template support to AutoComplete](./templates#group-template)

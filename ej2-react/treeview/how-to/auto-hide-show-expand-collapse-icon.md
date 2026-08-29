@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to auto-hide expand/collapse icons in React
 
-You can display the expand icon by hovering the mouse over TreeView and hide the expand icon by leaving the mouse from TreeView. Refer to the following code sample to hide/show the expand/collapse icon automatically using the mouse.
+You can hide the expand and collapse icons by default and reveal them by hovering the mouse over TreeView. The icons are again hidden once the mouse leaves the TreeView. Refer to the following code sample to toggle the visibility of the expand/collapse icons based on hover.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

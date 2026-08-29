@@ -44,11 +44,11 @@ For specific needs of the application, users don't want to re-render the TreeVie
 {% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/tree-view/template-cs2/app/index.tsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="style.css" %}
-{% include code-snippet/tree-view/template-cs2/style.css %}
-{% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
 {% include code-snippet/tree-view/template-cs2/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="style.css" %}
+{% include code-snippet/tree-view/template-cs2/style.css %}
 {% endhighlight %}
 {% endtabs %}
 

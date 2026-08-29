@@ -29,7 +29,7 @@ function App() {
         { "Status": "In Development", "State": false }
     ];
 
-    // map the groupBy field with Category column
+    // set the value field
     const fields: object = { value: 'Status' };
     let allowResize = true;
     return (

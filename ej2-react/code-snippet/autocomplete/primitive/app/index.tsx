@@ -3,9 +3,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 export default class App extends React.Component<{}, {}> {
-  // maps the appropriate column to fields property
-  private fields: object = { value: 'text' };
-
   // define the array of string
   private records: string[] = [];
 
@@ -18,7 +15,7 @@ export default class App extends React.Component<{}, {}> {
   public render() {
     return (
       // specifies the tag for render the AutoComplete component
-      <AutoCompleteComponent id="datas" dataSource={this.records} placeholder="e.g. Item 1" allowFiltering={true} popupHeight="200px">
+      <AutoCompleteComponent id="datas" dataSource={this.records} value={this.value} placeholder="e.g. Item 1" allowFiltering={true} popupHeight="200px">
       </AutoCompleteComponent>
     );
   }

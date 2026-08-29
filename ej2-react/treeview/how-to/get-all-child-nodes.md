@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to get all child nodes in React Tree View
 
-This section demonstrates how to get the child nodes from corresponding parent ID. Using the [`getNode`](https://ej2.syncfusion.com/react/documentation/api/treeview#getnode) method, you can get the node details of TreeView. Please refer to the following sample.
+This section demonstrates how to get the child nodes from a corresponding parent ID. Using the [`getNode`](https://ej2.syncfusion.com/react/documentation/api/treeview#getnode) method, you can get the node details of TreeView, and then access its `child` array to read the entire list of immediate children. Use [`getTreeData`](https://ej2.syncfusion.com/react/documentation/api/treeview#gettreedata) when you also need the descendants further down the hierarchy. Please refer to the following sample.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

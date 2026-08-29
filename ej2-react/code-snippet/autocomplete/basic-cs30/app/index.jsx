@@ -25,7 +25,7 @@ export default class App extends React.Component {
         { "Status": "Acknowledged", "State": false },
         { "Status": "In Development", "State": false }
     ];
-    // map the groupBy field with Category column
+    // set the value field
     fields = { value: 'Status' };
     // set true for enable the resize property to AutoComplete
      allowResize = true ;

@@ -10,7 +10,16 @@ domainurl: ##DomainURL##
 
 # Style and Appearance in React Tab
 
-The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
+The following content provides the exact CSS structure that can be used to modify the control's appearance based on user preference.
+
+The Tab component renders the following CSS class hierarchy. Use these selectors to override or extend the default appearance:
+
+* `.e-tab` — Root container of the Tab component.
+* `.e-tab .e-tab-header` — Outer wrapper of the Tab header section.
+* `.e-tab .e-tab-header .e-toolbar-items` — Container of all header items.
+* `.e-tab .e-tab-header .e-toolbar-item` — Individual header item; the active item additionally has the `.e-active` class.
+* `.e-tab .e-content` — Container of the Tab content panels.
+* `.e-tab .e-content .e-item` — Individual content panel.
 
 ## Customizing Tab
 

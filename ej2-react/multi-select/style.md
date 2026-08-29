@@ -51,7 +51,7 @@ Style selected chips using the following CSS rules.
 }
 ```
 
-## Customizing the dropdown icon’s color
+## Customizing the dropdown icon color
 
 Change the dropdown icon color using the following CSS.
 
@@ -72,9 +72,9 @@ Customize the input element focus color using the following CSS.
 }
 ```
 
-## Customizing the disabled component’s text color
+## Customizing the disabled component text color
 
-Style the text color of disabled components using the following CSS.
+Style the text color of disabled components in delimiter (Box) mode using the following CSS. This selector applies only to delimiter mode; checkbox and chip mode disabled styling are not covered by this rule.
 
 ```css
 .e-multiselect.e-disabled .e-multi-select-wrapper .e-delim-values {
@@ -92,9 +92,9 @@ Modify the placeholder text color using the following CSS.
 }
 ```
 
-## Customizing the placeholder to add mandatory indicator(*)
+## Customizing the float label to add a mandatory indicator (*)
 
-Add a mandatory indicator asterisk (*) to float label elements using the following CSS.
+Add a mandatory indicator asterisk (*) to float label elements using the following CSS. This requires the `floatLabelType` property to be set on the MultiSelect component.
 
 ```css
 .e-input-group.e-control-wrapper.e-float-input .e-float-text::after {
@@ -103,7 +103,7 @@ Add a mandatory indicator asterisk (*) to float label elements using the followi
 }
 ```
 
-## Customizing the float label element's focusing color
+## Customizing the float label focus color
 
 Style the float label focus color using the following CSS.
 
@@ -118,9 +118,9 @@ Style the float label focus color using the following CSS.
 
 ```
 
-## Customizing the outline theme's focus color
+## Customizing the outline theme focus color
 
-Customize the outline theme focus color using the following CSS.
+Customize the outline theme focus color using the following CSS. To use the outline variant, import the outline theme CSS and set the `cssClass` property to `e-outline` on the MultiSelect component.
 
 ```css
 .e-outline.e-input-group.e-input-focus:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled),.e-outline.e-input-group.e-control-wrapper.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) {
@@ -140,7 +140,7 @@ Modify the background color for focused, hovered, and active items using the fol
 }
 ```
 
-## Customizing the appearance of pop-up element
+## Customizing the appearance of the popup element
 
 Style the popup list appearance using the following CSS.
 
@@ -149,7 +149,7 @@ Style the popup list appearance using the following CSS.
     background-color: #29c2b8;
     color: #207cd9;
     font-family: emoji;
-    min-height: 29px
+    min-height: 29px;
 }
 ```
 

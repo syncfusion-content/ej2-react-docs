@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in React Tab
 
-Localization library allows to localize the default text content of the Tab to different cultures using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/tab/#locale) property. In Tab, the close button's tooltip text alone will be localize based on culture.  The close button is shown on tab header when enabled [`showCloseButton`](https://ej2.syncfusion.com/react/documentation/api/tab/#showclosebutton) property.
+Localization library allows to localize the default text content of the Tab to different cultures using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/tab#locale) property. In Tab, only the close button's tooltip text is localized based on culture.  The close button is shown on the tab header when the [`showCloseButton`](https://ej2.syncfusion.com/react/documentation/api/tab#showclosebutton) property is enabled.
 
 | Locale key | en-US (default)  |
 |------|------|
@@ -18,7 +18,7 @@ Localization library allows to localize the default text content of the Tab to d
 
 ## Loading translations
 
-To load translation object in an application use `load` function of `L10n` class.
+To load translation object in an application use the `load` function of the `L10n` class.
 
 In the below sample, `French` culture is set to Tab and change the close button's tooltip text.
 

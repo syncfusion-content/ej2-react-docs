@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Annotation in React Image Editor
 
-The React Image Editor allows adding annotations to the image, including text, freehand drawings, and shapes like rectangles, ellipses, arrows, paths, and lines. This gives the flexibility to mark up the image with notes, sketches, and other visual elements as needed. These annotation tools can help to communicate and share ideas more effectively. Users are allowed to draw multiple annotations simultaneously, enhancing creative flexibility. Furthermore, every action, including customizations, will be tracked in the undo/redo collection, ensuring a seamless user experience and making it easier to experiment with different designs.
+The React Image Editor allows adding annotations to the image, including text, freehand drawings, and shapes like rectangles, ellipses, arrows, paths, and lines. This gives the flexibility to mark up the image with notes, sketches, and other visual elements as needed. These annotation tools can help to communicate and share ideas more effectively. Users can draw multiple annotations simultaneously, enhancing creative flexibility. Furthermore, every action, including customizations, will be tracked in the undo/redo collection, ensuring a seamless user experience and making it easier to experiment with different designs.
 
 ## Text annotation
 
@@ -18,7 +18,7 @@ The text annotation feature in the Image Editor provides the capability to add a
 
 You have control over the customization options including text content, font family, font style, font color, fill color, stroke color, stroke width and font size for the text annotation.
 
-### Add a text
+### Add text
 
 The [`drawText`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawtext) method in the React Image Editor allows you to insert a text annotation into the image with specific customization options. This method accepts the following parameters:
 
@@ -118,7 +118,13 @@ Here is an example of deleting a text in a button click using `deleteShape` meth
 
 ### Customize font family and text color 
 
-The [`shapeChanging`](https://helpej2.syncfusion.com/react/documentation/api/image-editor#shapechanging) event in the Image Editor component is triggered when a text annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the text's color and font family by adjusting the relevant properties. 
+The [`shapeChanging`](https://ej2.syncfusion.com/react/documentation/api/image-editor#shapechanging) event in the Image Editor component is triggered when a text annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the text's color and font family by adjusting the relevant properties.
+
+Main `shapeChanging` event properties:
+
+- `currentShapeSettings: ShapeSettings` — The shape settings that will be applied.
+- `previousShapeSettings?: ShapeSettings` — The shape settings before the change.
+- `cancel: boolean` — Set to `true` to cancel the change.
 
 By leveraging the `shapeChanging` event, you can enhance the customization options for text annotations and provide a more tailored and interactive experience within the Image Editor component. 
 
@@ -140,7 +146,7 @@ Here is an example of changing the text’s color and its font family using the 
 
 ### Add additional font family
 
-The [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/image-editor#fontfamily) property in the Image Editor control provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content. The font value will be determined by the 'id' property.
+The [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/image-editor#fontfamily) property in the Image Editor control provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content. Each font entry uses an `id` and `text` field; the `id` is used as the font value.
 
 By leveraging the `fontFamily` property, you can elevate the scope of customization for text annotations, enriching the user experience within the Image Editor control. This enhancement offers a more personalized and dynamic interaction, empowering users to tailor their text styles for a truly engaging editing experience.
 
@@ -182,7 +188,7 @@ The Freehand Draw annotation tool in the React Image Editor component is a versa
 
 The [`freehandDraw`](https://ej2.syncfusion.com/react/documentation/api/image-editor#freehanddraw) method is used to enable or disable the freehand drawing option in the React Image Editor component. 
 
-Here is an example of using the `freeHandDraw` method in a button click event.
+Here is an example of using the `freehandDraw` method in a button click event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -200,7 +206,7 @@ Here is an example of using the `freeHandDraw` method in a button click event.
 
 ### Adjust the stroke width and color 
 
-The [`shapeChanging`](https://helpej2.syncfusion.com/react/documentation/api/image-editor#shapechanging) event in the React Image Editor component is triggered when a freehand annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the freehand annotation's color and stroke width by adjusting the relevant properties. 
+The [`shapeChanging`](https://ej2.syncfusion.com/react/documentation/api/image-editor#shapechanging) event in the React Image Editor component is triggered when a freehand annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the freehand annotation's color and stroke width by adjusting the relevant properties.
 
 By leveraging the `shapeChanging` event, you can enhance the customization options for freehand annotations and provide a more tailored and interactive experience within the Image Editor component. 
 
@@ -252,103 +258,70 @@ The Image Editor component provides the ability to add shape annotations to an i
 
 ### Add a rectangle /ellipse / line / arrow / path
 
-The [`drawRectangle`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawrectangle) method is used to insert a rectangle to the React Image Editor component. Rectangle annotations are valuable tools for highlighting, emphasizing, or marking specific areas of an image to draw attention or provide additional context. 
+The [`drawRectangle`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawrectangle) method is used to insert a rectangle into the React Image Editor component. Rectangle annotations are valuable tools for highlighting, emphasizing, or marking specific areas of an image to draw attention or provide additional context. 
 
-The `drawRectangle` method in the React Image Editor component takes ten parameters to define the properties of the rectangle annotation: 
+The `drawRectangle` method accepts the following parameters to define the properties of the rectangle annotation:
 
-* x: Specifies the x-coordinate of the top-left corner of the rectangle. 
+- `x`: Specifies the x-coordinate of the top-left corner of the rectangle.
+- `y`: Specifies the y-coordinate of the top-left corner of the rectangle.
+- `width`: Specifies the width of the rectangle.
+- `height`: Specifies the height of the rectangle.
+- `strokeWidth`: Specifies the stroke width of the rectangle's border.
+- `strokeColor`: Specifies the stroke color of the rectangle's border.
+- `fillColor`: Specifies the fill color of the rectangle.
+- `degree`: Specifies the degree to rotate the rectangle.
+- `isSelected`: Specifies to show the rectangle in the selected state.
+- `borderRadius`: Specifies the radius to apply border radius to the rectangle.
 
-* y: Specifies the y-coordinate of the top-left corner of the rectangle. 
+The [`drawEllipse`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawellipse) method is used to insert an ellipse into the React Image Editor component. Ellipse annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
-* width: Specifies the width of the rectangle. 
+The `drawEllipse` method accepts the following parameters to define the properties of the ellipse annotation:
 
-* height: Specifies the height of the rectangle. 
-
-* strokeWidth: Specifies the stroke width of the rectangle's border. 
-
-* strokeColor: Specifies the stroke color of the rectangle's border. 
-
-* fillColor: Specifies the fill color of the rectangle.
-
-* degree: Specifies the degree to rotate the rectangle.
-
-* isSelected: Specifies to show the rectangle in the selected state.
-
-* borderRadius: Specifies the radius to apply border radius to rectangle.
-
-The [`drawEllipse`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawellipse) method is used to insert a ellipse to the React Image Editor component. Ellipse annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
-
-The `drawEllipse` method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
-
-* x: Specifies the x-coordinate of the center of the ellipse. 
-
-* y: Specifies the y-coordinate of the center of the ellipse. 
-
-* radiusX: Specifies the horizontal radius (radiusX) of the ellipse. 
-
-* radiusY: Specifies the vertical radius (radiusY) of the ellipse. 
-
-* strokeWidth: Specifies the width of the ellipse's stroke (border). 
-
-* strokeColor: Specifies the color of the ellipse's stroke (border). 
-
-* fillColor: Specifies the fill color of the ellipse. 
-
-* degree: Specifies the degree to rotate the ellipse.
-
-* isSelected: Specifies to show the ellipse in the selected state.
+- `x`: Specifies the x-coordinate of the center of the ellipse.
+- `y`: Specifies the y-coordinate of the center of the ellipse.
+- `radiusX`: Specifies the horizontal radius (radiusX) of the ellipse.
+- `radiusY`: Specifies the vertical radius (radiusY) of the ellipse.
+- `strokeWidth`: Specifies the width of the ellipse's stroke (border).
+- `strokeColor`: Specifies the color of the ellipse's stroke (border).
+- `fillColor`: Specifies the fill color of the ellipse.
+- `degree`: Specifies the degree to rotate the ellipse.
+- `isSelected`: Specifies to show the ellipse in the selected state.
 
 The [`drawLine`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawline) method is used to insert a line to the React Image Editor component. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image. 
 
-The `drawLine` method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
 
-* startX - Specifies the x-coordinate of the start point. 
+The `drawLine` method in the Image Editor component accepts the following parameters to define the properties of the line annotation:
 
-* startY - Specifies the y-coordinate of the start point. 
+- `startX` — Specifies the x-coordinate of the start point.
+- `startY` — Specifies the y-coordinate of the start point.
+- `endX` — Specifies the x-coordinate of the end point.
+- `endY` — Specifies the y-coordinate of the end point.
+- `strokeWidth` — Specifies the stroke width of the line.
+- `strokeColor` — Specifies the stroke color of the line.
+- `isSelected` — Specifies to show the line in the selected state.
 
-* endX - Specifies the x-coordinate of the end point. 
+The [`drawArrow`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawarrow) method is used to insert an arrow into the React Image Editor component. Arrow annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
-* endY - Specifies the y-coordinate of the end point. 
+The `drawArrow` method accepts the following parameters to define the properties of the arrow annotation:
 
-* strokeWidth - Specifies the stroke width of the line. 
-
-* strokeColor - Specifies the stroke color of the line. 
-
-* isSelected: Specifies to show the line in the selected state.
-
-The [`drawArrow`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawarrow) method is used to insert a arrow to the React Image Editor component. Arrow annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
-
-The `drawArrow` method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
-
-* startX - Specifies the x-coordinate of the start point. 
-
-* startY - Specifies the y-coordinate of the start point. 
-
-* endX - Specifies the x-coordinate of the end point. 
-
-* endY - Specifies the y-coordinate of the end point. 
-
-* strokeWidth - Specifies the stroke width of the arrow. 
-
-* strokeColor - Specifies the stroke color of the arrow. 
-
-* arrowStart - Specifies the arrowhead as ImageEditorArrowHeadType at the start of arrow.
-
-* arrowEnd - Specifies the arrowhead as ImageEditorArrowHeadType at the end of the arrow.
-
-* isSelected: Specifies to show the arrow in the selected state.
+- `startX` — Specifies the x-coordinate of the start point.
+- `startY` — Specifies the y-coordinate of the start point.
+- `endX` — Specifies the x-coordinate of the end point.
+- `endY` — Specifies the y-coordinate of the end point.
+- `strokeWidth` — Specifies the stroke width of the arrow.
+- `strokeColor` — Specifies the stroke color of the arrow.
+- `arrowStart: ImageEditorArrowHeadType` — Specifies the arrowhead type at the start of the arrow.
+- `arrowEnd: ImageEditorArrowHeadType` — Specifies the arrowhead type at the end of the arrow.
+- `isSelected` — Specifies to show the arrow in the selected state.
 
 The [`drawPath`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawpath) method is used to insert a path to the React Image Editor component. Path annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
-The `drawPath` method in the Image Editor component takes three parameters to define the properties of the ellipse annotation: 
+The `drawPath` method in the Image Editor component accepts the following parameters to define the properties of the path annotation:
 
-* points - Specifies collection of x and y coordinates as ImageEditorPoint to draw a path. 
-
-* strokeWidth - Specifies the stroke width of the path. 
-
-* strokeColor - Specifies the stroke color of the path. 
-
-* isSelected: Specifies to show the path in the selected state.
+- `points` — Specifies collection of x and y coordinates as ImageEditorPoint to draw a path.
+- `strokeWidth` — Specifies the stroke width of the path.
+- `strokeColor` — Specifies the stroke color of the path.
+- `isSelected` — Specifies to show the path in the selected state.
 
 Here is an example of inserting rectangle, ellipse, arrow, path, and line in a button click event.
 
@@ -416,25 +389,17 @@ The image annotation feature in the Image Editor provides the capability to add 
 
 The [`drawImage`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawimage) method serves the purpose of inserting an image into the Image Editor control, allowing for image annotations to be added. These image annotations can be used for various purposes, such as adding logos, watermarks, or decorative elements to the image.
 
-The `drawImage` method in the Image Editor control takes six parameters to define the properties of the image annotation:
+The `drawImage` method in the Image Editor control accepts the following parameters to define the properties of the image annotation:
 
-* data: Specified the image data or url of the image to be inserted.
-
-* x: Specifies the x-coordinate of the top-left corner of the image.
-
-* y: Specifies the y-coordinate of the top-left corner of the image.
-
-* width: Specifies the width of the image.
-
-* height: Specifies the height of the image.
-
-* isAspectRatio: Specifies whether the image is rendered with aspect ratio or not.
-
-* degree: Specifies the degree to rotate the image.
-
-* opacity: Specifies the value for the image.
-
-* isSelected: Specifies to show the image in the selected state.
+- `data`: Specifies the image data or URL of the image to be inserted.
+- `x`: Specifies the x-coordinate of the top-left corner of the image.
+- `y`: Specifies the y-coordinate of the top-left corner of the image.
+- `width`: Specifies the width of the image.
+- `height`: Specifies the height of the image.
+- `isAspectRatio`: Specifies whether the image is rendered with aspect ratio or not.
+- `degree`: Specifies the degree to rotate the image.
+- `opacity`: Specifies the image opacity (0–1).
+- `isSelected`: Specifies to show the image in the selected state.
 
 In the following example, you can use the `drawImage` method in the button click event. 
 
