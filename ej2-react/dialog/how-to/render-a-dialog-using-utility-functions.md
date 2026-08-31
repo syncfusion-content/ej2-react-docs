@@ -10,25 +10,27 @@ domainurl: ##DomainURL##
 
 # How to render using utility functions in React Dialog
 
-The dialog component provides built-in utility functions to render the alert and confirm dialogs with the minimal code.
+The dialog component provides built-in utility functions to render alert and confirm dialogs with minimal code.
 The following options are used as an argument on calling the utility functions:
 
 | Options   | Description |
 |-----------|-------------|
 | title | Specifies the title of dialog like the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog#header) property.|
 | content | Specifies the value that can be displayed in dialog's content area like the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property. |
-| isModal | Specifies the Boolean value whether the dialog can be displayed as modal or non-modal. For more details, refer to the [`isModal`](https://ej2.syncfusion.com/react/documentation/api/dialog#ismodal) property.|
-| position | Specifies the value where the alert or confirm dialog is positioned within the document. For more details, refer to the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog#position) property { X: ‘center’, Y: ‘center’}|
-| okButton | Configures the `OK button` that contains button properties with the click events. `okButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for OK button click', text: 'Yes' // <-- Default value is 'OK' }`|
-| cancelButton | Configures the `Cancel button` that contains button properties with the click events. `cancelButton:{ icon:'prefix icon to the button', cssClass:'custom class to the button', click: 'action for ‘Cancel’ button click', text: 'No' // <-- Default value is 'Cancel'}`|
-|isDraggable|Specifies the value whether the alert or confirm dialog can be dragged by the user.|
+| isModal | A boolean value that determines whether the dialog is displayed as modal or non-modal. For more details, refer to the [`isModal`](https://ej2.syncfusion.com/react/documentation/api/dialog#ismodal) property.|
+| position | Specifies the position of the alert or confirm dialog within the document. For more details, refer to the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog#position) property. The default value is `{ X: 'center', Y: 'center' }`.|
+| okButton | Configures the OK button with properties and click events. The `okButton` object follows the [`ButtonModel`](https://ej2.syncfusion.com/react/documentation/api/button#buttonmodel) interface: `{ icon: 'prefix icon to the button', cssClass: 'custom class to the button', click: 'action for OK button click', text: 'Yes' // Default value is 'OK' }`.|
+| cancelButton | Configures the Cancel button with properties and click events. The `cancelButton` object follows the [`ButtonModel`](https://ej2.syncfusion.com/react/documentation/api/button#buttonmodel) interface: `{ icon: 'prefix icon to the button', cssClass: 'custom class to the button', click: 'action for Cancel button click', text: 'No' // Default value is 'Cancel' }`.|
+| isDraggable | A boolean value that determines whether the dialog can be dragged.|
 | showCloseIcon | When set to true, the close icon is shown in the dialog component. |
-|closeOnEscape|When set to `true`, the dialog can be closed by pressing the ESC key.|
-| animationSettings |Specifies the animation settings of the dialog component. |
-| cssClass |Specifies the CSS class name that can be appended to the dialog. |
-| zIndex |Specifies the order of the dialog, that is displayed in front or behind of another component. |
-| open |Event which is triggered after the dialog is opened. |
-| Close |Event which is triggered after the dialog is closed. |
+| closeOnEscape | When set to `true`, the dialog can be closed by pressing the Esc key.|
+| animationSettings | Specifies the animation settings of the dialog component. |
+| cssClass | Specifies the CSS class name that can be appended to the dialog. |
+| zIndex | Specifies the z-index of the dialog, controlling whether it appears in front of or behind other components. |
+| open | Event which is triggered after the dialog is opened. |
+| close | Event which is triggered after the dialog is closed. |
+
+> The `DialogUtility.alert()` and `DialogUtility.confirm()` methods return a Dialog instance, which can be used to programmatically call `hide()` or access other Dialog methods.
 
 ## Alert dialog
 
@@ -61,6 +63,12 @@ An alert dialog box is used to display warning like messages to the users. Use t
  {% previewsample "page.domainurl/code-snippet/dialog/dialog-utility-alert-cs2" %}
 
 ### Render an alert dialog with options
+
+The `DialogUtility.alert()` method accepts either a content string or an options object. When passing an options object, the function signature is:
+
+```js
+DialogUtility.alert({ title, content, okButton, showCloseIcon, ... });
+```
 
 `[Class-component]`
 
@@ -96,7 +104,7 @@ An alert dialog box is used to display warning like messages to the users. Use t
 
 ## Confirm dialog
 
-A confirm dialog displays a specified message along with ‘OK’ and ‘Cancel’ button.
+A confirm dialog displays a specified message along with OK and Cancel buttons.
 
 `[Class-component]`
 

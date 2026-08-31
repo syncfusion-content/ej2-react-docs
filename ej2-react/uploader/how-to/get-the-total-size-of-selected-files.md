@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to get total file size in React File Upload
 
-Calculate the total size of all selected files before upload using the selected event. This enables you to validate cumulative file size against server limits or display storage information to the user. Refer to the following example to implement total file size calculation.
+For example, when the user selects three files with sizes `5000`, `10000`, and `50000` bytes, the calculated total is `65000` bytes (approximately `63.48 KB` using `bytesToSize`).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

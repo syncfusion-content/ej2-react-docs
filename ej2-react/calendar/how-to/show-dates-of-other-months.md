@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to show other months in React Calendar
 
-The following example demonstrates how to show dates from other months.
+By default, leading or trailing days that belong to the previous or next month are visually hidden inside the Calendar grid. The following example demonstrates how to make those other-month dates visible (and pointer-interactive) by overriding their default styles.
 
-The styles below make other-month dates visible when they are hidden by default.
+The styles below force other-month rows and day cells to display and accept user input.
 
 ```css
 .e-calendar .e-content tr.e-month-hide,
@@ -26,6 +26,8 @@ The styles below make other-month dates visible when they are hidden by default.
     touch-action: auto;
 }
 ```
+
+> Make sure these rules are loaded **after** the Calendar's default theme styles so that the higher specificity of your overrides takes effect. You can place them in a global stylesheet imported in `index.tsx`/`index.jsx`, or in a local CSS module.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

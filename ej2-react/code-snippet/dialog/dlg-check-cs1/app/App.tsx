@@ -36,7 +36,7 @@ public validation = (args: any): void => {
         alert("Enter the password")
     } else if (this.userName.value.length < 4) {
         args.cancel= true;
-        alert("Username must be minimum 4 characters")
+        alert("Username must be at least 4 characters")
     } else {
         args.cancel= false;
         this.userName.value = "";
@@ -82,7 +82,7 @@ public render() {
                 </div>
             </div>
         </div>
-    <DialogComponent id='dialog' header='Success' buttons={this.buttons} beforeOpen = {this.validation} content='Congratulations! Login Success' width='250px' isModal={true} ref={dialog => this.dialogInstance = dialog!} visible={false}
+    <DialogComponent id='dialog' header='Success' buttons={this.buttons} beforeOpen = {this.validation} content='Congratulations! Login successful' width='250px' isModal={true} ref={dialog => this.dialogInstance = dialog!} visible={false}
 target='#dialog-target'/></div>
     )
 }

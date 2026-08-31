@@ -10,10 +10,9 @@ domainurl: ##DomainURL##
 
 # How to close when click outside of its region in React Dialog
 
-By default, dialog can be closed by pressing Esc key and clicking the close icon on the right of dialog header. It can also be closed by clicking outside of the dialog using hide method.
-Set the [CloseOnEscape](https://ej2.syncfusion.com/react/documentation/api/dialog#closeonescape) property value to false to prevent closing of the dialog when pressing Esc key.
+The [`hide`](https://ej2.syncfusion.com/react/documentation/api/dialog#hide) method closes the dialog programmatically. It accepts an optional `animationSettings` object argument that controls the close animation; if omitted, the dialog's configured `animationSettings` (a `Zoom` effect in the samples below) is used.
 
-In the following sample, dialog is closed when clicking outside the dialog area using [hide](https://ej2.syncfusion.com/react/documentation/api/dialog#hide) method.
+In the following sample, the dialog is closed when clicking outside the dialog area using the [`hide`](https://ej2.syncfusion.com/react/documentation/api/dialog#hide) method.
 
 `[Class-component]`
 

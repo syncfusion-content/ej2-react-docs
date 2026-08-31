@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Chunk Upload in React File Upload
 
-The Uploader sends the large file split into small chunks and transmits to the server using AJAX. You can also pause, resume, and retry the failed chunk file.
+The Uploader sends the large file split into small chunks and transmits them to the server using AJAX requests. You can also pause, resume, and retry the failed chunk file.
 
 > * The chunk upload works in asynchronous upload only.
 * This feature is available from the Essential<sup style="font-size:70%">&reg;</sup> Studio Vol 2, 2018 release.
 
-To enable the chunk upload, set the size to [chunkSize](https://ej2.syncfusion.com/react/documentation/api/uploader/asyncSettingsModel/#chunksize) option of the upload and it receives the value in `bytes`.
+To enable chunk upload, set the `chunkSize` option of the [chunkSize](https://ej2.syncfusion.com/react/documentation/api/uploader/asyncSettingsModel#chunksize) async setting, which receives the value in bytes.
 
 `[Class-component]`
 
@@ -43,17 +43,17 @@ To enable the chunk upload, set the size to [chunkSize](https://ej2.syncfusion.c
 
  {% previewsample "page.domainurl/code-snippet/uploader/chunk-cs2" %}
 
-The chunk upload functionality divides large files into smaller data chunks for transmission. Chunks are sent to the server in **sequential order**—each chunk must complete successfully before the next one begins, ensuring proper file reassembly on the server. If a chunk fails, subsequent chunks are not sent. The [chunkSuccess](https://ej2.syncfusion.com/react/documentation/api/uploader/#chunksuccess) or [chunkFailure](https://ej2.syncfusion.com/react/documentation/api/uploader/#chunkfailure) event fires when each chunk completes. After all chunks upload successfully, the overall `success` event triggers.
+The chunk upload functionality divides large files into smaller data chunks for transmission. Chunks are sent to the server in **sequential order**—each chunk must complete successfully before the next one begins, ensuring proper file reassembly on the server. If a chunk fails, subsequent chunks are not sent. The [chunkSuccess](https://ej2.syncfusion.com/react/documentation/api/uploader#chunksuccess) or [chunkFailure](https://ej2.syncfusion.com/react/documentation/api/uploader#chunkfailure) event fires when each chunk completes. After all chunks upload successfully, the overall `success` event triggers.
 
-> Chunk upload will work when the selected file size is greater than the specified chunk size. otherwise, it upload the files normally.
+> Chunk upload works only when the selected file size is greater than the specified chunk size; otherwise, it uploads the files normally.
 
 ## Additional configurations
 
 Fine-tune chunk upload behavior using the following properties:
 
-* **RetryAfterDelay** - When a chunk request fails, the Uploader pauses for 500 milliseconds (default) before retrying. Customize this delay using the [asyncSettings.retryAfterDelay](https://ej2.syncfusion.com/react/documentation/api/uploader/asyncSettingsModel/#retryafterdelay) property by specifying a custom interval in milliseconds.
+* **RetryAfterDelay** - When a chunk request fails, the Uploader pauses for 500 milliseconds (default) before retrying. Customize this delay using the [asyncSettings.retryAfterDelay](https://ej2.syncfusion.com/react/documentation/api/uploader/asyncSettingsModel#retryafterdelay) property by specifying a custom interval in milliseconds.
 
-* **RetryCount** - Controls how many times the component attempts to resend a failed chunk. By default, the [retryCount](https://ej2.syncfusion.com/react/documentation/api/uploader/asyncSettingsModel/#retrycount) is set to 3. After exhausting all retries, the upload aborts and the [failure](https://ej2.syncfusion.com/react/documentation/api/uploader/#failure) event triggers.
+* **RetryCount** - Controls how many times the component attempts to resend a failed chunk. By default, the [retryCount](https://ej2.syncfusion.com/react/documentation/api/uploader/asyncSettingsModel#retrycount) is set to 3. After exhausting all retries, the upload aborts and the [failure](https://ej2.syncfusion.com/react/documentation/api/uploader#failure) event triggers.
 
 The following sample specifies the chunk upload delay with 3000 milliseconds and the retry count is 5. The failure event is triggered as the wrong saveUrl is used.
 
@@ -85,7 +85,9 @@ The following sample specifies the chunk upload delay with 3000 milliseconds and
 
 ## Resumable upload
 
-Resume interrupted uploads using the [pause](https://ej2.syncfusion.com/react/documentation/api/uploader/#pause) and [resume](https://ej2.syncfusion.com/react/documentation/api/uploader/#resume) methods or UI controls. This feature supports recovery from network failures or manual pauses. The pause button appears after upload begins.
+Resume interrupted uploads using the [pause](https://ej2.syncfusion.com/react/documentation/api/uploader#pause) and [resume](https://ej2.syncfusion.com/react/documentation/api/uploader#resume) methods or built-in UI controls. This feature supports recovery from network failures or manual pauses. The pause button appears after upload begins.
+
+To wire external buttons, call the `pause`/`resume` methods on a ref to the Uploader component within the button's click handler. The chunk upload (`asyncSettings.chunkSize`) must be enabled for the built-in pause and resume UI to appear.
 
 > Pause and resume functionality is available only when chunk upload is enabled.
 
@@ -117,9 +119,9 @@ Resume interrupted uploads using the [pause](https://ej2.syncfusion.com/react/do
 
 ## Cancel upload
 
-The uploader component allows you to cancel the uploading file. This can be achieved by clicking the cancel icon or using the [cancel](https://ej2.syncfusion.com/react/documentation/api/uploader/#cancel) method. The [canceling](https://ej2.syncfusion.com/react/documentation/api/uploader/#canceling) event will be fired whenever the file upload request is canceled. While canceling the upload request, the partially uploaded file is removed from the server.
+The uploader component allows you to cancel the uploading file. This can be achieved by clicking the cancel icon or by calling the [cancel](https://ej2.syncfusion.com/react/documentation/api/uploader#cancel) method. The [canceling](https://ej2.syncfusion.com/react/documentation/api/uploader#canceling) event fires whenever the file upload request is canceled. While canceling the upload request, the partially uploaded file is removed from the server.
 
-When the request fails, the pause icon is changed to retry icon. By clicking the retry icon, sends the failed chunk request again to the server and upload started from where it is failed. You can retry the canceled upload request again using retry UI or [retry](https://ej2.syncfusion.com/react/documentation/api/uploader/#retry) methods. But, if you retry this, the file upload action again starts from initial.
+When a chunk request fails, the pause icon changes to a retry icon. Clicking the retry icon resends the failed chunk request to the server and resumes the upload from the point of failure. You can retry the canceled upload request again using the retry UI or the [retry](https://ej2.syncfusion.com/react/documentation/api/uploader#retry) method. However, when retrying a fully canceled upload, the file upload action starts from the beginning.
 
 The following example explains about chunk upload with cancel support.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Styles and Appearances in React Query Builder UI
 
-Customize the Query Builder appearance by overriding its default CSS styles. The following table lists the CSS classes and their corresponding Query Builder components. Additionally, you can create custom themes using the [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
+Customize the Query Builder appearance by overriding its default CSS styles. The following table lists the CSS classes and their corresponding Query Builder components. Additionally, you can create custom themes using the [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material). Note that the Theme Studio defaults to the `material` theme; switch the `?theme=` query-string to `tailwind3`, `bootstrap5`, `fluent2`, or `bootstrap4` to match your project's styling.
 
 | CSS Class | Purpose |
 |---|---|

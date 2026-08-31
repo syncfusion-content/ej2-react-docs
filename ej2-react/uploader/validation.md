@@ -74,7 +74,7 @@ The Uploader component validates file size to prevent uploading files that are t
 
 ## Maximum files count
 
-Limit the number of files uploaded simultaneously by using the `selected` event. The event provides access to currently selected file details via **getFilesData()**. Modify the file list as needed and assign it to **eventArgs.modifiedFilesData** to control which files proceed to upload.
+Limit the number of files uploaded simultaneously by using the `selected` event. The event provides access to currently selected file details via **getFilesData()**. Modify the file list as needed and assign it to the [**modifiedFilesData**](https://ej2.syncfusion.com/react/documentation/api/uploader/selectedEventArgs#modifiedfilesdata) property of the event arguments to control which files proceed to upload.
 
 `[Class-component]`
 

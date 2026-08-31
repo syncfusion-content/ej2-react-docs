@@ -27,11 +27,11 @@ This can be achieved by appending table layout while `li` rendering by using `be
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/context-menu/table-cs1" %}
+{% previewsample "page.domainurl/code-snippet/context-menu/table-cs1" %}
 
 ## UI components in ContextMenu
 
-UI components can also be placed inside the each `li` element of ContextMenu.
+UI components can also be placed inside each `li` element of the ContextMenu.
 
 In the following example, CheckBox component is placed inside each `li` element and this can be achieved by creating CheckBox component in `beforeItemRender` event and appending it into the `li` element.
 
@@ -44,4 +44,4 @@ In the following example, CheckBox component is placed inside each `li` element 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/context-menu/ui-element-cs1" %}
+{% previewsample "page.domainurl/code-snippet/context-menu/ui-element-cs1" %}

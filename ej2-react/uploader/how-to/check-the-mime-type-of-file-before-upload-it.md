@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to check the MIME type in React File Upload
 
-Validate file types before upload by checking the MIME type using the [uploading](https://ej2.syncfusion.com/react/documentation/api/uploader/#uploading) event. The following sample demonstrates displaying the file MIME type in an alert box before the upload begins.
+Validate file types before upload by checking the MIME type using the [uploading](https://ej2.syncfusion.com/react/documentation/api/uploader#uploading) event. The file object exposes the MIME type via `args.file.type` (for example, `"image/png"` or `"application/pdf"`). The following sample demonstrates displaying the file MIME type in an alert box before the upload begins.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

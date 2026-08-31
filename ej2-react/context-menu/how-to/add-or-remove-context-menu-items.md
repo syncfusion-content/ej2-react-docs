@@ -9,13 +9,24 @@ domainurl: ##DomainURL##
 ---
 # How to add or remove items in Context Menu in React
 
-The ContextMenu component provides dynamic item management capabilities, allowing you to add or remove menu items programmatically at runtime. This functionality enables responsive menu systems that adapt to changing application states, user permissions, or contextual requirements.
+The ContextMenu component provides dynamic item management capabilities, allowing you to add or remove menu items programmatically. This functionality enables dynamic menu systems that adapt to changing application states, user permissions, or contextual requirements.
 
-ContextMenu items can be dynamically modified using the [`insertAfter`](https://ej2.syncfusion.com/react/documentation/api/menu/#insertafter), [`insertBefore`](https://ej2.syncfusion.com/react/documentation/api/menu/#insertbefore) and [`removeItems`](https://ej2.syncfusion.com/react/documentation/api/menu/#removeitems) methods.
 
-The `insertAfter` method adds new menu items after a specified target item, while `insertBefore` adds items before the target. The `removeItems` method removes specified items from the menu structure.
+ContextMenu items can be dynamically modified using the [`insertAfter`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#insertafter), [`insertBefore`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#insertbefore), and [`removeItems`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#removeitems) public methods. These methods are exposed on the `ContextMenuComponent` instance and are accessed through a component `ref`.
 
-In the following example, the **Display Settings** menu items are added before the **Personalize** item, the **Sort By** menu items are added after the **Refresh**, and the **Paste** item is removed from context menu.
+| Method | Signature | Returns | Description |
+| --- | --- | --- | --- |
+| `insertAfter` | `insertAfter(items: MenuItemModel[], target: string)` | `void` | Inserts the supplied items after the menu item whose `text` matches the `target` argument. |
+| `insertBefore` | `insertBefore(items: MenuItemModel[], target: string)` | `void` | Inserts the supplied items before the menu item whose `text` matches the `target` argument. |
+| `removeItems` | `removeItems(items: string[])` | `void` | Removes the menu items whose `text` values match the supplied array. |
+
+> The `target` argument for `insertAfter` / `insertBefore` matches an existing menu item by its `text` value. Mutation of submenu (nested) items via these methods is not supported; use item binding / state updates to restructure nested menus.
+
+## Calling the methods safely
+
+Call these methods **after** the component has initialized — typically inside the `created` event handler — and access the instance through a React `ref`. Calling them before `created` raises a "no item found" error because the menu structure has not been built yet.
+
+In the following example, the **Display Settings** menu items are added before the **Personalize** item, the **Sort By** menu items are added after the **Refresh** item, and the **Paste** item is removed from the ContextMenu.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -26,4 +37,4 @@ In the following example, the **Display Settings** menu items are added before t
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs2" %}
+{% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs2" %}

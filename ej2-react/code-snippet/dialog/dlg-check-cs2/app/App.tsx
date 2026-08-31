@@ -35,7 +35,7 @@ function validation (args: any): void {
         alert("Enter the password")
     } else if (userName.value.length < 4) {
         args.cancel= true;
-        alert("Username must be minimum 4 characters")
+        alert("Username must be at least 4 characters")
     } else {
         args.cancel= false;
         userName.value = "";
@@ -79,7 +79,7 @@ return (
                 </div>
             </div>
         </div>
-    <DialogComponent id='dialog' header='Success' buttons={buttons} beforeOpen = {validation} content='Congratulations! Login Success' width='250px' isModal={true} ref={dialog => dialogInstance = dialog!} visible={false}
+    <DialogComponent id='dialog' header='Success' buttons={buttons} beforeOpen = {validation} content='Congratulations! Login successful' width='250px' isModal={true} ref={dialog => dialogInstance = dialog!} visible={false}
     target='#dialog-target'/></div>
 );
 }

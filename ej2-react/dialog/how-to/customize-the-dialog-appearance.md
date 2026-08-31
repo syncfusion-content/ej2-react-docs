@@ -10,7 +10,11 @@ domainurl: ##DomainURL##
 
 # How to customize appearance in React Dialog
 
-You can customize the dialog appearance by providing a dialog template as a string or HTML element to the [content](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property. In the following sample, the dialog is customized to appear as an error window.
+You can customize the dialog appearance by providing a dialog template as a string or HTML element to the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property, or by placing child JSX elements directly inside the `<DialogComponent>`. In the following sample, the dialog is customized to appear as an error window using child JSX.
+
+## Implementation
+
+The sample below configures an `animationSettings` `Zoom` effect for the open/close transition and sets `closeOnEscape` to `true` so the Dialog can be dismissed with the Esc key. The error-window layout uses custom CSS classes (`dialog-content`, `msg-wrapper`, `close-icon`, `error-msg`, `error-detail`) and Bootstrap-style grid classes (`col-lg-2`, `col-lg-10`). Ensure the supporting CSS and (optionally) the Bootstrap grid stylesheet are loaded in your application for the sample to render correctly.
 
 `[Class-component]`
 
@@ -37,3 +41,9 @@ You can customize the dialog appearance by providing a dialog template as a stri
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/dialog/dlg-appearance-cs2" %}
+
+## See Also
+
+* [Template in React Dialog](../template)
+* [Style in React Dialog](../style)
+* [Dialog API Reference](https://ej2.syncfusion.com/react/documentation/api/dialog)

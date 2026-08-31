@@ -18,7 +18,7 @@ function App() {
         <button className='e-control e-btn' id='targetButton1' role='button' onClick={handleClick.bind(this)}>Open</button>
         <DialogComponent header='Outer Dialog' cssClass="outerDialog" showCloseIcon={true} width='400px' height='300px'
             ref={dialog => dialogInstance = dialog!} target='#dialog-target' closeOnEscape={false} animationSettings={effect}>
-            <button className="e-control e-btn" id="innerButton" onClick={nestedbuttonClick} role="button" >Open InnerDialog</button>
+            <button className="e-control e-btn" id="innerButton" onClick={nestedbuttonClick} role="button" >Open Inner Dialog</button>
         </DialogComponent>
 
         <DialogComponent id='innerDialog' header='Inner Dialog' showCloseIcon={true} width='250px' height='150px'

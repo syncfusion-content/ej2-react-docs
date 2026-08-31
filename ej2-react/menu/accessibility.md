@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Menu
 
-The Menu component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Menu component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Menu component is outlined below.
 
@@ -26,12 +26,6 @@ The accessibility compliance for the Menu component is outlined below.
 | [Accessibility Checker](https://www.npmjs.com/package/accessibility-checker) Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
-<style>
-    .post .post-content img {
-        display: inline-block;
-        margin: 0.5em 0;
-    }
-</style>
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
@@ -40,31 +34,31 @@ The accessibility compliance for the Menu component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Menu component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility. The following ARIA attributes are used in the Menu component:
+The Menu component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Menu component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `role` | Indicates Menu component's root menu as `menubar`, popup as `menu`, and the popup items as `menuitem`. |
 | `aria-haspopup` | Indicates the availability and type of interactive popup element. |
-| `aria-expanded` | Indicates whether the subtree can be expanded or collapsed, and indicates whether its current state can be expanded or collapsed. |
+| `aria-expanded` | Indicates whether the subtree can be expanded or collapsed. |
 | `aria-orientation` | Indicates whether the orientation is horizontal or vertical. The default orientation is horizontal. |
 | `aria-label` | Indicates the menu item text. |
-| `aria-disabled` | Indicates the state of menu item whether it is disabled. |
+| `aria-disabled` | Indicates whether a menu item is disabled. |
 
 ## Keyboard interaction
 
-The Menu component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Menu component.
+The Menu component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guidelines, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Menu component.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Esc</kbd> | Closes the sub menu that contains focus and returns focus to the parent element. |
-| <kbd>Enter</kbd> | Opens the sub menu if focused menu item has sub menu, and places focus on its first item or activates the item and closes the sub menu. |
+| <kbd>Esc</kbd> | Closes the submenu that contains focus and returns focus to the parent element. |
+| <kbd>Enter</kbd> | Opens the submenu if focused menu item has submenu, and places focus on its first item or activates the item and closes the submenu. |
 | <kbd>Up</kbd> | Navigates up or to the previous menu item. |
 | <kbd>Down</kbd> | Navigates down or to the next menu item. |
-| <kbd>Left</kbd> | Closes the current sub menu and navigates to the parent menu. |
-| <kbd>Right</kbd> | Navigates and open the next sub menu. |
+| <kbd>Left</kbd> | Closes the current submenu and navigates to the parent menu. For a vertical menu, this behavior reverses (see the [WAI-ARIA menubar spec](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction)). |
+| <kbd>Right</kbd> | Navigates and opens the next submenu. For a vertical menu, this behavior reverses (see the [WAI-ARIA menubar spec](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction)). |
 | <kbd>Home</kbd> | Focuses the first item. |
-| <kbd>End</kbd> | Focuses the last item. 
+| <kbd>End</kbd> | Focuses the last item. |
 
 ## Ensuring accessibility
 

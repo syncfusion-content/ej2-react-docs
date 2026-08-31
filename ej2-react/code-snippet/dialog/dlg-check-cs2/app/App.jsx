@@ -32,7 +32,7 @@ function App() {
         }
         else if (userName.value.length < 4) {
             args.cancel = true;
-            alert("Username must be minimum 4 characters");
+            alert("Username must be at least 4 characters");
         }
         else {
             args.cancel = false;
@@ -75,6 +75,6 @@ function App() {
                 </div>
             </div>
         </div>
-    <DialogComponent id='dialog' header='Success' buttons={buttons} beforeOpen={validation} content='Congratulations! Login Success' width='250px' isModal={true} ref={dialog => dialogInstance = dialog} visible={false} target='#dialog-target'/></div>);
+    <DialogComponent id='dialog' header='Success' buttons={buttons} beforeOpen={validation} content='Congratulations! Login successful' width='250px' isModal={true} ref={dialog => dialogInstance = dialog} visible={false} target='#dialog-target'/></div>);
 }
 export default App;

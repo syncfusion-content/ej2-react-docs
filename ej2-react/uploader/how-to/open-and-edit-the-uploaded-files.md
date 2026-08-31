@@ -64,9 +64,9 @@ export default class App extends React.Component<{}, {}> {
                 <div className='col-lg-9'>
                 <div className='upload_wrapper'>
                     {/* Render Uploader */}
-                    <UploaderComponent id='fileUpload' type='file' ref = {upload => {this.uploadObj = upload !}}
-                    asyncSettings = {this.path}
-                    success={ this.onUploadSuccess = this.onUploadSuccess.bind(this)} created={this.onCreated = this.onCreated.bind(this)} />
+                    <UploaderComponent id='fileUpload' type='file' ref={upload => { this.uploadObj = upload! }}
+                    asyncSettings={this.path}
+                    success={this.onUploadSuccess} created={this.onCreated} />
                 </div>
                 </div>
                 </div>
@@ -77,7 +77,9 @@ export default class App extends React.Component<{}, {}> {
 ReactDOM.render(<App />, document.getElementById('fileupload'));
 ```
 
-## Server side for open and edit the uploaded files
+## Server-side for opening and editing uploaded files
+
+The server-side `Save` method writes the uploaded file to disk and returns the saved file path through `Response.StatusDescription`. The client captures that path in the `success` event (see the `onUploadSuccess` handler above) and posts it back to `/Home/openFile` using the `filePath` HTTP header when the user clicks the file.
 
 ```csharp
 public void Save() {
@@ -87,7 +89,7 @@ public void Save() {
         HttpResponse Response = System.Web.HttpContext.Current.Response;
         Response.Clear();
         Response.ContentType = "application/json; charset=utf-8";
-        <!-- Sending the file path to client side -->
+        // Sending the file path to client side
         Response.StatusDescription = fileSavePath;
         Response.End();
     }
@@ -96,10 +98,10 @@ public void Save() {
 [AcceptVerbs("Post")]
 public void openFile()
 {
-    // Check whether the file is available in the corresponding location
+    // Check whether the file is available at the corresponding location
     if (System.IO.File.Exists(Request.Headers.GetValues("filePath").First()))
     {
-        // This will open the selected file from server location in desktop
+        // Open the selected file from the server location on the desktop
         Process.Start(Request.Headers.GetValues("filePath").First());
     }
 }
