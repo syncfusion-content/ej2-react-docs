@@ -8,11 +8,12 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to bind data in React Context Menu
+# How to bind data in the React Context Menu
 
-The ContextMenu component supports data binding through the [`items`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel/#items) property, allowing you to populate menu items dynamically from local data sources. This approach is particularly useful when menu content needs to be generated from arrays, objects, or other structured data formats, providing flexibility for dynamic menu scenarios.
 
-The following example demonstrates how to bind local data source to the ContextMenu:
+The ContextMenu component supports data binding through the [`items`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#items) property, allowing you to populate menu items dynamically from local data sources.
+
+The following example demonstrates how to bind a local data source to the ContextMenu:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -23,6 +24,5 @@ The following example demonstrates how to bind local data source to the ContextM
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/context-menu/data-binding-cs1" %}
+{% previewsample "page.domainurl/code-snippet/context-menu/data-binding-cs1" %}
 
-> While accessing Array we got the exception 'object is possibly undefined' due to 'strictNullChecks' option. So you can disable it in 'tsconfig.json' file.

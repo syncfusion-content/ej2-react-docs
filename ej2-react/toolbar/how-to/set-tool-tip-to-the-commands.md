@@ -10,9 +10,11 @@ domainurl: ##DomainURL##
 
 # How to set a Tooltip on Toolbar commands
 
-The [`tooltipText`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item/#tooltiptext) property of the Toolbar item is used to set the HTML Tooltip to the commands that can be viewed as hint texts on mouse hover.
+The [`tooltipText`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#tooltiptext) property of the Toolbar item (a `string` with a default of `''`) is used to set an HTML Tooltip on the commands that can be viewed as hint text on hover. You can set it per `ItemDirective`.
 
-To change the [`tooltipText`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item/#tooltiptext) to ej2-tooltip component:
+The native HTML Tooltip is limited to plain text and basic browser styling. To replace the native Tooltip with the ej2 Tooltip component (which supports richer content and theming), follow these steps:
+
+1. Initialize the Tooltip with the Toolbar target using the `target` option (e.g., `target: '#toolbar'`), which attaches the Tooltip to the command elements.
 
 * Import the `Tooltip` module from `ej2-popups`,and initialize the Tooltip with the Toolbar target. Refer to the following code example:
 

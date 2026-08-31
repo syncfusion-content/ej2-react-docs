@@ -10,26 +10,26 @@ domainurl: ##DomainURL##
 
 # Globalization in React Calendar
 
-Globalization combines [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (date and number parsing/formatting) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (culture-specific text and formatting). Use these mechanisms to adapt the Calendar to different languages and regions.
+Globalization combines [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (date and number parsing and formatting) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (culture-specific text and formatting). Use these mechanisms to adapt the Calendar to different languages and regions.
 
 By default, Calendar date format, week and month names are specific to American English culture. It utilizes the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](http://ej2.syncfusion.com/documentation/base/internationalization)
 package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org) JSON data and also it provides the [`loadCldr`](http://ej2.syncfusion.com/documentation/base/intl.html#cldr-data-dependencies) method to load the culture specific CLDR JSON data.
 
-To go with the different culture other than `English`, follow the below steps.
+To use a culture other than `English`, follow these steps.
 
-* Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). To know more about CLDR-Data refer the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
+1. Install the `CLDR-Data` package from npm. This package provides the locale-specific JSON data consumed by Syncfusion components. For more details, refer to the [CLDR-Data](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) specification.
 
+    ```bash
+    npm install cldr-data --save
     ```
-      npm install cldr-data --save
-    ```
 
-    Once the package installed, you can find the culture specific JSON data under the location `\node_modules\cldr-data`.
+    Once the package is installed, the culture-specific JSON data is available under the `\node_modules\cldr-data` path.
 
-* Now import the installed CLDR JSON data into the `app.ts` file.
+2. Import the required CLDR JSON files from `cldr-data` in your `app.ts` file.
 
-* Now use the [`loadCldr`](http://ej2.syncfusion.com/documentation/base/intl.html#cldr-data-dependencies) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
+3. Call the [`loadCldr`](https://ej2.syncfusion.com/react/documentation/base/intl.html#cldr-data-dependencies) method and pass each imported JSON module so that the Calendar can read the locale data at runtime.
 
-* Calendar displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the Calendar with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
+4. Calendar displays `Sunday` as the first day of the week for the default `en-US` culture. To switch the first day of the week to the loaded culture's first day, import `weekData.json` from `cldr-data/supplemental` as shown in the code example below.
 
 ```ts
 //import the loadCldr from ej2-base
@@ -44,7 +44,9 @@ import * as weekData from 'cldr-data/supplemental/weekData.json';// To load the 
 loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, weekData);
 ```
 
-> if you are facing the error `/node_modules/cldr-data/main/de/*.json (1,1): unused expression, expected an assignment or function call` when you are adding the json files to render the culture sample, then add the below configuration in your `tslint.json` file
+> If you encounter the error `/node_modules/cldr-data/main/de/*.json (1,1): unused expression, expected an assignment or function call` while adding the JSON files to render the culture sample, configure your linter to exclude JSON files by adding the following configuration.
+
+For **TSLint**, add this configuration to your `tslint.json` file:
 
 ```ts
 "linterOptions": {
@@ -59,25 +61,25 @@ loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, weekData);
 > The `Localization` library allows you to localize default text content of the Calendar. The Calendar component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
 [`locale`](https://ej2.syncfusion.com/react/documentation/api/calendar#locale) value and translation object.
 
-Locale keywords |Text
------|-----
-today | Name of the button to choose Today date.
+| Locale Keywords | Text |
+|-----|-----|
+| today | Name of the button used to choose the current date. |
 
-* Before changing to a culture other than `English`, ensure that locale text for the concerned culture is loaded through `load` method of `L10n` class.
+Before changing to a culture other than `English`, load the locale text for the target culture using the `load` method of the `L10n` class.
 
-     ```ts
-      //Load the L10n, loadCldr from ej2-base
-     import { L10n } from "@syncfusion/ej2-base";
+```ts
+// Load the L10n instance from ej2-base
+import { L10n } from "@syncfusion/ej2-base";
 
-     //load the locale object to set the localized placeholder value
-     L10n.load({
-        'de': {
-           'calendar': { today:'heute' }
-         }
-       });
-     ```
+// Load the locale object to set the localized placeholder value
+L10n.load({
+   'de': {
+      'calendar': { today: 'heute' }
+    }
+  });
+```
 
-* Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/calendar#locale) property.
+Then set the active culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/calendar#locale) property.
 
 The following example demonstrates the Calendar in `German` culture.
 
@@ -169,7 +171,7 @@ The following example demonstrates the Calendar in `German` culture.
 
 ## Right-To-Left
 
-The Calendar supports right-to-left functionality for languages like Arabic,  Hebrew, etc. To display text in the right-to-left direction. Use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/calendar#enablertl) property.
+The Calendar supports right-to-left (RTL) functionality for languages such as Arabic and Hebrew. Set the boolean [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/calendar#enablertl) property to `true` to display the Calendar's content in the right-to-left direction.
 
 The following example demonstrates the Calendar in `Arabic` culture with Right-To-Left direction.
 

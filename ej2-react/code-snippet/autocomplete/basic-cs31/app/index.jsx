@@ -25,7 +25,7 @@ function App() {
         { "Status": "Acknowledged", "State": false },
         { "Status": "In Development", "State": false }
     ];
-    // map the groupBy field with Category column
+    // set the value field
     const fields = { value: 'Status' };
     let allowResize = true;
     return (

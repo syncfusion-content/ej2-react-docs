@@ -10,7 +10,14 @@ domainurl: ##DomainURL##
 
 # How to change display mode in React Query Builder UI
 
-The Query Builder supports two layout orientations to accommodate different UI preferences. Display the component vertically or horizontally using the [`displayMode`](https://ej2.syncfusion.com/react/documentation/api/query-builder#displaymode) property. By default, the Query Builder displays in horizontal mode.
+The Query Builder supports two layout orientations to accommodate different UI preferences. Display the component vertically or horizontally using the [`displayMode`](https://ej2.syncfusion.com/react/documentation/api/query-builder#displaymode) property. The default value is `"Horizontal"`.
+
+The `displayMode` property accepts the following values:
+
+| Value | Description | UI effect |
+| --- | --- | --- |
+| `Horizontal` | Renders the field, operator, and value editors side-by-side in a single row. | Compact and ideal for wide layouts. |
+| `Vertical` | Stacks the field, operator, and value editors in a single column. | Useful for narrow viewports and mobile screens. |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

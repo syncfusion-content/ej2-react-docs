@@ -12,6 +12,15 @@ domainurl: ##DomainURL##
 
 The MultiSelect supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/multi-select/#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically as you scroll through the popup list, displaying the category value for each group.
 
+Map the `groupBy` field through the `fields` prop to define which property of the data source represents the group category:
+
+```tsx
+<MultiSelectComponent
+  dataSource={vegetableData}
+  fields={{ text: 'Vegetable', value: 'Id', groupBy: 'Category' }}
+/>
+```
+
 In the following sample, vegetables are grouped according to their category using the `groupBy` field.
 
 `[Class-component]`
@@ -40,15 +49,21 @@ In the following sample, vegetables are grouped according to their category usin
 
  {% previewsample "page.domainurl/code-snippet/multiselect/basic-cs26" %}
 
-## Customization
+## Customize the group header
 
-The grouping header can be customized using the `groupTemplate` property. This allows you to design custom headers for both inline and fixed group display modes, providing flexible control over group header appearance and content.
+The grouping header can be customized using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/#grouptemplate) property. The custom template applies to both inline and fixed group display modes, providing flexible control over group header appearance and content. See the [Group Template](./templates#group-template) section for a usage example.
 
-## Grouping with CheckBox
+## Grouping with checkbox
 
-The MultiSelect now supports rendering checkboxes in group headers, allowing you to select all items within a group in a single action. Enable this feature by setting the [`enableGroupCheckBox`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#enablegroupcheckbox) property to **true** and configuring the **mode** property as **CheckBox**.
+The MultiSelect now supports rendering checkboxes in group headers, allowing you to select all items within a group in a single action. Inject the `CheckBoxSelection` module in the MultiSelect to use checkbox selection.
 
-Inject the `CheckBoxSelection` module in the MultiSelect to use the checkbox.
+```tsx
+import { CheckBoxSelection } from '@syncfusion/ej2-react-dropdowns';
+
+MultiSelectComponent.Inject(CheckBoxSelection);
+```
+
+Then enable this feature by setting the [`enableGroupCheckBox`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#enablegroupcheckbox) property to **true** and configuring the **mode** property as **CheckBox**.
 
 `[Class-component]`
 

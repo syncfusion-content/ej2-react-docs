@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Template Configuration in React Toolbar
 
-The Toolbar can be rendered by item based collection and by HTML elements.  To render it based on the given HTML element, use `id` as the `target` property. To render the Toolbar, follow the below structure of the HTML elements:
+The Toolbar can be rendered by an item-based collection and by HTML elements. To render it based on the given HTML element, pass the element's `id` to the `target` property. To render the Toolbar, follow the structure below of the HTML elements:
 
-```
+```html
   <div id='template_toolbar'>   --> Root Toolbar Element
     <div>      --> Toolbar Items Container
        <div>   --> Toolbar Item Element
@@ -21,7 +21,9 @@ The Toolbar can be rendered by item based collection and by HTML elements.  To r
   </div>
 ```
 
-Here, the template ID, `#template_toolbar` is directly appended to the Toolbar.
+Here, the template ID `#template_toolbar` is directly appended to the Toolbar.
+
+You can also assign a custom template to an individual toolbar item by setting the `template` property on the `ItemDirective`, for example `<ItemDirective template={...} />`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -39,13 +41,13 @@ Here, the template ID, `#template_toolbar` is directly appended to the Toolbar.
 
 ## Stateless template
 
-In React, a state is an object that contains data or information about the component. The component state can be used in React component templates to determine a component’s behavior and render information to the user. The state can change based on user input, data from a server, the result of a calculation, or system-generated events.
+In React, a state is an object that contains data or information about the component. The component state can be used in React component templates to determine a component's behavior and render information to the user. The state can change based on user input, data from a server, the result of a calculation, or system-generated events.
 
 Whenever the state changes, the component will automatically re-render to display the updated information to the user. This allows for a dynamic and interactive user experience.
 
-For specific needs of the application, users don’t want to re-render components during state updates. This can be achieved using the `statelessTemplates` property. 
+For certain application needs, you may want to prevent components from re-rendering during state updates. This can be achieved using the `statelessTemplates` property. 
 
-Toolbar `template` property are defined in `ItemDirective` tag of the toolbar component. So, you have to pass the `statelessTemplates` property array value as `directiveTemplates` to prevent the toolbar component from re-rendering while the state is being updated.
+The Toolbar `template` property is defined in the `ItemDirective` tag of the Toolbar component. To prevent the Toolbar component from re-rendering while the state is being updated, pass the `statelessTemplates` property array value as `directiveTemplates`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -63,25 +65,25 @@ Toolbar `template` property are defined in `ItemDirective` tag of the toolbar co
 
 ## Popup customization
 
-`Popup` is one of the supported responsive modes of the Toolbar. The Toolbar commands, popup mode priority and button text mode customizations are achieved in the item based rendering through property declaration. For more information on popup mode, refer [here](./responsive-mode/)
+`Popup` is one of the supported responsive modes of the Toolbar. The Toolbar commands, popup mode priority, and button text mode customizations are achieved in item-based rendering through property declaration. For more information on popup mode, refer to [responsive mode](./responsive-mode.md).
 
-The above behavior can also be achieved with template rendering by defining `equivalent class` names instead of property declaration.
+The above behavior can also be achieved with template rendering by defining `class` names equivalent to the properties, instead of property declaration.
 
-Equivalent class names listed below are needed to add the Toolbar items' `div` element.
+Equivalent class names listed below are needed to be added to the Toolbar items' `div` element.
 
 ### Priority
 
-Class              | Description
-------------       | -------------
-  e-overflow-show  | Commands are always displayed on the `Toolbar with primary` priority.
-  e-overflow-hide  | Commands are always displayed in the `popup with secondary` priority.
+Class | Description
+------------ | -------------
+  e-overflow-show  | Commands are always displayed on the `Toolbar` with primary priority.
+  e-overflow-hide  | Commands are always displayed in the `Popup` with secondary priority.
 
 ### Button text mode
 
-  Class         | Description
-------------       | -------------
+Class | Description
+------------ | -------------
   e-popup-text     | Button Text is only visible in the `Popup`.
-  e-toolbar-text   | Button Text is only visible on the `Toolbar`.
+  e-toolbar-text   | Button Text is only visible in the `Toolbar`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -97,9 +99,9 @@ Class              | Description
         
 {% previewsample "page.domainurl/code-snippet/toolbar/toolbar-cs12" %}
 
-## Integrate menu component
+## Integrate Menu component
 
-You can integrate menu component as toolbar item in Toolbar using [`template`](https://ej2.syncfusion.com/documentation/api/toolbar/item/#template) property. Menu can be populated with items as needed.
+You can integrate the Menu component as a toolbar item in the Toolbar using the [`template`](https://ej2.syncfusion.com/documentation/api/toolbar/item/#template) property. The Menu can be populated with items as needed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

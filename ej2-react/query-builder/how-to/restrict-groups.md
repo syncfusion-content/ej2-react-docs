@@ -10,7 +10,13 @@ domainurl: ##DomainURL##
 
 # How to set maximum group count in React Query Builder UI
 
-Limit the nesting depth of groups by setting the [`maxGroupCount`](https://ej2.syncfusion.com/react/documentation/api/query-builder#maxgroupcount) property. By default, up to 5 nested groups are allowed. The following example demonstrates restricting the maximum group count to 2.
+Limit the nesting depth of groups by setting the [`maxGroupCount`](https://ej2.syncfusion.com/react/documentation/api/query-builder#maxgroupcount) property. The default value is `5`. The property accepts positive integers starting from `1` (which produces a flat list of conditions with no nested groups).
+
+When the limit is reached, the **Add Group** button inside the deepest group is automatically disabled, preventing further nesting through the UI. The same limit applies when adding groups programmatically through [`addGroups`](https://ej2.syncfusion.com/react/documentation/api/query-builder#addgroups).
+
+> Using this property in mobile environments prevents excessive nested group creation and improves usability on smaller screens.
+
+The following example demonstrates restricting the maximum group count to `2`:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

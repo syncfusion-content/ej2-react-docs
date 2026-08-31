@@ -47,7 +47,7 @@ To bind remote data to the Query Builder, assign service data as a DataManager i
 
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs5" %}
 
-> By default, DataManager uses ODataAdaptor for remote data binding.
+> By default, DataManager uses ODataV4Adaptor for remote data binding. To bind to ODataV3 services, use the `ODataAdaptor`, and to bind to a Web API, use `WebApiAdaptor`.
 
 ### Binding with OData services
 
@@ -79,9 +79,9 @@ OData v4 is an improved version of the OData protocol. DataManager supports ODat
 
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs7" %}
 
-### Web API
+### Binding with Web API
 
-You can use `WebApiAdaptor` to bind query builder with Web API created using OData endpoint.
+You can use `WebApiAdaptor` to bind the Query Builder to a Web API created using an OData endpoint. The endpoint must expose data in a format compatible with OData and return responses in the standard `{ result: [], count: number }` shape.
 
 
 
@@ -174,7 +174,7 @@ ReactDom.render(<App />, document.getElementById('querybuilder'));
 
 ## Data Manager
 
-You can use the created conditions in DataManager through the getPredicate method. This method creates predicates which is used as conditions in DataManager. In this example given below, `getValidRules` method is used to get the valid queried data.
+You can use the created conditions in DataManager through the [`getPredicate`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getpredicate) method, which returns a `Predicate` instance consumable by DataManager queries. The `getValidRules` method returns the currently valid rule set (skipping any incomplete or invalid rules) and is used in the following example to retrieve the queried data.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -189,7 +189,7 @@ You can use the created conditions in DataManager through the getPredicate metho
 
 ## Complex Data Binding
 
-Complex Data Binding allows you to create subfield for columns. To implement complex data binding, either bind the complex data in nested columns or specify complex data source and separator must be given in querybuilder.
+Complex Data Binding allows you to create sub-fields for columns. To implement complex data binding, you can either bind nested columns or provide a complex data source along with a [`separator`](https://ej2.syncfusion.com/react/documentation/api/query-builder#separator) property on the Query Builder.
 
 In the following sample, complex data was bound in nested columns.
 

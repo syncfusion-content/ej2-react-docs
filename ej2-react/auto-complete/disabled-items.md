@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Disabled Items in React AutoComplete
 
-The AutoComplete provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [disabled](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `fields.disabled` property.
+The AutoComplete provides options for individual items to be either in an enabled or disabled state for specific scenarios. The disabled state of each list item is controlled by the `fields.disabled` data field, which must map to a column containing boolean values (`true` to disable, `false` to keep the item enabled). Once an item is disabled, it cannot be selected as a value of the component. To configure the disabled item column, use the `fields.disabled` property.
 
-In the following sample, states are grouped according to their category using the `disabled` field.
+In the following sample, list items are disabled based on a boolean field using the `fields.disabled` property.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ In the following sample, states are grouped according to their category using th
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs28" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,18 +40,25 @@ In the following sample, states are grouped according to their category using th
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs29" %}
 
-## Disable Item Method
+## Disabling the overall component
 
-The [disableItem](https://ej2.syncfusion.com/react/documentation/api/auto-complete#disableItem) method can be used to handle dynamic changes in the disable state of a specific item. Only one item can be disabled in this method. To disable multiple items, this method can be iterated with the items list or array. The disabled field state will be updated in the [dataSource](https://ej2.syncfusion.com/react/documentation/api/auto-complete#datasource) when the item is disabled using this method. If the selected item is disabled dynamically, then the selection will be cleared.
-
-| Parameter | Type | Description |
-|------|------|------|
-| itemHTMLLIElement |  <code>HTMLLIElement</code> |  It accepts the HTML Li element of the item to be removed.  |
-| itemValue | <code>string</code> \| <code>number</code> \| <code>boolean</code> \| <code>object</code> | It accepts the string, number, boolean and object type value of the item to be removed. |
-| itemIndex | <code>number</code> | It accepts the index of the item to be removed. |
-
-## Enabled
-
-To disable the overall component, set the [enabled](https://ej2.syncfusion.com/react/documentation/api/auto-complete#enabled) property to false.
+To disable the overall AutoComplete component, set the [`enabled`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#enabled) property to `false` (or the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#disabled) property to `true`). Note that this `enabled`/`disabled` property controls the whole component, whereas `fields.disabled` controls only individual list items.
 
 ![Disabled AutoComplete Component](../images/autocomplete-disable.png)
+
+## Disabling an item at runtime
+
+The [`disableItem`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#disableitem) method handles dynamic changes in the disable state of a specific item. Only one item can be disabled per call. To disable multiple items, call this method iteratively over the items list or array. The disabled state will be updated in the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#datasource) when the item is disabled using this method. If a selected item is disabled dynamically, its selection is automatically cleared.
+
+**Method signature:** `disableItem(item: HTMLLIElement | string | number | boolean | object): void`
+
+The `item` argument accepts any of the following:
+
+| Argument type | Description |
+|------|------|
+| <code>HTMLLIElement</code> | The HTML `li` element of the item to be disabled. |
+| <code>string</code> | The string value of the item to be disabled. |
+| <code>number</code> | The number value of the item to be disabled. |
+| <code>boolean</code> | The boolean value of the item to be disabled. |
+| <code>object</code> | The object value of the item to be disabled. |
+| <code>number</code> (index) | The index of the item to be disabled. |

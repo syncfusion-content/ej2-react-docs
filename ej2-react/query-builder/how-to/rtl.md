@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to enable right to left in React Query Builder UI
 
-Right-to-left (RTL) support enables the Query Builder to adapt its layout and text direction for languages that read from right to left, such as Arabic, Farsi, and Urdu. This improves accessibility and user experience for these language communities. Enable RTL by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/right-to-left) property to true.
+Right-to-left (RTL) support enables the Query Builder to adapt its layout and text direction for languages that read from right to left, such as Arabic, Farsi, and Urdu. This improves accessibility and user experience for these language communities. Enable RTL by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/query-builder#enablertl) property to `true` (default: `false`).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

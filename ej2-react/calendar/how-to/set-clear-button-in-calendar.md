@@ -10,17 +10,19 @@ domainurl: ##DomainURL##
 
 # How to set clear button in React Calendar
 
-The following steps illustrate how to configure a clear button in the Calendar UI.
+The following steps illustrate how to add a **Clear** button to the Calendar UI that resets the selected value when clicked.
 
-* During the Calendar's [`created`](https://ej2.syncfusion.com/react/documentation/api/calendar#created) event, add the required elements for the clear button. This example uses a div with the Essential<sup style="font-size:70%">&reg;</sup> JS 2 Button component.
+1. Handle the Calendar's [`created`](https://ej2.syncfusion.com/react/documentation/api/calendar#created) event and append the clear-button elements to the Calendar footer. This example uses a `div` containing a Syncfusion Button component.
 
-* Add the `e-footer` class to the div to make it act as the footer.
+2. Add the `e-footer` class to the `div` so that Syncfusion treats the element as part of the Calendar footer.
 
-* Use the button to clear the selected date.
+3. Bind a `click` event handler on the button to clear the selected date by setting the `value` property to `null` (or `undefined`).
 
-* Bind the necessary event handler to the button to update the Calendar's value.
+4. Ensure the `value` property update is applied through state, the component instance, or a bound handler so the Calendar re-renders to reflect the cleared selection.
 
-Below is the code example
+> The `e-footer` class is required. Without it, the appended element renders inside the body of the page, not the Calendar's footer region.
+
+The following code example demonstrates the implementation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

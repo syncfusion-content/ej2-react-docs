@@ -8,9 +8,10 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to enable or disable items in React
+# How to enable or disable Context Menu items in React
 
-The ContextMenu component supports dynamic state management of menu items through the [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/menu/#enableitems) method. This functionality allows you to control menu item availability based on application state, user permissions, or contextual conditions, enhancing user experience by showing only relevant actions.
+
+The ContextMenu component supports dynamic state management of menu items through the [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#enableitems) method. This functionality allows you to control menu item availability based on application state, user permissions, or contextual conditions, offering only relevant actions. Disabled items remain in the menu but are visually dimmed and not interactive.
 
 The `enableItems` method accepts three parameters: an array of item identifiers (`items`), a boolean value (`enable`) to specify the desired state, and an optional `isUniqueId` parameter to indicate whether the identifiers refer to unique IDs or text content. When `enable` is set to `true`, the specified items become interactive; when `false`, they become disabled and visually dimmed.
 
@@ -25,6 +26,5 @@ In the following example, the **Display Settings** parent item and **Medium icon
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs4" %}
+{% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs4" %}
 
-> To disable sub menu items, use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/menu/#beforeopen) event.

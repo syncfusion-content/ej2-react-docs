@@ -46,18 +46,22 @@ Define the available operators for each column using the [`operators`](https://e
 | contains | Checks whether the value contains the specified string. | String |
 | equal | Checks whether the value equals the specified value. | String, Number, Date, Boolean |
 | notequal | Checks whether the value does not equal the specified value. | String, Number, Date, Boolean |
-| greaterthan | Checks whether the value is greater than the specified value. | Date Number |
-| greaterthanorequal | Checks whether a value is greater than or equal to the specified value. | Date Number |
-| lessthan | Checks whether the value is less than the specified value.| Date Number |
-| lessthanorequal | Checks whether the value is less than or equal to the specified value. | Date Number |
-| between | Checks whether the value is between the two-specific value. | Date  Number |
-| notbetween | Checks whether the value is not between the two-specific value. | Date  Number |
-| in | Checks whether the value is one of the specific values. | String  Number |
-| notin | Checks whether the value is not in the specific values. | String  Number |
+| greaterthan | Checks whether the value is greater than the specified value. | Date, Number |
+| greaterthanorequal | Checks whether a value is greater than or equal to the specified value. | Date, Number |
+| lessthan | Checks whether the value is less than the specified value.| Date, Number |
+| lessthanorequal | Checks whether the value is less than or equal to the specified value. | Date, Number |
+| between | Checks whether the value is between the two specified values. | Date, Number |
+| notbetween | Checks whether the value is not between the two specified values. | Date, Number |
+| in | Checks whether the value is one of the specified values. | String, Number |
+| notin | Checks whether the value is not in the specified values. | String, Number |
+| isempty | Checks whether the value is empty. | String |
+| isnotempty | Checks whether the value is not empty. | String |
+| isnull | Checks whether the value is null. | String, Number |
+| isnotnull | Checks whether the value is not null. | String, Number |
 
 ## Step
 
-The Query Builder allows you to set the step values to the number fields. So that you can easily access the numeric textbox. Use the [`step`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#step) property, to set the step value for number values.
+The Query Builder allows you to set step values for number fields, making numeric input easier to navigate. Use the [`step`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#step) property to define the increment applied to the numeric textbox. The default value is `1`, and accepted values are positive non-zero numbers.
 
 ## Format
 
@@ -76,7 +80,9 @@ The Query Builder formats date and number values. Use the [`format`](https://ej2
 
 ## Validations
 
-Validation allows you to validate the conditions and it display errors for invalid fields while using  the [`validateFields`](https://ej2.syncfusion.com/react/documentation/api/query-builder#validatefields) method.  To enable validation in the query builder , set the allowValidation to true. Column fields are validated after setting [`allowValidation`](https://ej2.syncfusion.com/react/documentation/api/query-builder#allowvalidation) as to true. So, you should manually configure the validation for Operator and, Value fields through [`validation`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#validation).
+Validation allows you to validate the conditions and it displays errors for invalid fields when using the [`validateFields`](https://ej2.syncfusion.com/react/documentation/api/query-builder#validatefields) method. To enable validation in the Query Builder, set [`allowValidation`](https://ej2.syncfusion.com/react/documentation/api/query-builder#allowvalidation) to true. Column fields are validated once `allowValidation` is set to true. You should manually configure the validation for the Operator and Value fields through the [`validation`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#validation) property.
+
+Additionally, the `validation` model supports `isRequired`, `min`, `max`, and `message` properties for customizing field-level error messages and constraints.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

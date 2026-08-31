@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Separate Connector in React Query Builder UI
 
-Apply individual connectors between rules or groups within the same group using standalone connector dropdowns. This enhancement provides greater flexibility by allowing different connector types (AND/OR) for adjacent rules, enabling more complex and precise query logic. Enable this functionality with the [`enableSeparateConnector`](https://ej2.syncfusion.com/react/documentation/api/query-builder#enableSeparateConnector) property.
+Apply individual connectors between rules or groups within the same group using standalone connector dropdowns. This enhancement provides greater flexibility by allowing different connector types (AND/OR) for adjacent rules, enabling more complex and precise query logic. Enable this functionality with the [`enableSeparateConnector`](https://ej2.syncfusion.com/react/documentation/api/query-builder#enableSeparateConnector) property. The default value is `false`, in which case all rules within a group share the group's `condition`. When `true`, the per-pair connector dropdown takes precedence and the group's overall `condition` is ignored.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -50,9 +50,9 @@ The following example demonstrates how to set the `year` as the start view of th
 
 You can restrict Calendar navigation by setting the [`start`](https://ej2.syncfusion.com/react/documentation/api/calendar#start) and [`depth`](https://ej2.syncfusion.com/react/documentation/api/calendar#depth) properties.
 
-Setting `start` and `depth` limits how far users can drill down or up. The Calendar will drill down to the view specified by `depth` and drill up to the view specified by `start`.
+Setting these properties limits how far users can drill down or up. The Calendar will drill down to the view specified by `depth` and drill up to the view specified by `start`.
 
-> The `depth` view must be lower (less granular) than the `start` view.
+> The `depth` view must be deeper (more granular) than the `start` view.
 
 `[Class-component]`
 

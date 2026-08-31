@@ -10,7 +10,16 @@ domainurl: ##DomainURL##
 
 # How to skip months in React Calendar
 
-The following example demonstrates how to skip a month in the Calendar when clicking the previous or next icon. This sample uses the [`navigated`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigated) event and the [`NavigateTo`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigateto) method.
+The following example demonstrates how to skip a month in the Calendar when the user clicks the previous or next icon. The sample uses the [`navigated`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigated) event together with the [`NavigateTo`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigateto) method to advance the Calendar by two months at a time instead of one.
+
+**API**
+
+| Member | Signature / Type | Description |
+| --- | --- | --- |
+| [`navigated`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigated) | `EventEmitter<NavigatedEventArgs>` | Triggered after the Calendar navigates to a different view or month. The event argument exposes `date` and `view` properties. |
+| [`NavigateTo`](https://ej2.syncfusion.com/react/documentation/api/calendar#navigateto) | `(date: Date, view?: CalendarView) => void` | Navigates the Calendar to the specified date, and optionally switches the view (`Month`, `Year`, or `Decade`). |
+
+The following example demonstrates the implementation.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

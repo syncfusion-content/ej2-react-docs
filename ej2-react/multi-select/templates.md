@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in React MultiSelect Dropdown | Syncfusion
-description:  Customize the React MultiSelect Dropdown list items, group headers, selected value, header, footer, and summary tag using template engine support.
+description: Customize the React MultiSelect Dropdown with item, value, group, header, footer, and no-records templates for enhanced layouts and messaging.
 control: Templates 
 platform: ej2-react
 documentation: ug
@@ -46,7 +46,7 @@ In the following example, each list item displays data in a two-column layout.
 
 ## Value template
 
-Customize how selected values appear in the MultiSelect input using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#valuetemplate) property. This controls the display format of selected items.
+Customize how selected values appear in the MultiSelect input using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#valuetemplate) property. This controls the display format of selected items. The `valueTemplate` applies only when the component is in delimiter mode; it does not apply to Box or chip mode.
 
 In the following example, the selected value combines `FirstName` and `City` fields, separated by a hyphen.
 
@@ -78,7 +78,7 @@ In the following example, the selected value combines `FirstName` and `City` fie
 
 ## Group template
 
-Customize group header titles using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#grouptemplate) property. This template applies to both inline and floating group headers, allowing consistent group header styling.
+Customize group header titles using the [groupTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#grouptemplate) property. This template applies to both inline and floating group headers, allowing consistent group header styling. The `fields.groupBy` property must be configured for the group template to render.
 
 In the following example, employees are grouped by their city.
 
@@ -110,9 +110,9 @@ In the following example, employees are grouped by their city.
 
 ## Header template
 
-Add a static header to the top of the popup list using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#headertemplate) property. This allows you to place custom elements such as titles, filters, or other controls in the header area.
+Add a static header to the top of the popup list using the [headerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#headertemplate) property. This allows you to place custom elements such as titles, filters, or other controls in the header area. The header template is a single static element and does not affect the layout of individual list items.
 
-In the following example, list items and their headers display in a two-column layout similar to a data grid.
+In the following example, the header displays column titles in a two-column layout above the list items.
 
 `[Class-component]`
 
@@ -142,9 +142,9 @@ In the following example, list items and their headers display in a two-column l
 
 ## Footer template
 
-The MultiSelect has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#footertemplate) property.
+The MultiSelect has options to show a footer element at the bottom of the popup list. Here, you can place any custom element as a footer using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#footertemplate) property.
 
-In the following sample, footer element displays the total number of list items present in the MultiSelect.
+In the following sample, the footer element displays the total number of list items present in the MultiSelect.
 
 `[Class-component]`
 
@@ -174,10 +174,9 @@ In the following sample, footer element displays the total number of list items 
 
 ## No records template
 
-The MultiSelect is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of
-[noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#norecordstemplate) property.
+Use the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#norecordstemplate) property to customize the popup content when the data source is empty or no items match the search text. This template differs from the action failure template, which renders only when a data fetch request fails.
 
-In the following sample, popup list content displays the notification of no data available.
+In the following sample, the popup shows a no-data-available notification.
 
 `[Class-component]`
 
@@ -207,10 +206,9 @@ In the following sample, popup list content displays the notification of no data
 
 ## Action failure template
 
-There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the
-[actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#actionfailuretemplate) property.
+You can also customize the popup content when a data fetch request fails at the remote server using the [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#actionfailuretemplate) property.
 
-In the following sample, when the data fetch request fails, the MultiSelect displays the notification.
+In the following sample, when the data fetch request fails, the MultiSelect displays a failure notification.
 
 `[Class-component]`
 
@@ -289,4 +287,4 @@ In the following sample, the Summary Tag Template displays the count of selected
 
 * [How to bind the data](./data-binding)
 * [How to group the data using header](./grouping)
-* [How to customize the options in MultiSelect](./chip-customization)
+* [How to customize chips in MultiSelect](./chip-customization)

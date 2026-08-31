@@ -14,10 +14,10 @@ The following CSS examples show how to modify the Calendar control's appearance 
 
 ## Customizing the background color for the Calendar
 
-Use the following CSS to customize the background color and border for the Calendar.
+Use the following CSS to set a custom background color and outer border for the Calendar container.
 
 ```css
-/* To specify background color and border */
+/* Set background color and border */
 .e-calendar {
         background-color: peachpuff;
         border: 3px solid red;
@@ -60,50 +60,74 @@ Use the following CSS to customize the Calendar title.
 }
 ```
 
-## Customizing the previous and next icon
+## Customizing the previous and next icons
 
-Use the following CSS to customize the previous and next icon.
+Use the following CSS to customize the previous and next navigation icons in the Calendar header.
 
 ```css
-/* To specify color and border  */
+/* Set color and border */
 .e-calendar .e-header span, .e-bigger.e-small .e-calendar .e-header span {
         border: 1px solid;
         color: chocolate;
 }
 ```
 
-## Customizing the footer button
+## Customizing the content header in Calendar
 
-Use the following CSS to customize the footer button.
+Use the following CSS to customize the background of the day-of-week header row inside the Calendar grid.
 
 ```css
-/* To specify background color, color, and border-color  */
-.e-calendar .e-btn.e-today.e-flat.e-primary, .e-calendar .e-css.e-btn.e-today.e-flat.e-primary {
+/* Set background */
+.e-calendar .e-content thead, .e-bigger.e-small .e-calendar .e-content thead {
+    background: aquamarine;
+}
+```
+
+## Customizing the Calendar date elements on hovering
+
+Use the following CSS to customize how date cells appear on hover and focus.
+
+```css
+/* Set background color, color, and border */
+.e-calendar .e-content td:hover span.e-day, .e-calendar .e-content td:focus span.e-day, .e-bigger.e-small .e-calendar .e-content td:hover span.e-day, .e-bigger.e-small .e-calendar .e-content td:focus span.e-day {
         background-color: red;
-        border-color: black;
-        color: black;
+        border: 2px solid;
+        color: #212529;
+}
+```
+
+### Customizing the border of date cell grid
+
+Use the following CSS to add a border to every day cell in the grid.
+
+```css
+/* Set border */
+.e-calendar .e-content span.e-day, .e-bigger.e-small .e-calendar .e-content span.e-day {
+        border: 1px solid;
 }
 ```
 
 ## Customizing the selected date cell grid
 
-Use the following CSS to customize the selected date cell grid in Calendar.
+Use the following CSS to customize the focused/today day cell inside the Calendar grid.
 
 ```css
-/* To specify background color and color  */
+/* Set background color and color */
 .e-calendar .e-content td.e-focused-date.e-today span.e-day {
         background-color: maroon;
         color: #fff;
 }
 ```
 
-## Customizing the content header in Calendar
+## Customizing the Today's button
 
-Use the following CSS to customize the content header in Calendar.
+Use the following CSS to customize the **Today** button rendered in the Calendar footer.
 
 ```css
-/* To specify background */
-.e-calendar .e-content thead, .e-bigger.e-small .e-calendar .e-content thead {
-    background: aquamarine;
+/* Set background color, color, and border-color */
+.e-calendar .e-btn.e-today.e-flat.e-primary {
+        background-color: red;
+        border-color: black;
+        color: black;
 }
 ```

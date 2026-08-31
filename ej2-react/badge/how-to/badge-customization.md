@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to customize badge in React Badge
 
-The Badge component offers multiple customization options to match application design requirements. This guide covers color, size, and position customization techniques to help you create badges that integrate seamlessly with your UI.
+The Badge component supports color, size, and position customization through CSS classes.
 
 ## Color customization
 
-The Badge component includes eight predefined color variants. Beyond these preset options, you can customize the badge color to match your specific branding or design needs by applying custom CSS classes.
+The Badge component includes eight predefined color variants. To apply a custom color, override the badge styles with a custom CSS class.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -26,16 +26,16 @@ The Badge component includes eight predefined color variants. Beyond these prese
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/color-cs1/index.html %}
 {% endhighlight %}
-{% highlight html tabtitle="index.css" %}
+{% highlight css tabtitle="index.css" %}
 {% include code-snippet/badge/color-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/color-cs1" %}
 
-## Customize badge size
+## Size customization
 
-The Badge component automatically scales based on its content. To adjust the badge size, modify the `font-size` CSS property of the badge element. This allows the badge dimensions to respond proportionally to different text sizes.
+The Badge component scales with its content. To adjust the size, modify the `font-size` property on the badge element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -47,16 +47,16 @@ The Badge component automatically scales based on its content. To adjust the bad
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/size-cs1/index.html %}
 {% endhighlight %}
-{% highlight html tabtitle="index.css" %}
+{% highlight css tabtitle="index.css" %}
 {% include code-snippet/badge/size-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/size-cs1" %}
 
-## Custom position
+## Position customization
 
-The Badge component provides built-in support for standard positioning (`top` and `bottom`). For more flexible positioning requirements, apply a custom CSS class to the badge element to override the default positioning styles and achieve your desired layout.
+The Badge component supports `top` and `bottom` positioning out of the box. For other positions, override the badge styles with a custom CSS class.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -68,9 +68,9 @@ The Badge component provides built-in support for standard positioning (`top` an
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/custom-position-cs1/index.html %}
 {% endhighlight %}
-{% highlight html tabtitle="index.css" %}
+{% highlight css tabtitle="index.css" %}
 {% include code-snippet/badge/custom-position-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/custom-position-cs1" %}

@@ -14,8 +14,8 @@ Prevent modification of specific rules or groups by locking them. When a rule is
 
 Lock groups and rules through the user interface or programmatically:
 
-* Use the [`lockGroup`](https://ej2.syncfusion.com/react/documentation/api/query-builder#lockgroup) method to lock a group.
-* Use the [`lockRule`](https://ej2.syncfusion.com/react/documentation/api/query-builder#lockrule) method to lock a rule.
+* Use the [`lockGroup`](https://ej2.syncfusion.com/react/documentation/api/query-builder#lockgroup) method with the target `groupId` to lock every child rule in the group.
+* Use the [`lockRule`](https://ej2.syncfusion.com/react/documentation/api/query-builder#lockrule) method with the target `ruleId` to prevent edits to that rule.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

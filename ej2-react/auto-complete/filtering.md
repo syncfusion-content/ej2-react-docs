@@ -14,7 +14,9 @@ The AutoComplete has built-in support for filtering the data items when [`allowF
 
 ## Change the filter type
 
-The component allows you to specify which filter type should be used for the search action. The available [`filterType`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#filtertype) options and their supported data types are:
+The AutoComplete applies the selected filter type for the search action. The available [`filterType`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#filtertype) options and their supported data types are:
+
+> The built-in `filterType` options apply to string data only. For numeric or boolean values, use the [`filtering`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#filtering) event to implement custom filtering logic.
 
 | **Filter Type** | **Description** | **Supported Types** |
 | --- | --- | --- |
@@ -24,7 +26,7 @@ The component allows you to specify which filter type should be used for the sea
 
 In the following example, data filtering is done with the `StartsWith` type.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -37,7 +39,7 @@ In the following example, data filtering is done with the `StartsWith` type.
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs9" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -50,13 +52,47 @@ In the following example, data filtering is done with the `StartsWith` type.
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs10" %}
 
+## Debounce delay
+
+You can use the [`debounceDelay`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality reduces the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience. By default, a debounce delay of `300` ms is set. The acceptable range is from `0` upward; setting it to `0` ms disables the debounce entirely and triggers filtering on every keystroke.
+
+`[Class Component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/autocomplete/basic-cs32/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/autocomplete/basic-cs32/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs32" %}
+
+`[Functional Component]`
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/autocomplete/basic-cs33/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/autocomplete/basic-cs33/app/index.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs33" %}
+
+## Custom filtering
+
+For advanced scenarios such as numeric, boolean, or server-side filtering that the built-in `filterType` options do not cover, handle the [`filtering`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#filtering) event. This event passes a `FilteringEventArgs` object that contains the current `text`, the `updateData` function to pass filtered results back to the component, and the current `dataSource`. Call `updateData(data, query)` inside the handler to populate the popup with your custom results.
+
 ## Filter item count
 
-You can specify the filter suggestion item count through the [`suggestionCount`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#suggestioncount) property of AutoComplete.
+You can limit the number of filtered suggestion items shown through the [`suggestionCount`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#suggestioncount) property of AutoComplete. The default value is `20`. Setting it to `0` shows all matching items; negative values are treated as the default.
 
 In the following example, the suggestion list item count is restricted to 2.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -72,7 +108,7 @@ In the following example, the suggestion list item count is restricted to 2.
         
 {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs11" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -88,13 +124,13 @@ In the following example, the suggestion list item count is restricted to 2.
         
 {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs12" %}
 
-## Limit the minimum filter character
+## Set a minimum filter length
 
-You can set the limit for the character count to filter the data on the AutoComplete. This can be done by setting the [`minLength`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#minlength) property of the AutoComplete.
+You can set the minimum number of characters required to trigger filtering through the [`minLength`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#minlength) property of the AutoComplete. The default value is `1`. For remote data binding with `DataManager`, see [Binding remote data](./data-binding#binding-remote-data).
 
-In the following example, the remote request does not fetch the search data, until the search key contains three characters.
+In the following example, the remote request does not fetch the search data until the search key contains three characters.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -107,7 +143,7 @@ In the following example, the remote request does not fetch the search data, unt
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs13" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -120,13 +156,13 @@ In the following example, the remote request does not fetch the search data, unt
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs14" %}
 
-## Case sensitive filtering
+## Case-sensitive filtering
 
-Data items can be filtered either with or without case sensitivity using the DataManager. This can be done by setting the [`ignoreCase`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#ignorecase) property of the AutoComplete.
+Data items can be filtered either with or without case sensitivity. This can be done by setting the [`ignoreCase`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#ignorecase) property of the AutoComplete. The case-sensitivity behavior depends on the underlying data source.
 
 The following sample depicts how to filter the data with case-sensitive mode.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -139,7 +175,7 @@ The following sample depicts how to filter the data with case-sensitive mode.
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs15" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -152,13 +188,13 @@ The following sample depicts how to filter the data with case-sensitive mode.
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs16" %}
 
-## Diacritics Filtering
+## Diacritics filtering
 
-The AutoComplete supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international character lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/auto-complete#ignoreaccent) property is enabled.
+The AutoComplete supports diacritics filtering, which ignores the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international character lists when the [`ignoreAccent`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#ignoreaccent) property is enabled. The default value of `ignoreAccent` is `false`.
 
 In the following sample, data with diacritics are bound as the dataSource for the AutoComplete.
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -171,7 +207,7 @@ In the following sample, data with diacritics are bound as the dataSource for th
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs17" %}
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -184,37 +220,7 @@ In the following sample, data with diacritics are bound as the dataSource for th
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs18" %}
 
-## Debounce delay
-
-You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/api/auto-complete#debouncedelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience. By default, a debounce delay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
-
-`[Class-component]`
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/autocomplete/basic-cs32/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/autocomplete/basic-cs32/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs32" %}
-
-`[Functional-component]`
-
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/autocomplete/basic-cs33/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/autocomplete/basic-cs33/app/index.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs33" %}
-
-## See Also
+## See also
 
 * [How to achieve autofill while filtering](./how-to/autofill)
 * [How to group the data using header](./grouping)

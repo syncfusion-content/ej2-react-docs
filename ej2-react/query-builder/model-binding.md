@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Model Binding in React Query Builder UI
 
-Model binding allows you to configure properties for components used in the field, operator, and value columns. Implement model binding by assigning the `fieldModel`, `operatorModel`, and `valueModel` properties in the Query Builder configuration.
+Model binding allows you to configure properties for the components used in the field, operator, and value editors. Implement model binding by assigning the [`fieldModel`](https://ej2.syncfusion.com/react/documentation/api/query-builder#fieldmodel), [`operatorModel`](https://ej2.syncfusion.com/react/documentation/api/query-builder#operatormodel), and [`valueModel`](https://ej2.syncfusion.com/react/documentation/api/query-builder#valuemodel) properties on the Query Builder. These models are merged with each editor's default options, so they augment rather than replace the underlying UI.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

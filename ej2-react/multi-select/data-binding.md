@@ -10,24 +10,24 @@ domainurl: ##DomainURL##
 
 # Data Binding in React MultiSelect Dropdown
 
-The MultiSelect loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/multi-select/#datasource) property. It supports both `array` and `DataManager` data types.
+The MultiSelect loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/multi-select/#datasource) property. The `dataSource` accepts either a local `array` of values or a [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/data-manager/) instance that handles remote data services.
 
-The component also supports various data services including OData, OData V4, and Web API, with support for XML, JSON, and JSONP formats through `DataManager` adaptors.
+The `DataManager` provides configuration options such as the `url`, `adaptor`, and `crossDomain` properties to connect to remote services. It supports various data services including OData, OData V4, and Web API, with support for XML, JSON, and JSONP formats through `DataManager` adaptors. For the full list of available adaptors and configuration options, see the [DataManager documentation](https://ej2.syncfusion.com/react/documentation/data/data-manager/).
 
 | Fields | Type | Description |
 |------|------|-------------|
-| text |  `string` | Specifies the display text of each list item. |
-| value |  `number or string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
-| groupBy |  `string` | Specifies the category under which the list item has to be grouped. |
-| iconCss |  `string` | Specifies the icon class of each list item. |
+| text | `string` | Specifies the display text of each list item. |
+| value | `number` or `string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
+| groupBy | `string` | Specifies the category under which the list item has to be grouped. |
+| iconCss | `string` | Specifies the icon class of each list item. |
 
 > When binding complex data to the MultiSelect, fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
 ## Binding local data
 
-Local data can be represented in two ways as described below.
+Local data can be represented in three ways as described below.
 
-### 1. Array of string
+### 1. Array of strings
 
 The MultiSelect supports loading arrays of primitive data such as strings and numbers. In this case, the value and text fields represent the same data.
 
@@ -35,29 +35,29 @@ The MultiSelect supports loading arrays of primitive data such as strings and nu
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/dropdownlist/basic-cs41/app/index.jsx %}
+{% include code-snippet/multiselect/basic-cs23/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/dropdownlist/basic-cs41/app/index.tsx %}
+{% include code-snippet/multiselect/basic-cs23/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs41" %}
+ {% previewsample "page.domainurl/code-snippet/multiselect/basic-cs23" %}
 
 `[Functional-component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/dropdownlist/basic-cs42/app/index.jsx %}
+{% include code-snippet/multiselect/basic-cs24/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/dropdownlist/basic-cs42/app/index.tsx %}
+{% include code-snippet/multiselect/basic-cs24/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs42" %}
+ {% previewsample "page.domainurl/code-snippet/multiselect/basic-cs24" %}
 
-### 2. Array of object
+### 2. Array of objects
 
 The MultiSelect generates list items from arrays of objects. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/multi-select/#fields) property.
 
@@ -89,7 +89,7 @@ In the following example, the `id` column is mapped to the `value` field and the
 
  {% previewsample "page.domainurl/code-snippet/multiselect/basic-cs6" %}
 
-### 3. Array of complex object
+### 3. Array of complex objects
 
 The MultiSelect generates list items from arrays of complex objects by mapping nested properties to the [fields](https://ej2.syncfusion.com/react/documentation/api/multi-select/#fields) property.
 
@@ -123,9 +123,16 @@ In the following example, `Code.Id` is mapped to the `value` field and `Country.
 
 ## Binding remote data
 
-The MultiSelect supports retrieval of data from remote data services with the help of `DataManager` component. The [Query](https://ej2.syncfusion.com/react/documentation/api/multi-select/#query) property is used to fetch data from the database and bind it to the MultiSelect.
+The MultiSelect supports retrieval of data from remote data services using the `DataManager` component. The [Query](https://ej2.syncfusion.com/react/documentation/api/multi-select/#query) property is used to fetch data from the database and bind it to the MultiSelect.
 
-The following sample displays the first 6 contacts from “Customers” table of the `Northwind` Data Service.
+To bind remote data, import the `DataManager` and `Query` classes from the `@syncfusion/ej2-data` package, then bind a `DataManager` instance to the `dataSource` property and a `Query` instance to the `query` property of the MultiSelect.
+
+```javascript
+import { DataManager, Query } from '@syncfusion/ej2-data';
+import { MultiSelectComponent } from '@syncfusion/ej2-react-dropdowns';
+```
+
+The following sample displays the first 6 contacts from the `Customers` table of the `Northwind` OData service, using a `Query` with `.take(6)`.
 
 `[Class-component]`
 
@@ -155,6 +162,6 @@ The following sample displays the first 6 contacts from “Customers” table of
 
 ## See Also
 
-* [How to load data using template](./templates#item-template)
-* [How to group the data using header](./grouping/)
-* [How to filter the bound data](./filtering/)
+* [How to load data using template](./templates.md#item-template)
+* [How to group the data using header](./grouping)
+* [How to filter the bound data](./filtering)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to integrate badge into ListView in React Badge
 
-Badges can be embedded within ListView items to provide visual indicators of status, priority, or notification counts. By combining these components, you create a rich list experience where badges dynamically reflect data changes. The Badge component automatically adjusts its dimensions relative to the parent ListView item, eliminating the need for manual size configuration. Color-coded badges can further enhance clarity by visually representing priority levels or notification types.
+Badges can be embedded within ListView items to provide visual indicators of status, priority, or notification counts. The Badge component automatically adjusts its dimensions relative to the parent ListView item, removing the need for manual sizing.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -22,9 +22,9 @@ Badges can be embedded within ListView items to provide visual indicators of sta
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/badge/listview-cs1/index.html %}
 {% endhighlight %}
-{% highlight html tabtitle="index.css" %}
+{% highlight css tabtitle="index.css" %}
 {% include code-snippet/badge/listview-cs1/index.css %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/badge/listview-cs1" %}

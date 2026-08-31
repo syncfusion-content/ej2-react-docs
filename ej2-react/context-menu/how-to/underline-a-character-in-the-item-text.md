@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to underline a character in React Context Menu
+# How to underline a character in a React Context Menu item
 
-To underline a specific character in a menu item's text, you can utilize the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#beforeitemrender) event. This technique is commonly used to create  Shortcut keys by visually highlighting specific characters within menu items.
+To underline a specific character in a menu item's text, use the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#beforeitemrender) event. This technique is commonly used to visually indicate keyboard shortcut characters within menu items.
 
-The underlining can be achieved by adding `<u>` tags around the target character and setting the modified text as innerHTML to the list item element during rendering.
+The underlining is achieved by adding `<u>` tags around the target character and assigning the modified string to the list item's `innerHTML` during rendering. The handler typically checks `args.item.text` to scope the modification to a specific item.
 
-When implementing this feature, the `beforeItemRender` event provides access to the menu item element and its associated data, enabling you to modify the display text before the item is rendered in the DOM. The event occurs for each menu item during the rendering process, giving you the opportunity to customize the appearance based on your specific requirements.
+## Example
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,4 +25,4 @@ When implementing this feature, the `beforeItemRender` event provides access to 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs5" %}
+{% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs5" %}

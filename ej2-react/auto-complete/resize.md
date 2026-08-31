@@ -10,10 +10,12 @@ domainurl: ##DomainURL##
 
 # Resizing in React AutoComplete
 
-You can dynamically adjust the size of the popup in the AutoComplete component by using the [AllowResize](https://ej2.syncfusion.com/react/documentation/api/auto-complete#allowresize) property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
+You can dynamically adjust the size of the popup in the AutoComplete component by using the [`allowResize`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#allowresize) property. The default value of `allowResize` is `false`. When enabled, users can resize the popup both horizontally and vertically, improving visibility and control.
+
+## Enabling resize
 
 
-`[Class-component]`
+`[Class Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -28,7 +30,7 @@ You can dynamically adjust the size of the popup in the AutoComplete component b
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs30" %}
 
 
-`[Functional-component]`
+`[Functional Component]`
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,5 +44,6 @@ You can dynamically adjust the size of the popup in the AutoComplete component b
 
  {% previewsample "page.domainurl/code-snippet/autocomplete/basic-cs31" %}
 
+The following GIF demonstrates resizing the AutoComplete popup at runtime.
 
-![Resizing in AutoComplete Component](../images/autocomplete-resize.gif)
+![Resizing the AutoComplete Popup](../images/autocomplete-resize.gif)
