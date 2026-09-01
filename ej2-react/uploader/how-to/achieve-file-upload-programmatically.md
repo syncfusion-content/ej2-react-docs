@@ -10,7 +10,12 @@ domainurl: ##DomainURL##
 
 # How to upload files programmatically in React File Upload
 
-Programmatic file upload enables you to trigger upload actions through code rather than user interactions. Use the [upload](https://ej2.syncfusion.com/react/documentation/api/uploader/#upload) method to initiate file uploads, and retrieve selected file data from the [getFilesData](https://ej2.syncfusion.com/react/documentation/api/uploader/#getfilesdata) public method.
+Programmatic file upload enables you to trigger upload actions through code rather than user interactions. Use the [upload](https://ej2.syncfusion.com/react/documentation/api/uploader#upload) method to initiate file uploads. Retrieve selected file data from the [getFilesData](https://ej2.syncfusion.com/react/documentation/api/uploader#getfilesdata) public method.
+
+The `upload` method accepts the following signatures:
+
+* `upload()` - Uploads all files currently in the file list.
+* `upload(files)` - Uploads only the files passed as the argument. Each entry in `files` must be a file object (typically obtained from `getFilesData()`).
 
 * If the upload method receives specific files as arguments, only those files will be uploaded.
 

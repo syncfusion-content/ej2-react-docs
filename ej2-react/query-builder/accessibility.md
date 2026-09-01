@@ -46,17 +46,25 @@ The Query Builder uses the following WAI-ARIA attributes:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Identifies the Query Builder component to assistive technologies. |
+| `role` | Identifies the Query Builder region to assistive technologies. The root container uses `role="form"` while individual rule rows expose `role="group"`. |
+| `aria-expanded` | Indicates whether the field, operator, or value dropdown is currently open or collapsed. |
+| `aria-haspopup` | Conveys that the field, operator, and value editors open a popup (listbox) when activated. |
+| `aria-label` | Provides an accessible name for icon buttons such as Add Group, Add Condition, Delete, Clone, and Lock. |
+| `aria-disabled` | Reflects the locked or disabled state of a rule or group. |
 
 ## Keyboard interaction
 
 The Query Builder provides keyboard support for efficient navigation and interaction without requiring a mouse. Users can navigate between fields, operators, and values; manage rules and groups; and control the component using standard keyboard shortcuts and focus management.
 
-The Query Builder component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Query Builder component.
+The Query Builder component follows the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Query Builder component.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Tab / Shift + Tab</kbd> | To focus the next item in the rule. |
+| <kbd>Tab / Shift + Tab</kbd> | Moves focus to the next or previous interactive element within the rule group. |
+| <kbd>Arrow Up / Arrow Down</kbd> | Navigates between options inside an open field, operator, or value dropdown. |
+| <kbd>Enter</kbd> | Commits the currently typed/selected value and moves focus to the next editor in the rule. |
+| <kbd>Escape</kbd> | Closes any open dropdown without applying changes. |
+| <kbd>Delete</kbd> | Removes the focused rule or group when focus is on the rule/container body. |
 
 ## Ensuring accessibility
 

@@ -100,7 +100,7 @@ The required styles for the Uploader component are imported in the **src/App.css
 
 ## Adding Uploader component
 
-Now, you can add the React Uploader component to your **src/App.jsx** file by importing and defining it within your application.`
+Now, you can add the React Uploader component to your **src/App.jsx** file by importing and defining it within your application.
 
 ```js
 import { UploaderComponent } from '@syncfusion/ej2-react-inputs';

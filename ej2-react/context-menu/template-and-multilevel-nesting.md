@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Item template
 
-The [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/context-menu/#itemtemplate) property in the ContextMenu component allows you to define custom templates for displaying menu items. This feature enables you to customize the appearance, layout, and content of menu items beyond the default text-based display. Use item templates when you need to include icons, formatted text, additional metadata, or complex HTML structures within menu items.
+The [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#itemtemplate) property in the Context Menu component allows you to define custom templates for displaying menu items. This feature enables you to customize the appearance, layout, and content of menu items beyond the default text-based display. Use item templates when you need to include icons, formatted text, additional metadata, or complex HTML structures within menu items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,14 @@ The [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/context-me
 
 ## Customize specific menu items
 
-ContextMenu items can be customized using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#beforeitemrender) event. This event triggers while rendering each menu item, providing access to the item element and menu item data for customization based on specific requirements. The following example demonstrates how to add keyboard shortcuts to specific menu items by appending span elements during the rendering process.
+Context Menu items can be customized using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#beforeitemrender) event. This event fires during rendering of each menu item. The handler receives a `MenuEventArgs` argument exposing:
+
+| Member | Description |
+| --- | --- |
+| `element` | The DOM node rendered for the menu item. |
+| `item` | The data object (`MenuItemModel`) for the menu item, used to read fields such as `text`, `iconCss`, and `url`. |
+
+The following example reads `args.item.text` to choose a keyboard shortcut and appends a `<span>` element to `args.element` during the rendering process. The `createElement` utility from `@syncfusion/ej2-base` is used to create the span element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -38,13 +45,11 @@ ContextMenu items can be customized using the [`beforeItemRender`](https://ej2.s
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/context-menu/template-cs1" %}
-
-> To create span element, `createElement` util function used from `ej2-base`.
+{% previewsample "page.domainurl/code-snippet/context-menu/template-cs1" %}
 
 ## Multi-level nesting
 
-The ContextMenu component supports multiple levels of nesting for creating hierarchical menu structures. Achieve this by mapping the [`items`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuItemModel/#items) property within parent [`menuItems`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#items). The following example demonstrates a three-level nested ContextMenu structure.
+The Context Menu component supports multiple levels of nesting for creating hierarchical menu structures. Achieve this by mapping the `items` field of each parent menu item (see [`MenuItemModel.items`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuitemmodel#items)) to an array of child `MenuItemModel` objects. By default, submenu items open on hover; the menu is not limited to a fixed nesting depth, but for usability we recommend keeping nesting to three or four levels. The following example demonstrates a three-level nested Context Menu structure.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -55,10 +60,10 @@ The ContextMenu component supports multiple levels of nesting for creating hiera
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs6" %}
+{% previewsample "page.domainurl/code-snippet/context-menu/getting-started-cs6" %}
 
-> To open sub menu items only on click, set the [`showItemOnClick`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#showitemonclick) property to `true`.
+> By default, submenu items open when the parent item is hovered. To open submenu items only on click, set the [`showItemOnClick`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#showitemonclick) property to `true`.
 
-## See Also
+## See also
 
 * [Populate menu items with data source](./how-to/data-binding)

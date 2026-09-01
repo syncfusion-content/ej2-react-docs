@@ -64,6 +64,7 @@ The server-side controller receives and validates the JWT from request headers. 
 The `Save` method validates JWT authorization before saving files to the `Uploaded Files` directory. The `Remove` method similarly verifies authorization before file deletion. The `IsAuthorized` helper method extracts the JWT from the `Authorization` header and validates it. Replace the validation logic with your actual token verification mechanism. The `SaveFileAsync` method handles file persistence, supporting chunked uploads with append functionality.
 
 ```csharp
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using System.Threading.Tasks;
@@ -100,7 +101,7 @@ public class HomeController : Controller
         {
             return false;
         }
-        var token = authorizationHeader["Bearer ".Length..];
+        var token = authorizationHeader.Substring("Bearer ".Length);
         return token == "Your.JWT.Token";
     }
 

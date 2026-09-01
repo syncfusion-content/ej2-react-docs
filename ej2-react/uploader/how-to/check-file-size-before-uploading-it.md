@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # How to check file size before upload in React File Upload
 
-Validate file sizes before upload by using the [uploading](https://ej2.syncfusion.com/react/documentation/api/uploader/#uploading) event. The file object contains the file size in bytes. Convert this size to user-friendly formats such as `KB` or `MB` using the [bytesToSize](https://ej2.syncfusion.com/react/documentation/api/uploader/#bytestosize) method.
+Validate file sizes before upload by using the [uploading](https://ej2.syncfusion.com/react/documentation/api/uploader#uploading) event. The file object contains the file size in bytes (`args.file.size`). Convert this size to user-friendly formats using the [bytesToSize](https://ej2.syncfusion.com/react/documentation/api/uploader#bytestosize) method.
+
+The `bytesToSize` method returns a string formatted as `B`, `KB`, `MB`, `GB`, or `TB` based on the magnitude of the input. For example, `bytesToSize(1024)` returns `"1 KB"` and `bytesToSize(5000000)` returns `"4.77 MB"`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

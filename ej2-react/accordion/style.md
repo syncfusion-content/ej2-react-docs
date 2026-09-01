@@ -10,91 +10,81 @@ domainurl: ##DomainURL##
 
 # Style in React Accordion
 
-The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
+The following content provides the exact CSS structure that can be used to modify the control's appearance based on user preference.
 
 ## Customizing Accordion
 
 Use the following CSS to customize the Accordion.
 
 ```css
-
 .e-accordion {
     border: 5px solid rgb(173, 255, 47);
 }
-
 ```
 
 ## Customizing the list items
 
-Use the following CSS to customize the items of Accordion.
+The following CSS styles each Accordion item. Because `.e-acrdn-item` wraps both the header and the content region, the `color` and `background-color` set here are inherited by both unless you override the header or content separately.
 
 ```css
-
 .e-accordion .e-acrdn-item {
     text-align: center;
     color: pink;
     background-color: #2fa1ff;
 }
-
 ```
 
-## Customizing Accordion's header
+## Customizing the Accordion's header
 
 Use the following CSS to customize the header of Accordion control.
 
 ```css
-
-.e-accordion .e-acrdn-item.e-select > .e-acrdn-header {
+.e-accordion .e-acrdn-item > .e-acrdn-header {
     background: #2fa1ff !important;
     justify-content: center;
 }
-
 ```
 
-## Customizing Accordion's expand and collapse icons
+## Customizing the Accordion's expand and collapse icons
 
-Use the following CSS to customize the expand and collapse icons of Accordion control.
+The following CSS changes the color of the expand and collapse toggle icons.
 
 ```css
-
 .e-accordion .e-acrdn-item .e-acrdn-header .e-toggle-icon .e-icons {
      color: pink;
 }
-
 ```
 
-## Customizing the hover state of Accordion control
+## Customizing the hover state of the Accordion control
 
-Use the following CSS to customize the accordion item when hovering.
+The following CSS adds a border to an item header when the pointer hovers over it.
 
 ```css
-
 .e-accordion .e-acrdn-item .e-acrdn-header:hover {
     border: 2px solid gray;
 }
-
 ```
 
-## Customizing selected item of Accordion control
+## Customizing the selected item of the Accordion control
 
-Use the following CSS to customize the selected accordion item.
+### Customizing the selected item background
+
+The following CSS changes the background color of an expanded (`e-active`) or focused (`e-item-focus`) item header.
 
 ```css
-
-.e-accordion .e-acrdn-item.e-select.e-active>.e-acrdn-header,
-.e-accordion .e-acrdn-item.e-select.e-item-focus>.e-acrdn-header {
+.e-accordion .e-acrdn-item.e-select.e-active > .e-acrdn-header,
+.e-accordion .e-acrdn-item.e-select.e-item-focus > .e-acrdn-header {
     background-color: rgb(0, 15, 100) !important;
 }
-
 ```
 
-Use the following CSS to customize the selected accordion item text.
+### Customizing the selected item text
+
+The following CSS changes the text color of the expanded or focused item header.
 
 ```css
-
-.e-accordion .e-acrdn-item.e-select.e-active>.e-acrdn-header .e-acrdn-header-content,
-.e-accordion .e-acrdn-item.e-select.e-item-focus>.e-acrdn-header .e-acrdn-header-content {
+.e-accordion .e-acrdn-item.e-select.e-active > .e-acrdn-header .e-acrdn-header-content,
+.e-accordion .e-acrdn-item.e-select.e-item-focus > .e-acrdn-header .e-acrdn-header-content {
     color: #2fa1ff !important;
 }
-
 ```

@@ -50,19 +50,19 @@ This provides assistive technologies with information about the widget for scree
 
 * **Aria-selected** : attribute indicates the currently selected date of the Calendar component.
 
-* **Aria-disabled** : attribute indicates the disabled state of this Calendar component.
+* **Aria-disabled** : attribute indicates the disabled state of the date within the Calendar component.
 
 * **Aria-activedescendant** : attribute helps in managing the current active child of the Calendar component.
 
-* **Role** : attributes gives assistive technologies information about how to handle each element in a widget.
+* **Role** : provides assistive technologies with information about how to handle each element in a widget.
 
-* **Grid-cell** : attributes define the individual cell that can be focusable and selectable.
+* **Grid-cell** : defines the individual cell that can be focusable and selectable.
 
 ## Keyboard Interaction
 
-You can use the following keys to interact with the Calendar. The component implements the keyboard navigation support by following the [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices)
+You can use the following keys to interact with the Calendar. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/)
 
-It supports the below list of shortcut keys.
+The following shortcut keys are supported.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -81,6 +81,7 @@ It supports the below list of shortcut keys.
 | <kbd>Control + Down Arrow</kbd>  | Moves out from the depth level view like decade-year, year-month |
 | <kbd>Control + Home</kbd>  | Focus the starting date in the current year. |
 | <kbd>Control + End</kbd>  | Focus the ending date in the current year. |
+| <kbd>Esc</kbd>  | Close the Calendar popup. |
 
 > To focus the Calendar component use the `alt+t` keys.
 

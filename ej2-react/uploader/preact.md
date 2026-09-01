@@ -44,7 +44,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —      
 ```
 
-2\. Choose `JavaScript` as the framework variant to build this Preact project using JavaScript and React.
+2\. Choose `JavaScript` as the framework variant to build this Preact project using JavaScript.
 
 ```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
@@ -73,7 +73,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 —
 ```
 
-5\. Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
+4\. Upon completing the aforementioned steps to create `my-project`, run the following command to jump into the project directory:
 
 ```bash
 cd my-project

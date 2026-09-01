@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to maintain the state persistence in React Query Builder UI
+# How to persist state in React Query Builder UI
 
-State persistence automatically saves the Query Builder's configuration in the browser's local storage, preserving the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder#rule) object across page refreshes and navigation. Enable this feature by setting [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/state-persistence) to true. This is particularly useful for long-form queries or multi-step workflows where users should not lose their progress.
+State persistence automatically saves the Query Builder's configuration in the browser's local storage, preserving the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder#rule) object across page refreshes and navigation. Enable this feature by setting the [`enablePersistence`](https://ej2.syncfusion.com/react/documentation/api/query-builder#enablepersistence) property to `true` (default: `false`). This is particularly useful for long-form queries or multi-step workflows where users should not lose their progress.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to embed other components in Toolbar
+# How to render other components in Toolbar using template
 
-You can render other components inside Toolbar using React **template**. Through this, we can add content as other components directly with all functionalities to our Toolbar. Follow the below guidelines for using the other components as template in Toolbar.
+You can render other components inside the Toolbar using a React `template`. This allows you to add other components directly, with all their functionality, to the Toolbar. Follow the guidelines below for using other components as a template in the Toolbar. For general `template` configuration, refer to [template configuration](../template-configuration.md).
 
-* Declare a template within the function returns jsx element. If the template does not need arguments no need to pass the properties.
+1. Declare a template within a function that returns a JSX element. The template can receive the item's data object as an argument (e.g., `props` containing the toolbar item). If the template does not need arguments, there is no need to pass any properties.
 
-* Assign the function as value for the template property.
+2. Assign the function as the value for the `template` property, for example `<ItemDirective template={contentTemplate} />`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to validate images on drop in React File Upload
 
-Restrict file uploads to image types only by setting **image/** to the [allowedExtensions](https://ej2.syncfusion.com/react/documentation/api/uploader/#allowedextensions) property.
+Restrict file uploads to image types only by setting `image/*` to the [allowedExtensions](https://ej2.syncfusion.com/react/documentation/api/uploader#allowedextensions) property. For example, to allow PNG, JPG, BMP, GIF, and TIFF during the initial selection:
 
-The allowedExtensions property works with the browse button but does not validate files during drag-and-drop operations. Handle drag-and-drop validation manually using the `selected` event to filter file types at the client level.
+The `allowedExtensions` property works with the browse button but does not validate files during drag-and-drop operations. Handle drag-and-drop validation manually using the [selected](https://ej2.syncfusion.com/react/documentation/api/uploader#selected) event to filter file types at the client level. Inside the handler, inspect each entry in `args.filesData` (read `type` for MIME and `name` for extension) and assign the filtered list to `args.modifiedFilesData`.
 
 The following example validates image files (PNG, JPG, BMP, GIF, and TIFF) during both browse and drag-and-drop interactions:
 

@@ -14,7 +14,7 @@ Templates enable you to define customized headers and custom user interface elem
 
 ## Header Template
 
-Customize the header section to create personalized user interfaces for managing rules and groups, including custom AND/OR and NOT condition controls. Implement header templates by creating a React component and assigning it when the `actionBegin` event fires with `requestType` as "header-template-create".
+Customize the header section to create personalized user interfaces for managing rules and groups, including custom AND/OR and NOT condition controls. Implement header templates by creating a React component and assigning it to the [`headerTemplate`](https://ej2.syncfusion.com/react/documentation/api/query-builder#headertemplate) property on `QueryBuilderComponent`. The template function receives the current header `props` (group state, condition, lock status, and NOT flag) and must return a React node.
 
 The following example demonstrates a custom header using dropdown, split button, and button components:
 {% tabs %}
@@ -36,7 +36,7 @@ The following example demonstrates a custom header using dropdown, split button,
 
 ## Column Template
 
-Replace the default input widgets with custom components for specific columns. Implement templates by defining the following functions:
+Replace the default input widgets with custom components for specific columns. Implement templates by defining the following functions on the column's `template` object:
 
 * `create`: Instantiate the custom component.
 * `write`: Attach event handlers to the custom component.
@@ -55,9 +55,9 @@ The following example replaces the PaymentMode column input with a custom dropdo
 
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs21" %}
 
-### Using Template
+### Using a Separate Template Component
 
-Create customized input widgets by implementing templates as React components. This approach provides maximum flexibility for rendering specialized controls based on your application requirements.
+When the custom editor requires external state, context, or other dependencies, define the template as a standalone React component file and instantiate it from inside `write`. This approach provides maximum flexibility for rendering specialized controls, sharing templates across columns, and authoring richer UI based on your application requirements.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -84,7 +84,7 @@ Create customized input widgets by implementing templates as React components. T
 
 ## Rule Template
 
-Rule Template allows to define your own user interface for columns. To implement [`ruleTemplate`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#ruletemplate), you can create the user interface as `React` component and assign the values through `actionBegin` event.
+Rule Template allows you to define your own user interface for columns. To implement [`ruleTemplate`](https://ej2.syncfusion.com/react/documentation/api/query-builder/columnsModel#ruletemplate), create the UI as a React component and assign the field values through the `actionBegin` event when `requestType` is `'template-initialize'`.
 
 In the following sample, dropdown and slider are used as the custom component and applied `greaterthanorequal` operator to `Age` column.
 

@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to open a dialog on Context Menu click in React
+# How to open a Dialog on Context Menu click in React
 
-This section explains how to open a dialog when a ContextMenu item is clicked. This integration is commonly used for modal workflows, form interactions, and confirmation dialogs. The functionality is achieved by handling the dialog opening logic in the [`select`](https://ej2.syncfusion.com/react/documentation/api/context-menu/#select) event of the ContextMenu component.
+This section explains how to open a Dialog when a ContextMenu item is clicked. This integration is commonly used for modal forms and confirmations. The functionality is achieved by handling the Dialog opening logic in the [`select`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#select) event of the ContextMenu component.
 
-When a ContextMenu item is selected, the `select` event provides access to the clicked item's details, allowing you to conditionally open dialogs based on the selected menu option. This pattern is particularly useful for actions that require additional user input or confirmation before execution.
+When a ContextMenu item is selected, the `select` event provides access to the clicked item's details, enabling conditional Dialog opening based on the selected menu option.
 
-In the following sample, a Dialog will open when clicking the `Save As...` menu item:
+In the following sample, a Dialog opens when the user clicks the **Save As...** menu item. The Dialog displays the content "This file can be saved as PDF" and a Submit button that closes it.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,4 +25,5 @@ In the following sample, a Dialog will open when clicking the `Save As...` menu 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/context-menu/dialog-open-cs1" %}
+{% previewsample "page.domainurl/code-snippet/context-menu/dialog-open-cs1" %}
+

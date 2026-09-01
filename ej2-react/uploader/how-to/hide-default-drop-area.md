@@ -12,9 +12,13 @@ domainurl: ##DomainURL##
 
 Hide the default drag-and-drop area by overriding the corresponding Uploader styles. This is useful when you want to create a custom drop area or use the Uploader with alternative UI patterns. Override the following styles to hide the default drop area:
 
-    * .e-upload.e-control
-    * .e-upload .e-file-select
-    * .e-upload .e-file-drop
+```css
+.e-upload.e-control,
+.e-upload .e-file-select,
+.e-upload .e-file-drop {
+    display: none;
+}
+```
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

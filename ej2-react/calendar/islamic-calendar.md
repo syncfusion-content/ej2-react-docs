@@ -10,11 +10,17 @@ domainurl: ##DomainURL##
 
 # Islamic Calendar in React Calendar
 
-In addition to the Gregorian calendar, the Calendar control supports the Islamic (Hijri) calendar. The Islamic calendar is a `lunar calendar` consisting of 12 months in a year of 354 or 355 days. To learn more, refer to this [Wikipedia article](https://en.wikipedia.org/wiki/Islamic_calendar).
+In addition to the Gregorian calendar, the Calendar control supports the Islamic (Hijri) calendar. An Islamic year has 354 or 355 days across 12 months in a `lunar` cycle. To learn more, refer to the [Islamic calendar](https://en.wikipedia.org/wiki/Islamic_calendar).
 
-The Calendar supports Gregorian features such as min/max date, week numbers, start day of the week, multi selection, RTL, start/depth views, localization, and date highlighting/customization.
+The Calendar supports Gregorian features such as `min`/`max` date, week numbers, first day of the week, multi-selection, RTL, `start`/`depth` views, localization, and date highlighting/customization in Islamic mode.
 
-By default, the calendar uses **Gregorian** mode. Enable Islamic mode by setting the `calendarMode` property to `Islamic` and injecting the `Islamic` module into the Calendar using the `Inject` directive from `@syncfusion/ej2-react-calendars` as shown below.
+By default, the calendar uses **Gregorian** mode. Enable Islamic mode by setting the `calendarMode` property to `Islamic` and injecting the `Islamic` module using the `Inject` directive from `@syncfusion/ej2-react-calendars`.
+
+**API**
+
+| Property | Type | Default | Description |
+| --- | --- | --- | --- |
+| `calendarMode` | `CalendarMode` (`Gregorian` \| `Islamic`) | `Gregorian` | Switches the Calendar between Gregorian and Islamic modes. |
 
 ```js
 import { Islamic } from '@syncfusion/ej2-react-calendars';
