@@ -196,7 +196,7 @@ Collection changes can be prevented by setting the `cancel` property of [`IColle
 
 ## Mouse Events
 
-The diagram component provides mouse interaction events that trigger when users hover over or move the mouse cursor in relation to node surfaces.
+The React Diagram component provides mouse interaction events that trigger when users hover over or move the mouse cursor in relation to node surfaces.
 
 ### Mouse Enter Event
 

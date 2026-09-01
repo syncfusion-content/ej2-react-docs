@@ -96,7 +96,7 @@ The following code example illustrates how to customize the phase at runtime.
 
 #### Phase Header Editing
 
-The diagram component provides support for editing phase headers at runtime through double-click interaction. Double-clicking the header label enables inline editing functionality, allowing users to modify phase titles directly within the diagram.
+The React Diagram component provides support for editing phase headers at runtime through double-click interaction. Double-clicking the header label enables inline editing functionality, allowing users to modify phase titles directly within the diagram.
 
 The following image illustrates the phase header editing process:
 

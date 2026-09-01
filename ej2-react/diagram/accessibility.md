@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Diagram
 
-The Diagram component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, which provide information about elements in a document for assistive technologies such as screen readers.
+The React Diagram component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, which provide information about elements in a document for assistive technologies such as screen readers.
 
-The following table outlines accessibility compliance for the Diagram component:
+The following table outlines accessibility compliance for the React Diagram component:
 
 | Accessibility Criteria                                                              | Compatibility                                                                        |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -40,16 +40,16 @@ The following table outlines accessibility compliance for the Diagram component:
 
 ## WAI-ARIA Attributes
 
-The Diagram component follows [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) patterns to meet accessibility requirements. The following ARIA attributes are used in the Diagram component:
+The React Diagram component follows [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) patterns to meet accessibility requirements. The following ARIA attributes are used in the React Diagram component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `aria-label` | Provides an accessible name for the Diagram Objects. |
 
-The Diagram component provides WAI-ARIA support by default. No additional configuration is required for assistive technologies to receive the accessible names provided by the component’s aria-label attributes.
+The React Diagram component provides WAI-ARIA support by default. No additional configuration is required for assistive technologies to receive the accessible names provided by the component’s aria-label attributes.
 
 ## aria-label
-The `aria-label` attribute provides text labels with default descriptions for the following elements in the Diagram component:
+The `aria-label` attribute provides text labels with default descriptions for the following elements in the React Diagram component:
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -106,21 +106,21 @@ The `aria-label` attribute provides text labels with default descriptions for th
 
 ## Screen Reader Support
 
-The Diagram component supports screen readers, and its information is properly conveyed by screen readers based on ARIA attributes and content structure.
+The React Diagram component supports screen readers, and its information is properly conveyed by screen readers based on ARIA attributes and content structure.
 
 ## Mobile Device Support
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component is designed to be user-friendly and accessible on mobile devices, including for users with disabilities. The component is responsive, adapts to various screen sizes and orientations, and provides touch-friendly interactions.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React Diagram component is designed to be user-friendly and accessible on mobile devices, including for users with disabilities. The component is responsive, adapts to various screen sizes and orientations, and provides touch-friendly interactions.
 
 
 
 ## Keyboard Navigation Support
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component supports keyboard navigation, allowing users who rely on assistive technologies to navigate and interact with the component effectively.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React Diagram component supports keyboard navigation, allowing users who rely on assistive technologies to navigate and interact with the component effectively.
 
 ## Keyboard Interaction
 
-The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) guidelines, making it accessible for users who rely on keyboard navigation. Keyboard shortcuts are enabled by default in the Diagram component and require no additional configuration. The following keyboard shortcuts are supported:
+The React Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) guidelines, making it accessible for users who rely on keyboard navigation. Keyboard shortcuts are enabled by default in the React Diagram component and require no additional configuration. The following keyboard shortcuts are supported:
 
 **Selection and Clipboard Operations**
 
@@ -159,9 +159,9 @@ The Diagram component follows [keyboard interaction](https://www.w3.org/WAI/WCAG
 
 ## Ensuring Accessibility
 
-The Diagram component's accessibility levels are validated through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Diagram component's accessibility levels are validated through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Diagram component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/diagram.html) in a new window to evaluate the accessibility of the Diagram component with accessibility tools.
+The accessibility compliance of the React Diagram component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/diagram.html) in a new window to evaluate the accessibility of the React Diagram component with accessibility tools.
 
 ## See also
 

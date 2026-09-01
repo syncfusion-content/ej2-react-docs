@@ -25,7 +25,7 @@ This section provides a step-by-step guide for setting up a Next.js application 
 | Node.js | 18.18.0 or a later LTS version |
 | Operating system | Windows, macOS, or Linux |
 
-N> For the full React-version compatibility matrix with the Syncfusion® Diagram package, refer to the [React supported versions](./getting-started.md#react-supported-versions) section in the main getting-started guide.
+N> For the full React-version compatibility matrix with the Syncfusion® React Diagram package, refer to the [React supported versions](./getting-started.md#react-supported-versions) section in the main getting-started guide.
 
 N> Run `npm ls react` to check the React version installed in the project.
 
@@ -35,10 +35,10 @@ This guide uses the Next.js App Router with TypeScript and a `src` directory.
 
 The main files used in this guide are:
 
-* `src/app/page.tsx` — Defines the page that renders the Diagram component (Next.js App Router convention).
+* `src/app/page.tsx` — Defines the page that renders the React Diagram component (Next.js App Router convention).
 * `src/app/globals.css` — Contains the Syncfusion® theme reference.
 
-N> The Diagram component depends on browser APIs. Therefore, the page that renders it must be a Client Component and include the `'use client';` directive.
+N> The React Diagram component depends on browser APIs. Therefore, the page that renders it must be a Client Component and include the `'use client';` directive.
 
 ## Step 1: Create a Next.js application
 
@@ -108,7 +108,7 @@ N> A Syncfusion® license key is not required for local development. However, a 
 
 ## Step 3: Add the required styles
 
-The Diagram component needs Syncfusion® theme styles to display correctly. Syncfusion® theme packages include ready-to-use styles for supported components.
+The React Diagram component needs Syncfusion® theme styles to display correctly. Syncfusion® theme packages include ready-to-use styles for supported components.
 
 Install the Tailwind 3 theme package using the following command:
 
@@ -141,7 +141,7 @@ N> If you created the project without the `--src-dir` option, `globals.css` live
 
 N> When Tailwind CSS is enabled, place the Syncfusion theme import above the Tailwind directives (`@tailwind base;`, `@tailwind components;`, `@tailwind utilities;`) so that Tailwind utility classes take precedence over the theme styles.
 
-## Step 4: Add the Diagram component
+## Step 4: Add the React Diagram component
 
 Import `DiagramComponent` from `@syncfusion/ej2-react-diagrams` and add it to the page.
 
@@ -163,9 +163,9 @@ export default function Home() {
 }
 ```
 
-At this stage, the Diagram component renders an empty canvas. The next step replaces this code with a complete flowchart example.
+At this stage, the React Diagram component renders an empty canvas. The next step replaces this code with a complete flowchart example.
 
-N> The Diagram component must have a valid height. If the height is not set, the Diagram canvas may not be visible.
+N> The React Diagram component must have a valid height. If the height is not set, the React Diagram canvas may not be visible.
 
 N> The `id` passed to `DiagramComponent` must be unique on the page.
 
@@ -310,7 +310,7 @@ N> To create a production build, run `npm run build` (or `yarn build`). The gene
 
 ## Next steps
 
-To explore the Diagram component in more depth, refer to the following topics:
+To explore the React Diagram component in more depth, refer to the following topics:
 
 * [Nodes](https://ej2.syncfusion.com/react/documentation/diagram/nodes)
 * [Connectors](https://ej2.syncfusion.com/react/documentation/diagram/connectors)

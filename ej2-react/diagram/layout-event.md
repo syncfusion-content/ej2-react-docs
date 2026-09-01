@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 # Layout Events in React Diagram
 Layout events in the React Diagram component provide developers with hooks to respond to various stages of automatic layout processing. These events are particularly useful when working with hierarchical data structures and need to customize behavior during layout rendering, data loading, or node expansion/collapse operations.
 
-The diagram component supports several layout-specific events that fire during different phases of the layout life cycle, enabling fine-grained control over layout behavior and user interactions.
+The React Diagram component supports several layout-specific events that fire during different phases of the layout life cycle, enabling fine-grained control over layout behavior and user interactions.
 
 N> **Prerequisite:** These layout events require a layout (such as `HierarchicalTree`, `OrganizationalChart`, or `ComplexHierarchicalTree`) to be configured on the diagram. Without a configured layout, the events will not fire.
 

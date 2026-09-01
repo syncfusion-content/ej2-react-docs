@@ -76,7 +76,7 @@ The [`vector1`](https://helpej2.syncfusion.com/react/documentation/api/diagram/b
 
 ### Avoid Overlapping with Bezier
 
-By default, if no segments are explicitly defined for a Bezier connector, the Diagram component automatically generates segments. This default routing logic is designed to prevent the connector from overlapping its connected source and target nodes, ensuring a clean and readable layout.
+By default, if no segments are explicitly defined for a Bezier connector, the React Diagram component automatically generates segments. This default routing logic is designed to prevent the connector from overlapping its connected source and target nodes, ensuring a clean and readable layout.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

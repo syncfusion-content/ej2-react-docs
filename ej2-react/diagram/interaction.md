@@ -71,7 +71,7 @@ let nodes = [
     },
   }
 ]
-// initialize Diagram component
+// initialize React Diagram component
 function App() {
   return (
     <DiagramComponent
@@ -119,7 +119,7 @@ let connectors = [
     targetPoint: {x: 250, y:250},
   }
 ];
-// initialize Diagram component
+// initialize React Diagram component
 function App() {
   return (
     <DiagramComponent
@@ -194,7 +194,7 @@ let nodes: NodeModel[] = [
     },
   },
 ];
-// initialize Diagram component
+// initialize React Diagram component
 function App() {
   return (
     <DiagramComponent
@@ -338,7 +338,7 @@ Bezier segments are annotated with two thumbs representing the control points. T
 
 ## Restrict Interaction in Negative Axis Area
 
-The Diagram component includes a built-in option to restrict user interactions within the negative axis region—areas defined by negative X or Y coordinates. By enabling the `RestrictNegativeAxisDragDrop` constraint, the following interactions are prevented:
+The React Diagram component includes a built-in option to restrict user interactions within the negative axis region—areas defined by negative X or Y coordinates. By enabling the `RestrictNegativeAxisDragDrop` constraint, the following interactions are prevented:
 
 * **Dragging**: Diagram elements cannot be dragged into areas with negative coordinates.
 * **Resizing**: The size of diagram objects cannot be adjusted to extend into the negative axis.
@@ -414,7 +414,7 @@ For more information, refer to the [`fixed user handle events`](./user-handle#fi
 
 ## Determining mouse button clicks
 
-The diagram component can determine which mouse button was clicked. For example, when the right mouse button is clicked, the click event will specify that the right button was clicked. This is handled through the mouse [`click`](https://ej2.syncfusion.com/react/documentation/api/diagram#click) event, which provides details about whether the left or right button was clicked.
+The React Diagram component can determine which mouse button was clicked. For example, when the right mouse button is clicked, the click event will specify that the right button was clicked. This is handled through the mouse [`click`](https://ej2.syncfusion.com/react/documentation/api/diagram#click) event, which provides details about whether the left or right button was clicked.
 
 | Notification | Description |
 |----------------|--------------|
@@ -426,7 +426,7 @@ The diagram component can determine which mouse button was clicked. For example,
 import { DiagramComponent, IClickEventArgs } from '@syncfusion/ej2-react-diagrams';
 
 let diagramInstance: DiagramComponent;
-// initialize Diagram component
+// initialize React Diagram component
 function App() {
   return (
     <DiagramComponent
@@ -473,7 +473,7 @@ let nodes: NodeModel[] = [
   },
 ];
 
-// initialize Diagram component
+// initialize React Diagram component
 function App() {
   return (
     <DiagramComponent
@@ -508,7 +508,7 @@ When a large diagram is loaded, only certain portion of the diagram is visible. 
 
 ## Keyboard
 
-Diagram provides support to interact with the elements with key gestures. By default, some in-built commands are bound with a relevant set of key combinations.
+React Diagram provides support to interact with the elements with key gestures. By default, some in-built commands are bound with a relevant set of key combinations.
 
 The following table illustrates those commands with the associated key values.
 

@@ -14,7 +14,7 @@ Gridlines are crisscross lines drawn in diagram pages like the lines on traditio
 
 ## Prerequisites
 
-To use gridlines and snapping functionality, ensure that the snapping module is injected into the diagram component.
+To use gridlines and snapping functionality, ensure that the snapping module is injected into the React Diagram component.
 
 The [`snapSettings`](https://helpej2.syncfusion.com/react/documentation/api/diagram#snapsettings) property is used to customize the gridlines and control the snapping behavior in the diagram.
 

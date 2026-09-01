@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Automatic Layout in React Diagram
 
-The Diagram component provides comprehensive support for automatically arranging nodes in the diagram area through various layout algorithms. These automatic layouts help organize complex diagrams by positioning nodes and connectors according to predefined patterns and relationships, eliminating the need for manual positioning. To enable automatic layout in the React Diagram component, configure the `layout` property of the diagram.
+The React Diagram component provides comprehensive support for automatically arranging nodes in the diagram area through various layout algorithms. These automatic layouts help organize complex diagrams by positioning nodes and connectors according to predefined patterns and relationships, eliminating the need for manual positioning. To enable automatic layout in the React Diagram component, configure the `layout` property of the diagram.
 
 ```
 <DiagramComponent id="diagram" layout={{ type: 'HierarchicalTree' }} />
 ```
 
 ## Layout Modes
-The Diagram component supports multiple layout algorithms, each designed for specific use cases and data structures. Each layout mode provides unique positioning strategies and configuration options.
+The React Diagram component supports multiple layout algorithms, each designed for specific use cases and data structures. Each layout mode provides unique positioning strategies and configuration options.
 
 * [Hierarchical layout](./hierarchical-layout)
 * [Complex hierarchical tree layout](./complex-layout)

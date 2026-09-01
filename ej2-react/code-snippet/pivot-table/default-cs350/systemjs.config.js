@@ -6,13 +6,13 @@ System.config({
         moduleResolution: "node",
         emitDecoratorMetadata: true,
         experimentalDecorators: true,
-        jsx: "react"
+        "jsx": "react"
     },
     paths: {
         "syncfusion:": "https://cdn.syncfusion.com/ej2/34.1.29/"
     },
     map: {
-        app: "app",
+        app: 'app',
         ts: "https://unpkg.com/plugin-typescript@4.0.10/lib/plugin.js",
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
         d3: "https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js",
@@ -25,6 +25,7 @@ System.config({
         "@syncfusion/ej2-excel-export": "syncfusion:ej2-excel-export/dist/ej2-excel-export.umd.min.js",
         "@syncfusion/ej2-file-utils": "syncfusion:ej2-file-utils/dist/ej2-file-utils.umd.min.js",
         "@syncfusion/ej2-grids": "syncfusion:ej2-grids/dist/ej2-grids.umd.min.js",
+        "@syncfusion/ej2-charts": "syncfusion:ej2-charts/dist/ej2-charts.umd.min.js",
         "@syncfusion/ej2-inputs": "syncfusion:ej2-inputs/dist/ej2-inputs.umd.min.js",
         "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
         "@syncfusion/ej2-navigations": "syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js",
@@ -38,16 +39,19 @@ System.config({
         "@syncfusion/ej2-react-buttons": "syncfusion:ej2-react-buttons/dist/ej2-react-buttons.umd.min.js",
         "@syncfusion/ej2-react-dropdowns": "syncfusion:ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js",
         "@syncfusion/ej2-react-pivotview": "syncfusion:ej2-react-pivotview/dist/ej2-react-pivotview.umd.min.js",
-        react: "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
+        "plugin-json": "https://cdnjs.cloudflare.com/ajax/libs/systemjs-plugin-json/0.3.0/json.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
-        "react-dom/client": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"
+        react: "https://unpkg.com/react@18.2.0/umd/react.production.min.js"
+    },
+    meta: {
+        '*.json': { loader: 'plugin-json' },
+        typescript: {
+            "exports": "ts"
+        }
     },
     packages: {
-        app: {
-            main: "index",
-            defaultExtension: "tsx"
-        }
+        app: { main: 'index', defaultExtension: 'tsx' }
     }
 });
 
-System.import("app");
+System.import('app');

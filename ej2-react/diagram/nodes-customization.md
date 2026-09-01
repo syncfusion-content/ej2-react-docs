@@ -193,7 +193,7 @@ let node: NodeModel[] = [{
     width: 100,
     height: 100,
 }];
-// initialize Diagram component
+// initialize React Diagram component
 function App() {
   return (
     <DiagramComponent

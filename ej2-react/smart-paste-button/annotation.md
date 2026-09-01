@@ -11,19 +11,24 @@ domainurl: ##DomainURL##
 
 # Annotation in React Smart Paste Button
 
-The `data-smartpaste-description` attribute provides a way to customize the behavior of the Smart Paste Button. By using this attribute, pasted content is handled based on specific requirements. This customization can include setting content validation rules, formatting instructions, and defining acceptable content types.
+The `data-smartpaste-description` attribute allows you to customize the behavior of the React Smart Paste Button by providing contextual instructions for individual form fields. These instructions help the Smart Paste Button understand how pasted content should be interpreted, organized, and populated within the form. By defining field-specific expectations, you can improve the accuracy and consistency of AI-assisted form filling.
 
-## Purpose of data-smartpaste-description:
+## Purpose of data-smartpaste-description
 
-* This is a custom data attribute that can be added to HTML elements. It provides metadata about the expected content for those elements when used in conjunction with the Smart Paste Button.
+* This custom data attribute can be added to form elements to provide contextual information about the expected content.
 
-* The main purpose is to control and enhance the paste operation by providing contextual information about what kind of data is expected. This can include formats like plain text, email, phone numbers, or even more complex validation patterns.
+* It helps the Smart Paste Button identify how pasted information should be processed and mapped to the corresponding form fields.
 
-* It helps maintain data consistency, integrity, and formatting in forms, ensuring that users paste content that adheres to predefined standards.
+* You can use it to describe formatting requirements, content structure, naming conventions, and other field-specific instructions.
 
-## How to use Annotations for customizing the paste behavior
+* It improves the accuracy of Smart Paste operations by providing additional context for interpreting pasted content.
 
-Add the **data-smartpaste-description** attribute to the form fields where the smart paste feature should be applied. Specify the expected content type as the value of the attribute.
+* It helps maintain consistency and data quality across forms by ensuring that information is organized according to the specified guidelines.
+
+## Use Annotations to Customize Paste Behavior
+
+Add the **data-smartpaste-description** attribute to the form fields where Smart Paste should apply custom interpretation or formatting rules. Specify the instruction, expected format, or content requirement as the attribute value. During the paste operation, the Smart Paste Button uses this information to better understand the expected input and populate fields more accurately.
+
 
 ```html
 

@@ -2,7 +2,7 @@
 layout: post
 title: Microsoft SQL Server in React Diagram | Syncfusion®
 description: Connect the React Diagram to Microsoft SQL Server through an ASP.NET Core Web API to render an organizational chart from a relational database.
-control: diagram
+control: Diagram
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -45,7 +45,7 @@ To store and manage diagram data, Microsoft SQL Server must be installed and con
 
 ### Installing Microsoft SQL Server
 
-Microsoft SQL Server provides the relational database engine used to store organizational chart data required by the diagram component.
+Microsoft SQL Server provides the relational database engine used to store organizational chart data required by the React Diagram component.
 
 Follow these steps to install SQL Server:
 
@@ -437,7 +437,7 @@ namespace React_Diagram_MSSQL.Server.Data
 
 ### Step 5: Create the API controller
 
-The API controller exposes layout‑node data as an HTTP endpoint that can be consumed by the diagram component.
+The API controller exposes layout‑node data as an HTTP endpoint that can be consumed by the React Diagram component.
 
 **Instructions:**
 
@@ -626,7 +626,7 @@ npm install @syncfusion/ej2-react-diagrams --save
 ```
 
 After installation, the necessary CSS files are available in the **node_modules** directory.
-Add the required CSS references to the **src/index.css** file to apply styling to the Diagram component.
+Add the required CSS references to the **src/index.css** file to apply styling to the React Diagram component.
 
 ```
 @import "../node_modules/@syncfusion/ej2-diagrams/styles/bootstrap5.3.css";
@@ -665,7 +665,7 @@ const App: React.FC = () => {
 
 export default App;
 ```
-This code initializes the Diagram component with default dimensions.
+This code initializes the React Diagram component with default dimensions.
 
 ### Step 4: Fetch data from Web API and bind it to the Diagram
 
@@ -824,11 +824,11 @@ npm run dev
 
 **Step 3: Access the application:**
 
-Open a web browser and navigate to the URL shown in the terminal (by default, `http://localhost:5173/` for Vite) to view the Diagram.
+Open a web browser and navigate to the URL shown in the terminal (by default, `http://localhost:5173/` for Vite) to view the React Diagram.
 
 ### Troubleshooting
 
-If the diagram does not render or data fails to load, check the following common issues:
+If the React Diagram does not render or data fails to load, check the following common issues:
 
 | Problem | Likely Cause | Resolution |
 |---------|--------------|------------|

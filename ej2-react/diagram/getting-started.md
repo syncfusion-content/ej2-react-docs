@@ -78,7 +78,7 @@ When you run the `sf` command, the CLI prompts you to select the required projec
 {% endhighlight %}
 {% endtabs %}
 
-The above selections generate a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Diagram` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+The above selections generate a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `React Diagram` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
 
@@ -184,7 +184,7 @@ N> A Syncfusion® license key is not required for local development. However, a 
 
 ## Step 3: Add the required styles
 
-The Diagram component needs Syncfusion® theme styles to display correctly. Syncfusion® theme packages include ready-to-use styles for supported components.
+The React Diagram component needs Syncfusion® theme styles to display correctly. Syncfusion® theme packages include ready-to-use styles for supported components.
 
 Install the Tailwind 3 theme package using the following command:
 
@@ -202,11 +202,11 @@ For the list of available themes, refer to the [Themes](https://ej2.syncfusion.c
 
 N> Syncfusion® provides multiple built-in themes. If the application uses a different theme, replace the `@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css` reference with the corresponding theme path, such as `@syncfusion/ej2-material3-theme/styles/diagram/index.css`.
 
-N> Ensure that **App.css** is imported in the **src/App.tsx** file so that the theme styles are applied to the Diagram component.
+N> Ensure that **App.css** is imported in the **src/App.tsx** file so that the theme styles are applied to the React Diagram component.
 
 N> The `@import` path depth (`../node_modules/...`) assumes `App.css` lives in `src/`. If `App.css` is at the project root, use `./node_modules/...` instead.
 
-## Step 4: Add the Diagram component
+## Step 4: Add the React Diagram component
 
 Import `DiagramComponent` from `@syncfusion/ej2-react-diagrams` and add it to the React component.
 
@@ -229,9 +229,9 @@ function App() {
 export default App;
 ```
 
-At this stage, the Diagram component renders an empty canvas. The next step replaces this code with a more complete example.
+At this stage, the React Diagram component renders an empty canvas. The next step replaces this code with a more complete example.
 
-N> The Diagram component must have a valid height. If the height is not set, the Diagram canvas may not be visible.
+N> The React Diagram component must have a valid height. If the height is not set, the Diagram canvas may not be visible.
 
 ## Step 5: Create your first Diagram with nodes and connectors
 
@@ -398,7 +398,7 @@ N> To build the application for production, run `npm run build`. The generated o
 
 ## Next steps
 
-To explore the Diagram component in more depth, refer to the following topics:
+To explore the React Diagram component in more depth, refer to the following topics:
 
 * [Nodes](https://ej2.syncfusion.com/react/documentation/diagram/nodes)
 * [Connectors](https://ej2.syncfusion.com/react/documentation/diagram/connectors)

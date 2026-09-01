@@ -69,7 +69,7 @@ The following code shows how to enable port dragging.
 
 ## Automatic Port Creation
 
-The Diagram component supports dynamic port creation through user interaction. Users can create ports on nodes or connectors by clicking and dragging while holding the Control (Ctrl) key. This feature is disabled by default and requires enabling the `DiagramConstraints.AutomaticPortCreation` constraint on the diagram's `constraints` property.
+The React Diagram component supports dynamic port creation through user interaction. Users can create ports on nodes or connectors by clicking and dragging while holding the Control (Ctrl) key. This feature is disabled by default and requires enabling the `DiagramConstraints.AutomaticPortCreation` constraint on the diagram's `constraints` property.
 
 Ports can also be removed using the same Ctrl+Click interaction. Removal is blocked for ports that are currently connected to a connector, preventing accidental disconnection.
 

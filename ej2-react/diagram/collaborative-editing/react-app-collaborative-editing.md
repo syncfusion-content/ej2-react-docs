@@ -99,7 +99,7 @@ const DiagramComponent = () => {
 
   return (
     <div>
-      {/* Diagram component will be added here */}
+      {/* React Diagram component will be added here */}
     </div>
   );
 };

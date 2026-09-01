@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD010 -->
 
-The commands in diagram control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
+The commands in React Diagram control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
 
 * Alignment commands
 * Distribute commands
@@ -301,7 +301,7 @@ import {
     DiagramComponent,
 } from "@syncfusion/ej2-react-diagrams";
 let diagramInstance: DiagramComponent;
-//Initializes the Diagram component
+//Initializes the React Diagram component
 function App() {
   return (
     <DiagramComponent
@@ -439,7 +439,7 @@ The following code illustrates how to execute `FitToPage` command.
 
 ## Command Manager
 
-The Diagram provides support for mapping or binding command execution to specific key gestures. It includes built-in commands and allows for the definition of custom commands through the [`CommandManager`](https://ej2.syncfusion.com/react/documentation/api/diagram/commandManager#commandManager). Custom commands are executed when the specified key gesture is recognized.
+The React Diagram provides support for mapping or binding command execution to specific key gestures. It includes built-in commands and allows for the definition of custom commands through the [`CommandManager`](https://ej2.syncfusion.com/react/documentation/api/React Diagram/commandManager#commandManager). Custom commands are executed when the specified key gesture is recognized.
 
 ### Custom Command
 

@@ -113,7 +113,7 @@ Nodes can be rotated at runtime using the [`rotate`](https://ej2.syncfusion.com/
 
 ## Flip
 
-The diagram component supports node flipping operations to create mirrored images of nodes. The [`flip`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#flip) property controls the flip direction and behavior.
+The React Diagram component supports node flipping operations to create mirrored images of nodes. The [`flip`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#flip) property controls the flip direction and behavior.
 
 ### Flip Directions
 Flip operations create a mirrored image of the original element. The diagram uses the [`FlipDirection`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipDirection) enum to specify the direction, with values `Horizontal`, `Vertical`, and `Both`. The flip types are as follows:

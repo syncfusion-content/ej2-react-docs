@@ -132,7 +132,7 @@ let connectors: ConnectorModel[] = [{
     },
 }];
 let addInfo: Object = { Description: 'Layer1' };
-// initialize Diagram component
+// initialize React Diagram component
 function App() {
   return (
     <DiagramComponent
@@ -155,7 +155,7 @@ function App() {
                     objects: ['node2'],
                 }
             ]}
-      // render initialized Diagram
+      // render initialized React Diagram
     />
   );
 }
@@ -206,7 +206,7 @@ The following code illustrates how to remove a layer.
 
 ## Move Objects
 
-You can move objects from one layer to another dynamically using the [`moveObjects`](https://ej2.syncfusion.com/react/documentation/api/diagram#moveobjects) public method of the diagram control. This can be useful for managing complex diagrams with multiple layers where you need to update the categorization of elements based on user interaction or other dynamic conditions.
+You can move objects from one layer to another dynamically using the [`moveObjects`](https://ej2.syncfusion.com/react/documentation/api/diagram#moveobjects) public method of the React Diagram control. This can be useful for managing complex diagrams with multiple layers where you need to update the categorization of elements based on user interaction or other dynamic conditions.
 
 The following code illustrates how to move objects from one layer to another layer.
 

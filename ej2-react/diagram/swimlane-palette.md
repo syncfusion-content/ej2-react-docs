@@ -14,7 +14,7 @@ The React Diagram component provides comprehensive support for adding swimlane s
 
 ## Add Swimlane to Palette
 
-The diagram component supports adding both swimlane containers and individual phases to the symbol palette. This enables users to drag and drop pre-configured swimlane elements into their diagrams.
+The React Diagram component supports adding both swimlane containers and individual phases to the symbol palette. This enables users to drag and drop pre-configured swimlane elements into their diagrams.
 
 The following example shows how to add preconfigured swimlane and phase shapes to the symbol palette.
 

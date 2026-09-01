@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The React Diagram component supports data binding to populate nodes and connectors from external data sources. This feature enables dynamic diagram creation based on structured data, making it ideal for visualizing organizational charts, flowcharts, and hierarchical data structures.
 
-Data binding in the Diagram component works by mapping data source fields to diagram elements through the `dataSourceSettings` property. The component supports both local JSON data and remote data sources, providing flexibility for various application scenarios.
+Data binding in the React Diagram component works by mapping data source fields to diagram elements through the `dataSourceSettings` property. The component supports both local JSON data and remote data sources, providing flexibility for various application scenarios.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ The data binding feature requires the `DataBinding` module to be registered via 
 
 ## Key Data Binding Properties
 
-The Diagram component exposes several data-related properties that control how data is mapped to diagram elements:
+The React Diagram component exposes several data-related properties that control how data is mapped to diagram elements:
 
 * The [`dataManager`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#datamanager) property is used to define the data source either as a collection of objects or as an instance of `DataManager` that needs to be populated in the diagram.
 
@@ -34,7 +34,7 @@ The Diagram component exposes several data-related properties that control how d
 
 ## Data Binding Types
 
-The Diagram component supports two primary data binding approaches:
+The React Diagram component supports two primary data binding approaches:
 
 1. **Local data binding** - Uses client-side JSON data.
 2. **Remote data binding** - Fetches data from server endpoints using DataManager.
@@ -79,7 +79,7 @@ For comprehensive DataManager information, see the `dataSourceSettings`. The fol
 
 ## CRUD operations with Data Binding
 
-The Diagram component supports Create, Read, Update, and Delete (CRUD) operations, allowing real-time synchronization between the diagram and its data source. This functionality enables users to modify diagram elements and persist changes to the backend.
+The React Diagram component supports Create, Read, Update, and Delete (CRUD) operations, allowing real-time synchronization between the diagram and its data source. This functionality enables users to modify diagram elements and persist changes to the backend.
 
 ### Reading Node and Connector Data Sources
 

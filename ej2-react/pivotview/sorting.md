@@ -309,4 +309,3 @@ The [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/pivotvi
 ## See Also
 
 * [Filtering in React Pivot Table](./filtering)
-* [Value sorting in React Pivot Table](./value-sorting)

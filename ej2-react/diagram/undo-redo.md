@@ -14,9 +14,9 @@ The React Diagram component automatically tracks all user interactions and progr
 
 ## Basic Undo and Redo Operations
 
-The diagram provides built-in support to track changes made through both user interactions and public API calls. These changes can be reversed or restored using keyboard shortcuts or programmatic commands.
+The React Diagram provides built-in support to track changes made through both user interactions and public API calls. These changes can be reversed or restored using keyboard shortcuts or programmatic commands.
 
-N> The UndoRedo module must be injected to access undo/redo features in the diagram component.
+N> The UndoRedo module must be injected to access undo/redo features in the React Diagram component.
 
 ### Keyboard Shortcuts
 
@@ -31,7 +31,7 @@ The [`undo`](https://helpej2.syncfusion.com/react/documentation/api/diagram#undo
 ```ts
 import { DiagramComponent, Inject, UndoRedo } from '@syncfusion/ej2-react-diagrams';
 
-// initialize Diagram component
+// initialize React Diagram component
 let diagramInstance: DiagramComponent;
 function App() {
   return (
@@ -54,7 +54,7 @@ diagramInstance.redo();
 ```
 ### Enabling and Disabling Undo/Redo
 
-Undo/Redo for diagram can be enabled/disabled with the [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramConstraints) property of the diagram component.
+Undo/Redo for diagram can be enabled/disabled with the [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramConstraints) property of the React Diagram component.
 
 ## Advanced History Management
 

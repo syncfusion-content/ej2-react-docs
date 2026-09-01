@@ -17,7 +17,7 @@ An organizational chart is a diagram that displays the hierarchical structure of
 
 This approach is ideal when working with dynamic data from databases, APIs, or when the organizational structure changes frequently. The component automatically generates nodes and connectors based on the provided data structure.
 
-N> When using organizational chart layout with the data source, both HierarchicalTree and DataBinding modules must be injected into the diagram component.
+N> When using organizational chart layout with the data source, both HierarchicalTree and DataBinding modules must be injected into the React Diagram component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

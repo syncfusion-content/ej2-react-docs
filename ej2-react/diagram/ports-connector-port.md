@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Connector Port in React Diagram
 
-Before working with connector ports, ensure the Diagram component is set up with connectors and ports. For details, see [Ports](./ports.md) and [Connectors](./connectors.md).
+Before working with connector ports, ensure the React Diagram component is set up with connectors and ports. For details, see [Ports](./ports.md) and [Connectors](./connectors.md).
 
 Connector ports serve as connection points along connectors, enabling other connectors to attach at specific locations rather than just the endpoints. This guide covers creating connector ports, configuring their alignment and displacement, and establishing port-to-port connections.
 

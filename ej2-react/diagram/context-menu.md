@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 In graphical user interfaces, a context menu appears when you perform a right-click operation, offering users a set of actions relevant to the current context. The React Diagram component provides extensive context menu customization capabilities through the [`contextMenuSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram#contextmenusettings) property.
 
-The Diagram control includes built-in context menu items and allows you to define custom menu items. This flexibility enables you to tailor menus to specific application needs, including creating nested levels of menu items for complex user interactions.
+The React Diagram control includes built-in context menu items and allows you to define custom menu items. This flexibility enables you to tailor menus to specific application needs, including creating nested levels of menu items for complex user interactions.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ N> To use the context menu in the diagram, inject the `DiagramContextMenu` modul
 
 ## Default Context Menu
 
-The Diagram component provides default context menu items for frequently used commands. Use the [`show`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuSettings#show) property to enable or disable the context menu.
+The React Diagram component provides default context menu items for frequently used commands. Use the [`show`](https://ej2.syncfusion.com/react/documentation/api/diagram/contextMenuSettings#show) property to enable or disable the context menu.
 
 The default context menu includes commands such as Cut, Copy, Paste, Undo, Redo, Select All, Delete, and Group/Ungroup.
 
@@ -123,7 +123,7 @@ let nodes = [{
     }
 ];
 
-//Initializes the Diagram component
+//Initializes the React Diagram component
 function App() {
     return (<DiagramComponent id="diagram_contextmenu" ref={(diagram) => (diagramInstance = diagram)} width={'650px'} height={'350px'} nodes={nodes} 
         contextMenuSettings={{
@@ -163,7 +163,7 @@ root.render(<App />);
 
 ### Customize Context Menu Item Rendering
 
-The Diagram component provides template support for context menu customization. Customize menu item templates before rendering using the [`contextMenuBeforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/diagram#contextmenubeforeitemrender) event, which triggers while rendering each menu item.
+The React Diagram component provides template support for context menu customization. Customize menu item templates before rendering using the [`contextMenuBeforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/diagram#contextmenubeforeitemrender) event, which triggers while rendering each menu item.
 
 The following example renders menu items with shortcut key codes for specific actions. Key codes for cut, copy, and paste actions display in the right corner of menu items by adding a span element in the `contextMenuBeforeItemRender` event:
 

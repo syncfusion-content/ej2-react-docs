@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Label Interaction in React Diagram
 
-The Diagram component allows labels to be interactive through selecting, dragging, rotating, and resizing operations. Label interaction is disabled by default. Enable label interaction using the `constraints` property of the label. You can also control specific interaction types by enabling individual constraints for selecting, dragging, rotating, or resizing. The following code demonstrates how to enable interactive mode.
+The React Diagram component allows labels to be interactive through selecting, dragging, rotating, and resizing operations. Label interaction is disabled by default. Enable label interaction using the `constraints` property of the label. You can also control specific interaction types by enabling individual constraints for selecting, dragging, rotating, or resizing. The following code demonstrates how to enable interactive mode.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,7 +40,7 @@ The [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagr
 
 ## Label Editing
 
-The Diagram component supports editing labels at runtime, both programmatically and interactively. By default, labels are in view mode. Labels can be switched to edit mode using two approaches:
+The React Diagram component supports editing labels at runtime, both programmatically and interactively. By default, labels are in view mode. Labels can be switched to edit mode using two approaches:
 
 ### Programmatic Editing
 By using [`startTextEdit`](https://helpej2.syncfusion.com/react/documentation/api/diagram#starttextedit) method to programmatically enter edit mode for a specific label. Capture the diagram instance via a `ref` so the method can be invoked, as shown below.
@@ -85,7 +85,7 @@ The [`rotationReference`](https://helpej2.syncfusion.com/react/documentation/api
 
 ## Read-only Labels
 
-The Diagram component supports creating read-only labels that cannot be edited by users. Set the read-only constraint in the label's [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#constraints) property. The following code demonstrates how to enable read-only mode.
+The React Diagram component supports creating read-only labels that cannot be edited by users. Set the read-only constraint in the label's [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#constraints) property. The following code demonstrates how to enable read-only mode.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -100,7 +100,7 @@ The Diagram component supports creating read-only labels that cannot be edited b
 
 ## Drag Limits
 
-The diagram control supports defining the [`dragLimit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#draglimit) property for connector labels to restrict dragging within specified boundaries. The drag limit automatically updates the label position to the nearest segment offset when dragging.
+The React Diagram control supports defining the [`dragLimit`](https://helpej2.syncfusion.com/react/documentation/api/diagram/annotationModel#draglimit) property for connector labels to restrict dragging within specified boundaries. The drag limit automatically updates the label position to the nearest segment offset when dragging.
 
 Configure drag limit boundaries using the [`left`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel#left), [`right`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel#right), [`top`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel#top), and [`bottom`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel#bottom) properties of the `dragLimit` object (typed as `MarginModel`). These properties limit connector label dragging based on user-defined values.
 

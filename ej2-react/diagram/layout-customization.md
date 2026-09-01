@@ -16,7 +16,7 @@ To explore all available layout properties, refer to [`Layout Properties`](https
 
 ## Layout Bounds
 
-The diagram supports aligning layouts within custom rectangular areas using layout bounds. This feature constrains the layout to a specific region of the canvas, providing precise control over where the layout appears.
+The React Diagram supports aligning layouts within custom rectangular areas using layout bounds. This feature constrains the layout to a specific region of the canvas, providing precise control over where the layout appears.
 
 Layout bounds define a rectangular area where the entire layout will be positioned. This is particularly useful when integrating diagrams into dashboards or when multiple layouts need to coexist on the same canvas.
 
@@ -171,7 +171,7 @@ This feature is particularly beneficial during expand/collapse operations, where
 
 ## Expand and Collapse
 
-The diagram supports expanding and collapsing subtrees within layouts. The node's isExpanded property controls the visibility of child nodes, allowing users to focus on specific portions of large hierarchical structures.
+The React Diagram supports expanding and collapsing subtrees within layouts. The node's isExpanded property controls the visibility of child nodes, allowing users to focus on specific portions of large hierarchical structures.
 
 This functionality is essential for managing complex organizational charts, decision trees, and other hierarchical data where progressive disclosure improves usability.
 
@@ -271,7 +271,7 @@ The [`orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/s
 
 ## Refresh Layout
 
-The diagram supports refreshing layouts at runtime to reflect structural or data changes. The [`doLayout`](https://ej2.syncfusion.com/react/documentation/api/diagram#dolayout) method recalculates and redraws the entire layout based on current data and configuration.
+The React Diagram supports refreshing layouts at runtime to reflect structural or data changes. The [`doLayout`](https://ej2.syncfusion.com/react/documentation/api/diagram#dolayout) method recalculates and redraws the entire layout based on current data and configuration.
 
 This functionality is essential when nodes are added, removed, or modified programmatically, ensuring the layout remains consistent with the updated structure.
 
