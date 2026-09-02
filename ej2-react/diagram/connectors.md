@@ -28,7 +28,7 @@ N> When setting a Connector's ID, ensure that it does not contain white spaces, 
 
 ## Add connectors through Connectors Collection
 
-The [`sourcePoint`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#sourcepoint) and [`targetPoint`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#targetpoint) properties of connector allow you to define the end points of a connector.
+The [`sourcePoint`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#sourcepoint) and [`targetPoint`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#targetpoint) properties of connector allow you to define the end points of a connector.
 
 The following code example illustrates how to add a connector through connector collection.
 
@@ -45,7 +45,7 @@ The following code example illustrates how to add a connector through connector 
 
 ## Add/Remove Connector at Runtime
 
-Connectors can be added at runtime by using public method, [`add`](https://helpej2.syncfusion.com/react/documentation/api/diagram#add) and can be removed at runtime by using public method, [`remove`](https://helpej2.syncfusion.com/react/documentation/api/diagram#remove).These methods are useful when you need to dynamically modify diagram structure based on user interactions or data changes.
+Connectors can be added at runtime by using public method, [`add`](https://helpej2.syncfusion.com/react/documentation/api/diagram#add) and can be removed at runtime by using public method, [`remove`](https://helpej2.syncfusion.com/react/documentation/api/diagram#remove). These methods are useful when you need to dynamically modify diagram structure based on user interactions or data changes.
 
 The following code example illustrates how to add connector at runtime.
 
@@ -62,7 +62,7 @@ The following code example illustrates how to add connector at runtime.
 
 ## Add Collection of Connectors at Runtime
 
-The collection of connectors can be dynamically added using [`addElements`](https://helpej2.syncfusion.com/react/documentation/api/diagram#addelements) method.Each time an element is added to the diagram canvas, the [`collectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram#collectionchange) event will be triggered.
+The collection of connectors can be dynamically added using [`addElements`](https://helpej2.syncfusion.com/react/documentation/api/diagram#addelements) method. Each time an element is added to the diagram canvas, the [`collectionChange`](https://helpej2.syncfusion.com/react/documentation/api/diagram#collectionchange) event will be triggered.
 
 The following code illustrates how to add connectors collection at runtime.
 
@@ -98,7 +98,7 @@ The following code example illustrates how to add connectors in palette.
 
 Connectors can be interactively drawn by clicking and dragging on the diagram surface. This feature enables users to create connections dynamically during diagram creation or editing.
 
-To draw a shape, you have to activate the drawing tool by setting **DrawOnce** or **ContinuousDraw** to the [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram#tool) property and you need to set the `connector` object by using the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram#drawingobject) property.
+To draw a connector, you have to activate the drawing tool by setting **DrawOnce** or **ContinuousDraw** to the [`tool`](https://helpej2.syncfusion.com/react/documentation/api/diagram#tool) property and you need to set the `connector` object by using the [`drawingObject`](https://helpej2.syncfusion.com/react/documentation/api/diagram#drawingobject) property.
 
 The following code example illustrates how to draw a connector at runtime.
 
@@ -113,13 +113,13 @@ The following code example illustrates how to draw a connector at runtime.
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectordrawTool-cs1" %}
 
- For more information about drawing connectors, refer to [`Draw Connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram#drawingobject).
+ For more information about drawing connectors, refer to [`Draw Connectors`](https://helpej2.syncfusion.com/react/documentation/api/diagram#drawingobject).
 
 ## Update Connector at Runtime
 
 Various connector properties such as `sourcePoint`, `targetPoint`, `style`, `sourcePortID`, `targetPortID`, etc., can be updated at the runtime.
 
-The following code example illustrates how to update a connector's source point, target point, styles properties at runtime.This flexibility allows for dynamic modification of connector appearance and behavior based on application logic or user interactions.
+The following code example illustrates how to update a connector's source point, target point, style properties at runtime. This flexibility allows for dynamic modification of connector appearance and behavior based on application logic or user interactions.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -185,7 +185,7 @@ The following code example illustrates how to connect two nodes.
 
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5ConnectNode-cs1" %}
 
-* When you remove NodeConstraints [`InConnect`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove NodeConstraints [`OutConnect`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) from Default, the node accepts only an incoming connection to dock in it.
+* When you remove NodeConstraints [`InConnect`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove NodeConstraints [`OutConnect`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeConstraints) from Default, the node accepts only an incoming connection to dock in it.
 
 When you remove both InConnect and OutConnect NodeConstraints from Default, the node restricts connectors from establishing connections to it.
 
@@ -225,9 +225,9 @@ root.render(<App />);
 
 ```
 
-## Connections with Ports
+### Connections with Ports
 
-The [`sourcePortID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#sourceportid) and [`targetPortID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#targetportid) properties allow you to create connections between specific points of source and target nodes. This provides more precise control over where connectors attach to nodes.
+The [`sourcePortID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#sourceportid) and [`targetPortID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#targetportid) properties allow you to create connections between specific points of source and target nodes. This provides more precise control over where connectors attach to nodes.
 
 The following code example illustrates how to create port to port connections.
 
@@ -242,7 +242,7 @@ The following code example illustrates how to create port to port connections.
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5Connectorsport-cs1" %}
 
-Similarly, the `sourcePortID` or `targetPortID` can be changed at the runtime by changing the port [`sourcePortID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#sourceportid) or [`targetPortID`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#targetportid).
+Similarly, the `sourcePortID` or `targetPortID` can be changed at runtime by updating the connector's [`sourcePortID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#sourceportid) or [`targetPortID`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#targetportid).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -255,7 +255,7 @@ Similarly, the `sourcePortID` or `targetPortID` can be changed at the runtime by
 
  {% previewsample "page.domainurl/code-snippet/diagram/connectors/es5Connectorsportupdate-cs1" %}
 
-* When you set PortConstraints to [`InConnect`](https://ej2.syncfusion.com/react/documentation/api/diagram/portConstraints), the port accepts only an incoming connection to dock in it. Similarly, when you set PortConstraints to [`OutConnect`](https://ej2.syncfusion.com/react/documentation/api/diagram/portConstraints), the port accepts only an outgoing connection to dock in it.
+* When you set PortConstraints to [`InConnect`](https://helpej2.syncfusion.com/react/documentation/api/diagram/portConstraints), the port accepts only an incoming connection to dock in it. Similarly, when you set PortConstraints to [`OutConnect`](https://helpej2.syncfusion.com/react/documentation/api/diagram/portConstraints), the port accepts only an outgoing connection to dock in it.
 
 * When you set PortConstraints to None, the port restricts connector to establish connection in it.
 
@@ -269,7 +269,8 @@ import {
     PointPortModel,
     Diagram,
     DiagramComponent,
-    PortVisibility
+    PortVisibility,
+    PortConstraints
 } from "@syncfusion/ej2-react-diagrams";
 let port1: PointPortModel = {
     style: {
@@ -343,7 +344,7 @@ The following image illustrates how the connector automatically re-routes the se
 
 ![LineRouting GIF](images/lineRouting.GIF.gif)
 
-* In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#constraints) property of the connector like the following code snippet.
+* In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connector#constraints) property of the connector like the following code snippet.
 
  {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

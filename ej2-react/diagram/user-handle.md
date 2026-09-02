@@ -18,7 +18,7 @@ The React Diagram component supports two types of user handles:
 
 ## Create user handle
 
-To create user handles, define and add them to the [`userHandles`](https://helpej2.syncfusion.com/react/documentation/api/diagram/selectorModel#userhandles) collection of the [`selectedItems`](https://ej2.syncfusion.com/react/documentation/api/diagram#selecteditems) property. The [`name`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel#name) property of userHandles is used to define the name of the user handle, which can then be used at runtime for identification and customization. The [`pathData`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel#pathdata) property is used to define the SVG path data that determines the visual appearance of the user handle icon.
+To create user handles, define and add them to the [`userHandles`](https://helpej2.syncfusion.com/react/documentation/api/diagram/selectorModel#userhandles) collection of the [`selectedItems`](https://helpej2.syncfusion.com/react/documentation/api/diagram#selecteditems) property. The [`name`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel#name) property of userHandles is used to define the name of the user handle, which can then be used at runtime for identification and customization. The [`pathData`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel#pathdata) property is used to define the SVG path data that determines the visual appearance of the user handle icon.
 
 The following example shows how to render user handle.
 
@@ -35,7 +35,7 @@ The following example shows how to render user handle.
 
 ## Customize User Handle Click
 
-When the user handle is clicked, the [`onUserHandleMouseDown`](https://ej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemousedown) event allows us to identify which user handle was clicked using the name property of userHandle. Based on this name, we can customize the diagram elements accordingly. Several events are triggered while interacting with a user handle. In the following example, we use the [`onUserHandleMouseDown`](https://ej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemousedown) event is used to clone nodes on user handle click.
+When the user handle is clicked, the [`onUserHandleMouseDown`](https://helpej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemousedown) event allows us to identify which user handle was clicked using the name property of userHandle. Based on this name, we can customize the diagram elements accordingly. Several events are triggered while interacting with a user handle. In the following example, the [`onUserHandleMouseDown`](https://helpej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemousedown) event is used to clone nodes on user handle click.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -54,15 +54,15 @@ User handles can be precisely positioned relative to node boundaries using align
 
 ### Offset
 
-The [`offset`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel#offset), property of `userHandles` aligns the user handle based on fractions. For example, 0 represents the top-left corner, 1 represents the top-right corner, and 0.5 represents the top-center.
+The [`offset`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel#offset) property of `userHandles` aligns the user handle based on fractions. For example, 0 represents the top-left corner, 1 represents the top-right corner, and 0.5 represents the top-center.
 
 ### Side
 
-The [`side`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel#side) property of `userHandles` aligns the user handle using the following options: [`Top`](https://ej2.syncfusion.com/react/documentation/api/diagram/side#top), [`Bottom`](https://ej2.syncfusion.com/react/documentation/api/diagram/side#bottom), [`Left`](https://ej2.syncfusion.com/react/documentation/api/diagram/side#left), and [`Right`](https://ej2.syncfusion.com/react/documentation/api/diagram/side#right).
+The [`side`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel#side) property of `userHandles` aligns the user handle using the following options: [`Top`](https://helpej2.syncfusion.com/react/documentation/api/diagram/side#top), [`Bottom`](https://helpej2.syncfusion.com/react/documentation/api/diagram/side#bottom), [`Left`](https://helpej2.syncfusion.com/react/documentation/api/diagram/side#left), and [`Right`](https://helpej2.syncfusion.com/react/documentation/api/diagram/side#right).
 
 ### Horizontal and Vertical Alignments
 
-The `horizontalAlignment` property of `userHandles`  is used to set how the user handle is horizontally aligned at the position based on the `offset`. The `verticalAlignment` property determines how user handle is vertically aligned at the position..
+The `horizontalAlignment` property of `userHandles`  is used to set how the user handle is horizontally aligned at the position based on the `offset`. The `verticalAlignment` property determines how user handle is vertically aligned at the position.
 
 ### Margin for the User Handle
 
@@ -96,7 +96,7 @@ The following table shows all the possible alignments of user handle around the 
 
 ## User Handle Tooltip
 
-The diagram provides support to show a tooltip when the mouse hovers over any user handle. To show the tooltip on mouse hover, set the [`tooltip`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel#tooltip) property of the user handle with the tooltip [`content`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#content) as shown in the following example.
+The diagram provides support to show a tooltip when the mouse hovers over any user handle. To show the tooltip on mouse hover, set the [`tooltip`](https://helpej2.syncfusion.com/react/documentation/api/diagram/userHandleModel#tooltip) property of the user handle with the tooltip [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#content) as shown in the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -109,7 +109,7 @@ The diagram provides support to show a tooltip when the mouse hovers over any us
 
  {% previewsample "page.domainurl/code-snippet/diagram/interaction/es5UserHandle-cs6" %}
 
-Additional tooltip properties can be customized, such as [`position`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#position), [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#width), [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#height), etc. For more information refer to the [`tooltip`](./tooltip) section.
+Additional tooltip properties can be customized, such as [`position`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#position), [`width`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#width), [`height`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#height), etc. For more information refer to the [`tooltip`](./tooltip) section.
 
 ## Appearance
 
@@ -132,9 +132,9 @@ The following example demonstrates, how to use these properties to customize the
 
 Multiple user handles can be rendered for the selected objects (nodes/connectors) simultaneously to perform different operations on the same element.
 
-### Disable Nodes and Disable Connectors
+### Disabling User Handles for Nodes or Connectors
 
-User handles are typically defined within the [`selectedItems`](https://ej2.syncfusion.com/react/documentation/api/diagram#selecteditems) property of the diagram, applying them universally to both nodes and connectors. However, in some scenarios, specific user handles may need to be excluded from connectors or nodes selectively. To address this requirement, the disableNodes and disableConnectors properties are available. These properties allow certain user handles to be disabled based on the type of selected item.
+User handles are typically defined within the [`selectedItems`](https://helpej2.syncfusion.com/react/documentation/api/diagram#selecteditems) property of the diagram, applying them universally to both nodes and connectors. However, in some scenarios, specific user handles may need to be excluded from connectors or nodes selectively. To address this requirement, the disableNodes and disableConnectors properties are available. These properties allow certain user handles to be disabled based on the type of selected item.
 
 In the example below, multiple user handles are utilized for various functionalities, with some handles hidden selectively for nodes or connectors depending on their intended functionality.
 
@@ -156,7 +156,7 @@ The diagram provides support to render different types of user handles based on 
 * `Source`: Renders an image as a user handle using an image source.
 * `Content`: Renders a user handle using SVG content.
 * `pathData`: Renders a user handle using custom path data.
-* `template`: Renders a user handle using a predefined template ([`userHandleTemplate`](https://ej2.syncfusion.com/react/documentation/api/diagram#userhandletemplate)) defined in the diagram.
+* `template`: Renders a user handle using a predefined template ([`userHandleTemplate`](https://helpej2.syncfusion.com/react/documentation/api/diagram#userhandletemplate)) defined in the diagram.
 
 The precedence order for user handles is as follows:
 
@@ -184,12 +184,12 @@ The below example code demonstrates different types of user handles.
 
 When interacting with user handles, specific events are triggered that can be used to customize the appearance and functionality of the handles. The user handle events are explained below.
 
-* [`click`](https://ej2.syncfusion.com/react/documentation/api/diagram#click) - Triggered when the user handle is clicked.
+* [`click`](https://helpej2.syncfusion.com/react/documentation/api/diagram#click) - Triggered when the user handle is clicked.
 
-* [`onUserHandleMouseEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemouseenter) - Triggered when the mouse enters the user handle region.
-* [`onUserHandleMouseDown`](https://ej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemousedown) - Triggered when the mouse is pressed down on the user handle.
-* [`onUserHandleMouseUp`](https://ej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemouseup) - Triggered when the mouse is released on the user handle.
-* [`onUserHandleMouseLeave`](https://ej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemouseleave) - Triggered when the mouse leaves the user handle region.
+* [`onUserHandleMouseEnter`](https://helpej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemouseenter) - Triggered when the mouse enters the user handle region.
+* [`onUserHandleMouseDown`](https://helpej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemousedown) - Triggered when the mouse is pressed down on the user handle.
+* [`onUserHandleMouseUp`](https://helpej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemouseup) - Triggered when the mouse is released on the user handle.
+* [`onUserHandleMouseLeave`](https://helpej2.syncfusion.com/react/documentation/api/diagram#onuserhandlemouseleave) - Triggered when the mouse leaves the user handle region.
 
 In the following example, the above events are used to customize the appearance of user handles.
 
@@ -206,11 +206,11 @@ In the following example, the above events are used to customize the appearance 
 
 ## Fixed User Handles
 
-Fixed user handles are used to perform specific actions when interacted with. Unlike regular user handles, [`fixedUserHandles`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel) are defined within individual node or connector objects. This allows different fixed user handles to be added to different elements, and these handles remain visible and positioned consistently, regardless of selection state.
+Fixed user handles are used to perform specific actions when interacted with. Unlike regular user handles, [`fixedUserHandles`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel) are defined within individual node or connector objects. This allows different fixed user handles to be added to different elements, and these handles remain visible and positioned consistently, regardless of selection state.
 
 ### Create Fixed User Handles
 
-To create the [`fixedUserHandles`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel), define and add them to the collection of [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel) and [`connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorModel). The [`pathData`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#pathdata) property of `fixedUserHandles` is used to define the path data for the fixed user handle. The [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#id) property in `fixedUserHandles` assigns a unique identifier to each handle. This identifier helps locate and modify fixed user handles during runtime. You can handle the click event of a fixed user handle using the [`fixedUserHandleClick`](https://ej2.syncfusion.com/react/documentation/api/diagram#fixeduserhandleclick) event. This event allows customization based on the type of fixed user handle clicked.
+To create the [`fixedUserHandles`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel), define and add them to the collection of [`nodes`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeModel) and [`connectors`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorModel). The [`pathData`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#pathdata) property of `fixedUserHandles` is used to define the path data for the fixed user handle. The [`id`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#id) property in `fixedUserHandles` assigns a unique identifier to each handle. This identifier helps locate and modify fixed user handles during runtime. You can handle the click event of a fixed user handle using the [`fixedUserHandleClick`](https://helpej2.syncfusion.com/react/documentation/api/diagram#fixeduserhandleclick) event. This event allows customization based on the type of fixed user handle clicked.
 
 The following code example demonstrates how to create fixed user handles for nodes and connectors and how to handle fixed user handle click:
 
@@ -229,7 +229,7 @@ N> The fixed user handle id need to be unique.
 
 ### Alignment
 
-Fixed user handles can be aligned relative to the node boundaries. It has [`margin`](https://ej2.syncfusion.com/react/documentation/api/accumulation-chart/marginModel), `offset`, [`padding`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#padding) properties to align them based on user's needs.
+Fixed user handles can be aligned relative to the node boundaries. It has [`margin`](https://helpej2.syncfusion.com/react/documentation/api/diagram/marginModel), `offset`, [`padding`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#padding) properties to align them based on user's needs.
 
 
 #### Margin
@@ -242,7 +242,7 @@ The  `offset` property of fixed user handle is used to align the user handle bas
 
 #### Padding
 
-The [`padding`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#padding) is used to leave the space that is inside the fixed user handle between the icon and border.
+The [`padding`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#padding) is used to leave the space that is inside the fixed user handle between the icon and border.
 
 The following example demonstrates how to align fixed user handle for both node and connector.
 
@@ -274,15 +274,15 @@ N> Both `displacement` and `alignment` are applicable only to connector fixed us
 
 #### Customizing the Connector Fixed User Handle
 
-The connector fixed user handle can be aligned relative to the connector boundaries. It has alignment, displacement and offset settings. The [`displacement`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorFixedUserHandleModel#displacement) property displaces the handle from its aligned position and its functioning only when the [`alignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorFixedUserHandleModel#alignment) property is set to 'After' or 'Before'.
+The connector fixed user handle can be aligned relative to the connector boundaries. It has alignment, displacement and offset settings. The [`displacement`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorFixedUserHandleModel#displacement) property displaces the handle from its aligned position and functioning only when the [`alignment`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorFixedUserHandleModel#alignment) property is set to 'After' or 'Before'.
 
 ##### Offset
 
-The `offset`, property of fixed user handle aligns the fixed user handle based on fractions. For example, 0 represents the left or top corner, 1 represents the bottom or right corner, and 0.5 represents the center.
+The `offset` property of fixed user handle aligns the fixed user handle based on fractions. For example, 0 represents the left or top corner, 1 represents the bottom or right corner, and 0.5 represents the center.
 
 ##### Alignment
 
-The connector’s fixed user handle can be aligned over its segment path using the [`alignment`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorFixedUserHandleModel#alignment) property of fixed user handle.
+The connector’s fixed user handle can be aligned over its segment path using the [`alignment`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorFixedUserHandleModel#alignment) property of fixed user handle.
 
 The following table shows all the possible offset and alignment combinations of connector fixed user handle.
 
@@ -300,7 +300,7 @@ The following table shows all the possible offset and alignment combinations of 
 
 ##### Displacement
 
-The [`displacement`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectorFixedUserHandleModel#displacement) property displaces the handle from its aligned position based on the provided x and y value.
+The [`displacement`](https://helpej2.syncfusion.com/react/documentation/api/diagram/connectorFixedUserHandleModel#displacement) property displaces the handle from its aligned position based on the provided x and y value.
 
 The following table shows all the possible alignment and displacement combinations of fixed user handle.
 
@@ -328,7 +328,7 @@ The following code explains how to customize the alignment of connector fixed us
 
 ### Fixed User Handle Tooltip
 
-The diagram provides support to show a tooltip when the mouse hovers over any fixed user handle. To show the tooltip on mouse hover, set the [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#tooltip) property of the fixed user handle with the tooltip [`content`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#content) as shown in the following example.
+The diagram provides support to show a tooltip when the mouse hovers over any fixed user handle. To show the tooltip on mouse hover, set the [`tooltip`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#tooltip) property of the fixed user handle with the tooltip [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#content) as shown in the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -341,21 +341,21 @@ The diagram provides support to show a tooltip when the mouse hovers over any fi
 
  {% previewsample "page.domainurl/code-snippet/diagram/interaction/es5ConnectorFixedUserHandle-cs3" %}
 
-You can also customize other properties of the tooltip, such as [`position`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#position), [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#width), [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#height), etc. For more information refer to the [`tooltip`](./tooltip) section.
+You can also customize other properties of the tooltip, such as [`position`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#position), [`width`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#width), [`height`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltipModel#height), etc. For more information refer to the [`tooltip`](./tooltip) section.
 
 ### Appearance
 
-The appearance of the fixed user handle can be customized by using the [`cornerRadius`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#cornerradius), [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#fill), [`handleStrokeColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#handlestrokecolor), [`handleStrokeWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#handlestrokewidth), [`iconStrokeColor`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#iconstrokecolor), [`iconStrokeWidth`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#iconstrokewidth) and [`visibility`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#visibility) properties of the fixed user handles.
+The appearance of the fixed user handle can be customized by using the [`cornerRadius`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#cornerradius), [`fill`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#fill), [`handleStrokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#handlestrokecolor), [`handleStrokeWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#handlestrokewidth), [`iconStrokeColor`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#iconstrokecolor), [`iconStrokeWidth`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#iconstrokewidth) and [`visibility`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#visibility) properties of the fixed user handles.
 
 #### Size
 
-The [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#height) and [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#width) properties of fixed user handle is used to define the size of the fixed user handle.
+The [`height`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#height) and [`width`](https://helpej2.syncfusion.com/react/documentation/api/diagram/nodeFixedUserHandleModel#width) properties of a fixed user handle is used to define the size of the fixed user handle.
 
 #### Style
 
 The fixed user handle's  `iconStrokeColor` and `iconStrokeWidth` property used to change the stroke color and stroke width of the given `pathData`.
 
-The fixed user handle's `handleStrokeColor`and `handleStrokeWidth`, properties are used to define the stroke color and stroke width of the fixed user handle and the `fill`, property is used to define the fill color of fixed user handle.
+The fixed user handle's `handleStrokeColor` and `handleStrokeWidth` properties are used to define the stroke color and stroke width of the fixed user handle and the `fill` property is used to define the fill color of fixed user handle.
 
 The `cornerRadius` property of the fixed user handle is used to apply border radius for the fixed user handle.
 
@@ -376,7 +376,7 @@ The following example demonstrates, how to use these properties to customize the
 
 #### Customizing Fixed User Handles with HTML Templates
 
-Fixed user handles are interactive elements added to nodes and connectors. Their appearance can be customized using HTML templates. To render fixed user handle with HTML templates, we need to create an HTML element inside a `<script>` tag then add the template reference using the [`fixedUserHandleTemplate`](https://ej2.syncfusion.com/react/documentation/api/diagram#fixeduserhandletemplate) property in the diagram model.
+Fixed user handles are interactive elements added to nodes and connectors. Their appearance can be customized using HTML templates. To render a fixed user handle with HTML templates, create an HTML element inside a `<script>` tag then add the template reference using the [`fixedUserHandleTemplate`](https://helpej2.syncfusion.com/react/documentation/api/diagram#fixeduserhandletemplate) property in the diagram model.
 
  {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -393,13 +393,12 @@ Fixed user handles are interactive elements added to nodes and connectors. Their
 
 When interacting with fixed user handles, certain events are triggered that can be used to customize the appearance and functionality of the handles. The fixed user handle events are explained below.
 
-
-* [`click`](https://ej2.syncfusion.com/react/documentation/api/diagram#click) - Triggered when the fixed user handle is clicked.
-* [`onFixedUserHandleMouseEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram#onfixeduserhandlemouseenter) - Triggered when the mouse enters the fixed user handle region.
-* [`onFixedUserHandleMouseDown`](https://ej2.syncfusion.com/react/documentation/api/diagram#onfixeduserhandlemousedown) - Triggered when the mouse is pressed down on the fixed user handle.
-* [`onFixedUserHandleMouseUp`](https://ej2.syncfusion.com/react/documentation/api/diagram#onfixeduserhandlemouseup) - Triggered when the mouse is released on the fixed user handle.
-* [`onFixedUserHandleMouseLeave`](https://ej2.syncfusion.com/react/documentation/api/diagram#onfixeduserhandlemouseleave) - Triggered when the mouse leaves the fixed user handle region.
-* [`fixedUserHandleClick`](https://ej2.syncfusion.com/react/documentation/api/diagram/fixedUserHandleClickEventArgs) - Triggered when the fixed user handle is clicked.
+* [`click`](https://helpej2.syncfusion.com/react/documentation/api/diagram#click) - Triggered when the fixed user handle is clicked.
+* [`onFixedUserHandleMouseEnter`](https://helpej2.syncfusion.com/react/documentation/api/diagram#onfixeduserhandlemouseenter) - Triggered when the mouse enters the fixed user handle region.
+* [`onFixedUserHandleMouseDown`](https://helpej2.syncfusion.com/react/documentation/api/diagram#onfixeduserhandlemousedown) - Triggered when the mouse is pressed down on the fixed user handle.
+* [`onFixedUserHandleMouseUp`](https://helpej2.syncfusion.com/react/documentation/api/diagram#onfixeduserhandlemouseup) - Triggered when the mouse is released on the fixed user handle.
+* [`onFixedUserHandleMouseLeave`](https://helpej2.syncfusion.com/react/documentation/api/diagram#onfixeduserhandlemouseleave) - Triggered when the mouse leaves the fixed user handle region.
+* [`fixedUserHandleClick`](https://helpej2.syncfusion.com/react/documentation/api/diagram/fixedUserHandleClickEventArgs) - Triggered when the fixed user handle is clicked.
 
 In the following example, the above events are used to customize the appearance of fixed user handles.
 

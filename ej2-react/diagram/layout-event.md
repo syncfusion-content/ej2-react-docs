@@ -13,11 +13,13 @@ Layout events in the React Diagram component provide developers with hooks to re
 
 The diagram component supports several layout-specific events that fire during different phases of the layout life cycle, enabling fine-grained control over layout behavior and user interactions.
 
-## DataLoaded Event
+N> **Prerequisite:** These layout events require a layout (such as `HierarchicalTree`, `OrganizationalChart`, or `ComplexHierarchicalTree`) to be configured on the diagram. Without a configured layout, the events will not fire.
+
+## Data Loaded Event
 
 The [`dataLoaded`](https://ej2.syncfusion.com/react/documentation/api/diagram/idataloadedeventargs) event triggers after the diagram successfully populates from an external data source. This event provides access to the loaded data and diagram instance, making it ideal for performing post-load customizations such as applying custom styling, setting initial node states, or configuring layout-specific properties.
 
-The event fires once the data binding process completes but before the initial layout calculation begins, providing an opportunity to modify nodes or connectors before they are positioned.
+The event fires once the data binding process completes but before the initial layout calculation begins, providing an opportunity to modify nodes or connectors before they are positioned. The [`IDataLoadedEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/idataloadedeventargs) exposes the `diagram` property, which provides access to the current diagram instance for performing customizations within the handler.
 
 The following code example explains the data loaded event in the diagram.
 
@@ -27,11 +29,11 @@ The following code example explains the data loaded event in the diagram.
 {% endhighlight %}
 {% endtabs %}
 
-## ExpandStateChange Event
+## Expand State Change Event
 
 The [`expandStateChange`](https://ej2.syncfusion.com/react/documentation/api/diagram/iexpandstatechangeeventargs) event fires when a user clicks the expand or collapse icon of a node in a hierarchical layout. This event occurs before the layout update begins, allowing developers to prevent the state change, modify the expansion behavior, or trigger custom actions based on the node's new state.
 
-The event provides information about the affected node, its current state, and whether the operation can be canceled. This makes it valuable for implementing conditional expansion, loading child data on-demand, or applying custom animations.
+The event provides information about the affected node, its current state, and whether the operation can be canceled. This makes it valuable for implementing conditional expansion, loading child data on-demand, or applying custom animations. The [`IExpandStateChangeEventArgs`](https://ej2.syncfusion.com/react/documentation/api/diagram/iexpandstatechangeeventargs) exposes the `element` (the expanded or collapsed node) and `state` (boolean value indicating the expanded or collapsed state) properties.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -66,14 +68,23 @@ The event fires at the end of the animation cycle, ensuring that all visual upda
 
 ## Layout Updated Event
 
-The [`layoutUpdated`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#layoutupdated) event fires at both the beginning and completion of the layout rendering process. This event enables tracking of layout calculation progress and provides timing information for performance monitoring or progress indication purposes.
+The [`layoutUpdated`](https://ej2.syncfusion.com/react/documentation/api/diagram#layoutupdated) event fires at both the beginning and completion of the layout rendering process. This event enables tracking layout calculation progress and provides timing information for performance monitoring or progress indication purposes.
 
-The event includes a state parameter that indicates whether the layout process is starting or finishing, allowing developers to implement loading indicators, measure layout performance, or coordinate with other application components that depend on layout completion.
+The event includes a state parameter that indicates whether the layout process is starting or finishing, allowing developers to implement loading indicators, measure layout performance, or coordinate with other application components that depend on layout completion. The `state` parameter is a [`LayoutState`](https://ej2.syncfusion.com/react/documentation/api/diagram/layoutstate) enumeration with the values `Started` (layout rendering process has started) and `Completed` (layout rendering process has finished), which can be used to toggle loading indicators or coordinate follow-up actions accordingly.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/reactCurlyExamples/layout-event-cs2/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
+
+The following table summarizes the layout events and their trigger points:
+
+| Event | Trigger Point |
+|----------|----------|
+| `dataLoaded` | After the diagram populates from an external data source, before the initial layout calculation. |
+| `expandStateChange` | When a user clicks the expand or collapse icon of a node, before the layout update begins. |
+| `animationComplete` | After the diagram finishes animating layout changes (e.g., during expand/collapse). |
+| `layoutUpdated` | At both the start (`Started`) and completion (`Completed`) of the layout rendering process. |
 
 These layout events work together to provide comprehensive control over the automatic layout life cycle, from initial data loading through final rendering completion. They enable developers to create responsive, interactive diagram experiences with proper feedback and customization capabilities.

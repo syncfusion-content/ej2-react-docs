@@ -14,7 +14,7 @@ BPMN (Business Process Model and Notation) shapes are standardized graphical ele
 
 To create a BPMN shape, set the node's `shape.type` property to **Bpmn** and specify the `shape.shape` property as one of the available built-in shapes. Each BPMN shape serves a specific purpose in modeling business processes, from representing events and activities to showing data flow and decision points.
 
-> **Important**: To use BPMN shapes in the diagram, inject the BpmnDiagrams module into the diagram component. This module provides the necessary functionality for rendering and managing BPMN-specific features.
+> To use BPMN shapes in the diagram, inject the BpmnDiagrams module into the diagram component. This module provides the necessary functionality for rendering and managing BPMN-specific features.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

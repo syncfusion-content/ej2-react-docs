@@ -1,9 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DiagramComponent, Diagram, ErDiagrams } from "@syncfusion/ej2-react-diagrams";
+import { DiagramComponent, Inject, ErDiagrams } from "@syncfusion/ej2-react-diagrams";
 import { NodeModel, ErShapeModel } from "@syncfusion/ej2-diagrams";
-
-Diagram.Inject(ErDiagrams);
 
 // Define an ER entity with customized header
 const customer: NodeModel = {
@@ -51,8 +49,9 @@ function App() {
     <DiagramComponent id="container"
       width={'100%'}
       height={'400px'}
-      nodes={[customer]}
-    />
+      nodes={[customer]} >
+      <Inject services={[ErDiagrams]} />
+    </DiagramComponent>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));

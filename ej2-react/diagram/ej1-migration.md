@@ -12,39 +12,49 @@ domainurl: ##DomainURL##
 
 To load EJ1 JSON data in an EJ2 diagram, follow these steps.
 
-1.	Import and inject the EJ1SerializationModule as shown in the following code example.
+1. Import and inject the `EJ1SerializationModule`.
+2. Load the EJ1 JSON data using the diagram `loadDiagram` method and set the second parameter to **true**. Invoke `loadDiagram` from the diagram's `created` event so it runs once the diagram is initialized.
 
-```ts
+The following code example demonstrates both steps.
+
+```
 
 import {
-  Diagram,
   DiagramComponent,
+  EJ1SerializationModule,
+  Inject,
 } from "@syncfusion/ej2-react-diagrams";
-Diagram.Inject(EJ1SerializationModule);
-//Initializes the symbol palette
 function App() {
+  let diagramInstance: DiagramComponent | null = null;
+  function diagramCreated(): void {
+    // Replace the placeholder object with your actual EJ1 JSON data.
+    var ej1Data = {
+      "name": "Diagram",
+      "nodes": [],
+      "connectors": []
+    };
+    // Load the EJ1 JSON and pass a boolean value as true.
+    if (diagramInstance) {
+      diagramInstance.loadDiagram(ej1Data, true);
+    }
+  }
   return (
    <DiagramComponent
       id="diagram"
+      ref={diagram => { diagramInstance = diagram; }}
       width={'100%'}
       height={'600px'}
-    />
+      created={diagramCreated}
+    >
+      <Inject services={[EJ1SerializationModule]} />
+    </DiagramComponent>
   );
 }
-const root = ReactDOM.createRoot(document.getElementById("diagram"));
-root.render(<App />);
 
 ```
 
-2.	Load the EJ1 JSON data using the diagram loadDiagram method and set the second parameter to true.
+Render the `App` component in your application entry point using `createRoot` from `react-dom/client`.
 
-```ts
+N> If the EJ1 JSON is not rendered, ensure you have passed `true` as the second argument to `loadDiagram`; otherwise it is treated as EJ2 JSON and migration is skipped.
 
-function diagramCreated(){
-  var diagram = document.getElementById("diagram").ej2_instances[0];
-  var ej1Data = {"JSONData"};  //Replace JSONData with your EJ1 JSON data
-  //Load the EJ1 JSON and pass a boolean value as true.
-  diagram.loadDiagram(ej1Data, true);
-  }
-
-```
+N> Predefined EJ1 data such as nodes/connectors without EJ1-specific properties are preserved, but features not supported by the EJ2 Diagram (for example, deprecated EJ1 node shapes or legacy connector behaviors) may require manual adjustment after loading.

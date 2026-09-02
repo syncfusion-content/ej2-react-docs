@@ -14,7 +14,7 @@ This guide explains how to load and visualize organizational chart data stored i
 
 **What is Microsoft SqlClient?**
 
-[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) is the official .NET library used to connect ASP.NET Core applications to Microsoft SQL Server. It enables applications to execute SQL queries, call stored procedures, and read or write data securely using strongly supported APIs from Microsoft. SqlClient is commonly used in Web APIs where precise control over database access, performance, and security is required.
+[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) is the official .NET library used to connect ASP.NET Core applications to Microsoft SQL Server. It enables applications to execute SQL queries, call stored procedures, and read or write data securely using officially supported APIs from Microsoft. SqlClient is commonly used in Web APIs where precise control over database access, performance, and security is required.
 
 **Key benefits of SqlClient:**
 
@@ -31,7 +31,7 @@ Ensure the following software and packages are installed before proceeding:
 | Software / Package | Version | Purpose |
 |-------------------|---------|---------|
 | Node.js | 18.x or later | React development runtime |
-| React CLI | 16 or later | Create, build, and run React application |
+| React | 18.x or later | Build and run the React client application |
 | .NET SDK | 8.0 or later | Build and run the ASP.NET Core Web API |
 | Microsoft SQL Server | 2019 or later | Relational database server |
 | SQL Server Management Studio (SSMS) | Latest | Manage SQL Server databases and execute queries |
@@ -41,7 +41,7 @@ Ensure the following software and packages are installed before proceeding:
 
 ## Installing and configuring Microsoft SQL Server and SQL Server Management Studio (SSMS)
 
-To store and manage diagram data, Microsoft SQL Server must be installed and configured before integrating it with the ASP.NET Core Web API. This section explains how to install SQL Server, install SQL Server Management Studio (SSMS), and preparing the environment for database creation. This setup is a one‑time process and only needs to be completed before configuring the backend API.
+To store and manage diagram data, Microsoft SQL Server must be installed and configured before integrating it with the ASP.NET Core Web API. This section explains how to install SQL Server, install SQL Server Management Studio (SSMS), and prepare the environment for database creation. This setup is a one‑time process and only needs to be completed before configuring the backend API.
 
 ### Installing Microsoft SQL Server
 
@@ -49,21 +49,14 @@ Microsoft SQL Server provides the relational database engine used to store organ
 
 Follow these steps to install SQL Server:
 
-1. Download the Microsoft SQL Server installer for the required edition from the official page: [https://www.microsoft.com/en-in/sql-server/sql-server-downloads] (https://www.microsoft.com/en-in/sql-server/sql-server-downloads). For this guide, **SQL Server Express** is selected. It is a free, lightweight edition suitable for development, testing, and sample applications.
-
+1. Download the Microsoft SQL Server installer for the required edition from the official page: [Microsoft SQL Server downloads](https://www.microsoft.com/en-in/sql-server/sql-server-downloads). For this guide, **SQL Server Express** is selected. It is a free, lightweight edition suitable for development, testing, and sample applications.
 2. Open the downloaded installer file to launch the setup wizard.
-
 3. Choose the installation type (for example, **Basic** for quick setup or **Custom** for advanced configuration).
-
-![Select Installation Type](images/microsoft-sql-server-images/SQLServerInstallerStep1.png)
-
+   ![Select Installation Type](images/microsoft-sql-server-images/SQLServerInstallerStep1.png)
 4. Select the installation location when prompted and proceed with the installation.
-
-![Select Installation Location](images/microsoft-sql-server-images/SQLServerInstallerStep3.png)
-
+   ![Select Installation Location](images/microsoft-sql-server-images/SQLServerInstallerStep3.png)
 5. Wait for the setup process to complete. Once finished, a confirmation message indicates that SQL Server has been installed successfully.
-
-![SQL Server Installation Completed](images/microsoft-sql-server-images/SQLServerInstallerStep4.jpg)
+   ![SQL Server Installation Completed](images/microsoft-sql-server-images/SQLServerInstallerStep4.jpg)
 
 At this stage, the SQL Server database engine is installed, but a management tool is required to interact with the server.
 
@@ -74,24 +67,15 @@ SQL Server Management Studio (SSMS) is a graphical interface used to connect to 
 
 Follow these steps to install SSMS:
 
-1. From the SQL Server installer completion screen, click the **Install SSMS** button. This action redirects you to the official Microsoft download page. 
-
-![SQL Server Installation Completed](images/microsoft-sql-server-images/SQLServerInstallerStep4.jpg)
-
-![Official Microsoft Download Page](images/microsoft-sql-server-images/SSMSInstallStep1.PNG)
-
+1. From the SQL Server installer completion screen, click the **Install SSMS** button. This action redirects you to the official Microsoft download page.
+   ![SQL Server Installer Completion Screen with Install SSMS Button](images/microsoft-sql-server-images/SQLServerInstallerStep4.jpg)
+   ![Official Microsoft Download Page](images/microsoft-sql-server-images/SSMSInstallStep1.png)
 2. Download the SSMS installer.
-
 3. Open the downloaded installer file. This launches the Visual Studio Installer.
-
 4. Select the required workloads (the default selections are sufficient for most users).
-
-![Required Workloads](images/microsoft-sql-server-images/SSMSInstallStep3.PNG)
-
+   ![Required Workloads](images/microsoft-sql-server-images/SSMSInstallStep3.png)
 5. Click the **Install** button and wait for the installation to complete.
-
-![Visual Studio Installer](images/microsoft-sql-server-images/SSMSInstallStep2.jpg)
-
+   ![Visual Studio Installer](images/microsoft-sql-server-images/SSMSInstallStep2.jpg)
 6. Once installation finishes, close the installer.
 
 
@@ -100,24 +84,17 @@ Follow these steps to install SSMS:
 After installing SQL Server Management Studio (SSMS), connect to the SQL Server instance to begin creating databases and tables.
 
 1. Launch **SQL Server Management Studio** from the Windows Start menu or application launcher.
-
-![Application Launcher](images/microsoft-sql-server-images/ConfigSsmsStep1.jpg)
-
+   ![Application Launcher](images/microsoft-sql-server-images/ConfigSsmsStep1.jpg)
 2. In the **Connect to Server** dialog, configure the connection properties:
    - **Server name**: Required (for example, **localhost** or **.\SQLEXPRESS**)
    - **Authentication**: Windows Authentication (recommended for local development)
    - Enable **Trust server certificate** if prompted
-
-![Connect to Server](images/microsoft-sql-server-images/ConfigSsmsStep2.PNG)
-
+   ![Connect to Server](images/microsoft-sql-server-images/ConfigSsmsStep2.png)
 3. Click the **Connect** button to establish the connection.
-
 4. After a successful connection, the **Object Explorer** displays the connected SQL Server instance and its available components such as databases, security settings, and server objects.
-
-![Object Explorer](images/microsoft-sql-server-images/ConfigSsmsStep3.PNG)
+   ![Object Explorer](images/microsoft-sql-server-images/ConfigSsmsStep3.png)
 
 The SQL Server environment is now ready for database creation and data configuration.
-
 
 ## Creating the database and schema
 
@@ -130,34 +107,33 @@ A dedicated database named **DiagramDb** is used to store organizational chart d
 #### Manual approach (using SSMS UI)
 
 1. In **Object Explorer**, right‑click the **Databases** folder.
-
-![Object Explorer](images/microsoft-sql-server-images/CreateDataBaseStep1.png)
+   ![Right-click the Databases Folder in Object Explorer](images/microsoft-sql-server-images/CreateDataBaseStep1.png)
 2. Select **New Database** from the context menu.
 3. Enter **DiagramDb** as the database name.
 4. Click the **OK** button to create the database.
-
-![Creating the Database](images/microsoft-sql-server-images/CreateDataBaseStep2.png)
+   ![Creating the Database](images/microsoft-sql-server-images/CreateDataBaseStep2.png)
 
 #### Query‑Based approach
 
 Alternatively, the database can be created using a SQL query.
 
 - Click **New Query** button in the SSMS toolbar to open the query editor.
-
- ![New Query](images/microsoft-sql-server-images/CreateDataBaseQuery2.png)
+![New Query](images/microsoft-sql-server-images/CreateDataBaseQuery2.png)
 
 - Paste the following SQL script into the query editor and click **Execute** to run the query.
 
- ```sql
+{% tabs %}
+{% highlight sql tabtitle="SQL" %}
 -- Create Database
 IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'DiagramDb')
 BEGIN
     CREATE DATABASE DiagramDb;
 END
 GO
-```
+{% endhighlight %}
+{% endtabs %}
 
-![Creating the Database](images/microsoft-sql-server-images/CreateDataBaseType2.png)
+![Creating the Database Using a Query](images/microsoft-sql-server-images/CreateDataBaseType2.png)
 
 ### Creating the table
 
@@ -170,7 +146,8 @@ Create a table named **LayoutNode** to store the data that defines the structure
 
 Run the following SQL script in the query editor to create the table in the **DiagramDb** database.
 
-```sql
+{% tabs %}
+{% highlight sql tabtitle="SQL" %}
 -- Create LayoutNode Table
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'LayoutNode')
 BEGIN
@@ -181,7 +158,8 @@ BEGIN
     );
 END
 GO
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Table Creation](images/microsoft-sql-server-images/CreateTable.png)
 
@@ -191,8 +169,9 @@ Sample records can be added to the **LayoutNode** table to populate the database
 
 Run the following SQL script in the query editor to insert sample records into the table.
 
-```sql
--- Insert Sample Data (Optional)
+{% tabs %}
+{% highlight sql tabtitle="SQL" %}
+-- Insert Sample Data
 INSERT INTO dbo.LayoutNode (Id, ParentId, Role) VALUES
 ('parent', NULL, 'Board'),
 ('1', 'parent', 'General Manager'),
@@ -213,9 +192,10 @@ INSERT INTO dbo.LayoutNode (Id, ParentId, Role) VALUES
 ('20', '16', 'Service Department Manager'),
 ('21', '16', 'Quality Control Department');
 GO
-```
+{% endhighlight %}
+{% endtabs %}
 
-![Table Creation](images/microsoft-sql-server-images/InsertData.png)
+![Sample Data Inserted](images/microsoft-sql-server-images/InsertData.png)
 
 
 ### Verifying the inserted data
@@ -224,9 +204,11 @@ Verify that the records have been created successfully by querying the **LayoutN
 
 Run the following SQL query in the query editor to view the inserted data.
 
-```sql
+{% tabs %}
+{% highlight sql tabtitle="SQL" %}
 SELECT * FROM dbo.LayoutNode;
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![View Data](images/microsoft-sql-server-images/ViewData.png)
 
@@ -236,6 +218,8 @@ SELECT * FROM dbo.LayoutNode;
 In this section, an ASP.NET Core Web API project is created and configured to connect to SQL Server using **Microsoft.Data.SqlClient**. The API retrieves organizational chart layout data from the database and returns it in a format that can be consumed by the Syncfusion® React Diagram component.
 
 ### Step 1: Create the ASP.NET Core Web API project
+
+The ASP.NET Core Web API project can be created using Visual Studio or the .NET CLI (commonly used with Visual Studio Code). Choose one of the approaches below.
 
 #### Creating the Web API project using Visual Studio
 
@@ -250,8 +234,6 @@ The ASP.NET Core Web API project can be created using Visual Studio as follows:
 7. Keep authentication set to **None**.
 8. Click **Create**.
 
-Visual Studio generates a new ASP.NET Core Web API project with default files such as **Program.cs** and **appsettings.json**.
-
 #### Creating the Web API project using Visual Studio Code
 
 Alternatively, the project can be created using the .NET CLI, which is commonly used with Visual Studio Code.
@@ -260,17 +242,22 @@ Alternatively, the project can be created using the .NET CLI, which is commonly 
 2. Navigate to the directory where you want to create the server application.
 3. Run the following commands:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
 dotnet new webapi -n React_Diagram_MSSQL.Server
 cd React_Diagram_MSSQL.Server
-```
+{% endhighlight %}
+{% endtabs %}
 
-### Step 2: Installing required NuGet packages
+Regardless of the approach used, the generated project includes default files such as **Program.cs** and **appsettings.json**. The HTTP/HTTPS ports the API runs on are defined in **Properties/launchSettings.json** (under the `applicationUrl` property) and are shown in the terminal when the project is launched. Note these ports, since the React client will call the API using one of them.
+
+### Step 2: Install required NuGet packages
 
 After creating the ASP.NET Core Web API project, install the following required NuGet packages.
 
 - **Microsoft.Data.SqlClient** – Provides connectivity to Microsoft SQL Server.
 - **Syncfusion.EJ2.AspNet.Core** – Provides server‑side support for `DataManager` operations.
+- **Microsoft.AspNetCore.Mvc.NewtonsoftJson** – Provides Newtonsoft.Json serialization support required by `AddNewtonsoftJson` in `Program.cs`.
 
 The required NuGet packages can be installed using any one of the following methods.
 
@@ -280,10 +267,13 @@ The required NuGet packages can be installed using any one of the following meth
 2. Navigate to **Tools → NuGet Package Manager → Package Manager Console**.
 3. Run the following commands:
 
-```powershell
+{% tabs %}
+{% highlight powershell tabtitle="Package Manager Console" %}
 Install-Package Microsoft.Data.SqlClient
 Install-Package Syncfusion.EJ2.AspNet.Core
-```
+Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson
+{% endhighlight %}
+{% endtabs %}
 
 #### Method 2: Using NuGet Package Manager UI (Visual Studio)
 
@@ -292,16 +282,20 @@ Install-Package Syncfusion.EJ2.AspNet.Core
 3. Select the Browse tab.
 4. Search for and install each package individually:
    - **Microsoft.Data.SqlClient**
+   - **Microsoft.AspNetCore.Mvc.NewtonsoftJson**
    - **Syncfusion.EJ2.AspNet.Core**
 
 #### Method 3: Using .NET CLI / Integrated Terminal (Visual Studio Code)
 
 The required packages can also be installed using the .NET CLI. Ensure the commands are executed from the Web API project directory.
 
-```powershell
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
 dotnet add package Microsoft.Data.SqlClient
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 dotnet add package Syncfusion.EJ2.AspNet.Core
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 3: Create the data model
 
@@ -317,7 +311,8 @@ In this application, the data model maps directly to the **LayoutNode** table cr
 2. Inside the **Data** folder, create a new file named **LayoutNode.cs**.
 3. Define the `LayoutNode` class with the following code:
 
-```csharp
+{% tabs %}
+{% highlight csharp tabtitle="LayoutNode.cs" %}
 using System.ComponentModel.DataAnnotations;
 
 namespace React_Diagram_MSSQL.Server.Data
@@ -354,7 +349,8 @@ namespace React_Diagram_MSSQL.Server.Data
       public string Role { get; set; } = null!;
   }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 
 ### Step 4: Create the repository class
@@ -368,7 +364,8 @@ Using a repository helps maintain a clear separation by isolating database acces
 1. Inside the **Data** folder, create a new file named **LayoutNodeRepository.cs**.
 2. Define the `LayoutNodeRepository` class with the following code:
 
-```csharp
+{% tabs %}
+{% highlight csharp tabtitle="LayoutNodeRepository.cs" %}
 using Microsoft.Data.SqlClient;
 
 namespace React_Diagram_MSSQL.Server.Data
@@ -397,7 +394,7 @@ namespace React_Diagram_MSSQL.Server.Data
         {
             var list = new List<LayoutNode>();
             const string sql =
-                @"SELECT Id, ParentId, Role FROM dbo.LayoutNode";
+                @"SELECT Id, ParentId, Role FROM dbo.LayoutNode ORDER BY Id";
 
             await using var conn = GetConnection();
             await conn.OpenAsync();
@@ -419,8 +416,8 @@ namespace React_Diagram_MSSQL.Server.Data
         }
     }
 }
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 **Explanation:**
 
@@ -439,7 +436,8 @@ The API controller exposes layout‑node data as an HTTP endpoint that can be co
 2. Add a new file named **LayoutNodesController.cs**.
 3. Paste the following code:
 
-```csharp
+{% tabs %}
+{% highlight csharp tabtitle="LayoutNodesController.cs" %}
 using React_Diagram_MSSQL.Server.Data;
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.EJ2.Base;
@@ -447,7 +445,6 @@ using Newtonsoft.Json.Linq;
 
 namespace React_Diagram_MSSQL.Server.Controllers
 {
-    
   [ApiController]
   [Route("api/[controller]")]
   public class LayoutNodesController : ControllerBase
@@ -475,12 +472,12 @@ namespace React_Diagram_MSSQL.Server.Controllers
       }
   }
 }
+{% endhighlight %}
+{% endtabs %}
+**Explanation:**
 
-```
-**Explanation**
-
-* **/api/layoutnodes** returns all layout nodes from SQL Server.
-* Data is retrieved through the `LayoutNodeRepository` class.
+- **/api/layoutnodes** returns all layout nodes from SQL Server.
+- Data is retrieved through the `LayoutNodeRepository` class.
 
 ### Step 6: Configure the connection string
 
@@ -491,7 +488,8 @@ A connection string contains the information needed to connect the application t
 1. Open the **appsettings.json** file in the project root.
 2. Add or update the `ConnectionStrings` section with the SQL Server connection details:
 
-```json
+{% tabs %}
+{% highlight json tabtitle="appsettings.json" %}
 {
   "ConnectionStrings": {
     "DiagramDb": "Data Source=localhost;Initial Catalog=DiagramDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"
@@ -504,7 +502,8 @@ A connection string contains the information needed to connect the application t
   },
   "AllowedHosts": "*"
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 **Connection string components:**
 
@@ -528,7 +527,8 @@ The **Program.cs** file is where application services are registered and configu
 1. Open the **Program.cs** file at the project root.
 2. Replace the existing content with the following configuration:
 
-```csharp
+{% tabs %}
+{% highlight csharp tabtitle="Program.cs" %}
 using React_Diagram_MSSQL.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -568,48 +568,74 @@ app.UseCors();
 app.MapControllers();
 
 app.Run();
+{% endhighlight %}
+{% endtabs %}
+**Explanation:**
 
-```
-**Explanation**
-
-* Controller support is enabled to expose API endpoints.
-* The `LayoutNodeRepository` is registered for dependency injection.
-* CORS is enabled to allow the React application to call the API.
-* Swagger is enabled in development for testing and exploration.
+- Controller support is enabled to expose API endpoints.
+- The `LayoutNodeRepository` is registered for dependency injection.
+- CORS is enabled to allow the React application to call the API.
+- Swagger is enabled in development for testing and exploration.
 
 The backend setup is now complete. 
+
+### Step 8: Verify the Web API endpoint
+
+Before wiring up the React client, verify that the Web API returns the layout‑node data from SQL Server.
+
+1. Run the Web API project from the project directory:
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+dotnet run
+{% endhighlight %}
+{% endtabs %}
+
+2. Note the HTTP URL printed in the terminal (for example, `http://localhost:5239`). The port is defined in `Properties/launchSettings.json`.
+3. Open the Swagger UI by navigating to `http://localhost:<port>/swagger` in a browser.
+4. Expand the **GET /api/layoutnodes** endpoint and click **Execute**.
+5. Confirm that the response returns the 19 layout‑node records inserted earlier (`parent`, `1`, `2`, …).
+
+If the response returns the layout‑node data, the Web API is correctly connected to SQL Server and ready for the React client.
 
 ## Integrating Syncfusion® React Diagram
 
 The following steps describe how to render the Diagram and connect it to the SQL Server back-end.
 
-### Step 1: Creating the React client application
+### Step 1: Create the React client application
 
 Create the React client application using the following commands in a Visual Studio Code terminal or command prompt:
 
-```bash
-npm create vite@latest React_Diagram_MSSQL.client
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+npm create vite@latest React_Diagram_MSSQL.client -- --template react-ts
 cd React_Diagram_MSSQL.client
-```
-This command scaffolds a new React application using Vite.
+npm install
+{% endhighlight %}
+{% endtabs %}
+This command scaffolds a new React application using Vite. Run `npm install` to install the scaffolded project dependencies before proceeding.
 
-### Step 2: Adding Syncfusion® packages
+### Step 2: Add Syncfusion® packages
 
 Install the required Syncfusion® packages by running the following commands:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm install @syncfusion/ej2-react-diagrams --save
-```
+{% endhighlight %}
+{% endtabs %}
 
 After installation, the necessary CSS files are available in the **node_modules** directory.
 Add the required CSS references to the **src/index.css** file to apply styling to the Diagram component.
 
-```css
-@import "../node_modules/@syncfusion/ej2-react-diagrams/styles/bootstrap5.3.css";
+{% tabs %}
+{% highlight css tabtitle="src/index.css" %}
+@import "../node_modules/@syncfusion/ej2-diagrams/styles/bootstrap5.3.css";
 @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.3.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.3.css";
-```
+{% endhighlight %}
+{% endtabs %}
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion® React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
@@ -617,11 +643,13 @@ For this project, the "Bootstrap 5.3" theme is applied. Other themes can be sele
 
 The React Diagram component can be added to the (**src/App.tsx**) file using the following code.
 
-```ts
+N> This is a starter skeleton showing only the component setup; data binding and layout are added in subsequent steps and the full runnable version appears in Step 5.
+
+{% tabs %}
+{% highlight tsx tabtitle="src/App.tsx" %}
 import React from 'react';
 import { DiagramComponent, Inject, DataBinding, HierarchicalTree, SnapConstraints} from "@syncfusion/ej2-react-diagrams";
-import type{ ConnectorModel, NodeModel, LayoutModel, DataSourceModel} from "@syncfusion/ej2-react-diagrams";
-import './app.css';
+import type { ConnectorModel, NodeModel, LayoutModel, DataSourceModel } from "@syncfusion/ej2-react-diagrams";
 
 let diagramInstance: DiagramComponent;
 
@@ -639,19 +667,22 @@ const App: React.FC = () => {
 };
 
 export default App;
-```
+{% endhighlight %}
+{% endtabs %}
 This code initializes the Diagram component with default dimensions.
 
 ### Step 4: Fetch data from Web API and bind it to the Diagram
 
 In this step, data is retrieved from the ASP.NET Core Web API and assigned to the Diagram as a data source. Create a `loadData` function in the (**src/App.tsx**) file to fetch the API data and assign it to the Diagram using `dataSourceSettings`.
 
-```ts
+N> The snippet below is an incremental preview showing only the new fetch/data‑binding logic; it is not a complete runnable file. The full, runnable version appears in Step 5.
+
+{% tabs %}
+{% highlight tsx tabtitle="src/App.tsx" %}
 import React from 'react';
 import { DiagramComponent, Inject, DataBinding, HierarchicalTree, SnapConstraints} from "@syncfusion/ej2-react-diagrams";
 import { DataManager, Query } from '@syncfusion/ej2-data';
-import type{ ConnectorModel, NodeModel, LayoutModel, DataSourceModel} from "@syncfusion/ej2-react-diagrams";
-import './app.css';
+import type { ConnectorModel, NodeModel, LayoutModel, DataSourceModel } from "@syncfusion/ej2-react-diagrams";
 
 const BASE_URL = 'http://localhost:5239/api/layoutnodes';
 
@@ -681,7 +712,8 @@ const loadData = () => {
       }
     });
 };
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 5: Complete code
 
@@ -689,19 +721,19 @@ The following snippet shows the complete React Diagram configuration with data b
 
 **App.tsx**
 
-```ts
+{% tabs %}
+{% highlight tsx tabtitle="src/App.tsx" %}
 import React from 'react';
 import { DiagramComponent, Inject, DataBinding, HierarchicalTree, SnapConstraints} from "@syncfusion/ej2-react-diagrams";
 import { DataManager, Query } from '@syncfusion/ej2-data';
-import type{ ConnectorModel, NodeModel, LayoutModel, DataSourceModel} from "@syncfusion/ej2-react-diagrams";
-import './app.css';
+import type { ConnectorModel, NodeModel, LayoutModel, DataSourceModel } from "@syncfusion/ej2-react-diagrams";
 
 const BASE_URL = 'http://localhost:5239/api/layoutnodes';
 let diagramInstance: DiagramComponent;
 
 let items: DataManager;
 
- const loadData = () =>{
+const loadData = () => {
     fetch(BASE_URL, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
@@ -713,19 +745,19 @@ let items: DataManager;
       return response.json();
     })
     .then((data) => {
-      items = new DataManager(data as JSON[], new Query().take(5));
+      items = new DataManager(data as JSON[], new Query());
       if (diagramInstance) {
         diagramInstance.layout = {
           //Sets layout type
-          type: 'OrganizationalChart'
-        }
+          type: 'OrganizationalChart',
+        };
 
         //Configures data source for Diagram
         diagramInstance.dataSourceSettings = {
           id: 'id',
           parentId: 'parentId',
-          dataSource: items
-        }
+          dataSource: items,
+        };
       }
     })
     .catch((error) => {
@@ -774,31 +806,47 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Running the application
 
-**Step 1: Build and run the ASP.NET Core Web API:**
+### Step 1: Build and run the ASP.NET Core Web API
 
 Navigate to the server project folder and run the following command in a terminal:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
 dotnet build
 dotnet run
-```
+{% endhighlight %}
+{% endtabs %}
 
-**Step 2: Run the React client:**
+### Step 2: Run the React client
 
 From the client folder, run the following command in a terminal to start the React application:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
 npm run dev
-```
+{% endhighlight %}
+{% endtabs %}
 
-**Step 3: Access the application:**
+### Step 3: Access the application
 
-Open a web browser and navigate to the URL shown in the terminal to view the Diagram.
+Open a web browser and navigate to the URL shown in the terminal (by default, `http://localhost:5173/` for Vite) to view the Diagram.
+
+### Troubleshooting
+
+If the diagram does not render or data fails to load, check the following common issues:
+
+| Problem | Likely Cause | Resolution |
+|---------|--------------|------------|
+| Browser console shows a CORS error | The Web API is blocking requests from the React client | Confirm `app.UseCors()` is present in `Program.cs` and the default CORS policy allows the React app origin |
+| Fetch returns `HTTP 404` for `/api/layoutnodes` | Wrong API URL or port | Verify the `BASE_URL` matches the running Web API port from `Properties/launchSettings.json` and the route is `api/layoutnodes` |
+| Fetch returns `HTTP 500` or SQL connection error | SQL Server not running, wrong connection string, or database not present | Ensure SQL Server service is running, the `DiagramDb` database and `LayoutNode` table exist, and the connection string in `appsettings.json` points to the correct server and database |
+| `fetch` in the React app fails with `TypeError: Failed to fetch` | Web API not started, or HTTPS/HTTP mismatch | Start the Web API first (`dotnet run`) and confirm the `BASE_URL` protocol (use `http://` for local development) matches the API endpoint |
+| Diagram renders but no nodes appear | `dataSourceSettings` id/parentId fields don't match API response property casing | Ensure `id`/`parentId` in `dataSourceSettings` match the JSON property names returned by the API (the model uses `Id`/`ParentId`; Newtonsoft.Json may serialize them as `id`/`parentId` depending on resolver settings) |
 
 ## Complete sample repository
 
@@ -808,7 +856,7 @@ A complete, working sample implementation is available in the [GitHub repository
 
 | Step | Description | Reference |
 |-----:|-------------|-----------|
-| 1 | Install and configure Microsoft SQL Server and SQL Server Management Studio | [View](#installing-and-configuring-microsoft-sql-server-and-ssms) |
+| 1 | Install and configure Microsoft SQL Server and SQL Server Management Studio | [View](#installing-and-configuring-microsoft-sql-server-and-sql-server-management-studio-ssms) |
 | 2 | Create the database, schema, and insert organizational chart diagram data | [View](#creating-the-database-and-schema) |
 | 3 | Create and configure the ASP.NET Core Web API back-end | [View](#integrating-sql-server-with-aspnet-core-web-api) |
 | 4 | Integrate and configure the Syncfusion® React Diagram component | [View](#integrating-syncfusion-react-diagram) |
