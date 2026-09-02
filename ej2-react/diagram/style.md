@@ -36,6 +36,7 @@ Use the following CSS to customize the connector endpoint handle appearance:
 When a connector endpoint is connected to a node or another connector, apply different styling to indicate the connected state:
 
 ```scss
+
 .e-diagram-endpoint-handle.e-connected {
     fill: red;
     stroke: green;
@@ -46,7 +47,7 @@ When a connector endpoint is connected to a node or another connector, apply dif
 
 ### Disabled Endpoint Handle Styling
 
-For disabled connector endpoints, customize the appearance to clearly indicate the non-interactive state:
+For disabled connector endpoints, customize the appearance to clearly indicate the non-interactive state. Endpoints become disabled when the corresponding connector constraints restrict connection.
 
 ```scss
 
@@ -91,7 +92,7 @@ Control points define the curve shape of Bezier connectors and can be styled ind
     }
 
 ```
-![Bezier Control points](images/bezier-control-point.png)
+![Bezier Control Points](images/bezier-control-point.png)
 
 ### Orthogonal Segment Handles
 
@@ -156,6 +157,18 @@ The selector outline indicates which objects are currently selected:
 
 ![Selector](images/selector.png)
 
+### Selection Border
+
+Customize the border that surrounds selected objects:
+
+```scss
+
+.e-diagram-border {
+    stroke: red;
+  }
+
+```
+
 ## Customizing the Selector Pivot Line
 
 Use the following CSS to customize the line between the selector and rotate handle.
@@ -170,21 +183,9 @@ Use the following CSS to customize the line between the selector and rotate hand
 ```
 ![Pivot line](images/pivot-line.png)
 
-### Selection Border
-
-Customize the border that surrounds selected objects:
-
-```scss
-
-.e-diagram-border {
-    stroke: red;
-  }
-
-```
-
 ## Customizing the Rotate Handle
 
-Use the following CSS to customize the rotate handle properties.
+The rotate handle allows users to rotate selected objects. Use the following CSS to customize its appearance.
 
 ```scss
 
@@ -201,7 +202,7 @@ Use the following CSS to customize the rotate handle properties.
 
 The Symbol Palette provides drag-and-drop functionality with interactive states that can be styled.
 
-### Hover state styling
+### Hover State Styling
 
 Customize the appearance when hovering over symbols in the palette:
 
@@ -214,7 +215,7 @@ Customize the appearance when hovering over symbols in the palette:
 ```
 ![Symbol palette hover](images/symbol-palette-hover.png)
 
-### Selection state styling
+### Selection State Styling
 
 Style the selected symbol appearance in the palette:
 
@@ -294,7 +295,7 @@ Style the text editing container that appears during text input:
   }
 
 ```
-![Text edit box](images/text-edit-box.png) ![Text edit box clicked](images/text-edit-box2.png) 
+![Text edit box](images/text-edit-box.png) ![Text edit box clicked](images/text-edit-box2.png)
 
 ### Text Selection Highlighting
 
@@ -307,11 +308,11 @@ Customize the appearance of selected text within the editing interface:
   }
 
 ```
-![Text edit box selected](images/text-edit-box3.png) 
+![Text edit box selection highlight](images/text-edit-box3.png)
 
 ## Customizing Page Break Indicators
 
-Page break lines help visualize page boundaries when printing or exporting diagrams.
+Page break lines help visualize page boundaries when printing or exporting diagrams. They appear when multiple-page layout or print is enabled.
 
 ```scss
 .e-diagram-page-break {
@@ -320,4 +321,10 @@ Page break lines help visualize page boundaries when printing or exporting diagr
     }
 ```
 
-![Text edit box selected](images/page-break.png) 
+![Page Break](images/page-break.png)
+
+## See Also
+
+* [Nodes Customization](nodes-customization.md)
+* [Connector Customization](connector-customization.md)
+* [Label Appearance](label-appearance.md) 

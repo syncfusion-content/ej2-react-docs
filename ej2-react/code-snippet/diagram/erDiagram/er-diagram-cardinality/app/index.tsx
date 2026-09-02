@@ -1,9 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DiagramComponent, Diagram, ErDiagrams } from "@syncfusion/ej2-react-diagrams";
-import { ConnectorModel, ErConnectorShapeModel } from "@syncfusion/ej2-diagrams";
-
-Diagram.Inject(ErDiagrams);
+import { DiagramComponent, Inject, ErDiagrams } from "@syncfusion/ej2-react-diagrams";
+import { NodeModel, ConnectorModel, ErConnectorShapeModel } from "@syncfusion/ej2-diagrams";
 
 // Define ER Nodes and connectors with a multiplicity type
 const customer: NodeModel = {
@@ -103,8 +101,9 @@ function App() {
       width={'100%'}
       height={'400px'}
       nodes={[customer,order]}
-      connectors={[relationship]}
-    />
+      connectors={[relationship]} >
+      <Inject services={[ErDiagrams]} />
+    </DiagramComponent>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('diagram'));

@@ -16,6 +16,6 @@ Connector segments define the path and visual appearance of connectors between n
 
 The React Diagram component supports three primary types of connector segments, each serving different visual and functional requirements:
 
-* Straight
-* Orthogonal
-* Bezier
+* [Straight](./connector-straight)
+* [Orthogonal](./connector-orthogonal)
+* [Bezier](./connector-bezier)

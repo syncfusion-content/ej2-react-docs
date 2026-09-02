@@ -22,10 +22,12 @@ This section provides a step-by-step guide for setting up a Next.js application 
 | Requirement | Version |
 | --- | --- |
 | React | Matches the React version bundled with the installed Next.js release |
-| Node.js | 18.18.0 or later |
+| Node.js | 18.18.0 or a later LTS version |
 | Operating system | Windows, macOS, or Linux |
 
 N> For the full React-version compatibility matrix with the Syncfusion® Diagram package, refer to the [React supported versions](./getting-started.md#react-supported-versions) section in the main getting-started guide.
+
+N> Run `npm ls react` to check the React version installed in the project.
 
 ## Before You Begin
 
@@ -72,6 +74,8 @@ Choose the required configuration. For this guide, use the following options:
 
 {% endhighlight %}
 {% endtabs %}
+
+N> The prompt options shown may vary depending on the installed version of create-next-app.
 
 Navigate to the project folder:
 
@@ -135,6 +139,8 @@ N> The default App Router layout imports `globals.css`. If the import was remove
 
 N> If you created the project without the `--src-dir` option, `globals.css` lives at `app/globals.css` and the relative path becomes `../node_modules/@syncfusion/ej2-tailwind3-theme/...` (one level, not two).
 
+N> When Tailwind CSS is enabled, place the Syncfusion theme import above the Tailwind directives (`@tailwind base;`, `@tailwind components;`, `@tailwind utilities;`) so that Tailwind utility classes take precedence over the theme styles.
+
 ## Step 4: Add the Diagram component
 
 Import `DiagramComponent` from `@syncfusion/ej2-react-diagrams` and add it to the page.
@@ -160,6 +166,8 @@ export default function Home() {
 At this stage, the Diagram component renders an empty canvas. The next step replaces this code with a complete flowchart example.
 
 N> The Diagram component must have a valid height. If the height is not set, the Diagram canvas may not be visible.
+
+N> The `id` passed to `DiagramComponent` must be unique on the page.
 
 ## Step 5: Create your first Diagram with nodes and connectors
 

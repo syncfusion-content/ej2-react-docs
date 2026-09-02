@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chip Customization in React MultiSelect Dropdown | Syncfusion
-description: Style individual selected-value chips in the React MultiSelect Dropdown by handling the tagging event and applying custom CSS classes through the setClass method.
+description: Style individual selected-value chips in the React MultiSelect Dropdown by handling the tagging event and applying custom CSS classes.
 control: Chip customization 
 platform: ej2-react
 documentation: ug
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Chip Customization in React MultiSelect Dropdown
 
-The MultiSelect provides chip customization through the [`tagging`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#events-tagging) event. Within this event, you can apply custom CSS classes to chip elements by calling the [`setClass`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#taggingeventargs-setclass) method exposed on the `TaggingEventArgs` event argument.
+The MultiSelect provides chip customization through the [`tagging`](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#events-tagging) event. Within this event, you can apply custom CSS classes to chip elements by calling the [`setClass`](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#taggingeventargs-setclass) method exposed on the `TaggingEventArgs` event argument.
 
-### Event arguments
+## Event arguments
 
 The `tagging` event passes a `TaggingEventArgs` object with the following useful members:
 
@@ -52,7 +52,7 @@ The following sample demonstrates chip customization with the MultiSelect compon
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/chip-customization-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/chip-customization-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +65,7 @@ The following sample demonstrates chip customization with the MultiSelect compon
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/chip-customization-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/chip-customization-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
