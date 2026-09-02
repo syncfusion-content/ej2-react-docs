@@ -83,7 +83,7 @@ You can use the following key shortcuts to access the MultiSelect without interr
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/basic-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/basic-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +96,7 @@ You can use the following key shortcuts to access the MultiSelect without interr
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/basic-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/basic-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
