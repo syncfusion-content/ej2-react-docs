@@ -10,10 +10,10 @@ domainurl: ##DomainURL##
 
 # How to use FormValidator with React Slider
 
-The Slider component can be validated using our [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). The following steps walk-through Slider validation.
+The React Slider component can be validated using our [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). The following steps walk-through React Slider validation.
 
-* Render the Slider component inside a form.
-* Bind [changed](https://ej2.syncfusion.com/react/documentation/api/slider/#changed) event in the Slider component to validate the Slider value when the value changes.
+* Render the React Slider component inside a form.
+* Bind [changed](https://ej2.syncfusion.com/react/documentation/api/slider/#changed) event in the React Slider component to validate the React Slider value when the value changes.
 * Initialize and render FormValidator for the form using form ID.
 
    ```ts
@@ -24,11 +24,11 @@ The Slider component can be validated using our [FormValidator](https://ej2.sync
 
     ```
 
-* Set the required property in the FormValidator [rules](https://ej2.syncfusion.com/react/documentation/api/form-validator/#rules) collection. Here, the [min](https://ej2.syncfusion.com/react/documentation/api/slider/#min) property of Slider that sets the minimum value in the Slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
+* Set the required property in the FormValidator [rules](https://ej2.syncfusion.com/react/documentation/api/form-validator/#rules) collection. Here, the [min](https://ej2.syncfusion.com/react/documentation/api/slider/#min) property of React Slider that sets the minimum value in the React Slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
 
 ```ts
 
-    // Slider element
+    // React Slider element
     <div id="default" name="slider"></div>
 
    // sets required property in the FormValidator rules collection
@@ -43,13 +43,13 @@ The Slider component can be validated using our [FormValidator](https://ej2.sync
 
 ```
 
-> Form validation is done either by ID or name value of the Slider component. The ID of the Slider shown above is used to validate it.
+> Form validation is done either by ID or name value of the React Slider component. The ID of the Slider shown above is used to validate it.
 
-Using Slider name: Render Slider with name attribute. In the following code snippet, name attribute value of Slider is used for form validation.
+Using React Slider name: Render React Slider with name attribute. In the following code snippet, name attribute value of Slider is used for form validation.
 
 ```ts
 
-   // Slider element
+   // React Slider element
    <div id="default" name="slider"></div>
 
    // sets required property in the FormValidator rules collection
@@ -70,7 +70,7 @@ Using Slider name: Render Slider with name attribute. In the following code snip
   formObj.validate();
 ```
 
-* Slider validation can be done during value changes in slider. Refer to the following code snippet.
+* React Slider validation can be done during value changes in slider. Refer to the following code snippet.
 
 ```ts
   // Change event handler for slider
@@ -79,14 +79,14 @@ Using Slider name: Render Slider with name attribute. In the following code snip
   }
 ```
 
-The `FormValidator` has following default validation rules, which are used to validate the Slider component.
+The `FormValidator` has following default validation rules, which are used to validate the React Slider component.
 
 | Rules | Description | Example |
 | ------------- | ------------- | ------------- |
-| `max` | Slider component must have value less than or equal to `max` number | if `max: 3`, **3** is valid and **4** is invalid |
-| `min` | Slider component must have value greater than or equal to `min` number | if `min: 4`, **5** is valid and **2** is invalid |
-| `regex` | Slider component must have valid value in `regex` format | if `regex: '/4/`, **4** is valid and **1** is invalid |
-| `range` | Slider component must have value between `range` number | if `range: [4,5]`, **4** is valid and **6** is invalid |
+| `max` | React Slider component must have value less than or equal to `max` number | if `max: 3`, **3** is valid and **4** is invalid |
+| `min` | React Slider component must have value greater than or equal to `min` number | if `min: 4`, **5** is valid and **2** is invalid |
+| `regex` | React Slider component must have valid value in `regex` format | if `regex: '/4/`, **4** is valid and **1** is invalid |
+| `range` | React Slider component must have value between `range` number | if `range: [4,5]`, **4** is valid and **6** is invalid |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

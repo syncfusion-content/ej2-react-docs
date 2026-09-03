@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize input and anchor elements in React Button
 
-Native HTML input and anchor elements can be styled using predefined Syncfusion button classes. In the following example, the input element is styled as a link button with the `e-btn e-link` class, and the anchor element is styled as a primary button with the `e-btn e-primary` class.
+Native HTML input and anchor elements can be styled using predefined Syncfusion React Button classes. In the following example, the input element is styled as a link React Button with the `e-btn e-link` class, and the anchor element is styled as a primary React Button with the `e-btn e-primary` class.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}

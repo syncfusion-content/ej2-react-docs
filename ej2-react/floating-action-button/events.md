@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Events in React Floating Action Button
 
-The Floating Action Button component provides events to respond to user interactions. This section explains the available events, their purposes, and how to handle them in your React application.
+The React Floating Action Button component provides events to respond to user interactions. This section explains the available events, their purposes, and how to handle them in your React application.
 
 ## created
 
-The `created` event triggers after the Floating Action Button component is initialized and ready for interaction. Use this event to perform initialization tasks or access component properties after rendering.
+The `created` event triggers after the React Floating Action Button component is initialized and ready for interaction. Use this event to perform initialization tasks or access component properties after rendering.
 
 ```ts
 import { FabComponent } from '@syncfusion/ej2-react-buttons';
@@ -36,7 +36,7 @@ export default App;
 
 ## onclick
 
-The `click` event triggers when the Floating Action Button is clicked by the user. Handle this event to execute actions or trigger workflows when the button is activated through mouse click or keyboard press.
+The `click` event triggers when the React Floating Action Button is clicked by the user. Handle this event to execute actions or trigger workflows when the button is activated through mouse click or keyboard press.
 
 ```ts
 import { FabComponent } from '@syncfusion/ej2-react-buttons';
@@ -56,7 +56,7 @@ function App() {
 export default App;
 ```
 
-Below example demonstrates the click event of the Floating Action Button.
+Below example demonstrates the click event of the React Floating Action Button.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

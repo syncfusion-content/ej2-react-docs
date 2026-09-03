@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # EJ1 API Migration in React File Upload
 
-This article describes the API migration process of File Upload component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
+This article describes the API migration process of React File Upload component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Accessibility
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to set the read-only TextBox in React TextBox
 
-Prevent user input while allowing text selection and copying by setting the [readonly](https://ej2.syncfusion.com/react/documentation/api/textbox/#readonly) property to `true` on the TextBoxComponent. Read-only TextBoxes are useful for displaying static data or values that should not be modified directly by users.
+Prevent user input while allowing text selection and copying by setting the [readonly](https://ej2.syncfusion.com/react/documentation/api/textbox/#readonly) property to `true` on the TextBox Component. Read-only React TextBoxes are useful for displaying static data or values that should not be modified directly by users.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

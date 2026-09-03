@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Resize in React Image Editor
 
-The resize feature in an Image Editor is a valuable tool that empowers users to modify the size or dimensions of an image to meet their specific requirements. Whether it's for printing, web display, or any other purpose, this feature allows users to tailor images to their desired specifications.
+The resize feature in an React Image Editor is a valuable tool that empowers users to modify the size or dimensions of an image to meet their specific requirements. Whether it's for printing, web display, or any other purpose, this feature allows users to tailor images to their desired specifications.
 
 ## Apply resize to the image 
 
-The Image Editor control includes a [`resize`](https://ej2.syncfusion.com/react/documentation/api/image-editor#resize) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
+The React Image Editor control includes a [`resize`](https://ej2.syncfusion.com/react/documentation/api/image-editor#resize) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
 
 * width: Specifies the resizing width of the image.
 

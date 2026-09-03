@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resize in React TextArea
 
-The TextArea supports resizing to enhance user experience and accommodate varying content. Configure resizing behavior using the [resizeMode](https://ej2.syncfusion.com/react/documentation/api/textarea/#resizeMode) API, which offers several options:
+The React TextArea supports resizing to enhance user experience and accommodate varying content. Configure resizing behavior using the [resizeMode](https://ej2.syncfusion.com/react/documentation/api/textarea/#resizeMode) API, which offers several options:
 
 | Type  | Description |
 | -- | -- |
@@ -32,9 +32,9 @@ The TextArea supports resizing to enhance user experience and accommodate varyin
 
 {% previewsample "page.domainurl/code-snippet/textarea/resize-cs1" %}
 
-## Width of react TextArea component
+## Width of React TextArea component
 
-Customize the TextArea width using the [width](https://ej2.syncfusion.com/react/documentation/api/textarea/#width) property for precise adjustment according to your layout requirements.
+Customize the React TextArea width using the [width](https://ej2.syncfusion.com/react/documentation/api/textarea/#width) property for precise adjustment according to your layout requirements.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to disable in React Radio Button
 
-Prevent user interaction with a RadioButton by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#disabled) property to `true`. When disabled, the RadioButton appears grayed out and cannot be selected by the user, though it remains visible in the UI.
+Prevent user interaction with a React Radio Button by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#disabled) property to `true`. When disabled, the React Radio Button appears grayed out and cannot be selected by the user, though it remains visible in the UI.
 
-The following example demonstrates how to disable a RadioButton and display the selected state using the [`change`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#change) event.
+The following example demonstrates how to disable a React Radio Button and display the selected state using the [`change`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#change) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

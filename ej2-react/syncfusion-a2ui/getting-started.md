@@ -8,13 +8,27 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion A2UI for React
+# Getting Started with Syncfusion A2UI
 
-This section walks through creating a simple React app that renders a Syncfusion EJ2 React component from a list of [A2UI v0.9](https://a2ui.org/) messages using the [`@syncfusion/ej2-react-a2ui`](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package. The example below uses a `DataGrid` for illustration, but the same pattern — define an A2UI v0.9 message list, feed it to a `MessageProcessor` configured with `syncfusionCatalog`, and render the result with `<SyncfusionA2UIProvider />` — works for every component in the catalog (Chart, Scheduler, Calendar, RichTextEditor, Diagram, Spreadsheet, form inputs, navigation, feedback overlays, and more).
+This section walks through creating a simple React app that renders a Syncfusion EJ2 React component from a list of [A2UI v0.9](https://a2ui.org/) messages using the [`@syncfusion/ej2-react-a2ui`](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package. The example below uses a `DataGrid` for illustration, but the same pattern — define an A2UI v0.9 message list, feed it to a `MessageProcessor` configured with `syncfusionCatalog`, and render the result with `<SyncfusionA2UIProvider/>` — works for every component in the catalog (`Chart`, `Scheduler`, `Calendar`, `RichTextEditor`, `Diagram`, `Spreadsheet` and more).
 
 ## Prerequisites
 
-Before getting started, ensure that your development environment meets the system requirements for Syncfusion React UI components. System Requirements page documents the supported React, Node.js, and npm versions, and includes the React-version compatibility table for Syncfusion React components.
+The following tools and runtime are required to build and run a Syncfusion A2UI React application.
+
+| Tool | Version |
+|------|---------|
+| React | 15.5.4 or higher |
+| Node.js (optional) | 14.0.0 or above |
+
+### React supported versions
+
+| React version | Minimum @syncfusion/ej2-react-* version |
+|---------------|----------------------------------------|
+| [React v19](https://react.dev/blog/2024/12/05/react-19) | 29.1.33 and above |
+| [React v18](https://react.dev/blog/2022/03/29/react-v18) | 20.2.36 and above |
+| [React v17](https://legacy.reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
+
 
 ## Set up a development environment
 
@@ -50,7 +64,7 @@ Verify the Vite dev server starts (the terminal prints a `http://localhost:5173/
 
 ## Install the Syncfusion A2UI React package
 
-The `@syncfusion/ej2-react-a2ui` package is published to the npm registry. It bundles the A2UI v0.9 runtime, all Syncfusion EJ2 React adapters, and `Zod` as regular dependencies, so a single install line is enough:
+The [`@syncfusion/ej2-react-a2ui`](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package is published to the npm registry. It bundles the A2UI v0.9 runtime, all Syncfusion EJ2 React adapters, and `Zod` as regular dependencies, so a single install line is enough:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -74,7 +88,11 @@ npm install @syncfusion/ej2-tailwind3-theme --save
 {% endhighlight %}
 {% endtabs %}
 
-> Replace `@syncfusion/ej2-tailwind3-theme` with the theme package that matches your design system: `@syncfusion/ej2-material-theme` (Material), `@syncfusion/ej2-fluent2-theme` (Fluent 2), `@syncfusion/ej2-material3-theme` (Material 3), or `@syncfusion/ej2-bootstrap5-theme` (Bootstrap 5).
+> **Note**: Replace `@syncfusion/ej2-tailwind3-theme` with the theme package that matches your design system: 
+> * `@syncfusion/ej2-material-theme` (Material), 
+> * `@syncfusion/ej2-fluent2-theme` (Fluent 2), 
+> * `@syncfusion/ej2-material3-theme` (Material 3), or
+> * `@syncfusion/ej2-bootstrap5-theme` (Bootstrap 5).
 
 ### Clear Vite's default styles
 
@@ -118,6 +136,8 @@ Run the application using the following command:
 npm run dev
 ```
 
+![Syncfusion a2ui getting started output](./../appearance/images/a2ui-getting-started.png)
+
 Open the generated local URL (for example, `http://localhost:5173/`) in the browser. The application displays a Syncfusion EJ2 `DataGrid` with the two employee rows, paging, and sorting enabled — rendered entirely from the static A2UI v0.9 message list above.
 
 ## Register the Syncfusion license key
@@ -129,7 +149,7 @@ For instructions on generating and registering a license key, see:
 * [How to generate a Syncfusion React license key](../licensing/license-key-generation)
 * [How to register a Syncfusion React license key](../licensing/license-key-registration)
 
-## Where to go next
+## See also
 
-* **[Overview](./overview)** — what the package is, who it is for, and how A2UI fits in.
-* **[A2UI v0.9 protocol](https://a2ui.org/)** — message shapes, the `SurfaceModel`, and the `MessageProcessor` API.
+* [Overview](./overview)
+* [A2UI v0.9 protocol](https://a2ui.org/)

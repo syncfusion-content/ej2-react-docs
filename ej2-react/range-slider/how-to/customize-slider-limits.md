@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize the Slider limits in React Slider
 
-The Slider appearance can be customized using CSS by overriding Slider CSS classes. By default, the Slider uses the `e-limits` class for the limit bar. You can override this class with custom color values as shown below:
+The React Slider appearance can be customized using CSS by overriding React Slider CSS classes. By default, the React Slider uses the `e-limits` class for the limit bar. You can override this class with custom color values as shown below:
 
 ```css
 .e-slider-container.e-horizontal .e-limits {

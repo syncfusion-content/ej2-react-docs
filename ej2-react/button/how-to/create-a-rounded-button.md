@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to create a rounded button in React Button
 
-A button with rounded corners can be created by adding a CSS class with the `border-radius` property. In the following example, the `e-round-corner` class applies a `5px` border radius.
+A React Button with rounded corners can be created by adding a CSS class with the `border-radius` property. In the following example, the `e-round-corner` class applies a `5px` border radius.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

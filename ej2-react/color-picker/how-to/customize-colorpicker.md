@@ -29,9 +29,9 @@ The following sample demonstrates these features.
 
 ## Hide input area from picker
 
-By default, the input area is rendered in the ColorPicker. To hide it, add the `e-hide-value` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/color-picker#cssclass) property.
+By default, the input area is rendered in the React Color Picker. To hide it, add the `e-hide-value` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/color-picker#cssclass) property.
 
-In the following sample, the ColorPicker renders without an input area.
+In the following sample, the React Color Picker renders without an input area.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,9 +46,9 @@ In the following sample, the ColorPicker renders without an input area.
 
 ## Custom handle
 
-The ColorPicker handle shape and UI can be customized. In the following example, the handle is customized as an SVG icon; you can customize it based on your requirements.
+The React Color Picker handle shape and UI can be customized. In the following example, the handle is customized as an SVG icon; you can customize it based on your requirements.
 
-The following sample shows the customized ColorPicker handle.
+The following sample shows the customized React Color Picker handle.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -82,9 +82,9 @@ In the following sample, the `picker` icon is added to the primary button, and t
 
 ## Display hex code in input
 
-The ColorPicker input element can be displayed in place of the primary button. The applied color hex code is updated in the input.
+The React Color Picker input element can be displayed in place of the primary button. The applied color hex code is updated in the input.
 
-The following sample shows the ColorPicker with an input displaying the hex code.
+The following sample shows the React Color Picker with an input displaying the hex code.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -99,7 +99,7 @@ The following sample shows the ColorPicker with an input displaying the hex code
 
 ## Custom UI
 
-The ColorPicker UI can be customized in various ways. The following sample shows an Excel-like UI customization using the SplitButton and Dialog components. When you click the "more colors" option from the palette, a dialog containing the ColorPicker opens.
+The React Color Picker UI can be customized in various ways. The following sample shows an Excel-like UI customization using the SplitButton and Dialog components. When you click the "more colors" option from the palette, a dialog containing the React Color Picker opens.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

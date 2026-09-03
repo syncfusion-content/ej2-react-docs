@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Limits in React Slider
 
-Slider limits restrict the thumb movement within a specific range. This is useful when higher or lower values could affect the process or product using the Slider.
+React Slider limits restrict the thumb movement within a specific range. This is useful when higher or lower values could affect the process or product using the Slider.
 
 The following are the options available in the Slider's limits object. Each option is optional.
 
@@ -22,11 +22,11 @@ The following are the options available in the Slider's limits object. Each opti
 * [`startHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#starthandlefixed): Locks the first handle.
 * [`endHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#endhandlefixed): Locks the second handle.
 
-## Default and MinRange Slider limits
+## Default and MinRange React Slider limits
 
-The Default and MinRange Slider has a single handle, so you can use [`minStart`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#minstart), [`minEnd`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#minend), and [`startHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#starthandlefixed) options.
+The Default and MinRange React Slider has a single handle, so you can use [`minStart`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#minstart), [`minEnd`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#minend), and [`startHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#starthandlefixed) options.
 When limits are enabled, the restricted area appears darkened, allowing you to clearly distinguish between allowed and restricted ranges.
-The following snippet shows how to enable limits in the Slider.
+The following snippet shows how to enable limits in the React Slider.
 
 ```ts
 
@@ -88,8 +88,8 @@ In the Range Slider, both handles can be restricted and locked using the limits 
 
 ## Handle lock
 
-Lock Slider handle movement by enabling the [`startHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#starthandlefixed) and [`endHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#endhandlefixed) properties in the limits object.
-The following example locks both Slider handles in place.
+Lock React Slider handle movement by enabling the [`startHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#starthandlefixed) and [`endHandleFixed`](https://ej2.syncfusion.com/react/documentation/api/slider/limitDataModel/#endhandlefixed) properties in the limits object.
+The following example locks both React Slider handles in place.
 
 ```ts
 

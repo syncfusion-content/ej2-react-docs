@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with React In-place Editor
 
-This section briefly explains about how to create a simple In-place Editor and demonstrate the basic usage of the In-place Editor component.
+This section briefly explains about how to create a simple React In-place Editor and demonstrate the basic usage of the React In-place Editor component.
 
 ## Dependencies
 
-The following is the list of dependencies required to use the In-place Editor component in your application.
+The following is the list of dependencies required to use the React In-place Editor component in your application.
 
 ```javascript
 |-- @syncfusion/ej2-react-inplace-editor
@@ -68,9 +68,9 @@ Install the below required dependency package in order to use the `In-place Edit
     npm install @syncfusion/ej2-react-inplace-editor –save
     ```
 
-The above package installs [In-place Editor dependencies](#dependencies) which are required to render the In-place Editor component in React environment.
+The above package installs [React In-place Editor dependencies](#dependencies) which are required to render the React In-place Editor component in React environment.
 
-* In-place Editor CSS files are available in the `ej2-react-inplace-editor` package folder. Import the In-place Editor component's required CSS references as follows in `src/App.css`.
+* React In-place Editor CSS files are available in the `ej2-react-inplace-editor` package folder. Import the React In-place Editor component's required CSS references as follows in `src/App.css`.
 
     ```css
     @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -86,11 +86,11 @@ The above package installs [In-place Editor dependencies](#dependencies) which a
     @import '../node_modules/@syncfusion/ej2-react-inplace-editor/styles/tailwind3.css';
     ```
 
-## Add the In-place Editor with Textbox
+## Add the React In-place Editor with Textbox
 
-By default, Essential<sup style="font-size:70%">&reg;</sup> JS2 React TextBox component is rendered in In-place Editor with [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType) property sets as Text.
+By default, Essential<sup style="font-size:70%">&reg;</sup> JS2 React TextBox component is rendered in React In-place Editor with [`type`](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/inputType) property sets as Text.
 
-* Import the In-place Editor component to your `src/App.tsx` file using following code.
+* Import the React In-place Editor component to your `src/App.tsx` file using following code.
 
 
 

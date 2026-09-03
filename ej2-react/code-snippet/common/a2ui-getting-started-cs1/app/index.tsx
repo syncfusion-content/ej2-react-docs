@@ -1,21 +1,22 @@
 import { useState, useEffect, useRef } from 'react';
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { syncfusionCatalog, SyncfusionA2UIProvider } from '@syncfusion/ej2-react-a2ui';
 import { MessageProcessor } from '@a2ui/web_core/v0_9';
-import './../index.css';
+import type { SurfaceModel } from '@a2ui/web_core/v0_9';
+import type { ReactComponentImplementation } from '@a2ui/react/v0_9';
+import './App.css';
 
-// Minimal A2UI message list that renders a Syncfusion Grid with two employee rows.
-// processMessages() accepts A2uiMessage[] (one message per array item).
-const MESSAGES = [
+const GRID_MESSAGES = [
     {
-        version: 'v0.9',
+        version: 'v0.9' as const,
         createSurface: { surfaceId: 'surface-1', catalogId: 'syncfusion-a2ui-catalog' },
     },
     {
-        version: 'v0.9',
+        version: 'v0.9' as const,
         updateComponents: {
             surfaceId: 'surface-1',
             components: [
-                { id: 'root', component: 'Column', children: ['grid1'] },
+                { id: 'root', component: 'Column', gap: '16px', padding: '24px', children: ['grid1'] },
                 {
                     id: 'grid1',
                     component: 'SyncfusionDataGrid',
@@ -35,7 +36,7 @@ const MESSAGES = [
         },
     },
     {
-        version: 'v0.9',
+        version: 'v0.9' as const,
         updateDataModel: {
             surfaceId: 'surface-1',
             path: '/rows',
@@ -48,22 +49,26 @@ const MESSAGES = [
 ];
 
 function App() {
-    const [surface, setSurface] = useState(null);
+    const [surface, setSurface] = useState<SurfaceModel<ReactComponentImplementation> | null>(null);
 
     const processor = useRef(
-        new MessageProcessor([syncfusionCatalog]),
+        new MessageProcessor<ReactComponentImplementation>([syncfusionCatalog]),
     ).current;
 
     useEffect(() => {
         const sub = processor.onSurfaceCreated(setSurface);
-        processor.processMessages(MESSAGES);
         return () => sub.unsubscribe();
     }, [processor]);
 
+    const renderGrid = () => processor.processMessages(GRID_MESSAGES);
+
     return (
         <div>
+            {!surface && (
+                <ButtonComponent onClick={renderGrid}>Render Employee Grid</ButtonComponent>
+            )}
             {surface && <SyncfusionA2UIProvider surface={surface} />}
         </div>
     );
 }
-export default App;
+export default App

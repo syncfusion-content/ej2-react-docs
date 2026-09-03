@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Index in React Drop down button component | Syncfusion
-description: Learn here all about Index in Syncfusion React Drop down button component of Syncfusion Essential JS 2 and more.
+title: Index in React Dropdown Menu component | Syncfusion
+description: Learn here all about Index in Syncfusion React Dropdown Menu component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Drop down button component
+# Index in React Dropdown Menu component
 
-DropDownButton component is used to toggle contextual overlays for displaying list of action items. It can contain both text and images
+React Dropdown Menu component is used to toggle contextual overlays for displaying list of action items. It can contain both text and images
 
 ## Key Features
 

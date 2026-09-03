@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Slider
 
-The Range Slider component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Slider component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Range Slider component is outlined below.
+The accessibility compliance for the React Slider component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,7 +40,7 @@ The accessibility compliance for the Range Slider component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Range Slider component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/slider/) patterns to meet the accessibility. The following ARIA attributes are used in the Range Slider component:
+The React Slider component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/slider/) patterns to meet the accessibility. The following ARIA attributes are used in the React Slider component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -49,27 +49,27 @@ The Range Slider component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/ap
 | `aria-valuemax` | Indicates the Maximum value of the slider. |
 | `aria-valuenow` | Indicates the current value of the slider. |
 | `aria-valuetext` | Returns the current text of the slider. |
-| `aria-orientation` | Indicates whether the Slider is oriented horizontally or vertically. |
-| `aria-label` | Provides an accessible name for the Slider, serving as label text for the Slider's left and right buttons (for increment and decrement). |
+| `aria-orientation` | Indicates whether the React Slider is oriented horizontally or vertically. |
+| `aria-label` | Provides an accessible name for the React Slider, serving as label text for the React Slider's left and right buttons (for increment and decrement). |
 
 ## Keyboard interaction
 
-The Range Slider component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline to assist people who use assistive technologies (AT) and keyboard navigation. The following keyboard shortcuts are supported.
+The React Slider component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline to assist people who use assistive technologies (AT) and keyboard navigation. The following keyboard shortcuts are supported.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Right Arrow</kbd>/<kbd>Up Arrow</kbd> | Increase the Slider value. |
-| <kbd>Left Arrow</kbd>/<kbd>Down Arrow</kbd> | Decrease the Slider value. |
-| <kbd>Home</kbd> | Moves to the start value (for Range Slider when the second thumb is focused and the Home key is pressed, it moves to the first thumb value). |
-| <kbd>End</kbd> | Moves to the end value (for Range Slider when the first thumb is focused and the End key is pressed, it moves to the second thumb value). |
-| <kbd>Page Up</kbd> | 	Increases the Slider by `largeStep` value. |
-| <kbd>Page Down</kbd> | Decreases the Slider by `largeStep` value. |
+| <kbd>Right Arrow</kbd>/<kbd>Up Arrow</kbd> | Increase the React Slider value. |
+| <kbd>Left Arrow</kbd>/<kbd>Down Arrow</kbd> | Decrease the React Slider value. |
+| <kbd>Home</kbd> | Moves to the start value (for React Slider when the second thumb is focused and the Home key is pressed, it moves to the first thumb value). |
+| <kbd>End</kbd> | Moves to the end value (for React Slider when the first thumb is focused and the End key is pressed, it moves to the second thumb value). |
+| <kbd>Page Up</kbd> | 	Increases the React Slider by `largeStep` value. |
+| <kbd>Page Down</kbd> | Decreases the React Slider by `largeStep` value. |
 
 ## Ensuring accessibility
 
 Accessibility compliance is ensured through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The following sample demonstrates the Range Slider component's accessibility compliance. Open the [sample](https://ej2.syncfusion.com/accessibility/slider.html) in a new window to evaluate accessibility with these tools.
+The following sample demonstrates the React Slider component's accessibility compliance. Open the [sample](https://ej2.syncfusion.com/accessibility/slider.html) in a new window to evaluate accessibility with these tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/slider.html" %}
 

@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 This content provides the exact CSS structure you can use to modify the component's appearance based on your preferences.
 
-## Customizing the Slider track
+## Customizing the React Slider track
 
-The following CSS customizes the Slider track.
+The following CSS customizes the React Slider track.
 
 ```css
 .e-control-wrapper.e-slider-container.e-horizontal .e-slider-track {
@@ -23,9 +23,9 @@ The following CSS customizes the Slider track.
 }
 ```
 
-## Customizing the Slider handle
+## Customizing the React Slider handle
 
-The following CSS customizes the Slider handle properties.
+The following CSS customizes the React Slider handle properties.
 
 ```css
 .e-control-wrapper.e-slider-container .e-slider .e-handle {
@@ -35,9 +35,9 @@ The following CSS customizes the Slider handle properties.
 }
 ```
 
-## Customizing the Slider limits
+## Customizing the React Slider limits
 
-The following CSS customizes the Slider limits.
+The following CSS customizes the React Slider limits.
 
 ```css
 .e-control-wrapper.e-slider-container.e-horizontal .e-limits {
@@ -45,9 +45,9 @@ The following CSS customizes the Slider limits.
 }
 ```
 
-## Customizing the Slider ticks
+## Customizing the React Slider ticks
 
-The following CSS customizes the Slider ticks.
+The following CSS customizes the React Slider ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {
@@ -56,9 +56,9 @@ The following CSS customizes the Slider ticks.
 }
 ```
 
-## Customizing the Slider buttons
+## Customizing the React Slider buttons
 
-The following CSS customizes the Slider buttons.
+The following CSS customizes the React Slider buttons.
 
 ```css
 .e-control-wrapper.e-slider-container .e-slider-button {

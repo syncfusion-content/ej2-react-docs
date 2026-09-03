@@ -447,7 +447,7 @@ Fetch all events from Google Calendar and update the Scheduler. Add this method 
 
 Update your main `App.js` file to render the Schedule component:
 
-```tsx
+```js
 import React from 'react';
 import Schedule from './Scheduler/schedule';
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to pre-select on render in React Button Group
 
-Display a button in the selected state when the ButtonGroup first renders by adding the `checked` attribute to the corresponding input element. This is useful for setting default selections in radio and checkbox button groups.
+Display a button in the selected state when the React Button Group first renders by adding the `checked` attribute to the corresponding input element. This is useful for setting default selections in radio and checkbox button groups.
 
 The following example demonstrates how to set a selected state on initial render:
 

@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Adornments in React TextArea
 
-Adornments enable custom elements (icons, text labels, or action buttons) to be added before or after the TextArea using the `prependTemplate` and `appendTemplate` properties. Use `adornmentFlow` and `adornmentOrientation` to arrange adornments horizontally or vertically for flexible layouts.
+Adornments enable custom elements (icons, text labels, or action buttons) to be added before or after the React TextArea using the `prependTemplate` and `appendTemplate` properties. Use `adornmentFlow` and `adornmentOrientation` to arrange adornments horizontally or vertically for flexible layouts.
 
 ## Common Use Cases
 
@@ -21,9 +21,9 @@ Adornments enable custom elements (icons, text labels, or action buttons) to be 
 - **Validation & Status**: Character count or error icons.
 - **Flexible Layout**: Horizontal or vertical adornment flow.
 
-## Adding Adornments with Orientation to TextArea
+## Adding Adornments with Orientation to React TextArea
 
-Use `prependTemplate` and `appendTemplate` to add custom HTML content before and after the TextArea.
+Use `prependTemplate` and `appendTemplate` to add custom HTML content before and after the React TextArea.
 
 - **`prependTemplate`**: Renders elements before the textarea.
 
@@ -31,7 +31,7 @@ Use `prependTemplate` and `appendTemplate` to add custom HTML content before and
 
 You can control how adornments are positioned and arranged using the `adornmentFlow` and `adornmentOrientation` properties. Both properties accept only `Horizontal` or `Vertical` values defined in the `AdornmentsDirection` type.
 
-- **`adornmentFlow`**: Defines where adornments appear around the TextArea.
+- **`adornmentFlow`**: Defines where adornments appear around the React TextArea.
   - **Horizontal**: Prepend on the left, append on the right.
   - **Vertical**: Prepend above, append below.
 
@@ -39,7 +39,7 @@ You can control how adornments are positioned and arranged using the `adornmentF
   - **Horizontal**: Items displayed in a row.
   - **Vertical**: Items displayed in a column.
 
-The following example demonstrates how to add adornments with orientation in the TextArea control.
+The following example demonstrates how to add adornments with orientation in the React TextArea control.
 
 `[Class-component]`
 

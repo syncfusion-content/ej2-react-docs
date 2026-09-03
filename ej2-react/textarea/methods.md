@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Methods in React TextArea
 
-This section outlines the methods available for interacting with the TextArea component.
+This section outlines the methods available for interacting with the React TextArea component.
 
 ## FocusIn method
 

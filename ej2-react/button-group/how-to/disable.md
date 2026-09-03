@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # How to disable in React Button Group
 
-Disable buttons in a ButtonGroup to prevent user interaction. You can disable individual buttons or the entire ButtonGroup.
+Disable buttons in a React Button Group to prevent user interaction. You can disable individual buttons or the entire React Button Group.
 
 ## Disable a particular button
 
-Add the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button#disabled) attribute to a specific button element to disable only that button within the ButtonGroup.
+Add the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button#disabled) attribute to a specific button element to disable only that button within the React Button Group.
 
-## Disable the entire ButtonGroup
+## Disable the entire React Button Group
 
-Add the `disabled` attribute to all button elements to disable the entire ButtonGroup.
+Add the `disabled` attribute to all button elements to disable the entire React Button Group.
 
-The following example demonstrates how to disable individual buttons and the entire ButtonGroup:
+The following example demonstrates how to disable individual buttons and the entire React Button Group:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -33,4 +33,4 @@ The following example demonstrates how to disable individual buttons and the ent
 
  {% previewsample "page.domainurl/code-snippet/button-group/default-cs3" %}
 
-> To disable radio/checkbox type ButtonGroup, the `disabled` attribute should be added to the particular input element.
+> To disable radio/checkbox type React Button Group, the `disabled` attribute should be added to the particular input element.

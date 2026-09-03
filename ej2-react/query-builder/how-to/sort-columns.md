@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to sort columns in React Query Builder UI
 
-The [`sortDirection`](https://ej2.syncfusion.com/react/documentation/api/query-builder#sortdirection) property enables you to sort the fields displayed in the Query Builder in ascending or descending order. This improves discoverability and field selection efficiency.
+The [`sortDirection`](https://ej2.syncfusion.com/react/documentation/api/query-builder#sortdirection) property enables you to sort the fields displayed in the React Query Builder UI in ascending or descending order. This improves discoverability and field selection efficiency.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

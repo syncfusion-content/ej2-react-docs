@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to show recent color in React Color Picker
 
-The [`showRecentColors`](https://ej2.syncfusion.com/react/documentation/api/color-picker#showRecentColors) property enables the display of recently selected colors in the ColorPicker's palette mode. This feature helps users quickly access their frequently used colors.
+The [`showRecentColors`](https://ej2.syncfusion.com/react/documentation/api/color-picker#showRecentColors) property enables the display of recently selected colors in the React Color Picker's palette mode. This feature helps users quickly access their frequently used colors.
 
 >Note: The [`showRecentColors`](https://ej2.syncfusion.com/react/documentation/api/color-picker#showRecentColors) feature displays up to 10 recent colors as tiles and is available only in `palette` mode.
 

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Icons in React DropDownButton | Syncfusion
-description: Add icons to the React DropDownButton via the iconCss property. Position the icon left, right, or top, and create an icon-only button.
+title: Icons in React Dropdown Menu | Syncfusion
+description: Add icons to the React Dropdown Menu via the iconCss property. Position the icon left, right, or top, and create an icon-only button.
 control: Icons 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Icons in React DropDownButton
+# Icons in React Dropdown Menu
 
-## DropDownButton icons
+## React Dropdown Menu icons
 
-Display an icon in the DropDownButton using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconcss) property. Set the property to `e-icons` along with the desired icon CSS class. By default, icons appear on the left side of the button text. Customize the icon position using the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconposition) property.
+Display an icon in the React Dropdown Menu using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconcss) property. Set the property to `e-icons` along with the desired icon CSS class. By default, icons appear on the left side of the button text. Customize the icon position using the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconposition) property.
 
-The following example demonstrates DropDownButtons with default and `Top` icon positions:
+The following example demonstrates React Dropdown Menus with default and `Top` icon positions:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -27,9 +27,9 @@ The following example demonstrates DropDownButtons with default and `Top` icon p
 
  {% previewsample "page.domainurl/code-snippet/drop-down-button/icon-cs1" %}
 
-### Icon-only DropDownButton
+### Icon-only React Dropdown Menu
 
-Create an icon-only DropDownButton by using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconcss) property and hiding the dropdown caret with the `e-caret-hide` class through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#cssclass) property.
+Create an icon-only React Dropdown Menu by using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconcss) property and hiding the dropdown caret with the `e-caret-hide` class through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#cssclass) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -42,7 +42,7 @@ Create an icon-only DropDownButton by using the [`iconCss`](https://ej2.syncfusi
 
  {% previewsample "page.domainurl/code-snippet/drop-down-button/icon-only-cs1" %}
 
-### DropDownButton with sprite image
+### React Dropdown Menu with sprite image
 
 Use sprite images as button icons by applying the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconcss) property. The following example uses the `e-image` class with background positioning. Set the element's `width` and `height` to `32px` to properly display the sprite image.
 
@@ -61,7 +61,7 @@ Use sprite images as button icons by applying the [`iconCss`](https://ej2.syncfu
 
 ## Vertical button
 
-Create a vertical DropDownButton layout by adding the `e-vertical` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#cssclass) property. This orientation positions the button icon above the text.
+Create a vertical React Dropdown Menu layout by adding the `e-vertical` class using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#cssclass) property. This orientation positions the button icon above the text.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -74,7 +74,7 @@ Create a vertical DropDownButton layout by adding the `e-vertical` class using t
 
  {% previewsample "page.domainurl/code-snippet/drop-down-button/vertical-cs1" %}
 
-> The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the DropDownButton using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconcss) property.
+> The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the React Dropdown Menu using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconcss) property.
 
 ## See Also
 

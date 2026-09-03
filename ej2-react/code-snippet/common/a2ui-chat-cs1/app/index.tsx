@@ -68,8 +68,6 @@ export default function App() {
 
   async function sendUserPrompt(text: string) { if (!text.trim()) return; pushMessage('user', text); await sendToAgent(text, false); }
 
-
-
   useEffect(() => {
     const created = processor.onSurfaceCreated(setSurface);
     const removed = processor.onSurfaceDeleted((id) => { setSurface((prev) => (prev && prev.id === id ? null : prev)); });
@@ -113,7 +111,6 @@ export default function App() {
                 <TextBoxComponent value={prompt} change={(e: ChangeEventArgs) => setPrompt(String(e.value ?? ''))} placeholder='Try: "Find me a flight from New York to London next Friday"' floatLabelType="Auto" cssClass="welcome-input" />
                 <ButtonComponent isPrimary content="Ask SkyBook" disabled={!prompt.trim()} onClick={() => sendPrompt(prompt)} />
               </div>
-              {/* <div className="welcome-foot"> Tip — pressing <kbd>Enter</kbd> in the chat sends the message instantly.</div> */}
             </div>
           ) : (
             <div className="chat-room">

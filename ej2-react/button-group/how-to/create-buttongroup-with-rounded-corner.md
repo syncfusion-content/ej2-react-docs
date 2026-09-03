@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to round corners in React Button Group
 
-Create a ButtonGroup with rounded corners by applying the `e-round-corner` class to the target element. This styling adds smooth, rounded edges to all buttons in the group.
+Create a React Button Group with rounded corners by applying the `e-round-corner` class to the target element. This styling adds smooth, rounded edges to all buttons in the group.
 
-The following example demonstrates how to create a ButtonGroup with rounded corners:
+The following example demonstrates how to create a React Button Group with rounded corners:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

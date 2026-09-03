@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting Started with React DropDownButton | Syncfusion
-description: Learn how to get started with the Syncfusion React DropDownButton control. Explore Vite setup, package installation, CSS themes, and basic usage.
+title: Getting Started with React Dropdown Menu | Syncfusion
+description: Learn how to get started with the Syncfusion React Dropdown Menu control. Explore Vite setup, package installation, CSS themes, and basic usage.
 control: Dropdown button 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React DropDownButton
+# Getting Started with React Dropdown Menu
 
-This section explains the steps required to create a simple React DropDownButton component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple React Dropdown Menu component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline React development with Syncfusion<sup style="font-size:70%">&reg;</sup>?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Integration, configuration, and enhancement of projects is supported through intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
@@ -46,7 +46,7 @@ cd my-project
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-To install the React DropDownButton component package, use the following command:
+To install the React React Dropdown Menu component package, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from `src/index.css` and `src/App.css` to prevent style conflicts.
 
-The required styles for the DropDownButton component are imported in the **src/App.css** file:
+The required styles for the React Dropdown Menu component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,9 +94,9 @@ The required styles for the DropDownButton component are imported in the **src/A
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding DropDownButton component
+## Adding React Dropdown Menu component
 
-Add the DropDownButton component to the **src/App.jsx** file using the following code.
+Add the React Dropdown Menu component to the **src/App.jsx** file using the following code.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -142,10 +142,10 @@ The output will appear as follows:
 
  {% previewsample "page.domainurl/code-snippet/drop-down-button/getting-started-cs1" %}
 
-> Refer to the [React DropDownButton](https://www.syncfusion.com/react-components/react-dropdown-menu) feature tour page for its groundbreaking feature representations. The [React DropDownButton component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/dropdown-button) shows how to render the DropDownButton in React.
+> Refer to the [React Dropdown Menu](https://www.syncfusion.com/react-components/react-dropdown-menu) feature tour page for its groundbreaking feature representations. The [React Dropdown Menu component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/dropdown-button) shows how to render the React Dropdown Menu in React.
 
 ## See Also
 
-* [DropDownButton with icons](./icons#dropdownbutton-icons)
+* [React Dropdown Menu with icons](./icons#dropdownbutton-icons)
 * [How to hide dropdown arrow](./how-to/hide-dropdown-arrow)
 * [Dropdown popup with separator](./popup-items#separator)

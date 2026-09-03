@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in React File Upload
 
-The Uploader component adheres to industry accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). The following table summarizes the component's accessibility compliance across all features and interaction modes.
+The React File Upload component adheres to industry accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). The following table summarizes the component's accessibility compliance across all features and interaction modes.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,7 +38,7 @@ The Uploader component adheres to industry accessibility standards, including [A
 
 ## Keyboard interaction
 
-The following are the standard keys that work on the Uploader component.
+The following are the standard keys that work on the React File Upload component.
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
@@ -77,9 +77,9 @@ The following are the standard keys that work on the Uploader component.
 
 ## Ensuring accessibility
 
-The Uploader component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React File Upload component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Uploader component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/uploader.html) in a new window to evaluate the accessibility of the Uploader component with accessibility tools.
+The accessibility compliance of the React File Upload component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/uploader.html) in a new window to evaluate the accessibility of the Uploader component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/uploader.html" %}
 

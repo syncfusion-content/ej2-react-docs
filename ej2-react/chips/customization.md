@@ -14,7 +14,7 @@ This section explains how to customize chip styles, icons, avatars, and other vi
 
 ## Predefined styles
 
-Apply predefined styles to chips using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/chips/#cssclass) property. These styles convey different semantic meanings and help users understand the chip's purpose at a glance.
+Apply predefined styles to React Chips using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/chips/#cssclass) property. These styles convey different semantic meanings and help users understand the chip's purpose at a glance.
 
 | Class | Description |
 | -------- | -------- |

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style in React In-place Editor
 
-Use the following CSS classes and selectors to customize the In-place Editor's appearance based on specific requirements.
+Use the following CSS classes and selectors to customize the React In-place Editor's appearance based on specific requirements.
 
-## Customizing the In-place Editor text
+## Customizing theReact In-place Editor text
 
-Customize the In-place Editor's text appearance, including font family, font size, text color, and border styling, using the following CSS:
+Customize the React In-place Editor's text appearance, including font family, font size, text color, and border styling, using the following CSS:
 
 ```css
 /* To change color, font family and font size */
@@ -26,7 +26,7 @@ Customize the In-place Editor's text appearance, including font family, font siz
 }
 ```
 
-## Customizing the In-place Editor action buttons
+## Customizing the React In-place Editor action buttons
 
 Customize the save and cancel button styling, including icon colors and background colors, using the following CSS:
 

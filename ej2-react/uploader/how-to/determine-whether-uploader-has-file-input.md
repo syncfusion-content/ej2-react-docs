@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to determine if File Upload has files in React File Upload
 
-Enforce file selection requirement by applying the **required** attribute to the Uploader's underlying input element. This validates that at least one file must be selected before form submission. In the following sample, the `required` attribute is applied to the Uploader input element and a validation message is displayed using the `data-required-message` attribute.
+Enforce file selection requirement by applying the **required** attribute to the React File Upload's underlying input element. This validates that at least one file must be selected before form submission. In the following sample, the `required` attribute is applied to the React File Upload input element and a validation message is displayed using the `data-required-message` attribute.
 
 > The validation behavior is provided by the [Syncfusion Form Validator](https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules) when the Uploader is used inside a form that uses form validation.
 

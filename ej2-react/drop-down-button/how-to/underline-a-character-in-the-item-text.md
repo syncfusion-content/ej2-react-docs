@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Underline a char in items in React DropDownButton | Syncfusion
-description: Underline a specific character in React DropDownButton item text using the beforeItemRender event to inject HTML u tags.
+title: Underline a char in items in React Dropdown Menu | Syncfusion
+description: Underline a specific character in React Dropdown Menu item text using the beforeItemRender event to inject HTML u tags.
 control: Underline a character in the item text 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to underline a char in items in React DropDownButton
+# How to underline a char in items in React Dropdown Menu
 
 Highlight specific characters in dropdown items by adding underline formatting using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#beforeitemrender) event. Insert HTML `<u>` tags around the desired text and set it as the item's innerHTML to create underlined characters.
 

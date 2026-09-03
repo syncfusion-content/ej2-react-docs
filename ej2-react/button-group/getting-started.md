@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Button Group
 
-This section explains the steps required to create a simple React ButtonGroup component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple React Button Group component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the ButtonGroup component are imported in the **src/App.css** file:
+The required styles for the React Button Group component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,9 +94,9 @@ The required styles for the ButtonGroup component are imported in the **src/App.
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the ButtonGroup component
+## Add the React Button Group component
 
-Now, you can add the React ButtonGroup component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
+Now, you can add the React Button Group component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -140,8 +140,8 @@ The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/button-group/default-cs1" %}
 
-> Refer to the [React ButtonGroup](https://www.syncfusion.com/react-components/react-button-group) feature tour page for its groundbreaking feature representations. You can also explore our [React ButtonGroup component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/button-group) that shows how to render the ButtonGroup in React.
+> Refer to the [React Button Group](https://www.syncfusion.com/react-components/react-button-group) feature tour page for its groundbreaking feature representations. You can also explore our [React Button Group component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/button-group) that shows how to render the React Button Group in React.
 
 ## See Also
 
-* [Initialize ButtonGroup using util function](./how-to/initialize-buttongroup-using-util-function)
+* [Initialize React Button Group using util function](./how-to/initialize-buttongroup-using-util-function)

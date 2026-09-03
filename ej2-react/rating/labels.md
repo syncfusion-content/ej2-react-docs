@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Labels in React Rating
 
-Display a label showing the current rating value by setting the [`showLabel`](https://ej2.syncfusion.com/react/documentation/api/rating/#showlabel) property to `true`.
+Display a label showing the current React Rating value by setting the [`showLabel`](https://ej2.syncfusion.com/react/documentation/api/rating/#showlabel) property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -25,14 +25,14 @@ Display a label showing the current rating value by setting the [`showLabel`](ht
 
 ## Label position
 
-Position the label on any side of the rating using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/rating/#labelposition) property.
+Position the label on any side of the React Rating using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/rating/#labelposition) property.
 
 The following label positions are supported:
 
-* Top: Label appears above the rating.
-* Bottom: Label appears below the rating.
-* Left: Label appears to the left of the rating.
-* Right: Label appears to the right of the rating.
+* Top: Label appears above the React Rating.
+* Bottom: Label appears below the React Rating.
+* Left: Label appears to the left of the React Rating.
+* Right: Label appears to the right of the React Rating.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -47,7 +47,7 @@ The following label positions are supported:
 
 ## Label template
 
-Customize the label using the [`labelTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#labeltemplate) tag directive. The current rating value is passed as the `value` property in the template context, allowing you to display dynamic information about the rating.
+Customize the label using the [`labelTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#labeltemplate) tag directive. The current rating value is passed as the `value` property in the template context, allowing you to display dynamic information about the React Rating.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

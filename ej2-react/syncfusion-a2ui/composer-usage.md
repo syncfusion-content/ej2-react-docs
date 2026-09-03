@@ -31,7 +31,7 @@ This section guides you through the six-step workflow to create and copy your fi
 
 Navigate to the Composer Playground in your web browser:
 
-[Open Composer Playground](https://sfblazor.azurewebsites.net/staging/1043384/)
+[Open Composer Playground](https://a2ui-composer-staging-fxa3f3g2a6afece0.centralindia-01.azurewebsites.net/#/)
 
 The Composer opens to the **Create** page with a prompt input box and featured templates.
 
@@ -41,7 +41,7 @@ You have three options to begin creating a surface:
 
 **Option A: Start with a Prompt (AI-Generated)**
 1. Type a description of the interface you want in the text input
-2. Example: *"Build an operations dashboard with revenue trends, priority orders, and row actions"*
+2. Example: *“Build an operations dashboard with revenue trends, priority orders, and row actions”*
 3. The Composer generates an A2UI surface based on your description
 
 **Option B: Choose a Featured Template**
@@ -76,7 +76,7 @@ The **Workspace** page provides an authoring environment with the following layo
 
 To refine your surface:
 
-1. In the **AI Assistant** tab, ask for changes (*"Make the booking field read-only"*, *"Add a badge for status"*, etc.). The assistant returns an updated JSON and explanation; you can click **View details** to see what changed.
+1. In the **AI Assistant** tab, ask for changes (*“Make the booking field read-only”*, *“Add a badge for status”*, etc.). The assistant returns an updated JSON and explanation; you can click **View details** to see what changed.
 2. Alternatively, switch to the **JSON** tab and edit the envelope directly.
 3. The right-panel preview updates in real time as either the assistant or you change the JSON.
 4. The **`SURFACE:`** label in the preview header mirrors the `surfaceId` field from your design — change it via the JSON tab if you need to.
@@ -119,21 +119,40 @@ The copied JSON uses four main operations to construct a surface:
 
 The **SkyBook** flight-booking application demonstrates a complete A2UI workflow organised as **three stages**. Each stage is one surface, copied from Composer as its own JSON file:
 
-| Stage | Trigger | Purpose |
-| --- | --- | --- |
-| **1 — Search Flight** | Any booking request | Collect flight route, cabin, dates, passenger details, accessibility needs |
-| **2 — Flight Results** | Button click with `event:{name:"submit_booking"}` | Recap captured fields, show computed fare breakdown, require explicit agreement |
-| **3 — Booking Confirmed** | Button click with `event:{name:"confirm_booking"}` | Final receipt with booking reference, itinerary, passenger summary, and amount paid |
-> The **Trigger** column above shows the user action that *advances from the previous stage into this one*. For example, the `submit_booking` event is fired by the "Review Booking" button on the stage 1 (Search Flight) form; the agent receives it and returns the stage 2 (Flight Results) surface.
-Each row in the table below gives the **Composer prompt** you paste into the **Create** page (see [Step 2: Choose Your Starting Point](#step-2-choose-your-starting-point)) to regenerate the matching surface. The prompts are written to be self-contained and unambiguous — the Composer produces the same screen on every run.
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Trigger</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1 — Search Flight</strong></td>
+      <td>Any booking request</td>
+      <td>Collect flight route, cabin, dates, passenger details, accessibility needs</td>
+    </tr>
+    <tr>
+      <td><strong>2 — Flight Results</strong></td>
+      <td>Button click with <code>event:{name:"submit_booking"}</code></td>
+      <td>Recap captured fields, show computed fare breakdown, require explicit agreement</td>
+    </tr>
+    <tr>
+      <td><strong>3 — Booking Confirmed</strong></td>
+      <td>Button click with <code>event:{name:"confirm_booking"}</code></td>
+      <td>Final receipt with booking reference, itinerary, passenger summary, and amount paid</td>
+    </tr>
+  </tbody>
+</table>
 
 After copying, drop each result into `examples/designs/` with the matching filename, then bind them with `agent.set_design("examples/designs/")` — see [Integrating Copied JSON with Your Agent](#integrating-copied-json-with-your-agent) below.
 
 | Screen | Purpose | Composer Prompt | Template File |
 |--------|---------|------------------|---------------|
-| **Search Flight** (stage 1) | Collect flight and passenger details | *"Build a single-page SkyWave Airlines flight booking form. Use two Card sections stacked vertically with 16px gaps. Card 1 'Flight Details' has, in order, a 'From' TextBox, a 'To' TextBox, a 'Trip Type' DropDownList with options One-Way and Round-Trip, a 'Cabin Class' DropDownList with options Economy / Business / First Class, a 'Departure Date' DatePicker, a 'Return Date' DatePicker, and an 'Adults' NumericTextBox defaulting to 1 with min 1 and max 9. Card 2 'Passenger Details' has a 'Full Name' TextBox, a 'Date of Birth' DatePicker, an 'Email' TextBox, a 'Phone' TextBox, and a 'Wheelchair assistance required' CheckBox. Below both cards place a primary 'Review Booking' button aligned to the right edge. Use the SkyWave brand: green primary AppBar, soft borders, 16px gaps."* | `stage1-flight-search.json` |
-| **Flight Results** (stage 2) | Review itinerary, fare breakdown, and confirm | *"Build a single-page SkyWave Airlines booking confirmation page. Use four Card sections stacked vertically with 20px gaps. Card 1 'Flight Details' shows the route as '{origin} → {destination}' as a large heading, with a row of four labelled pairs: Departure, Cabin, Passengers (e.g. '2 Adults'), and Trip Type. Card 2 'Passenger Details' shows three labelled pairs: Full Name, Email, Phone. Card 3 'Fare Breakdown' lists Base Fare, Taxes & Fees, and a bold Total Payable, with an information note that the fare is non-refundable after 24 hours. Card 4 'Confirm Booking' has an agreement Checkbox for fare rules followed by two buttons in a row: a 'Modify Booking' outline button and a primary 'Confirm & Pay' success button. Use the SkyWave brand: green primary AppBar, soft borders, 16px gaps."* | `stage2-flight-results.json` |
-| **Booking & Confirmed** (stage 3) | Final receipt after payment | *"Build a single-page SkyWave Airlines booking confirmed page. At the top, render a green Success Message with the text 'Booking Confirmed! Reference: {bookingRef}.' Below it, render four Card sections stacked vertically with 20px gaps. Card 1 'Booking Reference' shows the booking reference as a large bold purple heading. Card 2 'Flight Details' shows the route '{origin} → {destination}' as a heading, then a labelled summary list of Departure Date, Cabin Class, Trip Type, and Passengers. Card 3 'Passenger Details' shows the full name, email, and phone as labelled pairs. Card 4 'Amount Paid' lists Base Fare, Taxes & Fees, and a bold Total Paid. Below the cards, render an information Message reminding the customer that a confirmation email has been sent and they need a valid photo ID on the day of travel. Use the SkyWave brand: green primary AppBar, soft borders, 16px gaps."* | `stage3-booking-confirmation.json` |
+| **Search Flight** (stage 1) | Collect flight and passenger details | *“Build a single-page SkyWave Airlines flight booking form. Use two Card sections stacked vertically with 16px gaps. Card 1 'Flight Details' has, in order, a 'From' TextBox, a 'To' TextBox, a 'Trip Type' DropDownList with options One-Way and Round-Trip, a 'Cabin Class' DropDownList with options Economy / Business / First Class, a 'Departure Date' DatePicker, a 'Return Date' DatePicker, and an 'Adults' NumericTextBox defaulting to 1 with min 1 and max 9. Card 2 'Passenger Details' has a 'Full Name' TextBox, a 'Date of Birth' DatePicker, an 'Email' TextBox, a 'Phone' TextBox, and a 'Wheelchair assistance required' CheckBox. Below both cards place a primary 'Review Booking' button aligned to the right edge. Use the SkyWave brand: green primary AppBar, soft borders, 16px gaps.”* | `stage1-flight-search.json` |
+| **Flight Results** (stage 2) | Review itinerary, fare breakdown, and confirm | *“Build a single-page SkyWave Airlines booking confirmation page. Use four Card sections stacked vertically with 20px gaps. Card 1 'Flight Details' shows the route as '{origin} → {destination}' as a large heading, with a row of four labeled pairs: Departure, Cabin, Passengers (e.g. '2 Adults'), and Trip Type. Card 2 'Passenger Details' shows three labeled pairs: Full Name, Email, Phone. Card 3 'Fare Breakdown' lists Base Fare, Taxes & Fees, and a bold Total Payable, with an information note that the fare is non-refundable after 24 hours. Card 4 'Confirm Booking' has an agreement Checkbox for fare rules followed by two buttons in a row: a 'Modify Booking' outline button and a primary 'Confirm & Pay' success button. Use the SkyWave brand: green primary AppBar, soft borders, 16px gaps.”* | `stage2-flight-results.json` |
+| **Booking & Confirmed** (stage 3) | Final receipt after payment | *“Build a single-page SkyWave Airlines booking confirmed page. At the top, render a green Success Message with the text 'Booking Confirmed! Reference: {bookingRef}.' Below it, render four Card sections stacked vertically with 20px gaps. Card 1 'Booking Reference' shows the booking reference as a large bold purple heading. Card 2 'Flight Details' shows the route '{origin} → {destination}' as a heading, then a labeled summary list of Departure Date, Cabin Class, Trip Type, and Passengers. Card 3 'Passenger Details' shows the full name, email, and phone as labeled pairs. Card 4 'Amount Paid' lists Base Fare, Taxes & Fees, and a bold Total Paid. Below the cards, render an information Message reminding the customer that a confirmation email has been sent and they need a valid photo ID on the day of travel. Use the SkyWave brand: green primary AppBar, soft borders, 16px gaps.”* | `stage3-booking-confirmation.json` |
 
 For complete surface definitions and examples, see the designs directory in the agent project.
 
@@ -337,15 +356,6 @@ Replace the contents of `src/App.tsx` and `src/App.css` with the snippets below.
 {% endhighlight %}
 {% endtabs %}
 
-> **Note**
->
-> The `TextBoxComponent` and `ButtonComponent` from `@syncfusion/ej2-react-inputs` and `@syncfusion/ej2-react-buttons` need a Syncfusion theme CSS bundle to render correctly. If you have not already imported a theme in `src/main.tsx`, add one of the following before the `App` import:
->
-> ```ts
-> import '@syncfusion/ej2-tailwind3-theme/styles/tailwind3.css';
-> // or @syncfusion/ej2-material-theme, @syncfusion/ej2-fluent2-theme, etc.
-> ```
-
 ### Step 3: Run the app
 
 Start the Vite dev server:
@@ -391,17 +401,14 @@ cp examples/.env.example examples/.env
 python examples/flight_booking_agent.py
 ```
 
-> The agent binds to `127.0.0.1:10006` by default. The SkyBook app reads its agent URL from `VITE_AGENT_URL` (default `http://localhost:10005`), so set `VITE_AGENT_URL=http://127.0.0.1:10006` in your React app's `.env` to point at the agent, or start the agent on port `10005`. To run the bundled `generic_demo_agent` instead (single-page, no `set_design()` contract), use `python examples/generic_demo_agent.py --serve`.
+> The agent binds to `127.0.0.1:10006` by default. The SkyBook app reads its agent URL from `VITE_AGENT_URL` (default `http://localhost:10005`), so set `VITE_AGENT_URL=http://127.0.0.1:10006` in your React app's `.env` to point at the agent, or start the agent on port `10005`.
 
 The agent treats every `*.json` in `examples/designs/` as a page in a multi-page catalog and picks the right one per request. See [Integrating Copied JSON with Your Agent](#integrating-copied-json-with-your-agent) above for the full pattern.
 
 
-## Where to go next
+## See also
 
-Now that you understand how to use Composer Playground and copy A2UI JSON, explore these next topics:
-
-* **[Overview](./overview)** — Introduction to Syncfusion A2UI and its use cases
-* **[Getting Started with A2UI for React](./getting-started)** — How to set up your first React application to render A2UI surfaces
-* **[AI Integration with Syncfusion A2UI for React](./ai-integration)** — Production wiring (streaming, bearer-token auth, error handling, multiple surfaces)
-* **[A2UI v0.9 Protocol](https://a2ui.org/)** — Deep dive into message formats, the MessageProcessor, and the A2UI runtime
-
+* [Overview](./overview)
+* [Getting Started with A2UI for React](./getting-started)
+* [AI Integration with Syncfusion A2UI for React](./ai-integration)
+* [A2UI v0.9 Protocol](https://a2ui.org/)

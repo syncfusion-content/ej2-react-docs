@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Migration from Essential JS 1 in React Radio Button
 
-This migration guide helps you transition your RadioButton component implementation from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2. The new version introduces API changes in properties, methods, and events. Use this guide to understand the mapping between old and new APIs and update your codebase accordingly.
+This migration guide helps you transition your React Radio Button component implementation from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2. The new version introduces API changes in properties, methods, and events. Use this guide to understand the mapping between old and new APIs and update your codebase accordingly.
 
 ## Properties
 

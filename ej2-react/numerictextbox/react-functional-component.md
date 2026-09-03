@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Functional Component in React NumericTextBox | Syncfusion
-description: Render the React NumericTextBox in a functional component using React Hooks like useState, useEffect, useRef, and useReducer.
+title: Functional Component in React Numeric TextBox | Syncfusion
+description: Render the React Numeric TextBox in a functional component using React Hooks like useState, useEffect, useRef, and useReducer.
 control: React functional component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Functional Component in React NumericTextBox
+# Functional Component in React Numeric TextBox
 
 Implement the NumericTextBox component using React functional components and hooks for a modern, state-management approach. The following table describes the essential React hooks used to manage NumericTextBox behavior and state:
 
@@ -19,7 +19,7 @@ Implement the NumericTextBox component using React functional components and hoo
 | `useRef` | Creates direct DOM element references without triggering re-renders. Used here to focus or preset the price field on component load. |
 | `useReducer` | Manages complex state logic by dispatching actions to a reducer function. Used here to centralize updates for price and quantity values. |
 
-The following example demonstrates how to implement a NumericTextBox component using React hooks in a functional component:
+The following example demonstrates how to implement a React Numeric TextBox component using React hooks in a functional component:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

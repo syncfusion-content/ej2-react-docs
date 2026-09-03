@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to use ColorPicker in DropDownButton in React Color Picker
 
-This section explains how to render the ColorPicker in a DropDownButton. The [`target`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button#target) property of the DropDownButton enables this scenario. To learn about the `target` property, refer to the [`Popup templating`](./../../drop-down-button/popup-items#popup-templating) section.
+This section explains how to render the React Color Picker in a DropDownButton. The [`target`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button#target) property of the DropDownButton enables this scenario. To learn about the `target` property, refer to the [`Popup templating`](./../../drop-down-button/popup-items#popup-templating) section.
 
-In the following sample, the ColorPicker is rendered as inline by setting the [`inline`](https://ej2.syncfusion.com/react/documentation/api/color-picker#inline) property to `true`, and the rendered ColorPicker wrapper is passed as a `target` to the DropDownButton.
+In the following sample, the React Color Picker is rendered as inline by setting the [`inline`](https://ej2.syncfusion.com/react/documentation/api/color-picker#inline) property to `true`, and the rendered React Color Picker wrapper is passed as a `target` to the DropDownButton.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

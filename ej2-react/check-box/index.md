@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Index in React Check box component
 
-The CheckBox is a graphical user interface element that allows you to select one or more options from the choices. It contains checked, unchecked, and indeterminate states.
+The React Checkbox is a graphical user interface element that allows you to select one or more options from the choices. It contains checked, unchecked, and indeterminate states.
 
 ## Key Features
 

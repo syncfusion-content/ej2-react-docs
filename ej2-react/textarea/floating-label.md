@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Floating Label in React TextArea
 
-The floating label functionality in the TextArea component allows the placeholder text to float above the TextArea while the user interacts with it, providing a more intuitive user experience. This feature can be achieved using the [floatLabelType](https://ej2.syncfusion.com/react/documentation/api/textarea/#floatLabelType) API, which offers various options for defining the floating behavior:
+The floating label functionality in the React TextArea component allows the placeholder text to float above the TextArea while the user interacts with it, providing a more intuitive user experience. This feature can be achieved using the [floatLabelType](https://ej2.syncfusion.com/react/documentation/api/textarea/#floatLabelType) API, which offers various options for defining the floating behavior:
 
 | Type  | Description |
 | -- | -- |
@@ -45,7 +45,7 @@ Use the localization library to localize placeholder text to different cultures 
 {% previewsample "page.domainurl/code-snippet/textarea/localization-cs1" %}
 
 To load translation object in an application use `load` function of `L10n` class.
-In the below sample, `German` culture is loaded to the TextArea placeholder text.
+In the below sample, `German` culture is loaded to the React React TextArea placeholder text.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

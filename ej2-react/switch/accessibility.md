@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Accessibility in React Switch | Syncfusion
-description: Learn how the React Switch meets WCAG 2.2, Section 508, and ADA standards. Includes WAI-ARIA roles, keyboard interaction, and validation tools.
+title: Accessibility in React Toggle Switch Button | Syncfusion
+description: Learn how the React Toggle Switch Button meets WCAG 2.2, Section 508, and ADA standards. Includes WAI-ARIA roles, keyboard interaction, and validation tools.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Switch
+# Accessibility in React Toggle Switch Button
 
-The Switch component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Toggle Switch Button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Switch component is outlined below.
+The accessibility compliance for the React Toggle Switch Button component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,28 +40,28 @@ The accessibility compliance for the Switch component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Switch component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/switch/) patterns to provide comprehensive accessibility support. The following ARIA attributes are used in the Switch component:
+The React Toggle Switch Button component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/switch/) patterns to provide comprehensive accessibility support. The following ARIA attributes are used in the React Toggle Switch Button component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the switch component. |
+| `role` | Indicates the React Toggle Switch Button component. |
 | `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction
 
-The Switch component supports comprehensive keyboard navigation following [WAI-ARIA keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#keyboardinteraction) guidelines, enabling users with assistive technologies and keyboard-only navigation to interact effectively. The following keyboard shortcuts are supported by the Switch component.
+The React Toggle Switch Button component supports comprehensive keyboard navigation following [WAI-ARIA keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#keyboardinteraction) guidelines, enabling users with assistive technologies and keyboard-only navigation to interact effectively. The following keyboard shortcuts are supported by the React Toggle Switch Button component.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Tab</kbd> | Moves focus to the Switch component. |
-| <kbd>Shift + Tab</kbd> | Moves focus away from the Switch component. |
-| <kbd>Space</kbd> | Toggles the Switch state between on and off when the Switch has focus. |
+| <kbd>Tab</kbd> | Moves focus to the React Toggle Switch Button component. |
+| <kbd>Shift + Tab</kbd> | Moves focus away from the React Toggle Switch Button component. |
+| <kbd>Space</kbd> | Toggles the React Toggle Switch Button state between on and off when the React Toggle Switch Button has focus. |
 
 ## Ensuring accessibility
 
-The Switch component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Toggle Switch Button component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Switch component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/switch.html) in a new window to evaluate the accessibility of the Switch component with accessibility tools.
+The accessibility compliance of the React Toggle Switch Button component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/switch.html) in a new window to evaluate the accessibility of the React Toggle Switch Button component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/switch.html" %}
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Style and Appearance in React MaskedTextBox | Syncfusion
-description: Override React MaskedTextBox CSS classes to customize the wrapper, input, and float label appearance for your design system.
+title: Style and Appearance in React Input Mask | Syncfusion
+description: Override React Input Mask CSS classes to customize the wrapper, input, and float label appearance for your design system.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in React MaskedTextBox
+# Style and Appearance in React Input Mask
 
 The following content provides the CSS structure that can be used to modify the component's appearance based on your preferences.
 
-## Customizing the appearance of MaskedTextBox wrapper element
+## Customizing the appearance of React Input Mask wrapper element
 
 Use the following CSS to customize the appearance of the wrapper element.
 
@@ -26,9 +26,9 @@ Use the following CSS to customize the appearance of the wrapper element.
   }
 ```
 
-## Customizing the MaskedTextBox element on hovering
+## Customizing the React Input Mask element on hovering
 
-Use the following CSS to customize the MaskedTextBox element on hover:
+Use the following CSS to customize the React Input Mask element on hover:
 
 ```css
 /* To specify border */

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Accessibility in React NumericTextBox | Syncfusion
-description: Review React NumericTextBox compliance with WCAG 2.2, Section 508, WAI-ARIA, and screen reader accessibility standards.
+title: Accessibility in React Numeric TextBox | Syncfusion
+description: Review React Numeric TextBox compliance with WCAG 2.2, Section 508, WAI-ARIA, and screen reader accessibility standards.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React NumericTextBox
+# Accessibility in React Numeric TextBox
 
-The NumericTextBox component adheres to the highest accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is accessible to all users, including those using assistive technologies.
+The React Numeric TextBox component adheres to the highest accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is accessible to all users, including those using assistive technologies.
 
-The accessibility compliance for the NumericTextBox component is outlined in the table below. A checkmark (✓) indicates full feature compliance, while partial or absent support is noted accordingly.
+The accessibility compliance for the React Numeric TextBox component is outlined in the table below. A checkmark (✓) indicates full feature compliance, while partial or absent support is noted accordingly.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,9 +40,9 @@ The accessibility compliance for the NumericTextBox component is outlined in the
 
 ## WAI-ARIA attributes
 
-The NumericTextBox features comprehensive ARIA accessibility support, enabling seamless interaction with screen readers and other assistive technologies. This component implements the practices outlined in [WAI-ARIA Spinbutton specifications](https://www.w3.org/TR/wai-aria/#spinbutton), ensuring users with disabilities can access all functionality.
+The React Numeric TextBox features comprehensive ARIA accessibility support, enabling seamless interaction with screen readers and other assistive technologies. This component implements the practices outlined in [WAI-ARIA Spin button specifications](https://www.w3.org/TR/wai-aria/#spinbutton), ensuring users with disabilities can access all functionality.
 
-The NumericTextBox uses the `spinbutton` role and following ARIA properties to its element based on its state.
+The React Numeric TextBox uses the `spin button` role and following ARIA properties to its element based on its state.
 
 | **Property** | **Functionality** |
 | --- | --- |
@@ -57,7 +57,7 @@ The NumericTextBox uses the `spinbutton` role and following ARIA properties to i
 
 ## Keyboard interaction
 
-The NumericTextBox keyboard interactions follow [WAI-ARIA Spinbutton practices](https://www.w3.org/TR/wai-aria/#spinbutton), providing full accessibility via keyboard without requiring a mouse. Users can navigate and control the component entirely through keyboard input.
+The React Numeric TextBox keyboard interactions follow [WAI-ARIA Spin button practices](https://www.w3.org/TR/wai-aria/#spinbutton), providing full accessibility via keyboard without requiring a mouse. Users can navigate and control the component entirely through keyboard input.
 
 The following table describes the keyboard shortcuts and their corresponding actions:
 
@@ -94,9 +94,9 @@ The following table describes the keyboard shortcuts and their corresponding act
 
 ## Ensuring accessibility
 
-The NumericTextBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Numeric TextBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the NumericTextBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/numeric-textbox.html) in a new window to evaluate the accessibility of the NumericTextBox component with accessibility tools.
+The accessibility compliance of the React Numeric TextBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/numeric-textbox.html) in a new window to evaluate the accessibility of the React Numeric TextBox component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/numeric-textbox.html" %}
 

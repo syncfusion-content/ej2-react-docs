@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Label and size in React Checkbox
 
-This section explains the different sizes and labels available in the CheckBox component.
+This section explains the different sizes and labels available in the React Checkbox component.
 
 ## Label
 
-Define the CheckBox caption using the [`label`](https://ej2.syncfusion.com/react/documentation/api/check-box#label) property. This eliminates the need for separate label elements. Customize the label position before or after the CheckBox using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/check-box#labelposition) property.
+Define the React Checkbox caption using the [`label`](https://ej2.syncfusion.com/react/documentation/api/check-box#label) property. This eliminates the need for separate label elements. Customize the label position before or after the React Checkbox using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/check-box#labelposition) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,7 +29,7 @@ Define the CheckBox caption using the [`label`](https://ej2.syncfusion.com/react
 
 ## Size
 
-The CheckBox component offers two size options: default and small. Apply the small size by setting the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/check-box#cssclass) property to `e-small`. Use small checkboxes in compact layouts or data tables.
+The React Checkbox component offers two size options: default and small. Apply the small size by setting the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/check-box#cssclass) property to `e-small`. Use small React Checkboxes in compact layouts or data tables.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -44,4 +44,4 @@ The CheckBox component offers two size options: default and small. Apply the sma
 
 ## See Also
 
-* [CheckBox customization](./how-to/customized-checkbox)
+* [React Checkbox customization](./how-to/customized-checkbox)

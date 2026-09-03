@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # CSS structure in React Chips
 
-Customize the Chips component's appearance by overriding default CSS styles. The following examples demonstrate common styling patterns. Use these CSS structures as a foundation and adapt them according to your design requirements.
+Customize the React Chips component's appearance by overriding default CSS styles. The following examples demonstrate common styling patterns. Use these CSS structures as a foundation and adapt them according to your design requirements.
 
 ## Chip text styling
 
@@ -88,7 +88,7 @@ Use the following CSS to customize avatar text properties such as background col
 
 ## Chip height sizing
 
-Use the following CSS to customize the height of chips in a ChipList:
+Use the following CSS to customize the height of React Chips in a ChipList:
 
 ```css
 .e-chip-list.e-chip {

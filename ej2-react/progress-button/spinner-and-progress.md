@@ -46,7 +46,7 @@ Visual progress indicators and animations provide feedback during long-running o
 
 ### Content animation
 
-Animate the ProgressButton text or content during progress operations using the [`effect`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#effect) property in [`animationSettingsModel`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel). Control animation timing with the [`duration`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#duration) and [`easing`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#easing) properties. 
+Animate the React Progress Button text or content during progress operations using the [`effect`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#effect) property in [`animationSettingsModel`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel). Control animation timing with the [`duration`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#duration) and [`easing`](https://ej2.syncfusion.com/react/documentation/api/progress-button/animationSettingsModel/#easing) properties. 
 
 Available animation effects are:
 * **None** - No animation
@@ -68,7 +68,7 @@ Available animation effects are:
 
  {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs9" %}
 
-### Change step of the ProgressButton
+### Change step of the React Progress Button
 
 Control the granularity of progress visualization by modifying the [`step`](https://ej2.syncfusion.com/react/documentation/api/progress-button/progressEventArgs/#step) property in the [`begin`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#begin) event. The step value determines how much the progress bar advances on each update. For example, setting `step` to `20` displays progress in 5% increments (100 ÷ 20), creating a smooth visual progression for the user.
 
@@ -83,11 +83,11 @@ Control the granularity of progress visualization by modifying the [`step`](http
 
  {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs10" %}
 
-> The class `e-hide-spinner` hides the spinner in the ProgressButton, For more information, see [hide spinner](./how-to/hide-spinner) section.
+> The class `e-hide-spinner` hides the spinner in the React Progress Button, For more information, see [hide spinner](./how-to/hide-spinner) section.
 
 ### Change progress dynamically
 
-Update the progress percentage in real-time by modifying the [`percent`](https://ej2.syncfusion.com/react/documentation/api/progress-button/progressEventArgs/#percent) property during ProgressButton events. This technique enables conditional progress adjustments based on application logic. For example, you can jump the progress to 90% when a particular milestone is reached at 40% completion, allowing for non-linear progress visualization.
+Update the progress percentage in real-time by modifying the [`percent`](https://ej2.syncfusion.com/react/documentation/api/progress-button/progressEventArgs/#percent) property during React Progress Button events. This technique enables conditional progress adjustments based on application logic. For example, you can jump the progress to 90% when a particular milestone is reached at 40% completion, allowing for non-linear progress visualization.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -104,7 +104,7 @@ Update the progress percentage in real-time by modifying the [`percent`](https:/
 
 ### Start and stop methods
 
-Control progress playback by invoking the [`start`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#start) and [`stop`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#stop) methods. Use these methods to pause long-running operations or allow users to resume interrupted tasks. In the example below, clicking the ProgressButton toggles between paused and active states.
+Control progress playback by invoking the [`start`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#start) and [`stop`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#stop) methods. Use these methods to pause long-running operations or allow users to resume interrupted tasks. In the example below, clicking the React Progress Button toggles between paused and active states.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -120,4 +120,4 @@ Control progress playback by invoking the [`start`](https://ej2.syncfusion.com/r
 ## See Also
 
 * [How to hide spinner](./how-to/hide-spinner)
-* [Customize ProgressButton using cssClass](how-to/customize-progress-using-cssclass)
+* [Customize React Progress Button using cssClass](how-to/customize-progress-using-cssclass)

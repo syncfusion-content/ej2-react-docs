@@ -226,7 +226,7 @@ This selector targets all non-workday cells in the month view. Adjust the class 
 
 By default, the [`allowMultiCellSelection`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowmulticellselection) and [`allowMultiRowSelection`](https://ej2.syncfusion.com/react/documentation/api/schedule#allowmultirowselection) properties are set to `true`, allowing users to select multiple cells or rows. To restrict selection to a single cell or row, set these properties to `false`:
 
-```jsx
+```js
 <Scheduler 
   allowMultiCellSelection={false}
   allowMultiRowSelection={false}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Migration from CSS TextBox to React TextBox
 
-> From v16.3.21 onwards, the TextBox is available as a dedicated React component, enabling floating label functionality with significantly less code. For a complete list of properties, methods, and events, refer to the [API reference](https://ej2.syncfusion.com/react/documentation/api/textbox/).
+> From v16.3.21 onwards, the React TextBox is available as a dedicated React component, enabling floating label functionality with significantly less code. For a complete list of properties, methods, and events, refer to the [API reference](https://ej2.syncfusion.com/react/documentation/api/textbox/).
 
 The following table describes the migration from CSS TextBox to React TextBox component.
 

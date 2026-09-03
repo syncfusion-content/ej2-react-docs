@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to handle no color support in React Color Picker
 
-The ColorPicker component supports a no-color feature. When you click the no-color tile in the palette, the selected color becomes empty, indicating that no color has been selected.
+The React Color Picker component supports a no-color feature. When you click the no-color tile in the palette, the selected color becomes empty, indicating that no color has been selected.
 
 ## Default no color
 

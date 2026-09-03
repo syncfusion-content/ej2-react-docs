@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to set name and value in React Checkbox
 
-The [`name`](https://ej2.syncfusion.com/react/documentation/api/check-box#name) attribute groups CheckBoxes in a form. When the form submits, only the values of checked CheckBoxes are sent to the server and can be retrieved using the `name` attribute. Disabled and unchecked CheckBox values are not sent on form submission.
+The [`name`](https://ej2.syncfusion.com/react/documentation/api/check-box#name) attribute groups React Checkboxes in a form. When the form submits, only the values of checked React Checkboxes are sent to the server and can be retrieved using the `name` attribute. Disabled and unchecked React Checkbox values are not sent on form submission.
 
-The following example demonstrates form submission with CheckBox values. Cricket and Hockey are checked, Tennis is disabled, and Basketball is unchecked. Only the checked values are sent on form submit:
+The following example demonstrates form submission with React Checkbox values. Cricket and Hockey are checked, Tennis is disabled, and Basketball is unchecked. Only the checked values are sent on form submit:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

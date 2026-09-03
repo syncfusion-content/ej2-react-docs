@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Quick Access Toolbar in React Image Editor
 
-The quick access toolbars in the Image Editor facilitate interactions with annotations such as Rectangle, Ellipse, Line, Arrow, and Path. The toolbar is only displayed when an annotation is selected, ensuring a focused and contextual user experience.
+The quick access toolbars in the React Image Editor facilitate interactions with annotations such as Rectangle, Ellipse, Line, Arrow, and Path. The toolbar is only displayed when an annotation is selected, ensuring a focused and contextual user experience.
 
 The [`showQuickAccessToolbar`](https://ej2.syncfusion.com/react/documentation/api/image-editor#showquickaccesstoolbar) property controls the visibility of the quick access toolbar (default: true). You can enable or disable this toolbar, add or remove items, and create a personalized set of tools.
 

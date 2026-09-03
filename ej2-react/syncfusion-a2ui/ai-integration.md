@@ -8,20 +8,51 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# AI Integration with Syncfusion A2UI for React
+# AI Integration with Syncfusion A2UI
 
 This page shows the production wiring between a Syncfusion A2UI React host and a remote A2UI v0.9 agent that speaks [JSON-RPC 2.0](https://www.jsonrpc.org/specification) over HTTP. The [Getting Started](./getting-started) page showed how to render a Syncfusion surface from a **static** A2UI v0.9 message list. This page shows the next step: connecting your React app to a **remote, A2UI-compatible agent** so the agent's responses drive the surface in real time, and the user's interactions inside the surface are forwarded back to the agent.
 
-> **Preview release** — The package is currently published as a **pre-release (beta)** on npm (e.g. `1.0.1-beta.0`). The A2UI v0.9 wire format is stable, but the package API, catalog id, and Zod schemas may evolve before the first stable release. See the [Overview](./overview) for the full preview terms.
+> **Preview release** — The package is currently published as a **pre-release (beta)** on npm. The A2UI v0.9 wire format is stable, but the package API, catalog id, and Zod schemas may evolve before the first stable release. See the [Overview](./overview) for the full preview terms.
 
 ## Prerequisites
+
+| Tool | Version |
+|------|---------|
+| React | 15.5.4 or higher |
+| Node.js | 14.0.0 or above |
+| Python | 3.10 or above |
+
+### React supported versions
+
+| React version | Minimum @syncfusion/ej2-react-* version |
+|---------------|----------------------------------------|
+| React v19 | 29.1.33 and above |
+| React v18 | 20.2.36 and above |
+| React v17 | 18.3.50 and above |
+| React v16 | 16.2.45 and above |
+
+### Browser support
+
+| Browser | Version |
+|---------|---------|
+| Chrome | Latest |
+| Firefox | Latest |
+| Opera | Latest |
+| Edge | 13+ |
+| Internet Explorer (IE) | 11+ |
+| Safari | 9+ |
+| iOS Safari | 9+ |
+| Android Browser / Chrome for Android | 4.4+ |
+| Windows Mobile | IE 11+ |
+
+You also need:
 
 * A working app that already uses [`@syncfusion/ej2-react-a2ui`](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) and renders a static surface as described in the [Getting Started](./getting-started) page.
 * A running A2UI v0.9-compatible agent exposed over HTTP that accepts [JSON-RPC 2.0](https://www.jsonrpc.org/specification) `message/send` requests. The reference implementation is the syncfusion-a2ui-agent ADK, which ships ready-to-run example agents you can launch locally. The example below targets the bundled Contoso Dynamics demo at `http://localhost:10004`; replace it with the URL of your own agent.
 
 ## What "AI integration" means here
 
-`@syncfusion/ej2-react-a2ui` is the **rendering** half of an A2UI flow. The **agent** half (the LLM, the tool-calling loop, the JSON-RPC server) is a separate concern. To wire the two together, your host app needs to:
+[`@syncfusion/ej2-react-a2ui`](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) is the **rendering** half of an A2UI flow. The **agent** half (the LLM, the tool-calling loop, the JSON-RPC server) is a separate concern. To wire the two together, your host app needs to:
 
 1. **Send the user's prompt** to the agent as a JSON-RPC `message/send` request whose `params.message.parts[0]` is `{ text: query }`.
 2. **Receive the agent's response** as a JSON-RPC envelope whose `result.artifacts[0].parts[0].data.a2uiEnvelope` is an array of A2UI v0.9 messages (`createSurface`, `updateComponents`, `updateDataModel`, …).
@@ -41,18 +72,40 @@ Replace the contents of `src/App.tsx` with the snippet below. It builds on the G
 {% endhighlight %}
 {% endtabs %}
 
-> **EJ2 widget stylesheets.** The Syncfusion `TextBoxComponent` and `ButtonComponent` require their own CSS bundles, on top of the theme package already imported on the [Getting Started](./getting-started) page. Add the two imports to `src/App.css` so the chat input and send button render correctly:
->
-> @import "@syncfusion/ej2-tailwind3-theme/styles/inputs/index.css";
-> @import "@syncfusion/ej2-tailwind3-theme/styles/buttons/index.css";
->
-> If you are using a different theme (`@syncfusion/ej2-material-theme`, `@syncfusion/ej2-fluent2-theme`, `@syncfusion/ej2-material3-theme`, `@syncfusion/ej2-bootstrap5-theme`), replace the `tailwind3` segment with the matching package name.
+### EJ2 Widget Stylesheets
+
+Syncfusion EJ2 components require their respective component CSS bundles in addition to the theme package already imported on the [Getting Started](https://helpstaging.syncfusion.com/ej2-react/syncfusion-a2ui/getting-started) page.
+
+For example, if your A2UI application uses `TextBoxComponent` and `ButtonComponent`, add the following imports to `src/App.css`:
+
+```css
+@import "@syncfusion/ej2-tailwind3-theme/styles/textbox/index.css";
+@import "@syncfusion/ej2-tailwind3-theme/styles/buttons/index.css";
+```
+
+Since A2UI can dynamically generate and render different Syncfusion components based on the AI-generated UI definition, **make sure to include the stylesheet for every Syncfusion component that your application supports or expects A2UI to generate**.
+
+For example:
+
+```css
+/* Input components */
+@import "@syncfusion/ej2-tailwind3-theme/styles/inputs/index.css";
+
+/* Buttons */
+@import "@syncfusion/ej2-tailwind3-theme/styles/buttons/index.css";
+
+/* Add the styles for other EJ2 components used by your A2UI application */
+```
+
+Refer to the Syncfusion EJ2 theme package and import the corresponding component styles for all components that can be rendered through A2UI. This ensures that dynamically generated components are displayed correctly with the expected Syncfusion theme and styling.
+
+If you are using a different theme, such as `@syncfusion/ej2-material-theme`, `@syncfusion/ej2-fluent2-theme`, `@syncfusion/ej2-material3-theme`, or `@syncfusion/ej2-bootstrap5-theme`, replace `tailwind3` with the corresponding theme package name.
 
 ## How the round-trip works
 
-1. **Initial prompt.** The user types a query (`"Show me last quarter's sales by region"`) and clicks **Send**. `sendQuery()` POSTs a JSON-RPC `message/send` request whose `params.message.parts[0]` is `{ text: query }` to `AGENT_URL`.
+1. **Initial prompt.** The user types a query (`“Show me last quarter's sales by region”`) and clicks **Send**. `sendQuery()` POSTs a JSON-RPC `message/send` request whose `params.message.parts[0]` is `{ text: query }` to `AGENT_URL`.
 2. **Agent response.** The agent runs the LLM, decides which A2UI components to render, and returns a JSON-RPC envelope whose `result.artifacts[0].parts[0].data.a2uiEnvelope` is an array of A2UI v0.9 messages (typically `createSurface` → `updateComponents` → `updateDataModel`).
-3. **Process the messages.** `processor.processMessages(messages)` validates each message against the bundled Zod schemas, builds a `SurfaceModel`, and fires `onSurfaceCreated`. `<SyncfusionA2UIProvider />` renders the surface.
+3. **Process the messages.** `processor.processMessages(messages)` validates each message against the bundled Zod schemas, builds a `SurfaceModel`, and fires `onSurfaceCreated`. `<SyncfusionA2UIProvider/>` renders the surface.
 4. **User interacts.** When the user clicks a button, sorts the grid, picks a date, or selects a row, the matching Syncfusion adapter calls the `actionHandler` passed to the `MessageProcessor` constructor with the action payload.
 5. **Forward to agent.** The handler POSTs the action back to the agent as a new `message/send` request whose `params.message.parts[0]` is `{ data: action }`. The agent decides what to do next — update the same surface (`updateComponents` / `updateDataModel`), or replace it with a new one (`createSurface` on a different `surfaceId`) — and returns a new `a2uiEnvelope`. The cycle repeats.
 
@@ -106,23 +159,16 @@ The agent boots an HTTP server that speaks [JSON-RPC 2.0](https://www.jsonrpc.or
 
 ## Run the application
 
-In the project where the `@syncfusion/ej2-react-a2ui` package is installed, start the React app:
+In the project where the [`@syncfusion/ej2-react-a2ui`](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package is installed, start the React app:
 
 ```bash
 npm run dev
 ```
 
-Open the generated local URL (for example, `http://localhost:5173/`) in the browser. Type a query such as `"Show me last quarter's sales by region"` and press **Send**. The agent's response renders as a working Syncfusion surface inside the page; any interaction you perform in that surface (clicks, sorts, row selections) is sent back to the agent in real time.
+Open the generated local URL (for example, `http://localhost:5173/`) in the browser. Type a query such as `“Show me last quarter's sales by region”` and press **Send**. The agent's response renders as a working Syncfusion surface inside the page; any interaction you perform in that surface (clicks, sorts, row selections) is sent back to the agent in real time.
 
-## Register the Syncfusion license key
+## See also
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 React components require a valid license key to be registered before they render without a trial-license watermark. The A2UI adapters call into the same EJ2 components under the hood, so a registered key is required even when the UI itself is generated by an agent. For instructions on generating and registering a license key, see:
-
-* [How to generate a Syncfusion React license key](../licensing/license-key-generation)
-* [How to register a Syncfusion React license key](../licensing/license-key-registration)
-
-## Where to go next
-
-* **[Getting Started](./getting-started)** — install the package, wire up a `MessageProcessor`, and render your first static surface.
-* **[Overview](./overview)** — what the package is, who it is for, and how A2UI fits in.
-* **[A2UI v0.9 protocol](https://a2ui.org/)** — the JSON-RPC envelope shape, the `SurfaceModel`, and the `MessageProcessor` API.
+* [Getting Started](./getting-started)
+* [Overview](./overview)
+* [A2UI v0.9 protocol](https://a2ui.org/)

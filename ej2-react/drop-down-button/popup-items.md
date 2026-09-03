@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Popup items in React DropDownButton | Syncfusion
-description: Configure React DropDownButton popup items with icons, separators, and text. Bind items from a data source to populate the action list.
+title: Popup items in React Dropdown Menu | Syncfusion
+description: Configure React Dropdown Menu popup items with icons, separators, and text. Bind items from a data source to populate the action list.
 control: Popup items 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Popup items in React DropDownButton
+# Popup items in React Dropdown Menu
 
 ## Icons
 
@@ -32,7 +32,7 @@ added using the iconCss property.
 
 ## Navigations
 
-Actions in DropDownButton is usage to navigate to the other web page when action item is clicked. This can be achieved by providing link to the action item using the `url` property. In the following sample, Navigation URL for Flipkart, Amazon, and Snapdeal action items are added using the `url` property.
+Actions in React Dropdown Menu is usage to navigate to the other web page when action item is clicked. This can be achieved by providing link to the action item using the `url` property. In the following sample, Navigation URL for Flipkart, Amazon, and Snapdeal action items are added using the `url` property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

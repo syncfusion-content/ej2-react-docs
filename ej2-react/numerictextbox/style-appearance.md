@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Style and Appearance in React NumericTextBox | Syncfusion
-description: Customize the React NumericTextBox wrapper, input, and spin button appearance with CSS to match your application design system.
+title: Style and Appearance in React Numeric TextBox | Syncfusion
+description: Customize the React Numeric TextBox wrapper, input, and spin button appearance with CSS to match your application design system.
 control: Style appearance 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style and Appearance in React NumericTextBox
+# Style and Appearance in React Numeric TextBox
 
-Customize the NumericTextBox component's appearance using CSS to match your application's design system. The following CSS rules demonstrate common styling modifications for various NumericTextBox scenarios.
+Customize the React Numeric TextBox component's appearance using CSS to match your application's design system. The following CSS rules demonstrate common styling modifications for various React Numeric TextBox scenarios.
 
-## Customizing the appearance of NumericTextBox wrapper element
+## Customizing the appearance of React Numeric TextBox wrapper element
 
-Modify the NumericTextBox dimensions and typography by applying the following CSS rules to the input element:
+Modify the React Numeric TextBox dimensions and typography by applying the following CSS rules to the input element:
 
 ```css
-/* Customize NumericTextBox height and font size */
+/* Customize React Numeric TextBox height and font size */
 .e-input-group input.e-input, 
 .e-input-group.e-control-wrapper input.e-input, 
 .e-input-group textarea.e-input, 
@@ -27,7 +27,7 @@ Modify the NumericTextBox dimensions and typography by applying the following CS
 }
 ```
 
-## Customizing the NumericTextBox spin buttons
+## Customizing the React Numeric TextBox spin buttons
 
 Customize the appearance of the spin button icons (increment/decrement buttons) using the following CSS:
 

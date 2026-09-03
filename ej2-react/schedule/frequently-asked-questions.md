@@ -123,7 +123,7 @@ render(<TimelineView />, document.getElementById('sample'));
 
 **Solution:** Use the [`cellClick`](https://ej2.syncfusion.com/react/documentation/api/schedule#cellclick) and [`eventClick`](https://ej2.syncfusion.com/react/documentation/api/schedule#eventclick) events to refresh the popup position. This ensures the popup is repositioned when clicked.
 
-```tsx
+```js
 constructor() {
   super(...arguments);
   this.eventAdded = false;
@@ -165,7 +165,7 @@ onClick(args) {
 - `ca-gregorian.json` - Calendar data
 - `numberingSystems.json` - Numbering system data
 
-```tsx
+```js
 import { loadCldr, L10n } from '@syncfusion/ej2-base';
 import enNumberData from '@syncfusion/ej2-cldr-data/main/en-GB/numbers.json';
 import entimeZoneData from '@syncfusion/ej2-cldr-data/main/en-GB/timeZoneNames.json';

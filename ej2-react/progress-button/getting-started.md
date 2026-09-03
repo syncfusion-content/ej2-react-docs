@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Progress Button
 
-This section explains the steps required to create a simple React ProgressButton component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple React React Progress Button component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
@@ -94,7 +94,7 @@ The required styles for the Progress Button component are imported in the **src/
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the Progress Button component
+## Add the React Progress Button component
 
 Now, you can add the React Progress Button component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
 
@@ -136,7 +136,7 @@ The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs2" %}
 
-> Refer to the [React ProgressButton](https://www.syncfusion.com/react-components/react-progress-button) feature tour page for its groundbreaking feature representations. You can also explore our [React ProgressButton component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/progress-button) that shows how to render the ProgressButton in React.
+> Refer to the [React Progress Button](https://www.syncfusion.com/react-components/react-progress-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Progress Button component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/progress-button) that shows how to render the React Progress Button in React.
 
 ## See Also
 

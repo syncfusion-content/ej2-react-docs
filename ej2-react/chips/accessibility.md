@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Chips
 
-The Chips component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Chips component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The following table outlines the accessibility compliance of the Chips component:
+The following table outlines the accessibility compliance of the React Chips component:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,21 +42,21 @@ The following table outlines the accessibility compliance of the Chips component
 
 ## WAI-ARIA attributes
 
-The Chips component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Chips component:
+The React Chips component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility requirements. The following ARIA attributes are used in the React Chips component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `role=listbox` | Marks the ChipList wrapper element as a listbox for screen readers. |
-| `role=option` | Identifies selectable chips within the ChipList (for multiple selection). |
+| `role=option` | Identifies selectable React Chips within the ChipList (for multiple selection). |
 | `role=button` | Identifies a single chip that triggers actions or events. |
 | `aria-label` | Provides an accessible name for the chip. |
 | `aria-selected` | Indicates whether a chip is currently selected. |
 | `aria-disabled` | Indicates that a chip is perceivable but disabled and not operable. |
-| `aria-multiselectable` | Indicates that multiple chips can be selected from the list. |
+| `aria-multiselectable` | Indicates that multiple React Chips can be selected from the list. |
 
 ## Keyboard interaction
 
-The Chips component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcuts are supported:
+The React Chips component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcuts are supported:
 
 | Keyboard shortcut | Action |
 | --- | --- |
@@ -65,9 +65,9 @@ The Chips component follows the [keyboard interaction](https://www.w3.org/WAI/AR
 
 ## Ensuring accessibility
 
-The Chips component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Chips component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Chips component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/chips.html) in a new window to evaluate the Chips component's accessibility with accessibility tools.
+The accessibility compliance of the React Chips component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/chips.html) in a new window to evaluate the React Chips component's accessibility with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/chips.html" %}
 

@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Types and styles in React Button Group
 
-This section explains the different types and styles available in the Syncfusion ButtonGroup component.
+This section explains the different types and styles available in the Syncfusion React Button Group component.
 
-## ButtonGroup types
+## React Button Group types
 
-### Outline ButtonGroup
+### Outline React Button Group
 
-An outline ButtonGroup displays buttons with borders and transparent backgrounds. To create an outline ButtonGroup, add the `e-outline` class to the target element and to individual button elements using the `cssClass` property.
+An outline React Button Group displays buttons with borders and transparent backgrounds. To create an outline React Button Group, add the `e-outline` class to the target element and to individual button elements using the `cssClass` property.
 
-The following example demonstrates how to create an outline ButtonGroup:
+The following example demonstrates how to create an outline React Button Group:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -31,11 +31,11 @@ The following example demonstrates how to create an outline ButtonGroup:
 
  {% previewsample "page.domainurl/code-snippet/button-group/default-cs10" %}
 
-> The ButtonGroup component does not support `flat` and `round` button types. Use predefined styles for visual customization.
+> The React Button Group component does not support `flat` and `round` button types. Use predefined styles for visual customization.
 
-## ButtonGroup styles
+## React Button Group styles
 
-The ButtonGroup component provides predefined styles to convey different actions and meanings. Apply these styles by adding the corresponding class name to each button element using the `cssClass` property.
+The React Button Group component provides predefined styles to convey different actions and meanings. Apply these styles by adding the corresponding class name to each button element using the `cssClass` property.
 
 | Class | Description |
 | -------- | -------- |
@@ -45,7 +45,7 @@ The ButtonGroup component provides predefined styles to convey different actions
 | e-warning | Represents an action requiring caution. |
 | e-danger | Represents a negative action. |
 
-The following example demonstrates how to apply predefined styles to a ButtonGroup:
+The following example demonstrates how to apply predefined styles to a React Button Group:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -58,9 +58,9 @@ The following example demonstrates how to apply predefined styles to a ButtonGro
 
  {% previewsample "page.domainurl/code-snippet/button-group/default-cs11" %}
 
-> Predefined ButtonGroup styles provide visual indication only. Ensure button content clearly describes the button's purpose for users of assistive technologies such as screen readers.
+> Predefined React Button Group styles provide visual indication only. Ensure button content clearly describes the button's purpose for users of assistive technologies such as screen readers.
 
 ## See Also
 
-* [ButtonGroup with icons](./how-to/create-buttongroup-with-icons)
-* [Create ButtonGroup with rounded corner](./how-to/create-buttongroup-with-rounded-corner)
+* [React Button Group with icons](./how-to/create-buttongroup-with-icons)
+* [Create React Button Group with rounded corner](./how-to/create-buttongroup-with-rounded-corner)

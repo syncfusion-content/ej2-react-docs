@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Drag and drop in React Chips
 
-Enable drag and drop functionality for chips by setting the [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/chips/#allowdraganddrop) property to **true**. Users can drag and drop chips within the same ChipList or across multiple ChipList containers to reorder or reorganize them.
+Enable drag and drop functionality for React Chips by setting the [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/chips/#allowdraganddrop) property to **true**. Users can drag and drop React Chips within the same ChipList or across multiple ChipList containers to reorder or reorganize them.
 
-When dragging a chip, a visual indicator line appears between chips, showing exactly where the chip will be placed upon drop. This feedback helps users place chips at the desired position with precision.
+When dragging a chip, a visual indicator line appears between React Chips, showing exactly where the chip will be placed upon drop. This feedback helps users place React Chips at the desired position with precision.
 
 ## Drag and drop events
 
@@ -24,7 +24,7 @@ The following events allow you to control and customize the drag and drop behavi
 
 ## Drag area
 
-Restrict the dragging area using the [`dragArea`](https://ej2.syncfusion.com/react/documentation/api/chips/#dragarea) property. This property accepts an element ID or CSS class as a string and limits chip dragging only within the specified container. By default, it is set to `null`, allowing chips to be dragged anywhere.
+Restrict the dragging area using the [`dragArea`](https://ej2.syncfusion.com/react/documentation/api/chips/#dragarea) property. This property accepts an element ID or CSS class as a string and limits chip dragging only within the specified container. By default, it is set to `null`, allowing React Chips to be dragged anywhere.
 
 The following example demonstrates drag and drop functionality with the [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/chips/#allowdraganddrop) property enabled:
 

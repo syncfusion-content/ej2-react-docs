@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Events in React Speed Dial
 
-The SpeedDial component emits events at different lifecycle stages—from initialization through user interactions to popup state changes. Monitor these events to execute custom logic and control component behavior. This section details each available event and its purpose.
+The React Speed Dial component emits events at different lifecycle stages—from initialization through user interactions to popup state changes. Monitor these events to execute custom logic and control component behavior. This section details each available event and its purpose.
 
 ## clicked
 
-The [`clicked`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#clicked) event fires when a user clicks on any SpeedDial action item. Use this event to execute item-specific actions or workflows. The event provides [`SpeedDialItemEventArgs`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialitemeventargs) containing item details like text, iconCss, and ID.
+The [`clicked`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#clicked) event fires when a user clicks on any React Speed Dial action item. Use this event to execute item-specific actions or workflows. The event provides [`SpeedDialItemEventArgs`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialitemeventargs) containing item details like text, iconCss, and ID.
 
 ```ts
 import { SpeedDialComponent, type SpeedDialItemModel, type SpeedDialItemEventArgs } from '@syncfusion/ej2-react-buttons';
@@ -43,7 +43,7 @@ export default App;
 
 ## created
 
-The [`created`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#created) event fires after the SpeedDial component completes initialization and rendering. Use this event to access the component instance and perform setup tasks like binding data or initializing other dependent components.
+The [`created`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#created) event fires after the React Speed Dial component completes initialization and rendering. Use this event to access the component instance and perform setup tasks like binding data or initializing other dependent components.
 
 ```ts
 import { SpeedDialComponent, SpeedDialItemModel } from '@syncfusion/ej2-react-buttons';
@@ -72,7 +72,7 @@ export default App;
 
 ## beforeOpen
 
-The [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#beforeopen) event fires before the SpeedDial popup opens. Use this event to prevent popup opening conditionally or prepare the UI before items become visible. The event provides [`SpeedDialBeforeOpenCloseEventArgs`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialbeforeopencloseeventargs) with a `cancel` property to halt the opening action.
+The [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#beforeopen) event fires before the React Speed Dial popup opens. Use this event to prevent popup opening conditionally or prepare the UI before items become visible. The event provides [`SpeedDialBeforeOpenCloseEventArgs`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialbeforeopencloseeventargs) with a `cancel` property to halt the opening action.
 
 ```ts
 import { SpeedDialComponent, type SpeedDialItemModel, type SpeedDialBeforeOpenCloseEventArgs } from '@syncfusion/ej2-react-buttons';
@@ -101,7 +101,7 @@ export default App;
 
 ## onOpen
 
-The [`onOpen`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#onopen) event fires after the SpeedDial popup successfully opens. Use this event to track popup state changes or trigger animations. The event provides [`SpeedDialOpenCloseEventArgs`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialopencloseeventargs) with event context.
+The [`onOpen`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#onopen) event fires after the React Speed Dial popup successfully opens. Use this event to track popup state changes or trigger animations. The event provides [`SpeedDialOpenCloseEventArgs`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialopencloseeventargs) with event context.
 
 ```ts
 import { SpeedDialComponent, type SpeedDialItemModel, type SpeedDialOpenCloseEventArgs } from '@syncfusion/ej2-react-buttons';
@@ -130,7 +130,7 @@ export default App;
 
 ## beforeClose
 
-The [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#beforeclose) event fires before the SpeedDial popup closes. Use this event to prevent popup closing or save user selections. The event provides [`SpeedDialBeforeOpenCloseEventArgs`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialbeforeopencloseeventargs) with a `cancel` property to prevent the close action.
+The [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#beforeclose) event fires before the React Speed Dial popup closes. Use this event to prevent popup closing or save user selections. The event provides [`SpeedDialBeforeOpenCloseEventArgs`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialbeforeopencloseeventargs) with a `cancel` property to prevent the close action.
 
 ```ts
 import { SpeedDialComponent, type SpeedDialItemModel, type SpeedDialBeforeOpenCloseEventArgs } from '@syncfusion/ej2-react-buttons';
@@ -159,7 +159,7 @@ export default App;
 
 ## onClose
 
-The [`onClose`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#onclose) event fires after the SpeedDial popup successfully closes. Use this event to perform cleanup or state updates after the menu is hidden. The event provides [`SpeedDialOpenCloseEventArgs`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialopencloseeventargs) with event context.
+The [`onClose`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#onclose) event fires after the React Speed Dial popup successfully closes. Use this event to perform cleanup or state updates after the menu is hidden. The event provides [`SpeedDialOpenCloseEventArgs`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialopencloseeventargs) with event context.
 
 ```ts
 import { SpeedDialComponent, type SpeedDialItemModel, type SpeedDialOpenCloseEventArgs } from '@syncfusion/ej2-react-buttons';
@@ -215,7 +215,7 @@ function App() {
 export default App;
 ```
 
-Below example demonstrates the clicked event of the Speed Dial component.
+Below example demonstrates the clicked event of the React Speed Dial component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

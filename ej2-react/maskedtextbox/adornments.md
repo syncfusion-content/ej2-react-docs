@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adornments in React MaskedTextBox | Syncfusion
-description: Add icons, labels, or action buttons to the React MaskedTextBox using prependTemplate and appendTemplate to guide and enhance input.
+title: Adornments in React Input Mask | Syncfusion
+description: Add icons, labels, or action buttons to the React Input Mask using prependTemplate and appendTemplate to guide and enhance input.
 platform: ej2-react
 control: Adornments
 publishingplatform: ##Platform_Name##
@@ -9,9 +9,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adornments in React MaskedTextBox
+# Adornments in React Input Mask
 
-Adornments in the MaskedTextBox allow you to add custom elements before or after the masked input using the `prependTemplate` and `appendTemplate` properties. These elements can include prefixes, suffixes, labels, or action icons to provide context, guide input, and enable quick actions while preserving mask validation and float label behavior.
+Adornments in the React Input Mask allow you to add custom elements before or after the masked input using the `prependTemplate` and `appendTemplate` properties. These elements can include prefixes, suffixes, labels, or action icons to provide context, guide input, and enable quick actions while preserving mask validation and float label behavior.
 
 ## Common Use Cases
 
@@ -20,14 +20,14 @@ Adornments in the MaskedTextBox allow you to add custom elements before or after
 - **Context Labels**: Add static prefixes/suffixes like country code, domain, or unit suffix.
 - **Visual Feedback**: Show status indicators without interfering with the mask.
 
-## Adding Adornments to MaskedTextBox
+## Adding Adornments to React Input Mask
 
 Use `prependTemplate` and `appendTemplate` to inject HTML content before and after the masked input. These templates do not alter mask behavior and support any inline HTML or icon.
 
 - **prependTemplate**: Renders elements before the input.
 - **appendTemplate**: Renders elements after the input.
 
-The following example demonstrates how to add adornments to the MaskedTextBox.
+The following example demonstrates how to add adornments to the React Input Mask.
 
 `[Class-component]`
 
@@ -40,7 +40,7 @@ The following example demonstrates how to add adornments to the MaskedTextBox.
 {% endhighlight %}
 {% endtabs %}
 
-You can view the demo here: [MaskedTextBox Adornments demo](https://ej2.syncfusion.com/react/demos/#/tailwind3/maskedtextbox/adornments).
+You can view the demo here: [React Input Mask Adornments demo](https://ej2.syncfusion.com/react/demos/#/tailwind3/maskedtextbox/adornments).
 
 `[Functional-component]`
 
@@ -53,4 +53,4 @@ You can view the demo here: [MaskedTextBox Adornments demo](https://ej2.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
-You can view the demo here: [MaskedTextBox Adornments demo](https://ej2.syncfusion.com/react/demos/#/tailwind3/maskedtextbox/adornments).
+You can view the demo here: [React Input Mask Adornments demo](https://ej2.syncfusion.com/react/demos/#/tailwind3/maskedtextbox/adornments).

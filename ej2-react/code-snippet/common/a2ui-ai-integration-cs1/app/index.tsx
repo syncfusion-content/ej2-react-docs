@@ -21,7 +21,6 @@ function App() {
         processorRef.current = new MessageProcessor(
             [syncfusionCatalog],
             async (action) => {
-                // Component interactions inside the surface are forwarded to the agent.
                 const res = await fetch(AGENT_URL, {
                     method: 'POST',
                     headers: { 'content-type': 'application/json' },

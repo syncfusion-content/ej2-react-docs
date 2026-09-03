@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Components in React In-place Editor
 
-The In-place Editor renders various components based on the [type](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#type) property. It includes built-in components and injectable components. To use injectable components, inject the required modules into the In-place Editor. By default, the `type` property is set to `Text`, which renders the `TextBox` component.
+The React In-place Editor renders various components based on the [type](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#type) property. It includes built-in components and injectable components. To use injectable components, inject the required modules into the React In-place Editor. By default, the `type` property is set to `Text`, which renders the `TextBox` component.
 
 The following table lists injectable components and built-in components with their corresponding types.
 
@@ -25,7 +25,7 @@ The following table lists injectable components and built-in components with the
 | [Rte](../rich-text-editor)     (`RTE`)              |                     |
 | [ColorPicker](../color-picker)    (`Color`)       |                     |
 
-The following samples demonstrate built-in and injectable In-place Editor components.
+The following samples demonstrate built-in and injectable React In-place Editor components.
 
 `[Class-component]`
 
@@ -55,7 +55,7 @@ The following samples demonstrate built-in and injectable In-place Editor compon
 
 ## Model configuration
 
-Customize component properties and events through the In-place Editor [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#model) property.
+Customize component properties and events through the React In-place Editor [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#model) property.
 
 In the following code, the [type](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#type) is set to `Date`, and `DatePicker` properties are configured through the [model](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#model) property to customize the [DatePicker](https://ej2.syncfusion.com/react/documentation/api/datepicker) component in the In-place Editor.
 

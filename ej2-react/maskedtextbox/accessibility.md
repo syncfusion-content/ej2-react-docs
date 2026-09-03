@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Accessibility in React MaskedTextBox | Syncfusion
-description: Review the React MaskedTextBox compliance with WCAG 2.2, Section 508, WAI-ARIA, and screen reader accessibility standards.
+title: Accessibility in React Input Mask | Syncfusion
+description: Review the React Input Mask compliance with WCAG 2.2, Section 508, WAI-ARIA, and screen reader accessibility standards.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React MaskedTextBox
+# Accessibility in React Input Mask
 
-The MaskedTextBox component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and common WAI-ARIA roles used to evaluate accessibility.
+The React Input Mask component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and common WAI-ARIA roles used to evaluate accessibility.
 
-The accessibility compliance for the MaskedTextBox component is outlined below.
+The accessibility compliance for the React Input Mask component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,24 +40,24 @@ The accessibility compliance for the MaskedTextBox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The MaskedTextBox provides complete ARIA accessibility support, enabling access through screen readers and other assistive technologies. This component follows the guidelines in [WAI-ARIA Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
+The React Input Mask provides complete ARIA accessibility support, enabling access through screen readers and other assistive technologies. This component follows the guidelines in [WAI-ARIA Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
 
-The MaskedTextBox uses the `textbox` role and the following ARIA properties based on its state:
+The React Input Mask uses the `textbox` role and the following ARIA properties based on its state:
 
 | **Property** | **Functionality** |
 | --- | --- |
 | aria-live | The `aria-live` attribute indicates the priority of updates to a live region. |
-| aria-disabled | The `aria-disabled` property indicates the disabled state of the MaskedTextBox. |
-| aria-valuenow | The `aria-valuenow` property specifies the current value of the MaskedTextBox. |
+| aria-disabled | The `aria-disabled` property indicates the disabled state of the React Input Mask. |
+| aria-valuenow | The `aria-valuenow` property specifies the current value of the React Input Mask. |
 | aria-invalid | The `aria-invalid` property indicates that the user input is incorrect or not within the acceptable ranges. |
-| aria-placeholder | The `aria-placeholder` is a short hint to help the users with data entry when the MaskedTextBox has no value. |
-| aria-labelledby | The `aria-labelledby` property indicates the floating label element of the MaskedTextBox. |
+| aria-placeholder | The `aria-placeholder` is a short hint to help the users with data entry when the React Input Mask has no value. |
+| aria-labelledby | The `aria-labelledby` property indicates the floating label element of the React Input Mask. |
 
 ## Ensuring accessibility
 
-The MaskedTextBox component's accessibility is validated using the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) tools during automated testing.
+The React Input Mask component's accessibility is validated using the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) tools during automated testing.
 
-The accessibility compliance of the MaskedTextBox is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/masked-textbox.html) in a new window to evaluate the MaskedTextBox with accessibility tools.
+The accessibility compliance of the React Input Mask is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/masked-textbox.html) in a new window to evaluate the React Input Mask with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/masked-textbox.html" %}
 

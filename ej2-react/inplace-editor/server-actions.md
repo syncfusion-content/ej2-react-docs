@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Server Actions in React In-place Editor
 
-When submitting In-place Editor values to the server, the [primaryKey](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#primarykey) property is required for remote data operations; otherwise, the action will not be performed.
+When submitting React In-place Editor values to the server, the [primaryKey](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#primarykey) property is required for remote data operations; otherwise, the action will not be performed.
 
 If the [URL](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#url) property is empty, data submission is handled locally and the [actionSuccess](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#actionsuccess) event triggers with `null` as the argument value.
 

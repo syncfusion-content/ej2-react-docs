@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style and Appearance in React File Upload
 
-The following CSS selectors and classes enable customization of the Uploader component's visual appearance to match specific design requirements.
+The following CSS selectors and classes enable customization of the React File Upload component's visual appearance to match specific design requirements.
 
-## Customizing the appearance of File Upload wrapper element
+## Customizing the appearance of React File Upload wrapper element
 
-Control the overall Uploader component dimensions and layout using CSS on the wrapper element.
+Control the overall React File Upload component dimensions and layout using CSS on the wrapper element.
 
 ```css
 /* Customize wrapper height and width */
@@ -24,7 +24,7 @@ Control the overall Uploader component dimensions and layout using CSS on the wr
 }
 ```
 
-## Customizing the File Upload browse button
+## Customizing the React File Upload browse button
 
 Apply custom styling to action buttons including font, colors, and dimensions.
 
@@ -50,7 +50,7 @@ Customize the drop area text appearance using the file drop class.
 }
 ```
 
-## Customizing the uploaded file container in File Upload
+## Customizing the uploaded file container in React File Upload
 
 Use the following CSS to customize the uploaded file container in File Upload
 
@@ -63,4 +63,4 @@ Use the following CSS to customize the uploaded file container in File Upload
 
 ## See Also
 
-* [Customize the appearance of uploader using a template](https://ej2.syncfusion.com/react/documentation/uploader/template)
+* [Customize the appearance of React File Upload using a template](https://ej2.syncfusion.com/react/documentation/uploader/template)

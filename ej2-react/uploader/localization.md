@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Localization in React File Upload
 
-The localization library enables customization of the Uploader's static text content, including action button labels, file status messages, icon titles, tooltips, and drop area text. Define locale-specific text by creating a locale object and registering it with the L10n (localization) service.
+The localization library enables customization of the React File Upload's static text content, including action button labels, file status messages, icon titles, tooltips, and drop area text. Define locale-specific text by creating a locale object and registering it with the L10n (localization) service.
 
-The following keys customize the Uploader's text content:
+The following keys customize the React File Upload's text content:
 
 | Key | Description |
 |------------------------|---------|

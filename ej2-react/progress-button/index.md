@@ -10,10 +10,10 @@ domainurl: ##DomainURL##
 
 # Index in React Progress button component
 
-The ProgressButton visualizes the progression of an operation to indicate the user that a process is happening in the background with visual representation.
+The React Progress Button visualizes the progression of an operation to indicate the user that a process is happening in the background with visual representation.
 
 ## Key Features
 
 * [`Spinner and its customization`](spinner-and-progress#spinner)
 * [`Progress and animation`](spinner-and-progress#progress)
-* [`Customize ProgressButton using cssClass`](how-to/customize-progress-using-cssclass)
+* [`Customize React Progress Button using cssClass`](how-to/customize-progress-using-cssclass)
