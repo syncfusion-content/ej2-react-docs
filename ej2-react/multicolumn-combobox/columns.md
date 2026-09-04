@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Columns in React MultiColumn ComboBox
 
-The [columns](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#columns) property specifies which data fields are displayed in the MultiColumn ComboBox.
+The [columns](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#columns) property specifies which data fields are displayed in the React MultiColumn ComboBox.
 
 Customize columns using [ColumnModel](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/columnModel/), which provides options such as `field`, `header`, `width`, `format`, `template`, and more.
 

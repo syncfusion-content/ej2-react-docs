@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Templates in React Breadcrumb
 
-The Breadcrumb component provides flexible template customization options to create rich, interactive navigation experiences. Use the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#itemtemplate) property to customize individual breadcrumb items and the [`separatorTemplate`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#separatortemplate) property to customize the separators between items, enabling full control over the visual presentation and functionality.
+The React Breadcrumb component provides flexible template customization options to create rich, interactive navigation experiences. Use the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#itemtemplate) property to customize individual React Breadcrumb items and the [`separatorTemplate`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#separatortemplate) property to customize the separators between items, enabling full control over the visual presentation and functionality.
 
 ## Item Template
 
-The following example demonstrates customizing breadcrumb items using the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#itemtemplate) property. This shopping cart navigation scenario shows how breadcrumb items can be enhanced with chip components to create a more engaging user interface.
+The following example demonstrates customizing React Breadcrumb items using the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#itemtemplate) property. This shopping cart navigation scenario shows how React Breadcrumb items can be enhanced with chip components to create a more engaging user interface.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,7 +29,7 @@ The following example demonstrates customizing breadcrumb items using the [`item
 
 ## Separator Template
 
-The following example shows how to customize separators between breadcrumb items using the [`separatorTemplate`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#separatortemplate) property. Custom icons replace the default separator to create a more visually distinctive navigation path.
+The following example shows how to customize separators between React Breadcrumb items using the [`separatorTemplate`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#separatortemplate) property. Custom icons replace the default separator to create a more visually distinctive navigation path.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,7 +44,7 @@ The following example shows how to customize separators between breadcrumb items
 
 ## Customize Specific Item Template
 
-Individual breadcrumb items can be customized selectively using [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#itemtemplate) with conditional rendering logic. The following example demonstrates how to apply custom styling with a span element specifically to items containing "Breadcrumb" in their text, while leaving other items with default styling.
+Individual React Breadcrumb items can be customized selectively using [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/breadcrumb#itemtemplate) with conditional rendering logic. The following example demonstrates how to apply custom styling with a span element specifically to items containing "Breadcrumb" in their text, while leaving other items with default styling.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

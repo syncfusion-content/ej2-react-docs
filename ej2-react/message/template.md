@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Template in React Message
 
-The Message component supports custom templates, enabling you to render complex or interactive message content beyond simple text. Templates allow you to embed HTML elements, React components, or dynamic content within the message body using the [content](https://ej2.syncfusion.com/react/documentation/api/message#content) property or by adding content directly to the component's children.
+The React Message component supports custom templates, enabling you to render complex or interactive React Message content beyond simple text. Templates allow you to embed HTML elements, React components, or dynamic content within the React Message body using the [content](https://ej2.syncfusion.com/react/documentation/api/message#content) property or by adding content directly to the component's children.
 
-The following example demonstrates a custom message template that combines HTML elements with React Button components for interactive messaging.
+The following example demonstrates a custom React Message template that combines HTML elements with React Button components for interactive messaging.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

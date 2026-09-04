@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 Accordion items can be added dynamically by passing the item and index value with the [`addItem`](https://ej2.syncfusion.com/react/documentation/api/accordion#additem) method.
 
-In the following demo, you can add the accordion content by expanding any accordion header content using [`expanded`](https://ej2.syncfusion.com/react/documentation/api/accordion#expanded) event.
+In the following demo, you can add the React Accordion content by expanding any React Accordion header content using [`expanded`](https://ej2.syncfusion.com/react/documentation/api/accordion#expanded) event.
 
 * Data is fetched from the data source.
 
 * The data is formatted as a JSON object with [`header`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItem#header) and [`content`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItem#content) fields.
 
-* Here last index is calculated to append the new accordion at the end.
+* Here last index is calculated to append the new React Accordion at the end.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

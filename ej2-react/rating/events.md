@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Events in React Rating
 
-This section describes the rating events that will be triggered when appropriate actions are performed. The following events are available in the rating component.
+This section describes the React Rating events that will be triggered when appropriate actions are performed. The following events are available in the React Rating component.
 
 ## beforeItemRender
 
-The rating component triggers the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/rating/#beforeitemrender) event before rendering each rating item. The [`RatingItemEventArgs`](https://ej2.syncfusion.com/react/documentation/api/rating/ratingItemEventArgs/) passed as an event argument provides the details of the item to be rendered.
+The React Rating component triggers the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/rating/#beforeitemrender) event before rendering each React Rating item. The [`RatingItemEventArgs`](https://ej2.syncfusion.com/react/documentation/api/rating/ratingItemEventArgs/) passed as an event argument provides the details of the item to be rendered.
 
 ```ts
-{/* Import the Rating. */}
+{/* Import the React Rating. */}
 import { RatingComponent, RatingItemEventArgs } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-{/* To render Rating.*/}
+{/* To render React Rating.*/}
 function App() {
 
     function beforeItemRender(args: RatingItemEventArgs){
@@ -41,7 +41,7 @@ ReactDom.render(<App />,document.getElementById('element'));
 
 ## created
 
-The rating component triggers the [`created`](https://ej2.syncfusion.com/react/documentation/api/rating/#created) event when the rendering of the rating component is completed.
+The React Rating component triggers the [`created`](https://ej2.syncfusion.com/react/documentation/api/rating/#created) event when the rendering of the React Rating component is completed.
 
 ```ts
 {/* Import the Rating. */}
@@ -49,7 +49,7 @@ import { RatingComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-{/* To render Rating.*/}
+{/* To render React Rating.*/}
 function App() {
 
     function created(){
@@ -71,12 +71,12 @@ ReactDom.render(<App />,document.getElementById('element'));
 The rating component triggers the [`onItemHover`](https://ej2.syncfusion.com/react/documentation/api/rating/#onitemhover) event when the rating item is hovered. The [`RatingHoverEventArgs`](https://ej2.syncfusion.com/react/documentation/api/rating/ratingHoverEventArgs/) passed as an event argument provides the details of the hovered item.
 
 ```ts
-{/* Import the Rating. */}
+{/* Import the React Rating. */}
 import { RatingComponent, RatingHoverEventArgs } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-{/* To render Rating.*/}
+{/* To render React Rating.*/}
 function App() {
 
     function onItemHover(args: RatingHoverEventArgs){
@@ -95,15 +95,15 @@ ReactDom.render(<App />,document.getElementById('element'));
 
 ## valueChanged
 
-The rating component triggers the [`valueChanged`](https://ej2.syncfusion.com/react/documentation/api/rating/#valuechanged) event when the rating value changes. The [`RatingChangedEventArgs`](https://ej2.syncfusion.com/react/documentation/api/rating/ratingChangedEventArgs/) passed as an event argument provides the change details.
+The React Rating component triggers the [`valueChanged`](https://ej2.syncfusion.com/react/documentation/api/rating/#valuechanged) event when the React Rating value changes. The [`RatingChangedEventArgs`](https://ej2.syncfusion.com/react/documentation/api/rating/ratingChangedEventArgs/) passed as an event argument provides the change details.
 
 ```ts
-{/* Import the Rating. */}
+{/* Import the React Rating. */}
 import { RatingComponent, RatingChangedEventArgs } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-{/* To render Rating.*/}
+{/* To render React Rating.*/}
 function App() {
 
     function valueChanged(args: RatingChangedEventArgs){

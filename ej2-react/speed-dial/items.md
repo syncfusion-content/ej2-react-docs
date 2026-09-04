@@ -10,23 +10,23 @@ domainurl: ##DomainURL##
 
 # Items in React Speed Dial
 
-Define the action items displayed in the SpeedDial popup using the [`items`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#items) property. Each item is a [`SpeedDialItemModel`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialitemmodel) object that can include text, icons, disabled states, and custom IDs. Configure item appearance and behavior to create a functional and user-friendly action menu.
+Define the action items displayed in the React Speed Dial popup using the [`items`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#items) property. Each item is a [`SpeedDialItemModel`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speeddialitemmodel) object that can include text, icons, disabled states, and custom IDs. Configure item appearance and behavior to create a functional and user-friendly action menu.
 
 | Fields | Type | Description |
 |------|------|-------------|
 | [`text`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#text) | `string` | Defines the text content of SpeedDialItem. |
-| [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#iconcss) | `string` | Defines one or more CSS classes to include an icon or image in Speed Dial item. |
+| [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#iconcss) | `string` | Defines one or more CSS classes to include an icon or image in React Speed Dial item. |
 | [`disabled`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#disabled) | `boolean` | Defines whether to enable or disable the SpeedDialItem. |
 | [`id`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#id) | `string` | Defines a unique value for the SpeedDialItem which can be used to identify the item in event args. |
 | [`title`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#title) | `string` | Defines the title of SpeedDialItem to display tooltip. |
 
-## Icons in Speed Dial items
+## Icons in React Speed Dial items
 
-You can customize the icon and text of Speed Dial action items using [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#iconcss) and [`text`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#text) properties.
+You can customize the icon and text of React Speed Dial action items using [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#iconcss) and [`text`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#text) properties.
 
 ### Icon only
 
-Display only an icon in SpeedDial items by setting the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#iconcss) property. Add the [`title`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#title) property to show a tooltip on hover, providing users with item descriptions when text is not displayed.
+Display only an icon in React Speed Dial items by setting the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#iconcss) property. Add the [`title`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#title) property to show a tooltip on hover, providing users with item descriptions when text is not displayed.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -41,7 +41,7 @@ Display only an icon in SpeedDial items by setting the [`iconCss`](https://ej2.s
 
 ### Text only
 
-Display only text in SpeedDial items by setting the [`text`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#text) property without specifying icon properties. This creates a text-based menu suitable for action lists or labels.
+Display only text in React Speed Dial items by setting the [`text`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#text) property without specifying icon properties. This creates a text-based menu suitable for action lists or labels.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -56,7 +56,7 @@ Display only text in SpeedDial items by setting the [`text`](https://ej2.syncfus
 
 ### Icon with text
 
-Display both icon and text in SpeedDial items by setting both the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#iconcss) and [`text`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#text) properties. This combination provides clear visual and textual identification for each action.
+Display both icon and text in React Speed Dial items by setting both the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#iconcss) and [`text`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#text) properties. This combination provides clear visual and textual identification for each action.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -71,7 +71,7 @@ Display both icon and text in SpeedDial items by setting both the [`iconCss`](ht
 
 ### Disabled
 
-Disable SpeedDial items by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#disabled) property to `true`. Disabled items appear grayed out and cannot be clicked by users.
+Disable React Speed Dial items by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialItemModel/#disabled) property to `true`. Disabled items appear grayed out and cannot be clicked by users.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -86,9 +86,9 @@ Disable SpeedDial items by setting the [`disabled`](https://ej2.syncfusion.com/r
 
 ## Animation
 
-Animate the appearance of SpeedDial action items when the popup opens or closes. Customize animation behavior using the [`animation`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#animation) property to control the `effect`, `delay`, and `duration`. By default, items animate with a `fade` effect. Choose from various [`speeddialanimation`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialAnimationEffect/) effects to match your design.
+Animate the appearance of React Speed Dial action items when the popup opens or closes. Customize animation behavior using the [`animation`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#animation) property to control the `effect`, `delay`, and `duration`. By default, items animate with a `fade` effect. Choose from various [`speeddialanimation`](https://ej2.syncfusion.com/react/documentation/api/speed-dial/speedDialAnimationEffect/) effects to match your design.
 
-Below example demonstrates the Speed Dial items with applied Zoom effect.
+Below example demonstrates the React Speed Dial items with applied Zoom effect.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -103,4 +103,4 @@ Below example demonstrates the Speed Dial items with applied Zoom effect.
 
 ## Template
 
-Use templates to completely customize the appearance and content of SpeedDial action items and the popup container. The [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#itemtemplate) property customizes individual items, while [`popupTemplate`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#popuptemplate) customizes the entire popup container. For comprehensive template examples and advanced customization options, see the [Template documentation](https://ej2.syncfusion.com/react/documentation/speed-dial/template/).
+Use templates to completely customize the appearance and content of React Speed Dial action items and the popup container. The [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#itemtemplate) property customizes individual items, while [`popupTemplate`](https://ej2.syncfusion.com/react/documentation/api/speed-dial#popuptemplate) customizes the entire popup container. For comprehensive template examples and advanced customization options, see the [Template documentation](https://ej2.syncfusion.com/react/documentation/speed-dial/template/).

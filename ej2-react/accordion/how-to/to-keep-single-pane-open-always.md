@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to keep a single pane open in React Accordion
 
-By default, all Accordion panels are collapsible. You can customize the Accordion to keep one panel as expanded state always. This is applicable for `Single` expand mode.
+By default, all React Accordion panels are collapsible. You can customize the React Accordion to keep one panel as expanded state always. This is applicable for `Single` expand mode.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

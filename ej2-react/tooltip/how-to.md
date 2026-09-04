@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # How to in React Tooltip component
 
-## Show Tooltip on disabled elements
+## Show React Tooltip on disabled elements
 
-By default, Tooltips will not be displayed on disabled elements. However, it is possible to enable this behavior by following the steps below.
+By default, React Tooltips will not be displayed on disabled elements. However, it is possible to enable this behavior by following the steps below.
 1. Add a disabled element like the `button` element into a div whose display style is set to `inline-block`.
 2. Set the pointer event as `none` for the disabled element (button) through CSS.
-3. Now, initialize the Tooltip for outer div element that holds the disabled button element.
+3. Now, initialize the React Tooltip for outer div element that holds the disabled button element.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -34,11 +34,11 @@ By default, Tooltips will not be displayed on disabled elements. However, it is 
 
  {% previewsample "page.domainurl/code-snippet/tooltip/disable-tooltip-cs1" %}
 
-## Load HTML pages into tooltip
+## Load HTML pages into React Tooltip
 
-Tooltip loads HTML pages via HTML tags such as iframe, video, and map using the [`content`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#content) property, which supports both string and HTML tags.
+React Tooltip loads HTML pages via HTML tags such as iframe, video, and map using the [`content`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#content) property, which supports both string and HTML tags.
 
-To load an `iframe` element in tooltip, set the required iframe in the `content` of Tooltip while initializing the Tooltip component. Refer to the following code.
+To load an `iframe` element in React Tooltip, set the required iframe in the `content` of React Tooltip while initializing the React Tooltip component. Refer to the following code.
 
 ```ts
 
@@ -46,10 +46,10 @@ content: '<iframe src="https://www.syncfusion.com/products/essential-js2"></ifra
 
 ```
 
-Use the following steps to render `ej2-map` in tooltip:
+Use the following steps to render `ej2-map` in React Tooltip:
 
 1. Initialize the map component and create an element. After initialization, append the map object to the element.
-2. Set the rendered map element to the content of Tooltip component. Refer to the following sample.
+2. Set the rendered map element to the content of React Tooltip component. Refer to the following sample.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -68,10 +68,10 @@ Use the following steps to render `ej2-map` in tooltip:
 
  {% previewsample "page.domainurl/code-snippet/tooltip/iframe-cs1" %}
 
-## Define Tooltip open mode property
+## Define React Tooltip open mode property
 
-The open mode property of Tooltip can be defined on a target that is hovering, focusing, or clicking.
-Tooltip component have the following types of open mode:
+The open mode property of React Tooltip can be defined on a target that is hovering, focusing, or clicking.
+React Tooltip component have the following types of open mode:
     * Auto
     * Hover
     * Click
@@ -80,47 +80,47 @@ Tooltip component have the following types of open mode:
 
 ** Auto **
 
-Tooltip appears when you hover over the target or when the target element receives the focus.
+React Tooltip appears when you hover over the target or when the target element receives the focus.
 
 ** Hover **
 
-Tooltip appears when you hover over the target.
+React Tooltip appears when you hover over the target.
 
 ** Click **
 
-Tooltip appears when you click a target element.
+React Tooltip appears when you click a target element.
 
 ** Focus **
 
-Tooltip appears when you focus (say through tab key) on a target element.
+React Tooltip appears when you focus (say through tab key) on a target element.
 
 ** Custom **
 
-Tooltip is not triggered by any default action. So, bind your own events and use either open or close public methods.
+React Tooltip is not triggered by any default action. So, bind your own events and use either open or close public methods.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/tooltip/open-property-cs1/app/App.jsx %}
+{% include code-snippet/React Tooltip/open-property-cs1/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/tooltip/open-property-cs1/app/App.tsx %}
+{% include code-snippet/React Tooltip/open-property-cs1/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/tooltip/open-property-cs1/app/index.jsx %}
+{% include code-snippet/React Tooltip/open-property-cs1/app/index.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/tooltip/open-property-cs1/app/index.tsx %}
+{% include code-snippet/React Tooltip/open-property-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/tooltip/open-property-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/React Tooltip/open-property-cs1" %}
 
-## Customize tooltip
+## Customize React Tooltip
 
-The arrow of the Tooltip can be customized as needed by customizing CSS in the sample-side.
-The EJ2 Tooltip component is achieved through CSS3 format and positioned the tip arrow according to the Tooltip positions like `TopCenter`, `BottomLeft`, `RightTop`, and more.
+The arrow of the React Tooltip can be customized as needed by customizing CSS in the sample-side.
+The EJ2 React Tooltip component is achieved through CSS3 format and positioned the tip arrow according to the React Tooltip positions like `TopCenter`, `BottomLeft`, `RightTop`, and more.
 
-Here, the tip arrow is customized as Curved Tooltip and Bubble tooltip.
+Here, the tip arrow is customized as Curved React Tooltip and Bubble React Tooltip.
 
 ** Curved tip **
 
@@ -170,9 +170,9 @@ The two `divs`(inner div and outer div) have been added to achieve the bubble ti
     }
 ```
 
-These tip arrow customizations have been achieved through CSS changes in the sample level. The Tooltip position can be changed by using the radio button click event.
+These tip arrow customizations have been achieved through CSS changes in the sample level. The React Tooltip position can be changed by using the radio button click event.
 
-The arrow tip pointer can also be disabled by using the [showTipPointer](https://ej2.syncfusion.com/react/documentation/api/tooltip/#showtippointer) property in a tooltip.
+The arrow tip pointer can also be disabled by using the [showTipPointer](https://ej2.syncfusion.com/react/documentation/api/tooltip/#showtippointer) property in a React Tooltip.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -191,13 +191,13 @@ The arrow tip pointer can also be disabled by using the [showTipPointer](https:/
 
  {% previewsample "page.domainurl/code-snippet/tooltip/custom-arrow-cs1" %}
 
-## Display Tooltip on SVG and canvas elements
+## Display React Tooltip on SVG and canvas elements
 
-Tooltip can be displayed on both SVG and Canvas elements. You can directly attach the `<svg>` or `<canvas>` elements to show tooltips on data visualization elements.
+React Tooltip can be displayed on both SVG and Canvas elements. You can directly attach the `<svg>` or `<canvas>` elements to show React Tooltips on data visualization elements.
 
 ** SVG **
 
-Create the SVG square element and refer to the following code snippet to render the Tooltip on SVG square.
+Create the SVG square element and refer to the following code snippet to render the React Tooltip on SVG square.
 
 ```ts
   <TooltipComponent content='SVG Square' cssClass='e-tooltip-css' target= '#square'>
@@ -206,7 +206,7 @@ Create the SVG square element and refer to the following code snippet to render 
 
 ** Canvas **
 
-Create the canvas circle element and refer to the following code snippet to render the Tooltip on Canvas circle.
+Create the canvas circle element and refer to the following code snippet to render the React Tooltip on Canvas circle.
 
 ```ts
 <TooltipComponent content='Canvas Circle' cssClass='e-tooltip-css' target= '#circle'>
@@ -230,9 +230,9 @@ Create the canvas circle element and refer to the following code snippet to rend
 
  {% previewsample "page.domainurl/code-snippet/tooltip/svg-canvas-cs1" %}
 
-## Create and show Tooltip on multiple targets
+## Create and show React Tooltip on multiple targets
 
-Tooltip can be created and shown on multiple targets within a container by defining the specific target elements to the target property. So, the Tooltip is initialized only on matched targets within a container.
+React Tooltip can be created and shown on multiple targets within a container by defining the specific target elements to the target property. So, the React Tooltip is initialized only on matched targets within a container.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

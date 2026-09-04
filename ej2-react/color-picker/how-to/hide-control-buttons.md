@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to hide control buttons in React Color Picker
 
-The ColorPicker can be rendered without control buttons (Apply/Cancel). In this case, selecting a color immediately closes the popup, and the selected color is applied directly. To hide control buttons, set the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/color-picker#showbuttons) property to `false`.
+The React Color Picker can be rendered without control buttons (Apply/Cancel). In this case, selecting a color immediately closes the popup, and the selected color is applied directly. To hide control buttons, set the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/color-picker#showbuttons) property to `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

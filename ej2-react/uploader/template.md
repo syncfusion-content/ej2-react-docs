@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in React File Upload
 
-You can customize the default appearance of the uploader using a template along with buttons.
+You can customize the default appearance of the React File Upload using a template along with buttons.
 
 ## File list template
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Dropdown Tree
 
-The Dropdown Tree component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Dropdown Tree component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Dropdown Tree component is outlined below.
+The accessibility compliance for the React Dropdown Tree component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,14 +40,14 @@ The accessibility compliance for the Dropdown Tree component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Dropdown Tree component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Dropdown Tree component:
+The React Dropdown Tree component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) patterns to meet accessibility requirements. The following ARIA attributes are used in the React Dropdown Tree component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `aria-disabled` | Indicates the element is perceivable but disabled. |
 | `aria-owns` | Contains the ID of the popup list to indicate the popup is a child of the input. |
-| `aria-haspopup` | Indicates whether the Dropdown Tree input element has a popup list or not. |
-| `aria-expanded` | Indicates the state of the popup list for Dropdown Tree and the parent node's expansion status for TreeView. |
+| `aria-haspopup` | Indicates whether the React Dropdown Tree input element has a popup list or not. |
+| `aria-expanded` | Indicates the state of the popup list for React Dropdown Tree and the parent node's expansion status for TreeView. |
 | `aria-activedescendant` | Contains the ID of the currently active descendant element within the widget. |
 | `aria-labelledby` | This attribute points to the element(s) labeling the element it's applied to. |
 | `aria-describedby` | This attribute points to the element(s) describing the one it's set on. |
@@ -59,11 +59,11 @@ The Dropdown Tree component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 | `aria-selected` | Indicates the selected node. |
 | `aria-level` | Indicates the level of node in TreeView. |
 | `aria-checked` | Indicates the current checked state of TreeView checkbox. |
-| `aria-label` | Indicates the contextual message for the TreeView checkbox and Dropdown Tree. |
+| `aria-label` | Indicates the contextual message for the TreeView checkbox and React Dropdown Tree. |
 
 ## Keyboard interaction
 
-The Dropdown Tree component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guidelines, making it accessible for users who rely on assistive technologies and keyboard navigation. The following keyboard shortcuts are supported by the Dropdown Tree component.
+The React Dropdown Tree component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guidelines, making it accessible for users who rely on assistive technologies and keyboard navigation. The following keyboard shortcuts are supported by the React Dropdown Tree component.
 
 | Interaction Keys | Description |
 |------|---------|
@@ -81,9 +81,9 @@ The Dropdown Tree component follows the [keyboard interaction](https://www.w3.or
 
 ## Ensuring accessibility
 
-The accessibility compliance of the Dropdown Tree component is verified using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The accessibility compliance of the React Dropdown Tree component is verified using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Dropdown Tree component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-tree.html) in a new window to evaluate the accessibility of the Dropdown Tree component with accessibility tools.
+The accessibility compliance of the React Dropdown Tree component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-tree.html) in a new window to evaluate the accessibility of the React Dropdown Tree component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/drop-down-tree.html" %}
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Integration in React In-place Editor
 
-The In-place Editor supports integrating custom HTML5 input components using the [template](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#template) property. The template can be specified as either a `string` or a CSS `query selector`.
+The React In-place Editor supports integrating custom HTML5 input components using the [template](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#template) property. The template can be specified as either a `string` or a CSS `query selector`.
 
 ## As a string
 
@@ -30,7 +30,7 @@ template: "#date"
 
 ```
 
-In template mode, the In-place Editor does not automatically handle the `value` property. Before submitting data to the server, manually update the [value](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#value) property in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#actionbegin) event handler; otherwise, an empty string will be sent. The following sample demonstrates how to update the value before server submission.
+In template mode, the React In-place Editor does not automatically handle the `value` property. Before submitting data to the server, manually update the [value](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#value) property in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#actionbegin) event handler; otherwise, an empty string will be sent. The following sample demonstrates how to update the value before server submission.
 
 `[Class-component]`
 

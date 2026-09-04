@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React OTP Input
 
-The OTP Input component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and common WAI-ARIA roles used to evaluate accessibility.
+The React OTP Input component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and common WAI-ARIA roles used to evaluate accessibility.
 
-The accessibility compliance for the OTP Input component is outlined below.
+The accessibility compliance for the React OTP Input component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,16 +40,16 @@ The accessibility compliance for the OTP Input component is outlined below.
 
 ## WAI-ARIA attributes
 
-The following ARIA attributes are used in the OTP Input component:
+The following ARIA attributes are used in the React OTP Input component:
 
 | Attributes | Purpose |
 | ------------ | ----------------------- |
 | `role=group` | Attributes used to form a collection of items.|
-| `aria-label` | Attributes provides the text label for the OTP Inputs. |
+| `aria-label` | Attributes provides the text label for the React OTP Input. |
 
 ## Keyboard interaction
 
-The OTP Input component supports the following keyboard shortcuts:
+The React OTP Input component supports the following keyboard shortcuts:
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -60,7 +60,7 @@ The OTP Input component supports the following keyboard shortcuts:
 
 ## Ensuring accessibility
 
-The OTP Input component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React OTP Input component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 ## See also
 
@@ -68,7 +68,7 @@ The OTP Input component's accessibility levels are ensured through an [accessibi
 
 ## HtmlAttributes
 
-HTML attributes allow you to specify additional attributes to apply to the OTP Input component. These attributes provide extra customization and control over the behavior and appearance of the OTP input fields.
+HTML attributes allow you to specify additional attributes to apply to the React OTP Input component. These attributes provide extra customization and control over the behavior and appearance of the React OTP Input fields.
 
 You can pass HTML attributes as key-value pairs to the [htmlAttributes](https://ej2.syncfusion.com/react/documentation/api/otp-input/#htmlattributes) property.
 
@@ -85,9 +85,9 @@ You can pass HTML attributes as key-value pairs to the [htmlAttributes](https://
 
 ## AriaLabels
 
-ARIA labels define the ARIA-label attribute for each input field in the OTP Input component. They enhance accessibility by providing descriptive labels for screen reader users, improving the experience for individuals with disabilities.
+ARIA labels define the ARIA-label attribute for each input field in the React OTP Input component. They enhance accessibility by providing descriptive labels for screen reader users, improving the experience for individuals with disabilities.
 
-You can provide an array of strings as ARIA labels to the [ariaLabels](https://ej2.syncfusion.com/react/documentation/api/otp-input/#arialabels) property. Each string corresponds to the ARIA-label attribute for the respective OTP input field.
+You can provide an array of strings as ARIA labels to the [ariaLabels](https://ej2.syncfusion.com/react/documentation/api/otp-input/#arialabels) property. Each string corresponds to the ARIA-label attribute for the respective React OTP Input field.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

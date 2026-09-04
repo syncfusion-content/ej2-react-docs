@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to add a floating label in React TextBox
 
-The floating label automatically floats above the TextBox input field when the user focuses on it or enters a value. This behavior enhances the visual hierarchy and provides clear input context. Configure the floating label behavior using the `floatLabelType` property with the following options:
+The floating label automatically floats above the React TextBox input field when the user focuses on it or enters a value. This behavior enhances the visual hierarchy and provides clear input context. Configure the floating label behavior using the `floatLabelType` property with the following options:
 
 | Type | Description |
 |------|-------------|

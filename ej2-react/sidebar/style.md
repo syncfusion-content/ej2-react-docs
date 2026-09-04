@@ -14,7 +14,7 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Customizing the sidebar
 
-Use the below CSS to customize the Sidebar root element.
+Use the below CSS to customize the React Sidebar root element.
 
 ```css
 
@@ -24,7 +24,7 @@ Use the below CSS to customize the Sidebar root element.
 
 ```
 
-## Customizing the Sidebar based on the positions
+## Customizing the React Sidebar based on the positions
 
 Use the below CSS to customize the left positioned sidebar.
 
@@ -46,7 +46,7 @@ Use the below CSS to customize the right positioned sidebar.
 
 ```
 
-## Customizing the Sidebar based on the active state
+## Customizing the React Sidebar based on the active state
 
 Use the below CSS to customize the open state of the left positioned sidebar.
 
@@ -88,9 +88,9 @@ Use the below CSS to customize the closed state of the right positioned sidebar.
 
 ```
 
-## Customizing the Sidebar with dock state
+## Customizing the React Sidebar with dock state
 
-When you enable the Dock support, the "e-dock" class will be added to the root element. Based on that class, you can also customize all the above stated customization. Use the following CSS to customize the Sidebar element with a dock state.
+When you enable the Dock support, the "e-dock" class will be added to the root element. Based on that class, you can also customize all the above stated customization. Use the following CSS to customize the React Sidebar element with a dock state.
 
 ```css
 
@@ -154,9 +154,9 @@ Use the below CSS to customize the backdrop of the sidebar.
 
 ```
 
-## Customizing the Sidebar in the RTL direction
+## Customizing the React Sidebar in the RTL direction
 
-When you enable the RTL (right to left direction) support, the "e-rtl" class will be added to the root element. Based on that class, you can also customize all the above stated customization. Use the following CSS to customize the Sidebar element in the RTL (right to left direction) mode.
+When you enable the RTL (right to left direction) support, the "e-rtl" class will be added to the root element. Based on that class, you can also customize all the above stated customization. Use the following CSS to customize the React Sidebar element in the RTL (right to left direction) mode.
 
 ```css
 
@@ -166,9 +166,9 @@ When you enable the RTL (right to left direction) support, the "e-rtl" class wil
 
 ```
 
-## Prevent the animation transition for the Sidebar component
+## Prevent the animation transition for the React Sidebar component
 
-Use the below CSS to prevent the animation transition for the Sidebar component.
+Use the below CSS to prevent the animation transition for the React Sidebar component.
 
 ```css
 

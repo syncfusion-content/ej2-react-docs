@@ -14,7 +14,7 @@ The Signature component supports to open the signature by using hosted/online UR
 
 ## Open Signature
 
-The Signature component opens pre-drawn signatures using the [`load`](https://ej2.syncfusion.com/react/documentation/api/signature/#load) method. It supports PNG, JPEG, and SVG images as base64 strings or hosted/online URLs.
+The React Signature component opens pre-drawn signatures using the [`load`](https://ej2.syncfusion.com/react/documentation/api/signature/#load) method. It supports PNG, JPEG, and SVG images as base64 strings or hosted/online URLs.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,7 +29,7 @@ The Signature component opens pre-drawn signatures using the [`load`](https://ej
 
 ## Save Signature
 
-The Signature component supports saving signatures in multiple formats: base64, blob, and image formats (PNG, JPEG, SVG).
+The React Signature component supports saving signatures in multiple formats: base64, blob, and image formats (PNG, JPEG, SVG).
 
 ### Save as Base64
 

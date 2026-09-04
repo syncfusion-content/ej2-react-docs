@@ -10,25 +10,25 @@ domainurl: ##DomainURL##
 
 # How to init with util in React Button Group
 
-The `createButtonGroup` utility function provides an alternative approach to initialize ButtonGroup components with minimal setup. This function automatically applies ButtonGroup styling and behavior to elements.
+The `createButtonGroup` utility function provides an alternative approach to initialize React Button Group components with minimal setup. This function automatically applies ButtonGroup styling and behavior to elements.
 
 To use the `createButtonGroup` utility function, configure the [`SplitButton dependencies`](./../../split-button/getting-started#dependencies) in `system.config.js`.
 
 The `createButtonGroup` method accepts Button options, element selectors, and CSS classes, then applies the corresponding styling to the elements.
 
-## Create basic ButtonGroup
+## Create basic React Button Group
 
-To create a basic ButtonGroup, the target element along with the button elements should be created and `createButtonGroup` is to be imported from `ej2-splitbuttons`.
+To create a basic React Button Group, the target element along with the button elements should be created and `createButtonGroup` is to be imported from `ej2-splitbuttons`.
 
-## For radio type ButtonGroup
+## For radio type React Button Group
 
-To create a radio type ButtonGroup, the target element along with the input elements should be created with type `radio`.
+To create a radio type React Button Group, the target element along with the input elements should be created with type `radio`.
 
-## For checkbox type ButtonGroup
+## For checkbox type React Button Group
 
-Checkbox type ButtonGroup creation is similar to radio type ButtonGroup, instead the type of the input elements should be `checkbox`.
+Checkbox type React Button Group creation is similar to radio type React Button Group, instead the type of the input elements should be `checkbox`.
 
-The following example illustrates how to create ButtonGroup using `createButtonGroup` function for basic, checkbox, and radio type behaviors.
+The following example illustrates how to create React Button Group using `createButtonGroup` function for basic, checkbox, and radio type behaviors.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

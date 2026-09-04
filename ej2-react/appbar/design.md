@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Spacer
 
-`Spacer` is used to provide spacing between the AppBar contents which gives additional space to the content layout.
+`Spacer` is used to provide spacing between the React AppBar contents which gives additional space to the content layout.
 
-The following example depicts the code to provide spacing between the home and pan buttons in the AppBar:
+The following example depicts the code to provide spacing between the home and pan buttons in the React AppBar:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -29,9 +29,9 @@ The following example depicts the code to provide spacing between the home and p
 
 ## Separator
 
-`Separator` shows a vertical line to visually group or separate the AppBar contents.
+`Separator` shows a vertical line to visually group or separate the React AppBar contents.
 
-The following example depicts the code to provide a vertical line between a group of buttons in the AppBar.
+The following example depicts the code to provide a vertical line between a group of buttons in the React AppBar.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,7 +46,7 @@ The following example depicts the code to provide a vertical line between a grou
 
 ## Media Query
 
-Media Query is used to adjusting the AppBar for different screen sizes. Resize the screen to observe the responsive layout of the AppBar.
+Media Query is used to adjusting the React AppBar for different screen sizes. Resize the screen to observe the responsive layout of the React AppBar.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -61,7 +61,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 
 ## Designing AppBar with Menu
 
-AppBar is rendered with a Menu component in its AppBar header area. Menu component's styles are inherited from the AppBar component using the `e-inherit` CSS class.
+React AppBar is rendered with a Menu component in its React AppBar header area. Menu component's styles are inherited from the React AppBar component using the `e-inherit` CSS class.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -76,7 +76,7 @@ AppBar is rendered with a Menu component in its AppBar header area. Menu compone
 
 ## Designing AppBar with Buttons
 
-The AppBar is rendered with a Button and DropDownButton component in its AppBar header area. Button and DropDownButton components’ styles are inherited from the AppBar component using the `e-inherit` CSS class.
+The React AppBar is rendered with a Button and DropDownButton component in its React AppBar header area. Button and DropDownButton components’ styles are inherited from the React AppBar component using the `e-inherit` CSS class.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -91,7 +91,7 @@ The AppBar is rendered with a Button and DropDownButton component in its AppBar 
 
 ## Designing AppBar with SideBar
 
-The AppBar is rendered with the SideBar component below the AppBar. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `toggle` method has been used to show or hide the Sidebar on the AppBar button click.
+The React AppBar is rendered with the SideBar component below the React AppBar. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `toggle` method has been used to show or hide the Sidebar on the React AppBar button click.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Color Picker
 
-This section explains the steps required to create a simple React ColorPicker component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple React Color Picker component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the ColorPicker component are imported in the **src/App.css** file:
+The required styles for the React Color Picker component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,9 +94,9 @@ The required styles for the ColorPicker component are imported in the **src/App.
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding ColorPicker component
+## Adding React Color Picker component
 
-Now, you can add the React ColorPicker component to your **src/App.jsx** file by importing and defining it within your application.
+Now, you can add the React Color Picker component to your **src/App.jsx** file by importing and defining it within your application.
 
 ```js
 import { ColorPickerComponent } from '@syncfusion/ej2-react-inputs';
@@ -134,9 +134,9 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-> Refer to the [React ColorPicker](https://www.syncfusion.com/react-components/react-color-picker) feature tour page for its groundbreaking feature representations. You can also explore our [React ColorPicker component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/color-picker/default) that shows how to render the ColorPicker in React.
+> Refer to the [React Color Picker](https://www.syncfusion.com/react-components/react-color-picker) feature tour page for its groundbreaking feature representations. You can also explore our [React Color Picker component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/color-picker/default) that shows how to render the React Color Picker.
 
 ## See Also
 
 * [Set color value](./mode-and-value#color-value)
-* [ColorPicker customization](./how-to/customize-colorpicker)
+* [React Color Picker customization](./how-to/customize-colorpicker)

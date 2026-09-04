@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Api tipPointerPosition in React Tooltip component
 
-Applicable tip positions attached to the Tooltip.
+Applicable tip positions attached to the React Tooltip.
 * Auto
 * Start
 * Middle

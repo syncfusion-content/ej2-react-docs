@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Types in React Spinner
 
-By default, the Spinner is loaded in the applicable Essential<sup style="font-size:70%">&reg;</sup> JS 2 component based on the theme imported into the page. Based on the theme, the type is set to the Spinner.
+By default, the React Spinner is loaded in the applicable Essential<sup style="font-size:70%">&reg;</sup> JS 2 component based on the theme imported into the page. Based on the theme, the type is set to the React Spinner.
 
 The available types are:
 * Material
 * Fabric
 * Bootstrap
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 component Spinner type can be changed by passing the type as a parameter to the `setSpinner` method as shown below.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 component React Spinner type can be changed by passing the type as a parameter to the `setSpinner` method as shown below.
 
 ```ts
 // Specify the type of the Spinner to be displayed
@@ -25,7 +25,7 @@ The Essential<sup style="font-size:70%">&reg;</sup> JS 2 component Spinner type 
 setSpinner({ type: 'Bootstrap'});
 ```
 
-> The Spinner type can only be changed after the Essential<sup style="font-size:70%">&reg;</sup> JS 2 component is created.
+> The React Spinner type can only be changed after the Essential<sup style="font-size:70%">&reg;</sup> JS 2 component is created.
 
 `[Class-component]`
 

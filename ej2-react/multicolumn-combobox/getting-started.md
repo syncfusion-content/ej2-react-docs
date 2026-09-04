@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the MultiColumn ComboBox component are imported in the **src/App.css** file:
+The required styles for the React MultiColumn ComboBox component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,9 +94,9 @@ The required styles for the MultiColumn ComboBox component are imported in the *
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the MultiColumn ComboBox component
+## Add the React MultiColumn ComboBox component
 
-Now, you can add the React MultiColumn ComboBox component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the MultiColumn ComboBox with data by using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/index-default#datasource) property. To map the data for each specified column, use the `<ColumnDirective>` selector; the [fields](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/index-default#fields) property maps the data fields from the `dataSource`. Use the following code:
+Now, you can add the React MultiColumn ComboBox component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the React MultiColumn ComboBox with data by using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/index-default#datasource) property. To map the data for each specified column, use the `<ColumnDirective>` selector; the [fields](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/index-default#fields) property maps the data fields from the `dataSource`. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -130,11 +130,11 @@ function App() {
   ];
   // maps the appropriate column to fields property
   const fields = { text: 'Name', value: 'EmpID' };
-  // set placeholder to multicolumn ComboBox input element
+  // set placeholder to React MultiColumn ComboBox input element
   const waterMark = 'Select a employee';
 
   return (
-    // specifies the tag for rendering the MultiColumn ComboBox component
+    // specifies the tag for rendering the React MultiColumn ComboBox component
     <MultiColumnComboBoxComponent id="multicolumn" dataSource={empData} fields={fields} placeholder={waterMark}>
         <ColumnsDirective>
             <ColumnDirective field='EmpID' header='Employee ID' width={120}></ColumnDirective>
@@ -171,4 +171,4 @@ The output appears as follows.
 
 {% previewsample "page.domainurl/code-snippet/multicolumn-combobox/basic-cs2" %}
 
-> Refer to the [React MultiColumn ComboBox](https://www.syncfusion.com/react-components/react-multicolumn-combobox) feature tour page for its groundbreaking feature representations. You can also explore our [React MultiColumn ComboBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/multicolumn-combobox/default) that shows how to render the MultiColumn ComboBox in React.
+> Refer to the [React MultiColumn ComboBox](https://www.syncfusion.com/react-components/react-multicolumn-combobox) feature tour page for its groundbreaking feature representations. You can also explore our [React MultiColumn ComboBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/multicolumn-combobox/default) that shows how to render the React MultiColumn ComboBox.

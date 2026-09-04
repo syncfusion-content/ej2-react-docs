@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in React Toast
 
-Create custom toast layouts using HTML templates rather than relying on predefined title and content properties. Templates enable rendering of complex content structures, custom styling, and interactive elements within toasts. Specify templates as HTML strings or query selectors referencing existing DOM elements.
+Create custom React Toast layouts using HTML templates rather than relying on predefined title and content properties. Templates enable rendering of complex content structures, custom styling, and interactive elements within toasts. Specify templates as HTML strings or query selectors referencing existing DOM elements.
 
 ## Template string
 

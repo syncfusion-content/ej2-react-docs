@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to set a Menu item title in React Menu
 
-In this sample , the title for menu item  can be achievable by using 'beforeItemRender' client-side event in Menu component.
+In this sample , the title for React menu item  can be achievable by using 'beforeItemRender' client-side event in ReactMenu component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

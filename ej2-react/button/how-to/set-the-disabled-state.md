@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to disable in React Button
 
-Disable the Button component by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button#disabled) property to `true`. A disabled button is not interactive and cannot receive focus or trigger click events.
+Disable the React Button component by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/button#disabled) property to `true`. A disabled React Button is not interactive and cannot receive focus or trigger click events.
 
-The following example demonstrates Button in the disabled state:
+The following example demonstrates React Button in the disabled state:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to sort tree nodes by level in React
 
-You can sort the TreeView nodes based on their level. When using the [`sortOrder`](https://ej2.syncfusion.com/react/documentation/api/treeview#sortorder) property, the whole TreeView is sorted. When you sort a particular level, you can use the following code sample. The following code sample demonstrates how to sort the parent node alone in TreeView.
+You can sort the React Tree View nodes based on their level. When using the [`sortOrder`](https://ej2.syncfusion.com/react/documentation/api/treeview#sortorder) property, the whole React Tree View is sorted. When you sort a particular level, you can use the following code sample. The following code sample demonstrates how to sort the parent node alone in React Tree View.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

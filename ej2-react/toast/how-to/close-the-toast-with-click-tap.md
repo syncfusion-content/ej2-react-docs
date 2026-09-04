@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to close Toast on click or tap in React Toast
 
-By default, toasts automatically dismiss after the configured timeout period. To enable immediate dismissal on user interaction, set the [clickToClose](https://ej2.syncfusion.com/react/documentation/api/toast/toastClickEventArgs/#clicktoclose) property to `true` in the `click` event callback. This approach works best with static toasts (timeOut set to 0) that remain visible until explicitly closed. Click-to-close behavior enhances user control and is particularly useful for action-based notifications.
+By default, React Toast automatically dismiss after the configured timeout period. To enable immediate dismissal on user interaction, set the [clickToClose](https://ej2.syncfusion.com/react/documentation/api/toast/toastClickEventArgs#clicktoclose) property to `true` in the `click` event callback. This approach works best with static React Toast (timeOut set to 0) that remain visible until explicitly closed. Click-to-close behavior enhances user control and is particularly useful for action-based notifications.
 
 `[Class-component]`
 

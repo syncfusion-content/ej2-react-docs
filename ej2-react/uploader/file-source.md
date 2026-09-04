@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Paste to upload
 
-In addition to selecting or dragging files, the Uploader component supports uploading image files directly from the clipboard using paste operations. Any image copied to the clipboard can be uploaded immediately.
+In addition to selecting or dragging files, the React File Upload component supports uploading image files directly from the clipboard using paste operations. Any image copied to the clipboard can be uploaded immediately.
 
 > When an image is pasted, it is saved on the server with the default filename `image.png`. Rename the file on the server-side using custom logic or the `getUniqueID` method to generate unique filenames. Refer to the following example.
 
@@ -138,7 +138,7 @@ public void Save() {
 
 ## Drag and drop
 
-Drag files from the file explorer and drop them into the designated drop area to initiate upload. By default, the Uploader component itself serves as the drop target. The drop area visually highlights when files are dragged over it.
+Drag files from the file explorer and drop them into the designated drop area to initiate upload. By default, the React File Upload component itself serves as the drop target. The drop area visually highlights when files are dragged over it.
 
 ### Custom drop area
 
@@ -204,5 +204,5 @@ Customize the drop area appearance by overriding default styles. The **e-upload-
 
 ## See Also
 
-* [Achieve file upload programmatically](./how-to/achieve-file-upload-programmatically)
+* [Achieve React File Upload programmatically](./how-to/achieve-file-upload-programmatically)
 * [Validate image/* on drop](./how-to/validate-image-on-drop)

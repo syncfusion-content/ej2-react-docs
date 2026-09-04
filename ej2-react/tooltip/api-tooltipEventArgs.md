@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # API TooltipEventArgs in React Tooltip component
 
-Interface for Tooltip event arguments.
+Interface for React Tooltip event arguments.
 
 ## Properties
 
@@ -20,7 +20,7 @@ It illustrates whether the current action needs to be prevented or not.
 
 ### collidedPosition `string`
 
-It is used to denote the Collided Tooltip position
+It is used to denote the Collided React Tooltip position
 
 ### event `Event`
 
@@ -32,7 +32,7 @@ Specifies name of the event.
 
 ### target `HTMLElement`
 
-It is used to denote the current target element where the Tooltip is to be displayed.
+It is used to denote the current target element where the React Tooltip is to be displayed.
 
 ### type `String`
 

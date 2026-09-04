@@ -14,4 +14,4 @@ domainurl: ##DomainURL##
 
 | Name | Description |
 |------|-------------|
-| [TooltipComponent](https://ej2.syncfusion.com/react/documentation/api-tooltipComponent.html)| Represents the React Tooltip component that displays a piece of information about the target element on mouse hover.|
+| [React TooltipComponent](https://ej2.syncfusion.com/react/documentation/api-tooltipComponent.html)| Represents the React Tooltip component that displays a piece of information about the target element on mouse hover.|

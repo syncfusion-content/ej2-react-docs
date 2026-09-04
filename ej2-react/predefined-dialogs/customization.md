@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization in React Predefined Dialogs | Syncfusion
+title: Customization in React React Predefined Dialogs | Syncfusion
 description: Customize the React Predefined Dialogs action button text and icons for Alert, Confirm, and Prompt dialogs using the okButton and cancelButton properties.
 control: Customization 
 platform: ej2-react
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in React Predefined Dialogs
 
-The buttons of predefined dialogs can be customized using the following properties:
+The buttons of React Predefined Dialogs can be customized using the following properties:
 
 * `okButton` - Customizes the **OK** button text
 * `cancelButton` - Customizes the **Cancel** button text
@@ -109,7 +109,7 @@ The following code snippet demonstrates how to customize action buttons for **al
 
 ## Show or hide dialog close button
 
-When rendering the predefined dialogs through utility methods, You can close the dialog using the following ways. The default values of `closeOnEscape` and `showCloseIcon` is `false`.
+When rendering the React Predefined Dialogs through utility methods, You can close the dialog using the following ways. The default values of `closeOnEscape` and `showCloseIcon` is `false`.
 
 * By pressing the escape key if the [closeOnEscape](https://ej2.syncfusion.com/angular/documentation/api/dialog#closeonescape) property is enabled.
 * By clicking the close button if the [showCloseIcon](https://ej2.syncfusion.com/angular/documentation/api/dialog#showcloseicon) property is enabled.
@@ -204,7 +204,7 @@ Use the following code for **alert**, **confirm** and **prompt** to demonstrates
 
 ## Customize dialog content
 
-Custom content can be loaded in predefined dialogs using the `content` property.
+Custom content can be loaded in React Predefined Dialogs using the `content` property.
 
 The following code demonstrates how to customize the prompt dialog by rendering a custom TextBox component to capture username input from the user.
 

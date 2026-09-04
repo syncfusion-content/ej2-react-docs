@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style and Appearance in React TextArea
 
-You can adjust the TextArea size by applying specific classes:
+You can adjust the React TextArea size by applying specific classes:
 
 | Property  | Description |
 | -- | -- |
@@ -47,9 +47,9 @@ Enable Filled or Outline modes by adding the `e-outline` or `e-filled` class to 
 
 >Note: Filled and Outline theme customization are available only with Material themes.
 
-## Custom styling with cssClass API in TextArea
+## Custom styling with cssClass API in React TextArea
 
-The `cssClass` API provides a powerful way to apply custom styling to the TextArea component. Apply custom CSS classes to control styling properties such as color, padding, margins, borders, and more according to your design requirements.
+The `cssClass` API provides a powerful way to apply custom styling to the React TextArea component. Apply custom CSS classes to control styling properties such as color, padding, margins, borders, and more according to your design requirements.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -62,17 +62,17 @@ The `cssClass` API provides a powerful way to apply custom styling to the TextAr
 
 {% previewsample "page.domainurl/code-snippet/textarea/style-appearance-cs3" %}
 
-## Setting the disabled state in TextArea
+## Setting the disabled state in React TextArea
 
-To disable the TextArea, you can utilize the [enabled](https://ej2.syncfusion.com/react/documentation/api/textarea/#enabled) property. When set to `false`, the TextArea becomes disabled, preventing user interaction.
+To disable the React TextArea, you can utilize the [enabled](https://ej2.syncfusion.com/react/documentation/api/textarea/#enabled) property. When set to `false`, the TextArea becomes disabled, preventing user interaction.
 
 ```ts
-{/* Import the TextArea. */}
+{/* Import the React TextArea. */}
 import { TextAreaComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-{/* To render TextArea.*/}
+{/* To render React TextArea.*/}
 function App() {
   
     return (
@@ -85,17 +85,17 @@ export default App;
 ReactDom.render(<App />,document.getElementById('input-container'));
 ```
 
-## Set the readonly TextArea
+## Set the readonly React TextArea
 
-To make the TextArea read-only , you can use the [readonly](https://ej2.syncfusion.com/react/documentation/api/textarea/#readonly) property. When set to `true`, it prevents users from editing the content of the TextArea.
+To make the React TextArea read-only , you can use the [readonly](https://ej2.syncfusion.com/react/documentation/api/textarea/#readonly) property. When set to `true`, it prevents users from editing the content of the React TextArea.
 
 ```ts
-{/* Import the TextArea. */}
+{/* Import the React TextArea. */}
 import { TextAreaComponent } from '@syncfusion/ej2-react-inputs';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-{/* To render TextArea.*/}
+{/* To render React TextArea.*/}
 function App() {
   
     return (
@@ -108,9 +108,9 @@ export default App;
 ReactDom.render(<App />,document.getElementById('input-container'));
 ```
 
-## Set the rounded corner in TextArea
+## Set the rounded corner in React TextArea
 
-Render the TextArea with `rounded corner` by adding the `e-corner` class to the input parent element.
+Render the React TextArea with `rounded corner` by adding the `e-corner` class to the input parent element.
 
 >This rounded corner is visible only in box model input component
 
@@ -118,7 +118,7 @@ Render the TextArea with `rounded corner` by adding the `e-corner` class to the 
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-{/* To render TextArea.*/}
+{/* To render React TextArea.*/}
 function App() {
   
     return (
@@ -131,9 +131,9 @@ export default App;
 ReactDom.render(<App />,document.getElementById('input-container'));
 ```
 
-## Static clear button in TextArea
+## Static clear button in React TextArea
 
-To display a static clear button in the TextArea component, you can add the `e-static-clear` class to the `cssClass` property. This class ensures that the clear button remains visible at all times, providing users with the ability to easily clear the TextArea content without needing to focus on the control.
+To display a static clear button in the TextArea component, you can add the `e-static-clear` class to the `cssClass` property. This class ensures that the clear button remains visible at all times, providing users with the ability to easily clear the React TextArea content without needing to focus on the control.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -146,9 +146,9 @@ To display a static clear button in the TextArea component, you can add the `e-s
 
 {% previewsample "page.domainurl/code-snippet/textarea/style-appearance-cs4" %}
 
-## Customize the TextArea background color and text color
+## Customize the React TextArea background color and text color
 
-You can customize the TextArea styles such as background-color, text-color and border-color by overriding its default styles to achieve the desired appearance for the TextArea.
+You can customize the React TextArea styles such as background-color, text-color and border-color by overriding its default styles to achieve the desired appearance for the React TextArea.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -161,9 +161,9 @@ You can customize the TextArea styles such as background-color, text-color and b
 
 {% previewsample "page.domainurl/code-snippet/textarea/style-appearance-cs5" %}
 
-## Change the floating label color of the TextArea
+## Change the floating label color of the React TextArea
 
-You can change the floating label color of the TextArea for both `success` and `warning` validation states by applying the following CSS styles.
+You can change the floating label color of the React TextArea for both `success` and `warning` validation states by applying the following CSS styles.
 
 ```css
 
@@ -196,7 +196,7 @@ You can change the floating label color of the TextArea for both `success` and `
 
 ## Adding mandatory asterisk to placeholder
 
-To add a mandatory asterisk (*) to the placeholder in the TextArea component, you can utilize CSS to append the asterisk after the placeholder text.
+To add a mandatory asterisk (*) to the placeholder in the React TextArea component, you can utilize CSS to append the asterisk after the placeholder text.
 
 ```css
 

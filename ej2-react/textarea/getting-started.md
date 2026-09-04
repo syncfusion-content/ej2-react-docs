@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the TextArea component are imported in the **src/App.css** file:
+The required styles for the React TextArea component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -98,7 +98,7 @@ The required styles for the TextArea component are imported in the **src/App.css
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding TextArea component
+## Adding React TextArea component
 
 Now, you can add the React TextArea component to your **src/App.jsx** file by importing and defining it within your application.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filtering in React MultiSelect Dropdown
 
-The MultiSelect includes built-in filtering support when `allowFiltering` is set to `true`. Filtering begins as you type characters in the input field, after the configured `debounceDelay` has elapsed.
+The React MultiSelect includes built-in filtering support when `allowFiltering` is set to `true`. Filtering begins as you type characters in the input field, after the configured `debounceDelay` has elapsed.
 
 To display filtered items in the popup, handle the [filtering](https://ej2.syncfusion.com/react/documentation/api/multi-select/#filtering) event to filter your data source and return results using the [updateData](https://ej2.syncfusion.com/react/documentation/api/multi-select/filteringEventArgs/#updatedata) method.
 
@@ -140,9 +140,9 @@ The following example shows how to perform a case-sensitive filter.
 
 ## Diacritics filtering
 
-MultiSelect supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/multi-select/#ignoreaccent) is enabled. Set `ignoreAccent={true}` on the MultiSelect component to enable this behavior.
+React MultiSelect supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/multi-select/#ignoreaccent) is enabled. Set `ignoreAccent={true}` on the React MultiSelect component to enable this behavior.
 
-In the following sample, data with diacritics are bound as dataSource for MultiSelect.
+In the following sample, data with diacritics are bound as dataSource for React MultiSelect.
 
 `[Class-component]`
 
@@ -204,4 +204,4 @@ You can use the [debounceDelay](https://ej2.syncfusion.com/react/documentation/a
 
 * [How to bind the data](./data-binding)
 * [How to group the data using header](./grouping)
-* [How to add custom value to the MultiSelect](./custom-value)
+* [How to add custom value to the React MultiSelect](./custom-value)

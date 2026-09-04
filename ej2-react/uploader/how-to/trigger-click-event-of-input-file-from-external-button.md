@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to trigger the file dialog from a button in React File Upload
 
-Trigger the file input dialog from an external button by programmatically invoking the `click` event on the Uploader's internal hidden `<input type="file">` element. This approach enables custom browse buttons that live outside the Uploader component's own render tree.
+Trigger the file input dialog from an external button by programmatically invoking the `click` event on the React File Upload's internal hidden `<input type="file">` element. This approach enables custom browse buttons that live outside the React File Upload component's own render tree.
 
 > This is required because browsers do not allow opening a file picker without a user gesture, so attaching the `click` invocation to a button's click handler preserves the user-gesture context.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Api effect in React Tooltip component
 
-Animation effects that are applicable for Tooltip.
+Animation effects that are applicable for React Tooltip.
 * FadeIn
 * FadeOut
 * FadeZoomIn

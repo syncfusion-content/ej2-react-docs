@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Clone Group/Rule in React Query Builder UI
 
-The Query Builder allows you to duplicate individual rules or entire groups, creating exact copies adjacent to the originals. This feature streamlines the construction of complex queries by eliminating the need to manually recreate similar rule structures. Control the visibility of cloning buttons using the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/query-builder#showbuttons) property.
+The React Query Builder UI allows you to duplicate individual rules or entire groups, creating exact copies adjacent to the originals. This feature streamlines the construction of complex queries by eliminating the need to manually recreate similar rule structures. Control the visibility of cloning buttons using the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/query-builder#showbuttons) property.
 
 Clone groups and rules through the user interface or programmatically:
 

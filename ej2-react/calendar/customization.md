@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Customization in React Calendar
 
-The Calendar allows customization of the appearance using custom CSS and the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event to modify each day cell.
+The React Calendar allows customization of the appearance using custom CSS and the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event to modify each day cell.
 
-This section demonstrates how to disable dates and highlight specific dates in the Calendar.
+This section demonstrates how to disable dates and highlight specific dates in the React Calendar.
 
 ## Disable Weekends
 
-You can disable the weekends of every month in a Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event. The `isDisabled` argument from this event allows you to define whether the date is to be disabled or not.
+You can disable the weekends of every month in a React Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event. The `isDisabled` argument from this event allows you to define whether the date is to be disabled or not.
 
 > Set [`isDisabled`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) to `true` to disable a date.
 
@@ -67,7 +67,7 @@ The following classes provide options to customize the Calendar component.
 
 | **Class Name** | **Description** |
 | --- | --- |
-| e-calendar | Applied to Calendar. |
+| e-calendar | Applied to React Calendar. |
 | e-header | Applied to header. |
 | e-title | Applied to title. |
 | e-icon-container | Applied to previous and next icon container. |
@@ -84,7 +84,7 @@ The following classes provide options to customize the Calendar component.
 | e-selected | Applied to selected dates. |
 | e-disabled | Applied to disabled dates. |
 
-The following example highlights the world health date (7th April every year) and world forest day (21st March every year) in the Calendar by using the custom icon and tooltip.
+The following example highlights the world health date (7th April every year) and world forest day (21st March every year) in the React Calendar by using the custom icon and tooltip.
 
 `[Class-component]`
 
@@ -114,7 +114,7 @@ The following example highlights the world health date (7th April every year) an
 
 ## Highlight Weekends
 
-You can highlight the weekends of every month in a Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event. The following example demonstrates how to highlights the weekends of every month.
+You can highlight the weekends of every month in a React Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/react/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event. The following example demonstrates how to highlights the weekends of every month.
 
 `[Class-component]`
 
@@ -145,6 +145,6 @@ You can highlight the weekends of every month in a Calendar by using the [`rende
 ## See Also
 
 * [How to set clear button in Calendar](./how-to/set-clear-button-in-calendar)
-* [How to skip a month in Calendar](./how-to/skip-a-month-in-calendar)
+* [How to skip a month in React Calendar](./how-to/skip-a-month-in-calendar)
 * [How to change the first day of week](./how-to/change-the-first-day-of-week)
-* [How to customize the Calendar day header](./how-to/customize-the-calendar-day-header)
+* [How to customize the React Calendar day header](./how-to/customize-the-calendar-day-header)

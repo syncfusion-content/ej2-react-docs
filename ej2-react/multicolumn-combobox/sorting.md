@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Sorting in React MultiColumn ComboBox
 
-The MultiColumn ComboBox component provides built-in support for sorting data-bound columns in ascending or descending order by using the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#allowsorting) property. By default, the value is `true`.
+The React MultiColumn ComboBox component provides built-in support for sorting data-bound columns in ascending or descending order by using the [allowSorting](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#allowsorting) property. By default, the value is `true`.
 
-To sort a particular column in the MultiColumn ComboBox, click on the grid column header in the popup. Each click on the header toggles the sorting order of the column between `Ascending` and `Descending`
+To sort a particular column in the React MultiColumn ComboBox, click on the grid column header in the popup. Each click on the header toggles the sorting order of the column between `Ascending` and `Descending`
 
 ## Setting the sort order
 

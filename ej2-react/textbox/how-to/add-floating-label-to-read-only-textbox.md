@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to add floating label in read-only TextBox in React TextBox
 
-While a read-only TextBox prevents direct user input, you can still update its value programmatically using code. This is useful for displaying dynamic data or status information that users should not edit. The following example demonstrates how to update a read-only TextBox value and trigger the floating label behavior.
+While a read-only React TextBox prevents direct user input, you can still update its value programmatically using code. This is useful for displaying dynamic data or status information that users should not edit. The following example demonstrates how to update a read-only TextBox value and trigger the floating label behavior.
 
-In this sample, click the update value button to populate the read-only TextBox with a value and animate the floating label.
+In this sample, click the update value button to populate the read-only React TextBox with a value and animate the floating label.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Add items at a specific position using the item [index](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#index) property. When you add an item without specifying an index, it is added as the last item in the list.
 
-The following example demonstrates how to add an item at a specific position in the DropDownList:
+The following example demonstrates how to add an item at a specific position in the React Dropdown List:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

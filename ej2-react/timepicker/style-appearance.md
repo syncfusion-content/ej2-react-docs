@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Style and Appearance in React TimePicker
 
-The following CSS structure enables you to customize the TimePicker component's appearance. Apply these styles with appropriate specificity to override default styles for your use case.
+The following CSS structure enables you to customize the React TimePicker component's appearance. Apply these styles with appropriate specificity to override default styles for your use case.
 
-## Customizing the appearance of TimePicker wrapper element
+## Customizing the appearance of React TimePicker wrapper element
 
 Use the following CSS to customize the appearance of wrapper element.
 
@@ -24,9 +24,9 @@ Use the following CSS to customize the appearance of wrapper element.
 }
 ```
 
-## Customizing the TimePicker icon element
+## Customizing the React TimePicker icon element
 
-Use the following CSS to customize the TimePicker icon element
+Use the following CSS to customize the React TimePicker icon element
 
 ```css
 /* To specify background color and font size */
@@ -36,9 +36,9 @@ Use the following CSS to customize the TimePicker icon element
 }
 ```
 
-## Customizing the TimePicker popup
+## Customizing the React TimePicker popup
 
-Use the following CSS to customize the TimePicker popup
+Use the following CSS to customize the React TimePicker popup
 
 ```css
 /* To specify height */
@@ -47,9 +47,9 @@ Use the following CSS to customize the TimePicker popup
 }
 ```
 
-## Customizing the TimePicker popup content
+## Customizing the React TimePicker popup content
 
-Use the following CSS to customize the TimePicker popup content
+Use the following CSS to customize the React TimePicker popup content
 
 ```css
 /* To specify height */
@@ -61,7 +61,7 @@ Use the following CSS to customize the TimePicker popup content
 
 ## Full screen mode support in mobiles and tablets
 
-The full-screen mode feature optimizes the TimePicker for mobile and tablet devices by expanding the popup to occupy the entire screen. This provides improved visibility and touch-friendliness in both landscape and portrait orientations.
+The full-screen mode feature optimizes the React TimePicker for mobile and tablet devices by expanding the popup to occupy the entire screen. This provides improved visibility and touch-friendliness in both landscape and portrait orientations.
 
 To enable full-screen mode, set the [`fullScreenMode`](https://ej2.syncfusion.com/react/documentation/api/timepicker#fullScreenMode) property to `true`:
 

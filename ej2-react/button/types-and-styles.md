@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Types and styles in React Button
 
-This section explains the different styles and types of buttons in the Syncfusion Button component.
+This section explains the different styles and types of buttons in the Syncfusion React Button component.
 
-## Button styles
+## React Button styles
 
-The Button component provides predefined styles through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property. Use these styles to convey different actions and meanings:
+The React Button component provides predefined styles through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property. Use these styles to convey different actions and meanings:
 
 | Class | Description |
 | -------- | -------- |
@@ -23,7 +23,7 @@ The Button component provides predefined styles through the [`cssClass`](https:/
 | e-info | Represents an informative action. |
 | e-warning | Represents an action requiring caution. |
 | e-danger | Represents a negative action. |
-| e-link | Styles the button as a hyperlink. |
+| e-link | Styles the React Button as a hyperlink. |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -36,12 +36,12 @@ The Button component provides predefined styles through the [`cssClass`](https:/
 
  {% previewsample "page.domainurl/code-snippet/button/button-style-cs1" %}
 
-> Predefined button styles provide visual indication only. Ensure button content clearly describes its purpose for users of assistive technologies such as screen readers.
+> Predefined React Button styles provide visual indication only. Ensure React Button content clearly describes its purpose for users of assistive technologies such as screen readers.
 >
 
-## Button types
+## React Button types
 
-The Button component provides the following types:
+The React Button component provides the following types:
 
 * Basic types
 * Flat Button
@@ -51,13 +51,13 @@ The Button component provides the following types:
 
 ### Basic types
 
-The basic Button types are explained below.
+The basic React Button types are explained below.
 
 | Type | Description |
 | -------- | -------- |
-| Button | Defines a click Button. |
-| Submit | This Button submits the form data to the server. |
-| Reset |  This Button resets all the controls of the form elements to their initial values. |
+| Button | Defines a click React Button. |
+| Submit | This React Button submits the form data to the server. |
+| Reset |  This React Button resets all the controls of the form elements to their initial values. |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -95,7 +95,7 @@ A round button is shaped like a circle and typically contains an icon representi
 
 ### Toggle Button
 
-A toggle button changes between two states. The button is active in the toggled state and can be recognized through the `e-active` class. To create a toggle button, set the [`isToggle`](https://ej2.syncfusion.com/react/documentation/api/button#istoggle) property to `true`. The following example demonstrates how the toggle button text changes between play and pause based on its state:
+A toggle button changes between two states. The React Button is active in the toggled state and can be recognized through the `e-active` class. To create a toggle button, set the [`isToggle`](https://ej2.syncfusion.com/react/documentation/api/button#istoggle) property to `true`. The following example demonstrates how the toggle button text changes between play and pause based on its state:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -108,9 +108,9 @@ A toggle button changes between two states. The button is active in the toggled 
 
  {% previewsample "page.domainurl/code-snippet/button/toggle-button-cs1" %}
 
-## Change Button type
+## Change React Button type
 
-To change the default button to a flat button, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property to `e-flat` and define the button text using the [`content`](https://ej2.syncfusion.com/react/documentation/api/button#content) property.
+To change the default React Button to a flat button, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property to `e-flat` and define the React Button text using the [`content`](https://ej2.syncfusion.com/react/documentation/api/button#content) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -125,9 +125,9 @@ To change the default button to a flat button, set the [`cssClass`](https://ej2.
 
 ## Icons
 
-### Button with font icons
+### React Button with font icons
 
-The Button can have an icon to provide the visual representation of the action. To place the icon on a Button, set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/button#iconcss) property with the required icon CSS. By default, the icon is positioned to the left side of the Button. You can customize the icon's position by
+The React Button can have an icon to provide the visual representation of the action. To place the icon on a React Button, set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/button#iconcss) property with the required icon CSS. By default, the icon is positioned to the left side of the React Button. You can customize the icon's position by
 using the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/button#iconposition) property.
 
 {% tabs %}
@@ -141,9 +141,9 @@ using the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/bu
 
  {% previewsample "page.domainurl/code-snippet/button/icon-cs1" %}
 
-### Button with SVG image
+### React Button with SVG image
 
-SVG image can be added to the Button using [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/button#iconcss) property.
+SVG image can be added to the React Button using [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/button#iconcss) property.
 
 In the following example, SVG image is added using the iconCss class `e-search-icon` by setting `height` and `width`.
 
@@ -158,11 +158,11 @@ In the following example, SVG image is added using the iconCss class `e-search-i
 
  {% previewsample "page.domainurl/code-snippet/button/svg-cs1" %}
 
-> The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the Button using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/button#iconcss) property.
+> The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the React Button using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/button#iconcss) property.
 
 ## Button size
 
-The two types of Button sizes are default and small. To change the size of the default Button to small Button, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property to `e-small`.
+The two types of React Button sizes are default and small. To change the size of the default React Button to small React Button, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property to `e-small`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -177,6 +177,6 @@ The two types of Button sizes are default and small. To change the size of the d
 
 ## See Also
 
-* [Customize Button appearance](./how-to/customize-button-appearance)
-* [How to create block button](./how-to/create-a-block-button)
-* [How to create repeat button](./how-to/repeat-button)
+* [Customize React Button appearance](./how-to/customize-button-appearance)
+* [How to create block React Button](./how-to/create-a-block-button)
+* [How to create repeat React Button](./how-to/repeat-button)

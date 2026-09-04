@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Selection in React ListBox
 
-The ListBox supports selecting items using mouse or keyboard actions. Two selection modes are available:
+The React ListBox supports selecting items using mouse or keyboard actions. Two selection modes are available:
 
-* Single - Select a single item in the list box.
-* Multiple - Select multiple items in the list box.
+* Single - Select a single item in the React ListBox.
+* Multiple - Select multiple items in the React ListBox.
 
-The [`change`](https://ej2.syncfusion.com/react/documentation/api/list-box/#change) event is triggered when a list box item is selected.
+The [`change`](https://ej2.syncfusion.com/react/documentation/api/list-box/#change) event is triggered when a React ListBox item is selected.
 
 ## Single selection
 
@@ -53,7 +53,7 @@ Use SHIFT, CTRL, and arrow keys to select multiple items.
 
 ## Checkbox selection
 
-The ListBox supports checkboxes in default and grouped list boxes for multiple item selection. Enable checkbox selection by injecting the `CheckBoxSelection` module and setting the [`showCheckBox`](https://ej2.syncfusion.com/react/documentation/api/list-box/selectionSettingsModel/#showcheckbox) property to `true`.
+The React ListBox supports checkboxes in default and grouped React ListBoxes for multiple item selection. Enable checkbox selection by injecting the `CheckBoxSelection` module and setting the [`showCheckBox`](https://ej2.syncfusion.com/react/documentation/api/list-box/selectionSettingsModel/#showcheckbox) property to `true`.
 
 ### Select All
 
@@ -70,4 +70,4 @@ Enable the Select All option by setting the [`showSelectAll`](https://ej2.syncfu
 
  {% previewsample "page.domainurl/code-snippet/listbox/basic-cs17" %}
 
-> To select all the items in the list box, [`selectAll`](https://ej2.syncfusion.com/react/documentation/api/list-box/#selectall) method can also be used.
+> To select all the items in the React ListBox, [`selectAll`](https://ej2.syncfusion.com/react/documentation/api/list-box/#selectall) method can also be used.

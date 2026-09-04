@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React DateTime Picker
 
-The DateTimePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React DateTime Picker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the DateTimePicker component is outlined below.
+The accessibility compliance for the React DateTime Picker component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,25 +42,25 @@ The accessibility compliance for the DateTimePicker component is outlined below.
 
 Web accessibility standards define practices to make web content and applications more accessible to users with disabilities. WAI-ARIA attributes are particularly valuable for dynamic content and advanced user interface controls built with Ajax, HTML, JavaScript, and related technologies.
 
-The DateTimePicker component provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications through attributes applied to the input element: `aria-expanded`, `aria-disabled`, and `aria-activedescendant`. These attributes communicate the component's state and properties to assistive technologies, enabling disabled users to interact effectively with the DateTimePicker.
+The React DateTime Picker component provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications through attributes applied to the input element: `aria-expanded`, `aria-disabled`, and `aria-activedescendant`. These attributes communicate the component's state and properties to assistive technologies, enabling disabled users to interact effectively with the React DateTime Picker.
 
 For related information, refer to the Calendar component's [Accessibility](../calendar/accessibility/) section.
 
-* **aria-expanded**: Indicates whether the DateTimePicker popup is expanded or collapsed.
+* **aria-expanded**: Indicates whether the React DateTime Picker popup is expanded or collapsed.
 
-* **aria-disabled**: Indicates the disabled state of the DateTimePicker component.
+* **aria-disabled**: Indicates the disabled state of the React DateTime Picker component.
 
-* **aria-activedescendant**: Helps manage the currently active descendant within the DateTimePicker component.
+* **aria-activedescendant**: Helps manage the currently active descendant within the React DateTime Picker component.
 
 ## Keyboard Interaction
 
-You can use the following keys to interact with the DateTimePicker. The component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
+You can use the following keys to interact with the React DateTime Picker. The component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
 
-DateTimePicker supports the below list of shortcut keys.
+React DateTime Picker supports the below list of shortcut keys.
 
 Input Navigation
 
-Before opening the popup, use the below list of keys to `DateTimePicker` control the popup element.
+Before opening the popup, use the below list of keys to `React DateTime Picker` control the popup element.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -104,7 +104,7 @@ Use the below list of shortcut keys to interact with the TimePicker after the Ti
 | <kbd>Alt + Down Arrow</kbd> | Open the popup. |
 | <kbd>Esc</kbd> | Close the popup. |
 
-> To focus the DateTimePicker component use the `alt+t` keys.
+> To focus the React DateTime Picker component use the `alt+t` keys.
 
 `[Class-component]`
 
@@ -134,9 +134,9 @@ Use the below list of shortcut keys to interact with the TimePicker after the Ti
 
 ## Ensuring accessibility
 
-The DateTimePicker component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React DateTime Picker component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the DateTimePicker component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/date-time-picker.html) in a new window to evaluate the accessibility of the DateTimePicker component with accessibility tools.
+The accessibility compliance of the React DateTime Picker component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/date-time-picker.html) in a new window to evaluate the accessibility of the React DateTime Picker component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/date-time-picker.html" %}
 

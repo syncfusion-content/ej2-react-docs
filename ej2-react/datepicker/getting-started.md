@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the DatePicker component are imported in the **src/App.css** file:
+The required styles for the React DatePicker component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -98,7 +98,7 @@ The required styles for the DatePicker component are imported in the **src/App.c
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the DatePicker component
+## Add the React DatePicker component
 
 Now, you can add the React DatePicker component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
 
@@ -139,11 +139,11 @@ The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/datepicker/default-cs14" %}
 
-> Refer to the [React DatePicker](https://www.syncfusion.com/react-components/react-datepicker) feature tour page for its groundbreaking feature representations. You can also explore our [React DatePicker component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/datepicker/default) that shows how to render the DatePicker in React.
+> Refer to the [React DatePicker](https://www.syncfusion.com/react-components/react-datepicker) feature tour page for its groundbreaking feature representations. You can also explore our [React DatePicker component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/datepicker/default) that shows how to render the React DatePicker in React.
 
 ## See Also
 
 * [Change the format of selected date](./date-format)
-* [Render DatePicker with specific culture](./globalization)
-* [How to change the initial view of the DatePicker](./date-views)
-* [How to achieve dynamic form validation with DatePicker](./how-to/dynamic-form-validation)
+* [Render React DatePicker with specific culture](./globalization)
+* [How to change the initial view of the React DatePicker](./date-views)
+* [How to achieve dynamic form validation with React DatePicker](./how-to/dynamic-form-validation)

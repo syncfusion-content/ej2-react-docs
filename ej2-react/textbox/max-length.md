@@ -23,4 +23,4 @@ Enforce a maximum length limit using the `maxLength` property, which defines the
 
 {% previewsample "page.domainurl/code-snippet/textbox/max-length-cs1" %}
 
-When the user reaches the specified limit, the TextBox prevents further input, ensuring compliance with the defined character limit. This feature helps maintain data integrity and provides users with clear feedback on the allowed input length.
+When the user reaches the specified limit, the React TextBox prevents further input, ensuring compliance with the defined character limit. This feature helps maintain data integrity and provides users with clear feedback on the allowed input length.

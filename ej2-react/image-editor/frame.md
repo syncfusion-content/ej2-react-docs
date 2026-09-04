@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Frame in React Image Editor
 
-The frame feature in an Image Editor provides users with the capability to add decorative borders or frames around their images. Frames are a visual design element that can enhance the overall appearance and appeal of an image.
+The frame feature in an React Image Editor provides users with the capability to add decorative borders or frames around their images. Frames are a visual design element that can enhance the overall appearance and appeal of an image.
 
 ## Apply frame to the image
 
@@ -19,7 +19,7 @@ The [`drawFrame`](https://ej2.syncfusion.com/react/documentation/api/image-edito
 
 Depending on the frame type selected, users may have additional customization options, such as adjusting the frame's thickness, color, texture, or other attributes. This allows for fine-tuning the appearance of the frame to match the image's theme or the user's preferences.
 
-The `drawFrame` method in the Image Editor control takes nine parameters to define the frame properties:
+The `drawFrame` method in the React Image Editor control takes nine parameters to define the frame properties:
 
 * `frameType` - Specifies the frame type (for example: `mat`, `bevel`, `line`, `hook`, `inset`).
 

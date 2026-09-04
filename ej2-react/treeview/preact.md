@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the React TreeView Component in the Preact Framework
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React TreeView component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Tree View component.
 
 `Preact` is a fast and lightweight JavaScript library for building user interfaces. It's often used as an alternative to larger frameworks like React. The key difference is that Preact is designed to be smaller in size and faster in performance, making it a good choice for projects where file size and load times are critical factors. 
 
@@ -85,7 +85,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-This article uses the [React TreeView component](https://www.syncfusion.com/react-components/react-treeview) as an example. To use the React TreeView component in the project, the `@syncfusion/ej2-react-navigations` package needs to be installed using the following command:
+This article uses the [React Tree View component](https://www.syncfusion.com/react-components/react-treeview) as an example. To use the React Tree View component in the project, the `@syncfusion/ej2-react-navigations` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-navigations --save
@@ -101,12 +101,12 @@ yarn add @syncfusion/ej2-react-navigations
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to theme's in a React project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the TreeView component and its dependents were imported into the **src/style.css** file.
+In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the React Tree View component and its dependents were imported into the **src/style.css** file.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
 
-/* import the TreeView dependency styles */
+/* import the React Tree View dependency styles */
 
 @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
 @import "../node_modules/@syncfusion/ej2-react-navigations/styles/material3.css";
@@ -119,9 +119,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 > The order of importing CSS styles should be in line with its dependency graph.
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React TreeView component to the Preact project:
+Follow the below steps to add the React Tree View component to the Preact project:
 
-1\. Before adding the TreeView component to your markup, import the TreeView component in the **src/index.jsx** file.
+1\. Before adding the React Tree View component to your markup, import the React Tree View component in the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -131,7 +131,7 @@ import { TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the TreeView component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treeview#datasource) property. Declare the values for the `dataSource` property.
+2\. Then, define the React Tree View component with the [dataSource](https://ej2.syncfusion.com/react/documentation/api/treeview#datasource) property. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -232,7 +232,7 @@ function App() {
     ];
     const fields = { dataSource: hierarchicalData, id: 'id', text: 'name', child: 'subChild' };
     return (
-    // specifies the tag for render the TreeView component
+    // specifies the tag for render the React Tree View component
     <TreeViewComponent fields={fields}/>);
 }
 render(<App />, document.querySelector('#app'));

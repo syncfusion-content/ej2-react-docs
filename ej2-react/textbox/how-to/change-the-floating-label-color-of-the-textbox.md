@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to change the floating label color in React TextBox
 
-Customize the floating label color for different validation states (success and warning) to provide visual feedback about input validity. Apply the following CSS rules to style the label based on the TextBox state:
+Customize the floating label color for different validation states (success and warning) to provide visual feedback about input validity. Apply the following CSS rules to style the label based on the React TextBox state:
 
 ```css
 /* Success state - green label */

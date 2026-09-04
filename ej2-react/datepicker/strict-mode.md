@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Strict Mode in React DatePicker
 
-When [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/datepicker#strictmode) is enabled, the DatePicker validates user input against specified min/max constraints. The following behaviors apply:
+When [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/datepicker#strictmode) is enabled, the React DatePicker validates user input against specified min/max constraints. The following behaviors apply:
 
 - **Valid dates within range**: Accepted and applied
 - **Out-of-range dates**: Automatically adjusted to the nearest boundary (min or max)

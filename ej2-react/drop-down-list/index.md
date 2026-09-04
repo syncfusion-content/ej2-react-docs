@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Index in React Drop down list component | Syncfusion
-description: Learn here all about Index in Syncfusion React Drop down list component of Syncfusion Essential JS 2 and more.
+title: Index in React Dropdown List component | Syncfusion
+description: Learn here all about Index in Syncfusion React Dropdown List component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Drop down list component
+# Index in React Dropdown List component
 
-The DropDownList component contains a list of predefined values from which a single value can be chosen. When an arrow icon accompanied with this component is pressed, the dropdown displays a list of values from which you can select one.
+The React Dropdown List component contains a list of predefined values from which a single value can be chosen. When an arrow icon accompanied with this component is pressed, the dropdown displays a list of values from which you can select one.
 
 ## Key features
 
@@ -24,4 +24,4 @@ The DropDownList component contains a list of predefined values from which a sin
 
 * **[Templates](../drop-down-list/templates)** - Customize list items, selected value, header, footer, category group header, and no records content.
 
-* **[Accessibility](../drop-down-list/accessibility)** - Built-in accessibility support enables access to all DropDownList component features through keyboard, screen readers, and assistive technology devices.
+* **[Accessibility](../drop-down-list/accessibility)** - Built-in accessibility support enables access to all React Dropdown List component features through keyboard, screen readers, and assistive technology devices.

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Image Editor
 
-The Image Editor component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate accessibility.
+The React Image Editor component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate accessibility.
 
-The accessibility compliance for the Image Editor component is outlined below.
+The accessibility compliance for the React Image Editor component is outlined below.
 
 <style>
     .post .post-content img {
@@ -40,7 +40,7 @@ The accessibility compliance for the Image Editor component is outlined below.
 
 ## Keyboard interaction
 
-The Image Editor component follows keyboard interaction guidelines to support assistive technologies and keyboard-only users. The following keyboard shortcuts are supported by the Image Editor component (enabled by default).
+The React Image Editor component follows keyboard interaction guidelines to support assistive technologies and keyboard-only users. The following keyboard shortcuts are supported by the React Image Editor component (enabled by default).
 
 | **Press** | **Action** |
 | --- | --- |
@@ -58,7 +58,7 @@ Verify accessibility using automated tools and manual testing. Common test packa
 
 You can also run the `accessibility-checker` CLI against the live sample to get a report.
 
-The accessibility compliance of the Image Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/image-editor.html) in a new window to evaluate the component with accessibility tools.
+The accessibility compliance of the React Image Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/image-editor.html) in a new window to evaluate the component with accessibility tools.
 
 {% previewsample "page.domainurl/code-snippet/image-editor/default-cs6" %}
 

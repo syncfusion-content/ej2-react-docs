@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Templates in React MultiColumn ComboBox
 
-The MultiColumn ComboBox provides several template options to customize list items, groups, headers, and footers.
+The React MultiColumn ComboBox provides several template options to customize list items, groups, headers, and footers.
 
 ## Item template
 
-You can use the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#itemtemplate) property to customize each list item within the MultiColumn ComboBox.
+You can use the [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/#itemtemplate) property to customize each list item within the React MultiColumn ComboBox.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

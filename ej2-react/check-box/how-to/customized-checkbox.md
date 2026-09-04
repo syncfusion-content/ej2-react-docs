@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to customize in React Checkbox
 
-## Customize checkbox appearance
+## Customize React Checkbox appearance
 
-Customize the CheckBox component's appearance by defining CSS rules and assigning the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/check-box#cssclass) property. Custom CSS allows you to modify colors, borders, and visual styles for different checkbox variants.
+Customize the React Checkbox component's appearance by defining CSS rules and assigning the class name to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/check-box#cssclass) property. Custom CSS allows you to modify colors, borders, and visual styles for different React Checkbox variants.
 
-The following example demonstrates how to create CheckBox variants by customizing the background and border colors to represent primary, success, warning, danger, and informational states:
+The following example demonstrates how to create React Checkbox variants by customizing the background and border colors to represent primary, success, warning, danger, and informational states:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,7 +29,7 @@ The following example demonstrates how to create CheckBox variants by customizin
 
 ## Custom frame
 
-Customize the CheckBox frame by adding CSS rules to modify its shape and appearance. The following example demonstrates how to create round checkboxes by setting the `border-radius` to `100%` using the `e-custom` class:
+Customize the React Checkbox frame by adding CSS rules to modify its shape and appearance. The following example demonstrates how to create round React Checkboxes by setting the `border-radius` to `100%` using the `e-custom` class:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -44,7 +44,7 @@ Customize the CheckBox frame by adding CSS rules to modify its shape and appeara
 
 ## Custom check icon
 
-Customize the CheckBox check icon by adding CSS rules to modify the icon content, background, and border colors. The following example demonstrates how to customize the check icon appearance in focus and hovered states using the `e-checkicon` class:
+Customize the React Checkbox check icon by adding CSS rules to modify the icon content, background, and border colors. The following example demonstrates how to customize the check icon appearance in focus and hovered states using the `e-checkicon` class:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

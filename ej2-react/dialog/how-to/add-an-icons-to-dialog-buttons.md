@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # How to add icons to buttons in React Dialog
 
-You can add icons to the dialog buttons using the [buttons](https://ej2.syncfusion.com/react/documentation/api/dialog#buttons) property or the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/dialog#footertemplate) property. Use the `buttons` property when you want built-in Button components with their standard behavior; use the `footerTemplate` property when you need full custom markup in the footer. For detailed information about dialog buttons, refer to the [Template in React Dialog](../template#footer) topic.
+You can add icons to the React Dialog buttons using the [buttons](https://ej2.syncfusion.com/react/documentation/api/dialog#buttons) property or the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/dialog#footertemplate) property. Use the `buttons` property when you want built-in Button components with their standard behavior; use the `footerTemplate` property when you need full custom markup in the footer. For detailed information about React Dialog buttons, refer to the [Template in React Dialog](../template#footer) topic.
 
 The `buttons` property accepts an array of objects whose `buttonModel` field follows the Syncfusion `ButtonModel` interface (for example, `content`, `iconCss`, `isPrimary`, and `cssClass`). See the [ButtonModel API reference](https://ej2.syncfusion.com/react/documentation/api/button#buttonmodel) for the full list of properties.
 
 ## Using the buttons property
 
-In the following sample, the dialog footer buttons are customized with icons using the `buttons` property.
+In the following sample, the React Dialog footer buttons are customized with icons using the `buttons` property.
 
 `[Class-component]`
 
@@ -46,7 +46,7 @@ In the following sample, the dialog footer buttons are customized with icons usi
 
 ## Using the footerTemplate property
 
-In the following sample, the dialog footer buttons are customized with icons using the `footerTemplate` property.
+In the following sample, the React Dialog footer buttons are customized with icons using the `footerTemplate` property.
 
 `[Class-component]`
 
@@ -78,5 +78,5 @@ In the following sample, the dialog footer buttons are customized with icons usi
 
 * [Template in React Dialog](../template)
 * [Style in React Dialog](../style)
-* [Dialog buttons API reference](https://ej2.syncfusion.com/react/documentation/api/dialog#buttons)
-* [Dialog footerTemplate API reference](https://ej2.syncfusion.com/react/documentation/api/dialog#footertemplate)
+* [React Dialog buttons API reference](https://ej2.syncfusion.com/react/documentation/api/dialog#buttons)
+* [React Dialog footerTemplate API reference](https://ej2.syncfusion.com/react/documentation/api/dialog#footertemplate)

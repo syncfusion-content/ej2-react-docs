@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React In-place Editor
 
-The In-place Editor component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React In-place Editor component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Inplace editor component is outlined below.
+The accessibility compliance for the React In-place Editor component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -44,14 +44,14 @@ Use the following keyboard shortcuts to interact with the In-place Editor:
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Tab</kbd> | Focuses the In-place Editor and switches between consecutive In-place Editor instances. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Focuses the previous In-place Editor instance. |
+| <kbd>Tab</kbd> | Focuses the React In-place Editor and switches between consecutive React In-place Editor instances. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Focuses the previous React In-place Editor instance. |
 
 ## Ensuring accessibility
 
-The In-place Editor component's accessibility is verified through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) automated testing tools.
+The React In-place Editor component's accessibility is verified through [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) automated testing tools.
 
-The accessibility compliance of the In-place Editor component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/inplace-editor.html) in a new window to evaluate the component's accessibility using accessibility validation tools.
+The accessibility compliance of the React In-place Editor component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/inplace-editor.html) in a new window to evaluate the component's accessibility using accessibility validation tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/inplace-editor.html" %}
 

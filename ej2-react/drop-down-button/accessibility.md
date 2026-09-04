@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Accessibility in React DropDownButton | Syncfusion
-description: Learn how the React DropDownButton meets WCAG 2.2, Section 508, and ADA standards. Includes WAI-ARIA roles, keyboard interaction, and validation tools.
+title: Accessibility in React Dropdown Menu | Syncfusion
+description: Learn how the React Dropdown Menu meets WCAG 2.2, Section 508, and ADA standards. Includes WAI-ARIA roles, keyboard interaction, and validation tools.
 control: Accessibility 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React DropDownButton
+# Accessibility in React Dropdown Menu
 
-The DropDownButton component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Dropdown Menu component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The following table outlines the accessibility compliance of the DropDownButton component:
+The following table outlines the accessibility compliance of the React Dropdown Menu component:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,11 +42,11 @@ The following table outlines the accessibility compliance of the DropDownButton 
 
 ## WAI-ARIA attributes
 
-The DropDownButton component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility requirements. The following ARIA attributes are used in the DropDownButton component:
+The React Dropdown Menu component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet accessibility requirements. The following ARIA attributes are used in the React Dropdown Menu component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Identifies the DropDownButton as a `button`, the popup as a `menu`, and popup items as `menuitem` elements. |
+| `role` | Identifies the React Dropdown Menu as a `button`, the popup as a `menu`, and popup items as `menuitem` elements. |
 | `aria-haspopup` | Indicates that the button triggers a popup menu. |
 | `aria-expanded` | Indicates whether the popup is currently expanded or collapsed. |
 | `aria-owns` | Defines the relationship between the button and its popup menu in the accessibility tree. |
@@ -54,7 +54,7 @@ The DropDownButton component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/
 
 ## Keyboard interaction
 
-The DropDownButton component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcuts are supported:
+The React Dropdown Menu component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcuts are supported:
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -64,9 +64,9 @@ The DropDownButton component follows the [keyboard interaction](https://www.w3.o
 
 ## Ensuring accessibility
 
-The DropDownButton component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Dropdown Menu component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the DropDownButton component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/dropdown-button.html) in a new window to evaluate the DropDownButton component's accessibility with accessibility tools.
+The accessibility compliance of the React Dropdown Menu component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/dropdown-button.html) in a new window to evaluate the React Dropdown Menu component's accessibility with accessibility tools.
 
 ## See also
 
@@ -83,7 +83,7 @@ The accessibility compliance of the DropDownButton component is shown in the fol
 
 The Drop down component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the DropDownButton component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-button.html) in a new window to evaluate the accessibility of the DropDownButton component with accessibility tools.
+The accessibility compliance of the React Dropdown Menu component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-button.html) in a new window to evaluate the accessibility of the React Dropdown Menu component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/drop-down-button.html" %}
 

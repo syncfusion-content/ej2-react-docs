@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user preference.
 
-## Customizing the height of TreeView nodes
+## Customizing the height of React Tree View nodes
 
-Use the following CSS to customize the TreeView nodes.
+Use the following CSS to customize the React Tree View nodes.
 
 ```css
 .e-treeview .e-list-item { 
@@ -24,11 +24,11 @@ Use the following CSS to customize the TreeView nodes.
         height: 45px; 
 }
 ```
-![Customizing the height of TreeView nodes](./images/customize-node-height.png)
+![Customizing the height of React Tree View nodes](./images/customize-node-height.png)
 
-## Customizing the text of TreeView nodes
+## Customizing the text of React Tree View nodes
 
-Use the following CSS to customize the text of TreeView nodes.
+Use the following CSS to customize the text of React Tree View nodes.
 
 ```css
 .e-treeview .e-list-text { 
@@ -36,11 +36,11 @@ Use the following CSS to customize the text of TreeView nodes.
         color:yellow !important;
 } 
 ```
-![Customizing the text of TreeView nodes](./images/customize-treeview-text.png)
+![Customizing the text of React Tree View nodes](./images/customize-treeview-text.png)
 
-## Customizing the TreeView expand and collapse icons
+## Customizing the React Tree View expand and collapse icons
 
-Use the following CSS to customize the TreeView expand and collapse icons.
+Use the following CSS to customize the React Tree View expand and collapse icons.
 
 ```css
 .e-treeview .e-icon-expandable { 
@@ -50,11 +50,11 @@ Use the following CSS to customize the TreeView expand and collapse icons.
         color: black; 
 }
 ```
-![Customizing the TreeView expand and collapse icons](./images/customize-expand-collapse-icon.png)
+![Customizing the React Tree View expand and collapse icons](./images/customize-expand-collapse-icon.png)
 
-## Customizing the TreeView checkboxes
+## Customizing the React Tree View checkboxes
 
-Use the following CSS to customize the TreeView checkboxes.
+Use the following CSS to customize the React Tree View checkboxes.
 
 ```css
 .e-checkbox-wrapper .e-frame {
@@ -66,11 +66,11 @@ Use the following CSS to customize the TreeView checkboxes.
     border-radius:50% !important;
 }
 ```
-![Customizing the TreeView checkboxes](./images/customize-checkbox.png)
+![Customizing the React Tree View checkboxes](./images/customize-checkbox.png)
 
-## Customizing the TreeView nodes based on levels
+## Customizing the React Tree View nodes based on levels
 
-Use the following CSS to customize the TreeView nodes based on levels.
+Use the following CSS to customize the React Tree View nodes based on levels.
 
 ```css
 .e-treeview .e-level-2 > .e-text-content {
@@ -78,11 +78,11 @@ Use the following CSS to customize the TreeView nodes based on levels.
     border: 1px solid #99C9FF;
 }
 ```
-![Customizing the TreeView nodes based on levels](./images/customize-based-on-level.png)
+![Customizing the React Tree View nodes based on levels](./images/customize-based-on-level.png)
 
-## Customizing the TreeView using HtmlAttributes
+## Customizing the React Tree View using HtmlAttributes
 
-The [htmlAttributes](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldssettingsmodel#htmlattributes) property of the TreeView component allows you to define a mapping field for applying custom HTML attributes to individual TreeView nodes.
+The [htmlAttributes](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldssettingsmodel#htmlattributes) property of the React Tree View component allows you to define a mapping field for applying custom HTML attributes to individual React Tree View nodes.
 
 By using attributes, you can customize specific nodes effectively. For instance, in the given example, a 'child-node' class is added to a specific node, allowing you to customize the corresponding node via CSS.
 

@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 JSON Web Token (JWT) is an open standard for securely transmitting information between parties as a JSON object. JWTs are commonly used for authorization, where the client includes a JWT in the request header and the server validates it before processing the request. This approach ensures that only authenticated users can upload or remove files.
 
-This guide demonstrates implementing JWT authentication with the Uploader component in a React application. The server-side implementation uses .NET Core to validate JWT tokens before handling save or remove operations.
+This guide demonstrates implementing JWT authentication with the React File Upload component in a React application. The server-side implementation uses .NET Core to validate JWT tokens before handling save or remove operations.
 
 ## Client-Side Setup
 
-Configure JWT authentication using the `uploading` and `removing` events of the Uploader component. Set the **asyncSettings** property to configure server endpoints for save and remove operations. Store the JWT in a property or variable for access during upload.
+Configure JWT authentication using the `uploading` and `removing` events of the React File Upload component. Set the **asyncSettings** property to configure server endpoints for save and remove operations. Store the JWT in a property or variable for access during upload.
 
 The `uploading` and `removing` events provide access to the `currentRequest` object. Use the `setRequestHeader` method to inject the JWT token into the request header for both save and remove actions.
 

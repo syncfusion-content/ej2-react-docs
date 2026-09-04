@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Icons
 
-The menu item contains an icon/image in it to provide a visual representation of an action. To place the icon on a menu item, set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#iconcss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. In the following sample, the icons of `File` and `Edit` menu items and `Open`, `Save`, `Cut`, `Copy`,and `Paste` sub menu items are added using the `iconCss` property.
+The React Menu item contains an icon/image in it to provide a visual representation of an action. To place the icon on a React Menu item, set the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#iconcss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. In the following sample, the icons of `File` and `Edit` menu items and `Open`, `Save`, `Cut`, `Copy`,and `Paste` sub menu items are added using the `iconCss` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The menu item contains an icon/image in it to provide a visual representation of
 
 ## Navigation
 
-Navigation in Menu is used to navigate to the other web page when a menu item is clicked. It can be achieved by providing a link to the menu item using the [`url`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#url) property. In the following sample, the Navigation URL is added to sub menu items using the url property.
+Navigation in React Menu is used to navigate to the other web page when a menu item is clicked. It can be achieved by providing a link to the React menu item using the [`url`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#url) property. In the following sample, the Navigation URL is added to sub menu items using the url property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ Navigation in Menu is used to navigate to the other web page when a menu item is
 
 ## Multilevel nesting
 
-The Menu supports multiple level nesting, and it can be achieved by mapping the [`items`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#items) property inside the parent [`menuItems`](https://ej2.syncfusion.com/react/documentation/api/menu/#items). In the following sample, three-level nesting of menu has been provided.
+The React Menu supports multiple level nesting, and it can be achieved by mapping the [`items`](https://ej2.syncfusion.com/react/documentation/api/menu/menuItemModel/#items) property inside the parent [`menuItems`](https://ej2.syncfusion.com/react/documentation/api/menu/#items). In the following sample, three-level nesting of React menu has been provided.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

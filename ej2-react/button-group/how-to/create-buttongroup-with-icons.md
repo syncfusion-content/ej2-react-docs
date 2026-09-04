@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to add icons in React Button Group
 
-Display icons in a ButtonGroup by using the `iconCss` property of the Button component. Icons enhance visual recognition and improve user experience in button groups.
+Display icons in a React Button Group by using the `iconCss` property of the Button component. Icons enhance visual recognition and improve user experience in React Button Groups.
 
-The following example demonstrates how to create a ButtonGroup with icons:
+The following example demonstrates how to create a React Button Group with icons:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

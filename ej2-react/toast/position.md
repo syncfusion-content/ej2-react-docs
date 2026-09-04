@@ -10,20 +10,20 @@ domainurl: ##DomainURL##
 
 # Position in React Toast
 
-Configure where toasts appear on the screen using predefined positions or custom coordinate values. Position settings determine toast placement relative to the viewport or target container, affecting user attention and notification visibility.
+Configure where React Toast appear on the screen using predefined positions or custom coordinate values. Position settings determine React Toast placement relative to the viewport or target container, affecting user attention and notification visibility.
 
 ## Predefined positions
 
 Toast supports nine predefined position combinations using the [`position`](https://ej2.syncfusion.com/react/documentation/api/toast/toastPositionModel/) property:
 
 **Horizontal alignment (X):**
-* **Left** - Aligns toast to the left edge
-* **Center** - Centers toast horizontally
-* **Right** - Aligns toast to the right edge
+* **Left** - Aligns React Toast to the left edge
+* **Center** - Centers React Toast horizontally
+* **Right** - Aligns React Toast to the right edge
 
 **Vertical alignment (Y):**
-* **Top** - Positions toast at the top
-* **Bottom** - Positions toast at the bottom
+* **Top** - Positions React Toast at the top
+* **Bottom** - Positions React Toast at the bottom
 
 Combine X and Y values to create position combinations (e.g., Top-Left, Center-Bottom).
 
@@ -31,7 +31,7 @@ Combine X and Y values to create position combinations (e.g., Top-Left, Center-B
 
 ## Custom positions
 
-For non-standard positioning, specify custom X and Y coordinates using pixels, numbers, or percentages. Numeric values are interpreted as pixels, while percentage values calculate relative to the container. Custom positioning provides precise control over toast placement for specialized layouts or responsive requirements.
+For non-standard positioning, specify custom X and Y coordinates using pixels, numbers, or percentages. Numeric values are interpreted as pixels, while percentage values calculate relative to the container. Custom positioning provides precise control over React Toast placement for specialized layouts or responsive requirements.
 
 `[Class-component]`
 
@@ -61,4 +61,4 @@ For non-standard positioning, specify custom X and Y coordinates using pixels, n
 
 ## See Also
 
-* [Render toast with different positions](./how-to/show-multiple-toasts-in-various-positions/)
+* [Render React Toast with different positions](./how-to/show-multiple-toasts-in-various-positions/)

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to trace events in React Progress Button
 
-Monitor ProgressButton lifecycle events to execute custom logic at different stages of operation. The ProgressButton emits events at key interaction points, allowing you to hook into the progress workflow and perform conditional actions, status updates, or error handling.
+Monitor React Progress Button lifecycle events to execute custom logic at different stages of operation. The React Progress Button emits events at key interaction points, allowing you to hook into the progress workflow and perform conditional actions, status updates, or error handling.
 
-The following events are available in the ProgressButton component:
+The following events are available in the React Progress Button component:
 
 * [`begin`](https://ej2.syncfusion.com/react/documentation/api/progress-button/index-default#begin) - Triggers when progress starts; use to initialize progress parameters or update UI.
 * [`progress`](https://ej2.syncfusion.com/react/documentation/api/progress-button/index-default#progress) - Triggers periodically as progress advances; use to update progress indicators or perform intermediate validations.

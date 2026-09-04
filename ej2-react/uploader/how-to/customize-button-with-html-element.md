@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize the button in React File Upload
 
-Customize the Uploader action buttons (Browse, Upload, Clear) with custom HTML content using the [buttons](https://ej2.syncfusion.com/react/documentation/api/uploader#buttons) property. The `browse`, `upload`, and `clear` button configurations each accept:
+Customize the React File Upload action buttons (Browse, Upload, Clear) with custom HTML content using the [buttons](https://ej2.syncfusion.com/react/documentation/api/uploader#buttons) property. The `browse`, `upload`, and `clear` button configurations each accept:
 
 * A string (rendered as plain text), or
 * An `HTMLElement` (rendered as that HTML content), or

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to change the first day of week in React Calendar
 
-The Calendar provides an option to change the first day of the week using the [`firstDayOfWeek`](https://ej2.syncfusion.com/react/documentation/api/calendar#firstdayofweek) property. Days of the week are numbered 0 through 6.
+The React Calendar provides an option to change the first day of the week using the [`firstDayOfWeek`](https://ej2.syncfusion.com/react/documentation/api/calendar#firstdayofweek) property. Days of the week are numbered 0 through 6.
 
 | Value | Day |
 | --- | --- |
@@ -24,7 +24,7 @@ The Calendar provides an option to change the first day of the week using the [`
 
 > By default, the first day of the week is culture-specific (for example, `Sunday` for `en-US` and `Monday` for most European cultures). Use the [`locale`](https://ej2.syncfusion.com/react/documentation/api/calendar#locale) property to switch cultures, or override the default by setting `firstDayOfWeek` explicitly.
 
-The following example demonstrates the Calendar with `Tuesday` as the first day of the week.
+The following example demonstrates the React Calendar with `Tuesday` as the first day of the week.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

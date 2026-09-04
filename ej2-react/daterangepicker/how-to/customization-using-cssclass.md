@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # How to customize using CSSClass in React DateRangePicker
 
-The [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#cssclass) property enables UI customization by adding a custom CSS class to the DateRangePicker root element. This allows you to override default component styles with custom styling rules.
+The [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#cssclass) property enables UI customization by adding a custom CSS class to the React DateRangePicker root element. This allows you to override default component styles with custom styling rules.
 
-The following classes provide flexible customization options for the DateRangePicker component:
+The following classes provide flexible customization options for the React DateRangePicker component:
 
 | **Class Name** | **Description** |
 | --- | --- |
-| e-date-range-wrapper | Applied to DateRangePicker wrapper |
-| e-range-icon | Applied to the DateRangePicker icon. |
-| e-popup | Applied to DateRangePicker popup wrapper.|
+| e-date-range-wrapper | Applied to React DateRangePicker wrapper |
+| e-range-icon | Applied to the React DateRangePicker icon. |
+| e-popup | Applied to React DateRangePicker popup wrapper.|
 | e-calendar | Applied to both Calendar element. |
 | e-right-calendar | Applied to right Calendar element. |
 | e-left-calendar | Applied to left Calendar element. |
@@ -39,7 +39,7 @@ The following classes provide flexible customization options for the DateRangePi
 | e-selected | Applied to Calendar selected dates.|
 | e-disabled | Applied to Calendar disabled dates.|
 
-In the following example, we have customized the DateRangePicker color of texts, background of selected text using `cssClass`.
+In the following example, we have customized the React DateRangePicker color of texts, background of selected text using `cssClass`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

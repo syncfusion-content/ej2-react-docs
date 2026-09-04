@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to load WebP format images in React Carousel
 
-You can load the carousel image in the webp format, which aims to create smaller, better-looking images. Choosing webp as your image format can significantly improve your website's performance without sacrificing visual quality. webp images are significantly smaller in file size compared to formats like JPEG and PNG. This results in faster load times and less data usage. To achieve this, you can convert your image format to webp and pass them to Carousel items. The following sample illustrates how to load a carousel image in the webp format component.
+You can load the React Carousel image in the webp format, which aims to create smaller, better-looking images. Choosing webp as your image format can significantly improve your website's performance without sacrificing visual quality. webp images are significantly smaller in file size compared to formats like JPEG and PNG. This results in faster load times and less data usage. To achieve this, you can convert your image format to webp and pass them to React Carousel items. The following sample illustrates how to load a React Carousel image in the webp format component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to set name and value in React Radio Button
 
-Use the [`name`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#name) attribute to group RadioButton components as mutually exclusive options. When grouped RadioButtons are submitted with a form, only the [`value`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#value) attribute of the checked RadioButton is sent to the server—retrieved using the shared `name` attribute. RadioButtons that are disabled or unchecked do not submit their values.
+Use the [`name`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#name) attribute to group React Radio Button components as mutually exclusive options. When grouped React Radio Buttons are submitted with a form, only the [`value`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#value) attribute of the checked React Radio Button is sent to the server—retrieved using the shared `name` attribute. React Radio Buttons that are disabled or unchecked do not submit their values.
 
-In the example below, the payment method "Credit / Debit Card" is in the checked state. When the form is submitted, only this checked RadioButton's value will be sent to the server.
+In the example below, the payment method "Credit / Debit Card" is in the checked state. When the form is submitted, only this checked React Radio Button's value will be sent to the server.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

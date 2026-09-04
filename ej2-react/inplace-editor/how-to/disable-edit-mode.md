@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to disable the edit mode specifically in React In-place Editor
 
-Disable edit mode in the In-place Editor by setting the [disabled](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#disabled) property to `true`. In the following sample, toggling the checkbox will disable or enable the edit mode of the In-place Editor component.
+Disable edit mode in the React In-place Editor by setting the [disabled](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#disabled) property to `true`. In the following sample, toggling the checkbox will disable or enable the edit mode of the React In-place Editor component.
 
 `[Class-component]`
 

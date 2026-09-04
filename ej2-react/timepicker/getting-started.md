@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React TimePicker
 
-This section explains the steps required to create a simple React TimePicker component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple React React TimePicker component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the TimePicker component are imported in the **src/App.css** file:
+The required styles for the React TimePicker component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -98,7 +98,7 @@ The required styles for the TimePicker component are imported in the **src/App.c
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the TimePicker component
+## Add the React TimePicker component
 
 Now, you can add the React TimePicker component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
 
@@ -139,10 +139,10 @@ The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/timepicker/default-cs5" %}
 
-> Refer to the [React TimePicker](https://www.syncfusion.com/react-components/react-timepicker) feature tour page for its groundbreaking feature representations. You can also explore our [React TimePicker component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/timepicker/default) that shows how to render the TimePicker in React.
+> Refer to the [React TimePicker](https://www.syncfusion.com/react-components/react-timepicker) feature tour page for its groundbreaking feature representations. You can also explore our [React TimePicker component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/timepicker/default) that shows how to render the React TimePicker in React.
 
 ## See Also
 
-* [Render TimePicker with min and max time](./time-range)
-* [How to achieve validation with TimePicker](./how-to/client-side-validation-using-form-validator)
-* [Render TimePicker with specific culture](./globalization)
+* [Render React TimePicker with min and max time](./time-range)
+* [How to achieve validation with React TimePicker](./how-to/client-side-validation-using-form-validator)
+* [Render React TimePicker with specific culture](./globalization)

@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Height and width
 
-The Tooltip height and width can be set to auto or specific pixel values. The [`width`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#height) properties set the outer dimensions of the Tooltip element. Both properties default to `auto` and accept string and number values in pixels.
+The React Tooltip height and width can be set to auto or specific pixel values. The [`width`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#height) properties set the outer dimensions of the React Tooltip element. Both properties default to `auto` and accept string and number values in pixels.
 
-The following sample explains how to set dimensions for the Tooltip.
+The following sample explains how to set dimensions for the React Tooltip.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -54,4 +54,4 @@ When a specific pixel value is set for the [`height`](https://ej2.syncfusion.com
 
  {% previewsample "page.domainurl/code-snippet/tooltip/scroll-mode-cs1" %}
 
-> The scrolling mode is best observed when the Tooltip's sticky mode is enabled. To enable this, set the [`isSticky`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#issticky) property to `true`.
+> The scrolling mode is best observed when the React Tooltip's sticky mode is enabled. To enable this, set the [`isSticky`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#issticky) property to `true`.

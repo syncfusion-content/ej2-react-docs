@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to enable RTL in React Menu
 
-Menu component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/menu/#enablertl) as `true`.
+The React Menu component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/menu/#enablertl) as `true`.
 
-The following example illustrates how to enable right-to-left support in Menu component.
+The following example illustrates how to enable right-to-left support in React Menu component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

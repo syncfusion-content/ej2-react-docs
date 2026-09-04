@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Split Button
 
-The SplitButton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Split Button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the SplitButton component is outlined below.
+The accessibility compliance for the React Split Button component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,24 +40,24 @@ The accessibility compliance for the SplitButton component is outlined below.
 
 ## WAI-ARIA attributes
 
-The SplitButton component implements [WAI-ARIA](https://www.w3.org/TR/wai-aria/) patterns to provide comprehensive accessibility support. The following ARIA attributes are used in the SplitButton component:
+The React Split Button component implements [WAI-ARIA](https://www.w3.org/TR/wai-aria/) patterns to provide comprehensive accessibility support. The following ARIA attributes are used in the React Split Button component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the SplitButton component as `button`, SplitButton popup as `menu`, and the SplitButton popup action items as `menuitem`. |
-| `aria-haspopup` | Indicates the availability and type of interactive SplitButton popup element. |
-| `aria-expanded` | Indicates whether the SplitButton popup can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
+| `role` | Indicates the React Split Button component as `button`, React Split Button popup as `menu`, and the React Split Button popup action items as `menuitem`. |
+| `aria-haspopup` | Indicates the availability and type of interactive React Split Button popup element. |
+| `aria-expanded` | Indicates whether the React Split Button popup can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
 | `aria-owns` | Identifies an elements in order to define a visual, functional, or contextual parent/child relationship between DOM elements where the DOM hierarchy cannot be used to represent the relationship. |
 | `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction
 
-The SplitButton component supports comprehensive keyboard navigation following WAI-ARIA guidelines, making it accessible to users who rely on assistive technologies and keyboard-only navigation. The following keyboard shortcuts are supported by the SplitButton component.
+The React Split Button component supports comprehensive keyboard navigation following WAI-ARIA guidelines, making it accessible to users who rely on assistive technologies and keyboard-only navigation. The following keyboard shortcuts are supported by the React Split Button component.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Tab</kbd> | Moves focus to the SplitButton component. |
-| <kbd>Shift + Tab</kbd> | Moves focus away from the SplitButton component. |
+| <kbd>Tab</kbd> | Moves focus to the React Split Button component. |
+| <kbd>Shift + Tab</kbd> | Moves focus away from the React Split Button component. |
 | <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
 | <kbd>Space</kbd> | Opens the popup. |
 | <kbd>Up Arrow</kbd> | Navigates to the previous action item. |
@@ -70,9 +70,9 @@ The SplitButton component supports comprehensive keyboard navigation following W
 
 ## Ensuring accessibility
 
-The SplitButton component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Split Button component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the SplitButton component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/split-button.html) in a new window to evaluate the accessibility of the SplitButton component with accessibility tools.
+The accessibility compliance of the React Split Button component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/split-button.html) in a new window to evaluate the accessibility of the React Split Button component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/split-button.html" %}
 

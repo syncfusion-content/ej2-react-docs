@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to configure open and display modes in React Tooltip
 
-The open mode property of the Tooltip defines how it is triggered on a target element, such as by hovering, focusing, or clicking. The Tooltip component supports the following open mode types:
+The open mode property of the React Tooltip defines how it is triggered on a target element, such as by hovering, focusing, or clicking. The React Tooltip component supports the following open mode types:
 
 * Auto
 * Hover
@@ -20,23 +20,23 @@ The open mode property of the Tooltip defines how it is triggered on a target el
 
 ## Auto
 
-Tooltip appears when you hover over the target element or when the target element receives the focus.
+React Tooltip appears when you hover over the target element or when the target element receives the focus.
 
 ## Hover
 
-Tooltip appears when you hover over the target element.
+React Tooltip appears when you hover over the target element.
 
 ## Click
 
-Tooltip appears when you click the target element.
+React Tooltip appears when you click the target element.
 
 ## Focus
 
-Tooltip appears when you focus on a target element (for example, by using the tab key).
+React Tooltip appears when you focus on a target element (for example, by using the tab key).
 
 ## Custom
 
-Tooltip is not triggered by any default action. You need to bind your own events and use either the [`open`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#open) or [`close`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#close) public methods.
+React Tooltip is not triggered by any default action. You need to bind your own events and use either the [`open`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#open) or [`close`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#close) public methods.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in React DateRangePicker
 
-The DateRangePicker component offers extensive UI customization through events and properties that enable flexible design adaptation to specific application needs.
+The React DateRangePicker component offers extensive UI customization through events and properties that enable flexible design adaptation to specific application needs.
 
 ## Day cell format
 
@@ -78,7 +78,7 @@ The following example demonstrates customizing the first day of week to Monday:
 
 ## Preset ranges
 
-The [`presets`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#presets) property enables predefined date ranges to be displayed in the DateRangePicker, allowing users to quickly select common ranges such as "Last 7 Days" or "This Month" without manual selection. Each preset consists of a label and corresponding start and end dates.
+The [`presets`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker#presets) property enables predefined date ranges to be displayed in the React DateRangePicker, allowing users to quickly select common ranges such as "Last 7 Days" or "This Month" without manual selection. Each preset consists of a label and corresponding start and end dates.
 
 The following example demonstrates preset ranges for quick selection:
 
@@ -110,6 +110,6 @@ The following example demonstrates preset ranges for quick selection:
 
 ## See Also
 
-* [How to customize DateRangePicker using cssClass](./how-to/customization-using-cssclass)
-* [How to disable DateRangePicker component](./how-to/disable-the-daterangepicker-component)
-* [How to customize the DateRangePicker day header](./how-to/customize-the-daterangepicker-day-header)
+* [How to customize React DateRangePicker using cssClass](./how-to/customization-using-cssclass)
+* [How to disable React DateRangePicker component](./how-to/disable-the-daterangepicker-component)
+* [How to customize the React DateRangePicker day header](./how-to/customize-the-daterangepicker-day-header)

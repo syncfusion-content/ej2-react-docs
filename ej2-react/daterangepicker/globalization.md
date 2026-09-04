@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 Globalization enables components to support multiple languages and regional formats. This combines [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (parsing and formatting dates according to regional standards) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (translating text and applying culture-specific customizations).
 
-By default, the DateRangePicker uses `American English` culture for date format and meridian names. It leverages the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](http://ej2.syncfusion.com/documentation/common/internationalization) package with official [`UNICODE CLDR`](https://cldr.unicode.org/) JSON data to parse and format dates according to the selected culture.
+By default, the React DateRangePicker uses `American English` culture for date format and meridian names. It leverages the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](http://ej2.syncfusion.com/documentation/common/internationalization) package with official [`UNICODE CLDR`](https://cldr.unicode.org/) JSON data to parse and format dates according to the selected culture.
 
-### **Quick Start: Enable a Different Culture**
+## **Quick Start: Enable a Different Culture**
 
-To display the DateRangePicker in a culture other than English, follow these steps:
+To display the React DateRangePicker in a culture other than English, follow these steps:
 
 1. **Install CLDR-Data Package**
 
@@ -47,7 +47,7 @@ Once the package installed, you can find the culture specific JSON data under th
 * Now use the [`loadCldr`](http://ej2.syncfusion.com/documentation/base/internationalization#cldr-data-dependencies)
 method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
 
-* DateRangePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the DateRangePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
+* React DateRangePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the React DateRangePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
 
 ```ts
 
@@ -75,7 +75,7 @@ loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, weekData);
 
 ```
 
-> The `Localization` library allows you to localize default text content of the DateRangePicker. The DateRangePicker component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#locale) value and translation object.
+> The `Localization` library allows you to localize default text content of the React DateRangePicker. The React DateRangePicker component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/index-default#locale) value and translation object.
 
 Locale keywords |Text
 -----|-----
@@ -114,7 +114,7 @@ customRange | Text present in the custom range button in presets container.
 
 * Set the culture by using the `locale` property.
 
-The following example demonstrates the DateRangePicker in `German` culture.
+The following example demonstrates the React DateRangePicker in `German` culture.
 
 `[Class-component]`
 
@@ -204,9 +204,9 @@ The following example demonstrates the DateRangePicker in `German` culture.
 
 ## Right-To-Left
 
-The DateRangePicker supports right-to-left functionality for languages like Arabic, Hebrew, etc. To display the text in the right-to-left direction, use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#enablertl) property.
+The React DateRangePicker supports right-to-left functionality for languages like Arabic, Hebrew, etc. To display the text in the right-to-left direction, use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/index-default#enablertl) property.
 
-The following code example demonstrates the DateRangePicker component in `Hebrew` culture and also explains how to set the localized text to the placeholder using [`load`](http://ej2.syncfusion.com/documentation/api/base/l10n/#load) method of [L10n](http://ej2.syncfusion.com/documentation/api/base/l10n/) class.
+The following code example demonstrates the React DateRangePicker component in `Hebrew` culture and also explains how to set the localized text to the placeholder using [`load`](https://ej2.syncfusion.com/documentation/api/base/l10n#load) method of [L10n](https://ej2.syncfusion.com/documentation/api/base/l10n) class.
 
 `[Class-component]`
 
@@ -286,14 +286,14 @@ The following code example demonstrates the DateRangePicker component in `Hebrew
 
 Date format is a way of representing the start date, end date strings in different string format in the textbox.
 
-By default, the DateRangePicker's start and end date string format is based on the culture. You can also set the own
-custom format by using the [`format`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#format) property.
+By default, the React DateRangePicker's start and end date string format is based on the culture. You can also set the own
+custom format by using the [`format`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/index-default#format) property.
 
 >Once the date format property has been defined it will be common to all the cultures.
 
 To know more about the date format standards, refer to the [Internationalization Date Format](http://ej2.syncfusion.com/documentation/base/internationalization) section.
 
-The following example demonstrates the DateRangePicker with the custom format (`yyyy-MM-dd`). Also, here the separator of the date values is changed to string "to".
+The following example demonstrates the React DateRangePicker with the custom format (`yyyy-MM-dd`). Also, here the separator of the date values is changed to string "to".
 
 `[Class-component]`
 

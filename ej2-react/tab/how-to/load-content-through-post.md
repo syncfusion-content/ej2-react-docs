@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to load content through Ajax in React Tab
 
-The Tab supports loading external contents through the `Ajax` library. Refer to the following steps.
+The React Tab supports loading external contents through the `Ajax` library. Refer to the following steps.
 
 * Import the `Ajax` module from `ej2-base` and initialize with URL path.
 
-* Get the data from Ajax `Success` event, then initialize the Tab with retrieved external path data.
+* Get the data from Ajax `Success` event, then initialize the React Tab with retrieved external path data.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

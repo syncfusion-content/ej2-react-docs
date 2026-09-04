@@ -27,7 +27,7 @@ The [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/context-me
 
 ## Customize specific menu items
 
-Context Menu items can be customized using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#beforeitemrender) event. This event fires during rendering of each menu item. The handler receives a `MenuEventArgs` argument exposing:
+The React Context Menu items can be customized using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#beforeitemrender) event. This event fires during rendering of each menu item. The handler receives a `MenuEventArgs` argument exposing:
 
 | Member | Description |
 | --- | --- |
@@ -49,7 +49,7 @@ The following example reads `args.item.text` to choose a keyboard shortcut and a
 
 ## Multi-level nesting
 
-The Context Menu component supports multiple levels of nesting for creating hierarchical menu structures. Achieve this by mapping the `items` field of each parent menu item (see [`MenuItemModel.items`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuitemmodel#items)) to an array of child `MenuItemModel` objects. By default, submenu items open on hover; the menu is not limited to a fixed nesting depth, but for usability we recommend keeping nesting to three or four levels. The following example demonstrates a three-level nested Context Menu structure.
+The React Context Menu component supports multiple levels of nesting for creating hierarchical menu structures. Achieve this by mapping the `items` field of each parent menu item (see [`MenuItemModel.items`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuitemmodel#items)) to an array of child `MenuItemModel` objects. By default, submenu items open on hover; the menu is not limited to a fixed nesting depth, but for usability we recommend keeping nesting to three or four levels. The following example demonstrates a three-level nested React Context Menu structure.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

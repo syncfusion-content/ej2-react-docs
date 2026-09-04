@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Disabled Items in React Mention
 
-The Mention supports enabling or disabling individual items as needed. Map the disabled state through the [disabled](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) field in the data table. Disabled items cannot be selected. Configure disabled item behavior using the `fields.disabled` property.
+The React Mention supports enabling or disabling individual items as needed. Map the disabled state through the [disabled](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) field in the data table. Disabled items cannot be selected. Configure disabled item behavior using the `fields.disabled` property.
 
 In the following example, states are grouped by category using the `disabled` field:
 

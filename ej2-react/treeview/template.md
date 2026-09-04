@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in React Tree View
 
-The TreeView component allows you to customize the look of TreeView nodes by using the [nodeTemplate](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodetemplate) property. This property accepts either `template string` or HTML element ID.
+The React Tree View component allows you to customize the look of React Tree View nodes by using the [nodeTemplate](https://ej2.syncfusion.com/react/documentation/api/treeview/#nodetemplate) property. This property accepts either `template string` or HTML element ID.
 
 In the following sample, employee information such as employee photo, name, and designation have been included using the `nodeTemplate` property.
 
@@ -35,7 +35,7 @@ The template expression should be provided inside the `${...}` interpolation syn
 
 ## Stateless template
 
-For specific needs of the application, users don't want to re-render the TreeView component during state updates. This can be achieved using the `statelessTemplates` property. It specifies the array of template names where the state value updates need to be ignored. It will increase the performance of the components if users prevent state updates for the templates that are not required.
+For specific needs of the application, users don't want to re-render the React Tree View component during state updates. This can be achieved using the `statelessTemplates` property. It specifies the array of template names where the state value updates need to be ignored. It will increase the performance of the components if users prevent state updates for the templates that are not required.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

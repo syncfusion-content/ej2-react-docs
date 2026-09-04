@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Select Items in React ListBox
 
-Use the [`selectItems`](https://ej2.syncfusion.com/react/documentation/api/list-box/#selectitems) method to select items in the ListBox. In the following example, `Bugatti Chiron` is selected:
+Use the [`selectItems`](https://ej2.syncfusion.com/react/documentation/api/list-box/#selectitems) method to select items in the React ListBox. In the following example, `Bugatti Chiron` is selected:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

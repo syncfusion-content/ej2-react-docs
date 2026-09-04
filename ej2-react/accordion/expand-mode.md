@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Expand Mode in React Accordion
 
- The Accordion supports the two listed types of expand modes while expanding or collapsing the item.
+ The React Accordion supports the two listed types of expand modes while expanding or collapsing the item.
 
 * Single
 * Multiple
 
 ## Single
 
-The property enables to expand only one Accordion item at a time. If you expand any new item, the previously expanded one is collapsed and new item changed to expanded state.
+The property enables to expand only one React Accordion item at a time. If you expand any new item, the previously expanded one is collapsed and new item changed to expanded state.
 
-You can also choose which accordion pane is expanded state at initial rendering by enabling the [`expanded`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItemModel#expanded) property on accordion items.
+You can also choose which React Accordion pane is expanded state at initial rendering by enabling the [`expanded`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItemModel#expanded) property on React Accordion items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

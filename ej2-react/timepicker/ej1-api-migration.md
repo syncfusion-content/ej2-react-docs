@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # EJ1 API Migration in React TimePicker
 
-This article describes the API migration process of the TimePicker component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
+This article describes the API migration process of the React TimePicker component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Time Selection
 

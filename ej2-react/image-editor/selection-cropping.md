@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Selection and Cropping in React Image Editor
 
-The cropping feature in the Image Editor allows you to select and crop specific regions of an image. It offers different selection options, including custom shapes, squares, circles, and various aspect ratios such as 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 5:7, 7:5, 9:16, and 16:9.
+The cropping feature in the React Image Editor allows you to select and crop specific regions of an image. It offers different selection options, including custom shapes, squares, circles, and various aspect ratios such as 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 5:7, 7:5, 9:16, and 16:9.
 
 To perform a selection, you can use the [`select`](https://ej2.syncfusion.com/react/documentation/api/image-editor#select) method, which allows you to define the desired selection area within the image. Once the selection is made, you can then use the [`crop`](https://ej2.syncfusion.com/react/documentation/api/image-editor#crop) method to crop the image based on the selected region. This enables you to extract and focus on specific parts of the image while discarding the rest.
 
@@ -102,7 +102,7 @@ CropEventArgs.cancel – A boolean value to cancel the cropping action.
 
 ### Maintaining original image size during cropping
 
-In the image editor, when an image is cropped, it is often enlarged or scaled to improve visibility within the UI. To prevent this scaling and maintain the original cropping size, bind to the `cropping` event and set `args.preventScaling = true` (boolean) inside the handler; this prevents the editor from enlarging the selection during the crop operation and preserves the original cropping size when saved.
+In the React Image Editor, when an image is cropped, it is often enlarged or scaled to improve visibility within the UI. To prevent this scaling and maintain the original cropping size, bind to the `cropping` event and set `args.preventScaling = true` (boolean) inside the handler; this prevents the editor from enlarging the selection during the crop operation and preserves the original cropping size when saved.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

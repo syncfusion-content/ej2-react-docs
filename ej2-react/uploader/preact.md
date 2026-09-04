@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Preact Getting Started with React File Upload
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Uploader component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React React File Upload component.
 
 Preact is a fast, lightweight JavaScript library for building user interfaces, serving as an alternative to React. Preact's smaller bundle size (approximately 3KB vs. React's 40KB) and optimized performance make it ideal for performance-critical projects and environments with bandwidth constraints. 
 
@@ -85,7 +85,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-This article uses the [React Uploader component](https://www.syncfusion.com/react-components/react-file-upload) as an example. To use the React Uploader component in the project, the `@syncfusion/ej2-react-inputs` package needs to be installed using the following command:
+This article uses the [React Uploader component](https://www.syncfusion.com/react-components/react-file-upload) as an example. To use the React File Upload component in the project, the `@syncfusion/ej2-react-inputs` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-inputs --save
@@ -101,7 +101,7 @@ yarn add @syncfusion/ej2-react-inputs
 
 You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to know more about built-in themes and different ways to refer to theme's in a React project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Uploader component and its dependents were imported into the **src/style.css** file.
+In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the React File Upload component and its dependents were imported into the **src/style.css** file.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
@@ -117,9 +117,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow these steps to add the React Uploader component to the Preact project:
+Follow these steps to add the React File Upload component to the Preact project:
 
-1. Import the Uploader component in the **src/index.jsx** file before adding it to the markup.
+1. Import the React File Upload component in the **src/index.jsx** file before adding it to the markup.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -129,7 +129,7 @@ import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
 {% endhighlight %}
 {% endtabs %}
 
-2. Add the Uploader component in the **src/index.jsx** file.
+2. Add the React File Upload component in the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}

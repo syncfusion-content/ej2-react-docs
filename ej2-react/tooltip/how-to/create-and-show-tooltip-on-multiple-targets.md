@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Create and show Tooltip on multiple targets in React Tooltip component
 
-Tooltips can be created and displayed on multiple targets within a container by defining specific target elements in the target property. The Tooltip is initialized only on the specified targets within the container.
+React Tooltips can be created and displayed on multiple targets within a container by defining specific target elements in the target property. The React Tooltip is initialized only on the specified targets within the container.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

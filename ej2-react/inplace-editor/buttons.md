@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Buttons in React In-place Editor
 
-The In-place Editor provides save and cancel actions through customizable buttons. The [saveButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#savebutton) and [cancelButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#cancelbutton) properties accept [ButtonModel](https://ej2.syncfusion.com/react/documentation/api/button/buttonModel) objects for customizing button appearance and behavior.
+The React In-place Editor provides save and cancel actions through customizable buttons. The [saveButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#savebutton) and [cancelButton](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#cancelbutton) properties accept [ButtonModel](https://ej2.syncfusion.com/react/documentation/api/button/buttonModel) objects for customizing button appearance and behavior.
 
 Control button visibility by setting the [showButtons](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#showbuttons) property to `true` or `false`.
 
@@ -53,4 +53,4 @@ To prevent a button from rendering in the DOM, pass an empty object `{}` to the 
 
 ## See Also
 
-* [In-place editor buttons](./how-to/dynamic-edit-mode)
+* [React In-place Editor buttons](./how-to/dynamic-edit-mode)

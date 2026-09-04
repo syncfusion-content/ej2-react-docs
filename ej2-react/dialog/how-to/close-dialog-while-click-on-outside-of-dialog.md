@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to close when click outside of its region in React Dialog
 
-The [`hide`](https://ej2.syncfusion.com/react/documentation/api/dialog#hide) method closes the dialog programmatically. It accepts an optional `animationSettings` object argument that controls the close animation; if omitted, the dialog's configured `animationSettings` (a `Zoom` effect in the samples below) is used.
+The [`hide`](https://ej2.syncfusion.com/react/documentation/api/dialog#hide) method closes the React Dialog programmatically. It accepts an optional `animationSettings` object argument that controls the close animation; if omitted, the React Dialog's configured `animationSettings` (a `Zoom` effect in the samples below) is used.
 
-In the following sample, the dialog is closed when clicking outside the dialog area using the [`hide`](https://ej2.syncfusion.com/react/documentation/api/dialog#hide) method.
+In the following sample, the React Dialog is closed when clicking outside the React Dialog area using the [`hide`](https://ej2.syncfusion.com/react/documentation/api/dialog#hide) method.
 
 `[Class-component]`
 

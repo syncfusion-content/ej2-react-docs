@@ -1,16 +1,16 @@
 ---
 layout: post
-title: How to prevent state change in React Switch | Syncfusion
-description: Cancel or validate a React Switch state change with the beforeChange event for conditional transitions and business rule enforcement.
+title: How to prevent state change in React Toggle Switch Button | Syncfusion
+description: Cancel or validate a React Toggle Switch Button state change with the beforeChange event for conditional transitions and business rule enforcement.
 control: Prevent State Change 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to prevent state change in React Switch
+# How to prevent state change in React Toggle Switch Button
 
-The [`beforeChange`](https://ej2.syncfusion.com/react/documentation/api/switch/#beforechange) event fires before the Switch's state changes. Use this event to intercept state transitions, validate conditions, or cancel the change action entirely. This approach enables conditional state management, validation workflows, and prevents state transitions that don't meet business logic requirements.
+The [`beforeChange`](https://ej2.syncfusion.com/react/documentation/api/switch/#beforechange) event fires before the React Toggle Switch Button's state changes. Use this event to intercept state transitions, validate conditions, or cancel the change action entirely. This approach enables conditional state management, validation workflows, and prevents state transitions that don't meet business logic requirements.
 
 
 {% tabs %}

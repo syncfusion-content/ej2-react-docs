@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Precision Modes in React Rating
 
-Set the [`precision`](https://ej2.syncfusion.com/react/documentation/api/rating/#precision) property to provide ratings with varying levels of precision.
+Set the [`precision`](https://ej2.syncfusion.com/react/documentation/api/rating/#precision) property to provide React Rating with varying levels of precision.
 
-The Rating component supports the following precision types:
+The React Rating component supports the following precision types:
 
-* Full: The rating is increased in whole number increments. For example, if the current rating is 2, the next possible ratings are 3, 4, and so on.
+* Full: The Rating is increased in whole number increments. For example, if the current rating is 2, the next possible ratings are 3, 4, and so on.
 * Half: The rating is increased in increments of 0.5 (half). For example, if the current rating is 2.5, the next possible ratings are 3, 3.5, 4, and so on.
 * Quarter: The rating is increased in increments of 0.25 (quarter). For example, if the current rating is 3.75, the next possible ratings are 4, 4.25, 4.5, and so on.
 * Exact: The rating is increased in increments of 0.1. For example, if the current rating is 3.9, the next possible ratings are 4, 4.1, 4.2, and so on.

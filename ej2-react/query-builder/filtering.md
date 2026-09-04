@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filtering in React Query Builder UI
 
-Create and delete filter conditions and groups in the Query Builder using the user interface or programmatic methods. Control button visibility with the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/query-builder#showbuttons) property.
+Create and delete filter conditions and groups in the React Query Builder UI using the user interface or programmatic methods. Control button visibility with the [`showButtons`](https://ej2.syncfusion.com/react/documentation/api/query-builder#showbuttons) property.
 
 Manage rules and groups through interaction or code:
 

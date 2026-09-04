@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to open DatePicker popup on input focus in React DatePicker
 
-The DatePicker popup can be programmatically opened when the input element receives focus by calling the `show` method within the input's `focus` event handler. This approach improves user experience by immediately displaying the calendar when users interact with the input field.
+The React DatePicker popup can be programmatically opened when the input element receives focus by calling the `show` method within the input's `focus` event handler. This approach improves user experience by immediately displaying the calendar when users interact with the input field.
 
-The following example demonstrates opening the DatePicker popup automatically when the input field receives focus:
+The following example demonstrates opening the React DatePicker popup automatically when the input field receives focus:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

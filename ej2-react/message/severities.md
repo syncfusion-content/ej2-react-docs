@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Severities in React Message
 
-Message severity communicates the importance and type of information being conveyed to users. Different severity levels use distinct visual styling and icons to help users quickly understand the message context. Use the [severity](https://ej2.syncfusion.com/react/documentation/api/message#severity) property to specify the message type.
+React Message severity communicates the importance and type of information being conveyed to users. Different severity levels use distinct visual styling and icons to help users quickly understand the React Message context. Use the [severity](https://ej2.syncfusion.com/react/documentation/api/message#severity) property to specify the React Message type.
 
-The Message component supports five severity levels: **Normal** (default), **Success** (confirmation or positive outcomes), **Info** (informational content), **Warning** (caution or potential issues), and **Error** (critical issues or failures).
+The React Message component supports five severity levels: **Normal** (default), **Success** (confirmation or positive outcomes), **Info** (informational content), **Warning** (caution or potential issues), and **Error** (critical issues or failures).
 
 The following example demonstrates all available severity levels and their visual representations.
 

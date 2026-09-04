@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in React Mention
 
-The Mention provides several options to customize suggestion list items, display values, and data loading indicators.
+The React Mention provides several options to customize suggestion list items, display values, and data loading indicators.
 
 ## Item template
 

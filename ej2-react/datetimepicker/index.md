@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Index in React Datetimepicker component | Syncfusion
-description: Learn here all about Index in Syncfusion React Datetimepicker component of Syncfusion Essential JS 2 and more.
+title: Index in React DateTime Picker component | Syncfusion
+description: Learn here all about Index in Syncfusion React DateTime Picker component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in React Datetimepicker component
+# Index in React DateTime Picker component
 
-The **DateTimePicker** is a graphical user interface component that allows to select a date and time value.
+The **React DateTime Picker** is a graphical user interface component that allows to select a date and time value.
 
 ## Key Features
 

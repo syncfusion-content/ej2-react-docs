@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to select sequence of dates in React Calendar
 
-The following example demonstrates how to select a contiguous week of dates that contains a user-chosen date. The Calendar populates the [`values`](https://ej2.syncfusion.com/react/documentation/api/calendar#values) property with the start-of-week and end-of-week dates when [`isMultiSelection`](https://ej2.syncfusion.com/react/documentation/api/calendar#ismultiselection) is enabled. Moment.js is used in this sample to compute the start and end of the week for the selected date.
+The following example demonstrates how to select a contiguous week of dates that contains a user-chosen date. The React Calendar populates the [`values`](https://ej2.syncfusion.com/react/documentation/api/calendar#values) property with the start-of-week and end-of-week dates when [`isMultiSelection`](https://ej2.syncfusion.com/react/documentation/api/React Calendar#ismultiselection) is enabled. Moment.js is used in this sample to compute the start and end of the week for the selected date.
 
 > This sample uses Moment.js to parse, format, and manipulate date values. Install it with the following command:
 

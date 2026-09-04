@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize the Slider bar in React Slider
 
-The Slider appearance can be customized through CSS by overriding Slider CSS classes. By default, the Slider uses the `e-slider-track` class for the bar. You can override this class with custom color values as shown below.
+The React Slider appearance can be customized through CSS by overriding React Slider CSS classes. By default, the React Slider uses the `e-slider-track` class for the bar. You can override this class with custom color values as shown below.
 
 ```css
 .e-control.e-slider .e-slider-track .e-range {
@@ -40,7 +40,7 @@ function change(args: SliderChangeEventArgs) {
 }
 ```
 
-You can apply different background colors for specific ranges of Slider values using the [`change`](https://ej2.syncfusion.com/react/documentation/api/slider/#change) event.
+You can apply different background colors for specific ranges of React Slider values using the [`change`](https://ej2.syncfusion.com/react/documentation/api/slider/#change) event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

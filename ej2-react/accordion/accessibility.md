@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Accordion
 
-The Accordion component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) specifications, by applying the prompt WAI-ARIA roles, states, and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes like `aria-labelledby`. It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and tested in major screen readers.
+The React Accordion component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) specifications, by applying the prompt WAI-ARIA roles, states, and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes like `aria-labelledby`. It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and tested in major screen readers.
 
-The accessibility compliance for the Accordion component is outlined below.
+The accessibility compliance for the React Accordion component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -43,12 +43,12 @@ The accessibility compliance for the Accordion component is outlined below.
 
 | **Roles and Attributes** | **Functionalities**                                                                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------|
-| role   | **Button:** Attribute is set to the Accordion header elements to indicate that the element can be used to toggle the visibility of the associated content section, describing the actual role of the element.<br> **Region:** Attribute is set to the Accordion panel elements to create a landmark region that contains the currently expanded accordion panel, describing the actual role of the element. <br/>|
-|  aria-labelledby   | Attribute is set to content (panel) and it points to the corresponding Accordion header.                                                                               |
-| aria-controls           | Attribute is set to the header and it points to the corresponding Accordion content.                                                                         |
-| aria-expanded            | Attribute is set to the Accordion header elements to indicates the expand state of the Accordion Item. Default value of this attribute is `false`. If an item is expanded, the attribute value changes to ‘true’.                                                    |
-| aria-hidden              | Attribute is set to the Accordion panel elements to indicates the content visible state of the Accordion Item. Default value of this attribute is `true`. If an item content is visible, the attribute value changes to `false`. |
-| aria-disabled              | It indicates the disabled state of the Accordion and its items.                                                                                           |
+| role   | **Button:** Attribute is set to the React Accordion header elements to indicate that the element can be used to toggle the visibility of the associated content section, describing the actual role of the element.<br> **Region:** Attribute is set to the React Accordion panel elements to create a landmark region that contains the currently expanded React Accordion panel, describing the actual role of the element. <br/>|
+|  aria-labelledby   | Attribute is set to content (panel) and it points to the corresponding React Accordion header.                                                                               |
+| aria-controls           | Attribute is set to the header and it points to the corresponding React Accordion content.                                                                         |
+| aria-expanded            | Attribute is set to the React Accordion header elements to indicates the expand state of the React Accordion Item. Default value of this attribute is `false`. If an item is expanded, the attribute value changes to ‘true’.                                                    |
+| aria-hidden              | Attribute is set to the React Accordion panel elements to indicates the content visible state of the React Accordion Item. Default value of this attribute is `true`. If an item content is visible, the attribute value changes to `false`. |
+| aria-disabled              | It indicates the disabled state of the React Accordion and its items.                                                                                           |
 
 ## Keyboard interaction
 
@@ -56,11 +56,11 @@ Keyboard navigation is enabled by default. Possible keys are:
 
 | Key           | Description                                                                         |
 |---------------|-------------------------------------------------------------------------------------|
-| <kbd>Space or Enter</kbd>    | When focus is on the Accordion header, click on the focused element makes the element to expand and collapse.                                                    |
-| <kbd>Down Arrow</kbd>   | Focus the next Accordion header.                                                            |
-| <kbd>Up Arrow</kbd>         | Focus the previous Accordion header. |
-| <kbd>Home</kbd>           | Focus the first Accordion header.                                                                     |
-| <kbd>End</kbd>   | Focus the last Accordion header.                                                |
+| <kbd>Space or Enter</kbd>    | When focus is on the React Accordion header, click on the focused element makes the element to expand and collapse.                                                    |
+| <kbd>Down Arrow</kbd>   | Focus the next React Accordion header.                                                            |
+| <kbd>Up Arrow</kbd>         | Focus the previous React Accordion header. |
+| <kbd>Home</kbd>           | Focus the first React Accordion header.                                                                     |
+| <kbd>End</kbd>   | Focus the last React Accordion header.                                                |
 | <kbd>Tab</kbd>     | To Move focus through the interactive elements.                 |
 | <kbd>Shift + Tab</kbd> | To Move focus through the interactive elements.             |
 

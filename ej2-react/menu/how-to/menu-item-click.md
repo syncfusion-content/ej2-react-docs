@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to open Menu on item click in React Menu
 
-You can open menu items and sub menu on menu item click by setting [`showItemOnClick`](https://ej2.syncfusion.com/react/documentation/api/menu/#showitemonclick) property of the Menu. To open sub menu items only on item click, should be set as `true`.
+You can open React menu items and sub menu on React menu item click by setting [`showItemOnClick`](https://ej2.syncfusion.com/react/documentation/api/menu/#showitemonclick) property of the React Menu. To open sub menu items only on item click, should be set as `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

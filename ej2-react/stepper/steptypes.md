@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Step Types in React Stepper
 
-The Stepper component provides support for displaying steps with the following step types.
+The React Stepper component provides support for displaying steps with the following step types.
 
 ## Default type
 
-In default type, the Stepper displays steps with a combination of both indicators and labels by setting the [stepType](https://ej2.syncfusion.com/react/documentation/api/stepper#steptype) property as `Default`. By default, the Stepper displays steps in the `Default` type.
+In default type, the React Stepper displays steps with a combination of both indicators and labels by setting the [stepType](https://ej2.syncfusion.com/react/documentation/api/stepper#steptype) property as `Default`. By default, the React Stepper displays steps in the `Default` type.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -32,7 +32,7 @@ In default type, the Stepper displays steps with a combination of both indicator
 
 ## Label type
 
-In label type, the Stepper displays the steps with only the step labels by setting the [stepType](https://ej2.syncfusion.com/react/documentation/api/stepper#steptype) property as `Label`.
+In label type, the React Stepper displays the steps with only the step labels by setting the [stepType](https://ej2.syncfusion.com/react/documentation/api/stepper#steptype) property as `Label`.
 
 > When both label and text are defined, the label takes priority in displaying the steps.
 
@@ -79,7 +79,7 @@ The following label positions are supported in Stepper:
 
 ## Indicator type
 
-In indicator type, the Stepper displays steps with only the step indicators by setting the [stepType](https://ej2.syncfusion.com/react/documentation/api/stepper#steptype) property as `Indicator`.
+In indicator type, the React Stepper displays steps with only the step indicators by setting the [stepType](https://ej2.syncfusion.com/react/documentation/api/stepper#steptype) property as `Indicator`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

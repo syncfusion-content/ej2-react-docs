@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Tooltip
 
-The Tooltip component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Tooltip component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Tooltip component is outlined below.
+The accessibility compliance for the React Tooltip component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,33 +40,33 @@ The accessibility compliance for the Tooltip component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Tooltip component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/) patterns to meet the accessibility. The following ARIA attributes are used in the Tooltip component.
+The React Tooltip component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/) patterns to meet the accessibility. The following ARIA attributes are used in the React Tooltip component.
 
 | Attributes | Description |
 | --- | --- |
-| role="tooltip" | The element that serves as the container for the Tooltip has the ARIA role of `tooltip`. |
-| aria-describedby | This attribute is added to the target element on which the Tooltip gets opened, when focusing or hovering over it. It usually holds the randomly generated `Id` value of the Tooltip element. <br /> <br />In case, the target element already holds an `aria-describedby` attribute with `Id` value of some other component, then the Tooltip Id value can be additionally appended to the existing `aria-describedby` attribute separated by a space as shown in the example below.<br /><br /> **For example:** <br /> aria-describedby = "my-text my-tooltip" <br /> **my-text** is the Id of some other component.<br /> **my-tooltip** is the id of Tooltip component. <br /><br/> When the Tooltip is closed, the `aria-describedby` attribute is  removed from the target. |
-| aria-hidden | This attribute is assigned to the Tooltip element whose default value is true. <br /><br /> When `true`, it denotes that the Tooltip element is in a hidden or a closed state. When the Tooltip appears on the screen, it’s value changes to `false`.|
+| role="tooltip" | The element that serves as the container for the React Tooltip has the ARIA role of `tooltip`. |
+| aria-describedby | This attribute is added to the target element on which the React Tooltip gets opened, when focusing or hovering over it. It usually holds the randomly generated `Id` value of the React Tooltip element. <br /> <br />In case, the target element already holds an `aria-describedby` attribute with `Id` value of some other component, then the React Tooltip Id value can be additionally appended to the existing `aria-describedby` attribute separated by a space as shown in the example below.<br /><br /> **For example:** <br /> aria-describedby = "my-text my-tooltip" <br /> **my-text** is the Id of some other component.<br /> **my-tooltip** is the id of React Tooltip component. <br /><br/> When the React Tooltip is closed, the `aria-describedby` attribute is  removed from the target. |
+| aria-hidden | This attribute is assigned to the React Tooltip element whose default value is true. <br /><br /> When `true`, it denotes that the React Tooltip element is in a hidden or a closed state. When the React Tooltip appears on the screen, it’s value changes to `false`.|
 
 ## Keyboard interaction
 
-The Tooltip component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The Tooltip component supports the following keyboard shortcuts.
+The React Tooltip component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The React Tooltip component supports the following keyboard shortcuts.
 
 |  Keys | Description |
 | --- | --- |
-| Escape | Closes or dismisses the Tooltip. |
-| Tab | A form component receiving focus (say through tab key), opens the Tooltip, and on focus out closes it. |
+| Escape | Closes or dismisses the React Tooltip. |
+| Tab | A form component receiving focus (say through tab key), opens the React Tooltip, and on focus out closes it. |
 
-> 1. When the Tooltip is being displayed on the target element, focus continues to stay on it.
-> 2. If the Tooltip opens on mouse entering into the target element space, then it should be dismissed only when the mouse leaves that target.
-> 3. If the Tooltip opens on the target element that receives focus, then it should be closed only when the focus moves out of that target element.
-Likewise, if the Tooltip opens on a click, then it should be closed only on another click action.
+> 1. When the React Tooltip is being displayed on the target element, focus continues to stay on it.
+> 2. If the React Tooltip opens on mouse entering into the target element space, then it should be dismissed only when the mouse leaves that target.
+> 3. If the React Tooltip opens on the target element that receives focus, then it should be closed only when the focus moves out of that target element.
+Likewise, if the React Tooltip opens on a click, then it should be closed only on another click action.
 
 ## Ensuring accessibility
 
-The Tooltip component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Tooltip component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Tooltip component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/tooltip.html) in a new window to evaluate the accessibility of the Tooltip component with accessibility tools.
+The accessibility compliance of the React Tooltip component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/tooltip.html) in a new window to evaluate the accessibility of the React Tooltip component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/tooltip.html" %}
 

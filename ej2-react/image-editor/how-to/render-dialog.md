@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to render Dialog in React Image Editor
 
-Rendering the Image Editor inside a modal lets users edit images in a focused pop-up without leaving the current page, keeping the main layout clean.
+Rendering the React Image Editor inside a modal lets users edit images in a focused pop-up without leaving the current page, keeping the main layout clean.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

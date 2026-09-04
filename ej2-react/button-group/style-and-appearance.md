@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style and appearance in React Button Group
 
-Customize the ButtonGroup appearance by overriding its default CSS styles. The following table lists the CSS classes available for ButtonGroup styling:
+Customize the React Button Group appearance by overriding its default CSS styles. The following table lists the CSS classes available for React Button Group styling:
 
 | CSS Class | Purpose |
 | --- | --- |
-| `.e-btn` | Applies base button styling in the ButtonGroup |
+| `.e-btn` | Applies base button styling in the React Button Group |
 | `.e-btn:hover` | Styles buttons on hover state |
 | `.e-btn:focus` | Styles buttons on focus state |
 | `.e-btn:active` | Styles buttons on active state |
@@ -28,4 +28,4 @@ Customize the ButtonGroup appearance by overriding its default CSS styles. The f
 | `.e-vertical` | Arranges buttons in vertical orientation |
 | `.e-rtl` | Enables right-to-left layout |
 
-Create custom themes for the ButtonGroup component using the [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material). Define custom CSS according to your requirements and apply it to the ButtonGroup elements.
+Create custom themes for the React Button Group component using the [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material). Define custom CSS according to your requirements and apply it to the React Button Group elements.

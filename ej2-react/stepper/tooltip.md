@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Tooltip in React Stepper
 
-The Stepper component supports tooltip to show additional information in the steps by setting the [showTooltip](https://ej2.syncfusion.com/react/documentation/api/stepper/#showtooltip) property to `true`. 
+The React Stepper component supports tooltip to show additional information in the steps by setting the [showTooltip](https://ej2.syncfusion.com/react/documentation/api/stepper/#showtooltip) property to `true`. 
 
 The tooltip appears when the user hovers over the step, providing the information such as the label or text. By default, the `showTooltip` property is `false`.
 

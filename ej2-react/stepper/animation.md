@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Animation in React Stepper
 
-The Stepper progress state can be animated, smoothly transitioning from one step to another. You can customize the animation's `duration` and `delay` by using the [animation](https://ej2.syncfusion.com/react/documentation/api/stepper/#animation) property.
+The React Stepper progress state can be animated, smoothly transitioning from one step to another. You can customize the animation's `duration` and `delay` by using the [animation](https://ej2.syncfusion.com/react/documentation/api/stepper/#animation) property.
 
 You can disable the animation by setting the [enable](https://ej2.syncfusion.com/react/documentation/api/stepper/animationModel/#enable) property to `false`. By default, the value is `true`.
 

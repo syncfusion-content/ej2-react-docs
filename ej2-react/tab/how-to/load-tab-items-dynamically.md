@@ -24,7 +24,7 @@ Tabs can be added dynamically by passing array of items and index value to the [
     this.addTab([item], this.totalItems-1);
 ```
 
-In the following demo, you can add the Tab content by clicking the **+**.  This **+** icon is added on the Tab header using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/tab/header#iconcss) property.  Enter the new Tab heading and content details in the available text boxes, click the **Add Tab** button to pass the details as an array, and the last index is calculated to append the new Tab at the end.
+In the following demo, you can add the React Tab content by clicking the **+**.  This **+** icon is added on the React Tab header using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/tab/header#iconcss) property.  Enter the new React Tab heading and content details in the available text boxes, click the **Add Tab** button to pass the details as an array, and the last index is calculated to append the new React Tab at the end.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

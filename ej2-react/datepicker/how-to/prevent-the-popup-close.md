@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to prevent the popup from closing in React DatePicker
 
-The DatePicker popup can be prevented from closing by calling the `preventDefault` method within the `close` event. This is useful for scenarios where additional validation or confirmation is required before allowing the popup to dismiss.
+The React DatePicker popup can be prevented from closing by calling the `preventDefault` method within the `close` event. This is useful for scenarios where additional validation or confirmation is required before allowing the popup to dismiss.
 
-The following example demonstrates how to prevent the DatePicker popup from closing by intercepting the close event:
+The following example demonstrates how to prevent the React DatePicker popup from closing by intercepting the close event:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style and appearance in React Split Button
 
-Customize SplitButton styling by overriding its default CSS classes. The following table lists the CSS classes available for styling different SplitButton elements. Additionally, use the [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material) to create and preview custom themes for all Syncfusion components.
+Customize React Split Button styling by overriding its default CSS classes. The following table lists the CSS classes available for styling different React Split Button elements. Additionally, use the [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material) to create and preview custom themes for all Syncfusion components.
 
 CSS Class | Purpose
 -----|-----
-.e-split-btn | Main SplitButton component container
+.e-split-btn | Main React Split Button component container
 .e-split-btn .e-btn | Primary action button styling
 .e-split-btn .e-dropdown-btn | Dropdown arrow button styling
 .e-split-btn.e-small | Compact size button variant

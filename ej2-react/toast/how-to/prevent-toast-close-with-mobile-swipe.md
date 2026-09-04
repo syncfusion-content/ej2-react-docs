@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to prevent Toast close on mobile swipe in React Toast
 
-Prevent users from accidentally dismissing toasts via mobile swipe gestures by implementing validation in the [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/toast/#beforeClose) event. Check if the close action type is "swipe" and set the `cancel` property to `true` to prevent dismissal. This pattern is useful for critical notifications or action-required messages where accidental swipe dismissal should be avoided on mobile devices.
+Prevent users from accidentally dismissing React Toast via mobile swipe gestures by implementing validation in the [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeClose) event. Check if the close action type is "swipe" and set the `cancel` property to `true` to prevent dismissal. This pattern is useful for critical notifications or action-required messages where accidental swipe dismissal should be avoided on mobile devices.
 
-The following example demonstrates preventing toast close with mobile swipe:
+The following example demonstrates preventing React Toast close with mobile swipe:
 
 `[Class-component]`
 

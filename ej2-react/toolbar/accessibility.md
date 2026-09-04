@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Toolbar
 
-The Toolbar component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/) specifications, and applying the WAI-ARIA roles, states, and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, and `aria-orientation`. It provides information about elements in a document for assistive technology. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/), and has been tested in major screen readers.
+The React Toolbar component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/) specifications, and applying the WAI-ARIA roles, states, and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, and `aria-orientation`. It provides information about elements in a document for assistive technology. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/), and has been tested in major screen readers.
 
-The accessibility compliance for the Toolbar component is outlined below.
+The accessibility compliance for the React Toolbar component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,18 +40,18 @@ The accessibility compliance for the Toolbar component is outlined below.
 
 ## ARIA attributes
 
-Toolbar component is designed in accordance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/) standard. Toolbar is supported with ARIA Accessibility which is accessible to screen readers, and other assistive technology devices. The following list of attributes are added in the Toolbar.
+React Toolbar component is designed in accordance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/) standard. React Toolbar is supported with ARIA Accessibility which is accessible to screen readers, and other assistive technology devices. The following list of attributes are added in the React Toolbar.
 
-In addition to the ARIA attributes listed below that are automatically applied, the Toolbar provides a `enableRtl` prop to enable Right-To-Left (RTL) rendering for the accessibility of right-to-left languages.
+In addition to the ARIA attributes listed below that are automatically applied, the React Toolbar provides a `enableRtl` prop to enable Right-To-Left (RTL) rendering for the accessibility of right-to-left languages.
 
 | **Property** | **Functionalities** |
 | --- | --- |
-| role="toolbar" | Attribute is set to the Toolbar element to describe the actual role of the element. |
-| aria-orientation | Attribute is set to the Toolbar element to indicate the Toolbar orientation. Default value is `horizontal`. |
-| aria-label | Attribute is set to Toolbar element to describe the purpose of the set of toolbar. |
-| aria-expanded | Attribute is set to the Toolbar Popup element to indicate the expanded state of the popup. |
-| aria-haspopup | Attribute is set to the popup element to indicate the popup mode of the Toolbar. When popup mode is enabled, the attribute value is set to `true` or a valid ARIA token (e.g., `menu`). |
-| aria-disabled | Attribute set to the Toolbar element to indicate the disabled state of the Toolbar. |
+| role="toolbar" | Attribute is set to the React Toolbar element to describe the actual role of the element. |
+| aria-orientation | Attribute is set to the React Toolbar element to indicate the React Toolbar orientation. Default value is `horizontal`. |
+| aria-label | Attribute is set to React Toolbar element to describe the purpose of the set of React toolbar. |
+| aria-expanded | Attribute is set to the React Toolbar Popup element to indicate the expanded state of the popup. |
+| aria-haspopup | Attribute is set to the popup element to indicate the popup mode of the React Toolbar. When popup mode is enabled, the attribute value is set to `true` or a valid ARIA token (e.g., `menu`). |
+| aria-disabled | Attribute set to the React Toolbar element to indicate the disabled state of the React Toolbar. |
 
 ## Keyboard interaction
 
@@ -61,20 +61,20 @@ Keyboard navigation is enabled by default. Possible keys are:
 |---------------|-------------------------------------------------------------------------------------|
 | <kbd>Left</kbd>    | Focuses the previous element.                                                    |
 | <kbd>Right</kbd>   | Focuses the next element.                                                            |
-| <kbd>Enter</kbd>         | When focused on a Toolbar command, pressing the key triggers the click of Toolbar element. When popup drop-down icon is focused, the popup opens. |
+| <kbd>Enter</kbd>         | When focused on a React Toolbar command, pressing the key triggers the click of React Toolbar element. When popup drop-down icon is focused, the popup opens. |
 | <kbd>Esc</kbd> (Escape)           | Closes popup.                                                                     |
-| <kbd>Down</kbd>   | Focuses the next popup element. In vertical orientation, focuses the next Toolbar item.                                                  |
-| <kbd>Up</kbd>      | Focuses the previous popup element. In vertical orientation, focuses the previous Toolbar item.                                                |
-| <kbd>Home</kbd>    | Moves focus to the first Toolbar item. |
-|  <kbd>End</kbd>   | Moves focus to the last Toolbar item. |
+| <kbd>Down</kbd>   | Focuses the next popup element. In vertical orientation, focuses the next React Toolbar item.                                                  |
+| <kbd>Up</kbd>      | Focuses the previous popup element. In vertical orientation, focuses the previous React Toolbar item.                                                |
+| <kbd>Home</kbd>    | Moves focus to the first React Toolbar item. |
+|  <kbd>End</kbd>   | Moves focus to the last React Toolbar item. |
 | <kbd>Tab</kbd>     | Moves focus forward through the interactive elements.                 |
 | <kbd>Shift + Tab</kbd> | Moves focus backward through the interactive elements.             |
 
 ## Accessibility validation
 
-The Toolbar component's accessibility levels are validated through automated testing with the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) tools.
+The React Toolbar component's accessibility levels are validated through automated testing with the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) tools.
 
-The accessibility compliance of the Toolbar component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/toolbar.html) in a new window to evaluate the accessibility of the Toolbar component with accessibility tools.
+The accessibility compliance of the React Toolbar component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/toolbar.html) in a new window to evaluate the accessibility of the React Toolbar component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/toolbar.html" %}
 

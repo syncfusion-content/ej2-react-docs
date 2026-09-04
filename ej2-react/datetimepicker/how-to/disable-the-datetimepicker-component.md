@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to disable the DateTimePicker in React DateTime Picker
 
-The DateTimePicker component can be disabled by setting the [`enabled`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#enabled) property to `false`. A disabled DateTimePicker prevents all user interactions and appears visually distinct from an enabled state.
+The React DateTime Picker component can be disabled by setting the [`enabled`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#enabled) property to `false`. A disabled React DateTime Picker prevents all user interactions and appears visually distinct from an enabled state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

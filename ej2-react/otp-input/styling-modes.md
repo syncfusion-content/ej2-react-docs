@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Styling Modes in React OTP Input
 
-Styling modes specify the visual variants for the OTP input fields. These modes allow you to customize the appearance of the OTP Input.
+Styling modes specify the visual variants for the React OTP Input fields. These modes allow you to customize the appearance of the React OTP Input.
 
 ## Outline mode
 

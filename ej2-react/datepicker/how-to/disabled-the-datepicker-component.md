@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to disable the DatePicker in React DatePicker
 
-The DatePicker component can be disabled by setting the [`enabled`](https://ej2.syncfusion.com/react/documentation/api/datepicker#enabled) property to `false`. A disabled DatePicker prevents user interaction and appears visually distinct from an enabled state.
+The React DatePicker component can be disabled by setting the [`enabled`](https://ej2.syncfusion.com/react/documentation/api/datepicker#enabled) property to `false`. A disabled React DatePicker prevents user interaction and appears visually distinct from an enabled state.
 
-The following example demonstrates a disabled DatePicker component:
+The following example demonstrates a disabled React DatePicker component:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,33 +10,33 @@ domainurl: ##DomainURL##
 
 # Resize in React Dialog
 
-The Dialog supports resizing functionality. Drag the dialog's resize handle (grip) or any edge/border to resize it.
+The React Dialog supports resizing functionality. Drag the React Dialog's resize handle (grip) or any edge/border to resize it.
 
 ## Enable resize
 
-A resizable dialog can be created by setting the [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog#enableresize) property to `true`. This allows the dialog size to be changed dynamically, enabling users to view content in expanded mode.
+A resizable React Dialog can be created by setting the [enableResize](https://ej2.syncfusion.com/react/documentation/api/React Dialog#enableresize) property to `true`. This allows the React Dialog size to be changed dynamically, enabling users to view content in expanded mode.
 
 ## Configure resize handles
 
-The [resizeHandles](https://ej2.syncfusion.com/react/documentation/api/dialog#resizehandles) property can be configured to specify the directions in which the dialog can be resized. Valid values include `SouthEast`, `SouthWest`, `NorthEast`, `NorthWest`, `East`, `West`, `North`, `South`, and `All`. For example, set `resizeHandles={['All']}` to allow resizing from any direction.
+The [resizeHandles](https://ej2.syncfusion.com/react/documentation/api/dialog#resizehandles) property can be configured to specify the directions in which the React Dialog can be resized. Valid values include `SouthEast`, `SouthWest`, `NorthEast`, `NorthWest`, `East`, `West`, `North`, `South`, and `All`. For example, set `resizeHandles={['All']}` to allow resizing from any direction.
 
 ## Resize bounds
 
-To constrain the dialog within minimum and maximum dimensions, use the [minHeight](https://ej2.syncfusion.com/react/documentation/api/dialog#minheight), [minWidth](https://ej2.syncfusion.com/react/documentation/api/dialog#minwidth), [maxHeight](https://ej2.syncfusion.com/react/documentation/api/dialog#maxheight), and [maxWidth](https://ej2.syncfusion.com/react/documentation/api/dialog#maxwidth) properties.
+To constrain the React Dialog within minimum and maximum dimensions, use the [minHeight](https://ej2.syncfusion.com/react/documentation/api/dialog#minheight), [minWidth](https://ej2.syncfusion.com/react/documentation/api/dialog#minwidth), [maxHeight](https://ej2.syncfusion.com/react/documentation/api/dialog#maxheight), and [maxWidth](https://ej2.syncfusion.com/react/documentation/api/dialog#maxwidth) properties.
 
 ## Constrain resize within a target
 
-When the [target](https://ej2.syncfusion.com/react/documentation/api/dialog#target) property is configured along with [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog#enableresize), the dialog will be confined to the area of the specified `target` container.
+When the [target](https://ej2.syncfusion.com/react/documentation/api/dialog#target) property is configured along with [enableResize](https://ej2.syncfusion.com/react/documentation/api/dialog#enableresize), the React Dialog will be confined to the area of the specified `target` container.
 
 ## Resize events
 
-The following events are raised while resizing the dialog:
+The following events are raised while resizing the React Dialog:
 
 * [resizeStart](https://ej2.syncfusion.com/react/documentation/api/dialog#resizestart) — Triggered when resizing begins.
 * [resizing](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#resizing) — Triggered continuously while the dialog is being resized.
 * [resizeStop](https://ej2.syncfusion.com/react/documentation/api/dialog/index-default#resizestop) — Triggered when resizing ends.
 
-The following example demonstrates how to enable resize and configure the resize handles. Note that `allowDragging` and `showCloseIcon` are included in the sample only to showcase a full-featured dialog; they are not required for resize to work.
+The following example demonstrates how to enable resize and configure the resize handles. Note that `allowDragging` and `showCloseIcon` are included in the sample only to showcase a full-featured React Dialog; they are not required for resize to work.
 
 `[Class-component]`
 
@@ -68,4 +68,4 @@ The following example demonstrates how to enable resize and configure the resize
 
 * [Getting Started with React Dialog](./getting-started)
 * [Style and Appearance in React Dialog](./style)
-* [Dialog API Reference](https://ej2.syncfusion.com/react/documentation/api/dialog)
+* [React Dialog API Reference](https://ej2.syncfusion.com/react/documentation/api/dialog)

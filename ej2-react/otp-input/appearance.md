@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Appearance in React OTP Input
 
-You can also customize the appearance of OTP Input component.
+You can also customize the appearance of React OTP Input component.
 
 ## Setting input length
 
@@ -29,7 +29,7 @@ You can specify the length of OTP by using the [length](https://ej2.syncfusion.c
 
 ## Disable inputs
 
-You can disable the OTP Input by using the [disabled](https://ej2.syncfusion.com/react/documentation/api/otp-input/#disabled) property. The default value is `false`.
+You can disable the React OTP Input by using the [disabled](https://ej2.syncfusion.com/react/documentation/api/otp-input/#disabled) property. The default value is `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -44,9 +44,9 @@ You can disable the OTP Input by using the [disabled](https://ej2.syncfusion.com
 
 ## CssClass
 
-You can customize the OTP Input appearance (colors, fonts, sizes, or other visual aspects) using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/otp-input/#cssclass) property.
+You can customize the React OTP Input appearance (colors, fonts, sizes, or other visual aspects) using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/otp-input/#cssclass) property.
 
-The OTP Input component supports the following predefined CSS classes. You can apply these by setting the `cssClass` property to one of the following class names:
+The React OTP Input component supports the following predefined CSS classes. You can apply these by setting the `cssClass` property to one of the following class names:
 
 | cssClass | Description |
 | -------- | -------- |

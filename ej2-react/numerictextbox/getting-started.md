@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Getting Started with React NumericTextBox | Syncfusion
-description: Set up a Vite-based React project, install the Syncfusion NumericTextBox, and render a basic numeric input with format and validation.
-control: Numerictextbox
+title: Getting Started with React Numeric TextBox | Syncfusion
+description: Set up a Vite-based React project, install the Syncfusion Numeric TextBox, and render a basic numeric input with format and validation.
+control: Numeric Textbox
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React NumericTextBox
+# Getting Started with React Numeric TextBox
 
-This section explains the steps required to create a simple React NumericTextBox component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple React Numeric TextBox component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
-To get started quickly with React NumericTextBox, you can watch this video:
+To get started quickly with React Numeric TextBox, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=CCcvKHTlydI" %}
 
@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the NumericTextBox component are imported in the **src/App.css** file:
+The required styles for the React Numeric TextBox component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -98,9 +98,9 @@ The required styles for the NumericTextBox component are imported in the **src/A
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding NumericTextBox component
+## Adding React Numeric TextBox component
 
-Now, you can add the React NumericTextBox component to your **src/App.jsx** file by importing and defining it within your application.
+Now, you can add the React Numeric TextBox component to your **src/App.jsx** file by importing and defining it within your application.
 
 ```js
 import * as React from 'react';
@@ -135,7 +135,7 @@ The output appears as follows.
 
  {% previewsample "page.domainurl/code-snippet/numeric-textbox/getting-started-cs4" %}
 
-> Refer to the [React NumericTextBox](https://www.syncfusion.com/react-components/react-numeric-textbox) feature tour page for its groundbreaking feature representations. You can also explore our [React NumericTextBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/numerictextbox/default) that shows how to render the NumericTextBox in React.
+> Refer to the [React Numeric TextBox](https://www.syncfusion.com/react-components/react-numeric-textbox) feature tour page for its groundbreaking feature representations. You can also explore our [React Numeric TextBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/numerictextbox/default) that shows how to render the React Numeric TextBox.
 
 ## See Also
 
@@ -143,5 +143,5 @@ The output appears as follows.
 * [How to customize the UI appearance of the control](./how-to/customize-the-ui-appearance-of-the-control)
 * [How to customize the spin button’s up and down arrow](./how-to/customize-the-spin-buttons-up-and-down-arrow)
 * [How to customize the step value and hide spin buttons](./how-to/customize-the-step-value-and-hide-spin-buttons)
-* [How to prevent nullable input in NumericTextBox](./how-to/prevent-nullable-input-in-numerictextbox)
-* [How to maintain trailing zeros in NumericTextBox](./how-to/maintain-trailing-zeros-in-numerictextbox)
+* [How to prevent nullable input in React Numeric TextBox](./how-to/prevent-nullable-input-in-numerictextbox)
+* [How to maintain trailing zeros in React Numeric TextBox](./how-to/maintain-trailing-zeros-in-numerictextbox)

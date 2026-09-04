@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Tooltip in React Rating
 
-Display tooltips in rating items by setting the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/rating/#showtooltip) property to `true`. When enabled, tooltips appear when users hover over rating items.
+Display tooltips in React items by setting the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/rating/#showtooltip) property to `true`. When enabled, tooltips appear when users hover over rating items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -26,7 +26,7 @@ Display tooltips in rating items by setting the [`showTooltip`](https://ej2.sync
 
 ## Tooltip template
 
-Customize the Rating tooltip using the [`tooltipTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#tooltiptemplate) tag directive. The current rating value is passed as the `value` property in the template context, allowing you to display dynamic information about the rating.
+Customize the React tooltip using the [`tooltipTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#tooltiptemplate) tag directive. The current rating value is passed as the `value` property in the template context, allowing you to display dynamic information about the rating.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

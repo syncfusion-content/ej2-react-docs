@@ -9,13 +9,13 @@ domainurl: ##DomainURL##
 ---
 # How to set orientation in React Button Group
 
-Arrange ButtonGroup buttons in vertical or horizontal orientation. By default, ButtonGroup displays buttons horizontally.
+Arrange React Button Group buttons in vertical or horizontal orientation. By default, React Button Group displays buttons horizontally.
 
 ## Vertical orientation
 
-Display buttons vertically by applying the `e-vertical` CSS class to the ButtonGroup target element. Vertical orientation is useful for sidebar navigation and stacked button layouts.
+Display buttons vertically by applying the `e-vertical` CSS class to the React Button Group target element. Vertical orientation is useful for sidebar navigation and stacked button layouts.
 
-The following example demonstrates how to create a ButtonGroup with vertical orientation:
+The following example demonstrates how to create a React Button Group with vertical orientation:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -28,4 +28,4 @@ The following example demonstrates how to create a ButtonGroup with vertical ori
 
  {% previewsample "page.domainurl/code-snippet/button-group/default-cs6" %}
 
-> ButtonGroup does not support SplitButton component nesting in a vertical orientation.
+> React Button Group does not support SplitButton component nesting in a vertical orientation.

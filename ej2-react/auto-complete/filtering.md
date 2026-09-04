@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Filtering in React AutoComplete
 
-The AutoComplete has built-in support for filtering the data items when [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#allowfiltering) is enabled. The filter operation starts as soon as you start typing characters in the component.
+The React AutoComplete has built-in support for filtering the data items when [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#allowfiltering) is enabled. The filter operation starts as soon as you start typing characters in the component.
 
 ## Change the filter type
 
-The AutoComplete applies the selected filter type for the search action. The available [`filterType`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#filtertype) options and their supported data types are:
+The React AutoComplete applies the selected filter type for the search action. The available [`filterType`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#filtertype) options and their supported data types are:
 
 > The built-in `filterType` options apply to string data only. For numeric or boolean values, use the [`filtering`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#filtering) event to implement custom filtering logic.
 
@@ -88,7 +88,7 @@ For advanced scenarios such as numeric, boolean, or server-side filtering that t
 
 ## Filter item count
 
-You can limit the number of filtered suggestion items shown through the [`suggestionCount`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#suggestioncount) property of AutoComplete. The default value is `20`. Setting it to `0` shows all matching items; negative values are treated as the default.
+You can limit the number of filtered suggestion items shown through the [`suggestionCount`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#suggestioncount) property of React AutoComplete. The default value is `20`. Setting it to `0` shows all matching items; negative values are treated as the default.
 
 In the following example, the suggestion list item count is restricted to 2.
 
@@ -126,7 +126,7 @@ In the following example, the suggestion list item count is restricted to 2.
 
 ## Set a minimum filter length
 
-You can set the minimum number of characters required to trigger filtering through the [`minLength`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#minlength) property of the AutoComplete. The default value is `1`. For remote data binding with `DataManager`, see [Binding remote data](./data-binding#binding-remote-data).
+You can set the minimum number of characters required to trigger filtering through the [`minLength`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#minlength) property of the React AutoComplete. The default value is `1`. For remote data binding with `DataManager`, see [Binding remote data](./data-binding#binding-remote-data).
 
 In the following example, the remote request does not fetch the search data until the search key contains three characters.
 
@@ -158,7 +158,7 @@ In the following example, the remote request does not fetch the search data unti
 
 ## Case-sensitive filtering
 
-Data items can be filtered either with or without case sensitivity. This can be done by setting the [`ignoreCase`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#ignorecase) property of the AutoComplete. The case-sensitivity behavior depends on the underlying data source.
+Data items can be filtered either with or without case sensitivity. This can be done by setting the [`ignoreCase`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#ignorecase) property of the React AutoComplete. The case-sensitivity behavior depends on the underlying data source.
 
 The following sample depicts how to filter the data with case-sensitive mode.
 
@@ -190,9 +190,9 @@ The following sample depicts how to filter the data with case-sensitive mode.
 
 ## Diacritics filtering
 
-The AutoComplete supports diacritics filtering, which ignores the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international character lists when the [`ignoreAccent`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#ignoreaccent) property is enabled. The default value of `ignoreAccent` is `false`.
+The React AutoComplete supports diacritics filtering, which ignores the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international character lists when the [`ignoreAccent`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#ignoreaccent) property is enabled. The default value of `ignoreAccent` is `false`.
 
-In the following sample, data with diacritics are bound as the dataSource for the AutoComplete.
+In the following sample, data with diacritics are bound as the dataSource for the React AutoComplete.
 
 `[Class Component]`
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize the progress bar in React File Upload
 
-Customize the progress bar appearance—including size, color, and background—by overriding the default Uploader component styles. The following example demonstrates how to apply custom CSS to match your application theme.
+Customize the progress bar appearance—including size, color, and background—by overriding the default React File Upload component styles. The following example demonstrates how to apply custom CSS to match your application theme.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

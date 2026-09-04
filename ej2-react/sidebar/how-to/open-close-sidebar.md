@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # How to open and close Sidebar in React Sidebar
 
-Opening and closing the Sidebar can be achieved with built-in public methods.
+Opening and closing the React Sidebar can be achieved with built-in public methods.
 
 * [show()](../../api/sidebar/#show): Method to open the Sidebar.
 * [hide()](../../api/sidebar/#hide): Method to close the Sidebar.
 * [toggle()](../../api/sidebar/#toggle): Method to toggle the open/close state of the Sidebar.
 
-In the following sample, toggle method has been used to show or hide the Sidebar on button click.
+In the following sample, toggle method has been used to show or hide the React Sidebar on button click.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 A particular character in a text can be underlined in the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/menu/#beforeitemrender) event by adding `<u>` tag in between the text and assign the innerHTML to the `li` element.
 
-In the following example, the first character in `File`, `Open`, and `Save` menu items are underlined.
+In the following example, the first character in `File`, `Open`, and `Save` React menu items are underlined.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

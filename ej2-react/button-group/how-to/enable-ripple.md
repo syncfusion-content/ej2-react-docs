@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to enable ripple in React Button Group
 
-Add a ripple effect to ButtonGroup buttons by importing the `enableRipple` method from `ej2-base` and setting it to `true`. The ripple effect provides visual feedback when users interact with buttons.
+Add a ripple effect to React Button Group buttons by importing the `enableRipple` method from `ej2-base` and setting it to `true`. The ripple effect provides visual feedback when users interact with buttons.
 
-The following example demonstrates how to enable the ripple effect for a ButtonGroup:
+The following example demonstrates how to enable the ripple effect for a React Button Group:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

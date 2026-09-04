@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Events in React OTP Input
 
-This section describes the OTP Input events that will be triggered when appropriate actions are performed. The following events are available in the OTP Input component.
+This section describes the React OTP Input events that will be triggered when appropriate actions are performed. The following events are available in the React OTP Input component.
 
 ## created
 
-The OTP Input component triggers the [created](https://ej2.syncfusion.com/react/documentation/api/otp-input/#created) event when the component rendering is completed.
+The React OTP Input component triggers the [created](https://ej2.syncfusion.com/react/documentation/api/otp-input/#created) event when the component rendering is completed.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The OTP Input component triggers the [created](https://ej2.syncfusion.com/react/
 
 ## focus
 
-The OTP Input component triggers the [focus](https://ej2.syncfusion.com/react/documentation/api/otp-input/#focus) event when the OTP Input is focused. The [OtpFocusEventArgs](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpFocusEventArgs/) passed as an event argument provides details of the focus event.
+The React OTP Input component triggers the [focus](https://ej2.syncfusion.com/react/documentation/api/otp-input/#focus) event when the React OTP Input is focused. The [OtpFocusEventArgs](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpFocusEventArgs/) passed as an event argument provides details of the focus event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -40,7 +40,7 @@ The OTP Input component triggers the [focus](https://ej2.syncfusion.com/react/do
 
 ## blur
 
-The OTP Input component triggers the [blur](https://ej2.syncfusion.com/react/documentation/api/otp-input/#blur) event when the OTP Input loses focus. The [OtpFocusEventArgs](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpFocusEventArgs/) passed as an event argument provides details of the blur event.
+The React OTP Input component triggers the [blur](https://ej2.syncfusion.com/react/documentation/api/otp-input/#blur) event when the React OTP Input loses focus. The [OtpFocusEventArgs](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpFocusEventArgs/) passed as an event argument provides details of the blur event.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -53,7 +53,7 @@ The OTP Input component triggers the [blur](https://ej2.syncfusion.com/react/doc
 
 ## input
 
-The OTP Input component triggers the [input](https://ej2.syncfusion.com/react/documentation/api/otp-input/#input) event when the value of each OTP field changes. The [OtpInputEventArgs](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputEventArgs/) passed as an event argument provides details of the value change.
+The React OTP Input component triggers the [input](https://ej2.syncfusion.com/react/documentation/api/otp-input/#input) event when the value of each OTP field changes. The [OtpInputEventArgs](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpInputEventArgs/) passed as an event argument provides details of the value change.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -66,7 +66,7 @@ The OTP Input component triggers the [input](https://ej2.syncfusion.com/react/do
 
 ## valueChanged
 
-The OTP Input component triggers the [valueChanged](https://ej2.syncfusion.com/react/documentation/api/otp-input/#valuechanged) event when the OTP value is complete and matches the OTP length. The [OtpChangedEventArgs](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpChangedEventArgs/) passed as an event argument provides details when the value changes.
+The React OTP Input component triggers the [valueChanged](https://ej2.syncfusion.com/react/documentation/api/otp-input/#valuechanged) event when the OTP value is complete and matches the OTP length. The [OtpChangedEventArgs](https://ej2.syncfusion.com/react/documentation/api/otp-input/otpChangedEventArgs/) passed as an event argument provides details when the value changes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -77,7 +77,7 @@ The OTP Input component triggers the [valueChanged](https://ej2.syncfusion.com/r
 {% endhighlight %}
 {% endtabs %}
 
-Below example demonstrates the valueChanged event of the OTP Input control.
+Below example demonstrates the valueChanged event of the React OTP Input control.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style and appearance in React Progress Button
 
-To modify the ProgressButton appearance, you need to override the default CSS of ProgressButton component. Please find the list of CSS classes and its corresponding section in ProgressButton. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
+To modify the React Progress Button appearance, you need to override the default CSS of React Progress Button component. Please find the list of CSS classes and its corresponding section in React Progress Button. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 
 CSS Class | Purpose of Class
 -----|-----
-|.e-progress-btn|Container for the ProgressButton component
+|.e-progress-btn|Container for the React Progress Button component
 |.e-progress-btn.e-primary|Applies primary styling to the progress button
 |.e-progress-btn.e-success|Applies success styling to the progress button
 |.e-progress-btn.e-info|Applies info styling to the progress button
@@ -32,4 +32,4 @@ CSS Class | Purpose of Class
 
 ## See also
 
-* [How to showcase ProgressButton as a progress bar](https://www.syncfusion.com/forums/140307)
+* [How to showcase React Progress Button as a progress bar](https://www.syncfusion.com/forums/140307)

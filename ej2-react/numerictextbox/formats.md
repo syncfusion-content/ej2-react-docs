@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Formats in React NumericTextBox | Syncfusion
-description: Format React NumericTextBox values with standard and custom numeric format strings for currency, percentage, and decimal display.
+title: Formats in React Numeric TextBox | Syncfusion
+description: Format React Numeric TextBox values with standard and custom numeric format strings for currency, percentage, and decimal display.
 control: Formats 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Formats in React NumericTextBox
+# Formats in React Numeric TextBox
 
-Format the display of numeric values in the NumericTextBox using the [`format`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#format) property. When the component loses focus, the value appears in the specified format. The NumericTextBox supports both [standard numeric format strings](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-numbers) (for common scenarios like currency and percentages) and [custom numeric format strings](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-number-formatting-and-parsing) (for specialized formatting needs).
+Format the display of numeric values in the React Numeric TextBox using the [`format`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox#format) property. When the component loses focus, the value appears in the specified format. The React Numeric TextBox supports both [standard numeric format strings](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-numbers) (for common scenarios like currency and percentages) and [custom numeric format strings](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#custom-number-formatting-and-parsing) (for specialized formatting needs).
 
 ## Standard formats
 
-From the [standard numeric formats](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-numbers), you can use the numeric related format specifiers such as `n`,`p` and `c` in the NumericTextBox component. By using these format specifiers, you can achieve the percentage and currency textbox behavior also.
+From the [standard numeric formats](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#manipulating-numbers), you can use the numeric related format specifiers such as `n`,`p` and `c` in the React Numeric TextBox component. By using these format specifiers, you can achieve the percentage and currency textbox behavior also.
 
 The below example demonstrates percentage and currency formats.
 

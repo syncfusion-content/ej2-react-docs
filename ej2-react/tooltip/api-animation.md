@@ -14,8 +14,8 @@ domainurl: ##DomainURL##
 
 ### close [`TooltipAnimationSettings`](https://ej2.syncfusion.com/react/documentation/api-tooltipAnimationSettings.html)
 
-Animation settings to be applied on the Tooltip, when it is closed.
+Animation settings to be applied on the React Tooltip, when it is closed.
 
 ### open [`TooltipAnimationSettings`](https://ej2.syncfusion.com/react/documentation/api-tooltipAnimationSettings.html)
 
-Animation settings to be applied on the Tooltip, while it is being shown over the target.
+Animation settings to be applied on the React Tooltip, while it is being shown over the target.

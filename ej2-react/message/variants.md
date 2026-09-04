@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Variants in React Message
 
-Message variants define the visual presentation and styling approach for messages. The Message component supports three predefined variants that offer different design aesthetics. Configure the variant using the [variant](https://ej2.syncfusion.com/react/documentation/api/message#variant) property.
+React Message variants define the visual presentation and styling approach for React Messages. The React Message component supports three predefined variants that offer different design aesthetics. Configure the variant using the [variant](https://ej2.syncfusion.com/react/documentation/api/message#variant) property.
 
-The Message component provides three style variants:
+The React Message component provides three style variants:
 
-* **Text** (default) - Applies subtle styling with a light background and colored text. This variant works well for non-intrusive messages or when space is limited.
+* **Text** (default) - Applies subtle styling with a light background and colored text. This variant works well for non-intrusive React Messages or when space is limited.
 * **Outlined** - Uses a colored border with matching text on a transparent background. This variant provides clear visual distinction without a filled background, ideal for balanced emphasis.
-* **Filled** - Applies bold styling with a dark background and contrasting text. This variant commands attention and is suitable for critical messages or high-priority content.
+* **Filled** - Applies bold styling with a dark background and contrasting text. This variant commands attention and is suitable for critical React Messages or high-priority content.
 
 The following example demonstrates all available variant types and their visual styling.
 

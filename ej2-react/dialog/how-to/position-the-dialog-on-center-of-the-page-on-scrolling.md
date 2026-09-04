@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Center the dialog on page scroll in React Dialog
 
-By default, the Dialog scrolls along with the page or container. To keep the Dialog fixed in the center of the viewport while the page scrolls, apply the `e-fixed` class to the Dialog element. This prevents the Dialog from moving when the user scrolls the page, maintaining its centered position in the viewport.
+By default, the React Dialog scrolls along with the page or container. To keep the React Dialog fixed in the center of the viewport while the page scrolls, apply the `e-fixed` class to the React Dialog element. This prevents the React Dialog from moving when the user scrolls the page, maintaining its centered position in the viewport.
 
-`e-fixed` is a built-in CSS class provided by the Dialog component. It can be applied via the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/dialog#cssclass) property, either at render time or dynamically (for example, in a button click handler or the `open` event). In the following sample, the `e-fixed` class is applied to the Dialog when the "Prevent Dialog Scroll" button is clicked.
+`e-fixed` is a built-in CSS class provided by the React Dialog component. It can be applied via the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/dialog#cssclass) property, either at render time or dynamically (for example, in a button click handler or the `open` event). In the following sample, the `e-fixed` class is applied to the React Dialog when the "Prevent React Dialog Scroll" button is clicked.
 
 `[Class-component]`
 

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the appearance of DatePicker wrapper element
+## Customizing the appearance of React DatePicker wrapper element
 
 Use the following CSS selectors to customize the appearance of the wrapper element. Apply these styles with appropriate specificity to override default component styles.
 
@@ -24,9 +24,9 @@ Use the following CSS selectors to customize the appearance of the wrapper eleme
 }
 ```
 
-## Customizing the DatePicker icon element
+## Customizing the React DatePicker icon element
 
-Use the following CSS to customize the DatePicker icon appearance:
+Use the following CSS to customize the React DatePicker icon appearance:
 
 ```css
 /* To specify background color and font size */
@@ -36,7 +36,7 @@ Use the following CSS to customize the DatePicker icon appearance:
 }
 ```
 
-## Customizing the Calendar popup of the DatePicker
+## Customizing the Calendar popup of the React DatePicker
 
 Please check the below section, to customize the style and appearance of the Calendar component.
 
@@ -44,7 +44,7 @@ Please check the below section, to customize the style and appearance of the Cal
 
 ## Full screen mode support in mobiles and tablets
 
-The DatePicker's full-screen mode feature enhances visibility and usability on mobile and tablet devices by expanding the calendar popup to occupy the full screen in both landscape and portrait orientations. To enable full-screen mode, set the [fullScreenMode](https://ej2.syncfusion.com/react/documentation/api/datepicker/#fullScreenMode) property to `true`. The calendar will then automatically expand to full-screen on mobile devices, providing a more immersive date selection experience.
+The React DatePicker's full-screen mode feature enhances visibility and usability on mobile and tablet devices by expanding the calendar popup to occupy the full screen in both landscape and portrait orientations. To enable full-screen mode, set the [fullScreenMode](https://ej2.syncfusion.com/react/documentation/api/datepicker/index-default#fullScreenMode) property to `true`. The calendar will then automatically expand to full-screen on mobile devices, providing a more immersive date selection experience.
 
 ```typescript
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';

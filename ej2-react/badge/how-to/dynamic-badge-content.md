@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to add dynamic Badge content in React Badge
+# How to add dynamic React Badge content in React Badge
 
-Many applications require badges to reflect real-time data changes—such as notification counts, status indicators, or activity counters. This guide demonstrates how to update Badge content dynamically using React state management. The following example uses React hooks to maintain state and update the Badge value when user actions occur, such as clicking an increment button. This pattern is fundamental for building interactive, responsive UI components.
+Many applications require badges to reflect real-time data changes—such as notification counts, status indicators, or activity counters. This guide demonstrates how to update React Badge content dynamically using React state management. The following example uses React hooks to maintain state and update the React Badge value when user actions occur, such as clicking an increment button. This pattern is fundamental for building interactive, responsive UI components.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

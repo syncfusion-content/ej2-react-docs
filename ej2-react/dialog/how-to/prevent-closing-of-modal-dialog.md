@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 You can prevent a modal dialog from closing by setting the `args.cancel` property of the [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/dialog#beforeclose) event to `true`. The [`beforeClose`](https://ej2.syncfusion.com/react/documentation/api/dialog#beforeclose) event receives an `args` object whose `cancel` property can be set to `true` to abort the close action. Related properties such as [`closeOnEscape`](https://ej2.syncfusion.com/react/documentation/api/dialog#closeonescape) and [`showCloseIcon`](https://ej2.syncfusion.com/react/documentation/api/dialog#showcloseicon) should also be set to `false` to prevent the user from closing the dialog via the Esc key or the close icon.
 
-In the following sample, the dialog closes only when both validation rules pass: the username must be at least 4 characters long AND the password must be non-empty. Otherwise, the dialog cannot be closed.
+In the following sample, the React Dialog closes only when both validation rules pass: the username must be at least 4 characters long AND the password must be non-empty. Otherwise, the React Dialog cannot be closed.
 
 > The sample uses custom CSS classes (`login-form`, `wrap`, `e-float-input`, `e-float-line`, `e-float-text`) for the login form layout. Ensure the supporting CSS (for example, a `login-form` stylesheet) is loaded in your application for the sample to render correctly.
 

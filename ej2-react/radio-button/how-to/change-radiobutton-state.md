@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to change state in React Radio Button
 
-The RadioButton component has two visual states that indicate its selection status:
-* **Checked** - An inner circle appears inside the RadioButton, indicating it is selected
-* **Unchecked** - The RadioButton appears empty, indicating it is not selected
+The React Radio Button component has two visual states that indicate its selection status:
+* **Checked** - An inner circle appears inside the React Radio Button, indicating it is selected
+* **Unchecked** - The React Radio Button appears empty, indicating it is not selected
 
-Use the [`checked`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#checked) property to programmatically control the RadioButton's selection state. When `checked` is set to `true`, the inner circle visual indicator is displayed to users.
+Use the [`checked`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#checked) property to programmatically control the React Radio Button's selection state. When `checked` is set to `true`, the inner circle visual indicator is displayed to users.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

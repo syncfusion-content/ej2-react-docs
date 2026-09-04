@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the Dropdown List component are imported in the **src/App.css** file:
+The required styles for the React Dropdown List component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -98,9 +98,9 @@ The required styles for the Dropdown List component are imported in the **src/Ap
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the Dropdown List component
+## Add the React Dropdown List component
 
-Now, you can add the React Dropdown List component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the Dropdown List with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
+Now, you can add the React React Dropdown List component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the React Dropdown List with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -112,7 +112,7 @@ function App() {
     // define the array of data
     const sportsData = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
     return (
-        // specifies the tag for rendering the Dropdown List component
+        // specifies the tag for rendering the React Dropdown List component
         <DropDownListComponent id="ddlelement" dataSource={sportsData} placeholder="Select a game" />
     );
 }
@@ -142,7 +142,7 @@ The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs26" %}
 
-> Refer to the [React Dropdown List](https://www.syncfusion.com/react-components/react-dropdown-list) feature tour page for its groundbreaking feature representations. You can also explore our [React Dropdown List component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/drop-down-list/default) that shows how to render the Dropdown List in React.
+> Refer to the [React Dropdown List](https://www.syncfusion.com/react-components/react-dropdown-list) feature tour page for its groundbreaking feature representations. You can also explore our [React Dropdown List component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/drop-down-list/default) that shows how to render the React Dropdown List.
 
 ## See Also
 
