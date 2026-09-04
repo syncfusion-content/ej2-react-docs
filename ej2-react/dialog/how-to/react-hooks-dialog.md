@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 > React hooks require React 16.8 or later and can only be used in functional components.
 
-The Dialog can be shown and hidden by using the React [`useState`](https://react.dev/reference/react/useState) hook with the [`visible`](https://ej2.syncfusion.com/react/documentation/api/dialog#visible) property. When the Dialog is closed (via the close icon or Esc key), the [`close`](https://ej2.syncfusion.com/react/documentation/api/dialog#close) event should update the state to keep `visible` in sync — otherwise the state and the Dialog's actual visibility can diverge.
+The React Dialog can be shown and hidden by using the React [`useState`](https://react.dev/reference/react/useState) hook with the [`visible`](https://ej2.syncfusion.com/react/documentation/api/dialog#visible) property. When the React Dialog is closed (via the close icon or Esc key), the [`close`](https://ej2.syncfusion.com/react/documentation/api/dialog#close) event should update the state to keep `visible` in sync — otherwise the state and the React Dialog's actual visibility can diverge.
 
-The following example renders a React component as the content of the Dialog.
+The following example renders a React component as the content of the React Dialog.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

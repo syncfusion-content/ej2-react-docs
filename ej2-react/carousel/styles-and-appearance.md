@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Styles and Appearance in React Carousel
 
-To modify the Carousel appearance, you need to override the default CSS of Carousel component. Please find the list of CSS classes and its corresponding section in Carousel component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
+To modify the React Carousel appearance, you need to override the default CSS of React Carousel component. Please find the list of CSS classes and its corresponding section in React Carousel component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 
-## CSS Structure in Carousel Control
+## CSS Structure in React Carousel Control
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
-| `.e-carousel .e-carousel-item` | To customize the carousel item |
-| `.e-carousel-item.e-active` | To customize the active carousel item |
+| `.e-carousel .e-carousel-item` | To customize the React Carousel item |
+| `.e-carousel-item.e-active` | To customize the active React Carousel item |
 | `.e-carousel .e-carousel-indicators` | To customize the indicators |
 | `.e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar` | To customize the indicator bars |
 | `.e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar .e-indicator` | To customize the individual indicator appearance |
@@ -29,7 +29,7 @@ The following content provides the exact CSS structure that can be used to modif
 | `.e-carousel .e-carousel-navigators .e-play-pause` | To customize the play and pause button |
 | `.e-carousel.e-partial .e-carousel-slide-container` | To customize the partial visible slides |
 
-![Carousel](./images/carousel.jpg)
+![React Carousel](./images/carousel.jpg)
 
 ## Customizing the indicators
 
@@ -43,7 +43,7 @@ Use the following CSS to customize the space between indicators by overriding th
 
 ```
 
-![Carousel](./images/indicators.jpg)
+![React Carousel](./images/indicators.jpg)
 
 Use the following CSS to customize the indicators appearance by overriding the `.e-indicator` CSS class.
 
@@ -56,9 +56,9 @@ Use the following CSS to customize the indicators appearance by overriding the `
 
 ```
 
-![Carousel](./images/indicator-size.jpg)
+![React Carousel](./images/indicator-size.jpg)
 
-Use the following CSS to render the indicators outside the carousel items by overriding the `.e-carousel-indicators` CSS class.
+Use the following CSS to render the indicators outside the React Carousel items by overriding the `.e-carousel-indicators` CSS class.
 
 ```css
 
@@ -68,7 +68,7 @@ Use the following CSS to render the indicators outside the carousel items by ove
 
 ```
 
-![Carousel](./images/indicators-outside.jpg)
+![React Carousel](./images/indicators-outside.jpg)
 
 ## Customizing the navigators
 
@@ -85,7 +85,7 @@ Use the following CSS to customize the previous and next icon size and colors.
 
 ```
 
-![Carousel](./images/navigators-size-color.jpg)
+![React Carousel](./images/navigators-size-color.jpg)
 
 Use the following CSS to customize the navigators position to bottom by overriding the `.e-carousel-navigators` CSS class.
 
@@ -97,7 +97,7 @@ Use the following CSS to customize the navigators position to bottom by overridi
 
 ```
 
-![Carousel](./images/navigators-position.jpg)
+![React Carousel](./images/navigators-position.jpg)
 
 Use the following CSS to render the previous and next icon to outside the carousel items by overriding the `.e-previous` and `.e-next` CSS class.
 
@@ -112,7 +112,7 @@ Use the following CSS to render the previous and next icon to outside the carous
 
 ```
 
-![Carousel](./images/previous-next.jpg)
+![React Carousel](./images/previous-next.jpg)
 
 ## Customizing partial slides size
 
@@ -126,4 +126,4 @@ You can customize the partial slide size by overriding the `.e-carousel-slide-co
 
 ```
 
-![Carousel](./images/partial-slide-size.jpg)
+![React Carousel](./images/partial-slide-size.jpg)

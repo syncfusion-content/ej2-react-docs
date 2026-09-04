@@ -95,7 +95,7 @@ The required styles for the Predefined Dialog component are imported in the **sr
  
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding Predefined Dialogs component
+## Adding React Predefined Dialogs component
 
 Now, you can add the React AutoComplete component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
  
@@ -147,4 +147,4 @@ The output appears as follows.
 
 {% previewsample "page.domainurl/code-snippet/predefined-dialogs/getting-started-cs2" %}
 
-> You can also explore our [React Predefined Dialogs component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/predefined-dialogs/default) that shows how to render the Predefined Dialogs in React.
+> You can also explore our [React Predefined Dialogs component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/predefined-dialogs/default) that shows how to render the Predefined Dialogs.

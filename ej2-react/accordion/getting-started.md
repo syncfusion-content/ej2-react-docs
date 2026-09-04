@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Accordion
 
-This section briefly explains the steps required to create a simple [React Accordion](https://www.syncfusion.com/react-components/react-accordion) and demonstrates the basic usage of the Accordion control.
+This section briefly explains the steps required to create a simple [React Accordion](https://www.syncfusion.com/react-components/react-accordion) and demonstrates the basic usage of the React Accordion control.
 
 ## Prerequisites
 
@@ -80,7 +80,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the Accordion component are imported in the **src/App.css** file:
+The required styles for the React Accordion component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -92,7 +92,7 @@ The required styles for the Accordion component are imported in the **src/App.cs
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the Accordion component
+## Add the React Accordion component
 
 Now, you can add the React Accordion component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
 
@@ -153,6 +153,6 @@ The output will appear as follows:
 
 ## See Also
 
-* [How to load accordion items dynamically](./how-to/load-accordion-items-dynamically)
+* [How to load React Accordion items dynamically](./how-to/load-accordion-items-dynamically)
 
 N> Explore the [React Accordion example](https://ej2.syncfusion.com/react/demos/#/tailwind3/accordion/default) for a demonstration of configuring the Accordion in React.

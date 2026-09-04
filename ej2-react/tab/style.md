@@ -12,18 +12,18 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on user preference.
 
-The Tab component renders the following CSS class hierarchy. Use these selectors to override or extend the default appearance:
+The React Tab component renders the following CSS class hierarchy. Use these selectors to override or extend the default appearance:
 
-* `.e-tab` — Root container of the Tab component.
-* `.e-tab .e-tab-header` — Outer wrapper of the Tab header section.
+* `.e-tab` — Root container of the React Tab component.
+* `.e-tab .e-tab-header` — Outer wrapper of the React Tab header section.
 * `.e-tab .e-tab-header .e-toolbar-items` — Container of all header items.
 * `.e-tab .e-tab-header .e-toolbar-item` — Individual header item; the active item additionally has the `.e-active` class.
-* `.e-tab .e-content` — Container of the Tab content panels.
+* `.e-tab .e-content` — Container of the React Tab content panels.
 * `.e-tab .e-content .e-item` — Individual content panel.
 
-## Customizing Tab
+## Customizing React Tab
 
-Use the following CSS to customize the Tab.
+Use the following CSS to customize the React Tab.
 
 ```css
 
@@ -33,9 +33,9 @@ Use the following CSS to customize the Tab.
 
 ```
 
-## Customizing the Tab items
+## Customizing the React Tab items
 
-Use the following CSS to customize the header items of Tab.
+Use the following CSS to customize the header items of React Tab.
 
 ```css
 
@@ -46,7 +46,7 @@ Use the following CSS to customize the header items of Tab.
 
 ```
 
-Use the following CSS to customize the content items of Tab.
+Use the following CSS to customize the content items of React Tab.
 
 ```css
 
@@ -57,9 +57,9 @@ Use the following CSS to customize the content items of Tab.
 
 ```
 
-## Customizing Tab's header
+## Customizing React Tab's header
 
-Use the following CSS to customize the header of Tab control.
+Use the following CSS to customize the header of React Tab control.
 
 ```css
 
@@ -69,9 +69,9 @@ Use the following CSS to customize the header of Tab control.
 
 ```
 
-## Customizing Tab's header icon
+## Customizing React Tab's header icon
 
-Use the following CSS to customize the header item icon of Tab control.
+Use the following CSS to customize the header item icon of React Tab control.
 
 ```css
 
@@ -81,9 +81,9 @@ Use the following CSS to customize the header item icon of Tab control.
 
 ```
 
-## Customizing Tab's content
+## Customizing React Tab's content
 
-Use the following CSS to customize the content of Tab control.
+Use the following CSS to customize the content of React Tab control.
 
 ```css
 
@@ -93,7 +93,7 @@ Use the following CSS to customize the content of Tab control.
 
 ```
 
-## Customizing the hover state of Tab control
+## Customizing the hover state of React Tab control
 
 Use the following CSS to customize the tab item when hovering.
 
@@ -105,7 +105,7 @@ Use the following CSS to customize the tab item when hovering.
 
 ```
 
-Use the following CSS to customize the tab item popup icon when hovering.
+Use the following CSS to customize the React tab item popup icon when hovering.
 
 ```css
 
@@ -116,9 +116,9 @@ Use the following CSS to customize the tab item popup icon when hovering.
 
 ```
 
-## Customizing selected item of Tab control
+## Customizing selected item of React Tab control
 
-Use the following CSS to customize the selected tab item.
+Use the following CSS to customize the selected React tab item.
 
 ```css
 
@@ -128,7 +128,7 @@ Use the following CSS to customize the selected tab item.
 
 ```
 
-Use the following CSS to customize the selected tab item text and icon.
+Use the following CSS to customize the selected React tab item text and icon.
 
 ```css
 

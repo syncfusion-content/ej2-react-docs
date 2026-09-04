@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in React DateTime Picker
 
-The DateTimePicker component offers extensive UI customization through properties and events that enable flexible design adaptation to specific application needs.
+The React DateTime Picker component offers extensive UI customization through properties and events that enable flexible design adaptation to specific application needs.
 
 ## Day and Time Cell Format
 

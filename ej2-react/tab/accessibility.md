@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Tab
 
-The Tab component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Tab component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Tab component is outlined below.
+The accessibility compliance for the React Tab component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,43 +42,43 @@ The accessibility compliance for the Tab component is outlined below.
 
 ## ARIA attributes
 
-Tab component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) standard. Tab is supported with ARIA Accessibility which is accessible by on-screen readers, and other assistive technology devices. The following list of attributes are added in the Tab.
+React Tab component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) standard. React Tab is supported with ARIA Accessibility which is accessible by on-screen readers, and other assistive technology devices. The following list of attributes are added in the React Tab.
 
 | **Roles and Attributes** | **Functionalities** |
 | --- | --- |
-| tablist | Attribute is set to the Tab header element that describes actual role of the element.|
-| tab | Attribute is set to the Tab items element to  indicates an interactive element inside a `tablist` that, when activated, displays its associated `tabpanel`.|
-| tabpanel | Attribute is set to the Tab content that describes the role for viewing the active content.|
-| aria-orientation    | Attribute is set to the Tab header element indicates the Tab header orientation. Default value of this attribute is horizontal. |
-| aria-selected       | Attribute set to the Tab items to indicates the selection state for Tab items. Active Tab is set to true for this attribute. |
-| aria-labelledby       | Attribute is set to the Tab content element to indicates the associated Tab header for the content. |
-| aria-controls       | Attribute is set to the Tab items element to indicates the associated `tabpanel` for the header. |
-| aria-haspopup       | Attribute is set to the Popup element  to indicates the popup mode in the Tab. The default value of this attribute is false. If popup mode is enabled, the attribute value is set to true. |
-| aria-disabled       | Attribute set to the Tab items to indicate the disabled state of the Tab. |
+| tablist | Attribute is set to the React Tab header element that describes actual role of the element.|
+| tab | Attribute is set to the React Tab items element to  indicates an interactive element inside a `tablist` that, when activated, displays its associated `tabpanel`.|
+| tabpanel | Attribute is set to the React Tab content that describes the role for viewing the active content.|
+| aria-orientation    | Attribute is set to the React Tab header element indicates the React Tab header orientation. Default value of this attribute is horizontal. |
+| aria-selected       | Attribute set to the React Tab items to indicates the selection state for Tab items. Active Tab is set to true for this attribute. |
+| aria-labelledby       | Attribute is set to the React Tab content element to indicates the associated Tab header for the content. |
+| aria-controls       | Attribute is set to the React Tab items element to indicates the associated `tabpanel` for the header. |
+| aria-haspopup       | Attribute is set to the Popup element  to indicates the popup mode in the React Tab. The default value of this attribute is false. If popup mode is enabled, the attribute value is set to true. |
+| aria-disabled       | Attribute set to the React Tab items to indicate the disabled state of the React Tab. |
 
 ## Keyboard interaction
 
-By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the WAI-ARIA practices. Once focused on the active Tab element, you can use the following key combination for interacting with the Tab.
+By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the WAI-ARIA practices. Once focused on the active React Tab element, you can use the following key combination for interacting with the React Tab.
 
 | Key           | Description                                                                         |
 |---------------|-------------------------------------------------------------------------------------|
-| <kbd>Left</kbd>    | Moves focus to the previous Tab. |
-| <kbd>Right</kbd>   | Moves focus to the next Tab. |
-| <kbd>Enter</kbd> or <kbd> Space</kbd>  | Selects the Tab if it is not selected. Opens the popup dropdown icon if it is focused. Select the Tab item as active when popup item is focused. |
+| <kbd>Left</kbd>    | Moves focus to the previous React Tab. |
+| <kbd>Right</kbd>   | Moves focus to the next React Tab. |
+| <kbd>Enter</kbd> or <kbd> Space</kbd>  | Selects the React Tab if it is not selected. Opens the popup dropdown icon if it is focused. Select the React Tab item as active when popup item is focused. |
 | <kbd>Esc(Escape)</kbd>           | Closes the popup if popup is in opened state.       |
-| <kbd>Down</kbd> or <kbd>Up</kbd>   | When the popup is open and focused, it will move to previous/next Tab items of the popup in the vertical direction.|
-|  <kbd>Home</kbd>    | Moves focus to the first Tab. |
-|  <kbd>End </kbd>   | Moves focus to the last Tab. |
-|  <kbd>Shift + F10 </kbd>   | If popup mode is enabled, it opens the popup when the Tab is focused. |
-|  <kbd>Delete</kbd>    | Deletes the Tab, if close button is enabled in Tab header.|
+| <kbd>Down</kbd> or <kbd>Up</kbd>   | When the popup is open and focused, it will move to previous/next React Tab items of the popup in the vertical direction.|
+|  <kbd>Home</kbd>    | Moves focus to the first React Tab. |
+|  <kbd>End </kbd>   | Moves focus to the last React Tab. |
+|  <kbd>Shift + F10 </kbd>   | If popup mode is enabled, it opens the popup when the React Tab is focused. |
+|  <kbd>Delete</kbd>    | Deletes the React Tab, if close button is enabled in React Tab header.|
 | <kbd>Tab</kbd>     | To Move focus through the interactive elements.                 |
 | <kbd>Shift + Tab</kbd> | To Move focus through the interactive elements.             |
 
 ## Ensuring accessibility
 
-The Tab component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Tab component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Tab component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/tab.html) in a new window to evaluate the accessibility of the Tab component with accessibility tools.
+The accessibility compliance of the React Tab component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/tab.html) in a new window to evaluate the accessibility of the React Tab component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/tab.html" %}
 

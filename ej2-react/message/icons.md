@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Icons in React Message
 
-The Message component supports configurable icon display options, including severity icons (which visually communicate message type) and close icons (which enable message dismissal). This guide covers disabling severity icons, customizing icon appearance, and managing close icon visibility.
+The React Message component supports configurable icon display options, including severity icons (which visually communicate React Message type) and close icons (which enable React Message dismissal). This guide covers disabling severity icons, customizing icon appearance, and managing close icon visibility.
 
 ## Severity icons
 
-By default, the Message component displays severity icons that correspond to the message severity type, enhancing visual communication beyond text alone. To hide these severity icons, set the [showIcon](https://ej2.syncfusion.com/react/documentation/api/message#showicon) property to `false`.
+By default, the React Message component displays severity icons that correspond to the React Message severity type, enhancing visual communication beyond text alone. To hide these severity icons, set the [showIcon](https://ej2.syncfusion.com/react/documentation/api/message#showicon) property to `false`.
 
-The following example shows messages with severity icons disabled using the `showIcon` property.
+The following example shows React Messages with severity icons disabled using the `showIcon` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -54,9 +54,9 @@ The following example shows how to apply custom severity icons using CSS styling
 
 ## Close icon
 
-The Message component can display a close icon that allows users to dismiss the message via mouse click or keyboard interaction. By default, the close icon is not displayed. To enable the close icon, set the [showCloseIcon](https://ej2.syncfusion.com/react/documentation/api/message#showcloseicon) property to `true`.
+The React Message component can display a close icon that allows users to dismiss the React Message via mouse click or keyboard interaction. By default, the close icon is not displayed. To enable the close icon, set the [showCloseIcon](https://ej2.syncfusion.com/react/documentation/api/message#showcloseicon) property to `true`.
 
-The following example demonstrates messages rendered with the close icon enabled.
+The following example demonstrates React Messages rendered with the close icon enabled.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

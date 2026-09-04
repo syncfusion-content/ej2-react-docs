@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Index in React TreeView component
 
-The **TreeView** component is used to represent hierarchical data in a tree like structure with advanced functions to edit, drag and drop, select with CheckBox and more. TreeView can be populated from a data source such as an array of JavaScript objects or from DataManager.
+The **TreeView** component is used to represent hierarchical data in a tree like structure with advanced functions to edit, drag and drop, select with CheckBox and more. Tree View can be populated from a data source such as an array of JavaScript objects or from DataManager.
 
 ## Key features
 
@@ -24,9 +24,9 @@ The **TreeView** component is used to represent hierarchical data in a tree like
 
 * **[Node Editing](https://ej2.syncfusion.com/react/documentation/treeview/node-editing)**: Allows you to change the text of a node in TreeView.
 
-* **[Sorting](https://ej2.syncfusion.com/react/documentation/treeview/sorting)**: Allows display of the TreeView nodes in an `ascending`
+* **[Sorting](https://ej2.syncfusion.com/react/documentation/treeview/sorting)**: Allows display of the Tree View nodes in an `ascending`
 or a `descending` order.
 
-* **[Template](https://ej2.syncfusion.com/react/documentation/treeview/template)**: Allows you to customize the nodes in TreeView.
+* **[Template](https://ej2.syncfusion.com/react/documentation/treeview/template)**: Allows you to customize the nodes in Tree View.
 
-* **[Accessibility](https://ej2.syncfusion.com/react/documentation/treeview/accessibility)**: Provides built-in accessibility support that helps to access all the TreeView component features through the keyboard, on-screen readers, or other assistive technology devices.
+* **[Accessibility](https://ej2.syncfusion.com/react/documentation/treeview/accessibility)**: Provides built-in accessibility support that helps to access all the Tree View component features through the keyboard, on-screen readers, or other assistive technology devices.

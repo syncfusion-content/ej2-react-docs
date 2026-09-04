@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
  
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
  
-The required styles for the Badge component are imported in the **src/App.css** file:
+The required styles for the React Badge component are imported in the **src/App.css** file:
  
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,11 +94,11 @@ The required styles for the Badge component are imported in the **src/App.css** 
  
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding Badge component
+## Adding React Badge component
 
-The React Badge component can be added to the application by following these steps. To get started, add the Badge component to the **src/App.jsx** file using the following code.
+The React Badge component can be added to the application by following these steps. To get started, add the React Badge component to the **src/App.jsx** file using the following code.
 
-The following badge code should be placed in the **src/App.jsx** file.
+The following React Badge code should be placed in the **src/App.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -109,7 +109,7 @@ import './App.css';
 
 function App() {
   return (
-    <h1>Badge Component <span className="e-badge e-badge-primary">New</span></h1>
+    <h1>React Badge Component <span className="e-badge e-badge-primary">New</span></h1>
   );
 }
 export default App;
@@ -144,8 +144,8 @@ The output appears as follows.
         
 {% previewsample "page.domainurl/code-snippet/badge/getting-started-cs1" %}
 
-> Refer to the [React Badge](https://www.syncfusion.com/react-components/react-badge) feature tour page for its groundbreaking feature representations. You can also explore our [React Badge component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/badge/default) that shows how to render the Badge in React.
+> Refer to the [React Badge](https://www.syncfusion.com/react-components/react-badge) feature tour page for its groundbreaking feature representations. You can also explore our [React Badge component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/badge/default) that shows how to render the React Badge.
 
 ## See Also
 
-[Types of Badge](./types)
+[Types of React Badge](./types)

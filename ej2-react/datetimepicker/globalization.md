@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 Globalization enables components to support multiple languages and regional formats. This combines [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (parsing and formatting dates and times according to regional standards) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (translating text and applying culture-specific customizations).
 
-By default, the DateTimePicker uses `American English` culture for date format, week names, month names, time format, and meridian names. It leverages the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) package with official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data to parse and format dates and times according to the selected culture.
+By default, the React DateTime Picker uses `American English` culture for date format, week names, month names, time format, and meridian names. It leverages the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) package with official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data to parse and format dates and times according to the selected culture.
 
 ## Quick Start: Enable a Different Culture
 
-To display the DateTimePicker in a culture other than English, follow these steps:
+To display the React DateTime Picker in a culture other than English, follow these steps:
 
 * Install the `CLDR-Data` package by using the following command (installs all the CLDR JSON data). To know more about CLDR-Data refer to the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
@@ -30,7 +30,7 @@ To display the DateTimePicker in a culture other than English, follow these step
 
 * Use the [`loadCldr`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#loading-culture-data) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
 
-* DateTimePicker displays `Sunday` as the first day of week based on default culture ("en-US"). To display the DateTimePicker with loaded culture's first day of week, import the `weekdata.json` file from the `cldr-data/supplemental` folder as given in the code example.
+* React DateTime Picker displays `Sunday` as the first day of week based on default culture ("en-US"). To display the React DateTime Picker with loaded culture's first day of week, import the `weekdata.json` file from the `cldr-data/supplemental` folder as given in the code example.
 
 ```ts
 
@@ -61,7 +61,7 @@ loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, weekData);
 
 ## Localization
 
-The `Localization` library provides the ability to localize default text content of the DateTimePicker. The DateTimePicker component has static text for the **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#locale) value and translation object.
+The `Localization` library provides the ability to localize default text content of the React DateTime Picker. The React DateTime Picker component has static text for the **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#locale) value and translation object.
 
 Locale keywords |Text
 -----|-----
@@ -86,11 +86,11 @@ placeholder | Hint to describe expected value in input element.
     });
    ```
 
-> Locale texts can also be obtained from the [ej2-locale](https://github.com/syncfusion/ej2-locale) repository. The repository contains a comprehensive collection of locale-specific resources that can be used to customize the DateTimePicker component for different cultures. Refer to the [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) topic for more information on how to use locale texts from the repository.
+> Locale texts can also be obtained from the [ej2-locale](https://github.com/syncfusion/ej2-locale) repository. The repository contains a comprehensive collection of locale-specific resources that can be used to customize the React DateTime Picker component for different cultures. Refer to the [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) topic for more information on how to use locale texts from the repository.
 
-* Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#locale) property. In the following code example, the DateTimePicker is initialized in `German` culture with corresponding localized text.
+* Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#locale) property. In the following code example, the React DateTime Picker is initialized in `German` culture with corresponding localized text.
 
-The following example demonstrates the DateTimePicker in `German` culture.
+The following example demonstrates the React DateTime Picker in `German` culture.
 
 `[Class-component]`
 
@@ -120,8 +120,8 @@ The following example demonstrates the DateTimePicker in `German` culture.
 
 ## Right-To-Left
 
-The DateTimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display text in the right-to-left direction. Use the `enableRtl` property to set the RTL direction.
-The following code example initializes the DateTimePicker component in `Arabic` culture and also demonstrates how to set the localized text to the placeholder using the `load` method of the [L10n](http://ej2.syncfusion.com/documentation/api/base/l10n) class.
+The React DateTime Picker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display text in the right-to-left direction. Use the `enableRtl` property to set the RTL direction.
+The following code example initializes the React DateTime Picker component in `Arabic` culture and also demonstrates how to set the localized text to the placeholder using the `load` method of the [L10n](http://ej2.syncfusion.com/documentation/api/base/l10n) class.
 
 `[Class-component]`
 

@@ -13,4 +13,4 @@ domainurl: ##DomainURL##
 * [Animation](predefined-dialogs/animation.md)
 * [Position](predefined-dialogs/position.md)
 * [Dimension](predefined-dialogs/dimension.md)
-* [Customization of predefined dialogs](predefined-dialogs/customization.md)
+* [Customization of React Predefined Dialogs](predefined-dialogs/customization.md)

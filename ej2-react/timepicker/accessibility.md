@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React TimePicker
 
-The TimePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React TimePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the TimePicker component is outlined below.
+The accessibility compliance for the React TimePicker component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,16 +42,16 @@ The accessibility compliance for the TimePicker component is outlined below.
 
 The web accessibility makes web applications and its content more accessible to people with disabled without any barriers. Especially it tracks the dynamic value changes and DOM changes.
 
-TimePicker component has covered the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications with the following list of WAI-ARIA attributes `aria-haspopup`, `aria-selected`, `aria-disabled`, `aria-activedescendant`,
+React TimePicker component has covered the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications with the following list of WAI-ARIA attributes `aria-haspopup`, `aria-selected`, `aria-disabled`, `aria-activedescendant`,
 `aria-expanded`, `aria-owns`, and `aria-autocomplete`.
 
-Here, the `combobox` as a role for input element and `listbox` as a role for popup element in the TimePicker.
+Here, the `combobox` as a role for input element and `listbox` as a role for popup element in the React TimePicker.
 
 * **Aria-haspopup** : Indicates whether this element displays a pop-up window.
 
 * **Aria-selected** : Indicates the currently selected time value.
 
-* **Aria-disabled** : Indicates the disabled state of the TimePicker component.
+* **Aria-disabled** : Indicates the disabled state of the React TimePicker component.
 
 * **Aria-expanded** : Indicates the expanded or collapsed state of the popup.
 
@@ -59,7 +59,7 @@ Here, the `combobox` as a role for input element and `listbox` as a role for pop
 
 * **Aria-owns** : Attribute that creates a parent/child relationship between the two DOM element in accessibility layer
 
-* **Aria-activedescendent** : Attribute that helps in managing the current active child of the TimePicker component.
+* **Aria-activedescendent** : Attribute that helps in managing the current active child of the React TimePicker component.
 
 * **Role** : Attributes that gives assistive technologies information for handling each element in a widget.
 
@@ -68,9 +68,9 @@ Here, the `combobox` as a role for input element and `listbox` as a role for pop
 Keyboard accessibility is one of the most important aspects of web accessibility. It will be more useful to all the computer users, as they often allow to interact keyboard more than a mouse.
 Among people with disabilities like blind or who have motor disabilities are also can make frequent use of keyboard shortcuts.
 
-The TimePicker component has built-in keyboard accessibility support by following the [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
+The React TimePicker component has built-in keyboard accessibility support by following the [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
 
-> It supports the following list of shortcut keys to interact with the TimePicker component.
+> It supports the following list of shortcut keys to interact with the React TimePicker component.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -85,7 +85,7 @@ The TimePicker component has built-in keyboard accessibility support by followin
 | <kbd>Alt + Down Arrow</kbd> | Open the popup. |
 | <kbd>Esc</kbd> | Close the popup. |
 
-The following sample use the `alt+t` keys to focus the TimePicker component.
+The following sample use the `alt+t` keys to focus the React TimePicker component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -111,9 +111,9 @@ The following sample use the `alt+t` keys to focus the TimePicker component.
 
 ## Ensuring accessibility
 
-The TimePicker component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React TimePicker component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the TimePicker component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/time-picker.html) in a new window to evaluate the accessibility of the TimePicker component with accessibility tools.
+The accessibility compliance of the React TimePicker component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/time-picker.html) in a new window to evaluate the accessibility of the React TimePicker component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/time-picker.html" %}
 

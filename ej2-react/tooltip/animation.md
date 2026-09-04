@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Animation in React Tooltip
 
-The Tooltip can be animated using specific animation effects controlled through the [`animation`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#animation) property.
+The React Tooltip can be animated using specific animation effects controlled through the [`animation`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#animation) property.
 
 The animation property also allows you to set delay, duration, and various other effects of your choice.
 
-The [`AnimationModel`](https://ej2.syncfusion.com/react/documentation/api/tooltip/animationModel/) is derived from the base model to apply the chosen animation effect, duration, and other properties to Tooltips.
+The [`AnimationModel`](https://ej2.syncfusion.com/react/documentation/api/tooltip/animationModel/) is derived from the base model to apply the chosen animation effect, duration, and other properties to React Tooltips.
 
-By default, Tooltip entrance occurs over 150 ms using the `ease-out` timing function. It exits also at 150 ms, but uses `ease-in` timing function.
+By default, React Tooltip entrance occurs over 150 ms using the `ease-out` timing function. It exits also at 150 ms, but uses `ease-in` timing function.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,12 +35,12 @@ By default, Tooltip entrance occurs over 150 ms using the `ease-out` timing func
 
  {% previewsample "page.domainurl/code-snippet/tooltip/animation-cs1" %}
 
-The default animation effect for the Tooltip is set to `FadeIn` for its open action, and `FadeOut` for its close action.
+The default animation effect for the React Tooltip is set to `FadeIn` for its open action, and `FadeOut` for its close action.
 The default `duration` is set to 150 ms and `delay` is set to 0.
 
 ## Animation effects
 
-The following animation effects are available for Tooltips:
+The following animation effects are available for React Tooltips:
 
 * FadeIn
 * FadeOut
@@ -58,14 +58,14 @@ The following animation effects are available for Tooltips:
 * ZoomOut
 * None
 
-When the `effect` is specified as `none`, no effect will be applied to the Tooltip, and animation is considered to be set to `off`.
+When the `effect` is specified as `none`, no effect will be applied to the React Tooltip, and animation is considered to be set to `off`.
 
-> Some of the above animation effects suit the Tooltip better when its tip pointer is hidden.
+> Some of the above animation effects suit the React Tooltip better when its tip pointer is hidden.
 > This can be achieved by setting the [`showTipPointer`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#showtippointer) to false.
 
 ## Animating via open/close methods
 
-Animations can also be applied on Tooltips dynamically through [`open`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#open) and [`close`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#close) methods. These methods accept the animation model as an optional parameter. If you pass [`TooltipAnimationSettings`](https://ej2.syncfusion.com/react/documentation/api/tooltip/tooltipAnimationSettings/), the animation uses this model; otherwise, it uses the values from the [`animation`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#animation) property. It is also possible to apply different animations to Tooltips for each target element.
+Animations can also be applied on React Tooltips dynamically through [`open`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#open) and [`close`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#close) methods. These methods accept the animation model as an optional parameter. If you pass [`TooltipAnimationSettings`](https://ej2.syncfusion.com/react/documentation/api/tooltip/tooltipAnimationSettings/), the animation uses this model; otherwise, it uses the values from the [`animation`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#animation) property. It is also possible to apply different animations to React Tooltips for each target element.
 
 Refer to the code snippet below to apply animations using public methods.
 

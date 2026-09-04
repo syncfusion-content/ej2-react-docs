@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Menu
 
-The Menu component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Menu component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Menu component is outlined below.
+The accessibility compliance for the React Menu component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -34,11 +34,11 @@ The accessibility compliance for the Menu component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Menu component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Menu component:
+The React Menu component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet accessibility requirements. The following ARIA attributes are used in the Menu component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates Menu component's root menu as `menubar`, popup as `menu`, and the popup items as `menuitem`. |
+| `role` | Indicates React Menu component's root menu as `menubar`, popup as `menu`, and the popup items as `menuitem`. |
 | `aria-haspopup` | Indicates the availability and type of interactive popup element. |
 | `aria-expanded` | Indicates whether the subtree can be expanded or collapsed. |
 | `aria-orientation` | Indicates whether the orientation is horizontal or vertical. The default orientation is horizontal. |
@@ -47,7 +47,7 @@ The Menu component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patter
 
 ## Keyboard interaction
 
-The Menu component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guidelines, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Menu component.
+The React Menu component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guidelines, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Menu component.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -62,7 +62,7 @@ The Menu component follows the [keyboard interaction](https://www.w3.org/WAI/ARI
 
 ## Ensuring accessibility
 
-The Menu component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Menu component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 The accessibility compliance of the Menu component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/menu.html) in a new window to evaluate the accessibility of the Menu component with accessibility tools.
 

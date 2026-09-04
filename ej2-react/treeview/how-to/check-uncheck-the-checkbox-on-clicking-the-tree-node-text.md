@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to toggle checkbox on node text click in React
 
-You can check and uncheck the checkboxes of tree view by clicking the tree node using the [`nodeClicked`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodeclicked) event of TreeView.
+You can check and uncheck the checkboxes of React Tree View by clicking the tree node using the [`nodeClicked`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodeclicked) event of React Tree View.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to set a custom template in Toolbar
 
-The Toolbar supports adding template commands using the  `template` property. Template property can be given as the `HTML element` that is either a `string`  or a `query selector`.
+The React Toolbar supports adding template commands using the  `template` property. Template property can be given as the `HTML element` that is either a `string`  or a `query selector`.
 
 ## As string
 

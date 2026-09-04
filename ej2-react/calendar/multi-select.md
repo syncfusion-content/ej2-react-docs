@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Multi Selection in React Calendar
 
-The Calendar provides options for single or multiple date selection using the `isMultiSelection` and `values` properties. By default, `isMultiSelection` is `false`, and the Calendar enters single-selection mode where the `value` property holds the selected date.
+The React Calendar provides options for single or multiple date selection using the `isMultiSelection` and `values` properties. By default, `isMultiSelection` is `false`, and the React Calendar enters single-selection mode where the `value` property holds the selected date.
 
 | API | Type | Default | Description |
 |------|------|------|----------------------|
-| `isMultiSelection` | `Boolean` | `false` | Enables multi-selection in the Calendar. |
+| `isMultiSelection` | `Boolean` | `false` | Enables multi-selection in the React Calendar. |
 | `values` | `Date[]` | `null` | Gets or sets the collection of selected dates when multi-selection is enabled. |
 
-> When `isMultiSelection` is `false`, the `values` property is ignored and the Calendar uses the `value` property instead. The `values` collection always reflects the actual selection state.
+> When `isMultiSelection` is `false`, the `values` property is ignored and the React Calendar uses the `value` property instead. The `values` collection always reflects the actual selection state.
 
-The following example demonstrates the functionality of  `isMultiSelection` property and `values` properties in the Calendar control.
+The following example demonstrates the functionality of  `isMultiSelection` property and `values` properties in the React Calendar control.
 
 `[Class-component]`
 

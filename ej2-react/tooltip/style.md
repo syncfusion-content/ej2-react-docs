@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The following content provides the CSS structure that can be used to modify the component's appearance according to user preferences.
 
-## Customizing the tooltip
+## Customizing the React Tooltip
 
-Use the following CSS to customize the tooltip.
+Use the following CSS to customize the React Tooltip.
 
 ```css
 .e-tooltip-wrap {
@@ -23,9 +23,9 @@ Use the following CSS to customize the tooltip.
 }
 ```
 
-## Customizing the Tooltip popup
+## Customizing the React Tooltip popup
 
-Use the following CSS to customize the Tooltip popup properties.
+Use the following CSS to customize the React Tooltip popup properties.
 
 ```css
 .e-tooltip-wrap.e-popup {
@@ -34,9 +34,9 @@ Use the following CSS to customize the Tooltip popup properties.
 }
 ```
 
-## Customizing the Tooltip content
+## Customizing the React Tooltip content
 
-Use the following CSS to customize the Tooltip content.
+Use the following CSS to customize the React Tooltip content.
 
 ```css
 .e-tooltip-wrap .e-tip-content {
@@ -46,9 +46,9 @@ Use the following CSS to customize the Tooltip content.
 }
 ```
 
-## Customizing the Tooltip arrow tip
+## Customizing the React Tooltip arrow tip
 
-Use the following CSS to customize the Tooltip arrow tip.
+Use the following CSS to customize the React Tooltip arrow tip.
 
 ```css
 /* To customize the arrow tip at bottom */
@@ -84,9 +84,9 @@ Use the following CSS to customize the Tooltip arrow tip.
 }
 ```
 
-## Customizing the Tooltip inner tip
+## Customizing the React Tooltip inner tip
 
-Use the following CSS to customize the Tooltip inner tip.
+Use the following CSS to customize the React Tooltip inner tip.
 
 ```css
 .e-tooltip-wrap .e-arrow-tip-inner.e-tip-right,
@@ -98,9 +98,9 @@ Use the following CSS to customize the Tooltip inner tip.
 }
 ```
 
-## Customizing the Tooltip outer tip
+## Customizing the React Tooltip outer tip
 
-Use the following CSS to customize the Tooltip outer tip.
+Use the following CSS to customize the React Tooltip outer tip.
 
 ```css
 /* To customize the arrow tip at bottom */

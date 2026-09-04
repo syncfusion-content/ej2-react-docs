@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize progress bar theme in React Toast
 
-By default, the Toast progress bar uses theme-defined styling and dimensions. Customize progress bar appearance including color, height, and animation speed using either custom CSS classes or the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeopen) event. Event-based customization enables dynamic styling based on toast content or application state, while CSS approaches provide consistent styling across all toasts.
+By default, the React Toast progress bar uses theme-defined styling and dimensions. Customize progress bar appearance including color, height, and animation speed using either custom CSS classes or the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeopen) event. Event-based customization enables dynamic styling based on React Toast content or application state, while CSS approaches provide consistent styling across all React Toast.
 
 The following example demonstrates progress bar customization using the `beforeOpen` event:
 

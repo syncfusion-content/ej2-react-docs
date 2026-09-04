@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to play audio before Toast opens in React Toast
 
-Enhance toast notifications with audio feedback by playing sound files during toast display. Implement audio playback using the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeopen) event to trigger audio when toasts appear. To stop audio playback after toast displays, use the [`open`](https://ej2.syncfusion.com/react/documentation/api/toast#open) event or the `close` event.
+Enhance React Toast notifications with audio feedback by playing sound files during React Toast display. Implement audio playback using the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeopen) event to trigger audio when React Toast appear. To stop audio playback after React Toast displays, use the [`open`](https://ej2.syncfusion.com/react/documentation/api/toast#open) event or the `close` event.
 
 The following example demonstrates playing audio background sound when opening a toast:
 

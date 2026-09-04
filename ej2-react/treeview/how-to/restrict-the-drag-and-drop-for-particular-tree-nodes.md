@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to restrict drag and drop for tree nodes
 
-You can restrict drag and drop so that files are only allowed under folders. To prevent specific source nodes from being dragged, use the [`nodeDragStart`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragstart) event. To restrict the target drop behavior, use the [`nodeDragStop`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragstop) and [`nodeDragging`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragging) events of the TreeView.
+You can restrict drag and drop so that files are only allowed under folders. To prevent specific source nodes from being dragged, use the [`nodeDragStart`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragstart) event. To restrict the target drop behavior, use the [`nodeDragStop`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragstop) and [`nodeDragging`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragging) events of the Tree View.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

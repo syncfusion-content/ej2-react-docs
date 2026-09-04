@@ -9,10 +9,10 @@ domainurl: ##DomainURL##
 ---
 # How to add or remove items in Context Menu in React
 
-The ContextMenu component provides dynamic item management capabilities, allowing you to add or remove menu items programmatically. This functionality enables dynamic menu systems that adapt to changing application states, user permissions, or contextual requirements.
+The React Context Menu component provides dynamic item management capabilities, allowing you to add or remove menu items programmatically. This functionality enables dynamic menu systems that adapt to changing application states, user permissions, or contextual requirements.
 
 
-ContextMenu items can be dynamically modified using the [`insertAfter`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#insertafter), [`insertBefore`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#insertbefore), and [`removeItems`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#removeitems) public methods. These methods are exposed on the `ContextMenuComponent` instance and are accessed through a component `ref`.
+React Context Menu items can be dynamically modified using the [`insertAfter`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#insertafter), [`insertBefore`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#insertbefore), and [`removeItems`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#removeitems) public methods. These methods are exposed on the `ContextMenuComponent` instance and are accessed through a component `ref`.
 
 | Method | Signature | Returns | Description |
 | --- | --- | --- | --- |
@@ -26,7 +26,7 @@ ContextMenu items can be dynamically modified using the [`insertAfter`](https://
 
 Call these methods **after** the component has initialized — typically inside the `created` event handler — and access the instance through a React `ref`. Calling them before `created` raises a "no item found" error because the menu structure has not been built yet.
 
-In the following example, the **Display Settings** menu items are added before the **Personalize** item, the **Sort By** menu items are added after the **Refresh** item, and the **Paste** item is removed from the ContextMenu.
+In the following example, the **Display Settings** menu items are added before the **Personalize** item, the **Sort By** menu items are added after the **Refresh** item, and the **Paste** item is removed from the React Context Menu.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

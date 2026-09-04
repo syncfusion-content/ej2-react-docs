@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Tree View
 
-This section explains how to create a simple TreeView component and configure its core functionalities in a React application.
+This section explains how to create a simple React Tree View component and configure its core functionalities in a React application.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ cd my-project
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-To install the React TreeView component package, use the following command:
+To install the React Tree View component package, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -80,7 +80,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the TreeView component are imported in the **src/App.css** file:
+The required styles for the React Tree View component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -92,11 +92,11 @@ The required styles for the TreeView component are imported in the **src/App.css
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add TreeView component
+## Add React Tree View component
 
 Replace the existing boilerplate content in `src/App.jsx` with the following code to add the TreeView component to the application.
 
-TreeView can load data from local data sources or remote data services using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel#datasource) property, which is a member of the [`fields`](https://ej2.syncfusion.com/react/documentation/api/treeview#fields) property. The `fields` object maps your data keys to TreeView properties: `id` maps the unique identifier, `text` maps the display label, and `child` maps the nested children array. The `dataSource` property supports arrays of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started).
+React Tree View can load data from local data sources or remote data services using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel#datasource) property, which is a member of the [`fields`](https://ej2.syncfusion.com/react/documentation/api/treeview#fields) property. The `fields` object maps your data keys to React Tree View properties: `id` maps the unique identifier, `text` maps the display label, and `child` maps the nested children array. The `dataSource` property supports arrays of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -299,7 +299,7 @@ function App() {
     ];
     const fields: FieldsSettingsModel = { dataSource: hierarchicalData, id: 'id', text: 'name', child: 'subChild' };
     return (
-        // specifies the tag to render the TreeView component
+        // specifies the tag to render the React Tree View component
         <TreeViewComponent fields={fields}/>
     );
 }
@@ -324,14 +324,14 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
- > Refer to the [React TreeView](https://www.syncfusion.com/react-components/react-tree-view) feature tour page for its groundbreaking feature representations. You can also explore our [React TreeView component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/treeview/default) that shows how to render the TreeView in React.
+ > Refer to the [React Tree View](https://www.syncfusion.com/react-components/react-tree-view) feature tour page for its groundbreaking feature representations. You can also explore our [React Tree View component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/treeview/default) that shows how to render the Tree View in React.
 
 ## See Also
 
-* [How to customize TreeView as accordion](./how-to/accordion-tree)
+* [How to customize React Tree View as accordion](./how-to/accordion-tree)
 
-* [How to set tooltip for TreeView nodes](./how-to/set-tool-tip-for-tree-nodes)
+* [How to set tooltip for React Tree View nodes](./how-to/set-tool-tip-for-tree-nodes)
 
-* [How to filter nodes in TreeView](./how-to/filtering-tree-nodes)
+* [How to filter nodes in React Tree View](./how-to/filtering-tree-nodes)
 
 * [How to get all the child nodes through parentID](./how-to/get-all-child-nodes)

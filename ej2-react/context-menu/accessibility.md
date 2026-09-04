@@ -45,7 +45,7 @@ The React Context Menu component implements the [WAI-ARIA](https://www.w3.org/WA
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the Context Menu component popup as `menu`, popup items as `menuitem`, and divider items as `separator`. |
+| `role` | Indicates the React Context Menu component popup as `menu`, popup items as `menuitem`, and divider items as `separator`. |
 | `aria-haspopup` | Indicates the availability and type of interactive popup element. Rendered as `menu` on items that open a submenu (legacy user agents may report `true`). |
 | `aria-expanded` | Indicates whether the subtree can be expanded or collapsed, as well as whether its current state is expanded or collapsed. |
 | `aria-label` | Indicates the menu item text. |
@@ -54,7 +54,7 @@ The React Context Menu component implements the [WAI-ARIA](https://www.w3.org/WA
 
 ## Keyboard interaction
 
-The React Context Menu component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guidelines, making it accessible for people who use assistive technologies and those who rely completely on keyboard navigation. The following keyboard shortcuts are supported by the Context Menu component:
+The React Context Menu component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guidelines, making it accessible for people who use assistive technologies and those who rely completely on keyboard navigation. The following keyboard shortcuts are supported by the React Context Menu component:
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -68,11 +68,11 @@ The React Context Menu component follows the [keyboard interaction](https://www.
 
 ## Screen reader support
 
-The Context Menu component renders the ARIA roles and attributes listed above so that screen readers (such as NVDA, JAWS, and VoiceOver) announce menu structure, item labels, disabled state, and checked state. To localize the announced text, set the appropriate locale strings through the `locale` property.
+The React Context Menu component renders the ARIA roles and attributes listed above so that screen readers (such as NVDA, JAWS, and VoiceOver) announce menu structure, item labels, disabled state, and checked state. To localize the announced text, set the appropriate locale strings through the `locale` property.
 
 ## Right-to-left support
 
-The Context Menu component supports right-to-left (RTL) rendering for languages such as Arabic and Hebrew. Enable RTL by setting the `enableRtl` property to `true`.
+The React Context Menu component supports right-to-left (RTL) rendering for languages such as Arabic and Hebrew. Enable RTL by setting the `enableRtl` property to `true`.
 
 ```tsx
 import { enableRtl, L10n } from '@syncfusion/ej2-base';
@@ -95,7 +95,7 @@ function App() {
 
 The React Context Menu component's accessibility levels are validated through the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) tools during automated testing.
 
-The accessibility compliance of the Context Menu component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/context-menu.html) in a new window to evaluate the accessibility of the Context Menu component with accessibility tools.
+The accessibility compliance of the React Context Menu component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/context-menu.html) in a new window to evaluate the accessibility of the React Context Menu component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/context-menu.html" %}
 

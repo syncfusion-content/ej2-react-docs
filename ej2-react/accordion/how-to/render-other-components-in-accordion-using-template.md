@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to embed other components in React Accordion
 
-You can render other components inside Accordion using React **template**. Through this, we can add content as other components directly with all functionalities to our Accordion. Follow the below guidelines for using the other components as template in Accordion.
+You can render other components inside React Accordion using React **template**. Through this, we can add content as other components directly with all functionalities to our React Accordion. Follow the below guidelines for using the other components as template in React Accordion.
 
 * Declare a template within the function returns jsx element. If the template does not need arguments no need to pass the properties.
 

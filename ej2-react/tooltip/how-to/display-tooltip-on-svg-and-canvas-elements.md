@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Display Tooltip on svg and canvas elements in React Tooltip component
 
-Tooltips can be displayed on both SVG and Canvas elements. Tooltips can be attached directly to `<svg>` or `<canvas>` elements to display them on data visualization elements.
+React Tooltips can be displayed on both SVG and Canvas elements. React Tooltips can be attached directly to `<svg>` or `<canvas>` elements to display them on data visualization elements.
 
 ## SVG
 
-To render a Tooltip on an SVG square, first create the SVG square element, then use the following code snippet.
+To render a React Tooltip on an SVG square, first create the SVG square element, then use the following code snippet.
 
 ```ts
   <TooltipComponent content='SVG Square' cssClass='e-tooltip-css' target= '#square'>
@@ -23,7 +23,7 @@ To render a Tooltip on an SVG square, first create the SVG square element, then 
 
 ## Canvas
 
-To render a Tooltip on a Canvas circle, first create the canvas circle element, then use the following code snippet.
+To render a React Tooltip on a Canvas circle, first create the canvas circle element, then use the following code snippet.
 
 ```ts
 <TooltipComponent content='Canvas Circle' cssClass='e-tooltip-css' target= '#circle'>

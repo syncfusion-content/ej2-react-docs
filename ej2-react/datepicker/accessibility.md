@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React DatePicker
 
-The DatePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React DatePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the DatePicker component is outlined below.
+The accessibility compliance for the React DatePicker component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,19 +42,19 @@ The accessibility compliance for the DatePicker component is outlined below.
 
 Web accessibility standards define practices to make web content and applications accessible to users with disabilities. WAI-ARIA attributes are particularly valuable for dynamic content and advanced user interface controls built with Ajax, HTML, JavaScript, and related technologies.
 
-The DatePicker component provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications through the following attributes applied to the input element: `aria-expanded`, `aria-disabled`, and `aria-activedescendant`. These attributes communicate the component's state and properties to assistive technologies, enabling disabled users to interact effectively with the DatePicker.
+The React DatePicker component provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications through the following attributes applied to the input element: `aria-expanded`, `aria-disabled`, and `aria-activedescendant`. These attributes communicate the component's state and properties to assistive technologies, enabling disabled users to interact effectively with the React DatePicker.
 
 For related information, refer to the Calendar component's [Accessibility](../calendar/accessibility) section.
 
 * **aria-expanded**: Indicates the state of a collapsible element (expanded or collapsed).
 
-* **aria-disabled**: Indicates the disabled state of the DatePicker component.
+* **aria-disabled**: Indicates the disabled state of the React DatePicker component.
 
-* **aria-activedescendant**: Helps manage the currently active descendant within the DatePicker component.
+* **aria-activedescendant**: Helps manage the currently active descendant within the React DatePicker component.
 
 ## Keyboard Interaction
 
-You can use the following keys to interact with the DatePicker. The component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
+You can use the following keys to interact with the React DatePicker. The component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
 
 It supports the below list of shortcut keys.
 
@@ -90,7 +90,7 @@ Use the below list of keys to navigate the Calendar after the popup has opened.
 | <kbd>Control + Home</kbd>  | Focus the starting date in the current year. |
 | <kbd>Control + End</kbd>  | Focus the ending date in the current year. |
 
-> To focus the DatePicker component use the `alt+t` keys.
+> To focus the React DatePicker component use the `alt+t` keys.
 
 `[Class-component]`
 
@@ -120,9 +120,9 @@ Use the below list of keys to navigate the Calendar after the popup has opened.
 
 ## Ensuring accessibility
 
-The DatePicker component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React DatePicker component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the DatePicker component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/date-picker.html) in a new window to evaluate the accessibility of the DatePicker component with accessibility tools.
+The accessibility compliance of the React DatePicker component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/date-picker.html) in a new window to evaluate the accessibility of the React DatePicker component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/date-picker.html" %}
 

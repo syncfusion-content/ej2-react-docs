@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## DateTime Restriction
 
-The DateTimePicker component restricts date and time selection to a specified range using the [`min`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#max) properties. The `min` value must be less than the `max` value.
+The React DateTime Picker component restricts date and time selection to a specified range using the [`min`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#min) and [`max`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#max) properties. The `min` value must be less than the `max` value.
 
 When a selected date-time is out-of-range or invalid, the model value is set to the out-of-range value or `null` respectively, and the input is highlighted with an `error` class to indicate the date-time validation failure.
 

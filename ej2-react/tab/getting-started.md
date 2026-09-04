@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Tab
 
-This section explains how to create a simple **Tab** component and configure the Tab header content in a React application.
+This section explains how to create a simple **Tab** component and configure the React Tab header content in a React application.
 
 To get started quickly with React Tabs using Create React App, you can check out this video:
 
@@ -84,7 +84,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the Tab component are imported in the **src/App.css** file:
+The required styles for the React Tab component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -96,7 +96,7 @@ The required styles for the Tab component are imported in the **src/App.css** fi
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the Tab component
+## Add the React Tab component
 
 Now, you can add the React Tab component to your **src/App.jsx** file by importing and defining it within your application.Use the following code:
 
@@ -140,7 +140,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> In the above sample code, `element` is the `id` of the HTML element in a page to which the Tab is initialized.
+> In the above sample code, `element` is the `id` of the HTML element in a page to which the React Tab is initialized.
 
 ## Run the application
 
@@ -156,4 +156,4 @@ The output will appear as follows:
 
 ## See Also
 
-* [How to load tab with DataSource](./how-to/load-tab-with-data-source)
+* [How to load React tab with DataSource](./how-to/load-tab-with-data-source)

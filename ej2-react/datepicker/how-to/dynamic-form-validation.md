@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Dynamic forms provide a flexible and economical approach to generate forms based on JSON configuration without requiring template modifications. This technique is particularly useful for creating reusable form components that adapt to varying data structures.
 
-To implement dynamic form validation, create a React component (such as `dynamic-form.tsx`) that renders form fields based on JSON data. This component dynamically includes DatePicker fields with validation rules defined in the configuration.
+To implement dynamic form validation, create a React component (such as `dynamic-form.tsx`) that renders form fields based on JSON data. This component dynamically includes React DatePicker fields with validation rules defined in the configuration.
 
 The following example demonstrates how to create and validate a dynamic sign-up form with date selection:
 

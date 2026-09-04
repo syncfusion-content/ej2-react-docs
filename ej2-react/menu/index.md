@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Index in React Menu component
 
-The Menu is a graphical user interface that serves as navigation header for your application or site. It has the support to provide multi-level nested menu items.
+The React Menu is a graphical user interface that serves as navigation header for your application or site. It has the support to provide multi-level nested React menu items.
 
 ## Key features
 
@@ -20,4 +20,4 @@ The Menu is a graphical user interface that serves as navigation header for your
 
 * [**Orientation**](./how-to/change-orientation): Supports to displays the Menu in horizontal or vertical direction.
 
-* [**Accessibility**](./accessibility#accessibility): Provided with built-in accessibility support that helps to access all the Menu component features through the keyboard, screen readers, or other assistive technology devices.
+* [**Accessibility**](./accessibility#accessibility): Provided with built-in accessibility support that helps to access all the React Menu component features through the keyboard, screen readers, or other assistive technology devices.

@@ -10,24 +10,24 @@ domainurl: ##DomainURL##
 
 # Types and Positions in React Sidebar
 
-The Sidebar component's expand behavior can be modified based on the purpose of use.
+The React Sidebar component's expand behavior can be modified based on the purpose of use.
 
 * Expanding types of the Sidebar
 
 ## Expanding types of Sidebar
 
-Sidebar can be set to initialize based on four different types that are consistent with the main component as explained below. When [`dataBind`](https://ej2.syncfusion.com/documentation/api/sidebar#databind) is invoked, this applies the pending property changes immediately to the component.
+React Sidebar can be set to initialize based on four different types that are consistent with the main component as explained below. When [`dataBind`](https://ej2.syncfusion.com/documentation/api/sidebar#databind) is invoked, this applies the pending property changes immediately to the component.
 
  | Item | Description |
 |-----|-----|
-| [`Over`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | Sidebar floats over the main content area.|
-| [`Push`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | Sidebar pushes the main content area to appear side-by-side, and shrinks the main content within the screen width.|
-| [`Slide`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | Sidebar translates the x and y positions of main content area based on the Sidebar width. The main content area will not be adjusted within the screen width. |
-| [`Auto`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | Sidebar with `Over` type in mobile resolution, and `Push` type in other higher resolutions. |
+| [`Over`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | React Sidebar floats over the main content area.|
+| [`Push`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | React Sidebar pushes the main content area to appear side-by-side, and shrinks the main content within the screen width.|
+| [`Slide`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | React Sidebar translates the x and y positions of main content area based on the React Sidebar width. The main content area will not be adjusted within the screen width. |
+| [`Auto`](https://ej2.syncfusion.com/react/documentation/api/sidebar/#type) | React Sidebar with `Over` type in mobile resolution, and `Push` type in other higher resolutions. |
 
 > `Auto` is the default expand mode.
 
-In the following sample, the types of Sidebar are demonstrated.
+In the following sample, the types of React Sidebar are demonstrated.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -54,5 +54,5 @@ In the following sample, the types of Sidebar are demonstrated.
 
 ## See Also
 
-* [How to add Sidebar with custom animation](./how-to/sidebar-with-variation-animation)
+* [How to add React Sidebar with custom animation](./how-to/sidebar-with-variation-animation)
 * [How to add multiple sidebar](./how-to/multiple-sidebar)

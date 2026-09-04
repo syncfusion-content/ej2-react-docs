@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Index in React Daterangepicker component
 
-The **DateRangePicker** is a graphical user interface control that allows a user to select a date range.
+The **React DateRangePicker** is a graphical user interface control that allows a user to select a date range.
 
 ## Key Features
 

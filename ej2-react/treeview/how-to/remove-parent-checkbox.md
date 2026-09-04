@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to remove the parent checkbox in React
 
-By enabling the [`showCheckBox`](https://ej2.syncfusion.com/react/documentation/api/treeview#showcheckbox) property, you can render check box before each node of TreeView. However, some application needs to render check box in child nodes alone. In such case, you can remove the check box of the parent node by customizing the CSS.
+By enabling the [`showCheckBox`](https://ej2.syncfusion.com/react/documentation/api/treeview#showcheckbox) property, you can render check box before each node of React Tree View. However, some application needs to render check box in child nodes alone. In such case, you can remove the check box of the parent node by customizing the CSS.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,24 +10,24 @@ domainurl: ##DomainURL##
 
 # Islamic Calendar in React Calendar
 
-In addition to the Gregorian calendar, the Calendar control supports the Islamic (Hijri) calendar. An Islamic year has 354 or 355 days across 12 months in a `lunar` cycle. To learn more, refer to the [Islamic calendar](https://en.wikipedia.org/wiki/Islamic_calendar).
+In addition to the Gregorian calendar, the React Calendar control supports the Islamic (Hijri) React Calendar. An Islamic year has 354 or 355 days across 12 months in a `lunar` cycle. To learn more, refer to the [Islamic calendar](https://en.wikipedia.org/wiki/Islamic_calendar).
 
-The Calendar supports Gregorian features such as `min`/`max` date, week numbers, first day of the week, multi-selection, RTL, `start`/`depth` views, localization, and date highlighting/customization in Islamic mode.
+The React Calendar supports Gregorian features such as `min`/`max` date, week numbers, first day of the week, multi-selection, RTL, `start`/`depth` views, localization, and date highlighting/customization in Islamic mode.
 
-By default, the calendar uses **Gregorian** mode. Enable Islamic mode by setting the `calendarMode` property to `Islamic` and injecting the `Islamic` module using the `Inject` directive from `@syncfusion/ej2-react-calendars`.
+By default, the React Calendar uses **Gregorian** mode. Enable Islamic mode by setting the `calendarMode` property to `Islamic` and injecting the `Islamic` module using the `Inject` directive from `@syncfusion/ej2-react-calendars`.
 
 **API**
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
-| `calendarMode` | `CalendarMode` (`Gregorian` \| `Islamic`) | `Gregorian` | Switches the Calendar between Gregorian and Islamic modes. |
+| `calendarMode` | `CalendarMode` (`Gregorian` \| `Islamic`) | `Gregorian` | Switches the React Calendar between Gregorian and Islamic modes. |
 
 ```js
 import { Islamic } from '@syncfusion/ej2-react-calendars';
 ```
 
 
-The following example demonstrates how to display the Islamic Calendar (Hijri Calendar).
+The following example demonstrates how to display the Islamic Calendar (Hijri React Calendar).
 
 `[Class-component]`
 

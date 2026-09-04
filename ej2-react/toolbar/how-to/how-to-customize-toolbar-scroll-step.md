@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to customize Toolbar scrollStep in React
 
-The Toolbar supports customizing the scrolling distance when you click the left and right side navigation icons. We can customize the [`scrollStep`](https://ej2.syncfusion.com/react/documentation/api/toolbar/index-default#scrollstep) property to set the scrolling distance. The `scrollStep` property accepts a `number` value (in pixels); the default is `0`. Use a positive integer value that suits your scrolling need (negative or zero values are not recommended as they produce no useful scroll). Note that `scrollStep` only applies when the [`overflowMode`](./responsive-mode.md) is `Scrollable` (the default). Refer to the following steps.
+The React Toolbar supports customizing the scrolling distance when you click the left and right side navigation icons. We can customize the [`scrollStep`](https://ej2.syncfusion.com/react/documentation/api/toolbar/index-default#scrollstep) property to set the scrolling distance. The `scrollStep` property accepts a `number` value (in pixels); the default is `0`. Use a positive integer value that suits your scrolling need (negative or zero values are not recommended as they produce no useful scroll). Note that `scrollStep` only applies when the [`overflowMode`](./responsive-mode.md) is `Scrollable` (the default). Refer to the following steps.
 
-1. Using the Toolbar's `scrollStep` property, pass the required value to customize the scroll step.
+1. Using the React Toolbar's `scrollStep` property, pass the required value to customize the scroll step.
 
 ```jsx
   <ToolbarComponent scrollStep={50} />

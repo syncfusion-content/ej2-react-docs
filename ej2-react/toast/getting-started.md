@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
  
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
  
-The required styles for the Toast component are imported in the **src/App.css** file:
+The required styles for the React Toast component are imported in the **src/App.css** file:
  
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,7 +94,7 @@ The required styles for the Toast component are imported in the **src/App.css** 
  
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding Toast component
+## Adding React Toast component
 
 Now, you can add the React Toast component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
 
@@ -145,8 +145,8 @@ The output appears as follows.
 
 {% previewsample "page.domainurl/code-snippet/toast/toast-cs16" %}
 
-> Refer to the [React Toast](https://www.syncfusion.com/react-components/react-toast) feature tour page for its groundbreaking feature representations. You can also explore our [React Toast component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/toast/default) that shows how to render the Toast in React.
+> Refer to the [React Toast](https://www.syncfusion.com/react-components/react-toast) feature tour page for its groundbreaking feature representations. You can also explore our [React Toast component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/toast/default) that shows how to render the React Toast in React.
 
 ## See Also
 
-* [Render different types of toast](./how-to/show-different-types-of-toast)
+* [Render different types of React Toast](./how-to/show-different-types-of-toast)

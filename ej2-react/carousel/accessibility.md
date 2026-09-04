@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Carousel
 
-The Carousel component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/) specifications, and applying the WAI-ARIA roles, states and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-roledescription`, `aria-label`, `aria-current`, `aria-live`, `aria-role` and `aria-hidden`. It provides information about elements in a document for assistive technology. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/) and has been tested in major screen readers.
+The React Carousel component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/) specifications, and applying the WAI-ARIA roles, states and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-roledescription`, `aria-label`, `aria-current`, `aria-live`, `aria-role` and `aria-hidden`. It provides information about elements in a document for assistive technology. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/) and has been tested in major screen readers.
 
-The accessibility compliance for the Carousel component is outlined below.
+The accessibility compliance for the React Carousel component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -41,26 +41,26 @@ The accessibility compliance for the Carousel component is outlined below.
 
 ## ARIA attributes
 
-The Carousel component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/#keyboardinteraction) standard. Carousel is supported with ARIA Accessibility which is accessible by on-screen readers and other assistive technology devices. The following list of attributes is added to the Carousel.
+The React Carousel component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/#keyboardinteraction) standard. React Carousel is supported with ARIA Accessibility which is accessible by on-screen readers and other assistive technology devices. The following list of attributes is added to the React Carousel.
 
 | **Roles and Attributes** | **Functionalities**                                                                                                                             |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| aria-roledescription   | The role description attribute has been added for the root element (Carousel) and each Carousel slide item (slide).                            |
+| aria-roledescription   | The role description attribute has been added for the root element (React Carousel) and each React Carousel slide item (slide).                            |
 | aria-label             | Previous, next and play/pause buttons and all indicator elements.                                                                               |
 | aria-current           | For the active item indicator element, `aria-current` is set to `true`.                                                                         |
-| aria-hidden            | For all Carousel elements except the currently visible item, `aria-hidden` is set to `true`.                                                    |
-| aria-live              | For Carousel items element, when `autoPlay` is `true`, `aria-live` is set to `off`; when `autoPlay` is `false`, `aria-live` is set to `polite`. |
-| aria-role              | For Carousel slide item, `aria-role` has been grouped.                                                                                           |
+| aria-hidden            | For all React Carousel elements except the currently visible item, `aria-hidden` is set to `true`.                                                    |
+| aria-live              | For React Carousel items element, when `autoPlay` is `true`, `aria-live` is set to `off`; when `autoPlay` is `false`, `aria-live` is set to `polite`. |
+| aria-role              | For React Carousel slide item, `aria-role` has been grouped.                                                                                           |
 
 ## Keyboard interaction
 
-All Carousel actions can be controlled using keyboard keys through the [`allowKeyboardInteraction`](https://ej2.syncfusion.com/react/documentation/api/carousel#allowkeyboardinteraction) property, which is enabled by default. If you wish to disable the default keyboard interactions, you can set this property to `false`. This is particularly useful if the carousel contains input elements, as pressing the arrow keys might cause the carousel to move unexpectedly. By disabling keyboard interaction, the carousel remains static, allowing the user to focus on the input fields without any interruptions.
+All React Carousel actions can be controlled using keyboard keys through the [`allowKeyboardInteraction`](https://ej2.syncfusion.com/react/documentation/api/carousel#allowkeyboardinteraction) property, which is enabled by default. If you wish to disable the default keyboard interactions, you can set this property to `false`. This is particularly useful if the carousel contains input elements, as pressing the arrow keys might cause the React Carousel to move unexpectedly. By disabling keyboard interaction, the React Carousel remains static, allowing the user to focus on the input fields without any interruptions.
 
-This control implements keyboard navigation support by following WAI-ARIA practices. Once focused on the active Carousel element, you can use the following key combinations to interact with the Carousel.
+This control implements keyboard navigation support by following WAI-ARIA practices. Once focused on the active React Carousel element, you can use the following key combinations to interact with the React Carousel.
 
 | Key                | Description                                                     |
 | ------------------ | --------------------------------------------------------------- |
-| <kbd>Alt + J</kbd> | Keys to focus the Carousel component (done at application end). |
+| <kbd>Alt + J</kbd> | Keys to focus the React Carousel component (done at application end). |
 | <kbd>Arrows</kbd>  | Keys to navigate between slides.                                |
 | <kbd>Home</kbd>    | To navigate to the first slide.                                 |
 | <kbd>End</kbd>     | To navigate to the last slide.                                  |
@@ -71,9 +71,9 @@ This control implements keyboard navigation support by following WAI-ARIA practi
 
 ## Ensuring accessibility
 
-The Carousel component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Carousel component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Carousel component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/carousel.html) in a new window to evaluate the accessibility of the Carousel component with accessibility tools.
+The accessibility compliance of the React Carousel component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/carousel.html) in a new window to evaluate the accessibility of the React Carousel component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/carousel.html" %}
 

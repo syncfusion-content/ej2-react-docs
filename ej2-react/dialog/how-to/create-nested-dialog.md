@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # How to create nested in React Dialog
 
-A Dialog can be nested within another Dialog. The following sample contains a parent Dialog and a child (inner) Dialog.
+A React Dialog can be nested within another React Dialog. The following sample contains a parent Dialog and a child (inner) Dialog.
 
 ## Approach
 
-Nesting is achieved by rendering two Dialog components and pointing the inner Dialog's [`target`](https://ej2.syncfusion.com/react/documentation/api/dialog#target) property to the outer Dialog's [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/dialog#cssclass) selector. Although the two Dialog components are declared as siblings in JSX, at runtime the inner Dialog's DOM is appended to the outer Dialog container because of the `target` setting, making it appear nested inside the parent.
+Nesting is achieved by rendering two React Dialog components and pointing the inner React Dialog's [`target`](https://ej2.syncfusion.com/react/documentation/api/dialog#target) property to the outer React Dialog's [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/dialog#cssclass) selector. Although the two React Dialog components are declared as siblings in JSX, at runtime the inner React Dialog's DOM is appended to the outer React Dialog container because of the `target` setting, making it appear nested inside the parent.
 
-> Nested dialogs rely on the browser's default z-index stacking. The inner Dialog is rendered on top of the outer Dialog. If custom z-index values are applied to either Dialog, ensure the inner Dialog's z-index is higher than the outer Dialog's so it remains visible.
+> Nested React Dialogs rely on the browser's default z-index stacking. The inner React Dialog is rendered on top of the outer React Dialog. If custom z-index values are applied to either React Dialog, ensure the inner React Dialog's z-index is higher than the outer React Dialog's so it remains visible.
 
-## Step 1: Render the outer Dialog
+## Step 1: Render the outer React Dialog
 
-Render two Dialog components on a page, and set the outer Dialog's [`target`](https://ej2.syncfusion.com/react/documentation/api/dialog#target) property to a container element on the page (for example, `#dialog-target`).
+Render two React Dialog components on a page, and set the outer React Dialog's [`target`](https://ej2.syncfusion.com/react/documentation/api/dialog#target) property to a container element on the page (for example, `#dialog-target`).
 
-## Step 2: Set the inner Dialog target
+## Step 2: Set the inner React Dialog target
 
-Set the inner Dialog's [`target`](https://ej2.syncfusion.com/react/documentation/api/dialog#target) property to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/dialog#cssclass) selector of the outer Dialog (for example, `.outerDialog`). This ensures the inner Dialog is rendered inside the outer Dialog at runtime.
+Set the inner React Dialog's [`target`](https://ej2.syncfusion.com/react/documentation/api/dialog#target) property to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/dialog#cssclass) selector of the outer React Dialog (for example, `.outerDialog`). This ensures the inner React Dialog is rendered inside the outer React Dialog at runtime.
 
 `[Class-component]`
 

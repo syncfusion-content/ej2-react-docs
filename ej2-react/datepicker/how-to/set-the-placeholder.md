@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to set the placeholder in React DatePicker
 
-The `placeholder` property displays a hint text in the DatePicker input field when it is empty. This helps guide users on the expected date format or input requirement.
+The `placeholder` property displays a hint text in the React DatePicker input field when it is empty. This helps guide users on the expected date format or input requirement.
 
-The following example demonstrates how to set a custom placeholder in the DatePicker component:
+The following example demonstrates how to set a custom placeholder in the React DatePicker component:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

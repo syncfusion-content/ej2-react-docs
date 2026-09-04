@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
  
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
  
-The required styles for the Spinner component are imported in the **src/App.css** file:
+The required styles for the React Spinner component are imported in the **src/App.css** file:
  
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -98,9 +98,9 @@ The required styles for the Spinner component are imported in the **src/App.css*
  
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding Spinner component
+## Adding React Spinner component
 
-The React Spinner component can be added to the application by following these steps. To get started, add the Spinner component to the **src/App.jsx** file using the following code.
+The React Spinner component can be added to the application by following these steps. To get started, add the React Spinner component to the **src/App.jsx** file using the following code.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -114,12 +114,12 @@ function App() {
     componentDidMount();
   }, []);
   function componentDidMount() {
-    //createSpinner() method is used to create spinner
+    //createSpinner() method is used to create React Spinner
     createSpinner({
-      // Specify the target for the spinner to show
+      // Specify the target for the React Spinner to show
       target: document.getElementById('container') as HTMLElement,
     });
-    // showSpinner() will make the spinner visible
+    // showSpinner() will make the React Spinner visible
     showSpinner(document.getElementById('container') as HTMLElement);
   }
   return (<div className="control-pane">

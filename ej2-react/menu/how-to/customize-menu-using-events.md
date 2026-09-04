@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize Menu using events in React
 
-The Menu provides a set of [`events`](https://ej2.syncfusion.com/react/documentation/api/menu/#events) to enable users to customize it.
+The React Menu provides a set of [`events`](https://ej2.syncfusion.com/react/documentation/api/menu/#events) to enable users to customize it.
 
 The available events are [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/menu/#beforeclose), [`beforeClose`](../..api//menu/#beforeopen), [`onClose`](https://ej2.syncfusion.com/react/documentation/api/menu/#onclose), [`onOpen`](https://ej2.syncfusion.com/react/documentation/api/menu/#onopen), and [`select`](../..api//menu/#select).
 

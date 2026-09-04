@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Date Format in React DateRangePicker
 
-Date format defines how date values are displayed in the input field. By default, the DateRangePicker format is based on the current culture. You can set a custom format using the [`format`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#format) property.
+Date format defines how date values are displayed in the input field. By default, the React DateRangePicker format is based on the current culture. You can set a custom format using the [`format`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/index-default#format) property.
 
 > When the date format is set, it applies uniformly across all cultures and overrides the culture-specific default format.
 
 To know more about the date format standards, refer to the [Internationalization Date Format](http://ej2.syncfusion.com/documentation/base/internationalization) section.
 
-The following example demonstrates the DateRangePicker with the custom format (`yyyy-MM-dd`).
+The following example demonstrates the React DateRangePicker with the custom format (`yyyy-MM-dd`).
 
 `[Class-component]`
 
@@ -46,11 +46,11 @@ The following example demonstrates the DateRangePicker with the custom format (`
 
 ## Input formats 
 
-The [`inputFormats`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/) property in the DateRangePicker control allows users to enter dates in various formats, providing flexibility in date entry. This property accepts an array of predefined formats that the control recognizes, enabling users to input dates in different ways while ensuring they are parsed correctly.
+The [`inputFormats`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/index-default) property in the React DateRangePicker control allows users to enter dates in various formats, providing flexibility in date entry. This property accepts an array of predefined formats that the control recognizes, enabling users to input dates in different ways while ensuring they are parsed correctly.
 
 When the user types the date in any of the specified input formats, it will be automatically converted to the display format after pressing Enter, the Tab key, or when the input loses focus. This enhances the user experience by allowing intuitive data entry through various custom input formats.
 
-The following example demonstrates the DateRangePicker with multiple input formats.
+The following example demonstrates the React DateRangePicker with multiple input formats.
 
 `[Class-component]`
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Message
 
-The Message component follows WCAG 2.2, Section 508, and ADA accessibility standards. This ensures that applications using the Message component provide an accessible experience for all users, including those using assistive technologies such as screen readers and keyboard navigation.
+The React Message component follows WCAG 2.2, Section 508, and ADA accessibility standards. This ensures that applications using the React Message component provide an accessible experience for all users, including those using assistive technologies such as screen readers and keyboard navigation.
 
-The accessibility compliance levels for the Message component are outlined below.
+The accessibility compliance levels for the React Message component are outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,7 +40,7 @@ The accessibility compliance levels for the Message component are outlined below
 
 ## WAI-ARIA attributes
 
-The Message component implements the [WAI-ARIA alert pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) to ensure proper accessibility semantics. The following ARIA attributes are applied in the Message component:
+The React Message component implements the [WAI-ARIA alert pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) to ensure proper accessibility semantics. The following ARIA attributes are applied in the React Message component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -49,18 +49,18 @@ The Message component implements the [WAI-ARIA alert pattern](https://www.w3.org
 
 ## Keyboard interaction
 
-The Message component supports keyboard interaction according to the [WAI-ARIA alert pattern guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction). This enables users who rely on keyboard navigation or assistive technologies to interact with messages effectively. The following keyboard interactions are supported:
+The React Message component supports keyboard interaction according to the [WAI-ARIA alert pattern guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction). This enables users who rely on keyboard navigation or assistive technologies to interact with React Messages effectively. The following keyboard interactions are supported:
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Tab / Shift + Tab</kbd> | To focus the close icon in the message. |
-| <kbd>Enter / Space</kbd> | Closes the focused close icon's message. |
+| <kbd>Tab / Shift + Tab</kbd> | To focus the close icon in the React Message. |
+| <kbd>Enter / Space</kbd> | Closes the focused close icon's React Message. |
 
 ## Ensuring accessibility
 
-Syncfusion validates the Message component's accessibility compliance using industry-standard tools including [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) during continuous automated testing.
+Syncfusion validates the React Message component's accessibility compliance using industry-standard tools including [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) during continuous automated testing.
 
-The following sample demonstrates the accessibility features of the Message component. Open the [sample](https://ej2.syncfusion.com/accessibility/message.html) in a new window to evaluate the component's accessibility using your preferred accessibility testing tools.
+The following sample demonstrates the accessibility features of the React Message component. Open the [sample](https://ej2.syncfusion.com/accessibility/message.html) in a new window to evaluate the component's accessibility using your preferred accessibility testing tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/message.html" %}
 

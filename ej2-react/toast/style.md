@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style in React Toast
 
-Customize the appearance of Toast components using CSS to match your application's design system. The following CSS selectors target specific Toast elements for theming and branding purposes.
+Customize the appearance of React Toast components using CSS to match your application's design system. The following CSS selectors target specific React Toast elements for theming and branding purposes.
 
 ## Customizing the toast title
 
-Use the following CSS to customize the default toast's content properties like font-family, font-size and color.
+Use the following CSS to customize the default React Toast's content properties like font-family, font-size and color.
 
 ```css
 /* To change color, font family and font size */
@@ -27,7 +27,7 @@ Use the following CSS to customize the default toast's content properties like f
 
 ## Customizing the toast content
 
-Use the following CSS to customize the default toast's content properties like font-family, font-size and color.
+Use the following CSS to customize the default React Toast's content properties like font-family, font-size and color.
 
 ```css
 /* To change color, font family and font size */
@@ -40,7 +40,7 @@ Use the following CSS to customize the default toast's content properties like f
 
 ## Customizing the toast icon
 
-Use the following CSS to customize the default toast icon color.
+Use the following CSS to customize the default React Toast icon color.
 
 ```css
 /* To change icon color */
@@ -51,7 +51,7 @@ Use the following CSS to customize the default toast icon color.
 
 ## Customizing the toast background
 
-Use the following CSS to customize the default toast's background color.
+Use the following CSS to customize the default React Toast's background color.
 
 ```css
 /* To change background color */

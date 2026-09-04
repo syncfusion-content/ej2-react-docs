@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 Globalization enables components to support multiple languages and regional formats. This combines [`Internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (parsing and formatting dates according to regional standards) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (translating text and applying culture-specific customizations).
 
-By default, the DatePicker uses `American English` culture for date format, week names, and month names. It leverages the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) package with official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data to parse and format dates according to the selected culture.
+By default, the React DatePicker uses `American English` culture for date format, week names, and month names. It leverages the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) package with official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data to parse and format dates according to the selected culture.
 
-### **Quick Start: Enable a Different Culture**
+## **Quick Start: Enable a Different Culture**
 
-To display the DatePicker in a culture other than English, follow these steps:
+To display the React DatePicker in a culture other than English, follow these steps:
 
 1. **Install CLDR-Data Package**
 
@@ -38,7 +38,7 @@ This package contains all required CLDR JSON data. For more information, refer t
 
 * Now use the [`loadCldr`](http://ej2.syncfusion.com/documentation/base/internationalization#cldr-data-dependencies) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
 
-* DatePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the DatePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
+* React DatePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the React DatePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
 
 ```ts
 
@@ -65,7 +65,7 @@ loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, weekData);
   }
 ```
 
-> The `Localization` library allows you to localize default text content of the DatePicker. The DatePicker component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datepicker#locale) value and translation object.
+> The `Localization` library allows you to localize default text content of the React DatePicker. The React DatePicker component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datepicker#locale) value and translation object.
 
 Locale keywords |Text
 -----|-----
@@ -89,9 +89,9 @@ placeholder | Hint to describe expected value in input element.
      });
    ```
 
-* Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datepicker#locale) property. The below code example, initialize the DatePicker component in `German` culture with corresponding localized text.
+* Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/datepicker#locale) property. The below code example, initialize the React DatePicker component in `German` culture with corresponding localized text.
 
-The following example demonstrates the DatePicker in `German` culture.
+The following example demonstrates the React DatePicker in `German` culture.
 
 `[Class-component]`
 
@@ -181,9 +181,9 @@ The following example demonstrates the DatePicker in `German` culture.
 
 ## Right-To-Left
 
-The DatePicker supports right-to-left functionality for languages like Arabic, Hebrew to displays the text in the right-to-left direction. Use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/datepicker#enablertl) property to set the RTL direction.
+The React DatePicker supports right-to-left functionality for languages like Arabic, Hebrew to displays the text in the right-to-left direction. Use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/datepicker#enablertl) property to set the RTL direction.
 
-The below code example demonstrates the DatePicker component in `Hebrew` culture and also explains how to set the localized text to the placeholder using [`load`](http://ej2.syncfusion.com/documentation/api/base/l10n#load) method of
+The below code example demonstrates the React DatePicker component in `Hebrew` culture and also explains how to set the localized text to the placeholder using [`load`](http://ej2.syncfusion.com/documentation/api/base/l10n#load) method of
 [L10n](http://ej2.syncfusion.com/documentation/api/base/l10n) class.
 
 `[Class-component]`

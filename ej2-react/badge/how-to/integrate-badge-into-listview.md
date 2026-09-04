@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to integrate badge into ListView in React Badge
+# How to integrate React Badge into ListView
 
-Badges can be embedded within ListView items to provide visual indicators of status, priority, or notification counts. The Badge component automatically adjusts its dimensions relative to the parent ListView item, removing the need for manual sizing.
+Badges can be embedded within ListView items to provide visual indicators of status, priority, or notification counts. The React Badge component automatically adjusts its dimensions relative to the parent ListView item, removing the need for manual sizing.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

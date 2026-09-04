@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Animation in React Toast
 
-The Toast component supports customizable animations for display and dismissal, enhancing the visual feedback of notification appearance and removal. Configure enter and exit animations using standard animation library options. By default, toasts use `FadeIn` animation when appearing and `FadeOut` animation when disappearing. Custom animations create smoother user experience and draw attention to important notifications.
+The React Toast component supports customizable animations for display and dismissal, enhancing the visual feedback of notification appearance and removal. Configure enter and exit animations using standard animation library options. By default, React Toast use `FadeIn` animation when appearing and `FadeOut` animation when disappearing. Custom animations create smoother user experience and draw attention to important notifications.
 
-> **Accessibility note:** Consider users who prefer reduced motion. Toasts respecting the `prefers-reduced-motion` media query will minimize or disable animations for accessibility compliance.
+> **Accessibility note:** Consider users who prefer reduced motion. React Toast respecting the `prefers-reduced-motion` media query will minimize or disable animations for accessibility compliance.
 
 `[Class-component]`
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style and Appearance in React AppBar
 
-To modify the AppBar appearance, you need to override the default CSS of the AppBar component. Please find the list of CSS classes and their corresponding sections in the AppBar component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
+To modify the React AppBar appearance, you need to override the default CSS of the React AppBar component. Please find the list of CSS classes and their corresponding sections in the React AppBar component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
 
 |CSS Class | Purpose of Class |
 |-----|----- |
@@ -26,7 +26,7 @@ To modify the AppBar appearance, you need to override the default CSS of the App
 
 ## CssClass
 
-CssClass is used for AppBar customization based on the custom class. In the example below, the AppBar background and color are customized using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/appbar#cssclass) property.
+CssClass is used for React AppBar customization based on the custom class. In the example below, the React AppBar background and color are customized using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/appbar#cssclass) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -41,7 +41,7 @@ CssClass is used for AppBar customization based on the custom class. In the exam
 
 ## HtmlAttributes
 
-It can be used for additional inline attributes by specifying as inline attributes or by specifying htmlAttributes directive. In the code example below, the aria-label of the AppBar is customized by specifying as attributes.
+It can be used for additional inline attributes by specifying as inline attributes or by specifying htmlAttributes directive. In the code example below, the aria-label of the React AppBar is customized by specifying as attributes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

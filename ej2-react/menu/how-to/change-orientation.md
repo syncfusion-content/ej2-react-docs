@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to change Menu orientation in React Menu
 
-Orientation in menu items can be changed horizontally or vertically using the [`orientation`](https://ej2.syncfusion.com/react/documentation/api/menu/#orientation) property. By default, it is horizontally aligned.
+Orientation in React menu items can be changed horizontally or vertically using the [`orientation`](https://ej2.syncfusion.com/react/documentation/api/menu/#orientation) property. By default, it is horizontally aligned.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

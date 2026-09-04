@@ -18,7 +18,7 @@ The Localization library allows you to localize the default text content of the 
 |-----|-----|
 | optional | Optional |
 
-In this example, the `French` culture is set to Stepper and the default text is updated with the content defined by the locale key.
+In this example, the `French` culture is set to React Stepper and the default text is updated with the content defined by the locale key.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,7 +36,7 @@ In this example, the `French` culture is set to Stepper and the default text is 
 
 ## RTL
 
-RTL provides an option to switch the text direction and layout of the Stepper component from right to left by setting the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/stepper#enablertl) property to `true`.
+RTL provides an option to switch the text direction and layout of the React Stepper component from right to left by setting the [enableRtl](https://ej2.syncfusion.com/react/documentation/api/stepper#enablertl) property to `true`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

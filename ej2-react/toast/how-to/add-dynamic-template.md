@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to add a dynamic template in React Toast
 
-The Toast component supports dynamic template updates, enabling you to display different content in multiple toasts based on application state or user actions. Modify Toast properties including templates by passing updated configuration to the [`show`](https://ej2.syncfusion.com/react/documentation/api/toast#show) method. This pattern is useful for reusing a single Toast instance to display varied content types or messages throughout the application lifecycle.
+The React Toast component supports dynamic template updates, enabling you to display different content in multiple toasts based on application state or user actions. Modify React Toast properties including templates by passing updated configuration to the [`show`](https://ej2.syncfusion.com/react/documentation/api/toast#show) method. This pattern is useful for reusing a single React Toast instance to display varied content types or messages throughout the application lifecycle.
 
 `[Class-component]`
 

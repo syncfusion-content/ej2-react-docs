@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style in React Dialog
 
-The following content provides the CSS classes you can override to customize the dialog's appearance.
+The following content provides the CSS classes you can override to customize the React Dialog's appearance.
 
-## Customizing the dialog header
+## Customizing the React Dialog header
 
-The dialog header is the top bar of the dialog that displays the title. Use the following CSS to customize the dialog header properties.
+The React Dialog header is the top bar of the React Dialog that displays the title. Use the following CSS to customize the React Dialog header properties.
 
 ```css
 .e-dialog .e-dlg-header {
@@ -24,9 +24,9 @@ The dialog header is the top bar of the dialog that displays the title. Use the 
 }
 ```
 
-## Customizing the dialog content
+## Customizing the React Dialog content
 
-The dialog content is the main body area that displays the message or template. Use the following CSS to customize the dialog content properties.
+The React Dialog content is the main body area that displays the message or template. Use the following CSS to customize the React Dialog content properties.
 
 ```css
 .e-dialog .e-dlg-content {
@@ -52,7 +52,7 @@ The modal overlay is the semi-transparent layer that covers the rest of the page
 
 ## Customizing the dialog resize handle and icon
 
-The resize handle appears at the bottom corners of a resizable dialog. Use the following CSS to customize the resize handle icon.
+The resize handle appears at the bottom corners of a resizable React Dialog. Use the following CSS to customize the resize handle icon.
 
 > Resize must be enabled by setting the [`enableResize`](https://ej2.syncfusion.com/react/documentation/api/dialog#enableresize) property to `true` for these classes to exist in the DOM.
 
@@ -68,7 +68,7 @@ The resize handle appears at the bottom corners of a resizable dialog. Use the f
 }
 ```
 
-The above CSS uses a Font Awesome icon. To use this icon pack, install and import [Font Awesome](https://fontawesome.com/v4.7.0/get-started/) in your application before applying the above styles.
+The above CSS uses a Font Awesome icon. To use this icon pack, install and import Font Awesome in your application before applying the above styles.
 
 ## Customizing the dialog footer button
 
@@ -83,7 +83,7 @@ The footer buttons are the action buttons (such as OK/Cancel) rendered at the bo
 }
 ```
 
-> The selector above is generic and will apply to all flat primary buttons in the application. To scope the styles to the dialog footer only, wrap the dialog in a custom class (for example, `.custom-dialog`) and prefix the selector, e.g., `.custom-dialog .e-btn.e-flat.e-primary`.
+> The selector above is generic and will apply to all flat primary buttons in the application. To scope the styles to the React Dialog footer only, wrap the React Dialog in a custom class (for example, `.custom-dialog`) and prefix the selector, e.g., `.custom-dialog .e-btn.e-flat.e-primary`.
 
 ## Customizing the dialog close button
 

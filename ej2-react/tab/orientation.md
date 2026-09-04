@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Orientation in React Tab
 
-This section explains about modifying the position and modes of Tab header.
+This section explains about modifying the position and modes of React Tab header.
 
-It allows placing the header section inside the Tab component at different positions by using the  [`headerPlacement`](https://ej2.syncfusion.com/react/documentation/api/tab#headerplacement) property. The available positions are as follows:
+It allows placing the header section inside the React Tab component at different positions by using the  [`headerPlacement`](https://ej2.syncfusion.com/react/documentation/api/tab#headerplacement) property. The available positions are as follows:
 
-* **Top**: Tab header items can be arranged horizontally, and their content can be placed after the header.
-* **Bottom**: Tab header items can be arranged horizontally, and their content can be placed before the header.
-* **Left**: Tab header items can be arranged vertically, and their content can be placed after the header.
-* **Right**: Tab header items can be arranged vertically, and their content can be placed before the header.
+* **Top**: React Tab header items can be arranged horizontally, and their content can be placed after the header.
+* **Bottom**: React Tab header items can be arranged horizontally, and their content can be placed before the header.
+* **Left**: React Tab header items can be arranged vertically, and their content can be placed after the header.
+* **Right**: React Tab header items can be arranged vertically, and their content can be placed before the header.
 
-It is also adaptable to the available space when the tab items exceed the view space. You can customize the modes by using the [`overflowMode`](https://ej2.syncfusion.com/react/documentation/api/tab#overflowmode) property. The default value is `Scrollable`. For detailed descriptions of each mode, see the [Responsive Modes](../tab/adaptive) section. The available modes are as follows:
+It is also adaptable to the available space when the React tab items exceed the view space. You can customize the modes by using the [`overflowMode`](https://ej2.syncfusion.com/react/documentation/api/tab#overflowmode) property. The default value is `Scrollable`. For detailed descriptions of each mode, see the [Responsive Modes](../tab/adaptive) section. The available modes are as follows:
 
 * Scrollable
 * Popup

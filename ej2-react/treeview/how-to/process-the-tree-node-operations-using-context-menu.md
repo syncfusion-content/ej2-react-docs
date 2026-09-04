@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to use context menu for tree operations
 
-You can integrate the Syncfusion Context Menu with the TreeView component in order to perform TreeView-related operations like add, remove, and rename of a node.
+You can integrate the Syncfusion Context Menu with the React Tree View component in order to perform React Tree View related operations like add, remove, and rename of a node.
 
-The following sample demonstrates the above cases which are used to manipulate TreeView operations in the `select` event of the ContextMenu.
+The following sample demonstrates the above cases which are used to manipulate React Tree View operations in the `select` event of the ContextMenu.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

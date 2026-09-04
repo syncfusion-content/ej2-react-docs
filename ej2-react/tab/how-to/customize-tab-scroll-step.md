@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to customize Tab scroll step in React Tab
 
-Tab supports customizing the scrolling distance when you click the left and right side navigation icons. Use the [`scrollStep`](https://ej2.syncfusion.com/react/documentation/api/tab#scrollstep) property (in pixels) to set the desired scroll distance. Refer to the following code example.
+React Tab supports customizing the scrolling distance when you click the left and right side navigation icons. Use the [`scrollStep`](https://ej2.syncfusion.com/react/documentation/api/tab#scrollstep) property (in pixels) to set the desired scroll distance. Refer to the following code example.
 
-Pass the required pixel value to the Tab `scrollStep` property to customize the scroll step.
+Pass the required pixel value to the React Tab `scrollStep` property to customize the scroll step.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

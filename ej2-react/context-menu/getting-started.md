@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Context Menu
 
-This section explains how to create a simple Context Menu and configure its core functionalities in a React application.
+This section explains how to create a simple React Context Menu and configure its core functionalities in a React application.
 
 ## Prerequisites
 
@@ -80,7 +80,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the Context Menu component are imported in the **src/App.css** file:
+The required styles for the React Context Menu component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -92,11 +92,11 @@ The required styles for the Context Menu component are imported in the **src/App
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add Context Menu component
+## Add React Context Menu component
 
-Replace the existing boilerplate content in `src/App.jsx` with the following code to add the Context Menu component to the application.
+Replace the existing boilerplate content in `src/App.jsx` with the following code to add the React Context Menu component to the application.
 
-The `target` prop accepts a CSS selector string that specifies the element on which the Context Menu opens (on right-click or touch hold). The `items` prop accepts an array of menu item objects — each item supports `text`, `iconCss`, and nested `items` for sub-menus. For a full list of supported properties, see the [ContextMenuComponent API reference](https://ej2.syncfusion.com/react/documentation/api/context-menu).
+The `target` prop accepts a CSS selector string that specifies the element on which the React Context Menu opens (on right-click or touch hold). The `items` prop accepts an array of menu item objects — each item supports `text`, `iconCss`, and nested `items` for sub-menus. For a full list of supported properties, see the [ContextMenuComponent API reference](https://ej2.syncfusion.com/react/documentation/api/context-menu).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -118,7 +118,7 @@ function App() {
     ];
     return (
     <div>
-        <div id="target">Right click / Touch hold to open the ContextMenu</div>
+        <div id="target">Right click / Touch hold to open the React Context Menu</div>
         <ContextMenuComponent target="#target" items={menuItems}/>
       </div>);
 }
@@ -142,5 +142,5 @@ The output will appear as follows:
 
 ## See Also
 
-* [ContextMenu with icons](./icons-and-navigation#icons)
+* [React Context Menu with icons](./icons-and-navigation#icons)
 * [Multi-level nesting](./template-and-multilevel-nesting)

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to restrict maximum Toast count in React Toast
 
-Limit the number of toasts displayed simultaneously to prevent notification stack overflow and maintain a clean user interface. Track visible toast count in the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeopen) event and set the `cancel` property to `true` when the maximum count is reached. This pattern is essential for applications that generate many notifications, ensuring UI remains usable and notifications remain scalable.
+Limit the number of React Toast displayed simultaneously to prevent notification stack overflow and maintain a clean user interface. Track visible React Toast count in the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeopen) event and set the `cancel` property to `true` when the maximum count is reached. This pattern is essential for applications that generate many notifications, ensuring UI remains usable and notifications remain scalable.
 
-The following example demonstrates restricting maximum toast display to 3 notifications:
+The following example demonstrates restricting maximum React Toast display to 3 notifications:
 
 `[Class-component]`
 

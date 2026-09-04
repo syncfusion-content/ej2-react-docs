@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Mask Support in React DatePicker
 
-DatePicker has `enableMask` property that provides the option to enable the built-in date masking support. Also, you must inject the MaskedDateTime module to enable the masking support.
+React DatePicker has `enableMask` property that provides the option to enable the built-in date masking support. Also, you must inject the MaskedDateTime module to enable the masking support.
 
 `[Class-component]`
 
@@ -45,7 +45,7 @@ The mask pattern follows the provided date format. When no format is specified, 
 | <kbd>Up / Down arrows</kbd> | To increment and decrement the selected portion of the date. |
 | <kbd>Left / Right arrows and Tab</kbd> | To navigate the selection from one portion to next portion |
 
-The following example demonstrates default and custom format of DatePicker component with mask.
+The following example demonstrates default and custom format of React DatePicker component with mask.
 
 `[Class-component]`
 

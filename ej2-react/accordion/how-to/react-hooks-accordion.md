@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to use React Hooks with Accordion
 
-You can prevent the React JSX component reload issue on state changes by rendering the React JSX component as children of Accordion component. In the below example, we have prevented the re-rending of textbox component on state changes in Accordion component.
+You can prevent the React JSX component reload issue on state changes by rendering the React JSX component as children of React Accordion component. In the below example, we have prevented the re-rending of textbox component on state changes in React Accordion component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
