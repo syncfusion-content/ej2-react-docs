@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
  
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
  
-The required styles for the Tooltip component are imported in the **src/App.css** file:
+The required styles for the React Tooltip component are imported in the **src/App.css** file:
  
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -156,6 +156,6 @@ The output appears as follows.
 
 ## See Also
 
-[Positioning Tooltip](./position)
-[Tooltip Open Mode](./open-mode)
-[Customize the Tooltip](./customization)
+[Positioning React Tooltip](./position)
+[React Tooltip Open Mode](./open-mode)
+[Customize the React Tooltip](./customization)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to show different types of Toast in React Toast
 
-The Syncfusion Toast component provides four predefined style variants for communicating different message types and severity levels. Apply these variants using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/toast/#cssclass) property to create semantically meaningful notifications. Selecting appropriate toast types helps users quickly understand the nature and urgency of messages.
+The Syncfusion React Toast component provides four predefined style variants for communicating different message types and severity levels. Apply these variants using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/toast#cssclass) property to create semantically meaningful notifications. Selecting appropriate toast types helps users quickly understand the nature and urgency of messages.
 
 | CSS Class | Use Case |
 | --- | --- |

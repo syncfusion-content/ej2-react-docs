@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Drag and Drop in React Query Builder UI
 
-Reposition rules or groups within the Query Builder using drag-and-drop interactions for intuitive query construction. Enable this feature with the [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/query-builder#allowDragAndDrop) property (default: `false`). When enabled, a drag handle appears next to each rule and group, and the mouse cursor changes to a move cursor on hover to indicate the element is draggable.
+Reposition rules or groups within the React Query Builder UI using drag-and-drop interactions for intuitive query construction. Enable this feature with the [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/query-builder#allowDragAndDrop) property (default: `false`). When enabled, a drag handle appears next to each rule and group, and the mouse cursor changes to a move cursor on hover to indicate the element is draggable.
 
 The component provides lifecycle events to monitor drag operations:
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to repeat button in React Button
 
-A repeat button triggers its click event repeatedly at regular intervals while the button is pressed, remaining active until released. This behavior is useful for continuous actions such as incrementing/decrementing values or volume control.
+A repeat React Button triggers its click event repeatedly at regular intervals while the button is pressed, remaining active until released. This behavior is useful for continuous actions such as incrementing/decrementing values or volume control.
 
-The following example demonstrates how to implement repeat button functionality using mouse and touch events:
+The following example demonstrates how to implement repeat React Button functionality using mouse and touch events:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

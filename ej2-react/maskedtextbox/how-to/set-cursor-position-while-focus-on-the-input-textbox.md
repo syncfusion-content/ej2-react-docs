@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to set cursor position in React MaskedTextBox
+# How to set cursor position in React Input Mask
 
-By default, when the MaskedTextBox is focused, the entire mask is selected. You can customize this using one of the following methods:
+By default, when the React Input Mask is focused, the entire mask is selected. You can customize this using one of the following methods:
 
-* Setting cursor position at the start of the MaskedTextBox
-* Setting cursor position at the end of the MaskedTextBox
-* Setting cursor position at a specific location in the MaskedTextBox
+* Setting cursor position at the start of the React Input Mask
+* Setting cursor position at the end of the React Input Mask
+* Setting cursor position at a specific location in the React Input Mask
 
-> When a MaskedTextBox is filled with all mask characters, **selectionStart** and **selectionEnd** are set to **0** instead of the input element's value length. This is the default behavior of the HTML5 input element.
+> When a React Input Mask is filled with all mask characters, **selectionStart** and **selectionEnd** are set to **0** instead of the input element's value length. This is the default behavior of the HTML5 input element.
 
 The following example demonstrates these cursor position cases using the [`focus`](https://ej2.syncfusion.com/react/documentation/api/maskedtextbox#focus) event.
 

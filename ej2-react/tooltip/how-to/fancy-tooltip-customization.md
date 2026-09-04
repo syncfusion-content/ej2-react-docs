@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to apply Fancy Tooltip customization in React Tooltip
 
-The Tooltip arrow can be customized by modifying CSS at the sample level.
+The React Tooltip arrow can be customized by modifying CSS at the sample level.
 
-The React Tooltip component is styled using CSS3 and positions the tip arrow according to the Tooltip positions such as `TopCenter`, `BottomLeft`, `RightTop`, and more.
+The React Tooltip component is styled using CSS3 and positions the tip arrow according to the React Tooltip positions such as `TopCenter`, `BottomLeft`, `RightTop`, and more.
 
-Here, the tip arrow is customized as Curved Tooltip and Bubble tooltip.
+Here, the tip arrow is customized as Curved React Tooltip and Bubble tooltip.
 
 ## Curved tip
 
@@ -64,9 +64,9 @@ The two `divs` (inner div and outer div) have been added to achieve the bubble t
     }
 ```
 
-These tip arrow customizations are achieved through CSS changes at the sample level. The Tooltip position can be changed using the radio button click event.
+These tip arrow customizations are achieved through CSS changes at the sample level. The React Tooltip position can be changed using the radio button click event.
 
-The arrow tip pointer can also be disabled using the [`showTipPointer`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#showtippointer) property of the tooltip.
+The arrow tip pointer can also be disabled using the [`showTipPointer`](https://ej2.syncfusion.com/react/documentation/api/tooltip/#showtippointer) property of the React Tooltip.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

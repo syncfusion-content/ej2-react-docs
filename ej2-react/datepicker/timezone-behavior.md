@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Timezone Behavior in React DatePicker
 
-The DatePicker component displays and maintains date values based on the client system's local time zone. When a user selects a date, it is stored using the system's time zone at the time of selection, ensuring consistent and predictable behavior.
+The React DatePicker component displays and maintains date values based on the client system's local time zone. When a user selects a date, it is stored using the system's time zone at the time of selection, ensuring consistent and predictable behavior.
 
 **Important**: If the system time zone changes after a date is selected, the DatePicker **does not automatically update** the displayed value. The component preserves the original selection, maintaining a stable user experience.
 
@@ -32,7 +32,7 @@ The `serverTimezoneOffset` property specifies the server's time zone offset from
 - **UTC±0 (GMT/UTC)**: Specify `serverTimezoneOffset={0}` when the server operates in UTC.
 - **Dynamic timezone changes**: System time zone changes after date selection do not affect already-selected values; users must re-select dates to reflect the new time zone.
 
-The following examples demonstrate DatePicker timezone handling:
+The following examples demonstrate React DatePicker timezone handling:
 
 `[Class-component]`
 

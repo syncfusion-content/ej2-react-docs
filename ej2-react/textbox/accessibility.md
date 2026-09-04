@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React TextBox
 
-The TextBox component is built to meet the highest accessibility standards, ensuring that all users—including those using assistive technologies—can interact with the component effectively. It complies with [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles) that are essential for evaluating digital accessibility.
+The React TextBox component is built to meet the highest accessibility standards, ensuring that all users—including those using assistive technologies—can interact with the component effectively. It complies with [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles) that are essential for evaluating digital accessibility.
 
-The accessibility compliance for the TextBox component is outlined in the table below. A checkmark (✓) indicates full feature compliance, while partial or absent support is noted accordingly.
+The accessibility compliance for the React TextBox component is outlined in the table below. A checkmark (✓) indicates full feature compliance, while partial or absent support is noted accordingly.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,9 +40,9 @@ The accessibility compliance for the TextBox component is outlined in the table 
 
 ## WAI-ARIA attributes
 
-The TextBox includes comprehensive ARIA accessibility support to enable seamless interaction with screen readers and other assistive technologies. This component implements the practices outlined in [WAI-ARIA Textbox specifications](https://www.w3.org/TR/wai-aria/#textbox), ensuring users with disabilities can access all functionality.
+The React TextBox includes comprehensive ARIA accessibility support to enable seamless interaction with screen readers and other assistive technologies. This component implements the practices outlined in [WAI-ARIA Textbox specifications](https://www.w3.org/TR/wai-aria/#textbox), ensuring users with disabilities can access all functionality.
 
-The TextBox uses the `textbox` role and following ARIA properties for its element based on its state.
+The React TextBox uses the `textbox` role and following ARIA properties for its element based on its state.
 
 | **Property** | **Functionality** |
 | --- | --- |
@@ -51,7 +51,7 @@ The TextBox uses the `textbox` role and following ARIA properties for its elemen
 
 ## Ensuring accessibility
 
-The TextBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React TextBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 The accessibility compliance of the TextBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/textbox.html) in a new window to evaluate the accessibility of the TextBox component with accessibility tools.
 

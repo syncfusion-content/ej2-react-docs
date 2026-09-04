@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Working with Data in React Mention
 
-The Mention loads data from local or remote sources using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/mention/#datasource) property. It supports both `array` and `DataManager` data types.
+The React Mention loads data from local or remote sources using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/mention/#datasource) property. It supports both `array` and `DataManager` data types.
 
-The Mention also supports different kinds of data services such as OData V4 and Web API, and data formats such as XML, JSON, and JSONP with the help of `DataManager` adaptors.
+The React Mention also supports different kinds of data services such as OData V4 and Web API, and data formats such as XML, JSON, and JSONP with the help of `DataManager` adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -21,7 +21,7 @@ The Mention also supports different kinds of data services such as OData V4 and 
 | groupBy |  `string` | Specifies the category under which the list item has to be grouped. |
 | iconCss |  `string` | Specifies the icon class of each list item. |
 
-> When binding complex data to the Mention, fields should be mapped correctly. Otherwise, the selected item remains undefined.
+> When binding complex data to the React Mention, fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
 ## Binding local data
 
@@ -29,7 +29,7 @@ Local data can be represented in three ways as described in the following.
 
 ### Array of simple data
 
-The Mention supports loading primitive data arrays such as strings and numbers. For primitive data, both the value and text fields represent the same data.
+The React Mention supports loading primitive data arrays such as strings and numbers. For primitive data, both the value and text fields represent the same data.
 
 `[Class-component]`
 
@@ -59,7 +59,7 @@ The Mention supports loading primitive data arrays such as strings and numbers. 
 
 ### Array of JSON data
 
-The Mention generates list items from JSON data arrays. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) property.
+The React Mention generates list items from JSON data arrays. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) property.
 
 In the following example, the `ID` and `Game` columns are mapped to the `value` and `text` fields respectively:
 
@@ -91,7 +91,7 @@ In the following example, the `ID` and `Game` columns are mapped to the `value` 
 
 ### Array of Complex data
 
-The Mention generates list items from complex nested data. Map the appropriate nested columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) property.
+The React Mention generates list items from complex nested data. Map the appropriate nested columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/mention/#fields) property.
 
 In the following example, the `Code.ID` and `Country.Name` columns are mapped to the `value` and `text` fields respectively:
 
@@ -123,7 +123,7 @@ In the following example, the `Code.ID` and `Country.Name` columns are mapped to
 
 ## Binding remote data
 
-The Mention retrieves data from remote services using the `DataManager` component. Use the [query](https://ej2.syncfusion.com/react/documentation/api/mention/#query) property to fetch data from the database and bind it to the Mention.
+The React Mention retrieves data from remote services using the `DataManager` component. Use the [query](https://ej2.syncfusion.com/react/documentation/api/mention/#query) property to fetch data from the database and bind it to the React Mention.
 
 ### OData v4 adaptor - Binding OData v4 service
 

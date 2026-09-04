@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to show multiple Toasts in various positions in React Toast
 
-By default, the Toast position applies only to toasts currently being displayed. To show toasts simultaneously at different screen positions, create multiple Toast component instances, each configured with a different position value. This multi-instance approach enables displaying related notifications (success, warning, error) in different corners or edges of the screen, improving information organization and visual hierarchy.
+By default, the React Toast position applies only to React Toast currently being displayed. To show React Toast simultaneously at different screen positions, create multiple React Toast component instances, each configured with a different position value. This multi-instance approach enables displaying related notifications (success, warning, error) in different corners or edges of the screen, improving information organization and visual hierarchy.
 
-The following example demonstrates displaying multiple toasts at various screen positions:
+The following example demonstrates displaying multiple React Toast at various screen positions:
 
 `[Class-component]`
 

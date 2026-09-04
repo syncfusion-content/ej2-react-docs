@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to set the read-only in React DatePicker
 
-The DatePicker can be set to read-only mode using the [`readOnly`](https://ej2.syncfusion.com/react/documentation/api/datepicker/#readonly) property. When enabled, users can view and select dates from the calendar popup, but cannot directly edit the input field. This is useful for scenarios where date selection should be guided through the calendar interface only.
+The React DatePicker can be set to read-only mode using the [`readOnly`](https://ej2.syncfusion.com/react/documentation/api/datepicker/index-default#readonly) property. When enabled, users can view and select dates from the calendar popup, but cannot directly edit the input field. This is useful for scenarios where date selection should be guided through the calendar interface only.
 
-The following example demonstrates how to configure a read-only DatePicker component:
+The following example demonstrates how to configure a read-only React DatePicker component:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

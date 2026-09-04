@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to dynamically move input to edit mode in React In-place Editor
 
-Open the editor automatically when the In-place Editor component loads by setting the [enableEditMode](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#enableeditmode) property to `true`.
+Open the editor automatically when the React In-place Editor component loads by setting the [enableEditMode](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#enableeditmode) property to `true`.
 
 In the following sample, the editor opens at initial load. Toggling the checkbox dynamically toggles the edit mode on and off.
 

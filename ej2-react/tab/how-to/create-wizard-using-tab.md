@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to create a wizard using Tab in React Tab
 
-Tab items can be disabled dynamically by passing the index and a boolean value to the [`enableTab`](https://ej2.syncfusion.com/react/documentation/api/tab#enabletab) method. An item can be selected by passing an index or HTML element to the [`select`](https://ej2.syncfusion.com/react/documentation/api/tab#select) method.
+React Tab items can be disabled dynamically by passing the index and a boolean value to the [`enableTab`](https://ej2.syncfusion.com/react/documentation/api/tab#enabletab) method. An item can be selected by passing an index or HTML element to the [`select`](https://ej2.syncfusion.com/react/documentation/api/tab#select) method.
 
-Create the following contents for each tab in the wizard.
+Create the following contents for each React tab in the wizard.
 1. **Search tab:**
    Created with [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/data-binding) to select the source, destination, and type of ticket. A [DatePicker](https://ej2.syncfusion.com/react/documentation/datepicker/getting-started) for choosing the date of journey.
 2. **Train tab:**
@@ -22,9 +22,9 @@ Create the following contents for each tab in the wizard.
 4. **Payment tab:**
    Calculates the ticket cost based on location, passenger count, and ticket type. Generate data for the Grid with passenger details, train number, and ticket cost summary.
 
-You can go back on each tab using the buttons available in it, and tabs are [`disabled`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#disabled) to prevent navigation via tab header click actions. Once you end the wizard, all the data is cleared and the wizard returns to the starting tab.
+You can go back on each React tab using the buttons available in it, and tabs are [`disabled`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#disabled) to prevent navigation via React tab header click actions. Once you end the wizard, all the data is cleared and the wizard returns to the starting tab.
 
-The following demo is designed for a simple train reservation module that enables and disables tab items based on the sequential validation of each Tab's content.
+The following demo is designed for a simple train reservation module that enables and disables React tab items based on the sequential validation of each Tab's content.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to confirm before removing files in React File Upload
 
-Prevent accidental file deletion by displaying a confirmation dialog before removing files from the Uploader. This example uses the [EJ2 Dialog](https://ej2.syncfusion.com/react/documentation/dialog/getting-started) component to create a confirmation prompt that validates the user's intent before proceeding with file removal.
+Prevent accidental file deletion by displaying a confirmation dialog before removing files from the React File Upload. This example uses the [EJ2 Dialog](https://ej2.syncfusion.com/react/documentation/dialog/getting-started) component to create a confirmation prompt that validates the user's intent before proceeding with file removal.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

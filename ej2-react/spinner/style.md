@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the spinner
+## Customizing the React Spinner
 
-Use the following CSS to customize the spinner stroke color.
+Use the following CSS to customize the React Spinner stroke color.
 
 ### Material theme
 

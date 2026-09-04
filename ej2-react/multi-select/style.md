@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in React MultiSelect Dropdown
 
-The following CSS classes and structures enable customization of the MultiSelect appearance to match your design requirements.
+The following CSS classes and structures enable customization of the React MultiSelect Dropdown appearance to match your design requirements.
 
 ## Customizing the background color of wrapper element
 

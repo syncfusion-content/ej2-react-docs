@@ -15,7 +15,7 @@ The [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/timepicker
 - **Invalid time values** revert to the previously valid value
 - **Out-of-range values** adjust to the nearest boundary (min or max)
 
-The following example demonstrates the TimePicker in `strictMode` with min/max range of `10:00 AM` to `4:00 PM` . It allows you to enter only valid time within the specified range. If you enter the out-of-range value like `8:00 PM`, the value sets to the max time `4:00 PM` as the value `8:00 PM` is greater than `max` value of `4:00 PM`. If you enter invalid time value like `9:00 tt`, the value sets to the previous value.
+The following example demonstrates the React TimePicker in `strictMode` with min/max range of `10:00 AM` to `4:00 PM` . It allows you to enter only valid time within the specified range. If you enter the out-of-range value like `8:00 PM`, the value sets to the max time `4:00 PM` as the value `8:00 PM` is greater than `max` value of `4:00 PM`. If you enter invalid time value like `9:00 tt`, the value sets to the previous value.
 
 `[Class-component]`
 
@@ -45,7 +45,7 @@ The following example demonstrates the TimePicker in `strictMode` with min/max r
 
 ## Default Behavior (strictMode = false)
 
-By default, the TimePicker operates with `strictMode` set to `false`, which allows entry of invalid or out-of-range times. When this occurs:
+By default, the React TimePicker operates with `strictMode` set to `false`, which allows entry of invalid or out-of-range times. When this occurs:
 
 - **Out-of-range values**: Set to the out-of-range time with an `error` class applied
 - **Invalid values**: Set to `null` with an `error` class applied to indicate validation failure

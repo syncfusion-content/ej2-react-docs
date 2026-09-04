@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Sidebar
 
-This section explains how to create a simple Sidebar component and configure its core functionalities in a React application.
+This section explains how to create a simple React Sidebar component and configure its core functionalities in a React application.
 
 ## Prerequisites
 
@@ -80,7 +80,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the Sidebar component are imported in the **src/App.css** file:
+The required styles for the React Sidebar component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -92,13 +92,13 @@ The required styles for the Sidebar component are imported in the **src/App.css*
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add Sidebar component
+## Add React Sidebar component
 
 The `SidebarComponent` tag renders a panel for primary content placed aside from the main content. The immediate sibling element of `SidebarComponent` is treated as the main content area.
 
-* To include the Sidebar component in application import the `SidebarComponent` from `ej2-react-navigations` package in **App.jsx**.
+* To include the React Sidebar component in application import the `SidebarComponent` from `ej2-react-navigations` package in **App.jsx**.
 
-* Then add the Sidebar component as shown in below code example.
+* Then add the React Sidebar component as shown in below code example.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -139,10 +139,10 @@ The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/sidebar/default-cs1" %}
 
- > Refer to the [React Sidebar](https://www.syncfusion.com/react-components/react-sidebar) feature tour page for its groundbreaking feature representations. You can also explore our [React Sidebar component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/sidebar/default) that shows how to render the Sidebar in React.
+ > Refer to the [React Sidebar](https://www.syncfusion.com/react-components/react-sidebar) feature tour page for its groundbreaking feature representations. You can also explore our [React Sidebar component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/sidebar/default) that shows how to render the React Sidebar.
 
 ## See Also
 
-* [Sidebar with navigation menu](https://ej2.syncfusion.com/react/demos/#/tailwind3/sidebar/sidebar-menu)
-* [Sidebar responsive panel](https://ej2.syncfusion.com/react/demos/#/tailwind3/sidebar/responsive-panel)
-* [Sidebar with listview](./how-to/sidebar-with-listview)
+* [React Sidebar with navigation menu](https://ej2.syncfusion.com/react/demos/#/tailwind3/sidebar/sidebar-menu)
+* [React Sidebar responsive panel](https://ej2.syncfusion.com/react/demos/#/tailwind3/sidebar/responsive-panel)
+* [React Sidebar with listview](./how-to/sidebar-with-listview)

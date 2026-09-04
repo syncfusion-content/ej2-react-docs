@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Transform in React Image Editor
 
-The Image Editor provides rotation, flipping, zooming, and panning for manipulating both the image and its annotations, offering flexibility to adjust and enhance visuals.
+The React Image Editor provides rotation, flipping, zooming, and panning for manipulating both the image and its annotations, offering flexibility to adjust and enhance visuals.
 
 ## Rotate an image
 
-The Image Editor allows you to rotate the image and its annotations by a specific number of degrees (clockwise or counterclockwise) using the [`rotate`](https://ej2.syncfusion.com/react/documentation/api/image-editor#rotate) method. This method accepts a single parameter: the rotation angle in degrees (positive rotates clockwise; negative rotates counterclockwise).
+The React Image Editor allows you to rotate the image and its annotations by a specific number of degrees (clockwise or counterclockwise) using the [`rotate`](https://ej2.syncfusion.com/react/documentation/api/image-editor#rotate) method. This method accepts a single parameter: the rotation angle in degrees (positive rotates clockwise; negative rotates counterclockwise).
 
 Note: For best alignment, use multiples of 90° (for example, 90, 180, -90).
 
@@ -36,7 +36,7 @@ Here is an example of rotating an image in a button click event.
 
 ## Flip an image
 
-The Image Editor provides the [`flip`](https://ej2.syncfusion.com/react/documentation/api/image-editor#flip) method, which allows you to flip both the image and its annotations either horizontally or vertically. This method takes a single parameter of type ImageEditorDirection, which specifies the direction in which the flip operation should be applied. 
+The React Image Editor provides the [`flip`](https://ej2.syncfusion.com/react/documentation/api/image-editor#flip) method, which allows you to flip both the image and its annotations either horizontally or vertically. This method takes a single parameter of type ImageEditorDirection, which specifies the direction in which the flip operation should be applied. 
 
 The [`Direction`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/direction) parameter accepts two values: 'Horizontal' and 'Vertical'. When you choose 'Horizontal', the image and annotations will be flipped along the horizontal axis, resulting in a mirror effect. On the other hand, selecting 'Vertical' will flip them along the vertical axis, producing a vertical mirror effect. 
 
@@ -58,7 +58,7 @@ Here is an example of flipping an image in a button click event.
 
 ## Straighten an image
 
-The straightening feature in an Image Editor allows users to adjust an image by rotating it clockwise or counter clockwise. The rotating degree value should be within the range of -45 to +45 degrees for accurate straightening. Positive values indicate clockwise rotation, while negative values indicate counter clockwise rotation. The Image Editor control includes a [`straightenImage`](https://ej2.syncfusion.com/react/documentation/api/image-editor#straightenimage) method, which allows you to adjust the degree of an image. This method takes one parameter that define how the straightening should be carried out:
+The straightening feature in an React Image Editor allows users to adjust an image by rotating it clockwise or counter clockwise. The rotating degree value should be within the range of -45 to +45 degrees for accurate straightening. Positive values indicate clockwise rotation, while negative values indicate counter clockwise rotation. The React Image Editor control includes a [`straightenImage`](https://ej2.syncfusion.com/react/documentation/api/image-editor#straightenimage) method, which allows you to adjust the degree of an image. This method takes one parameter that define how the straightening should be carried out:
 
 * degree: Specifies the amount of rotation for straightening the image. Positive values indicate clockwise rotation, while negative values indicate counterclockwise rotation.
 
@@ -80,7 +80,7 @@ Here is an example of straightening the image.
 
 ## Zoom in or out an image 
 
-The Image Editor allows you to magnify an image using the [`zoom`](https://ej2.syncfusion.com/react/documentation/api/image-editor#zoom) method. This method enables zooming in and out and provides a more detailed view of image regions. It accepts two parameters to perform zooming.
+The React Image Editor allows you to magnify an image using the [`zoom`](https://ej2.syncfusion.com/react/documentation/api/image-editor#zoom) method. This method enables zooming in and out and provides a more detailed view of image regions. It accepts two parameters to perform zooming.
 
 * zoomFactor - Specifies a value to controlling the level of magnification applied to the image. 
 
@@ -92,11 +92,11 @@ The [`minZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/ima
 
 By default, the `minZoomFactor` value is set to 0.1, meaning the image can be zoomed out to 10% of its original size.
 
-The [`maxZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel#maxzoomfactor) property is a useful feature in the Image Editor that allows you to define the maximum level of zoom permitted for an image. This property sets a limit on how much the image can be magnified, preventing excessive zooming that may result in a loss of image quality or visibility. 
+The [`maxZoomFactor`](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettingsModel#maxzoomfactor) property is a useful feature in the React Image Editor that allows you to define the maximum level of zoom permitted for an image. This property sets a limit on how much the image can be magnified, preventing excessive zooming that may result in a loss of image quality or visibility. 
 
 By default, the `maxZoomFactor` value is set to 10, meaning that the image can be zoomed in up to 10 times its original size. This ensures that the zooming functionality remains within reasonable bounds and maintains the integrity of the image. 
 
-Here’s an example of zooming in and out in the Image Editor by setting the `minZoomFactor` and `maxZoomFactor` properties within the [zoomSettings](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettings) options.
+Here’s an example of zooming in and out in the React Image Editor by setting the `minZoomFactor` and `maxZoomFactor` properties within the [zoomSettings](https://helpej2.syncfusion.com/react/documentation/api/image-editor/zoomSettings) options.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -114,7 +114,7 @@ Here’s an example of zooming in and out in the Image Editor by setting the `mi
 
 ## Panning an image
 
-The Image Editor allows to pan an image when the image exceeds the canvas size or selection range. When zooming in on an image or applying a selection for cropping, it is common for the image to exceed the size of the canvas or exceed the selection range. So, the panning is used to view the entire image, by clicking on the canvas and dragging it in the direction they want to move.
+The React Image Editor allows to pan an image when the image exceeds the canvas size or selection range. When zooming in on an image or applying a selection for cropping, it is common for the image to exceed the size of the canvas or exceed the selection range. So, the panning is used to view the entire image, by clicking on the canvas and dragging it in the direction they want to move.
 
 In the following example, you can enable panning using the [`pan`](https://ej2.syncfusion.com/react/documentation/api/image-editor#pan) method in the button click event.
 
@@ -152,13 +152,13 @@ The parameter available in the Zooming event is,
 
 * ZoomEventArgs.zoomPoint - The x and y coordinates as ImageEditorPoint for the zoom point. 
 
-* ZoomEventArgs.previousZoomFactor - The previous zoom factor applied in the image editor. 
+* ZoomEventArgs.previousZoomFactor - The previous zoom factor applied in the React Image Editor. 
 
-* ZoomEventArgs.currentZoomFactor - The current zoom factor to be applied in the image editor. 
+* ZoomEventArgs.currentZoomFactor - The current zoom factor to be applied in the React Image Editor. 
 
 * ZoomEventArgs.cancel – Specify a boolean value to cancel the zooming action. 
 
-* ZoomEventArgs.zoomTrigger - The type of zooming performed in the image editor. 
+* ZoomEventArgs.zoomTrigger - The type of zooming performed in the React Image Editor. 
 
 ## Rotating event 
 
@@ -166,9 +166,9 @@ The [`rotating`](https://ej2.syncfusion.com/documentation/api/image-editor#rotat
 
 The parameter available in the Rotating event is, 
 
-* RotateEventArgs.previousDegree: The degree of rotation before the recent rotation action was applied in the Image Editor. 
+* RotateEventArgs.previousDegree: The degree of rotation before the recent rotation action was applied in the React Image Editor. 
 
-* RotateEventArgs.currentDegree: The current degree of rotation after the rotation action has been performed in the Image Editor. 
+* RotateEventArgs.currentDegree: The current degree of rotation after the rotation action has been performed in the React Image Editor. 
 
 RotateEventArgs.cancel – Specifies a boolean value to cancel the rotating action. 
 
@@ -178,6 +178,6 @@ The [`flipping`](https://ej2.syncfusion.com/documentation/api/image-editor#flipp
 
 The parameter available in the `flipping` event is, 
 
-* FlipEventArgs.direction - The flip direction as ImageEditorDirection to be applied in the image editor. 
+* FlipEventArgs.direction - The flip direction as ImageEditorDirection to be applied in the React Image Editor. 
 
 * FlipEventArgs.cancel - Specifies a boolean value to cancel the flip action. 

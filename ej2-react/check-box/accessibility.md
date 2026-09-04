@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Checkbox
 
-The CheckBox component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Checkbox component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The following table outlines the accessibility compliance of the CheckBox component:
+The following table outlines the accessibility compliance of the React Checkbox component:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,25 +42,25 @@ The following table outlines the accessibility compliance of the CheckBox compon
 
 ## WAI-ARIA attributes
 
-The CheckBox component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/) patterns to meet accessibility requirements. The following ARIA attributes are used in the CheckBox component:
+The React Checkbox component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/) patterns to meet accessibility requirements. The following ARIA attributes are used in the React Checkbox component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `aria-disabled` | Indicates that the CheckBox element is perceived but disabled, so it is not editable or operable by the user. |
+| `aria-disabled` | Indicates that the React Checkbox element is perceived but disabled, so it is not editable or operable by the user. |
 
 ## Keyboard interaction
 
-The CheckBox component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcut is supported:
+The React Checkbox component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcut is supported:
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Space</kbd> | When the CheckBox has focus, pressing the Space key toggles the checkbox between checked and unchecked states. |
+| <kbd>Space</kbd> | When the React Checkbox has focus, pressing the Space key toggles the React Checkbox between checked and unchecked states. |
 
 ## Ensuring accessibility
 
-The CheckBox component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Checkbox component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the CheckBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/checkbox.html) in a new window to evaluate the CheckBox component's accessibility with accessibility tools.
+The accessibility compliance of the React Checkbox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/checkbox.html) in a new window to evaluate the React Checkbox component's accessibility with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/checkbox.html" %}
 

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # How to set command customization in React Toolbar
 
-The [`htmlAttributes`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#htmlattributes) property of the Toolbar item (accepts an object of type `{ [key: string]: string }` with a default of `{}`) is used to set the HTML attributes (`id`, `class`, `style`, `role`) for the commands.
+The [`htmlAttributes`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#htmlattributes) property of the React Toolbar item (accepts an object of type `{ [key: string]: string }` with a default of `{}`) is used to set the HTML attributes (`id`, `class`, `style`, `role`) for the commands.
 
 If the same attributes already exist, they are replaced when new ones are added. This is not the case for the `class` attribute. Classes are appended to the element rather than replacing existing ones.
 
 ## Add CSS classes
 
-Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item's [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#cssclass) property (a `string` with a default of `''`; multiple classes are separated by a space).
+Single or multiple CSS classes can be added to the React Toolbar commands using the React Toolbar item's [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#cssclass) property (a `string` with a default of `''`; multiple classes are separated by a space).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

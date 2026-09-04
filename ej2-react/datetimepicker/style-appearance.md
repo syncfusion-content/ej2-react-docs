@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the appearance of DateTimePicker wrapper element
+## Customizing the appearance of React DateTime Picker wrapper element
 
 Use the following CSS selectors to customize the appearance of the wrapper element. Apply these styles with appropriate specificity to override default component styles.
 
@@ -24,9 +24,9 @@ Use the following CSS selectors to customize the appearance of the wrapper eleme
     }
 ```
 
-## Customizing the DateTimePicker icon elements
+## Customizing the React DateTime Picker icon elements
 
-Use the following CSS to customize the DateTimePicker icon appearance:
+Use the following CSS to customize the React DateTime Picker icon appearance:
 
 ```css
 /* To specify background color and font size */
@@ -36,9 +36,9 @@ Use the following CSS to customize the DateTimePicker icon appearance:
     }
 ```
 
-## Customizing the time picker popup in the DateTimePicker
+## Customizing the time picker popup in the React DateTime Picker
 
-Use the following CSS to customize the time picker popup in the DateTimePicker
+Use the following CSS to customize the time picker popup in the React DateTime Picker
 
 ```css
 /* To specify height */
@@ -47,15 +47,15 @@ Use the following CSS to customize the time picker popup in the DateTimePicker
 }
 ```
 
-## Customizing the Calendar popup of the DateTimePicker
+## Customizing the Calendar popup of the React DateTime Picker
 
-Please check the below section, to customize the style and appearance of the Calendar component in the DateTimePicker
+Please check the below section, to customize the style and appearance of the Calendar component in the React DateTime Picker
 
 [Customizing Calendar's style and appearance](../calendar/style-appearance/)
 
 ## Full screen mode support in mobiles and tablets
 
-The DateTimePicker's full-screen mode feature enhances visibility and usability on mobile and tablet devices by expanding the calendar and time picker popups to occupy the full screen in both landscape and portrait orientations. To enable full-screen mode, set the [fullScreenMode](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#fullScreenMode) property to `true`. The calendar and time popup will then automatically expand to full-screen on mobile devices, providing a more immersive date and time selection experience.
+The React DateTime Picker's full-screen mode feature enhances visibility and usability on mobile and tablet devices by expanding the calendar and time picker popups to occupy the full screen in both landscape and portrait orientations. To enable full-screen mode, set the [fullScreenMode](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#fullScreenMode) property to `true`. The calendar and time popup will then automatically expand to full-screen on mobile devices, providing a more immersive date and time selection experience.
 
 ```typescript
 import { DateTimePickerComponent } from '@syncfusion/ej2-react-calendars';

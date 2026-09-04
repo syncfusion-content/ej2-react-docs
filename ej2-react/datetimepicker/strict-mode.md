@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Strict Mode in React DateTime Picker
 
-When [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#strictmode) is enabled, the DateTimePicker validates user input against specified min/max constraints. The following behaviors apply:
+When [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#strictmode) is enabled, the React DateTime Picker validates user input against specified min/max constraints. The following behaviors apply:
 
 - **Valid date-times within range**: Accepted and applied
 - **Out-of-range date-times**: Automatically adjusted to the nearest boundary (min or max)
 - **Invalid date-times**: Rejected; the component retains the previous value
 
-The following example demonstrates the DateTimePicker in `strictMode` with a range from `5/5/2019 2:00 AM` to `5/25/2019 2:00 AM`. When attempting to enter `5/28/2019` (exceeding the maximum), the component sets the value to the maximum date-time (`5/25/2019 2:00 AM`). If an invalid date-time is entered, the component preserves the previous selection.
+The following example demonstrates the React DateTime Picker in `strictMode` with a range from `5/5/2019 2:00 AM` to `5/25/2019 2:00 AM`. When attempting to enter `5/28/2019` (exceeding the maximum), the component sets the value to the maximum date-time (`5/25/2019 2:00 AM`). If an invalid date-time is entered, the component preserves the previous selection.
 
 `[Class-component]`
 

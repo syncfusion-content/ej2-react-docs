@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Menu
 
-This section explains how to create a simple Menu and configure its available functionalities in React.
+This section explains how to create a simple React Menu and configure its available functionalities in React.
 
 ## Prerequisites
 
@@ -80,7 +80,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the Menu component are imported in the **src/App.css** file:
+The required styles for the React Menu component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}

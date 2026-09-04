@@ -9,9 +9,9 @@ domainurl: ##DomainURL##
 ---
 
 # How to make Context Menu overflow scrollable in React
-Overflow Scrollable ContextMenu can be achieved by restricting the height of the `ul` element.
+Overflow Scrollable React Context Menu can be achieved by restricting the height of the `ul` element.
 
-In the following example, the height of the ContextMenu popup list (`ul`) is restricted to `150px` and the `overflow` property is set to `auto`, so a scrollbar appears when the items overflow the restricted height.
+In the following example, the height of the React Context Menu popup list (`ul`) is restricted to `150px` and the `overflow` property is set to `auto`, so a scrollbar appears when the items overflow the restricted height.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

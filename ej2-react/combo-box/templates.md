@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Templates in React ComboBox
 
-The ComboBox provides comprehensive template support to customize list items, group titles, headers, and footer elements.
+The React ComboBox provides comprehensive template support to customize list items, group titles, headers, and footer elements.
 
 To get started with React ComboBox templates, you can check this video:
 
@@ -116,7 +116,7 @@ In the following example, list items and their headers display in a two-column l
 
 Add a footer element at the bottom of the popup list using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#footertemplate) property. This allows you to place custom elements such as summaries, totals, or action buttons.
 
-In the following example, the footer displays the total number of list items in the ComboBox.
+In the following example, the footer displays the total number of list items in the React ComboBox.
 
 `[Class-component]`
 
@@ -146,7 +146,7 @@ In the following example, the footer displays the total number of list items in 
 
 ## No records template
 
-The ComboBox is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of
+The React ComboBox is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of
 [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#norecordstemplate) property.
 
 In the following sample, popup list content displays the notification of no data available.
@@ -182,7 +182,7 @@ In the following sample, popup list content displays the notification of no data
 There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the
 [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/combo-box#actionfailuretemplate) property.
 
-In the following sample, when the data fetch request fails, the ComboBox displays the notification.
+In the following sample, when the data fetch request fails, the React ComboBox displays the notification.
 
 `[Class-component]`
 

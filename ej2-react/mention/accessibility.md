@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Mention
 
-Web accessibility makes web content and web applications more accessible for people with disabilities. Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendent`.
+Web accessibility makes web content and web applications more accessible for people with disabilities. React Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendent`.
 
-The Mention component adheres to established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
+The React Mention component adheres to established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the Mention component is outlined below.
+The accessibility compliance for the React Mention component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,7 +42,7 @@ The accessibility compliance for the Mention component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Mention component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/) patterns to ensure accessibility compliance. The following ARIA attributes are used in the Mention component:
+The React Mention component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/) patterns to ensure accessibility compliance. The following ARIA attributes are used in the React Mention component:
 
 | **Properties** | **Functionalities** |
 | --- | --- |
@@ -52,11 +52,11 @@ The Mention component implements [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patt
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the Mention without interruptions.
+You can use the following key shortcuts to access the React Mention without interruptions.
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Arrow Down</kbd> | Selects the first item in the Mention list. Otherwise, selects the item next to the currently selected item. |
+| <kbd>Arrow Down</kbd> | Selects the first item in the React Mention list. Otherwise, selects the item next to the currently selected item. |
 | <kbd>Arrow Up</kbd> | Selects the item previous to the currently selected one. |
 | <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state. |
 | <kbd>Enter</kbd> | Selects the focused item, and when it is in an open state the popup list closes. |
@@ -90,9 +90,9 @@ You can use the following key shortcuts to access the Mention without interrupti
 
 ## Ensuring accessibility
 
-The Mention component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Mention component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Mention component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/mention.html) in a new window to evaluate the accessibility of the Mention component with accessibility tools.
+The accessibility compliance of the React Mention component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/mention.html) in a new window to evaluate the accessibility of the React Mention component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/mention.html" %}
 

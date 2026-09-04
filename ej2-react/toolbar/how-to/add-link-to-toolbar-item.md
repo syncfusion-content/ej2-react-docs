@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to add a link to a Toolbar item in React
 
-You can add a link inside the Toolbar using a React `template`. Follow the guidelines below to add a link as a template in the Toolbar.
+You can add a link inside the React Toolbar using a React `template`. Follow the guidelines below to add a link as a template in the React Toolbar.
 
-1. Declare a template within a function that returns a JSX element. The template can receive the item's data object as an argument (e.g., `props` containing the toolbar item); if the template does not need any arguments, there is no need to pass any properties.
+1. Declare a template within a function that returns a JSX element. The template can receive the item's data object as an argument (e.g., `props` containing the React toolbar item); if the template does not need any arguments, there is no need to pass any properties.
 
-2. Assign the function as the value for the `template` option of the toolbar item, for example `<ItemDirective template={linkTemplate} />`.
+2. Assign the function as the value for the `template` option of the React toolbar item, for example `<ItemDirective template={linkTemplate} />`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

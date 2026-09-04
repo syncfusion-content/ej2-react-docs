@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to set the nested accordion in React Accordion
 
-Accordion supports to render `nested` level of Accordion by using [`content`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItemModel#content) property. You can give nested Accordion content inside the parent Accordion content property by using `id` of nested element. The nested Accordion can be rendered with the use of provided events, such as [`clicked`](https://ej2.syncfusion.com/react/documentation/api/accordion#clicked) and [`expanding`](https://ej2.syncfusion.com/react/documentation/api/accordion#expanding).
+React Accordion supports to render `nested` level of Accordion by using [`content`](https://ej2.syncfusion.com/react/documentation/api/accordion/accordionItemModel#content) property. You can give nested Accordion content inside the parent React Accordion content property by using `id` of nested element. The nested React Accordion can be rendered with the use of provided events, such as [`clicked`](https://ej2.syncfusion.com/react/documentation/api/accordion#clicked) and [`expanding`](https://ej2.syncfusion.com/react/documentation/api/accordion#expanding).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

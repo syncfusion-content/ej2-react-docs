@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React DateRangePicker
 
-The DateRangePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React DateRangePicker component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the DateRangePicker component is outlined below.
+The accessibility compliance for the React DateRangePicker component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,19 +42,19 @@ The accessibility compliance for the DateRangePicker component is outlined below
 
 Web accessibility standards define practices to make web content and applications more accessible to users with disabilities. WAI-ARIA attributes are particularly valuable for dynamic content and advanced user interface controls built with AJAX, HTML, JavaScript, and related technologies.
 
-The DateRangePicker component provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications through attributes applied to the input element: `aria-expanded`, `aria-disabled`, and `aria-activedescendant`. The component also includes grid role and grid cell attributes for each day cell to enhance semantic meaning.
+The React DateRangePicker component provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/) specifications through attributes applied to the input element: `aria-expanded`, `aria-disabled`, and `aria-activedescendant`. The component also includes grid role and grid cell attributes for each day cell to enhance semantic meaning.
 
-For related information, refer to the Calendar component's [Accessibility](../calendar/accessibility/) section.
+For related information, refer to the Calendar component's [Accessibility](../calendar/accessibility) section.
 
-These attributes enable users with disabilities to interact effectively with the DateRangePicker through assistive technologies such as screen readers.
+These attributes enable users with disabilities to interact effectively with the React DateRangePicker through assistive technologies such as screen readers.
 
-* **aria-expanded**: Indicates whether the DateRangePicker popup is expanded or collapsed.
+* **aria-expanded**: Indicates whether the React DateRangePicker popup is expanded or collapsed.
 
-* **aria-disabled**: Indicates the disabled state of the DateRangePicker component.
+* **aria-disabled**: Indicates the disabled state of the React DateRangePicker component.
 
 ## Keyboard Interaction
 
-You can use the following keys to interact with the DateRangePicker. This component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
+You can use the following keys to interact with the React DateRangePicker. This component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
 
 It supports the following list of shortcut keys:
 
@@ -90,7 +90,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
 | <kbd>Alt + Right</kbd>  | Focuses through out the pop-up container in forward direction. |
 | <kbd>Alt + Left</kbd>  | Focuses through out the pop-up container in backward direction. |
 
-> To focus the DateRangePicker component, use the `alt+t` keys.
+> To focus the React DateRangePicker component, use the `alt+t` keys.
 
 `[Class-component]`
 
@@ -120,9 +120,9 @@ Use the following list of keys to navigate the currently focused Calendar after 
 
 ## Ensuring accessibility
 
-The DateRangePicker component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React DateRangePicker component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the DateRangePicker component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/date-range-picker.html) in a new window to evaluate the accessibility of the DateRangePicker component with accessibility tools.
+The accessibility compliance of the React DateRangePicker component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/date-range-picker.html) in a new window to evaluate the accessibility of the React DateRangePicker component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/date-range-picker.html" %}
 

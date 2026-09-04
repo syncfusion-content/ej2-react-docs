@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Button Group
 
-The ButtonGroup component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Button Group component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The following table outlines the accessibility compliance of the ButtonGroup component:
+The following table outlines the accessibility compliance of the React Button Group component:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,34 +42,34 @@ The following table outlines the accessibility compliance of the ButtonGroup com
 
 ## Keyboard interaction
 
-The ButtonGroup component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcuts are supported:
+The React Button Group component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it accessible for people who use assistive technologies and those who rely entirely on keyboard navigation. The following keyboard shortcuts are supported:
 
 ### Normal behavior
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Tab</kbd> | Focuses the next button in the ButtonGroup. |
-| <kbd>Enter/Space</kbd> | Activates the focussed button in the ButtonGroup. |
+| <kbd>Tab</kbd> | Focuses the next button in the React Button Group. |
+| <kbd>Enter/Space</kbd> | Activates the focussed button in the React Button Group. |
 
 ### Checkbox behavior
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Tab</kbd> | Focuses the next button in the ButtonGroup. |
-| <kbd>Space</kbd> | Activates the focused button in the ButtonGroup. |
+| <kbd>Tab</kbd> | Focuses the next button in the React Button Group. |
+| <kbd>Space</kbd> | Activates the focused button in the React Button Group. |
 
 ### Radio button behavior
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Tab</kbd> | Focuses the active button in the ButtonGroup. |
-| <kbd>Right/Left</kbd> | Activates the next or previous button in the ButtonGroup. |
+| <kbd>Tab</kbd> | Focuses the active button in the React Button Group. |
+| <kbd>Right/Left</kbd> | Activates the next or previous button in the React Button Group. |
 
 ## Ensuring accessibility
 
-The ButtonGroup component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Button Group component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the ButtonGroup component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/button-group.html) in a new window to evaluate the ButtonGroup component's accessibility with accessibility tools.
+The accessibility compliance of the React Button Group component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/button-group.html) in a new window to evaluate the React Button Group component's accessibility with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/button-group.html" %}
 

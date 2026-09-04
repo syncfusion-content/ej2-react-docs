@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The submenu position can be changed by using the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/menu/#beforeopen) event. Assign the top and left position where you want to open the submenu to the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/menu/#beforeopen) event arguments `args.top` and `args.left` respectively.
 
-In the below sample, the sub menu opens above the parent menu item.
+In the below sample, the sub menu opens above the parent React menu item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

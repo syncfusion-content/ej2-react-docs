@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Query Builder UI
 
-This section explains the steps required to create a simple React Query Builder component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple React Query Builder UI component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
  
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
  
-The required styles for the Query Builder component are imported in the **src/App.css** file:
+The required styles for the React Query Builder UI component are imported in the **src/App.css** file:
  
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,9 +94,9 @@ The required styles for the Query Builder component are imported in the **src/Ap
  
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding Query Builder component
+## Adding React Query Builder UI component
 
-Now, you can add the React Query Builder component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
+Now, you can add the React Query Builder UI component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -135,7 +135,7 @@ npm run dev
 
 The output appears as follows.
 
-The following example shows a basic Query Builder component.
+The following example shows a basic React Query Builder UI component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -148,4 +148,4 @@ The following example shows a basic Query Builder component.
 
  {% previewsample "page.domainurl/code-snippet/query-builder/default-cs9" %}
 
-> Refer to the [React Query Builder](https://www.syncfusion.com/react-components/react-query-builder) feature tour page for its groundbreaking feature representations. You can also explore our [React Query Builder component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/query-builder/default) that shows how to render the Query Builder in React.
+> Refer to the [React Query Builder UI](https://www.syncfusion.com/react-components/react-query-builder) feature tour page for its groundbreaking feature representations. You can also explore our [React Query Builder UI component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/query-builder/default) that shows how to render the React Query Builder UI.

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Breadcrumb
 
-The Breadcrumb component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React Breadcrumb component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Breadcrumb component is outlined below.
+The accessibility compliance for the React Breadcrumb component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,29 +40,29 @@ The accessibility compliance for the Breadcrumb component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Breadcrumb component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/) patterns to meet accessibility standards. The following ARIA attributes are used in the Breadcrumb component:
+The React Breadcrumb component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/) patterns to meet accessibility standards. The following ARIA attributes are used in the React Breadcrumb component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `aria-label` | Indicates the breadcrumb item text. |
-| `aria-disabled` | Indicates the state of breadcrumb item whether it is disabled. |
+| `aria-label` | Indicates the React Breadcrumb item text. |
+| `aria-disabled` | Indicates the state of React Breadcrumb item whether it is disabled. |
 
 ## Keyboard interaction
 
-The Breadcrumb component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#keyboardinteraction) guidelines, making it accessible for users who rely on assistive technologies and keyboard navigation. The following keyboard shortcuts are supported by the Breadcrumb component:
+The React Breadcrumb component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#keyboardinteraction) guidelines, making it accessible for users who rely on assistive technologies and keyboard navigation. The following keyboard shortcuts are supported by the React Breadcrumb component:
 
 | **Press** | **To do this** |
 | --- | --- |
 | <kbd>Tab</kbd> | Navigate to the next item and also next item in the popup of menu type overflow. |
 | <kbd>Shift + Tab</kbd> | Navigate to the previous item also previous item in the popup of menu type overflow. |
-| <kbd>Enter key in normal mode</kbd> | Select the breadcrumb item. |
+| <kbd>Enter key in normal mode</kbd> | Select the React Breadcrumb item. |
 | <kbd>Enter key in normal mode</kbd> | To open the popup of menu type overflow mode when you press enter on collapsed button and It will expand the items of collapsed type overflow mode when you press enter on collapsed button. |
 
 ## Ensuring accessibility
 
-The Breadcrumb component's accessibility compliance is verified through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Breadcrumb component's accessibility compliance is verified through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Breadcrumb component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/breadcrumb.html) in a new window to evaluate the accessibility of the Breadcrumb component with accessibility tools.
+The accessibility compliance of the React Breadcrumb component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/breadcrumb.html) in a new window to evaluate the accessibility of the React Breadcrumb component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/breadcrumb.html" %}
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to achieve invisible upload in React File Upload
 
-Invisible upload automatically initiates file upload immediately after file selection, without requiring a separate upload action. Enable this behavior by handling the [selected](https://ej2.syncfusion.com/react/documentation/api/uploader#selected) event in the Uploader component.
+Invisible upload automatically initiates React File Upload immediately after file selection, without requiring a separate upload action. Enable this behavior by handling the [selected](https://ej2.syncfusion.com/react/documentation/api/uploader#selected) event in the Uploader component.
 
 For invisible upload to take effect, the [autoUpload](https://ej2.syncfusion.com/react/documentation/api/uploader#autoupload) property must be set to `false`. Otherwise, the Uploader automatically starts uploading right after file selection and you do not need to call the `upload` method manually. Refer to the following example.
 

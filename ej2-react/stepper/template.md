@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in React Stepper
 
-The Stepper component allows you to customize the default appearance and content of each step, creating a personalized experience for the user. You can use the [template](https://ej2.syncfusion.com/react/documentation/api/stepper#template) propety to set the template content for the steps.
+The React Stepper component allows you to customize the default appearance and content of each step, creating a personalized experience for the user. You can use the [template](https://ej2.syncfusion.com/react/documentation/api/stepper#template) propety to set the template content for the steps.
 
 The step model and current step index are passed as `step` and `currentStep` properties in the template context for customization.
 

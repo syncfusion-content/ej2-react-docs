@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Start and Depth View in React DatePicker
 
-The DatePicker has the following predefined views that provides a flexible way to navigate back and forth to select the date.
+The React DatePicker has the following predefined views that provides a flexible way to navigate back and forth to select the date.
 
 | **View** | **Description** |
 | --- | --- |
@@ -22,7 +22,7 @@ The DatePicker has the following predefined views that provides a flexible way t
 
 You can use the [`start`](https://ej2.syncfusion.com/react/documentation/api/datepicker#start) property to define the initial rendering view.
 
-The following example demonstrates how to create a DatePicker with [`decade`](https://ej2.syncfusion.com/react/documentation/api/datepicker#depth) as initial rendering view.
+The following example demonstrates how to create a React DatePicker with [`decade`](https://ej2.syncfusion.com/react/documentation/api/datepicker#depth) as initial rendering view.
 
 `[Class-component]`
 
@@ -56,7 +56,7 @@ The [`depth`](https://ej2.syncfusion.com/react/documentation/api/datepicker#dept
 
 > The depth value must be smaller than the start value; otherwise, the view restriction will not apply as intended.
 
-The following example demonstrates how to create a DatePicker that allows users to select a month.
+The following example demonstrates how to create a React DatePicker that allows users to select a month.
 
 `[Class-component]`
 

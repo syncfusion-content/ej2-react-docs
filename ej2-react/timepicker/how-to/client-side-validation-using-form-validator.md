@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to validate using the FormValidator in React TimePicker
 
-The TimePicker component can be integrated with the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 FormValidator](https://ej2.syncfusion.com/documentation/form-validator/) to validate time input. The FormValidator allows you to customize error messages and control validation behavior for each field.
+The React TimePicker component can be integrated with the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 FormValidator](https://ej2.syncfusion.com/documentation/form-validator/) to validate time input. The FormValidator allows you to customize error messages and control validation behavior for each field.
 
-In the following example, the required field validation is implemented by mapping the name attribute value to the rules property. It validates the TimePicker component and displays the validation message when the textbox value is empty, during form post back or focus out.
+In the following example, the required field validation is implemented by mapping the name attribute value to the rules property. It validates the React TimePicker component and displays the validation message when the textbox value is empty, during form post back or focus out.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

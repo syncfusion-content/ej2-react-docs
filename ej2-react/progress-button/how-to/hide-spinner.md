@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to hide spinner in React Progress Button
 
-Remove the animated spinner icon from the ProgressButton by adding the `e-hide-spinner` CSS class to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#cssClass) property. By default, the ProgressButton displays a spinning animation during progress. Use this technique when you want to show only the progress bar fill without the spinning visual indicator, creating a cleaner look for certain use cases.
+Remove the animated spinner icon from the React Progress Button by adding the `e-hide-spinner` CSS class to the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#cssClass) property. By default, the React Progress Button displays a spinning animation during progress. Use this technique when you want to show only the progress bar fill without the spinning visual indicator, creating a cleaner look for certain use cases.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

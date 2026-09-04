@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Color Picker
 
-The ColorPicker component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and common WAI-ARIA roles used to evaluate accessibility.
+The React Color Picker component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and common WAI-ARIA roles used to evaluate accessibility.
 
-Accessibility compliance for the ColorPicker component is outlined below.
+Accessibility compliance for the React Color Picker component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,11 +40,11 @@ Accessibility compliance for the ColorPicker component is outlined below.
 
 ## WAI-ARIA attributes
 
-The ColorPicker component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet accessibility requirements. The following ARIA attributes are used in the ColorPicker component:
+The React Color Picker component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet accessibility requirements. The following ARIA attributes are used in the React Color Picker component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Indicates the ColorPicker component as `color`and the tiles as `gridcell` in the color palette. |
+| `role` | Indicates the React Color Picker component as `color`and the tiles as `gridcell` in the color palette. |
 | `aria-label` | Indicates the accessible name for the tiles. |
 | `aria-selected` | Indicates the current selected state of the tile. |
 | `aria-haspopup` | Indicates the availability of the popup element. |
@@ -54,7 +54,7 @@ The ColorPicker component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pat
 
 ## Keyboard interaction
 
-The ColorPicker component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline to support people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the ColorPicker component.
+The React Color Picker component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline to support people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the React Color Picker component.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -63,14 +63,14 @@ The ColorPicker component follows the [keyboard interaction](https://www.w3.org/
 | <kbd>Left Arrow</kbd> | Moves the handler/tile left from the current position. |
 | <kbd>Right Arrow</kbd> | Moves the handler/tile right from the current position. |
 | <kbd>Enter</kbd> | Apply the selected color value. |
-| <kbd>Tab</kbd> | Focuses the next focusable element in the ColorPicker popup. |
+| <kbd>Tab</kbd> | Focuses the next focusable element in the React Color Picker popup. |
 
 ## Ensuring accessibility
 
 
-The ColorPicker component's accessibility is validated using the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) tools during automated testing.
+The React Color Picker component's accessibility is validated using the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) tools during automated testing.
 
-The accessibility compliance of the ColorPicker component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/color-picker.html) in a new window to evaluate the ColorPicker with accessibility tools.
+The accessibility compliance of the React Color Picker component is demonstrated in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/color-picker.html) in a new window to evaluate the React Color Picker with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/color-picker.html" %}
 

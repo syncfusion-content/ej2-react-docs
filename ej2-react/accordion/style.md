@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on user preference.
 
-## Customizing Accordion
+## Customizing React Accordion
 
 Use the following CSS to customize the Accordion.
 
@@ -24,7 +24,7 @@ Use the following CSS to customize the Accordion.
 
 ## Customizing the list items
 
-The following CSS styles each Accordion item. Because `.e-acrdn-item` wraps both the header and the content region, the `color` and `background-color` set here are inherited by both unless you override the header or content separately.
+The following CSS styles each React Accordion item. Because `.e-acrdn-item` wraps both the header and the content region, the `color` and `background-color` set here are inherited by both unless you override the header or content separately.
 
 ```css
 .e-accordion .e-acrdn-item {
@@ -34,9 +34,9 @@ The following CSS styles each Accordion item. Because `.e-acrdn-item` wraps both
 }
 ```
 
-## Customizing the Accordion's header
+## Customizing the React Accordion's header
 
-Use the following CSS to customize the header of Accordion control.
+Use the following CSS to customize the header of React Accordion control.
 
 ```css
 .e-accordion .e-acrdn-item > .e-acrdn-header {
@@ -45,7 +45,7 @@ Use the following CSS to customize the header of Accordion control.
 }
 ```
 
-## Customizing the Accordion's expand and collapse icons
+## Customizing the React Accordion's expand and collapse icons
 
 The following CSS changes the color of the expand and collapse toggle icons.
 
@@ -55,7 +55,7 @@ The following CSS changes the color of the expand and collapse toggle icons.
 }
 ```
 
-## Customizing the hover state of the Accordion control
+## Customizing the hover state of the React Accordion control
 
 The following CSS adds a border to an item header when the pointer hovers over it.
 
@@ -65,7 +65,7 @@ The following CSS adds a border to an item header when the pointer hovers over i
 }
 ```
 
-## Customizing the selected item of the Accordion control
+## Customizing the selected item of the React Accordion control
 
 ### Customizing the selected item background
 

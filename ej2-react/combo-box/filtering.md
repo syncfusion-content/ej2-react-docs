@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filtering in React ComboBox
 
-The ComboBox includes built-in filtering support when `allowFiltering` is enabled. Filtering begins immediately as you type characters in the input field.
+The React ComboBox includes built-in filtering support when `allowFiltering` is enabled. Filtering begins immediately as you type characters in the input field.
 
 To display filtered items in the popup, handle the [filtering](https://ej2.syncfusion.com/react/documentation/api/combo-box#filtering--emittypefilteringeventargs) event to filter your data source and return results using the [updateData](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/filteringEventArgs#updatedata) method.
 
@@ -140,7 +140,7 @@ The following example shows how to perform case-sensitive filter.
 
 ## Diacritics Filtering
 
-The ComboBox supports diacritics filtering, which ignores [diacritics](https://en.wikipedia.org/wiki/Diacritic) to simplify filtering international character lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/combo-box#ignoreaccent) property is enabled.
+The React ComboBox supports diacritics filtering, which ignores [diacritics](https://en.wikipedia.org/wiki/Diacritic) to simplify filtering international character lists when the [ignoreAccent](https://ej2.syncfusion.com/react/documentation/api/combo-box#ignoreaccent) property is enabled.
 
 In the following example, data with diacritics is bound as the dataSource for the ComboBox.
 

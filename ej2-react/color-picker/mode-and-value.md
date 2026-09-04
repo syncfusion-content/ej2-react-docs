@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Inline
 
-By default, the ColorPicker renders as a SplitButton and opens a popup to access the ColorPicker. To render the ColorPicker container alone and access it directly, set the [`inline`](https://ej2.syncfusion.com/react/documentation/api/color-picker#inline) property to `true`.
+By default, the React Color Picker renders as a SplitButton and opens a popup to access the React Color Picker. To render the ColorPicker container alone and access it directly, set the [`inline`](https://ej2.syncfusion.com/react/documentation/api/color-picker#inline) property to `true`.
 
-The following sample shows inline rendering of the ColorPicker.
+The following sample shows inline rendering of the React Color Picker.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -31,9 +31,9 @@ The following sample shows inline rendering of the ColorPicker.
 
 ## Rendering palette at initial load
 
-By default, the `Picker` area is rendered initially. To open the ColorPicker popup with the `Palette` area rendered, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/color-picker#mode) property to `Palette`.
+By default, the `Picker` area is rendered initially. To open the React Color Picker popup with the `Palette` area rendered, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/color-picker#mode) property to `Palette`.
 
-In the following sample, the ColorPicker opens with the `Palette` rendered initially.
+In the following sample, the React Color Picker opens with the `Palette` rendered initially.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

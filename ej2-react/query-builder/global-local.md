@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in React Query Builder UI
 
-The localization library enables you to translate the Query Builder's default text content into other languages and cultures (Arabic, German, French, etc.). Define the locale value and provide a translation object to customize component labels and messages across different regions. The default locale is `'en-US'`.
+The localization library enables you to translate the React Query Builder UI's default text content into other languages and cultures (Arabic, German, French, etc.). Define the locale value and provide a translation object to customize component labels and messages across different regions. The default locale is `'en-US'`.
 
 The following table lists the localizable properties and their default English values:
 

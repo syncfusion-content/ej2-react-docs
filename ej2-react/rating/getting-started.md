@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the Rating component are imported in the **src/App.css** file:
+The required styles for the React Rating component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,7 +94,7 @@ The required styles for the Rating component are imported in the **src/App.css**
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding Rating component
+## Adding React Rating component
 
 Now, you can add the React Rating component to your **src/App.jsx** file by importing and defining it within your application.
 
@@ -133,4 +133,4 @@ The output appears as follows.
 
 {% previewsample "page.domainurl/code-snippet/rating/getting-started-cs1" %}
 
-> Refer to the [React Rating](https://www.syncfusion.com/react-components/react-rating) feature tour page for its groundbreaking feature representations. You can also explore our [React Rating component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/rating/default) that shows how to render the Rating in React.
+> Refer to the [React Rating](https://www.syncfusion.com/react-components/react-rating) feature tour page for its groundbreaking feature representations. You can also explore our [React Rating component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/rating/default) that shows how to render the React Rating.

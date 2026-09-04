@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Dimension in React Predefined Dialogs
 
-The dimensions of predefined dialogs can be customized using the `height` and `width` properties. Dimension values can be specified in pixels or percentage format to change the default dialog width and height.
+The dimensions of React Predefined Dialogs can be customized using the `height` and `width` properties. Dimension values can be specified in pixels or percentage format to change the default dialog width and height.
 
 ## Alert dimension
 

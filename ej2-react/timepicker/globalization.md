@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Globalization in React TimePicker
 
-Globalization combines [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (date and number parsing/formatting) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (language-specific text and formatting). The TimePicker component adapts to different languages and cultures through these mechanisms.
+Globalization combines [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (date and number parsing/formatting) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (language-specific text and formatting). The React TimePicker component adapts to different languages and cultures through these mechanisms.
 
-By default, TimePicker time format and meridian names are specific to the `American English` culture. It utilizes the
+By default, React TimePicker time format and meridian names are specific to the `American English` culture. It utilizes the
 [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org/) JSON data. It provides the `loadCldr` method to load culture specific CLDR JSON data. To go with the different culture other than `English`, follow the steps below.
 
 * Install the `CLDR-Data` package by using the following command (it installs all the CLDR JSON data). To known more about CLDR-Data refer the [`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
@@ -27,7 +27,7 @@ By default, TimePicker time format and meridian names are specific to the `Ameri
 
 * Use the [`loadCldr`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#loading-culture-data) method to load the culture specific CLDR JSON data from the installed location to `app.ts` file.
 
-* TimePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the TimePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
+* React TimePicker displayed `Sunday` as the first day of week based on default culture ("en-US"). If you want to display the React TimePicker with loaded culture’s first day of week, you need to import `weekdata.json` file from the `cldr-data/suppemental` as given in the code example.
 
     ```ts
 
@@ -69,9 +69,9 @@ By default, TimePicker time format and meridian names are specific to the `Ameri
      });
    ```
 
-* Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/timepicker#locale) property. In the following code example, the TimePicker is initialized in `German` culture with corresponding localized text.
+* Set the culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/timepicker#locale) property. In the following code example, the React TimePicker is initialized in `German` culture with corresponding localized text.
 
-The following example demonstrates the TimePicker in `German` culture.
+The following example demonstrates the React TimePicker in `German` culture.
 
 `[Class-component]`
 
@@ -137,9 +137,9 @@ The following example demonstrates the TimePicker in `German` culture.
 
 ## Right-To-Left
 
-The TimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to displays the text in the right-to-left direction. Use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/timepicker#enablertl) property to set the RTL direction.
+The React TimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to displays the text in the right-to-left direction. Use [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/timepicker#enablertl) property to set the RTL direction.
 
-The code example demonstrates the TimePicker component in `Arabic` culture, also explains how to set the localized text to the placeholder using [`L10n.load`](https://ej2.syncfusion.com/documentation/api/base/l10n/) method.
+The code example demonstrates the React TimePicker component in `Arabic` culture, also explains how to set the localized text to the placeholder using [`L10n.load`](https://ej2.syncfusion.com/documentation/api/base/l10n/) method.
 
 `[Class-component]`
 

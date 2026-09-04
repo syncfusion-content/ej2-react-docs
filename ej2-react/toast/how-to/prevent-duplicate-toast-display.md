@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to prevent duplicate Toast display in React Toast
 
-Prevent duplicate toast notifications by detecting matching toasts and canceling display of redundant messages. Implement duplicate prevention using the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast/#beforeopen) event callback to check existing toast content and set the `cancel` property to `true` to stop display. This pattern improves user experience by eliminating notification fatigue and reducing screen clutter from repeated messages.
+Prevent duplicate React Toast notifications by detecting matching React Toast and canceling display of redundant messages. Implement duplicate prevention using the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/toast#beforeopen) event callback to check existing React Toast content and set the `cancel` property to `true` to stop display. This pattern improves user experience by eliminating notification fatigue and reducing screen clutter from repeated messages.
 
 The following example demonstrates preventing duplicate toasts based on matching titles:
 

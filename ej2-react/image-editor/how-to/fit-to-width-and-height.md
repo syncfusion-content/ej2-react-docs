@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to fit Image to Width and Height in React Image Editor
 
-The Image Editor's [`zoom`](https://ej2.syncfusion.com/react/documentation/api/image-editor/index-default#zoom) method allows you to fit an image to the editor's width or height. Programmatically increase the zoom level until the image's dimensions match the editor container's width or height.
+The React Image Editor's [`zoom`](https://ej2.syncfusion.com/react/documentation/api/image-editor/index-default#zoom) method allows you to fit an image to the editor's width or height. Programmatically increase the zoom level until the image's dimensions match the editor container's width or height.
 
 This example demonstrates scenarios that include buttons for fitting the image to its width (Fit Width) or height (Fit Height).
 

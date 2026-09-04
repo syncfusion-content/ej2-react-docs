@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to get a dynamic icon in React Tree View
 
-In TreeView component, you can get the original bound data using the [`getTreeData`](https://ej2.syncfusion.com/react/documentation/api/treeview#gettreedata) method. For this method, if you pass the id of the tree node, it returns the corresponding node information, or otherwise the overall tree nodes information will be returned. You can use this method to resolve the bound iconCss class for each node inside the [`nodeTemplate`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodetemplate) (or the [`drawNode`](https://ej2.syncfusion.com/react/documentation/api/treeview#drawnode) event). Please refer to the following sample.
+In Tree View component, you can get the original bound data using the [`getTreeData`](https://ej2.syncfusion.com/react/documentation/api/treeview#gettreedata) method. For this method, if you pass the id of the tree node, it returns the corresponding node information, or otherwise the overall tree nodes information will be returned. You can use this method to resolve the bound iconCss class for each node inside the [`nodeTemplate`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodetemplate) (or the [`drawNode`](https://ej2.syncfusion.com/react/documentation/api/treeview#drawnode) event). Please refer to the following sample.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

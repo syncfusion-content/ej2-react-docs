@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to disable a checkbox on a node in React
 
-You can disable the check box alone in TreeView instead of disabling the whole node. You need to include the `e-checkbox-disabled` class into the check box element using the [`drawNode`](https://ej2.syncfusion.com/react/documentation/api/treeview#drawnode) event. Please refer to the following sample to disable the check box of the tree nodes.
+You can disable the check box alone in React Tree View instead of disabling the whole node. You need to include the `e-checkbox-disabled` class into the check box element using the [`drawNode`](https://ej2.syncfusion.com/react/documentation/api/treeview#drawnode) event. Please refer to the following sample to disable the check box of the tree nodes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

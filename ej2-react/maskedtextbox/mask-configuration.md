@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Mask Configuration in React MaskedTextBox | Syncfusion
-description: Build React MaskedTextBox masks using standard and custom mask elements such as digits, letters, and separators for input validation.
+title: Mask Configuration in React Input Mask | Syncfusion
+description: Build React Input Mask masks using standard and custom mask elements such as digits, letters, and separators for input validation.
 control: Mask configuration 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Mask Configuration in React MaskedTextBox
+# Mask Configuration in React Input Mask
 
 The mask is a combination of standard and custom mask elements, that validates the user input based on its behavior.
 
-> When the mask value is empty, the MaskedTextBox behaves as an input element with text type.
+> When the mask value is empty, the React Input Mask behaves as an input element with text type.
 
 ## Standard mask elements
 
@@ -35,7 +35,7 @@ The mask can be formed by combining any one or more of these mask elements.
 | > | Shift up. Converts all characters to upper case. |
 | &#124; | Disable a previous shift up or shift down. |
 | \\\\ | Escapes a mask character, turning it into a literal. |
-| All other characters | Literals. All non-mask elements (literals) will appear as themselves within MaskedTextBox. |
+| All other characters | Literals. All non-mask elements (literals) will appear as themselves within React Input Mask. |
 
 The following example demonstrates the usage of standard mask elements.
 
@@ -136,9 +136,9 @@ In the following example, regular expression has been set for each input places.
 
 ## Prompt character
 
-The Prompt character is a prompting symbol in the MaskedTextBox for the mask elements. The symbol is used to show the input positions in the MaskedTextBox. You can customize the prompt character of MaskedTextBox by using the [`promptChar`](https://ej2.syncfusion.com/react/documentation/api/maskedtextbox#promptchar) property.
+The Prompt character is a prompting symbol in the React Input Mask for the mask elements. The symbol is used to show the input positions in the React Input Mask. You can customize the prompt character of React Input Mask by using the [`promptChar`](https://ej2.syncfusion.com/react/documentation/api/maskedtextbox#promptchar) property.
 
-The following example demonstrates the MaskedTextBox with customized prompt character as `*`.
+The following example demonstrates the React Input Mask with customized prompt character as `*`.
 
 `[Class-component]`
 

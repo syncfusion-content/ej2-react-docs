@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to remove item in React Dropdown List
 
-The following example demonstrates how to remove an item from the DropDownList:
+The following example demonstrates how to remove an item from the React Dropdown List:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting Started with React MaskedTextBox | Syncfusion
-description: Set up a Vite-based React project, install the Syncfusion MaskedTextBox, and render a basic masked input with format validation.
-control: MaskedTextBox 
+title: Getting Started with React Input Mask | Syncfusion
+description: Set up a Vite-based React project, install the Syncfusion React Input Mask, and render a basic masked input with format validation.
+control: Input Mask 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React MaskedTextBox
+# Getting Started with React Input Mask
 
-This section explains the steps required to create a simple React MaskedTextBox component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple React Input Mask component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the MaskedTextBox component are imported in the **src/App.css** file:
+The required styles for the React Input Mask component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,9 +94,9 @@ The required styles for the MaskedTextBox component are imported in the **src/Ap
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding MaskedTextBox component
+## Adding React Input Mask component
 
-Now, you can add the React MaskedTextBox component to your **src/App.jsx** file by importing and defining it within your application.
+Now, you can add the React Input Mask component to your **src/App.jsx** file by importing and defining it within your application.
 
 ```js
 import React from 'react';
@@ -129,7 +129,7 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-> Refer to the [React MaskedTextBox](https://www.syncfusion.com/react-components/react-input-mask) feature tour page for its groundbreaking feature representations. You can also explore our [React MaskedTextBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/maskedtextbox/default) that shows how to render the MaskedTextBox in React.
+> Refer to the [React Input Mask](https://www.syncfusion.com/react-components/react-input-mask) feature tour page for its groundbreaking feature representations. You can also explore our [React Input Mask component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/maskedtextbox/default) that shows how to render the React Input Mask.
 
 ## See Also
 

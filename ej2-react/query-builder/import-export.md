@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Importing and Exporting in React Query Builder UI
 
-The Query Builder supports importing predefined query conditions and exporting created rules in multiple formats for seamless integration with external systems. Import conditions from JSON, SQL, or MongoDB query formats, and export your constructed queries in the same formats for data interoperability.
+The React Query Builder UI supports importing predefined query conditions and exporting created rules in multiple formats for seamless integration with external systems. Import conditions from JSON, SQL, or MongoDB query formats, and export your constructed queries in the same formats for data interoperability.
 
 ## Importing
 
-Import predefined conditions from external sources in JSON, SQL, or MongoDB query formats to populate the Query Builder with saved or template-based rules. This streamlines workflow setup by eliminating manual rule recreation.
+Import predefined conditions from external sources in JSON, SQL, or MongoDB query formats to populate the React Query Builder UI with saved or template-based rules. This streamlines workflow setup by eliminating manual rule recreation.
 
 ### Importing from JSON Object
 
@@ -52,11 +52,11 @@ Apply conditions after component initialization using the [`setRules`](https://e
 
 ### Importing from SQL Query
 
-Import SQL queries directly into the Query Builder to load predefined database filtering conditions. SQL importing supports multiple formats: Inline SQL, Parameter SQL, and Named Parameter SQL, enabling flexible query integration from various sources.
+Import SQL queries directly into the React Query Builder UI to load predefined database filtering conditions. SQL importing supports multiple formats: Inline SQL, Parameter SQL, and Named Parameter SQL, enabling flexible query integration from various sources.
 
 #### Importing from Inline SQL Query
 
-Importing from Inline SQL involves integrating SQL queries directly into the Query Builder. This method streamlines the process by enabling users to input SQL statements directly into the application for analysis, manipulation, or further processing within the Query Builder. Conditions can be set from Inline SQL queries using the [`setRulesFromSql`](https://ej2.syncfusion.com/react/documentation/api/query-builder#setrulesfromsql) method.
+Importing from Inline SQL involves integrating SQL queries directly into the React Query Builder UI. This method streamlines the process by enabling users to input SQL statements directly into the application for analysis, manipulation, or further processing within the Query Builder. Conditions can be set from Inline SQL queries using the [`setRulesFromSql`](https://ej2.syncfusion.com/react/documentation/api/query-builder#setrulesfromsql) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -71,7 +71,7 @@ Importing from Inline SQL involves integrating SQL queries directly into the Que
 
 #### Importing from Parameter SQL Query
 
-Importing from Parameter SQL involves integrating SQL queries with parameters directly into the Query Builder. This method allows users to input SQL statements containing parameters, which can be dynamically filled in during execution. It streamlines the process by enabling flexible and customizable querying within the application. Conditions can be set from Parameter SQL queries using the [`setParameterizedSql`](https://ej2.syncfusion.com/react/documentation/api/query-builder#setparameterizedsql) method.
+Importing from Parameter SQL involves integrating SQL queries with parameters directly into the React Query Builder UI. This method allows users to input SQL statements containing parameters, which can be dynamically filled in during execution. It streamlines the process by enabling flexible and customizable querying within the application. Conditions can be set from Parameter SQL queries using the [`setParameterizedSql`](https://ej2.syncfusion.com/react/documentation/api/query-builder#setparameterizedsql) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -86,7 +86,7 @@ Importing from Parameter SQL involves integrating SQL queries with parameters di
 
 #### Importing from Named Parameter SQL Query
 
-Importing from Named Parameter SQL involves integrating SQL queries with named parameters directly into the Query Builder. This method enables users to input SQL statements containing named parameters, providing flexibility and customization during execution. It streamlines the process by allowing dynamic parameter assignment within the application's query environment. Conditions can be set from Named Parameter SQL queries using the [`setParameterizedNamedSql`](https://ej2.syncfusion.com/react/documentation/api/query-builder#setparameterizednamedsql) method.
+Importing from Named Parameter SQL involves integrating SQL queries with named parameters directly into the React Query Builder UI. This method enables users to input SQL statements containing named parameters, providing flexibility and customization during execution. It streamlines the process by allowing dynamic parameter assignment within the application's query environment. Conditions can be set from Named Parameter SQL queries using the [`setParameterizedNamedSql`](https://ej2.syncfusion.com/react/documentation/api/query-builder#setparameterizednamedsql) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -101,7 +101,7 @@ Importing from Named Parameter SQL involves integrating SQL queries with named p
 
 ### Importing from MongoDB Query
 
-Importing from MongoDB Query involves integrating MongoDB queries directly into the Query Builder. This enables users to input MongoDB query statements directly into the application, allowing for seamless integration and manipulation of MongoDB data within the Query Builder environment. It streamlines the process by facilitating direct access to MongoDB data for analysis, filtering, and further processing within the application. Conditions can be set from Named Parameter SQL queries using the [`setMongoQuery`](https://ej2.syncfusion.com/react/documentation/api/query-builder#setmongoquery) method. The `columns` and `dataSource` configurations must already be defined before calling this method.
+Importing from MongoDB Query involves integrating MongoDB queries directly into the React Query Builder UI. This enables users to input MongoDB query statements directly into the application, allowing for seamless integration and manipulation of MongoDB data within the React Query Builder UI environment. It streamlines the process by facilitating direct access to MongoDB data for analysis, filtering, and further processing within the application. Conditions can be set from Named Parameter SQL queries using the [`setMongoQuery`](https://ej2.syncfusion.com/react/documentation/api/query-builder#setmongoquery) method. The `columns` and `dataSource` configurations must already be defined before calling this method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -116,19 +116,19 @@ Importing from MongoDB Query involves integrating MongoDB queries directly into 
 
 ## Exporting
 
-Exporting from the Query Builder allows users to preserve or store the created conditions. The defined conditions can be exported using various methods, including:
+Exporting from the React Query Builder UI allows users to preserve or store the created conditions. The defined conditions can be exported using various methods, including:
 
 ### Exporting to JSON Object
 
-You can extract the established conditions in the Query Builder and convert them into a structured JSON object format using the [`getRules`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getrules) method. This process enables users to save or transfer the conditions for further use or analysis in other applications or systems that support JSON data. The method returns a `RuleModel` object that mirrors the structure accepted by `setRules` and the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder#rule) property.
+You can extract the established conditions in the React Query Builder UI and convert them into a structured JSON object format using the [`getRules`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getrules) method. This process enables users to save or transfer the conditions for further use or analysis in other applications or systems that support JSON data. The method returns a `RuleModel` object that mirrors the structure accepted by `setRules` and the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder#rule) property.
 
 ### Exporting to SQL Query
 
-Exporting to SQL involves converting the defined conditions within the Query Builder into SQL queries. This functionality allows users to generate SQL code representing the conditions set in the Query Builder, which can then be executed directly on a SQL database or used for further analysis and processing. SQL exporting supports various types, including Inline SQL, Parameter SQL, and Named Parameter SQL.
+Exporting to SQL involves converting the defined conditions within the React Query Builder UI into SQL queries. This functionality allows users to generate SQL code representing the conditions set in the React Query Builder UI, which can then be executed directly on a SQL database or used for further analysis and processing. SQL exporting supports various types, including Inline SQL, Parameter SQL, and Named Parameter SQL.
 
 #### Exporting to Inline SQL Query
 
-Exporting to Inline SQL Query entails embedding the defined conditions from the Query Builder directly into SQL statements within the exported code. This method ensures that the conditions are seamlessly integrated into the SQL query syntax, enabling straightforward execution or further processing within SQL database systems. This can be achieved using the [`getSqlFromRules`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getsqlfromrules) method. The method returns a `string` containing the formatted SQL statement, or an empty string when no valid rules exist.
+Exporting to Inline SQL Query entails embedding the defined conditions from the React Query Builder UI directly into SQL statements within the exported code. This method ensures that the conditions are seamlessly integrated into the SQL query syntax, enabling straightforward execution or further processing within SQL database systems. This can be achieved using the [`getSqlFromRules`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getsqlfromrules) method. The method returns a `string` containing the formatted SQL statement, or an empty string when no valid rules exist.
 
 ```ts
 let sql: string = qryBldrObj.getSqlFromRules();
@@ -147,7 +147,7 @@ let sql: string = qryBldrObj.getSqlFromRules();
 
 #### Exporting to Parameter SQL Query
 
-Exporting to Parameter SQL involves incorporating the defined conditions from the Query Builder into SQL queries with parameters. This method allows for dynamic value assignment during execution, enhancing flexibility and adaptability in query processing within SQL database. This can be accomplished using the [`getParameterizedSql`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getparameterizedsql) method for exporting to Parameter SQL query. The method returns an object containing the `sql` text and a `params` array.
+Exporting to Parameter SQL involves incorporating the defined conditions from the React Query Builder UI into SQL queries with parameters. This method allows for dynamic value assignment during execution, enhancing flexibility and adaptability in query processing within SQL database. This can be accomplished using the [`getParameterizedSql`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getparameterizedsql) method for exporting to Parameter SQL query. The method returns an object containing the `sql` text and a `params` array.
 
 ```ts
 let parameterized: { sql: string, params: object[] } = qryBldrObj.getParameterizedSql();
@@ -166,7 +166,7 @@ let parameterized: { sql: string, params: object[] } = qryBldrObj.getParameteriz
 
 #### Exporting to Named Parameter SQL Query
 
-Exporting to Named Parameter SQL entails integrating the defined conditions from the Query Builder into SQL queries with named parameters. This method offers enhanced readability and flexibility during execution by using named placeholders for parameter values. Named Parameter SQL facilitates easier maintenance and modification of queries, making it convenient for dynamic parameter assignment within SQL database. This can be accomplished using the method [`getParameterizedNamedSql`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getparameterizednamedsql) for exporting to Named Parameter SQL query. The method returns an object containing the parameterized SQL string and the named parameters collection.
+Exporting to Named Parameter SQL entails integrating the defined conditions from the React Query Builder UI into SQL queries with named parameters. This method offers enhanced readability and flexibility during execution by using named placeholders for parameter values. Named Parameter SQL facilitates easier maintenance and modification of queries, making it convenient for dynamic parameter assignment within SQL database. This can be accomplished using the method [`getParameterizedNamedSql`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getparameterizednamedsql) for exporting to Named Parameter SQL query. The method returns an object containing the parameterized SQL string and the named parameters collection.
 
 ```ts
 let namedSql: { sql: string, params: object } = qryBldrObj.getParameterizedNamedSql();
@@ -185,7 +185,7 @@ let namedSql: { sql: string, params: object } = qryBldrObj.getParameterizedNamed
 
 ### Exporting to MongoDB Query
 
-Exporting to MongoDB Query involves converting the defined conditions within the Query Builder into MongoDB query syntax. This process allows users to generate MongoDB queries representing the conditions set in the Query Builder, which can then be executed directly on a MongoDB database or used for further analysis and processing. This can be accomplished using the [`getMongoQuery`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getmongoquery) method for exporting to MongoDB query. The method returns a plain JavaScript object compatible with the MongoDB filter syntax.
+Exporting to MongoDB Query involves converting the defined conditions within the React Query Builder UI into MongoDB query syntax. This process allows users to generate MongoDB queries representing the conditions set in the React Query Builder UI, which can then be executed directly on a MongoDB database or used for further analysis and processing. This can be accomplished using the [`getMongoQuery`](https://ej2.syncfusion.com/react/documentation/api/query-builder#getmongoquery) method for exporting to MongoDB query. The method returns a plain JavaScript object compatible with the MongoDB filter syntax.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

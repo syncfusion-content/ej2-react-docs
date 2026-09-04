@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Hide the fixed group header by setting `visibility: hidden` on the group header element with custom CSS. The header remains in the layout but is no longer visible.
 
-The following example demonstrates how to disable the fixed group header in DropDownList using CSS with the `visibility` attribute:
+The following example demonstrates how to disable the fixed group header in React Dropdown List using CSS with the `visibility` attribute:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to add nested Tabs in React Tab
 
-Tab supports rendering a nested level of Tabs by using the [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#content) property. You can add the nested Tab element inside the parent Tab [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#content) property.
+React Tab supports rendering a nested level of Tabs by using the [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#content) property. You can add the nested React Tab element inside the parent React Tab [`content`](https://ej2.syncfusion.com/react/documentation/api/tab/tabItem#content) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

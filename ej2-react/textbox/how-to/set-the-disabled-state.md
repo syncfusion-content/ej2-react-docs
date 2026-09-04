@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to set the disabled state in React TextBox
 
-Disable user interaction with the TextBox by setting the [enabled](https://ej2.syncfusion.com/react/documentation/api/textbox/#enabled) property to `false` on the TextBoxComponent. A disabled TextBox prevents input, prevents focus, and typically displays with reduced opacity to indicate its unavailable state.
+Disable user interaction with the React TextBox by setting the [enabled](https://ej2.syncfusion.com/react/documentation/api/textbox/#enabled) property to `false` on the TextBox Component. A disabled TextBox prevents input, prevents focus, and typically displays with reduced opacity to indicate its unavailable state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

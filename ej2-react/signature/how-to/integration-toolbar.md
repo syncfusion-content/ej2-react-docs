@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to use Signature with Toolbar in React Signature
 
-Integrate the Signature component with a toolbar by using the toolbar's `change` event. The [`canUndo`](https://ej2.syncfusion.com/react/documentation/api/signature/#canundo), [`canRedo`](https://ej2.syncfusion.com/react/documentation/api/signature/#canredo), and [`isEmpty`](https://ej2.syncfusion.com/react/documentation/api/signature/#isempty) methods enable or disable the undo, redo, and clear buttons based on state.
+Integrate the React Signature component with a toolbar by using the toolbar's `change` event. The [`canUndo`](https://ej2.syncfusion.com/react/documentation/api/signature/#canundo), [`canRedo`](https://ej2.syncfusion.com/react/documentation/api/signature/#canredo), and [`isEmpty`](https://ej2.syncfusion.com/react/documentation/api/signature/#isempty) methods enable or disable the undo, redo, and clear buttons based on state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize the day header in React DatePicker
 
-The day names displayed in the calendar header can be customized using the [`dayHeaderFormat`](https://ej2.syncfusion.com/react/documentation/api/datepicker#dayheaderformat) property. By default, the format is `Short`. The following formats are available:
+The day names displayed in the calendar header can be customized using the [`dayHeaderFormat`](https://ej2.syncfusion.com/react/documentation/api/datepicker/index-default#dayheaderformat) property. By default, the format is `Short`. The following formats are available:
 
 | **Name** | **Description** |
 |------|---------------------|

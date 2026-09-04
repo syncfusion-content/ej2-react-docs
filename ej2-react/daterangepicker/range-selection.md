@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Range Restriction in React DateRangePicker
 
-Range selection in the DateRangePicker can be customized with specific restrictions based on application requirements.
+Range selection in the React DateRangePicker can be customized with specific restrictions based on application requirements.
 
 ## Restrict the range within a range
 
@@ -95,7 +95,7 @@ In the following sample, the range selection should be greater than 3 days and l
 
 ## Strict mode
 
-When [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#strictmode) is enabled, the DateRangePicker validates that only valid date ranges within the specified constraints can be selected. If an invalid range is specified, the component reverts to the previously valid value. This mode ensures data integrity by preventing invalid selections.
+When [`strictMode`](https://ej2.syncfusion.com/react/documentation/api/daterangepicker/#strictmode) is enabled, the React DateRangePicker validates that only valid date ranges within the specified constraints can be selected. If an invalid range is specified, the component reverts to the previously valid value. This mode ensures data integrity by preventing invalid selections.
 
 `[Class-component]`
 

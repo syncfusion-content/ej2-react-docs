@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Validation in React File Upload
 
-The Uploader component validates selected files by size and extension using the **allowedExtensions**, **minFileSize**, and **maxFileSize** properties. Files are validated before uploading to the server, allowing invalid files to be excluded from the upload process. Validation can also be configured using HTML attributes on the input element. The validation process runs automatically when files are selected, dropped, or pasted.
+The React File Upload component validates selected files by size and extension using the **allowedExtensions**, **minFileSize**, and **maxFileSize** properties. Files are validated before uploading to the server, allowing invalid files to be excluded from the upload process. Validation can also be configured using HTML attributes on the input element. The validation process runs automatically when files are selected, dropped, or pasted.
 
 ## File type
 
-The **allowedExtensions** property restricts uploads to specific file types by comma-separated extensions. The Uploader component filters selected or dropped files against the specified file types and processes only matching files. Validation also occurs when the `accept` attribute is set on the input element.
+The **allowedExtensions** property restricts uploads to specific file types by comma-separated extensions. The React File Upload component filters selected or dropped files against the specified file types and processes only matching files. Validation also occurs when the `accept` attribute is set on the input element.
 
 `[Class-component]`
 
@@ -44,7 +44,7 @@ The **allowedExtensions** property restricts uploads to specific file types by c
 
 ## File size
 
-The Uploader component validates file size to prevent uploading files that are too large or empty. File sizes are specified in bytes. By default, the component allows a minimum file size of **0 bytes** and a maximum file size of **28.4 MB**, configurable using the `minFileSize` and `maxFileSize` properties respectively.
+The React File Upload component validates file size to prevent uploading files that are too large or empty. File sizes are specified in bytes. By default, the component allows a minimum file size of **0 bytes** and a maximum file size of **28.4 MB**, configurable using the `minFileSize` and `maxFileSize` properties respectively.
 
 `[Class-component]`
 
@@ -137,6 +137,6 @@ Prevent duplicate file uploads by using the `selected` event to compare new sele
 ## See Also
 
 * [Validate image/* on drop](./how-to/validate-image-on-drop)
-* [Determine whether uploader has file input (required validation)](./how-to/determine-whether-uploader-has-file-input)
+* [Determine whether React File Upload has file input (required validation)](./how-to/determine-whether-uploader-has-file-input)
 * [Check file size before uploading it](./how-to/check-file-size-before-uploading-it)
 * [Check the MIME type of file before uploading it](./how-to/check-the-mime-type-of-file-before-upload-it)

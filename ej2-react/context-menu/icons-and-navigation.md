@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Icons
 
-The Context Menu component supports icons and images on menu items to provide a visual representation of actions and enhance user experience. To add an icon to a menu item, configure the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuitemmodel#iconcss) property with the appropriate CSS class. By default, icons are positioned to the left side of the menu item text; this position is automatically mirrored to the right when the component is rendered with `enableRtl={true}`. Only CSS/font icons are supported through `iconCss` (image URLs are not supported via `iconCss`).
+The React Context Menu component supports icons and images on menu items to provide a visual representation of actions and enhance user experience. To add an icon to a menu item, configure the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuitemmodel#iconcss) property with the appropriate CSS class. By default, icons are positioned to the left side of the menu item text; this position is automatically mirrored to the right when the component is rendered with `enableRtl={true}`. Only CSS/font icons are supported through `iconCss` (image URLs are not supported via `iconCss`).
 
 For a full list of menu item fields — including `iconCss`, `url`, `disabled`, `separator`, `children`, and `id` — see the [`MenuItemModel`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuitemmodel) API reference.
 
@@ -31,7 +31,7 @@ In the following sample, icons for Cut, Copy and Paste menu items are added usin
 
 ## URL Navigation
 
-The Context Menu component enables navigation to external web pages or internal routes when menu items are clicked. This functionality is implemented by configuring the [`url`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuitemmodel#url) property. When a menu item with a URL is selected, the browser navigates to the specified location. In the following sample, navigation URLs for Flipkart, Amazon, and Snapdeal menu items are configured using the `url` property.
+The React Context Menu component enables navigation to external web pages or internal routes when menu items are clicked. This functionality is implemented by configuring the [`url`](https://ej2.syncfusion.com/react/documentation/api/context-menu/menuitemmodel#url) property. When a menu item with a URL is selected, the browser navigates to the specified location. In the following sample, navigation URLs for Flipkart, Amazon, and Snapdeal menu items are configured using the `url` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

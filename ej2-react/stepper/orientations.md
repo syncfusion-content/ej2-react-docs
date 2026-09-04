@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Orientations in React Stepper
 
-The Stepper component supports the display of steps in both horizontal and vertical orientations by using the [orientation](https://ej2.syncfusion.com/react/documentation/api/stepper#orientation) property.
+The React Stepper component supports the display of steps in both horizontal and vertical orientations by using the [orientation](https://ej2.syncfusion.com/react/documentation/api/stepper#orientation) property.
 
 ## Horizontal
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to add TextBox programmatically in React TextBox
 
-Create a TextBox component dynamically using the `createInput` method from the `ej2-inputs` library. This approach is useful when you need to generate form inputs programmatically or customize input behavior at runtime.
+Create a React TextBox component dynamically using the `createInput` method from the `ej2-inputs` library. This approach is useful when you need to generate form inputs programmatically or customize input behavior at runtime.
 
 ## Implementation steps
 
@@ -20,7 +20,7 @@ Create a TextBox component dynamically using the `createInput` method from the `
     import {Input} from '@syncfusion/ej2-inputs';
    ```
 
-2. **Create the TextBox** by passing the HTML input element to the `createInput` method. This transforms the native input into a styled, feature-rich TextBox component.
+2. **Create the React TextBox** by passing the HTML input element to the `createInput` method. This transforms the native input into a styled, feature-rich React TextBox component.
 
 3. **Optional: Add icons** to the input by passing the `buttons` property with the `e-input-group-icon` class to the `createInput` method. Icons can improve visual communication about the input's purpose (e.g., email, phone, search).
 

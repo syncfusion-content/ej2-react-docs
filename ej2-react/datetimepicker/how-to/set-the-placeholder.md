@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to set the placeholder in React DateTime Picker
 
-The [`placeholder`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#placeholder) property displays hint text in the DateTimePicker input field when it is empty. This helps guide users on the expected date and time format or input requirement.
+The [`placeholder`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker#placeholder) property displays hint text in the React DateTime Picker input field when it is empty. This helps guide users on the expected date and time format or input requirement.
 
-The following example demonstrates how to set a custom placeholder in the DateTimePicker component:
+The following example demonstrates how to set a custom placeholder in the React DateTime Picker component:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

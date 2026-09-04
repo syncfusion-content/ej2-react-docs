@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to create a block button in React Button
 
-A block button spans the entire width of its parent element. To create a block button, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property to `e-block`.
+A block React Button spans the entire width of its parent element. To create a block React Button, set the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/button#cssclass) property to `e-block`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

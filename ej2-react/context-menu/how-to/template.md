@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to use a template in React Context Menu
 
-The ContextMenu component supports extensive template customization, allowing you to embed complex UI elements and interactive components within menu items. This flexibility enables creating rich, context-aware menus that go beyond simple text-based navigation.
+The React Context Menu component supports extensive template customization, allowing you to embed complex UI elements and interactive components within menu items. This flexibility enables creating rich, context-aware menus that go beyond simple text-based navigation.
 
-## Show table in sub ContextMenu
+## Show table in sub React Context Menu
 
-Menu items of the ContextMenu can be customized according to the requirement. The section explains about how to customize table template in sub menu item.
+Menu items of the React Context Menu can be customized according to the requirement. The section explains about how to customize table template in sub menu item.
 
 This can be achieved by appending table layout while `li` rendering by using `beforeItemRender` event.
 
@@ -29,9 +29,9 @@ This can be achieved by appending table layout while `li` rendering by using `be
 
 {% previewsample "page.domainurl/code-snippet/context-menu/table-cs1" %}
 
-## UI components in ContextMenu
+## UI components in React Context Menu
 
-UI components can also be placed inside each `li` element of the ContextMenu.
+UI components can also be placed inside each `li` element of the React Context Menu.
 
 In the following example, CheckBox component is placed inside each `li` element and this can be achieved by creating CheckBox component in `beforeItemRender` event and appending it into the `li` element.
 

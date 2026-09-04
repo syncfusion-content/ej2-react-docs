@@ -10,7 +10,15 @@ domainurl: ##DomainURL##
 
 # Resizing in React MultiSelect Dropdown
 
-Enable popup resizing in the MultiSelect component using the [allowResize](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#allowresize) property. When enabled, users can dynamically adjust the popup size in both horizontal and vertical directions to improve visibility. Resized dimensions persist across sessions, providing a consistent user experience.
+Enable popup resizing in the React MultiSelect component using the [allowResize](https://ej2.syncfusion.com/react/documentation/api/multi-select/#allowresize) property. When enabled, users can dynamically adjust the popup size in both horizontal and vertical directions to improve visibility. Resized dimensions persist across sessions, providing a consistent user experience.
+
+```tsx
+<MultiSelectComponent
+  allowResize={true}
+  dataSource={data}
+  fields={{ text: 'Name', value: 'Id' }}
+/>
+```
 
 `[Class-component]`
 
@@ -34,6 +42,6 @@ Enable popup resizing in the MultiSelect component using the [allowResize](https
 {% endhighlight %}
 {% endtabs %}
 
-![Resizing in MultiSelect Component](../images/multiselect-resize.gif)
+![Resizing in React MultiSelect Component](../images/multiselect-resize.gif)
 
 *The popup can be resized in both horizontal and vertical directions.*

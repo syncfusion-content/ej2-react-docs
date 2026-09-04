@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Value in React MultiSelect Dropdown | Syncfusion
-description: Let users add new options not present in the original React MultiSelect Dropdown dataset by enabling allowCustomValue and customValueSelection.
+description: Let users add new options not present in the original React MultiSelect Dropdown dataset by enabling allowCustomValue and handling the customValueSelection event.
 control: Custom value 
 platform: ej2-react
 documentation: ug
@@ -11,11 +11,15 @@ domainurl: ##DomainURL##
 # Custom Value in React MultiSelect Dropdown
 
 
-The MultiSelect enables users to add new custom options that are not present in the original data source when the [`allowCustomValue`](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#allowcustomvalue) property is set to `true`. When a custom value is selected, the component triggers the [`customValueSelection`](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#customvalueselection) event.
+The React MultiSelect enables users to add new custom options that are not present in the original data source when the [`allowCustomValue`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#allowcustomvalue) property is set to `true`. When a custom value is selected, the component triggers the [`customValueSelection`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#customvalueselection) event.
 
-## Enable custom value support
+### Enable custom value support
 
-To enable custom values, set the `allowCustomValue` property to `true` on the MultiSelect component.
+To enable custom values, set the `allowCustomValue` property to `true` on the React MultiSelect component:
+
+```jsx
+<MultiSelectComponent allowCustomValue={true} />
+```
 
 ### Handle the customValueSelection event
 
@@ -49,7 +53,7 @@ onCustomValueSelection = (e) => {
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/basic-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight tsx tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/basic-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +66,7 @@ onCustomValueSelection = (e) => {
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/basic-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
+{% highlight tsx tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/basic-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,6 +75,6 @@ onCustomValueSelection = (e) => {
 
 ## See Also
 
-* [Filtering in the MultiSelect](./filtering)
-* [Templates in the MultiSelect](./templates)
-* [Value binding in the MultiSelect](./value-binding)
+* [Filtering in the React MultiSelect](./filtering/)
+* [Templates in the React MultiSelect](./templates/)
+* [Value binding in the React MultiSelect](./value-binding/)

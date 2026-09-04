@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Adornments in React TextBox
 
-Enhance the TextBox component with prepended or appended visual elements using `prependTemplate` and `appendTemplate` properties. Adornments include icons, text labels, or interactive buttons that provide visual context and improve the user input experience.
+Enhance the React TextBox component with prepended or appended visual elements using `prependTemplate` and `appendTemplate` properties. Adornments include icons, text labels, or interactive buttons that provide visual context and improve the user input experience.
 
 ## Overview and Use Cases
 
@@ -23,7 +23,7 @@ Adornments serve multiple purposes in modern form design:
 - **Accessibility Support**: Visual and interactive cues that enhance discoverability and usability for all users
 
 
-## Adding Adornments to TextBox
+## Adding Adornments to React TextBox
 
 Use the `prependTemplate` and `appendTemplate` properties to insert custom HTML elements before or after the TextBox input field:
 

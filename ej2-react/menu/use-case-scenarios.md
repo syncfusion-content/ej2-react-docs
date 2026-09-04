@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Scrollable menu
 
-The menu component supports horizontal and vertical scrolling to render large menus and submenus in an adaptive way. This can be achieved by enabling the [`enableScrolling`](https://ej2.syncfusion.com/react/documentation/api/menu/index-default#enablescrolling) property and by restricting the corresponding menu/submenu size.
+The React menu component supports horizontal and vertical scrolling to render large menus and submenus in an adaptive way. This can be achieved by enabling the [`enableScrolling`](https://ej2.syncfusion.com/react/documentation/api/menu/index-default#enablescrolling) property and by restricting the corresponding menu/submenu size.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -27,7 +27,7 @@ The menu component supports horizontal and vertical scrolling to render large me
 
 ## Menu in toolbar
 
-The following example demonstrates how to integrate Menu with Toolbar component.
+The following example demonstrates how to integrate React Menu with Toolbar component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ The following example demonstrates how to integrate Menu with Toolbar component.
 
 ## Hamburger menu
 
-The following example demonstrates the use case of menu with Accordion component integrated in SideBar.
+The following example demonstrates the use case of React menu with Accordion component integrated in SideBar.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,7 +57,7 @@ The following example demonstrates the use case of menu with Accordion component
 
 ## Mobile view
 
-The following example demonstrates the use case of Menu in Mobile mode by using ListView component with hamburger.
+The following example demonstrates the use case of React Menu in Mobile mode by using ListView component with hamburger.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

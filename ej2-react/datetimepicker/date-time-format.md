@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # DateTime Format in React DateTime Picker
 
-Date-time format defines how date and time values are displayed in the input field. By default, the DateTimePicker format is based on the current culture. You can set a custom format using the [`format`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#format) property.
+Date-time format defines how date and time values are displayed in the input field. By default, the React DateTime Picker format is based on the current culture. You can set a custom format using the [`format`](https://ej2.syncfusion.com/react/documentation/api/datetimepicker/#format) property.
 
 > When the date-time format is set, it applies uniformly across all cultures and overrides the culture-specific default format.
 
@@ -46,11 +46,11 @@ The following example demonstrates the DatePicker with the custom format (`yyyy-
 
 ## Input formats
 
-The [`inputFormats`](../api/datetimepicker) property in the DatetimePicker control allows users to enter dates and times in various formats, providing flexibility in date and time entry. This property accepts an array of predefined formats that the control recognizes, enabling users to input dates in different ways while ensuring they are parsed correctly.
+The [`inputFormats`](../api/datetimepicker) property in the React DateTime Picker control allows users to enter dates and times in various formats, providing flexibility in date and time entry. This property accepts an array of predefined formats that the control recognizes, enabling users to input dates in different ways while ensuring they are parsed correctly.
 
 When the user types the date and time in any of the specified input formats, it will be automatically converted to the display format after pressing Enter, the Tab key, or when the input loses focus. This enhances the user experience by allowing intuitive data entry through various custom input formats.
 
-The following example demonstrates the DateTimePicker with multiple input formats.
+The following example demonstrates the React DateTime Picker with multiple input formats.
 
 `[Class-component]`
 

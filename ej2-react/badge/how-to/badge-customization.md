@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to customize badge in React Badge
+# How to customize React Badge in React Badge
 
-The Badge component supports color, size, and position customization through CSS classes.
+The React Badge component supports color, size, and position customization through CSS classes.
 
 ## Color customization
 
-The Badge component includes eight predefined color variants. To apply a custom color, override the badge styles with a custom CSS class.
+The React Badge component includes eight predefined color variants. To apply a custom color, override the React Badge styles with a custom CSS class.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,7 +35,7 @@ The Badge component includes eight predefined color variants. To apply a custom 
 
 ## Size customization
 
-The Badge component scales with its content. To adjust the size, modify the `font-size` property on the badge element.
+The React Badge component scales with its content. To adjust the size, modify the `font-size` property on the badge element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -56,7 +56,7 @@ The Badge component scales with its content. To adjust the size, modify the `fon
 
 ## Position customization
 
-The Badge component supports `top` and `bottom` positioning out of the box. For other positions, override the badge styles with a custom CSS class.
+The React Badge component supports `top` and `bottom` positioning out of the box. For other positions, override the React Badge styles with a custom CSS class.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

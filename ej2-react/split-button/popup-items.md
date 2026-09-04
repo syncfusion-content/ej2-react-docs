@@ -46,7 +46,7 @@ Customize individual popup items using the [`beforeItemRender`](https://ej2.sync
 
 ### Popup Templating
 
-Fully customize the entire popup structure and content by leveraging the [`target`](https://ej2.syncfusion.com/react/documentation/api/split-button#target) property to reference a custom template element. This approach allows you to implement complex popup layouts, nested menus, custom styling, or integration with other components while maintaining the SplitButton trigger behavior.
+Fully customize the entire popup structure and content by leveraging the [`target`](https://ej2.syncfusion.com/react/documentation/api/split-button#target) property to reference a custom template element. This approach allows you to implement complex popup layouts, nested menus, custom styling, or integration with other components while maintaining the React Split Button trigger behavior.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -62,4 +62,4 @@ Fully customize the entire popup structure and content by leveraging the [`targe
 ## See Also
 
 * [Popup items grouping](./how-to/group-items-in-popup)
-* [SplitButton popup with separator](./icons-and-separator#separator)
+* [React Split Button popup with separator](./icons-and-separator#separator)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # User Interaction in React Signature
 
-The Signature component supports the following user interactions:
+The React Signature component supports the following user interactions:
 
 * Undo and Redo
 * Clear
@@ -19,7 +19,7 @@ The Signature component supports the following user interactions:
 
 ## Undo and Redo
 
-The Signature component maintains snapshots of each action for undo and redo operations using a SnapIndex.
+The React Signature component maintains snapshots of each action for undo and redo operations using a SnapIndex.
 
 The [`undo`](https://ej2.syncfusion.com/react/documentation/api/signature/#undo) method reverts the last action by decreasing the SnapIndex to restore the previous snapshot. Use the [`canUndo`](https://ej2.syncfusion.com/react/documentation/api/signature/#canundo) method to check if undo is available.
 

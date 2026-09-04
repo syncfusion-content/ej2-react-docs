@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize the Slider thumb in React Slider
 
-The Slider appearance can be customized using CSS by overriding Slider CSS classes. By default, the Slider uses the `e-handle` class for the Slider thumb. You can override this class as needed.
+The React Slider appearance can be customized using CSS by overriding React Slider CSS classes. By default, the React Slider uses the `e-handle` class for the React Slider thumb. You can override this class as needed.
 
 ```css
 .e-control.e-slider .e-handle {
@@ -38,7 +38,7 @@ The Slider appearance can be customized using CSS by overriding Slider CSS class
 }
 ```
 
-In this example, the Slider thumb has been customized to square, circle, and oval shapes. Additionally, a custom background image has been applied to one of the sliders.
+In this example, the React Slider thumb has been customized to square, circle, and oval shapes. Additionally, a custom background image has been applied to one of the sliders.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

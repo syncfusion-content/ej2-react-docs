@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to prevent focus on the first element in React Dialog
 
-By default, when the dialog opens, focus is automatically set to the first focusable element in the content area. You can prevent this default behavior using the [`open`](https://ej2.syncfusion.com/react/documentation/api/dialog#open) event and setting the `preventFocus` argument to `true`. The `open` event receives an [`OpenEventArgs`](https://ej2.syncfusion.com/react/documentation/api/dialog#openeventargs) object whose `preventFocus` property can be set to `true` to stop the Dialog from auto-focusing the first element.
+By default, when the React Dialog opens, focus is automatically set to the first focusable element in the content area. You can prevent this default behavior using the [`open`](https://ej2.syncfusion.com/react/documentation/api/dialog#open) event and setting the `preventFocus` argument to `true`. The `open` event receives an [`OpenEventArgs`](https://ej2.syncfusion.com/react/documentation/api/dialog#openeventargs) object whose `preventFocus` property can be set to `true` to stop the React Dialog from auto-focusing the first element.
 
 Set the `preventFocus` argument in the `open` event handler as shown in the following sample. The Ok and Cancel buttons included in the sample are for demonstration purposes and are not required for the focus-prevention behavior.
 
@@ -43,5 +43,5 @@ Set the `preventFocus` argument in the `open` event handler as shown in the foll
 ## See Also
 
 * [Prevent the focus to the previous element](./prevent-the-focus-to-the-previous-element)
-* [Dialog open event API reference](https://ej2.syncfusion.com/react/documentation/api/dialog#open)
-* [Dialog API Reference](https://ej2.syncfusion.com/react/documentation/api/dialog)
+* [React Dialog open event API reference](https://ej2.syncfusion.com/react/documentation/api/dialog#open)
+* [React Dialog API Reference](https://ej2.syncfusion.com/react/documentation/api/dialog)

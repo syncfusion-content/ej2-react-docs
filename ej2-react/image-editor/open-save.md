@@ -12,21 +12,21 @@ domainurl: ##DomainURL##
 
 To import an image into the canvas, it must first be converted into a blob object. The Uploader component can be used to facilitate the process of uploading an image from the user interface. Once the image has been uploaded, it can then be converted into a blob and drawn onto the canvas. 
 
-To save an edited image in the Image Editor component, use the `getImageData` method (or the `export` API for direct file download) to retrieve the edited image as a base64 string, Blob, or byte array. This will include any annotations or filters that have been applied during the editing process.
+To save an edited image in the React Image Editor component, use the `getImageData` method (or the `export` API for direct file download) to retrieve the edited image as a base64 string, Blob, or byte array. This will include any annotations or filters that have been applied during the editing process.
 
 ## Supported image formats
 
-The Image Editor control supports five common image formats: PNG, JPEG, SVG, WEBP, and BMP. These formats allow you to work with a wide range of image files within the Image Editor.
+The React Image Editor control supports five common image formats: PNG, JPEG, SVG, WEBP, and BMP. These formats allow you to work with a wide range of image files within the React Image Editor.
 
-When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG, SVG, or WEBP, based on your specific requirements or preferences.
+When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the React Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG, SVG, or WEBP, based on your specific requirements or preferences.
 
 ## Open an image
 
-The [`open`](https://ej2.syncfusion.com/react/documentation/api/image-editor#open) method in the Image Editor control offers the capability to open an image by providing it in different formats. This method accepts various types of arguments, such as a base64-encoded string, raw image data, or a hosted/online URL. You can pass either the file name or the actual image data as an argument to the `open` method, and it will load the specified image into the Image Editor control. This flexibility allows you to work with images from different sources and formats, making it easier to integrate and manipulate images within the Image Editor control.
+The [`open`](https://ej2.syncfusion.com/react/documentation/api/image-editor#open) method in the React Image Editor control offers the capability to open an image by providing it in different formats. This method accepts various types of arguments, such as a base64-encoded string, raw image data, or a hosted/online URL. You can pass either the file name or the actual image data as an argument to the `open` method, and it will load the specified image into the React Image Editor control. This flexibility allows you to work with images from different sources and formats, making it easier to integrate and manipulate images within the React Image Editor control.
 
-### Opening local images in the Image Editor 
+### Opening local images in the React Image Editor 
 
-Users can easily open local images in the Image Editor. Simply place the image in the same folder as the sample. By specifying the local file name directly in the `open` method, the image will be loaded seamlessly into the editor.
+Users can easily open local images in the React Image Editor. Simply place the image in the same folder as the sample. By specifying the local file name directly in the `open` method, the image will be loaded seamlessly into the editor.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -44,9 +44,9 @@ Users can easily open local images in the Image Editor. Simply place the image i
 
 ### Open an image from base64 format
 
-Users can open images in the Image Editor using a Base64-encoded string. Simply pass the Base64 string to the `open` method, and the image will be loaded into the editor.
+Users can open images in the React Image Editor using a Base64-encoded string. Simply pass the Base64 string to the `open` method, and the image will be loaded into the editor.
 
-**Note:** You can obtain the Base64 representation of an image from the Image Editor using the [`getImageData`](https://ej2.syncfusion.com/react/documentation/api/image-editor#getimagedata) method.
+**Note:** You can obtain the Base64 representation of an image from the React Image Editor using the [`getImageData`](https://ej2.syncfusion.com/react/documentation/api/image-editor#getimagedata) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -64,9 +64,9 @@ Users can open images in the Image Editor using a Base64-encoded string. Simply 
 
 ### Open an image from Blob storage
 
-Users can open images in the Image Editor from Blob storage. Retrieve the image Blob from storage and pass it to the `open` method to load the image into the editor.
+Users can open images in the React Image Editor from Blob storage. Retrieve the image Blob from storage and pass it to the `open` method to load the image into the editor.
 
-**Note:** You can obtain the Blob representation of an image from the Image Editor using the [`getImageData`](https://ej2.syncfusion.com/react/documentation/api/image-editor#getimagedata) method.
+**Note:** You can obtain the Blob representation of an image from the React Image Editor using the [`getImageData`](https://ej2.syncfusion.com/react/documentation/api/image-editor#getimagedata) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -84,7 +84,7 @@ Users can open images in the Image Editor from Blob storage. Retrieve the image 
 
 ### Open an image from File Uploader
 
-Users can open images in the Image Editor using a file uploader. Once the image is selected through the file uploader, pass the File/Blob to the `open` method to load it into the editor.
+Users can open images in the React Image Editor using a file uploader. Once the image is selected through the file uploader, pass the File/Blob to the `open` method to load it into the editor.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -102,7 +102,7 @@ Users can open images in the Image Editor using a file uploader. Once the image 
 
 ### Open an image from File Manager
 
-Users can open images in the Image Editor using the File Manager. Browse and select an image file, then pass the File/Blob to the `open` method to load it into the editor.
+Users can open images in the React Image Editor using the File Manager. Browse and select an image file, then pass the File/Blob to the `open` method to load it into the editor.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -120,7 +120,7 @@ Users can open images in the Image Editor using the File Manager. Browse and sel
 
 ### Open an image from Treeview
 
-Users can open images in the Syncfusion Image Editor by selecting a node from a tree view. When a user clicks on an image node, the corresponding image is loaded into the editor using the `open` method. This allows for a seamless image editing experience directly from the TreeView component.
+Users can open images in the Syncfusion React Image Editor by selecting a node from a tree view. When a user clicks on an image node, the corresponding image is loaded into the editor using the `open` method. This allows for a seamless image editing experience directly from the TreeView component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -138,7 +138,7 @@ Users can open images in the Syncfusion Image Editor by selecting a node from a 
 
 ### Add watermarks while opening an image
 
-You can utilize the [`fileOpened`](https://ej2.syncfusion.com/react/documentation/api/image-editor#fileopened) event, which triggers once the image is loaded into the image editor. After this event, you can use the `drawText` method to add a watermark.
+You can utilize the [`fileOpened`](https://ej2.syncfusion.com/react/documentation/api/image-editor#fileopened) event, which triggers once the image is loaded into the React Image Editor. After this event, you can use the `drawText` method to add a watermark.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -255,7 +255,7 @@ To save an image as a Blob, use the [`getImageData`](https://ej2.syncfusion.com/
 
 ### Add watermarks while saving the image
 
-You can utilize the [`fileOpened`](https://ej2.syncfusion.com/react/documentation/api/image-editor#fileopened) event, which triggers once the image is loaded into the image editor. After this event, you can use the [`drawText`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawtext) method to add a watermark.
+You can utilize the [`fileOpened`](https://ej2.syncfusion.com/react/documentation/api/image-editor#fileopened) event, which triggers once the image is loaded into the React Image Editor. After this event, you can use the [`drawText`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawtext) method to add a watermark.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -281,7 +281,7 @@ Users can make use of the [`beforeSave`](https://ej2.syncfusion.com/react/docume
 
 ## Events to handle save actions 
 
-The Image Editor provides several events related to opening and saving images. These events offer detailed control over the image handling process. For comprehensive information about these events, see the Events section on this page.
+The React Image Editor provides several events related to opening and saving images. These events offer detailed control over the image handling process. For comprehensive information about these events, see the Events section on this page.
 
 ### File opened event 
 
@@ -307,11 +307,11 @@ Use these properties in the `saving` handler to inspect or cancel the save.
 
 ### Created event 
 
-The [`created`](https://ej2.syncfusion.com/react/documentation/api/image-editor#created) event is triggered once the Image Editor component is created and initialized.
+The [`created`](https://ej2.syncfusion.com/react/documentation/api/image-editor#created) event is triggered once the React Image Editor component is created and initialized.
 
 ### Destroyed event 
 
-The [`destroyed`](https://ej2.syncfusion.com/react/documentation/api/image-editor#destroyed) event is triggered once the Image Editor component is destroyed or removed from the application.
+The [`destroyed`](https://ej2.syncfusion.com/react/documentation/api/image-editor#destroyed) event is triggered once the React Image Editor component is destroyed or removed from the application.
 
 ## See Also
 

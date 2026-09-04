@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Migration from Essential JS 1 in React Checkbox
 
-This article describes the API migration process of the CheckBox component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
+This article describes the API migration process of the React Checkbox component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Properties
 
@@ -18,7 +18,7 @@ This article describes the API migration process of the CheckBox component from 
 
 | Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
-| CheckBox label | **Property:** *text* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox"></EJ.CheckBox>` | **Property:** *label* <br/><br/> `<CheckBoxComponent id="checkbox" label="Checkbox"></CheckBoxComponent>` |
+| React Checkbox label | **Property:** *text* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox"></EJ.CheckBox>` | **Property:** *label* <br/><br/> `<CheckBoxComponent id="checkbox" label="Checkbox"></CheckBoxComponent>` |
 | Checked state | **Property:** *enableTriState and checkState* <br/><br/> `<EJ.CheckBox id="checkbox" enableTriState={true} text="Checked state" checkState="check"></EJ.CheckBox>` | **Property:** *checked* <br/><br/> `<CheckBoxComponent id="checkbox" checked={true} label="Checked state"></CheckBoxComponent>` |
 | Indeterminate state | **Property:** *enableTriState and checkState* <br/><br/> `<EJ.CheckBox id="checkbox" text="Indeterminate state" enableTriState={true} checkState="indeterminate"></EJ.CheckBox>` | **Property:** *indeterminate* <br/><br/> `<CheckBoxComponent id="indeterminate" indeterminate={true} label="Intermediate state"></CheckBoxComponent>` |
 | Adding custom css class | **Property:** *cssClass* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox" cssClass="custom-class"></EJ.CheckBox>` | **Property:** *cssClass* <br/><br/> `<CheckBoxComponent id="checkbox" cssClass="custom-class" label="Checkbox"></CheckBoxComponent>` |
@@ -42,8 +42,8 @@ This article describes the API migration process of the CheckBox component from 
 | --- | --- | --- |
 | Destroy | **Method:** *destroy* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox"></EJ.CheckBox>` <br/> var checkbox = $('#checkbox').ejCheckBox('instance'); <br/> checkbox.destroy(); | **Method:** *destroy* <br/><br/> `<CheckBoxComponent id="checkbox" label="Checkbox" ref={(scope) => {this.checkbox = scope}></CheckBoxComponent>` <br/> constructor(props: {}) { <br/> &nbsp; this.checkbox.destroy(); <br/> } |
 | Disable the Checkbox | **Method:** *disable* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox"></EJ.CheckBox>` <br/> var checkbox = $('#checkbox').ejCheckBox('instance'); <br/>checkbox.disable(); | Not applicable |
-| Enable the Checkbox | **Method:** *enable* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox"></EJ.CheckBox>` <br/> var checkbox = $('#checkbox').ejCheckBox('instance'); <br/>checkbox.enable(); | Not applicable |
-| Check state of the Checkbox | **Method:** *isChecked* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox"></EJ.CheckBox>` <br/> var checkbox = $('#checkbox').ejCheckBox('instance'); <br/>checkbox.isChecked(); | Not applicable |
+| Enable the React Checkbox | **Method:** *enable* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox"></EJ.CheckBox>` <br/> var checkbox = $('#checkbox').ejCheckBox('instance'); <br/>checkbox.enable(); | Not applicable |
+| Check state of the React Checkbox | **Method:** *isChecked* <br/><br/> `<EJ.CheckBox id="checkbox" text="Checkbox"></EJ.CheckBox>` <br/> var checkbox = $('#checkbox').ejCheckBox('instance'); <br/>checkbox.isChecked(); | Not applicable |
 
 ## Events
 

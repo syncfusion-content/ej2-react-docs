@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Templates in React Rating
 
-Customize the appearance of rating items using templates. Templates allow you to specify a custom layout for rating items with any content, creating a personalized rating experience.
+Customize the appearance of React Rating items using templates. Templates allow you to specify a custom layout for rating items with any content, creating a personalized rating experience.
 
-The Rating component supports the following templates for item customization:
+The React Rating component supports the following templates for item customization:
 
 * [`emptyTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#emptytemplate)
 * [`fullTemplate`](https://ej2.syncfusion.com/react/documentation/api/rating/#fulltemplate)
@@ -59,7 +59,7 @@ The `value` and `index` are available in the template context for accessing rate
 
 ## Using Emoji icon as rating symbol
 
-Use emojis as rating symbols by specifying them as template content within the `emptyTemplate` tag directive.
+Use emojis as React Rating symbols by specifying them as template content within the `emptyTemplate` tag directive.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -75,7 +75,7 @@ Use emojis as rating symbols by specifying them as template content within the `
 
 {% previewsample "page.domainurl/code-snippet/rating/templates/emoji-template-cs1" %}
 
-## Using SVG icon as rating symbol
+## Using SVG icon as Rating symbol
 
 Use SVG icons as rating symbols by specifying them as template content within the `emptyTemplate` and `fullTemplate` tag directives.
 
@@ -93,9 +93,9 @@ Use SVG icons as rating symbols by specifying them as template content within th
 
 {% previewsample "page.domainurl/code-snippet/rating/templates/svg-template-cs1" %}
 
-## Using PNG image as rating symbol
+## Using PNG image as React Rating symbol
 
-Use PNG images as rating symbols by specifying them as template content within the `emptyTemplate` and `fullTemplate` tag directives.
+Use PNG images as Rating symbols by specifying them as template content within the `emptyTemplate` and `fullTemplate` tag directives.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

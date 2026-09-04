@@ -10,27 +10,27 @@ domainurl: ##DomainURL##
 
 # How to render using utility functions in React Dialog
 
-The dialog component provides built-in utility functions to render alert and confirm dialogs with minimal code.
+The React Dialog component provides built-in utility functions to render alert and confirm dialogs with minimal code.
 The following options are used as an argument on calling the utility functions:
 
 | Options   | Description |
 |-----------|-------------|
-| title | Specifies the title of dialog like the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog#header) property.|
-| content | Specifies the value that can be displayed in dialog's content area like the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property. |
-| isModal | A boolean value that determines whether the dialog is displayed as modal or non-modal. For more details, refer to the [`isModal`](https://ej2.syncfusion.com/react/documentation/api/dialog#ismodal) property.|
-| position | Specifies the position of the alert or confirm dialog within the document. For more details, refer to the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog#position) property. The default value is `{ X: 'center', Y: 'center' }`.|
+| title | Specifies the title of React Dialog like the [`header`](https://ej2.syncfusion.com/react/documentation/api/dialog#header) property.|
+| content | Specifies the value that can be displayed in React Dialog's content area like the [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property. |
+| isModal | A boolean value that determines whether the React Dialog is displayed as modal or non-modal. For more details, refer to the [`isModal`](https://ej2.syncfusion.com/react/documentation/api/dialog#ismodal) property.|
+| position | Specifies the position of the alert or confirm React Dialog within the document. For more details, refer to the [`position`](https://ej2.syncfusion.com/react/documentation/api/dialog#position) property. The default value is `{ X: 'center', Y: 'center' }`.|
 | okButton | Configures the OK button with properties and click events. The `okButton` object follows the [`ButtonModel`](https://ej2.syncfusion.com/react/documentation/api/button#buttonmodel) interface: `{ icon: 'prefix icon to the button', cssClass: 'custom class to the button', click: 'action for OK button click', text: 'Yes' // Default value is 'OK' }`.|
 | cancelButton | Configures the Cancel button with properties and click events. The `cancelButton` object follows the [`ButtonModel`](https://ej2.syncfusion.com/react/documentation/api/button#buttonmodel) interface: `{ icon: 'prefix icon to the button', cssClass: 'custom class to the button', click: 'action for Cancel button click', text: 'No' // Default value is 'Cancel' }`.|
-| isDraggable | A boolean value that determines whether the dialog can be dragged.|
-| showCloseIcon | When set to true, the close icon is shown in the dialog component. |
-| closeOnEscape | When set to `true`, the dialog can be closed by pressing the Esc key.|
-| animationSettings | Specifies the animation settings of the dialog component. |
-| cssClass | Specifies the CSS class name that can be appended to the dialog. |
-| zIndex | Specifies the z-index of the dialog, controlling whether it appears in front of or behind other components. |
-| open | Event which is triggered after the dialog is opened. |
-| close | Event which is triggered after the dialog is closed. |
+| isDraggable | A boolean value that determines whether the React Dialog can be dragged.|
+| showCloseIcon | When set to true, the close icon is shown in the React Dialog component. |
+| closeOnEscape | When set to `true`, the React Dialog can be closed by pressing the Esc key.|
+| animationSettings | Specifies the animation settings of the React Dialog component. |
+| cssClass | Specifies the CSS class name that can be appended to the React Dialog. |
+| zIndex | Specifies the z-index of the React Dialog, controlling whether it appears in front of or behind other components. |
+| open | Event which is triggered after the React Dialog is opened. |
+| close | Event which is triggered after the React Dialog is closed. |
 
-> The `DialogUtility.alert()` and `DialogUtility.confirm()` methods return a Dialog instance, which can be used to programmatically call `hide()` or access other Dialog methods.
+> The `DialogUtility.alert()` and `DialogUtility.confirm()` methods return a React Dialog instance, which can be used to programmatically call `hide()` or access other React Dialog methods.
 
 ## Alert dialog
 

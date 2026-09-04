@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to render with rules in React Query Builder UI
 
-Initialize the Query Builder with predefined rules using the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder#rule) property. This allows you to load saved or template-based query conditions on component initialization. The `rule` property accepts a [`RuleModel`](https://ej2.syncfusion.com/react/documentation/api/query-builder/ruleModel) object whose structure mirrors the input of the [`setRules`](https://ej2.syncfusion.com/react/documentation/api/query-builder#setrules) method.
+Initialize the React Query Builder UI with predefined rules using the [`rule`](https://ej2.syncfusion.com/react/documentation/api/query-builder#rule) property. This allows you to load saved or template-based query conditions on component initialization. The `rule` property accepts a [`RuleModel`](https://ej2.syncfusion.com/react/documentation/api/query-builder/ruleModel) object whose structure mirrors the input of the [`setRules`](https://ej2.syncfusion.com/react/documentation/api/query-builder#setrules) method.
 
 ## Rule JSON shape
 

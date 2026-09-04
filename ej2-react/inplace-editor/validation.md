@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Validation in React In-place Editor
 
-In-place Editor component supports validation and it can be achieved by adding rules to the [validationRules](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#validationrules) property, its child property `key` must be same as [name](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#name) property, otherwise validation not performed. Submitting data to the server or calling the [validate](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#validate) method validation executed.
+React In-place Editor component supports validation and it can be achieved by adding rules to the [validationRules](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#validationrules) property, its child property `key` must be same as [name](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#name) property, otherwise validation not performed. Submitting data to the server or calling the [validate](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#validate) method validation executed.
 
 ## Validation Rules
 
-The In-place Editor supports the following validation rules:
+The React In-place Editor supports the following validation rules:
 
 | Rules | Description | Example |
 |------|------|------|
@@ -34,7 +34,7 @@ The In-place Editor supports the following validation rules:
 
 ## Step by step validation configuration
 
-Configure validation in the In-place Editor by following these steps:
+Configure validation in the React In-place Editor by following these steps:
 
 **Step 1:** The `name` property is mandatory for validation to work. The specified name must match the corresponding key in the `validationRules` property.
 

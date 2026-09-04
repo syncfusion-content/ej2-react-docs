@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Skeleton
 
-The Skeleton component follows WCAG 2.2, Section 508, and ADA accessibility standards to ensure all users, including those using assistive technologies, receive meaningful feedback during content loading periods. The component provides semantic markup and ARIA attributes that communicate loading state to screen readers and assistive devices.
+The React Skeleton component follows WCAG 2.2, Section 508, and ADA accessibility standards to ensure all users, including those using assistive technologies, receive meaningful feedback during content loading periods. The component provides semantic markup and ARIA attributes that communicate loading state to screen readers and assistive devices.
 
-The accessibility compliance levels for the Skeleton component are outlined below.
+The accessibility compliance levels for the React Skeleton component are outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,24 +40,24 @@ The accessibility compliance levels for the Skeleton component are outlined belo
 
 ## WAI-ARIA attributes
 
-The Skeleton component implements [WAI-ARIA status pattern](https://www.w3.org/WAI/ARIA/apg/patterns#status) semantics to communicate loading state to assistive technologies. The following ARIA attributes are applied in the Skeleton component:
+The React Skeleton component implements [WAI-ARIA status pattern](https://www.w3.org/WAI/ARIA/apg/patterns#status) semantics to communicate loading state to assistive technologies. The following ARIA attributes are applied in the React Skeleton component:
 
 | Attribute | Purpose |
 | --- | --- |
-| `role="status"` | Identifies the Skeleton as a status region where loading state is communicated. |
-| `aria-label` | Provides an accessible label describing the Skeleton's purpose or the content being loaded. |
-| `aria-live="polite"` | Announces content updates to screen readers when the skeleton is replaced with actual content. |
-| `aria-busy="true/false"` | Set to `true` during loading to indicate pending content; changed to `false` when content loads or the skeleton is removed. |
+| `role="status"` | Identifies the React Skeleton as a status region where loading state is communicated. |
+| `aria-label` | Provides an accessible label describing the React Skeleton's purpose or the content being loaded. |
+| `aria-live="polite"` | Announces content updates to screen readers when the React Skeleton is replaced with actual content. |
+| `aria-busy="true/false"` | Set to `true` during loading to indicate pending content; changed to `false` when content loads or the React Skeleton is removed. |
 
 ## Motion and animation accessibility
 
-The Skeleton component supports shimmer effects that include animations. Users who prefer reduced motion can configure their operating system or browser settings, and the component respects the `prefers-reduced-motion` media query to minimize animations for accessibility compliance.
+The React Skeleton component supports shimmer effects that include animations. Users who prefer reduced motion can configure their operating system or browser settings, and the component respects the `prefers-reduced-motion` media query to minimize animations for accessibility compliance.
 
 ## Ensuring accessibility
 
-Syncfusion validates the Skeleton component's accessibility compliance using industry-standard tools including [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) during continuous automated testing.
+Syncfusion validates the React Skeleton component's accessibility compliance using industry-standard tools including [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) during continuous automated testing.
 
-The following sample demonstrates the accessibility features of the Skeleton component. Open the [sample](https://ej2.syncfusion.com/accessibility/skeleton.html) in a new window to evaluate the component's accessibility using your preferred accessibility testing tools.
+The following sample demonstrates the accessibility features of the React Skeleton component. Open the [sample](https://ej2.syncfusion.com/accessibility/skeleton.html) in a new window to evaluate the component's accessibility using your preferred accessibility testing tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/skeleton.html" %}
 

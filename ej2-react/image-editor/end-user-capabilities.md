@@ -119,23 +119,23 @@ To add annotations to an image in the image editor, do the following steps.
 
 ## Filtering and fine-tune 
 
-To perform fine-tuning on an image in the image editor, do the following steps. 
+To perform fine-tuning on an image in the React Image Editor, do the following steps. 
 
-* Click the fine-tune button which displays the list of fine-tuning available in the image editor. 
+* Click the fine-tune button which displays the list of fine-tuning available in the React Image Editor. 
 
 * Click one of the fine-tune options from the list of options which shows a slider to adjust the corresponding filter.  
 
-* Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications. 
+* Click on the canvas or tick icon at the right corner of the toolbar in the React Image Editor to apply the modifications. 
 
 ![Filter and Finetune](images/finetune.jpg)
 
 To apply filters on an image in the image editor, do the following steps. 
 
-* Click the filter button which displays the list of filters available in the image editor. 
+* Click the filter button which displays the list of filters available in the React Image Editor. 
 
 * Click the filter from list of options to apply the corresponding filter to an image.  
 
-* Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications. 
+* Click on the canvas or tick icon at the right corner of the toolbar in the React Image Editor to apply the modifications. 
 
 ![Filter and Finetune](images/filter.jpg)
 

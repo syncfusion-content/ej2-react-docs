@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to disable in React Split Button
 
-Control SplitButton interactivity by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/split-button#disabled) property. Set this property to `true` to prevent user interaction, disable both button actions, and gray out the component to indicate its inactive state.
+Control React Split Button interactivity by setting the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/split-button#disabled) property. Set this property to `true` to prevent user interaction, disable both button actions, and gray out the component to indicate its inactive state.
 
-The following example demonstrates how to set the disabled state in the SplitButton component.
+The following example demonstrates how to set the disabled state in the React Split Button component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

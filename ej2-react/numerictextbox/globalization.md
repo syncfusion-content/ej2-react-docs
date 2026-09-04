@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Globalization in React NumericTextBox | Syncfusion
-description: Localize the React NumericTextBox spin button tooltips and UI text using the locale property and the Localization library.
+title: Globalization in React Numeric TextBox | Syncfusion
+description: Localize the React Numeric TextBox spin button tooltips and UI text using the locale property and the Localization library.
 control: Globalization 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React NumericTextBox
+# Globalization in React Numeric TextBox
 
 ## Localization
 
-Adapt the NumericTextBox component to different languages and regions using the [`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library. Set the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#locale) property to display UI text in the user's language. The spin button tooltips automatically localize based on the specified culture.
+Adapt the React Numeric TextBox component to different languages and regions using the [`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library. Set the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/index-default#locale) property to display UI text in the user's language. The spin button tooltips automatically localize based on the specified culture.
 
 | Locale key | en-US (default)  |
 |------|------|
@@ -23,7 +23,7 @@ Adapt the NumericTextBox component to different languages and regions using the 
 
 To load translation object in your application use `load` function of `L10n` class.
 
-The below example demonstrates the NumericTextBox in `German` culture with the spin buttons tooltip.
+The below example demonstrates the React Numeric TextBox in `German` culture with the spin buttons tooltip.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -38,7 +38,7 @@ The below example demonstrates the NumericTextBox in `German` culture with the s
 
 ## Internationalization
 
-Implement culture-specific number formatting and parsing using the [Internationalization library](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization), which leverages official [Unicode CLDR](http://cldr.unicode.org/) JSON data. The NumericTextBox includes built-in internationalization support through the `loadCldr` method for loading culture-specific CLDR data.
+Implement culture-specific number formatting and parsing using the [Internationalization library](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization), which leverages official [Unicode CLDR](http://cldr.unicode.org/) JSON data. The React Numeric TextBox includes built-in internationalization support through the `loadCldr` method for loading culture-specific CLDR data.
 
 By default, all Essential<sup style="font-size:70%">&reg;</sup> JS 2 components use English culture ('en-US'). To support additional cultures, follow these steps:
 
@@ -74,9 +74,9 @@ By default, all Essential<sup style="font-size:70%">&reg;</sup> JS 2 components 
 
   ```
 
-3. **Set the locale** using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#locale) property on the NumericTextBox component.
+3. **Set the locale** using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/index-default#locale) property on the React Numeric TextBox component.
 
-The below example demonstrates the NumericTextBox in `German` culture with the `EUR` currency format.
+The below example demonstrates the React Numeric TextBox in `German` culture with the `EUR` currency format.
 
 `[Class-component]`
 
@@ -136,7 +136,7 @@ The below example demonstrates the NumericTextBox in `German` culture with the `
 
 ## Right to Left(RTL)
 
-RTL provides an option to switch the text direction and layout of the NumericTextBox component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL NumericTextBox, set the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/#enablertl) to true.
+RTL provides an option to switch the text direction and layout of the React Numeric TextBox component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL React Numeric TextBox, set the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/numerictextbox/index-default#enablertl) to true.
 
 `[Class-component]`
 

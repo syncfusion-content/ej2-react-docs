@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Modal dialog with Rich Text Editor in React Dialog component
 
-This section explains how to render a modal dialog with the Rich Text Editor (RTE) component. When a modal dialog contains the Rich Text Editor, the editor's toolbar may fail to render. This happens because the dialog container and wrapper elements are initially hidden with `display: none`. As a result, the toolbar cannot calculate its correct offset width.
+This section explains how to render a modal dialog with the Rich Text Editor (RTE) component. When a modal dialog contains the Rich Text Editor, the editor's toolbar may fail to render. This happens because the React Dialog container and wrapper elements are initially hidden with `display: none`. As a result, the toolbar cannot calculate its correct offset width.
 
-To resolve this issue, call the RTE [`refreshUI`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor#refreshui) method in the Dialog [`open`](https://ej2.syncfusion.com/react/documentation/api/dialog#open) event handler. The `open` event fires after the Dialog becomes visible, ensuring the RTE can correctly measure and render its toolbar at that point.
+To resolve this issue, call the RTE [`refreshUI`](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor#refreshui) method in the React Dialog [`open`](https://ej2.syncfusion.com/react/documentation/api/dialog#open) event handler. The `open` event fires after the React Dialog becomes visible, ensuring the RTE can correctly measure and render its toolbar at that point.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

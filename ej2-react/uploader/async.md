@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Async in React File Upload
 
-The uploader component allows you to upload the files asynchronously. The upload process requires save and remove action URL to manage the upload process in the server.
+The React File Upload component allows you to upload the files asynchronously. The upload process requires save and remove action URL to manage the upload process in the server.
 
 * The save action is necessary to handle the upload operation.
 * The remove action is optional, to handle the removed files from server.
@@ -19,7 +19,7 @@ The files can be uploaded automatically or manually. For more information, refer
 
 ## Multiple file upload
 
-By default, the Uploader component enables simultaneous selection and upload of multiple files. Selected files display in a list that persists until cleared using the clear button in the footer. Enable the `multiple` file selection property to allow users to select multiple files at once.
+By default, the React File Upload component enables simultaneous selection and upload of multiple files. Selected files display in a list that persists until cleared using the clear button in the footer. Enable the `multiple` file selection property to allow users to select multiple files at once.
 
 The following example explains about multiple file upload settings.
 
@@ -372,9 +372,9 @@ public void Remove(IFormFile UploadFiles)
 
 ## Auto upload
 
-By default, the uploader processes the files to upload once the files are selected and added to the upload queue.
+By default, the React File Upload processes the files to upload once the files are selected and added to the upload queue.
 
-To upload manually, disable the **autoUpload** property. When you disable this property, you can use the action buttons to call upload all or clear all actions manually. You can change those button texts using the **buttons** property in the uploader component.
+To upload manually, disable the **autoUpload** property. When you disable this property, you can use the action buttons to call upload all or clear all actions manually. You can change those button texts using the **buttons** property in the React File Upload component.
 
 `[Class-component]`
 
@@ -404,7 +404,7 @@ To upload manually, disable the **autoUpload** property. When you disable this p
 
 ## Sequential upload
 
-By default, the uploader component process multiple files to upload simultaneously. When you enable the [sequentialUpload](https://ej2.syncfusion.com/react/documentation/api/uploader#sequentialupload) property, the selected files will process sequentially (one after the other) to the server. If the file uploaded successfully or failed, the next file will upload automatically in this sequential upload. This feature helps to reduce the upload traffic and reduce the failure of file upload.
+By default, the React File Upload component process multiple files to upload simultaneously. When you enable the [sequentialUpload](https://ej2.syncfusion.com/react/documentation/api/uploader#sequentialupload) property, the selected files will process sequentially (one after the other) to the server. If the file uploaded successfully or failed, the next file will upload automatically in this sequential upload. This feature helps to reduce the upload traffic and reduce the failure of file upload.
 
 `[Class-component]`
 
@@ -434,7 +434,7 @@ By default, the uploader component process multiple files to upload simultaneous
 
 ### Preloaded files
 
-The uploader component allows you to preload the list of files that are uploaded on the server. The preloaded files are useful to view and remove the files from server that can be achieved by the `files` property. By default, the files are configured with uploaded successfully state on rendering file list.
+The React File Upload component allows you to preload the list of files that are uploaded on the server. The preloaded files are useful to view and remove the files from server that can be achieved by the `files` property. By default, the files are configured with uploaded successfully state on rendering file list.
 
 The following properties are mandatory to configure the preloaded files:
 
@@ -470,7 +470,7 @@ The following properties are mandatory to configure the preloaded files:
 
 ## Adding additional HTTP headers with upload action
 
-The Uploader component allows you to add the additional headers with `save` and `remove` action requests using the `uploading` and `removing` events, which helps to send validation token on file upload. Access the current request and set the request header within these events.
+The React File Upload component allows you to add the additional headers with `save` and `remove` action requests using the `uploading` and `removing` events, which helps to send validation token on file upload. Access the current request and set the request header within these events.
 
 The following code block shows how to add the additional headers with save and remove action request.
 

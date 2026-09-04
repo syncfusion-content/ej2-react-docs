@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Style and Appearance in React TextBox
 
-Customize the TextBox component's appearance using CSS to match your application's design system. The following CSS rules demonstrate common styling modifications for various TextBox scenarios.
+Customize the React TextBox component's appearance using CSS to match your application's design system. The following CSS rules demonstrate common styling modifications for various TextBox scenarios.
 
-## Customizing the appearance of TextBox wrapper element
+## Customizing the appearance of React TextBox wrapper element
 
-Modify the TextBox dimensions and typography by applying the following CSS rules to input and textarea elements:
+Modify the React TextBox dimensions and typography by applying the following CSS rules to input and textarea elements:
 
 ```css
-/* Customize TextBox height and font size */
+/* Customize React TextBox height and font size */
 .e-input:not(:valid), 
 .e-input:valid, 
 .e-float-input.e-control-wrapper input:not(:valid), 
@@ -41,7 +41,7 @@ Modify the TextBox dimensions and typography by applying the following CSS rules
 }
 ```
 
-## Customizing the TextBox floating label
+## Customizing the React TextBox floating label
 
 Customize the floating label's color and font size using the following CSS rules:
 

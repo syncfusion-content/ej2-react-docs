@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Index in React Radio button component
 
-The RadioButton is a graphical user interface element that allows you to select one option from the choices. It contains checked and unchecked states.
+The React Radio Button is a graphical user interface element that allows you to select one option from the choices. It contains checked and unchecked states.
 
 ## Key Features
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Progress Button
 
-The ProgressButton component adheres to accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is usable by all users, including those using assistive technologies.
+The React Progress Button component adheres to accessibility standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles). These standards ensure the component is usable by all users, including those using assistive technologies.
 
-The following table outlines the accessibility compliance for the ProgressButton component.
+The following table outlines the accessibility compliance for the React Progress Button component.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -43,11 +43,11 @@ The following table outlines the accessibility compliance for the ProgressButton
 Legend:
 <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - Fully supported
 
-The ProgressButton component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to ensure accessibility. The following ARIA attributes are implemented in the ProgressButton component:
+The React Progress Button component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to ensure accessibility. The following ARIA attributes are implemented in the React Progress Button component:
 
 | Attributes | Purpose | Support |
 | --- | --- | --- |
-| `aria-label` | Provides an accessible name for the icon-only ProgressButton, essential for screen reader users. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| `aria-label` | Provides an accessible name for the icon-only React Progress Button, essential for screen reader users. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | `aria-disabled` | Indicates the disabled state of the button to assistive technologies. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | `aria-valuemin` | Specifies the minimum value for progress (0) to assistive technologies. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | `aria-valuemax` | Specifies the maximum value for progress (100) to assistive technologies. | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
@@ -55,7 +55,7 @@ The ProgressButton component follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/
 
 ## Keyboard interaction
 
-The ProgressButton component implements keyboard interaction guidelines to support users relying on keyboard navigation or assistive technologies. The following keyboard shortcuts are supported:
+The React Progress Button component implements keyboard interaction guidelines to support users relying on keyboard navigation or assistive technologies. The following keyboard shortcuts are supported:
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -66,9 +66,9 @@ The ProgressButton component implements keyboard interaction guidelines to suppo
 
 ## Ensuring accessibility
 
-The ProgressButton component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Progress Button component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the ProgressButton component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/progress-button.html) in a new window to evaluate the accessibility of the ProgressButton component with accessibility tools.
+The accessibility compliance of the React Progress Button component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/progress-button.html) in a new window to evaluate the accessibility of the React Progress Button component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/progress-button.html" %}
 

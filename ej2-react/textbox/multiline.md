@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Multiline in React TextBox
 
-Transform the TextBox into a multiline input control to capture multi-line text content such as addresses, descriptions, comments, or longer-form user feedback.
+Transform the React TextBox into a multiline input control to capture multi-line text content such as addresses, descriptions, comments, or longer-form user feedback.
 
-## Create multiline TextBox
+## Create multiline React TextBox
 
-You can convert the default TextBox into the multiline TextBox by setting the [multiline](https://ej2.syncfusion.com/react/documentation/api/textbox/#multiline) API value as true or pass HTML5 textarea as element to the TextBox.
+You can convert the default React TextBox into the multiline React TextBox by setting the [multiline](https://ej2.syncfusion.com/react/documentation/api/textbox/#multiline) API value as true or pass HTML5 textarea as element to the React TextBox.
 
 > The multiline TextBox allows you to resize it in vertical direction alone.
 
@@ -46,7 +46,7 @@ You can convert the default TextBox into the multiline TextBox by setting the [m
 
 ## Implementing floating label
 
-You can achieve the floating label behavior in the multiline TextBox by setting `floatLabelType` as 'Auto'. The placeholder text act as floating label to the multiline TextBox. You can provide the placeholder text to the multiline TextBox either by using the `placeholder` property or placeholder attribute.
+You can achieve the floating label behavior in the multiline React TextBox by setting `floatLabelType` as 'Auto'. The placeholder text act as floating label to the multiline React TextBox. You can provide the placeholder text to the multiline React TextBox either by using the `placeholder` property or placeholder attribute.
 
 `[Class-component]`
 
@@ -76,7 +76,7 @@ You can achieve the floating label behavior in the multiline TextBox by setting 
 
 ## Auto resizing
 
-By default, you can manually resize the multiline TextBox. But you can also create an `auto resizing` multiline TextBox with both the initial and dynamic value change. It can be done by calculating the height of the textarea in the created event for initial value update and in the input event for dynamic value update of the auto resize multiline TextBox, as explained in the following code sample.
+By default, you can manually resize the multiline React TextBox. But you can also create an `auto resizing` multiline React TextBox with both the initial and dynamic value change. It can be done by calculating the height of the textarea in the created event for initial value update and in the input event for dynamic value update of the auto resize multiline React TextBox, as explained in the following code sample.
 
 `[Class-component]`
 
@@ -106,7 +106,7 @@ By default, you can manually resize the multiline TextBox. But you can also crea
 
 ## Disable resizing
 
-By default, the multiline TextBox includes resize functionality. Disable resizing by applying the following CSS styles to prevent users from manually adjusting dimensions:
+By default, the multiline React TextBox includes resize functionality. Disable resizing by applying the following CSS styles to prevent users from manually adjusting dimensions:
 
 ```css
     textarea.e-input,
@@ -147,7 +147,7 @@ By default, the multiline TextBox includes resize functionality. Disable resizin
 
 ## Limit the text length
 
-By default, the multiline TextBox accepts unlimited text. Restrict input length by applying the `maxLength` property using the `addAttribute` method to enforce character limits.
+By default, the multiline React TextBox accepts unlimited text. Restrict input length by applying the `maxLength` property using the `addAttribute` method to enforce character limits.
 
 `[Class-component]`
 
@@ -177,7 +177,7 @@ By default, the multiline TextBox accepts unlimited text. Restrict input length 
 
 ## Count characters
 
-You can show the number of characters entered inside the textarea by calculating the character count in the input event of multiline TextBox. The character count is updated while entering or deleting any character inside the textarea. The character count shows how many characters can be entered or left to be entered.
+You can show the number of characters entered inside the textarea by calculating the character count in the input event of multiline React TextBox. The character count is updated while entering or deleting any character inside the textarea. The character count shows how many characters can be entered or left to be entered.
 
 `[Class-component]`
 

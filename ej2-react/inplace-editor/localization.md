@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-Localize the default text content of the In-place Editor for different cultures by setting the [locale](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#locale) property. The following keys are localized based on the specified culture.
+Localize the default text content of the React In-place Editor for different cultures by setting the [locale](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#locale) property. The following keys are localized based on the specified culture.
 
 | Locale key | en-US (default) |
 |------|------|
@@ -23,7 +23,7 @@ Localize the default text content of the In-place Editor for different cultures 
 | editAreaClick | Click to edit |
 | editAreaDoubleClick | Double click to edit |
 
-Load translation objects in your application using the `load` function of the `L10n` class. In the following sample, the In-place Editor is configured with the `French` culture and customized tooltip text.
+Load translation objects in your application using the `load` function of the `L10n` class. In the following sample, the React In-place Editor is configured with the `French` culture and customized tooltip text.
 
 `[Class-component]`
 
@@ -53,7 +53,7 @@ Load translation objects in your application using the `load` function of the `L
 
 ## Right to left
 
-Control the text direction of the In-place Editor using the `enableRtl` property. For languages and writing systems that require right-to-left (RTL) orientation, such as Arabic and Hebrew, enable this property.
+Control the text direction of the React In-place Editor using the `enableRtl` property. For languages and writing systems that require right-to-left (RTL) orientation, such as Arabic and Hebrew, enable this property.
 
 > The RTL direction is not automatically determined by the locale property and must be set explicitly.
 

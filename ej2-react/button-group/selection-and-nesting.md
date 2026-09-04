@@ -14,9 +14,9 @@ domainurl: ##DomainURL##
 
 ### Single selection
 
-ButtonGroup supports radio type selection, where only one button can be selected at a time. Create a radio type ButtonGroup by adding input elements with the `id` attribute and corresponding labels with the `htmlFor` attribute. Set the input element's `type` to `radio` and add the `e-btn` class to the label element.
+React Button Group supports radio type selection, where only one button can be selected at a time. Create a radio type React Button Group by adding input elements with the `id` attribute and corresponding labels with the `htmlFor` attribute. Set the input element's `type` to `radio` and add the `e-btn` class to the label element.
 
-The following example demonstrates single selection behavior in a ButtonGroup:
+The following example demonstrates single selection behavior in a React Button Group:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -31,9 +31,9 @@ The following example demonstrates single selection behavior in a ButtonGroup:
 
 ### Multiple selection
 
-ButtonGroup supports checkbox type selection, allowing multiple buttons to be selected simultaneously. Create a checkbox type ButtonGroup by adding input elements with the `id` attribute and corresponding labels with the `htmlFor` attribute. Set the input element's `type` to `checkbox` and add the `e-btn` class to the label element.
+React Button Group supports checkbox type selection, allowing multiple buttons to be selected simultaneously. Create a checkbox type React Button Group by adding input elements with the `id` attribute and corresponding labels with the `htmlFor` attribute. Set the input element's `type` to `checkbox` and add the `e-btn` class to the label element.
 
-The following example demonstrates multiple selection behavior in a ButtonGroup:
+The following example demonstrates multiple selection behavior in a React Button Group:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -48,7 +48,7 @@ The following example demonstrates multiple selection behavior in a ButtonGroup:
 
 ## Nesting
 
-ButtonGroup supports nesting with other Syncfusion components. The following components can be nested within a ButtonGroup:
+React Button Group supports nesting with other Syncfusion components. The following components can be nested within a React Button Group:
 * DropDownButton
 * SplitButton
 
@@ -58,7 +58,7 @@ To enable nesting support, configure the [`SplitButton dependencies`](./../split
 
 Initialize the DropDownButton component by referring to the [`DropDownButton Getting Started documentation`](./../drop-down-button/getting-started).
 
-The following example adds the DropDownButton component to the ButtonGroup by importing it from `ej2-react-splitbuttons`:
+The following example adds the DropDownButton component to the React Button Group by importing it from `ej2-react-splitbuttons`:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -75,7 +75,7 @@ The following example adds the DropDownButton component to the ButtonGroup by im
 
 Initialize the SplitButton component by referring to the [`SplitButton Getting Started documentation`](../split-button/getting-started).
 
-The following example adds the SplitButton component to the ButtonGroup by importing it from `ej2-react-splitbuttons`:
+The following example adds the SplitButton component to the React Button Group by importing it from `ej2-react-splitbuttons`:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -90,4 +90,4 @@ The following example adds the SplitButton component to the ButtonGroup by impor
 
 ## See Also
 
-* [Show ButtonGroup selected state on initial render](./how-to/show-buttongroup-selected-state-on-initial-render)
+* [Show React Button Group selected state on initial render](./how-to/show-buttongroup-selected-state-on-initial-render)

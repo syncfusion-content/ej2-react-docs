@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in React AutoComplete
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following content lists the CSS classes you can override to customize the React AutoComplete's appearance. The class names are shared across the Syncfusion themes (Material, Fabric, Bootstrap, Tailwind, Fluent, and high-contrast); the same selectors apply to all theme variants. When your overrides do not take effect, increase the selector specificity or move the rule after the theme stylesheet is loaded. For theme-specific setup, see the [theme documentation](https://ej2.syncfusion.com/react/documentation/appearance).
 
 ## Customizing the appearance of the wrapper element
 
@@ -48,7 +48,7 @@ Use the following CSS to customize the focus color of the input element.
 
 ## Customizing the outline theme focus color
 
-Use the following CSS to customize the focus color of the outline theme.
+Use the following CSS to customize the focus color of the outline theme. To enable the outlined appearance, see the [input appearance](https://ej2.syncfusion.com/react/documentation/textbox/style-appearance) documentation.
 
 ```css
 .e-outline.e-input-group.e-input-focus:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled),.e-outline.e-input-group.e-control-wrapper.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) {

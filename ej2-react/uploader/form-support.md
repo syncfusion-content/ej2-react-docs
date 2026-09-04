@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Support in React File Upload
 
-The Uploader component integrates with HTML forms like standard file input elements. To use the Uploader within a form, set the following configuration:
+The React File Upload component integrates with HTML forms like standard file input elements. To use the React File Upload within a form, set the following configuration:
 
 * **saveUrl** and **removeUrl** must be `null`
 * **autoUpload** must be `false`

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Preact Getting Started with React DropDownList Component | Syncfusion
-description: Check out and learn about getting started with the Preact Framework and React DropDownList Component of Syncfusion Essential JS 2 and more details.
+title: Preact Getting Started with React Dropdown List Component | Syncfusion
+description: Check out and learn about getting started with the Preact Framework and React Dropdown List Component of Syncfusion Essential JS 2 and more details.
 control: Preact
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the React DropDownList Component in the Preact
+# Getting Started with the React Dropdown List Component in the Preact
 
-This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React DropDownList component.
+This article provides a step-by-step guide for setting up a [Preact](https://preactjs.com/) project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Dropdown List component.
 
 Preact is a fast and lightweight JavaScript library for building user interfaces, often used as an alternative to larger frameworks like React. Preact is designed for smaller file sizes and faster performance, making it ideal for projects where load times and bundle size are critical. 
 
@@ -85,7 +85,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
 
-This article uses the [React DropDownList component](https://www.syncfusion.com/react-components/react-dropdown-list) as an example. To use the React DropDownList component in the project, the `@syncfusion/ej2-react-dropdowns` package needs to be installed using the following command:
+This article uses the [React Dropdown List component](https://www.syncfusion.com/react-components/react-dropdown-list) as an example. To use the React Dropdown List component in the project, the `@syncfusion/ej2-react-dropdowns` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-dropdowns --save
@@ -101,7 +101,7 @@ yarn add @syncfusion/ej2-react-dropdowns
 
 Import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> React component using CSS or SASS styles from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about built-in themes and ways to reference themes in your React project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the DropDownList component and its dependents were imported into the **src/style.css** file.
+In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the React Dropdown List component and its dependents were imported into the **src/style.css** file.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/style.css" %}
@@ -117,9 +117,9 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the steps below to add the React DropDownList component to the Preact project:
+Follow the steps below to add the React Dropdown List component to the Preact project:
 
-1\. Before adding the DropDownList component to your markup, import the DropDownList component in the **src/index.jsx** file.
+1\. Before adding the React Dropdown List component to your markup, import the React Dropdown List component in the **src/index.jsx** file.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -129,7 +129,7 @@ import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 {% endhighlight %}
 {% endtabs %}
 
-2\. Then, define the DropDownList component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/drop-down-list#datasource) property. Declare the values for the `dataSource` property.
+2\. Then, define the React Dropdown List component with the [dataSource](https://helpej2.syncfusion.com/react/documentation/api/drop-down-list#datasource) property. Declare the values for the `dataSource` property.
 
 {% tabs %}
 {% highlight js tabtitle="~/src/index.jsx" %}
@@ -141,7 +141,7 @@ function App() {
     // define the array of data
     const sportsData = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Hockey', 'Rugby', 'Snooker', 'Tennis'];
     return (
-    // specifies the tag for rendering the DropDownList component
+    // specifies the tag for rendering the React Dropdown List component
     <DropDownListComponent id="ddlelement" dataSource={sportsData} placeholder="Select a game"/>);
 }
 render(<App />, document.querySelector('#app'));

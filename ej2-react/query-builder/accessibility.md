@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Query Builder UI
 
-The Query Builder component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate web accessibility.
+The React Query Builder UI component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate web accessibility.
 
-The following table outlines the accessibility compliance features of the Query Builder component.
+The following table outlines the accessibility compliance features of the React Query Builder UI component.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,11 +42,11 @@ The following table outlines the accessibility compliance features of the Query 
 
 WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications) provides a framework for enhancing the accessibility of web applications. It defines semantic roles, states, and properties that communicate component purpose and current state to assistive technologies like screen readers.
 
-The Query Builder uses the following WAI-ARIA attributes:
+The React Query Builder UI uses the following WAI-ARIA attributes:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role` | Identifies the Query Builder region to assistive technologies. The root container uses `role="form"` while individual rule rows expose `role="group"`. |
+| `role` | Identifies the React Query Builder UI region to assistive technologies. The root container uses `role="form"` while individual rule rows expose `role="group"`. |
 | `aria-expanded` | Indicates whether the field, operator, or value dropdown is currently open or collapsed. |
 | `aria-haspopup` | Conveys that the field, operator, and value editors open a popup (listbox) when activated. |
 | `aria-label` | Provides an accessible name for icon buttons such as Add Group, Add Condition, Delete, Clone, and Lock. |
@@ -54,9 +54,9 @@ The Query Builder uses the following WAI-ARIA attributes:
 
 ## Keyboard interaction
 
-The Query Builder provides keyboard support for efficient navigation and interaction without requiring a mouse. Users can navigate between fields, operators, and values; manage rules and groups; and control the component using standard keyboard shortcuts and focus management.
+The React Query Builder UI provides keyboard support for efficient navigation and interaction without requiring a mouse. Users can navigate between fields, operators, and values; manage rules and groups; and control the component using standard keyboard shortcuts and focus management.
 
-The Query Builder component follows the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Query Builder component.
+The React Query Builder UI component follows the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the React Query Builder UI component.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -68,9 +68,9 @@ The Query Builder component follows the keyboard interaction guideline, making i
 
 ## Ensuring accessibility
 
-The Query Builder component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Query Builder UI component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Query Builder component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/query-builder.html) in a new window to evaluate the accessibility of the Query Builder component with accessibility tools.
+The accessibility compliance of the React Query Builder UI component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/query-builder.html) in a new window to evaluate the accessibility of the React Query Builder UI component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/query-builder.html" %}
 

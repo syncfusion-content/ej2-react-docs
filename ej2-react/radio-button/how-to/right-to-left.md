@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to enable RTL in React Radio Button
 
-Enable right-to-left (RTL) layout support in the RadioButton component by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#enablertl) property to `true`. RTL support flips the component layout and text direction, making it suitable for languages that read from right to left, such as Arabic, Hebrew, and Persian.
+Enable right-to-left (RTL) layout support in the React Radio Button component by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/radio-button/#enablertl) property to `true`. RTL support flips the component layout and text direction, making it suitable for languages that read from right to left, such as Arabic, Hebrew, and Persian.
 
-The following example demonstrates how to implement RTL support in the RadioButton component.
+The following example demonstrates how to implement RTL support in the React Radio Button component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

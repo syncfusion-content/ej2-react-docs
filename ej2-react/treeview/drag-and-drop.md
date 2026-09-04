@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Drag and Drop in React Tree View
 
-The TreeView component allows you to drag and drop any node by setting [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treeview#allowdraganddrop) to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
+The React Tree View component allows you to drag and drop any node by setting [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treeview#allowdraganddrop) to **true**. Nodes can be dragged and dropped at all levels of the same React Tree View.
 
 The dragged nodes can be dropped at any level by indicator lines with **plus**, **minus/restrict**, and **in between** icons. It represents the exact position where the node is to be dropped as sibling or child.
 
@@ -24,9 +24,9 @@ The following table explains the usage of indicator icons.
 
 * If you need to prevent the drag action for a particular node, the [`nodeDragStart`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragstart) event can be used, which is triggered when the node drag starts. If you need to prevent the drop action for a particular node, the [`nodeDragStop`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragstop) event can be used, which is triggered when the drag is stopped.
 
-* The [`nodeDragging`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragging) event is triggered when the TreeView node is being dragged. You can customize the cloned element in this event.
+* The [`nodeDragging`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedragging) event is triggered when the React Tree View node is being dragged. You can customize the cloned element in this event.
 
-* The [`nodeDropped`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedropped) event is triggered when the TreeView node is dropped on the target element successfully.
+* The [`nodeDropped`](https://ej2.syncfusion.com/react/documentation/api/treeview#nodedropped) event is triggered when the React Tree View node is dropped on the target element successfully.
 
 In the following sample, the [allowDragAndDrop](https://ej2.syncfusion.com/react/documentation/api/treeview#allowdraganddrop) property is enabled.
 
@@ -72,7 +72,7 @@ In the following sample,  the `allowMultiSelection` property is  enabled along w
 
  {% previewsample "page.domainurl/code-snippet/tree-view/basic-cs7" %}
 
-> You can also explore our [React Tree View Drag and Drop example](https://ej2.syncfusion.com/react/demos/#/material/treeview/drag-and-drop) that shows how to render the Drag and Drop feature in React TreeView.
+> You can also explore our [React Tree View Drag and Drop example](https://ej2.syncfusion.com/react/demos/#/material/treeview/drag-and-drop) that shows how to render the Drag and Drop feature in React Tree View.
 
 ## See Also
 

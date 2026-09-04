@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Sizing in React TextBox
 
-Render the TextBox component in three predefined sizes to match your design requirements:
+Render the React TextBox component in three predefined sizes to match your design requirements:
 
 | Size | Description | CSS Class |
 |------|-------------|-----------|
@@ -18,7 +18,7 @@ Render the TextBox component in three predefined sizes to match your design requ
 | Small | Compact size for space-constrained layouts | `e-small` |
 | Large | Larger size for better visibility and touch targets | `e-bigger` |
 
-> **Note:** Apply size classes using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/textbox/#cssclass) property. You can also create custom size variations by adding your own CSS classes to the TextBox component for tailored styling.
+> **Note:** Apply size classes using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/textbox/#cssclass) property. You can also create custom size variations by adding your own CSS classes to the React TextBox component for tailored styling.
 
 `[Class-component]`
 

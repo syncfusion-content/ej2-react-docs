@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in React Spinner
 
-Custom templates can be used on the Spinner instead of the default Spinner by specifying the template in the `setSpinner` method.
+Custom templates can be used on the React Spinner instead of the default React Spinner by specifying the template in the `setSpinner` method.
 
 The following steps explain how to define a template for the Spinner:
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to render Sidebar with ListView in React
 
-Any HTML element can be placed in the Sidebar content area. Sidebar supports all types of HTML structures like `TreeView`, `ListView`, etc.
+Any HTML element can be placed in the React Sidebar content area. React Sidebar supports all types of HTML structures like `TreeView`, `ListView`, etc.
 
-In the following example, the Sidebar is rendered with ListView component in its content area.
+In the following example, the React Sidebar is rendered with ListView component in its content area.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

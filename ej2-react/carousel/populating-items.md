@@ -10,24 +10,24 @@ domainurl: ##DomainURL##
 
 # Populating Items in React Carousel
 
-In the Carousel, slides can be rendered in two ways as follows,
+In the React Carousel, slides can be rendered in two ways as follows,
 
-* Populating items using carousel item.
+* Populating items using React Carousel item.
 * Populating Items using data source.
 
-## Populating items using carousel item
+## Populating items using React Carousel item
 
-When rendering the Carousel component using items binding, you can assign templates for each item separately or assign a common template to each item. You can also customize the slide transition interval for each item separately. The following example code depicts the functionality as item property binding.
+When rendering the React Carousel component using items binding, you can assign templates for each item separately or assign a common template to each item. You can also customize the slide transition interval for each item separately. The following example code depicts the functionality as item property binding.
 
 Each `CarouselItemDirective` supports the following key properties from [`CarouselItemModel`](https://ej2.syncfusion.com/react/documentation/api/carousel/carouselitemmodel):
 
 * [`template`](https://ej2.syncfusion.com/react/documentation/api/carousel/carouselitemmodel#template) — Accepts a string or a function that returns the HTML content or React template to be rendered as the slide content. This allows each slide to have a unique layout, image, or custom markup independently of other slides.
 
-* [`interval`](https://ej2.syncfusion.com/react/documentation/api/carousel/carouselitemmodel#interval) — Specifies the duration (in milliseconds) for which a particular slide remains visible before automatically transitioning to the next slide. When set on individual items, it overrides the global `interval` property of the Carousel component, enabling different auto-play durations per slide.
+* [`interval`](https://ej2.syncfusion.com/react/documentation/api/carousel/carouselitemmodel#interval) — Specifies the duration (in milliseconds) for which a particular slide remains visible before automatically transitioning to the next slide. When set on individual items, it overrides the global `interval` property of the React Carousel component, enabling different auto-play durations per slide.
 
-* [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/carousel/carouselitemmodel#cssclass) — Accepts single or multiple CSS class names (separated by a space) used to customize the appearance of an individual carousel item independently of the others.
+* [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/carousel/carouselitemmodel#cssclass) — Accepts single or multiple CSS class names (separated by a space) used to customize the appearance of an individual React Carousel item independently of the others.
 
-* [`htmlAttributes`](https://ej2.syncfusion.com/react/documentation/api/carousel/carouselitemmodel#htmlattributes) — Accepts HTML or custom attributes as a key-value pair to be added to an individual carousel item, allowing further customization of the rendered slide element.
+* [`htmlAttributes`](https://ej2.syncfusion.com/react/documentation/api/carousel/carouselitemmodel#htmlattributes) — Accepts HTML or custom attributes as a key-value pair to be added to an individual React Carousel item, allowing further customization of the rendered slide element.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -42,7 +42,7 @@ Each `CarouselItemDirective` supports the following key properties from [`Carous
 
 ## Populating Items using data source
 
-When rendering the Carousel component using data binding, you can assign a common template only for all items using the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/carousel/index-default#itemtemplate) property. You cannot set the interval for each item. The following example code depicts the functionality as data binding.
+When rendering the React Carousel component using data binding, you can assign a common template only for all items using the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/carousel/index-default#itemtemplate) property. You cannot set the interval for each item. The following example code depicts the functionality as data binding.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -57,7 +57,7 @@ When rendering the Carousel component using data binding, you can assign a commo
 
 ## Selection
 
-The Carousel items will be populated from the first index of the Carousel items and can be customized using the following ways,
+The React Carousel items will be populated from the first index of the React Carousel items and can be customized using the following ways,
 
 * Select an item using the property.
 * Select an item using the method.
@@ -94,7 +94,7 @@ Using the [`prev`](https://ej2.syncfusion.com/react/documentation/api/carousel/i
 
 ## Partial visible slides
 
-The Carousel component supports to show one complete slide and a partial view of adjacent (previous and next) slides at the same time. You can enable or disable the partial slides using the [`partialVisible`](https://ej2.syncfusion.com/react/documentation/api/carousel/index-default#partialvisible) property.
+The React Carousel component supports to show one complete slide and a partial view of adjacent (previous and next) slides at the same time. You can enable or disable the partial slides using the [`partialVisible`](https://ej2.syncfusion.com/react/documentation/api/carousel/index-default#partialvisible) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

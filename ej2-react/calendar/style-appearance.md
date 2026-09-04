@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Style and Appearance in React Calendar
 
-The following CSS examples show how to modify the Calendar control's appearance to match user preferences. Apply these rules with appropriate specificity to override default styles.
+The following CSS examples show how to modify the React Calendar control's appearance to match user preferences. Apply these rules with appropriate specificity to override default styles.
 
-## Customizing the background color for the Calendar
+## Customizing the background color for the React Calendar
 
-Use the following CSS to set a custom background color and outer border for the Calendar container.
+Use the following CSS to set a custom background color and outer border for the React Calendar container.
 
 ```css
 /* Set background color and border */
@@ -24,9 +24,9 @@ Use the following CSS to set a custom background color and outer border for the 
 }
 ```
 
-## Customizing the Calendar date elements on hovering
+## Customizing the React Calendar date elements on hovering
 
-Use the following CSS to customize the date elements on hovering in the Calendar.
+Use the following CSS to customize the date elements on hovering in the React Calendar.
 
 ```css
 /* To specify background color, color, and border */
@@ -48,7 +48,7 @@ Use the following CSS to add the border to the date cell grid.
 }
 ```
 
-## Customizing the Calendar title
+## Customizing the React Calendar title
 
 Use the following CSS to customize the Calendar title.
 
@@ -62,7 +62,7 @@ Use the following CSS to customize the Calendar title.
 
 ## Customizing the previous and next icons
 
-Use the following CSS to customize the previous and next navigation icons in the Calendar header.
+Use the following CSS to customize the previous and next navigation icons in the React Calendar header.
 
 ```css
 /* Set color and border */
@@ -72,9 +72,9 @@ Use the following CSS to customize the previous and next navigation icons in the
 }
 ```
 
-## Customizing the content header in Calendar
+## Customizing the content header in React Calendar
 
-Use the following CSS to customize the background of the day-of-week header row inside the Calendar grid.
+Use the following CSS to customize the background of the day-of-week header row inside the React Calendar grid.
 
 ```css
 /* Set background */

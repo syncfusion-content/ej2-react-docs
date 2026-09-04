@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Toast
 
-The Toast component follows WCAG 2.2, Section 508, and ADA accessibility standards to ensure notifications are accessible to all users, including those using assistive technologies. Toast notifications are announced to screen readers as live regions, enabling users to receive important updates without requiring focus or interaction.
+The React Toast component follows WCAG 2.2, Section 508, and ADA accessibility standards to ensure notifications are accessible to all users, including those using assistive technologies. React Toast notifications are announced to screen readers as live regions, enabling users to receive important updates without requiring focus or interaction.
 
-The accessibility compliance for the Toast component is outlined below.
+The accessibility compliance for the React Toast component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -44,11 +44,11 @@ The Toast component implements the [WAI-ARIA alert pattern](https://www.w3.org/W
 
 | Attribute | Purpose |
 | --- | --- |
-| `role="alert"` | Identifies the Toast as an alert region, signaling important, time-sensitive information to screen readers |
-| `aria-live="assertive"` | Announces toast content immediately when displayed, interrupting other announcements |
-| `aria-label` | Provides an accessible name describing the toast content or purpose |
+| `role="alert"` | Identifies the React Toast as an alert region, signaling important, time-sensitive information to screen readers |
+| `aria-live="assertive"` | Announces React Toast content immediately when displayed, interrupting other announcements |
+| `aria-label` | Provides an accessible name describing the React Toast content or purpose |
 
-The Toast component has been tested with major screen readers including JAWS, NVDA, and VoiceOver to ensure compatibility and proper announcement of toast notifications.
+The React Toast component has been tested with major screen readers including JAWS, NVDA, and VoiceOver to ensure compatibility and proper announcement of React Toast notifications.
 
 `[Class-component]`
 
@@ -78,9 +78,9 @@ The Toast component has been tested with major screen readers including JAWS, NV
 
 ## Ensuring accessibility
 
-The Toast component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Toast component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Toast component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/toast.html) in a new window to evaluate the accessibility of the Toast component with accessibility tools.
+The accessibility compliance of the React Toast component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/toast.html) in a new window to evaluate the accessibility of the React Toast component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/toast.html" %}
 

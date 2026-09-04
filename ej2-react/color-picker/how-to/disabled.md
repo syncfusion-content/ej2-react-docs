@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to disable ColorPicker in React Color Picker
 
-To disable the ColorPicker, set the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/color-picker#disabled) property to `true`. When disabled, the ColorPicker popup cannot be accessed.
+To disable the React Color Picker, set the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/color-picker#disabled) property to `true`. When disabled, the React Color Picker popup cannot be accessed.
 
-The following example shows the ColorPicker in a disabled state.
+The following example shows the React Color Picker in a disabled state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

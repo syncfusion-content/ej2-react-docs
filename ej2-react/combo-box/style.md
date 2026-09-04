@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in React ComboBox
 
-The following CSS classes and structures enable customization of the ComboBox appearance to match your design requirements.
+The following CSS classes and structures enable customization of the React ComboBox appearance to match your design requirements.
 
 ## Customizing the appearance of wrapper element
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Selection in React Rating
 
-The Rating component enables users to select a rating value through visual interaction or code. It supports a minimum value setting, reset functionality, and customization options for selection behavior.
+The React Rating component enables users to select a rating value through visual interaction or code. It supports a minimum value setting, reset functionality, and customization options for selection behavior.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -166,4 +166,4 @@ You can use the `cssClass` property to customize the appearance of each step.
 
 You can set the validation state for each step to displaying a success or error icon by using `isValid` property.
 
-> To know more about Stepper validation, please refer to the [Validation](./steps-validation#validating-steps) section.
+> To know more about React Stepper validation, please refer to the [Validation](./steps-validation#validating-steps) section.

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Api openMode in React Tooltip component
 
-Set of open modes available for Tooltip.
+Set of open modes available for React Tooltip.
 * Auto
 * Hover
 * Click

@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the OTP Input component are imported in the **src/App.css** file:
+The required styles for the React OTP Input component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -140,4 +140,4 @@ The output appears as follows.
 
 ## See Also
 
-* [How to Set a Placeholder in OTP Input](./placeholder)
+* [How to Set a Placeholder in React OTP Input](./placeholder)

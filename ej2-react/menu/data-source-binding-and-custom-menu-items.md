@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Data binding
 
-The Menu supports data source bindings such as an array of JavaScript objects that can be structured as either `hierarchical` or `self-referential` data.
+The React Menu supports data source bindings such as an array of JavaScript objects that can be structured as either `hierarchical` or `self-referential` data.
 
 ### Hierarchical data
 
@@ -20,7 +20,7 @@ The Menu can be populated with a hierarchical data source by assigning it to the
 
 #### JSON data
 
-The Menu can generate its menu items through an array of complex data by mapping fields from the [`fields`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldSettingsModel) property.
+The React Menu can generate its menu items through an array of complex data by mapping fields from the [`fields`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldSettingsModel) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,7 +35,7 @@ The Menu can generate its menu items through an array of complex data by mapping
 
 #### Data Service
 
-At the application level, remote data binding can be achieved using [`DataManager`](https://ej2.syncfusion.com/react/documentation/data). To create the Menu, assign the `items` property with the resultant data from the [`callback`](https://ej2.syncfusion.com/documentation/api/data/deferred#then) function.
+At the application level, remote data binding can be achieved using [`DataManager`](https://ej2.syncfusion.com/react/documentation/data). To create the React Menu, assign the `items` property with the resultant data from the [`callback`](https://ej2.syncfusion.com/documentation/api/data/deferred#then) function.
 
 The following example displays five employees' **FirstName** from **Employees** table and **ShipName** details from **Orders** table of the `Northwind` Data Service.
 
@@ -52,7 +52,7 @@ The following example displays five employees' **FirstName** from **Employees** 
 
 ### Self-referential data
 
-The Menu can be populated from a self-referential data structure that contains an array of JSON objects with `parentId` mapping.
+The React Menu can be populated from a self-referential data structure that contains an array of JSON objects with `parentId` mapping.
 
 In the following example, the **id**, **pId**, and **text** columns from self-referential data have been mapped to the [`itemId`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldsettingsmodel#itemid), [`parentId`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldsettingsmodel#parentid), and [`text`](https://ej2.syncfusion.com/react/documentation/api/menu/fieldsettingsmodel#text) fields, respectively.
 
@@ -69,9 +69,9 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 ## Custom menu items
 
-The Menu can be customized using the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential JS 2 [`template`](https://ej2.syncfusion.com/react/documentation/api/menu/index-default#template) property to render the elements.
+The React Menu can be customized using the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential JS 2 [`template`](https://ej2.syncfusion.com/react/documentation/api/menu/index-default#template) property to render the elements.
 
-To customize menu items in your application, set your customized template string to the [`template`](https://ej2.syncfusion.com/react/documentation/api/menu/index-default#template) property. In the following example, the menu has been rendered with customized menu items.
+To customize React menu items in your application, set your customized template string to the [`template`](https://ej2.syncfusion.com/react/documentation/api/menu/index-default#template) property. In the following example, the React menu has been rendered with customized menu items.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

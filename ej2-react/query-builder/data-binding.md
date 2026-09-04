@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Data Binding in React Query Builder UI
 
-The Query Builder uses DataManager to support both local JavaScript arrays and remote RESTful JSON services. Bind data using the `dataSource` property with either a DataManager instance or a JavaScript object array. Two binding methods are available:
+The React Query Builder UI uses DataManager to support both local JavaScript arrays and remote RESTful JSON services. Bind data using the `dataSource` property with either a DataManager instance or a JavaScript object array. Two binding methods are available:
 
 * Local data
 * Remote data
 
 ## Local data
 
-To bind local data to the Query Builder, assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder#datasource) property. You can also provide local data as a DataManager instance.
+To bind local data to the React Query Builder UI, assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder#datasource) property. You can also provide local data as a DataManager instance.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -34,7 +34,7 @@ To bind local data to the Query Builder, assign a JavaScript object array to the
 
 ## Remote data
 
-To bind remote data to the Query Builder, assign service data as a DataManager instance to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder#datasource) property, specifying the service endpoint URL.
+To bind remote data to the React Query Builder UI, assign service data as a DataManager instance to the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/query-builder#datasource) property, specifying the service endpoint URL.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -81,7 +81,7 @@ OData v4 is an improved version of the OData protocol. DataManager supports ODat
 
 ### Binding with Web API
 
-You can use `WebApiAdaptor` to bind the Query Builder to a Web API created using an OData endpoint. The endpoint must expose data in a format compatible with OData and return responses in the standard `{ result: [], count: number }` shape.
+You can use `WebApiAdaptor` to bind the React Query Builder UI to a Web API created using an OData endpoint. The endpoint must expose data in a format compatible with OData and return responses in the standard `{ result: [], count: number }` shape.
 
 
 

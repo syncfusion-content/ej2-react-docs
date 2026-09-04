@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Rendering modes
 
-The In-place Editor supports two rendering modes:
+The React In-place Editor supports two rendering modes:
 
 * Popup
 * Inline
@@ -23,7 +23,7 @@ The In-place Editor supports two rendering modes:
 
 * **Inline mode**: The editable container replaces the element directly, without a popup. Specify `mode` as `Inline` to enable this mode.
 
-In the following sample, the In-place Editor renders in `Inline` mode. Dynamically switch modes by changing the dropdown selection.
+In the following sample, the React In-place Editor renders in `Inline` mode. Dynamically switch modes by changing the dropdown selection.
 
 `[Class-component]`
 
@@ -102,13 +102,13 @@ In the following sample, the popup [title](https://ej2.syncfusion.com/react/docu
 
 ## Event actions for editing
 
-Control when the In-place Editor enters edit mode by configuring the [editableOn](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#editableon) property. By default, `Click` is assigned. The following options are also supported:
+Control when the React In-place Editor enters edit mode by configuring the [editableOn](https://ej2.syncfusion.com/react/documentation/api/inplace-editor#editableon) property. By default, `Click` is assigned. The following options are also supported:
 
 * **[Click](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/editableType)**:  The editor will be opened as single click actions.
 * **[DblClick](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/editableType)**: The editor will be opened as double-click actions and it is not applicable for edit icon.
 * **[EditIconClick](https://ej2.syncfusion.com/react/documentation/api/inplace-editor/editableType)**: Disables the editing of event action of input and allows user to edit only through edit icon.
 
-> In-place Editor get focus by pressing the `tab` key from previous focusable DOM element and then by pressing `enter` key, the editor will be opened.
+> React In-place Editor get focus by pressing the `tab` key from previous focusable DOM element and then by pressing `enter` key, the editor will be opened.
 
 In the following sample, when switching drop-down item, the selected value assigned to the `editableOn` property. If you changed to `DblClick`, the editor will open when making a double click on the input.
 
@@ -176,7 +176,7 @@ In the following sample, when switching drop-down item, the selected value assig
 
 ## Display modes
 
-By default, In-place Editor input element highlighted with a dotted underline. To remove dotted underline from input element, add `data-underline="false"` attribute at In-place Editor root element.
+By default, React In-place Editor input element highlighted with a dotted underline. To remove dotted underline from input element, add `data-underline="false"` attribute at React In-place Editor root element.
 
 In the following sample shows intractable and normal display modes with different samples.
 

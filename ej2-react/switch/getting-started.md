@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting Started with React Switch | Syncfusion
-description: Learn how to get started with the Syncfusion React Switch. Explore Vite setup, package installation, CSS themes, and basic usage.
+title: Getting Started with React Toggle Switch Button | Syncfusion
+description: Learn how to get started with the Syncfusion React Toggle Switch Button. Explore Vite setup, package installation, CSS themes, and basic usage.
 control: Getting started 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Switch
+# Getting Started with React Toggle Switch Button
 
-This section explains the steps required to create a simple React Switch component and demonstrate its basic usage in a React environment.
+This section explains the steps required to create a simple React Toggle Switch Button component and demonstrate its basic usage in a React environment.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> React development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> React components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://ej2.syncfusion.com/react/documentation/ai-coding-assistant/overview).
 
@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include default styles in the `src/index.css` and `src/App.css` files. These default styles may conflict with Syncfusion component styles. Clear all content from both files to prevent style conflicts.
 
-The required styles for the Switch component are imported in the **src/App.css** file:
+The required styles for the React Toggle Switch Button component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,9 +94,9 @@ The required styles for the Switch component are imported in the **src/App.css**
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding Switch component
+## Adding React Toggle Switch Button component
 
-Now, you can add the React Switch component to your **src/App.jsx** file by importing and defining it within your application.
+Now, you can add the React Toggle Switch Button component to your **src/App.jsx** file by importing and defining it within your application.
 
 ```js
 import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
@@ -130,8 +130,8 @@ The output appears as follows.
 
  {% previewsample "page.domainurl/code-snippet/switch/getting-started-cs1" %}
 
-> Refer to the [React Switch](https://www.syncfusion.com/react-components/react-toggle-switch-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Switch component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/switch) that shows how to render the Switch in React.
+> Refer to the [React Toggle Switch Button](https://www.syncfusion.com/react-components/react-toggle-switch-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Toggle Switch Button component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/switch) that shows how to render the React Toggle Switch Button in React.
 
 ## See Also
 
-* [How to customize the switch appearance](./how-to/customize-the-appearance-of-a-switch)
+* [How to customize the React Toggle Switch Button appearance](./how-to/customize-the-appearance-of-a-switch)

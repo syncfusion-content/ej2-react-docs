@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React MultiColumn ComboBox
 
-The MultiColumn ComboBox component adheres to established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
+The React MultiColumn ComboBox component adheres to established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the MultiColumn ComboBox component is outlined below.
+The accessibility compliance for the React MultiColumn ComboBox component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,20 +40,20 @@ The accessibility compliance for the MultiColumn ComboBox component is outlined 
 
 ## WAI-ARIA attributes
 
-The following ARIA attributes are used in the MultiColumn ComboBox component:
+The following ARIA attributes are used in the React MultiColumn ComboBox component:
 
 | Attributes | Purpose |
 | ------------ | ----------------------- |
 | `role=combobox` | Identifies an input element that controls another element, like a listbox or grid, which can pop up to help the user set its value. |
 | `aria-expanded` | Indicates whether the popup list has expanded or not. |
 | `aria-selected` | Indicates the selected option. |
-| `aria-readonly` | Indicates the readonly state of the MultiColumn ComboBox component. |
-| `aria-disabled` | Indicates whether the MultiColumn ComboBox component is in a disabled state or not. |
+| `aria-readonly` | Indicates the readonly state of the React MultiColumn ComboBox component. |
+| `aria-disabled` | Indicates whether the React MultiColumn ComboBox component is in a disabled state or not. |
 | `aria-owns` | This attribute contains the ID of the popup list to indicate popup as a child element. |
 
 ## Keyboard interaction
 
-The following keyboard shortcuts are supported by the MultiColumn ComboBox component.
+The following keyboard shortcuts are supported by the React MultiColumn ComboBox component.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -62,7 +62,7 @@ The following keyboard shortcuts are supported by the MultiColumn ComboBox compo
 | <kbd>Alt +down</kbd> | Opens the popup list. |
 | <kbd>Alt + Up</kbd> | Closes the popup list. |
 | <kbd>Arrow Up</kbd> | Selects the item previous to the currently selected one. |
-| <kbd>Arrow Down</kbd> | Selects the first item in the MultiColumn ComboBox when no item selected. Otherwise, selects the item next to the currently selected item. |
+| <kbd>Arrow Down</kbd> | Selects the first item in the React MultiColumn ComboBox when no item selected. Otherwise, selects the item next to the currently selected item. |
 | <kbd>Home  </kbd> | Selects the first item in the popup list. |
 | <kbd>End</kbd> | Selects the last item in the popup list. |
 | <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
@@ -70,7 +70,7 @@ The following keyboard shortcuts are supported by the MultiColumn ComboBox compo
 
 ## Ensuring accessibility
 
-The MultiColumn ComboBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React MultiColumn ComboBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 ## See also
 

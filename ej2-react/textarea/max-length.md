@@ -23,4 +23,4 @@ Enforce a maximum length limit using the [maxLength](https://ej2.syncfusion.com/
 
 {% previewsample "page.domainurl/code-snippet/textarea/max-length-cs1" %}
 
-When the user reaches the specified limit, the TextArea prevents further input, ensuring compliance with the defined character limit. This feature helps maintain data integrity and provides users with clear feedback on the allowed input length.
+When the user reaches the specified limit, the React TextArea prevents further input, ensuring compliance with the defined character limit. This feature helps maintain data integrity and provides users with clear feedback on the allowed input length.

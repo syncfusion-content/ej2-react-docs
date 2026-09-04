@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Format in React Slider
 
-The [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) feature customizes the units of Slider values to your desired format. Formatted values are also applied to the ARIA attributes. There are two ways to achieve formatting:
+The [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) feature customizes the units of React Slider values to your desired format. Formatted values are also applied to the ARIA attributes. There are two ways to achieve formatting:
 
 * Use the [`format`](https://ej2.syncfusion.com/react/documentation/api/slider/ticksDataModel/#format) API, which uses our `Internationalization` feature to format values.
 
@@ -56,7 +56,7 @@ This method provides predefined formatting styles such as Numeric (N), Percentag
 
 ## Using Events
 
-In this method, we retrieve the values from the Slider events then process them to the desired formatted values.
+In this method, we retrieve the values from the React Slider events then process them to the desired formatted values.
 In this sample, we have customized the [`ticks`](https://ej2.syncfusion.com/react/documentation/api/slider/#ticks) values into weekdays as one formatting and [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/slider/#tooltip) values into day of the week as another formatting.
 
 {% tabs %}

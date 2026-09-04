@@ -61,7 +61,7 @@ Set the [type](https://ej2.syncfusion.com/react/documentation/api/otp-input/#typ
 
 ## Value
 
-You can specify the value of OTP Input by using the [value](https://ej2.syncfusion.com/react/documentation/api/otp-input/#value) property.
+You can specify the value of React OTP Input by using the [value](https://ej2.syncfusion.com/react/documentation/api/otp-input/#value) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

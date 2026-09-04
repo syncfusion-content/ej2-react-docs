@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Functional Component in React MaskedTextBox | Syncfusion
-description: Render the React MaskedTextBox in a functional component using React Hooks like useState, useEffect, useRef, and useReducer.
+title: Functional Component in React Input Mask | Syncfusion
+description: Render the React Input Mask in a functional component using React Hooks like useState, useEffect, useRef, and useReducer.
 control: React functional component 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Functional Component in React MaskedTextBox
+# Functional Component in React Input Mask
 
-This section explains how to render the MaskedTextBox component in a functional component using React Hooks. The following table lists the basic Hook methods:
+This section explains how to render the React Input Mask component in a functional component using React Hooks. The following table lists the basic Hook methods:
 
 | Hooks | Description |
 | ------------- | ------------- |
@@ -19,7 +19,7 @@ This section explains how to render the MaskedTextBox component in a functional 
 | `useRef` | A Hook that creates a direct reference to a DOM element in a functional component. Used here to reference the product key field for focusing. |
 | `useReducer` | A Hook that accepts a reducer function and initial state, returning a state value and a dispatch function. Used here to update mobile number and postal code state values. |
 
-The following example shows how to render a simple MaskedTextBox with React Hooks.
+The following example shows how to render a simple React Input Mask with React Hooks.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

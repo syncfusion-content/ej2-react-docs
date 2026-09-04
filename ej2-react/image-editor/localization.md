@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Localization in React Image Editor
 
-The `Localization` library allows you to localize the default text content of the Image Editor. The Image Editor has static text that can be changed to other languages such as Arabic, German, and French by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/image-editor/index-default#locale) value and translation object.
+The `Localization` library allows you to localize the default text content of the React Image Editor. The React Image Editor has static text that can be changed to other languages such as Arabic, German, and French by defining the [`locale`](https://ej2.syncfusion.com/react/documentation/api/image-editor/index-default#locale) value and translation object.
 
-The following list of locale keys and their values used in the Image Editor.
+The following list of locale keys and their values used in the React Image Editor.
 
 | Locale key | Text |
 | ------------ | ----------------------- |

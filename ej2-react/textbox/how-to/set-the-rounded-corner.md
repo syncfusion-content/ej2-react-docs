@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to set the rounded corner in React TextBox
 
-Apply rounded corners to the TextBox by adding the `e-corner` CSS class to the [cssClass](https://ej2.syncfusion.com/react/documentation/api/textbox/#cssclass) property of the TextBoxComponent. This creates a modern, polished appearance that aligns with contemporary design standards.
+Apply rounded corners to the React TextBox by adding the `e-corner` CSS class to the [cssClass](https://ej2.syncfusion.com/react/documentation/api/textbox/#cssclass) property of the React TextBox Component. This creates a modern, polished appearance that aligns with contemporary design standards.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Groups in React TextBox
 
-Create an enhanced TextBox with floating labels and icons to improve the visual clarity and user experience of your form inputs. The following sections explain the steps to implement these features.
+Create an enhanced React TextBox with floating labels and icons to improve the visual clarity and user experience of your form inputs. The following sections explain the steps to implement these features.
 
 ## Floating label
 
-Add floating labels to your TextBox using the [FloatLabelType](https://ej2.syncfusion.com/react/documentation/api/textbox/#floatlabeltype) property. This property controls how the placeholder text animates when the input is focused or contains a value. Supported values include:
+Add floating labels to your React TextBox using the [FloatLabelType](https://ej2.syncfusion.com/react/documentation/api/textbox/#floatlabeltype) property. This property controls how the placeholder text animates when the input is focused or contains a value. Supported values include:
 
 * Never - The placeholder text should not be float ever.
 * Always - The placeholder text floats above the TextBox always.
@@ -51,11 +51,11 @@ function App() {
 ReactDOM.render(<App />, document.getElementById('input-container'));
 ```
 
-And refer to the following sections to add the icons to the TextBox.
+And refer to the following sections to add the icons to the React TextBox.
 
 ## With icon and floating label
 
-Create an icon in the TextBox using the [addIcon](https://ej2.syncfusion.com/react/documentation/api/textbox/#addicon) method and enable the float label using the [FloatLabelType](https://ej2.syncfusion.com/react/documentation/api/textbox/#floatlabeltype) property. The user can place the icon on either side of the TextBox by specifying "append" or "prepend" in the [addIcon](https://ej2.syncfusion.com/react/documentation/api/textbox/#addicon) method.
+Create an icon in the React TextBox using the [addIcon](https://ej2.syncfusion.com/react/documentation/api/textbox/#addicon) method and enable the float label using the [FloatLabelType](https://ej2.syncfusion.com/react/documentation/api/textbox/#floatlabeltype) property. The user can place the icon on either side of the React TextBox by specifying "append" or "prepend" in the [addIcon](https://ej2.syncfusion.com/react/documentation/api/textbox/#addicon) method.
 
 `[Class-component]`
 
@@ -87,7 +87,7 @@ Create an icon in the TextBox using the [addIcon](https://ej2.syncfusion.com/rea
 
 The clear button is added to the input for clearing the value given in the TextBox. It is shown only when the input field has a value, otherwise not shown.
 
-You can add the clear button to the TextBox by using [showClearButton](https://ej2.syncfusion.com/react/documentation/api/textbox/#showclearbutton) API in TextBox.
+You can add the clear button to the TextBox by using [showClearButton](https://ej2.syncfusion.com/react/documentation/api/textbox/#showclearbutton) API in React TextBox.
 
 `[Class-component]`
 
@@ -147,6 +147,6 @@ To create a multiline input using the [multiline](https://ej2.syncfusion.com/rea
 
 ## See Also
 
-* [How to add floating label to TextBox programmatically](./how-to/add-floating-label-to-textbox-programmatically)
-* [Change the floating label color of the TextBox](./how-to/change-the-floating-label-color-of-the-textbox)
-* [Change the color of the TextBox based on its value](./how-to/change-the-color-of-the-textbox-based-on-its-value)
+* [How to add floating label to React TextBox programmatically](./how-to/add-floating-label-to-textbox-programmatically)
+* [Change the floating label color of the React TextBox](./how-to/change-the-floating-label-color-of-the-textbox)
+* [Change the color of the React TextBox based on its value](./how-to/change-the-color-of-the-textbox-based-on-its-value)

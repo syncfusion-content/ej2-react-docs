@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to set a tooltip for tree nodes in React
 
-TreeView component allows you to set tooltip option to tree nodes using the [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#tooltip) property. The following code example demonstrates how to set tooltip for TreeView nodes.
+React Tree View component allows you to set tooltip option to tree nodes using the [`tooltip`](https://ej2.syncfusion.com/react/documentation/api/treeview/fieldsSettingsModel/#tooltip) property. The following code example demonstrates how to set tooltip for React Tree View nodes.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

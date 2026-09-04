@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to customize the Slider ticks label in React Slider
 
-The Slider ticks can be customized using CSS by overriding Slider CSS classes. Ticks help identify the current value(s) of the Slider and include [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#largestep). By default, the Slider uses the `e-tick` class. You can override this class as needed to render customized ticks.
+The React Slider ticks can be customized using CSS by overriding React Slider CSS classes. Ticks help identify the current value(s) of the React Slider and include [`smallStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/documentation/slider/api-ticksData.html?lang=typescript/#largestep). By default, the React Slider uses the `e-tick` class. You can override this class as needed to render customized ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {
@@ -25,7 +25,7 @@ The Slider ticks can be customized using CSS by overriding Slider CSS classes. T
 }
 ```
 
-Here, the color for rendered ticks is applied using the nth-child(`child_number`). The color is applied to the tick corresponding to the `child_number` in the slider.
+Here, the color for rendered ticks is applied using the nth-child(`child_number`). The color is applied to the tick corresponding to the `child_number` in the React Slider.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

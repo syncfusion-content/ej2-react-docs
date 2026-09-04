@@ -86,19 +86,19 @@ yarn add @syncfusion/ej2-tailwind3-theme
  
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
  
-The required styles for the Dialog component are imported in the **src/App.css** file:
+The required styles for the React Dialog component are imported in the **src/App.css** file:
  
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
  
-@import "@syncfusion/ej2-tailwind3-theme/styles/dialog/index.css";
+@import "@syncfusion/ej2-tailwind3-theme/styles/React Dialog/index.css";
  
 {% endhighlight %}
 {% endtabs %}
  
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Adding Dialog component
+## Adding React Dialog component
 
 Now, you can add the React Dialog component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
  

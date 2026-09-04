@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Z-Order in React Image Editor
 
-We are excited to introduce `z-order` support in the Image Editor. It's a powerful tool that allows users to adjust the positioning of annotations. This feature is particularly useful for designing personalized templates like greeting cards or posters, where managing the layering of multiple annotations is crucial for a polished final product.
+We are excited to introduce `z-order` support in the React Image Editor. It's a powerful tool that allows users to adjust the positioning of annotations. This feature is particularly useful for designing personalized templates like greeting cards or posters, where managing the layering of multiple annotations is crucial for a polished final product.
  
 Types of z-order adjustments:
 

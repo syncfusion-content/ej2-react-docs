@@ -14,7 +14,7 @@ The React Image Editor allows adding annotations to the image, including text, f
 
 ## Text annotation
 
-The text annotation feature in the Image Editor provides the capability to add and customize labels, captions, and other text elements directly onto the image. With this feature, you can easily insert text at specific locations within the image and customize various aspects of the text to meet your requirements. 
+The text annotation feature in the React Image Editor provides the capability to add and customize labels, captions, and other text elements directly onto the image. With this feature, you can easily insert text at specific locations within the image and customize various aspects of the text to meet your requirements. 
 
 You have control over the customization options including text content, font family, font style, font color, fill color, stroke color, stroke width and font size for the text annotation.
 
@@ -118,7 +118,7 @@ Here is an example of deleting a text in a button click using `deleteShape` meth
 
 ### Customize font family and text color 
 
-The [`shapeChanging`](https://ej2.syncfusion.com/react/documentation/api/image-editor#shapechanging) event in the Image Editor component is triggered when a text annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the text's color and font family by adjusting the relevant properties.
+The [`shapeChanging`](https://ej2.syncfusion.com/react/documentation/api/image-editor#shapechanging) event in the React Image Editor component is triggered when a text annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the text's color and font family by adjusting the relevant properties.
 
 Main `shapeChanging` event properties:
 
@@ -126,7 +126,7 @@ Main `shapeChanging` event properties:
 - `previousShapeSettings?: ShapeSettings` — The shape settings before the change.
 - `cancel: boolean` — Set to `true` to cancel the change.
 
-By leveraging the `shapeChanging` event, you can enhance the customization options for text annotations and provide a more tailored and interactive experience within the Image Editor component. 
+By leveraging the `shapeChanging` event, you can enhance the customization options for text annotations and provide a more tailored and interactive experience within the React Image Editor component. 
 
 Here is an example of changing the text’s color and its font family using the `shapeChanging` event.
 
@@ -146,9 +146,9 @@ Here is an example of changing the text’s color and its font family using the 
 
 ### Add additional font family
 
-The [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/image-editor#fontfamily) property in the Image Editor control provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content. Each font entry uses an `id` and `text` field; the `id` is used as the font value.
+The [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/image-editor#fontfamily) property in the React Image Editor control provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content. Each font entry uses an `id` and `text` field; the `id` is used as the font value.
 
-By leveraging the `fontFamily` property, you can elevate the scope of customization for text annotations, enriching the user experience within the Image Editor control. This enhancement offers a more personalized and dynamic interaction, empowering users to tailor their text styles for a truly engaging editing experience.
+By leveraging the `fontFamily` property, you can elevate the scope of customization for text annotations, enriching the user experience within the React Image Editor control. This enhancement offers a more personalized and dynamic interaction, empowering users to tailor their text styles for a truly engaging editing experience.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -166,7 +166,7 @@ By leveraging the `fontFamily` property, you can elevate the scope of customizat
 
 ### Formatting Text with Bold, Italic, Underline, and Strikethrough
 
-The [`drawText`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawtext) method in the Image Editor component allows you to insert a text annotation into the image with specific customization options. Applying these styles enhances the text by improving readability and emphasizing key information, where bold increases visual weight to highlight important points, italic adds a slanted emphasis or creative touch, underline draws a line beneath the text for clarity or separation, and strikethrough places a line through text to indicate removal or outdated content. These formatting options enable users to make their annotations more visually distinctive and effective in conveying information.
+The [`drawText`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawtext) method in the React Image Editor component allows you to insert a text annotation into the image with specific customization options. Applying these styles enhances the text by improving readability and emphasizing key information, where bold increases visual weight to highlight important points, italic adds a slanted emphasis or creative touch, underline draws a line beneath the text for clarity or separation, and strikethrough places a line through text to indicate removal or outdated content. These formatting options enable users to make their annotations more visually distinctive and effective in conveying information.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -208,7 +208,7 @@ Here is an example of using the `freehandDraw` method in a button click event.
 
 The [`shapeChanging`](https://ej2.syncfusion.com/react/documentation/api/image-editor#shapechanging) event in the React Image Editor component is triggered when a freehand annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the freehand annotation's color and stroke width by adjusting the relevant properties.
 
-By leveraging the `shapeChanging` event, you can enhance the customization options for freehand annotations and provide a more tailored and interactive experience within the Image Editor component. 
+By leveraging the `shapeChanging` event, you can enhance the customization options for freehand annotations and provide a more tailored and interactive experience within the React Image Editor component. 
 
 Here is an example of changing the freehand draw stroke width and color using the `shapeChanging` event.
 
@@ -254,7 +254,7 @@ Here is an example of deleting a freehand annotation in a button click using `de
 
 ## Shape annotation
 
-The Image Editor component provides the ability to add shape annotations to an image. These shape annotations include rectangles, ellipses, arrows, paths, and lines, allowing you to highlight, emphasize, or mark specific areas or elements within the image. 
+The React Image Editor component provides the ability to add shape annotations to an image. These shape annotations include rectangles, ellipses, arrows, paths, and lines, allowing you to highlight, emphasize, or mark specific areas or elements within the image. 
 
 ### Add a rectangle /ellipse / line / arrow / path
 
@@ -290,7 +290,7 @@ The `drawEllipse` method accepts the following parameters to define the properti
 The [`drawLine`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawline) method is used to insert a line to the React Image Editor component. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image. 
 
 
-The `drawLine` method in the Image Editor component accepts the following parameters to define the properties of the line annotation:
+The `drawLine` method in the React Image Editor component accepts the following parameters to define the properties of the line annotation:
 
 - `startX` — Specifies the x-coordinate of the start point.
 - `startY` — Specifies the y-coordinate of the start point.
@@ -316,7 +316,7 @@ The `drawArrow` method accepts the following parameters to define the properties
 
 The [`drawPath`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawpath) method is used to insert a path to the React Image Editor component. Path annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
-The `drawPath` method in the Image Editor component accepts the following parameters to define the properties of the path annotation:
+The `drawPath` method in the React Image Editor component accepts the following parameters to define the properties of the path annotation:
 
 - `points` — Specifies collection of x and y coordinates as ImageEditorPoint to draw a path.
 - `strokeWidth` — Specifies the stroke width of the path.
@@ -383,13 +383,13 @@ We provide default settings for stroke color, stroke width, fill color, and othe
 
 ## Image annotation
 
-The image annotation feature in the Image Editor provides the capability to add and customize images directly onto the image. With this feature, you can easily insert image or icons at specific locations within the image and customize various aspects of the image to meet your requirements. You have control over the customization options including rotate, flip, transparency for the image annotation.
+The image annotation feature in the React Image Editor provides the capability to add and customize images directly onto the image. With this feature, you can easily insert image or icons at specific locations within the image and customize various aspects of the image to meet your requirements. You have control over the customization options including rotate, flip, transparency for the image annotation.
 
 ### Add an image annotation
 
-The [`drawImage`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawimage) method serves the purpose of inserting an image into the Image Editor control, allowing for image annotations to be added. These image annotations can be used for various purposes, such as adding logos, watermarks, or decorative elements to the image.
+The [`drawImage`](https://ej2.syncfusion.com/react/documentation/api/image-editor#drawimage) method serves the purpose of inserting an image into the React Image Editor control, allowing for image annotations to be added. These image annotations can be used for various purposes, such as adding logos, watermarks, or decorative elements to the image.
 
-The `drawImage` method in the Image Editor control accepts the following parameters to define the properties of the image annotation:
+The `drawImage` method in the React Image Editor control accepts the following parameters to define the properties of the image annotation:
 
 - `data`: Specifies the image data or URL of the image to be inserted.
 - `x`: Specifies the x-coordinate of the top-left corner of the image.

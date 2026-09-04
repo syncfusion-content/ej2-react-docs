@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Globalization in React Calendar
 
-Globalization combines [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (date and number parsing and formatting) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (culture-specific text and formatting). Use these mechanisms to adapt the Calendar to different languages and regions.
+Globalization combines [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) (date and number parsing and formatting) with [`localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) (culture-specific text and formatting). Use these mechanisms to adapt the React Calendar to different languages and regions.
 
-By default, Calendar date format, week and month names are specific to American English culture. It utilizes the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](http://ej2.syncfusion.com/documentation/base/internationalization)
+By default, React Calendar date format, week and month names are specific to American English culture. It utilizes the [Essential<sup style="font-size:70%">&reg;</sup> JavaScript 2 Internationalization](http://ej2.syncfusion.com/documentation/base/internationalization)
 package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](http://cldr.unicode.org) JSON data and also it provides the [`loadCldr`](http://ej2.syncfusion.com/documentation/base/intl.html#cldr-data-dependencies) method to load the culture specific CLDR JSON data.
 
 To use a culture other than `English`, follow these steps.
@@ -27,9 +27,9 @@ To use a culture other than `English`, follow these steps.
 
 2. Import the required CLDR JSON files from `cldr-data` in your `app.ts` file.
 
-3. Call the [`loadCldr`](https://ej2.syncfusion.com/react/documentation/base/intl.html#cldr-data-dependencies) method and pass each imported JSON module so that the Calendar can read the locale data at runtime.
+3. Call the [`loadCldr`](https://ej2.syncfusion.com/react/documentation/base/intl.html#cldr-data-dependencies) method and pass each imported JSON module so that the React Calendar can read the locale data at runtime.
 
-4. Calendar displays `Sunday` as the first day of the week for the default `en-US` culture. To switch the first day of the week to the loaded culture's first day, import `weekData.json` from `cldr-data/supplemental` as shown in the code example below.
+4. React Calendar displays `Sunday` as the first day of the week for the default `en-US` culture. To switch the first day of the week to the loaded culture's first day, import `weekData.json` from `cldr-data/supplemental` as shown in the code example below.
 
 ```ts
 //import the loadCldr from ej2-base
@@ -58,7 +58,7 @@ For **TSLint**, add this configuration to your `tslint.json` file:
 
 ```
 
-> The `Localization` library allows you to localize default text content of the Calendar. The Calendar component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
+> The `Localization` library allows you to localize default text content of the React Calendar. The React Calendar component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
 [`locale`](https://ej2.syncfusion.com/react/documentation/api/calendar#locale) value and translation object.
 
 | Locale Keywords | Text |
@@ -81,7 +81,7 @@ L10n.load({
 
 Then set the active culture by using the [`locale`](https://ej2.syncfusion.com/react/documentation/api/calendar#locale) property.
 
-The following example demonstrates the Calendar in `German` culture.
+The following example demonstrates the React Calendar in `German` culture.
 
 `[Class-component]`
 
@@ -171,9 +171,9 @@ The following example demonstrates the Calendar in `German` culture.
 
 ## Right-To-Left
 
-The Calendar supports right-to-left (RTL) functionality for languages such as Arabic and Hebrew. Set the boolean [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/calendar#enablertl) property to `true` to display the Calendar's content in the right-to-left direction.
+The React Calendar supports right-to-left (RTL) functionality for languages such as Arabic and Hebrew. Set the boolean [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/calendar#enablertl) property to `true` to display the React Calendar's content in the right-to-left direction.
 
-The following example demonstrates the Calendar in `Arabic` culture with Right-To-Left direction.
+The following example demonstrates the React Calendar in `Arabic` culture with Right-To-Left direction.
 
 `[Class-component]`
 

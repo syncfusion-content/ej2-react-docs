@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Separator in React OTP Input
 
-The separator in OTP Input specifies the character displayed between each OTP input field to visually distinguish them. You can set the separator character using the [separator](https://ej2.syncfusion.com/react/documentation/api/otp-input/#separator) property.
+The separator in React OTP Input specifies the character displayed between each React OTP Input field to visually distinguish them. You can set the separator character using the [separator](https://ej2.syncfusion.com/react/documentation/api/otp-input/#separator) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

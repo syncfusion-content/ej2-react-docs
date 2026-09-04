@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # How to load content using AJAX in React Dialog
 
-The Dialog component supports dynamic content loading from external sources, such as server files or API endpoints, using AJAX. This allows you to fetch and display content on demand without including it directly in the markup.
+The React Dialog component supports dynamic content loading from external sources, such as server files or API endpoints, using AJAX. This allows you to fetch and display content on demand without including it directly in the markup.
 
 ## Basic AJAX loading
 
-You can use the Dialog's lifecycle events to trigger AJAX requests and populate the dialog content. The following approach demonstrates how to load content when the dialog opens:
+You can use the React Dialog's lifecycle events to trigger AJAX requests and populate the React Dialog content. The following approach demonstrates how to load content when the React Dialog opens:
 
 1. Use the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/dialog#beforeopen) or [open](https://ej2.syncfusion.com/react/documentation/api/dialog#open) event to initiate an AJAX request.
-2. Update the dialog content using the fetched data.
+2. Update the React Dialog content using the fetched data.
 3. Handle errors appropriately if the request fails.
 
 You can use the browser's built-in `fetch` API, `axios`, or `XMLHttpRequest` to make the AJAX call. The example below uses `fetch` to load content from a server endpoint and assigns the result to the Dialog's [`content`](https://ej2.syncfusion.com/react/documentation/api/dialog#content) property within the `open` event handler:
@@ -38,7 +38,7 @@ function onOpen(args) {
 }
 ```
 
-> The code samples below use `DialogUtility.alert` to demonstrate a predefined dialog. To see a full AJAX content-loading example, refer to the [AJAX Content demo](https://ej2.syncfusion.com/react/demos/#/material/dialog/ajax) linked in the See Also section.
+> The code samples below use `DialogUtility.alert` to demonstrate a predefined React Dialog. To see a full AJAX content-loading example, refer to the [AJAX Content demo](https://ej2.syncfusion.com/react/demos/#/material/dialog/ajax) linked in the See Also section.
 
 `[Class-component]`
 

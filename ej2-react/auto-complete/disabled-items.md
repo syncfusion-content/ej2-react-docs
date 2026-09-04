@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Disabled Items in React AutoComplete
 
-The AutoComplete provides options for individual items to be either in an enabled or disabled state for specific scenarios. The disabled state of each list item is controlled by the `fields.disabled` data field, which must map to a column containing boolean values (`true` to disable, `false` to keep the item enabled). Once an item is disabled, it cannot be selected as a value of the component. To configure the disabled item column, use the `fields.disabled` property.
+The React AutoComplete provides options for individual items to be either in an enabled or disabled state for specific scenarios. The disabled state of each list item is controlled by the `fields.disabled` data field, which must map to a column containing boolean values (`true` to disable, `false` to keep the item enabled). Once an item is disabled, it cannot be selected as a value of the component. To configure the disabled item column, use the `fields.disabled` property.
 
 In the following sample, list items are disabled based on a boolean field using the `fields.disabled` property.
 
@@ -42,9 +42,9 @@ In the following sample, list items are disabled based on a boolean field using 
 
 ## Disabling the overall component
 
-To disable the overall AutoComplete component, set the [`enabled`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#enabled) property to `false` (or the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#disabled) property to `true`). Note that this `enabled`/`disabled` property controls the whole component, whereas `fields.disabled` controls only individual list items.
+To disable the overall React AutoComplete component, set the [`enabled`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#enabled) property to `false` (or the [`disabled`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#disabled) property to `true`). Note that this `enabled`/`disabled` property controls the whole component, whereas `fields.disabled` controls only individual list items.
 
-![Disabled AutoComplete Component](../images/autocomplete-disable.png)
+![Disabled React AutoComplete Component](../images/autocomplete-disable.png)
 
 ## Disabling an item at runtime
 

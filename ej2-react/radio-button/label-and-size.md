@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Label and size in React Radio Button
 
-This section explains the different sizes and label configurations available in the RadioButton component.
+This section explains the different sizes and label configurations available in the React Radio Button component.
 
 ## Label
 
-Use the [`label`](https://ej2.syncfusion.com/react/documentation/api/radio-button#label) property to add a caption for the RadioButton without manually creating a separate HTML label element. Control label positioning relative to the RadioButton using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/radio-button#labelposition) property, allowing the label to appear before or after the RadioButton indicator.
+Use the [`label`](https://ej2.syncfusion.com/react/documentation/api/radio-button#label) property to add a caption for the React Radio Button without manually creating a separate HTML label element. Control label positioning relative to the React Radio Button using the [`labelPosition`](https://ej2.syncfusion.com/react/documentation/api/radio-button#labelposition) property, allowing the label to appear before or after the React Radio Button indicator.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -29,7 +29,7 @@ Use the [`label`](https://ej2.syncfusion.com/react/documentation/api/radio-butto
 
 ## Size
 
-The RadioButton component supports two size variants: default (standard size) and small (compact size). Apply the `e-small` CSS class through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/radio-button#cssclass) property to create a smaller, more compact RadioButton suitable for dense layouts or space-constrained interfaces.
+The React Radio Button component supports two size variants: default (standard size) and small (compact size). Apply the `e-small` CSS class through the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/radio-button#cssclass) property to create a smaller, more compact React Radio Button suitable for dense layouts or space-constrained interfaces.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -44,4 +44,4 @@ The RadioButton component supports two size variants: default (standard size) an
 
 ## See Also
 
-* [How to customize the RadioButton appearance](./how-to/customize-radiobutton-appearance)
+* [How to customize the React Radio Button appearance](./how-to/customize-radiobutton-appearance)

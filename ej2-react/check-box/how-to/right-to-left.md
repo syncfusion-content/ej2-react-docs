@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to enable RTL in React Checkbox
 
-The CheckBox component supports right-to-left (RTL) display for languages and locales that use RTL scripts. Enable RTL support by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/check-box/#enablertl) property to `true`.
+The React Checkbox component supports right-to-left (RTL) display for languages and locales that use RTL scripts. Enable RTL support by setting the [`enableRtl`](https://ej2.syncfusion.com/react/documentation/api/check-box/#enablertl) property to `true`.
 
-The following example demonstrates how to enable RTL support in the CheckBox component:
+The following example demonstrates how to enable RTL support in the React Checkbox component:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

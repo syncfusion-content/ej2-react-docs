@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to enable progress in React Progress Button
 
-Display a visual progress indicator within the ProgressButton by setting the [`enableProgress`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#enableprogress) property to `true`. When enabled, a background fill extends across the button width as the operation progresses, providing clear visual feedback of task completion percentage to users.
+Display a visual progress indicator within the React Progress Button by setting the [`enableProgress`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#enableprogress) property to `true`. When enabled, a background fill extends across the button width as the operation progresses, providing clear visual feedback of task completion percentage to users.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Linear Flow in React Stepper
 
-The Stepper component enables users to progress sequentially through each step, ensuring navigation from one step to the next in a linear way by setting the [linear](https://ej2.syncfusion.com/react/documentation/api/stepper#linear) property to `true`. The default value is `false` allowing navigation between any steps and vice versa.
+The React Stepper component enables users to progress sequentially through each step, ensuring navigation from one step to the next in a linear way by setting the [linear](https://ej2.syncfusion.com/react/documentation/api/stepper#linear) property to `true`. The default value is `false` allowing navigation between any steps and vice versa.
 
 The example demonstrates the functionality of both linear and non-linear flow in the Stepper.
 

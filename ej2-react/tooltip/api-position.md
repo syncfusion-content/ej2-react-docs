@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Api position in React Tooltip component
 
-Applicable positions where the Tooltip can be displayed over specific target elements.
+Applicable positions where the React Tooltip can be displayed over specific target elements.
 * TopLeft
 * TopCenter
 * TopRight

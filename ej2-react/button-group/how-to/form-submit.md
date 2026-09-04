@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The `name` attribute groups radio and checkbox type buttons in a form. When the form submits, the value of the checked button is sent to the server and can be retrieved using the `name` attribute. Disabled buttons do not send their values on form submission.
 
-The following example demonstrates a radio type ButtonGroup with the "Male" option initially checked. When the form is submitted, the checked button's value is sent to the server:
+The following example demonstrates a radio type React Button Group with the "Male" option initially checked. When the form is submitted, the checked button's value is sent to the server:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

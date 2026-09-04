@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the Calendar component are imported in the **src/App.css** file:
+The required styles for the React Calendar component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -98,9 +98,9 @@ The required styles for the Calendar component are imported in the **src/App.css
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the Calendar component
+## Add the React Calendar component
 
-Now, you can add the React Calendar component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
+Now, you can add the React React Calendar component to your **src/App.jsx** file by importing and defining it within your application. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -144,8 +144,8 @@ The output will appear as follows:
 
 ## See Also
 
-* [Select multiple dates in the Calendar](./multi-select)
-* [Render Calendar with specific culture](./globalization)
-* [How to change the initial view of the Calendar](./calendar-views)
-* [Render Calendar with week numbers](./how-to/render-the-calendar-with-week-numbers)
+* [Select multiple dates in the React Calendar](./multi-select)
+* [Render React Calendar with specific culture](./globalization)
+* [How to change the initial view of the React Calendar](./calendar-views)
+* [Render React Calendar with week numbers](./how-to/render-the-calendar-with-week-numbers)
 * [Show other month dates](./how-to/show-dates-of-other-months)

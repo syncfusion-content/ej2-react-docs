@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Migration from Essential JS 1 in React Split Button
 
-Migrate SplitButton implementations from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2 by updating property names, event handlers, and method signatures as outlined in the following reference tables. This guide helps developers transition legacy SplitButton code to leverage the improved React component API with enhanced functionality and simplified configuration.
+Migrate React Split Button implementations from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2 by updating property names, event handlers, and method signatures as outlined in the following reference tables. This guide helps developers transition legacy React Split Button code to leverage the improved React component API with enhanced functionality and simplified configuration.
 
 ## Properties
 
@@ -18,7 +18,7 @@ Migrate SplitButton implementations from Essential<sup style="font-size:70%">&re
 
 | Behavior | API in Essential<sup style="font-size:70%">&reg;</sup> JS 1 | API in Essential<sup style="font-size:70%">&reg;</sup> JS 2 |
 | --- | --- | --- |
-| Specifies the text of the splitbutton | **Property:** *text* <br/><br/> `<EJ.SplitButton id="splitbutton" text="login"></EJ.SplitButton>` | **Property:** *content* <br/><br/> `<SplitButtonComponent id="splitbutton" content="Paste"></SplitButtonComponent>` |
+| Specifies the text of the React Split Button | **Property:** *text* <br/><br/> `<EJ.SplitButton id="splitbutton" text="login"></EJ.SplitButton>` | **Property:** *content* <br/><br/> `<SplitButtonComponent id="splitbutton" content="Paste"></SplitButtonComponent>` |
 | Popup content | **Property:** *target* <br/><br/> `<EJ.SplitButton id="splitbutton" text="SplitButton" target="#target"></EJ.SplitButton>` | **Property:** *target* <br/><br/> `<SplitButtonComponent id="splitbutton" target="#target" content="SplitButton" ></SplitButtonComponent>` |
 | Popup items | Not applicable | **Property:** *items* <br/><br/> `<SplitButtonComponent id="splitbutton" content="Paste" items={this.items}></SplitButtonComponent>` <br/> constructor(props: {}) { <br/> &nbsp; this.items = [ <br/> &nbsp; { <br/> &nbsp;  &nbsp; text: 'Cut' <br/> &nbsp; },<br/> &nbsp; { <br/> &nbsp;  &nbsp; text: 'Copy' <br/> &nbsp; },<br/> &nbsp; { <br/> &nbsp;  &nbsp; text: 'Paste' <br/> &nbsp; }]; <br/> } |
 | Arrow position | **Property:** *arrowPosition* <br/><br/> `<EJ.SplitButton id="splitbutton" text="login" target="#target" arrowPosition="left"></EJ.SplitButton>` | Not applicable |

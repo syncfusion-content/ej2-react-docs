@@ -1,16 +1,16 @@
 ---
 layout: post
-title: How to customize the UI in React MaskedTextBox | Syncfusion
-description: Customize the React MaskedTextBox appearance with a custom cssClass and matching styles to fit your application design.
+title: How to customize the UI in React Input Mask | Syncfusion
+description: Customize the React Input Mask appearance with a custom cssClass and matching styles to fit your application design.
 control: Customize the ui appearance of the control 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to customize the UI in React MaskedTextBox
+# How to customize the UI in React Input Mask
 
-The MaskedTextBox appearance can be customized by adding a custom `cssClass` and enabling corresponding styles. The following example shows how to change the MaskedTextBox appearance.
+The React Input Mask appearance can be customized by adding a custom `cssClass` and enabling corresponding styles. The following example shows how to change the React Input Mask appearance.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

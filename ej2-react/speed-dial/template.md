@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in React Speed Dial
 
-SpeedDial provides powerful templating capabilities to customize both individual action items and the entire popup container. Use templates to create complex layouts with custom HTML, styling, and interactive elements beyond the standard text and icon configurations.
+React Speed Dial provides powerful templating capabilities to customize both individual action items and the entire popup container. Use templates to create complex layouts with custom HTML, styling, and interactive elements beyond the standard text and icon configurations.
 
 ## Item template
 

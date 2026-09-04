@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to clear an Image in React Image Editor
 
-The [`clearImage`](https://ej2.syncfusion.com/react/documentation/api/image-editor/index-default#clearimage) method in the image editor control provides functionality to empty the editor before reopening it, particularly when the editor is used within a dialog. By invoking `clearImage` before closing the dialog, you ensure that the editor does not retain previously loaded images when the dialog reopens. This allows users to start fresh with a new image selection.
+The [`clearImage`](https://ej2.syncfusion.com/react/documentation/api/image-editor/index-default#clearimage) method in the React Image Editor control provides functionality to empty the editor before reopening it, particularly when the editor is used within a dialog. By invoking `clearImage` before closing the dialog, you ensure that the editor does not retain previously loaded images when the dialog reopens. This allows users to start fresh with a new image selection.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

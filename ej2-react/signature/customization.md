@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in React Signature
 
-The Signature component draws strokes using moveTo() and lineTo() methods to create smooth paths on the canvas. You can customize the stroke width, color, and background color or image.
+The React Signature component draws strokes using moveTo() and lineTo() methods to create smooth paths on the canvas. You can customize the stroke width, color, and background color or image.
 
 ## Stroke Width
 
