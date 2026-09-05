@@ -51,13 +51,15 @@ Edit operations can be triggered through multiple methods. Each method offers a 
 
 ## Edit modes
 
-The Grid component supports multiple editing modes through the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property. Each mode provides a different way to edit data. The appropriate mode should be selected based on application requirements and editing workflow needs.
+The Data Grid supports multiple editing options to meet different data-editing requirements:
 
 | Mode | Behavior | Characteristics |
 |---|---|---|
 | `Inline` | Single row enters edit state. Cells become editable inline within the grid | Fast single-row edits with minimal grid view disruption. Changes take effect directly within the grid, providing immediate visual feedback |
 | `Batch` | Multiple rows or cells can be edited simultaneously. All changes saved together in one operation | Enables simultaneous editing before submission. Prevents accidental saves and allows reviewing all changes before committing to the data source |
 | `Dialog` | Row data opens in a dialog box that blocks the grid until closed | Consolidates data into a focused form interface for organized multi-field editing. Ensures focused editing and enforced validation before submission |
+
+Use the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property to specify the desired edit mode.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -103,7 +105,7 @@ For a comprehensive overview of edit modes and [edit types](./edit-types.md) ava
 > * Disable editing for a particular column by setting [allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowediting) to `false`.
 > * When [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) is set to `true`, the column is automatically made read-only during editing and is editable only when adding a new record. This is because primary key columns must remain unchanged to maintain row identification.
 
-## Toolbar with edit option
+## Edit records using the toolbar
 
 The toolbar with edit option feature in the Grid component provides a [built-in toolbar](../tool-bar/tool-bar-items.md) with various items for executing editing actions. This feature enables efficient edit operations on grid data, such as modifying cell values, updating changes, and canceling edits.
 
@@ -128,9 +130,30 @@ The following example demonstrates how to enable the toolbar with edit option in
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs17" %}
 
+## Column validation
+
+Column validation applies validation rules to individual columns during edit operations, ensuring data accuracy before saving. Invalid data displays error messages and prevents saving. The [FormValidator](https://ej2.syncfusion.com/react/documentation/api/form-validator) component validates data using rules defined in the [validationRules](https://ej2.syncfusion.com/react/documentation/api/grid/column#validationrules) property for each column.
+
+Example of applying validation rules to a grid column:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/editing-cs29/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/editing-cs29/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs29/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/editing-cs29/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Disable editing for particular column
 
-The Grid component provides the option to disable editing for specific columns. This is useful when certain columns should remain read-only, such as columns containing calculated values, IDs, or system-generated data.
+The Data Grid provides the option to disable editing for specific columns. This is useful when certain columns should remain read-only, such as columns containing calculated values, IDs, or system-generated data.
 
 ### Static column disabling
 
@@ -262,11 +285,11 @@ export default App;
 > * To disable editing for a specific row using the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin) event, refer to [Disable editing for a particular row](./in-line-editing#cancel-edit-based-on-condition).
 > * To disable editing for a particular cell using the [cellEdit](https://ej2.syncfusion.com/react/documentation/api/grid#celledit) event, refer to [Disable editing for a particular cell](./batch-editing#cancel-edit-based-on-condition).
 
-## Editing a template column
+## Customize column editors using templates
 
-By default, template columns in the grid do not require field properties. However, to leverage built-in grid editing functionality instead of implementing custom CRUD operations, define the `field` property for specific columns.
+Customizing the editing experience for specific columns is possible by defining an editing template. Use the [field](https://ej2.syncfusion.com/react/documentation/api/grid/column#field) property to connect the column with its corresponding data field.
 
-The [field](https://ej2.syncfusion.com/react/documentation/api/grid/gridcolumn#field) property maps the column to the corresponding field in the data source, enabling built-in edit options such as `editType`. The following example demonstrates a column template with built-in `DropDownList` `editType` implementation for the "Ship Country" column.
+In this example, the "Ship Country" column is rendered with a template:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -284,56 +307,6 @@ The [field](https://ej2.syncfusion.com/react/documentation/api/grid/gridcolumn#f
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs35" %}
-
-## Customize delete confirmation dialog
-
-By default, the Grid shows a confirmation dialog when attempting to delete a row. The appearance and content of this dialog can be customized to match application requirements. Customization can include changing the dialog header, icons, or button text.
-
-To customize the delete confirmation dialog, utilize the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event. This event is triggered when a toolbar action is performed and allows modification of dialog properties.
-
-Before customizing the delete dialog, ensure that the [showDeleteConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showdeleteconfirmdialog) property of the `editSettings` configuration is set to `true` to enable the confirmation dialog. Additionally, refer to the grid [Default text](../global-local.md) list for localization options if custom button text is needed.
-
-The following example demonstrates how to customize the delete confirmation dialog using the `toolbarClick` event.
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/edit-delete-cs1/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/edit-delete-cs1/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/edit-delete-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/edit-delete-cs1/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/grid/edit-delete-cs1" %}
-
-## Update boolean column value with a single click
-
-Boolean columns (`true`/`false` values) can be toggled directly in the grid without opening an edit form. This provides a faster editing experience for simple yes/no data. This is achieved by rendering a checkbox component as a column template that updates the value immediately when clicked.
-
-The following example demonstrates how to render a `CheckBox` component as a template in the "Verified" column to enable single-click editing:
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/edit-single-click/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/edit-single-click/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/edit-single-click/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/edit-single-click/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/grid/edit-single-click" %}
 
 ## Edit enum column
 
@@ -404,6 +377,56 @@ Use the [editTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/c
 
  {% previewsample "page.domainurl/code-snippet/grid/edit-foreign-key" %}
 
+## Customizing the delete confirmation dialog
+
+By default, the Grid shows a confirmation dialog when attempting to delete a row. The appearance and content of this dialog can be customized to match application requirements. Customization can include changing the dialog header, icons, or button text.
+
+To customize the delete confirmation dialog, utilize the [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/grid#toolbarclick) event. This event is triggered when a toolbar action is performed and allows modification of dialog properties.
+
+Before customizing the delete dialog, ensure that the [showDeleteConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showdeleteconfirmdialog) property of the `editSettings` configuration is set to `true` to enable the confirmation dialog. Additionally, refer to the grid [Default text](../global-local.md) list for localization options if custom button text is needed.
+
+The following example demonstrates how to customize the delete confirmation dialog using the `toolbarClick` event.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/edit-delete-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/edit-delete-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/edit-delete-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/edit-delete-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/edit-delete-cs1" %}
+
+## Update boolean column value with a single click
+
+The grid allows boolean column values  (`true`/`false` values) to be toggled with a single click in normal editing mode. Use the column template feature to render a CheckBox for direct interaction.
+
+The following example demonstrates how to render a `CheckBox` component as a template in the "Verified" column to enable single-click editing:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/edit-single-click/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/edit-single-click/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/edit-single-click/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/edit-single-click/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/edit-single-click" %}
+
 ## Perform CRUD action externally
 
 By default, the Grid provides built-in editing through toolbars and inline editing. However, CRUD operations can also be triggered programmatically from external controls (custom buttons, forms, or panels outside the grid). This allows full control over when and how data operations occur.
@@ -462,17 +485,7 @@ The `rowSelected` event can be used to capture row selection and populate extern
 
  {% previewsample "page.domainurl/code-snippet/grid/edit-form" %}
 
-## Troubleshoot editing works only for first row
-
-If editing or deleting only works for the first row in the grid, the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is likely not configured. The primary key is essential for identifying which row to edit or delete. Without it, the grid cannot distinguish between rows.
-
-**Solution**: Set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` on the column that contains unique identifiers:
-
-```ts
-<ColumnDirective field='OrderID' headerText='Order ID' width='100' isPrimaryKey={true} />
-```
-
-## How to make a Grid column always editable
+## Make a grid column always editable
 
 By default, editing happens when a row enters edit mode (double-click or Edit button). However, some columns may need to be editable at all times without requiring an edit action. Achieve this using column templates with input controls that save changes automatically.
 
@@ -495,4 +508,18 @@ The following example demonstrates how to render a textbox in the "Freight" colu
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs19" %}
 
-> * When a template column has a corresponding `field` property defined, the value entered in the template column's input field is stored in the associated edit column of the row's data object.
+> When a template column has a corresponding `field` property defined, the value entered in the template column's input field is stored in the associated edit column of the row's data object.
+
+## Troubleshoot editing works only for first row
+
+If editing or deleting only works for the first row in the grid, the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) property is likely not configured. The primary key is essential for identifying which row to edit or delete. Without it, the grid cannot distinguish between rows.
+
+**Solution**: Set [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/column#isprimarykey) to `true` on the column that contains unique identifiers:
+
+```ts
+<ColumnDirective field='OrderID' headerText='Order ID' width='100' isPrimaryKey={true} />
+```
+## See also
+
+* [Cascading DropDownList with Data Grid editing](./edit-types#render-cascading-dropdownlist-in-edit-form)
+* [Render Tab inside the dialog editing](./template-editing#render-tab-component-inside-the-dialog-template)

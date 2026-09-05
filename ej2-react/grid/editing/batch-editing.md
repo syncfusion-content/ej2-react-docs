@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Batch Editing in React Data Grid
 
-Batch editing is a powerful feature in the Grid component that enables simultaneous modification and saving of multiple cells in a single action. This feature provides an efficient way to make bulk changes without saving each change individually, making it particularly useful for large datasets.
+Batch editing is a powerful feature in the Data Grid component that enables simultaneous modification and saving of multiple cells in a single action. This feature provides an efficient way to make bulk changes without saving each change individually, making it particularly useful for large datasets.
+
+## Enable batch editing
 
 To enable batch editing mode, set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property to `Batch`. When activated, double-clicking a cell enters edit mode, and bulk updates can be saved via the toolbar's `Update` button or by invoking the [batchSave](https://ej2.syncfusion.com/react/documentation/api/grid/edit#batchsave) method.
 
@@ -31,34 +33,7 @@ To enable batch editing mode, set the [editSettings.mode](https://ej2.syncfusion
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs2" %}
 
-> For grid editing setup and configuration, refer to the [Edit Feature Setup](./edit#set-up-editing).
-
-## Automatically update the column based on another column edited value
-
-Synchronize column values dynamically by calculating and updating dependent columns in real-time as related columns are edited. This seamless data synchronization is particularly valuable for computed fields like totals, discounts, or derived metrics that depend on other cell values. This can be achieved using the [Cell Edit Template](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types#custom-editors-using-template) feature, this approach maintains data consistency without manual recalculation.
-
-In the following example, the "Total Cost" column value is updated based on changes to the "Unit Price" and "Units In Stock" columns.
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/editing-cs3/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/editing-cs3/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs3/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs3/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/grid/editing-cs3" %}
-
-> The [updateCell](https://ej2.syncfusion.com/react/documentation/api/grid#updatecell) property can be used update cells in batch mode.
-
-## Cancel edit based on condition
+## Prevent editing based on conditions
 
 Batch edit mode provides control over CRUD operations by allowing specific rows or cells to be protected from editing, adding, or deletion. This data integrity feature ensures only authorized modifications proceed.
 
@@ -91,12 +66,42 @@ In the following demo, CRUD operations are prevented based on the "Role" column 
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs4" %}
 
+## Automatically update the column based on another column edited value
+
+Synchronize column values dynamically by calculating and updating dependent columns in real-time as related columns are edited. This seamless data synchronization is particularly valuable for computed fields like totals, discounts, or derived metrics that depend on other cell values. This can be achieved using the [Cell Edit Template](https://ej2.syncfusion.com/react/documentation/grid/editing/edit-types#custom-editors-using-template) feature, this approach maintains data consistency without manual recalculation.
+
+In the following example, the "Total Cost" column value is updated based on changes to the "Unit Price" and "Units In Stock" columns.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/editing-cs3/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/editing-cs3/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/editing-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/editing-cs3/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/editing-cs3" %}
+
+> The [updateCell](https://ej2.syncfusion.com/react/documentation/api/grid#updatecell) property can be used update cells in batch mode.
+
 ## Adding a new row at the bottom of the grid
 
-The Grid component supports inserting new row's form at the bottom of the grid, enabling efficient addition of new records without manual repositioning. The [newRowPosition](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#newrowposition) property in `editSettings` controls new row's form placement by setting it to `Bottom`.
+The Data Grid supports inserting new row's form at the bottom of the grid, enabling efficient addition of new records without manual repositioning. The [newRowPosition](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#newrowposition) property in `editSettings` controls new row's form placement by setting it to `Bottom`.
 
-Here's an example that demonstrates how to enable adding new rows at the bottom of the grid using `newRowPosition` property:
+> - **Bottom position**: <kbd>Tab</kbd> moves between cells or rows in edit mode. Data entry in each cell with <kbd>Tab</kbd> press automatically creates new rows below the current row, allowing convenient addition of multiple rows without leaving edit mode.
+> - **Top position**: Data Grid displays a blank row form at the top by default for new record entry. Upon saving or updating, the record inserts at the bottom of the grid, ensuring the new record appears at the end of the existing dataset.
+> - **Paging behavior**: Updating a row automatically moves it to the last page based on the page size. This behavior applies to both local and remote data binding.
+> - **Scrolling support**: <kbd>Tab</kbd> can add new rows even if the new row displays beyond the currently visible grid area.
+> - **Editing mode compatibility**: `newRowPosition` property supports `Normal` and `Batch` editing modes.
 
+The following example illustrates enabling the addition of new rows at the bottom of the grid with the `newRowPosition` property:
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% include code-snippet/grid/edit-batch-add-cs1/app/App.jsx %}
@@ -114,49 +119,7 @@ Here's an example that demonstrates how to enable adding new rows at the bottom 
 
 {% previewsample "page.domainurl/code-snippet/grid/edit-batch-add-cs1" %}
 
-> - **Bottom position**: <kbd>Tab</kbd> moves between cells or rows in edit mode. Data entry in each cell with <kbd>Tab</kbd> press automatically creates new rows below the current row, allowing convenient addition of multiple rows without leaving edit mode.
-> - **Top position**: Grid displays a blank row form at the top by default for new record entry. Upon saving or updating, the record inserts at the bottom of the grid, ensuring the new record appears at the end of the existing dataset.
-> - **Paging behavior**: Updating a row automatically moves it to the last page based on the page size. This behavior applies to both local and remote data binding.
-> - **Scrolling support**: <kbd>Tab</kbd> can add new rows even if the new row displays beyond the currently visible grid area.
-> - **Editing mode compatibility**: `newRowPosition` property supports `Normal` and `Batch` editing modes.
-
-## Confirmation dialog
-
-Confirmation dialogs provide an additional layer of protection when performing critical actions in batch editing mode. The Grid component offers built-in confirmation dialogs for the following scenarios:
-
-| Action | Confirmation Trigger |
-|--------|---------------------|
-| **Save Changes** | Appears when clicking `Update` button in toolbar |
-| **Cancel Changes** | Appears when clicking `Cancel` button to discard edits |
-| **Delete Record** | Appears when deleting a row during batch mode |
-
-To enable or disable save confirmation, set the [editSettings.showConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showconfirmdialog) property to `true` (default) or `false`.
-
-Here's an example that demonstrates how to enable/disable the confirmation dialog using the `showConfirmDialog` property:
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/editing-cs5/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/editing-cs5/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/editing-cs5/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/editing-cs5/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/editing-cs5" %}
-
-> * `editSettings.showConfirmDialog` requires [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) = `Batch`.
-> * When set to `false`, no confirmation dialog displays during batch editing.
-> * Delete operations trigger a separate confirmation dialog when clicking delete or pressing the delete key.
-> * Set `showConfirmDialog` to `false` and use [cellSaved](https://ej2.syncfusion.com/react/documentation/api/grid#cellsaved) with [batchSave](https://ej2.syncfusion.com/react/documentation/api/grid/edit#batchsave) for immediate saves.
-
-## Single-click editing with arrow key navigation
+## Single-click editing
 
 Single-click editing and arrow key navigation enhance data entry efficiency by eliminating the double-click requirement and enabling keyboard-driven cell-to-cell movement without mouse dependency.
 
@@ -183,7 +146,36 @@ The example below demonstrates both features combined:
 
  {% previewsample "page.domainurl/code-snippet/grid/batch-edit-cs1" %}
 
-## Save or update the changes immediately
+## Enable Undo / Redo
+
+The Grid supports Undo / Redo actions in batch editing, allowing changes such as cell edits, row additions, and row deletions to be reverted or reapplied before saving. This feature can be enabled by setting the `editSettings.enableUndoRedo` property to `true`.
+ 
+Undo and redo operations can be performed using keyboard shortcuts. Press Ctrl + Z to undo an action, and Ctrl + Y to redo an action.
+ 
+In addition, `Undo` and `Redo` toolbar items can be added to the Grid toolbar to perform these actions through the user interface.
+
+Here's an example that demonstrates how to enable Undo / Redo in batch editing:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/undo-redo-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/undo-redo-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/undo-redo-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/undo-redo-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/undo-redo-cs1" %}
+
+> Note: The maximum number of undo and redo actions stored in the stack can be controlled using the `editSettings.undoRedoLimit` property. This property limits the number of actions that can be reverted or reapplied during a batch editing session. The default value is `20`.
+
+## Save changes immediately
 
 The Grid component provides a convenient way to save or update changes immediately in batch mode without the need for a separate Save button. This feature is particularly useful when editing data efficiently without manually triggering a save action.
 
@@ -206,33 +198,44 @@ The `cellSaved` event is triggered when a cell is saved in the grid, allowing cu
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/grid/batch-edit-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/batch-edit-cs2" %}
 
-## Enable Undo / Redo
+## Confirmation dialog
 
-The Grid supports Undo / Redo actions in batch editing, allowing changes such as cell edits, row additions, and row deletions to be reverted or reapplied before saving. This feature can be enabled by setting the `editSettings.enableUndoRedo` property to **true**.
- 
-Undo and redo operations can be performed using keyboard shortcuts. Press Ctrl + Z to undo an action, and Ctrl + Y to redo an action.
- 
-In addition, **Undo** and **Redo** toolbar items can be added to the Grid toolbar to perform these actions through the user interface.
+Confirmation dialogs provide an additional layer of protection when performing critical actions in batch editing mode. The Grid component offers built-in confirmation dialogs for the following scenarios:
 
-Here's an example that demonstrates how to enable Undo / Redo in batch editing:
+| Action | Confirmation Trigger |
+|--------|---------------------|
+| **Save Changes** | Appears when clicking `Update` button in toolbar |
+| **Cancel Changes** | Appears when clicking `Cancel` button to discard edits |
+| **Delete Record** | Appears when deleting a row during batch mode |
+
+To enable or disable save confirmation, set the [editSettings.showConfirmDialog](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#showconfirmdialog) property to `true` (default) or `false`.
+
+The following example demonstrates enabling or disabling the confirmation dialog using the `showConfirmDialog` property:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/undo-redo-cs1/app/App.jsx %}
+{% include code-snippet/grid/editing-cs5/app/App.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/undo-redo-cs1/app/App.tsx %}
+{% include code-snippet/grid/editing-cs5/app/App.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/undo-redo-cs1/app/datasource.jsx %}
+{% include code-snippet/grid/editing-cs5/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/undo-redo-cs1/app/datasource.tsx %}
+{% include code-snippet/grid/editing-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/undo-redo-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/editing-cs5" %}
 
-> Note: The maximum number of undo and redo actions stored in the stack can be controlled using the `editSettings.undoRedoLimit` property. This property limits the number of actions that can be reverted or reapplied during a batch editing session. The default value is `20`.
+> * `editSettings.showConfirmDialog` requires [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) = `Batch`.
+> * Set `showConfirmDialog` to `false` and use [cellSaved](https://ej2.syncfusion.com/react/documentation/api/grid#cellsaved) with [batchSave](https://ej2.syncfusion.com/react/documentation/api/grid/edit#batchsave) for immediate saves.
+
+## See also
+
+* [Editing types](./edit-types)
+* [Dialog editing](./dialog-editing)
+* [Validation](./validation)
