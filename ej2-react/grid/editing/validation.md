@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Validation in React Data Grid
 
-Data validation ensures that information entered or modified in the Grid follows specific validation rules, preventing errors and maintaining accuracy. The React Grid component in Syncfusion<sup style="font-size:70%">&reg;</sup> provides built-in validation support to make this process easy and effective.
+Data validation ensures that information entered or modified in the grid follows specific validation rules, preventing errors and maintaining accuracy. The Data Grid component provides built-in validation support to make this process effective.
+
+Validation rules support a wide range of validation scenarios, including mandatory fields, value validation, text validation, and custom validation logic.
 
 > For basic Grid editing setup and configuration, refer to the [Editing Feature Setup](../editing/edit.md#set-up-editing) section first.
 
@@ -58,7 +60,7 @@ The following example demonstrates custom validation for the "Customer ID" colum
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs30" %}
 
-### Custom validation based on dropdown change
+### Validation based on dropdown values
 
 Dependent validation rules adjust based on selections in other columns, enabling linked column validation. The "Salary" column validation adjusts based on the "Role" column selection, ensuring both columns validate correctly together.
 
@@ -79,7 +81,7 @@ Dependent validation rules adjust based on selections in other columns, enabling
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs31" %}
 
-### Custom validation for numeric columns
+### Validation for numeric columns
 
 Numeric column validation applies rules for numeric data such as positive values, minimum/maximum ranges, or decimal limits. This example uses "customFn" and "customFn1" functions configured through the "freightRules" object to validate numeric values. The numeric columns are bound to the `change` event, which calls the [validate](https://ej2.syncfusion.com/react/documentation/api/form-validator#validate) method to check the value and display error messages whenever the data changes.
 
@@ -100,7 +102,7 @@ Numeric column validation applies rules for numeric data such as positive values
 
  {% previewsample "page.domainurl/code-snippet/grid/edit-validation-cs1" %}
 
-## Dynamically add or remove validation rules from the form
+## Dynamic validation rules
 
 Validation rules can be added or removed from input elements based on application scenarios or data conditions. The [addRules](https://ej2.syncfusion.com/react/documentation/api/form-validator#addrules) method adds validation rules dynamically to input elements using the name attribute.
 
@@ -125,7 +127,7 @@ The following example demonstrates dynamic addition or removal of validation rul
 
 > The [removeRules](https://ej2.syncfusion.com/react/documentation/api/form-validator#removerules) method removes existing validation rules from input elements when needed. 
 
-## Validation error message positioning
+## Customize validation message position
 
 Error message positioning customizes where validation messages appear in the grid. By default, messages display below the input field. The [customPlacement](https://ej2.syncfusion.com/react/documentation/api/form-validator#customplacement) event repositions messages to custom locations based on application needs.
 
@@ -148,7 +150,7 @@ The following example demonstrates moving validation messages to the top of the 
 
  {% previewsample "page.domainurl/code-snippet/grid/edit-validation-cs3" %}
 
-## CRUD error handling with custom error messages
+## Handle server-side validation errors
 
 Error handling for CRUD operations in the grid displays helpful error messages when operations fail. The [actionFailure](https://ej2.syncfusion.com/react/documentation/api/grid#actionfailure) event triggers on operation failures, providing access to error messages from server responses for display.
  
@@ -424,3 +426,11 @@ Three configuration steps enable this feature:
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs37" %}
 
 > Server-side validation implementation details are available in the [knowledge base article](https://support.syncfusion.com/kb/article/11608/how-to-do-server-side-validation-for-grid-in-asp-net-mvc-application). To display validation tooltips instead of alerts, call `grid.editModule.formObj.validate()` in the success callback of Ajax/Fetch operations.
+
+## See also
+
+* [Normal editing](./in-line-editing)
+* [Template editing](./template-editing)
+* [Cell editing](./cell-editing)
+* [Batch editing](./batch-editing)
+* [Dialog editing](./dialog-editing)

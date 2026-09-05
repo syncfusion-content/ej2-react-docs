@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Custom Template Editing in React Data Grid
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component supports template editing, providing a powerful and flexible way to customize the appearance and behavior of cells during editing. React templates enable defining the structure and content of cells within the grid.
+The [Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component supports template editing, providing a powerful and flexible way to customize the appearance and behavior of cells during editing. React templates enable defining the structure and content of cells within the grid.
 
 > For grid basic editing setup and configuration, refer to the [Edit Feature Setup](./edit#set-up-editing).
 
 ## Inline or Dialog template editing
 
-The React Data Grid provides support for inline and dialog template editing, enabling customization of editing using [Forms](https://legacy.reactjs.org/docs/forms.html). Forms enable adding and updating grid records through template support in both dialog and inline edit modes.
+The Data Grid provides support for inline and dialog template editing, enabling customization of editing using [Forms](https://legacy.reactjs.org/docs/forms.html). Forms enable adding and updating grid records through template support in both dialog and inline edit modes.
 
 To enable this feature, set the [editSettings.mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property to either `Normal` or `Dialog` and define grid editors using the `editSettings.template` template variable.
 
@@ -175,13 +175,13 @@ export class DialogFormTemplate extends React.Component<{}, {}> {
 
 > The `Dialog` and `Inline` template form editors must have **name** attribute.
 
-## Using template context
+## Customize template editors using context
 
-Template contexts enhance customization of grid edit forms by enabling access to row details, rendering editors as components, retrieving values from editors, setting focus to specific editors, disabling default form validation, and adding custom validation rules. These features apply to both inline and dialog editing modes.
+Enhance custom edit forms by accessing the template context: obtain row details, render editors as components, retrieve values from editors, set the initial focus, disable default validation, and add custom validation. These features work for both `inline` and `dialog` modes.
 
 The following template context topics are demonstrated through a practical example in the [Render tab component inside the dialog template](#render-tab-component-inside-the-dialog-template) section.
 
-### Access row details inside template using template context
+### Access row details inside template
 
 Edit templates in the grid provide access to crucial row information, enabling dynamic binding of attributes, values, or elements based on the specific row being edited. This approach is particularly useful for conditionally rendering or modifying elements in the edit template based on the row's state.
 
@@ -207,7 +207,7 @@ The following code example demonstrates the usage of the `isAdd` property in an 
 
 ### Render editors as components
 
-The React Data Grid provides a powerful feature enabling dynamic rendering of Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 controls as form editors during the editing process. This functionality delivers feature-rich controls for data entry within the edit form.
+The Data Grid provides a powerful feature enabling dynamic rendering of Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 controls as form editors during the editing process. This functionality delivers feature-rich controls for data entry within the edit form.
 
 To achieve this, utilize the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the grid and specify `requestType` as `beginEdit` or `add`.
 
@@ -244,7 +244,7 @@ const actionBegin = (args: SaveEventArgs) => {
 
 ### Set focus to particular column editor
 
-The React Data Grid enables control of focus behavior for input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog is opened. However, when the first input element is disabled or hidden, a different valid input element can receive focus. This can be achieved using the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the grid, where the `requestType` is set to `beginEdit`.
+The Data Grid enables control of focus behavior for input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog is opened. However, when the first input element is disabled or hidden, a different valid input element can receive focus. This can be achieved using the [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete) event of the grid, where the `requestType` is set to `beginEdit`.
 
 In the following code example, the Customer ID column receives focus.
 
@@ -626,3 +626,7 @@ export class DialogFormTemplate extends React.Component {
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/tabediting-cs1" %}
+
+## See also
+
+[angular-template-driven-vs-reactive-forms](https://www.syncfusion.com/blogs/post/angular-template-driven-vs-reactive-forms.aspx)

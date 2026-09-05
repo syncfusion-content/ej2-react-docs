@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Cell Editing in React Data Grid
 
-Cell editing provides a streamlined way to update individual cell values directly within the grid. Cell editing is designed for quick, inline modifications, making data entry and corrections more efficient. This approach ensures that changes are applied seamlessly to large datasets while maintaining consistency with the Grid’s overall editing experience.
+Cell editing provides a streamlined way to update individual cell values directly within the grid. It is designed for quick, inline modifications, making data entry and corrections more efficient. This approach ensures that changes are applied seamlessly to large datasets while maintaining consistency with the grid’s overall editing experience.
+
+## Enable cell editing
  
 To enable cell editing in the Data Grid, configure the [editSettings->mode](https://ej2.syncfusion.com/react/documentation/api/grid/editSettings#mode) property to `Cell` and allow editing through the [editSettings->allowEditing](https://ej2.syncfusion.com/react/documentation/api/grid/editSettingsModel#allowediting) property. This setup provides a seamless inline editing experience, letting users quickly update individual cell values directly within the grid.
 
@@ -32,6 +34,29 @@ To enable cell editing in the Data Grid, configure the [editSettings->mode](http
  {% previewsample "page.domainurl/code-snippet/grid/cell-edit-cs1" %}
 
 > When editing is enabled, it is necessary to set the [isPrimaryKey](https://ej2.syncfusion.com/react/documentation/api/grid/columnModel#isprimarykey) property value to `true` for the unique column to ensure accurate data updates.
+
+## Single-click editing
+ 
+Enabling single-click editing in the Syncfusion® React Grid’s `Cell` editing mode is a valuable and intuitive feature that makes a cell editable with just one click. This seamless experience is achieved by using the `editCell` method for rapid, efficient data modification.
+ 
+To implement this, bind the `onClick` event for the grid and, within the event handler, call the `editCell` method based on the clicked target element. This ensures that the editing mode is triggered when clicking on a specific element within the grid.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/cell-edit-cs3/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/cell-edit-cs3/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/cell-edit-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/cell-edit-cs3/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/cell-edit-cs3" %}
 
 ## Cancel edit based on condition
 
@@ -67,25 +92,9 @@ Apply the desired condition and cancel the operation by setting the `args.cancel
 
  {% previewsample "page.domainurl/code-snippet/grid/cell-edit-cs2" %}
 
-## Single-click editing
- 
-Enabling single-click editing in the Syncfusion® React Grid’s `Cell` editing mode is a valuable and intuitive feature that makes a cell editable with just one click. This seamless experience is achieved by using the `editCell` method for rapid, efficient data modification.
- 
-To implement this, bind the `onClick` event for the grid and, within the event handler, call the `editCell` method based on the clicked target element. This ensures that the editing mode is triggered when clicking on a specific element within the grid.
+ ## See also
 
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/cell-edit-cs3/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/cell-edit-cs3/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/cell-edit-cs3/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/cell-edit-cs3/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "page.domainurl/code-snippet/grid/cell-edit-cs3" %}
+* [Normal editing](./in-line-editing)
+* [Batch editing](./batch-editing)
+* [Template editing](./template-editing)
+* [Validation](./validation)
