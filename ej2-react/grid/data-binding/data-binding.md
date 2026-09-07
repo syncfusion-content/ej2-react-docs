@@ -10,14 +10,15 @@ domainurl: ##DomainURL##
 
 # Data Binding in React Data Grid
 
-Data binding is a fundamental technique that empowers the Grid component to integrate data into its interface, enabling the creation of dynamic and interactive grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
+Data binding is a fundamental technique that empowers the Data Grid component to integrate data into its interface, enabling the creation of dynamic and interactive grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
 
-The React Data Grid utilizes the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started), which supports both local binding with JavaScript object arrays and remote binding with RESTful JSON data services. The key property, [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource), can be assigned to a DataManager instance or a collection of JavaScript object arrays.
+The [Data Grid](https://www.syncfusion.com/react-components/react-data-grid) utilizes the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started), which supports both local binding with JavaScript object arrays and remote binding with RESTful JSON data services. The key property, [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid#datasource), can be assigned to a DataManager instance or a collection of JavaScript object arrays.
 
-It supports two kinds of data binding methods:
+The Data Grid enables data binding through the following approaches:
 
-- Local data
-- Remote data
+* [Local data](./local-data)
+* [Remote data](./remote-data)
+* [Custom API](./custom-binding)
 
 To learn about binding local or remote data to the React Grid, refer to this video:
 
@@ -25,15 +26,14 @@ To learn about binding local or remote data to the React Grid, refer to this vid
 
 ## Loading indicator
 
-The React Data Grid provides a loading animation feature, which makes it easy to identify when data is being loaded or refreshed. This feature provides a clear understanding of the grid's current state and actions, such as sorting, filtering, grouping, and more.
+The Data Grid provides a loading animation feature, which makes it easy to identify when data is being loaded or refreshed. This feature provides a clear understanding of the grid's current state and actions, such as sorting, filtering, grouping, and more.
 
 To achieve this, the [loadingIndicator.indicatorType](https://ej2.syncfusion.com/react/documentation/api/grid/loadingIndicatorModel) property of the grid can be utilized, which supports two types of indicators:
 
 - `Spinner` (default)
 - `Shimmer`
 
-The following example demonstrates setting the [loadingIndicator.indicatorType](https://ej2.syncfusion.com/react/documentation/api/grid/loadingindicatormodel#indicatortype) property based on changing the dropdown value using the [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#change) event of the `DropDownList` component. The [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method is used to apply the changes and display the updated loading indicator type.
-
+The following example demonstrates setting the `loadingIndicator.indicatorType` property based on changing the dropdown value using the  [change](https://ej2.syncfusion.com/react/documentation/api/drop-down-list/index-default#change) event of the `DropDownList` component. The [refreshColumns](https://ej2.syncfusion.com/react/documentation/api/grid#refreshcolumns) method is used to apply the changes and display the updated loading indicator type.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -132,11 +132,11 @@ export default App;
 
  {% previewsample "page.domainurl/code-snippet/grid/loading-indicator-cs1" %}
 
-## Refresh the datasource using property
+## Refresh the data source using the dataSource property
 
-Refreshing the data source in a React Data Grid involves updating the data that the grid displays dynamically. This operation reflects changes in the underlying data without reloading the entire page or component.
+Refreshing the data shown in an Data Grid involves updating the data that the grid displays dynamically. This operation reflects changes in the underlying data without reloading the entire page or component.
 
-To achieve this, use the [datasource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property in conjunction with the `setProperties` method. This ensures the grid reflects changes in the `dataSource` without requiring a complete page or component reload.
+To achieve this, use the  [datasource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property in conjunction with the `setProperties` method. This ensures the grid reflects changes in the `dataSource` without requiring a complete page or component reload.
 
 For example, when adding or deleting data source records, follow these steps:
 
@@ -172,13 +172,13 @@ The following example demonstrates adding a new record to the data source throug
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs1" %}
 
-## Dynamically change the datasource or columns or both
+## Change the data source or columns dynamically
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component supports dynamic modification of the data source, columns, or both. This feature refreshes the grid's content and structure without requiring a complete page reload.
+The Data Grid component supports dynamic modification of the data source, columns, or both. This feature refreshes the grid's content and structure without requiring a complete page reload.
 
 To achieve dynamic changes, the [changeDataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#changedatasource) method allows updating the grid's data source dynamically. This method enables updating the data source, columns, or both, based on application requirements. However, it is important to note that during the changing process for the data source and columns, the grid's existing actions such as sorting, filtering, grouping, aggregation, and searching will be reset. The `changeDataSource` method has two optional arguments: the first argument represents the data source, and the second argument represents the columns. The various uses of the `changeDataSource` method are explained in the following topic.
 
-**1. Change both data source and columns:**
+### Change both data source and columns
 
 To modify both the existing columns and the data source, pass both arguments to the `changeDataSource` method. The following example demonstrates changing both the data source and columns.
 
@@ -215,11 +215,11 @@ The following code demonstrates updating the data source and columns defined abo
     gridInstance.changeDataSource(data, newColumn);
 ```
 
-**2. Modify only the existing columns:**
+### Change only columns
 
-To modify existing columns in a grid, add or remove columns or replace the entire set of columns using the [changeDataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#changedatasource) method. To use this method, set the first parameter to "null" and provide the new columns as the second parameter. Note that if a column field is not specified in the `dataSource`, its corresponding column values will be empty. The following example illustrates modifying existing columns.
+To modify existing columns in a grid, add or remove columns or replace the entire set of columns using the [changeDataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#changedatasource) method. To use this method, set the first parameter to `null` and provide the new columns as the second parameter. Note that if a column field is not specified in the `dataSource`, its corresponding column values will be empty. The following example illustrates modifying existing columns.
 
-The following code demonstrates adding new columns to existing grid columns "newColumn" by using the `changeDataSource` method.
+The following code demonstrates adding new columns with existing grid columns "newColumn" using the `changeDataSource` method:
 
 ```ts
 const newColumn: ColumnModel[] = [
@@ -230,11 +230,11 @@ let column: any = newColumn.push(...newColumn);
 gridInstance.changeDataSource(null, column);
 ```
 
-**3. Modify only the data source:**
+### Change only the data source
 
-The `changeDataSource` method provides option to change the entire data source in the grid by passing the new data source as the first argument. Provide the data source as the first argument; the optional second argument can specify new columns for the grid. If columns are not specified, the grid auto-generates columns based on the data source. The following example demonstrates modifying the data source.
+The `changeDataSource` method provides an option to change the entire data source in the grid by passing the new data source as the first argument. The optional second argument can specify new columns for the grid. If columns are not specified, the grid auto-generates columns based on the data source.
 
-Assign a JavaScript object array to the `dataSource` property to bind local data to the grid. The code below provides an example of creating a new data source for the grid.
+The following code demonstrates creating a new data source for the `changeDataSource` method:
 
 ```ts
 export let employeeData: Object[] = [
@@ -275,18 +275,18 @@ gridInstance.changeDataSource(employeeData);
 
  {% previewsample "page.domainurl/code-snippet/grid/data-datasource" %}
 
->* The Grid state persistence feature does not support the `changeDataSource` method.
->* In this document, the above sample uses local data for the `changeDataSource` method. For remote data sources, refer to the [FlexibleData](https://ej2.syncfusion.com/react/demos/#/bootstrap5/grid/flexible-data) resource.
+> * The Data Grid state persistence feature does not support the `changeDataSource` method.
+> * The sample above uses local data for the `changeDataSource` method. For remote data sources, refer to the [FlexibleData](https://ej2.syncfusion.com/react/demos/#/bootstrap5/grid/flexible-data) resource.
 
-## Setting custom headers using a custom adaptor
+## Add custom HTTP headers using a custom adaptor
 
-Custom headers in HTTP requests are used to send additional information such as authentication tokens, API keys, or metadata required by the server. These headers improve security and enable better control over data communication. In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, custom headers can be added when making API requests, ensuring that each request carries the necessary information for server-side validation and processing.
+Custom headers in HTTP requests are used to send additional information such as authentication tokens, API keys, or metadata required by the server. These headers improve security and enable better control over data communication. In the Data Grid, custom headers can be added when making API requests, ensuring that each request carries the necessary information for server-side validation and processing.
 
-This method is particularly useful when integrating the Grid with authenticated APIs, where requests must include authorization tokens or other security credentials to ensure secure access.
+This method is particularly useful when integrating the grid with authenticated APIs, where requests must include authorization tokens or other security credentials to ensure secure access.
 
-To achieve this, extend the `WebApiAdaptor` to create a custom adaptor. The `beforeSend` method in the custom adaptor enables modification of request headers before sending them to the server, ensuring that every request from the Grid includes the required headers.
+To achieve this, extend the `WebApiAdaptor` to create a custom adaptor. The `beforeSend` method in the custom adaptor enables modification of request headers before sending them to the server, ensuring that every request from the grid includes the required headers.
 
-The following example demonstrates setting custom headers using the custom adaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
+The following example demonstrates setting custom headers using the custom adaptor in Data Grid.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -308,13 +308,13 @@ The following example demonstrates setting custom headers using the custom adapt
 
 {% previewsample "page.domainurl/code-snippet/grid/custom-headers-cs1" %}
 
-## Prevent conversion to local time zone for date columns
+## Prevent local time zone conversion for date columns
 
-By default, React Data Grid converts date values to the client system's local time zone. In some scenarios, it is necessary to display the original date as received from the server without timezone conversion.
+By default, the Data Grid automatically converts date values to the local time zone of the client system. However, in some scenarios, it may be necessary to display the original date as received from the server without timezone conversion.
 
-To prevent timezone conversion for a date column, use the `DataUtil.serverTimezoneOffset` property. Setting this property to "0" ensures that dates remain in the original server-provided format without conversion to the local timezone.
+To prevent timezone conversion for date columns, use the `serverTimezoneOffset` property from `DataUtil`. Setting this property to "0" ensures dates remain in the original format received from the server without conversion to the local timezone.
 
-The following example demonstrates preventing local time zone conversion for date columns by using the `DataUtil.serverTimezoneOffset` property:
+The following example demonstrates preventing local time zone conversion for date columns in the grid using the `DataUtil.serverTimezoneOffset` property:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -514,3 +514,8 @@ export default App;
 
 {% previewsample "page.domainurl/code-snippet/grid/databinding-timezone" %}
 
+## See also
+
+* [Local data binding](./local-data)
+* [Remote data binding](./remote-data)
+* [Custom data binding](./custom-binding)

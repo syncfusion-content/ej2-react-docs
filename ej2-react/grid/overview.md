@@ -142,7 +142,7 @@ The Data Grid is fully accessible and compliant with Web Content Accessibility G
   - <kbd>↑</kbd> | <kbd>↓</kbd>  -  Navigate header and content cells across columns or rows using the up or down arrow keys.
   - <kbd>Enter</kbd> - Update cells, confirm changes.
   - <kbd>Escape</kbd> - Cancel editing.
-  - <kbd>Ctrl</kbd> + <kbd> A </kbd> - Select all rows.
+  - <kbd>Ctrl</kbd> + <kbd>A</kbd> - Select all rows.
 - **[Screen reader support](./accessibility)** - Full compatibility with assistive technologies.
 - **[Semantic HTML](./accessibility)** - Proper ARIA labels and semantic markup.
 
