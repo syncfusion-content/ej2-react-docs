@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Lazy Load Grouping in React Data Grid
 
-Lazy loading in React refers to dynamically loading data as needed, rather than all at once, to enhance application performance by minimizing initial load time.
+The [Data Grid](https://www.syncfusion.com/react-components/react-data-grid) supports lazy load grouping, which optimizes the rendering of large datasets by loading only the required grouped data on demand. Initially, only the top-level group caption rows are rendered in a collapsed state. Child rows are fetched and displayed dynamically when a group is expanded.
 
-The React Data Grid supports lazy load grouping, which optimizes the rendering of large datasets by loading only the required grouped data on demand. Initially, only the top-level group caption rows are rendered in a collapsed state. Child rows are fetched and displayed dynamically when a group is expanded.
+To enable this feature, set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#enableLazyLoading) property to `true`. 
 
-To enable this feature, set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#enableLazyLoading) property to `true`. The following example demonstrates how to configure lazy load grouping using the `groupSettings.enableLazyLoading` property.
+The following example demonstrates how to configure lazy load grouping using the `groupSettings.enableLazyLoading` property.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -33,7 +33,7 @@ To enable this feature, set the [groupSettings.enableLazyLoading](https://ej2.sy
 
 {% previewsample "page.domainurl/code-snippet/grid/lazy-load-grouping-cs1" %}
 
-## Handling the lazy load grouping at server-side
+## Configure server-side lazy load grouping
 
 When using the lazy load grouping feature of the Grid, the [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) of `DataManager` is used to handle server-side operations, including lazy load grouping. Along with the default server request, this feature will additionally send the following details to handle the lazy load grouping:
 
@@ -104,9 +104,9 @@ public IActionResult UrlDatasource([FromBody] DataManagerRequest dm)
 
 ## Lazy load grouping with infinite scrolling
 
-Lazy load grouping with infinite scrolling is especially useful when presenting grouped data from large datasets. It allows data to be loaded on demand as users interact with the interface, ensuring efficient handling of records. This approach improves performance, maintains responsiveness, and provides a seamless experience while managing and displaying extensive grouped data.
+Lazy load grouping with infinite scrolling is especially useful when presenting grouped data from large datasets. It allows data to be loaded on demand as groups are expanded or the scrollbar advances, ensuring efficient handling of records. This approach improves performance, maintains responsiveness, and efficiently handles extensive grouped data.
 
-**How it works**
+**Lazy-load grouping workflow:**
 
 1. Initially, only top-level group caption rows are rendered in a collapsed state.
 
@@ -138,9 +138,9 @@ To enable this feature, set both [groupSettings.enableLazyLoading](https://ej2.s
 
 ## Lazy load grouping with virtual scrolling
 
-The Grid supports lazy load grouping with virtual scrolling to efficiently manage and display large grouped datasets. This feature improves performance, reduces initial load time, and ensures a responsive data presentation experience.
+The Data Grid supports lazy load grouping with virtual scrolling to efficiently manage and display large grouped datasets. This feature improves performance, reduces initial load time, and ensures a responsive data presentation experience.
 
-**How it works**
+**Lazy-load grouping workflow**
 
 1. Initially, only top-level group caption rows are rendered in a collapsed state.
 
@@ -169,20 +169,6 @@ To enable this feature, set both [groupSettings.enableLazyLoading](https://ej2.s
 
 > When using the `enableVirtualization` feature, it is necessary to define the [height](https://ej2.syncfusion.com/react/documentation/api/grid#height) property.
 
-## Limitations for lazy load grouping
+## Lazy load grouping constraints
 
-* Due to the element height limitation in browsers, the maximum number of records loaded by the grid is limited due to the browser capability.
-* Lazy load grouping is supported only with the [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#url-adaptor) and [JsonAdaptor](https://ej2.syncfusion.com/react/documentation/data/adaptors#json-adaptor) adaptors.
-* Lazy load grouping is not compatible with the following features
-    * Batch editing
-    * Row template
-    * Print
-    * Row drag and drop in collapsed group
-    * ExpandAll method   
-    * Column virtualization
-    * Hierarchical Grid
-    * Detail Template
-    * Row and Cell Spanning  
-* Programmatic selection is not supported in lazy load grouping.
-* Drag selection, cell selection (box and flow), and row Selection is not working in collapsed state.
-* Clipboard is not supported when groups are in collapsed state.
+Lazy load grouping supports both `UrlAdaptor` and `JsonAdaptor` data sources, making it suitable for local and remote data scenarios. Selection and clipboard operations work with expanded groups.

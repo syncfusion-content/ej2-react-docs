@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Grouping in React Data Grid
 
-The grouping feature in the React Data Grid enables data to be organized into a hierarchical structure, allowing records to be expanded and collapsed for improved readability and analysis.
+The grouping feature in the Data Grid enables data to be organized into a hierarchical structure, allowing records to be expanded and collapsed for improved readability and analysis.
 
-For an overview of the grouping feature available in the React Grid, refer to the following video:
+To use the group feature, inject the `GroupService` into the providers array
 
 {% youtube "https://www.youtube.com/watch?v=z2-54wZyNSI" %}
 
@@ -54,7 +54,7 @@ The [groupSettings](https://ej2.syncfusion.com/react/documentation/api/grid/grou
 > - Columns can be grouped and ungrouped dynamically using the [groupColumn](https://ej2.syncfusion.com/react/documentation/api/grid/group#groupcolumn) and [ungroupColumn](https://ej2.syncfusion.com/react/documentation/api/grid/group#ungroupcolumn) methods.
 > - To disable grouping for a specific column, set the [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowgrouping) property to `false` in column configuration.
 
-## Initial group
+## Initial grouping
 
 Initial grouping in the grid is configured by assigning an array of column field names to the [groupSettings.columns](https://helpej2.syncfusion.com/react/documentation/api/grid/groupSettings#columns) property. This approach is effective for organizing large datasets based on predefined criteria.
 
@@ -79,9 +79,30 @@ The example below demonstrates grouping by "Customer ID" and "Ship City", render
 
 > To group multiple columns, specify an array of column names in the `groupSettings.columns` property.
 
-## Prevent grouping for specific columns
+## Single and multiple column grouping
 
-Columns that contain unique identifiers or sensitive information may not be suitable for grouping. In such cases, grouping can be disabled by setting the [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowgrouping) property to `false` in the column configuration, preventing the column header from being placed in the group drop area.
+The Data Grid supports grouping by one or more columns to organize data into hierarchical sections. In single-column grouping, records are grouped based on the values of a single column. In multiple-column grouping, records are grouped by multiple columns in sequence, creating nested groups that provide a more structured view of the data.
+
+The following example demonstrates switching between single-column and multiple-column grouping using a button click.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/grouping-single-multiple/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/grouping-single-multiple/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/grouping-single-multiple/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/grouping-single-multiple/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+## Prevent grouping for a particular column
+
+Some columns, such as those containing unique identifiers, may not require grouping. In such cases, grouping can be disabled by setting the [allowGrouping](https://ej2.syncfusion.com/react/documentation/api/grid/column#allowgrouping) property to `false` in the column configuration, preventing the column header from being placed in the group drop area.
 
 The following example prevents grouping on the "Customer ID" column. While other columns can be grouped, "Customer ID" cannot be dragged to the group drop area.
 
@@ -104,11 +125,11 @@ The following example prevents grouping on the "Customer ID" column. While other
 
 ## Hide drop area
 
-By default, the Grid shows a drop area container where column headers can be dragged to configure grouping or ungrouping. In scenarios where grouping through the drag‑and‑drop interface is not required, this drop area can be hidden.
+By default, the Data Grid shows a group drop area container where column headers can be dragged to configure grouping or ungrouping. In scenarios where grouping through the drag-and-drop interface is not required, this group drop area can be hidden.
 
-To disable the group drop area container, set the [groupSettings.showDropArea](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#showdroparea) property to `false`. This hides the drop area from the UI, while still allowing grouping to be managed programmatically using the Grid `groupColumn` and `ungroupColumn` methods if needed.
+To disable the group drop area container, set the [groupSettings.showDropArea](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#showdroparea) property to `false`. This hides the group drop area from the UI, while still allowing grouping to be managed programmatically using the Data Grid [groupColumn](https://ej2.syncfusion.com/react/documentation/api/grid#groupcolumn) and [ungroupColumn](https://ej2.syncfusion.com/react/documentation/api/grid#ungroupcolumn) methods if needed.
 
-In this example, the [React Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is used to dynamically show or hide the group drop area. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event updates the Grid’s `groupSettings.showDropArea` property to either display or hide the drop area.
+In this example, the [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is used to dynamically show or hide the group drop area. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event updates the Grid’s `groupSettings.showDropArea` property to either display or hide the drop area.
 
 
 {% tabs %}
@@ -211,13 +232,11 @@ export default App;
 
 {% previewsample "page.domainurl/code-snippet/grid/group-cs4" %}
 
-
 ## Show the grouped column
 
 By default, when a column is grouped in the Grid, that column is hidden from the display. This keeps the layout clean and makes grouped rows easier to read. To keep grouped columns visible, set the [groupSettings.showGroupedColumn](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#showgroupedcolumn) property to `true`.
 
-In the example below, a [React Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is used to control this setting. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event updates the Grid’s `groupSettings.showGroupedColumn` property, showing or hiding the grouped columns as needed.
-
+In the example below, a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is used to control this setting. When the switch is toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event updates the Grid’s `groupSettings.showGroupedColumn` property, showing or hiding the grouped columns as needed.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -342,9 +361,9 @@ To allow reordering, set [groupSettings.allowReordering](https://ej2.syncfusion.
 
 {% previewsample "page.domainurl/code-snippet/grid/group-reorder-cs1" %}
 
-## Sort grouped columns in descending order during initial grouping
+## Sort groups in descending order
 
-Grouped columns are sorted in ascending order by default (A–Z, 0–9, oldest to newest). To display grouped values in descending order such as showing the most recent dates or highest values first (Z–A, 9–0, newest to oldest) configure the [sortSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/sortSettings#columns) property with the appropriate [field](https://ej2.syncfusion.com/react/documentation/api/grid/sortDescriptorModel#field) and set its [direction](https://ej2.syncfusion.com/react/documentation/api/grid/sortDescriptorModel#direction-string) to `Descending`.
+Grouped columns are sorted in ascending order by default (A-Z, 0-9, oldest to newest). To display grouped values in descending order such as showing the most recent dates or highest values first (Z-A, 9-0, newest to oldest) configure the [sortSettings.columns](https://ej2.syncfusion.com/react/documentation/api/grid/sortSettings#columns) property with the appropriate [field](https://ej2.syncfusion.com/react/documentation/api/grid/sortDescriptorModel#field) and set its [direction](https://ej2.syncfusion.com/react/documentation/api/grid/sortDescriptorModel#direction-string) to `Descending`.
 
 The following example demonstrates how to sort the "Customer ID" column in descending order during the grid's initial load.
 
@@ -364,12 +383,6 @@ The following example demonstrates how to sort the "Customer ID" column in desce
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/group-cs8" %}
-
-## Group with paging
-
-The Grid component supports column grouping in combination with paging. When grouping is enabled, aggregated values and item counts are calculated based on the current page by default. As a result, group footers and caption summaries reflect only the visible page data. To include aggregate values and total item counts across all pages, set the [groupSettings.disablePageWiseAggregates](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#disablePageWiseAggregates) property to `false`.
-
-> When using remote data binding, enabling this option triggers two separate requests during grouping one to retrieve grouped data and another to fetch aggregate values and total item counts.
 
 ## Group by format
 
@@ -396,69 +409,9 @@ The following example demonstrates grouping the "Order Date" and "Freight" colum
 
 > Numeric columns can be grouped based on formats such as currency or percentage, while datetime columns can be grouped based on specific date or time formats.
 
-## Show grouped rows based on page size
-
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, controlling the number of grouped rows per page is useful when working with grouped data and a fixed page size.
-
-By default, the [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagesize) setting applies to individual grid rows, not grouped rows. To show grouped column rows based on the `pageSize`, a custom implementation can be used.
-
-This can be achieved by customizing the `generateQuery` method of the "Data prototype", allowing the query logic to be modified for grouped row pagination. This can be achieved in the below example.
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/group-cs11/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/group-cs11/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/group-cs11/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/group-cs11/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/group-cs11" %}
-
-## Collapse all grouped rows at initial rendering
-
-The React Data Grid provides the ability to expand or collapse grouped rows, enabling better control over data visibility. This is especially useful for large datasets where an initial summarized view is preferred.
-
-To collapse all grouped rows on initial render, use the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event in combination with the [collapseAll](https://ej2.syncfusion.com/react/documentation/api/grid/group#collapseall) method. This can be achieved in the below example.
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/grid/group-cs9/app/App.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/grid/group-cs9/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/grid/group-cs9/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/grid/group-cs9/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/group-cs9" %}
-
->  All grouped rows can also be collapsed at the initial rendering using the [groupCollapseAll](https://ej2.syncfusion.com/react/documentation/api/grid#groupcollapseall) method within the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. The following code snippet demonstrates this approach:
-
-```typescript
-  const dataBound = () => {
-    if (initial === true) {
-      (grid as GridComponent).groupCollapseAll();
-      initial = false;
-    }
-  }
-```
->  The collapse all approach is recommended for a limited number of records since collapsing every grouped record requires time. For large datasets, [lazy-load grouping](https://ej2.syncfusion.com/react/documentation/grid/grouping/lazy-load-grouping) is recommended to optimize performance. This approach is also applicable to the [groupExpandAll](https://ej2.syncfusion.com/react/documentation/api/grid#groupexpandall) method.
-
 ## Group or ungroup column externally
 
-The React Data Grid supports both interactive and programmatic approaches to column grouping. Columns can be grouped manually via drag-and-drop or programmatically using the [groupColumn](https://ej2.syncfusion.com/react/documentation/api/grid#groupcolumn) and [ungroupColumn](https://ej2.syncfusion.com/react/documentation/api/grid#ungroupcolumn) methods.
+The Data Grid supports both interactive and programmatic approaches to column grouping. Columns can be grouped manually via drag-and-drop or programmatically using the [groupColumn](https://ej2.syncfusion.com/react/documentation/api/grid#groupcolumn) and [ungroupColumn](https://ej2.syncfusion.com/react/documentation/api/grid#ungroupcolumn) methods.
 
 The following example demonstrates how to implement programmatic grouping and ungrouping using the [DropDownList](https://ej2.syncfusion.com/react/documentation/drop-down-list/getting-started) component for column selection. When the corresponding button is activated, the selected column is grouped or ungrouped using the appropriate API method.
 
@@ -580,13 +533,48 @@ export default App;
 
 {% previewsample "page.domainurl/code-snippet/grid/group-cs14" %}
 
+## Collapse all groups on initial load
+
+The Data Grid provides the ability to expand or collapse grouped rows, enabling better control over data visibility. This is especially useful for large datasets where an initial summarized view is preferred.
+
+To collapse all grouped rows on initial render, use the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event in combination with the [collapseAll](https://ej2.syncfusion.com/react/documentation/api/grid/group#collapseall) method. This can be achieved in the below example.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/group-cs9/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/group-cs9/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/group-cs9/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/group-cs9/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/group-cs9" %}
+
+>  All grouped rows can also be collapsed at the initial rendering using the [groupCollapseAll](https://ej2.syncfusion.com/react/documentation/api/grid#groupcollapseall) method within the [dataBound](https://ej2.syncfusion.com/react/documentation/api/grid#databound) event. The following code snippet demonstrates this approach:
+
+```typescript
+  const dataBound = () => {
+    if (initial === true) {
+      (grid as GridComponent).groupCollapseAll();
+      initial = false;
+    }
+  }
+```
+>  The collapse all approach is recommended for a limited number of records since collapsing every grouped record requires time. For large datasets, [lazy-load grouping](https://ej2.syncfusion.com/react/documentation/grid/grouping/lazy-load-grouping) is recommended to optimize performance. This approach is also applicable to the [groupExpandAll](https://ej2.syncfusion.com/react/documentation/api/grid#groupexpandall) method.
+
 ## Expand or collapse externally
 
-The React Data Grid supports external control of grouped row visibility through programmatic expand and collapse. This functionality can be integrated using the grid's methods to manage grouped data display dynamically.
+The Data Grid supports external control of grouped row visibility through programmatic expand and collapse. This functionality can be integrated using the grid's methods to manage grouped data display dynamically.
 
-### Expand or collapse all grouped rows
+### Expand or collapse all groups
 
-The React Data Grid enables programmatic expand and collapse of all grouped rows using the [groupExpandAll](https://ej2.syncfusion.com/react/documentation/api/grid#groupexpandall) and [groupCollapseAll](https://ej2.syncfusion.com/react/documentation/api/grid#groupcollapseall) methods.
+The Data Grid enables programmatic expand and collapse of all grouped rows using the [groupExpandAll](https://ej2.syncfusion.com/react/documentation/api/grid#groupexpandall) and [groupCollapseAll](https://ej2.syncfusion.com/react/documentation/api/grid#groupcollapseall) methods.
 
 In the example below, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/react/documentation/switch/getting-started) component is used to control the visibility of grouped rows. When toggled, the [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event triggers the appropriate method to expand or collapse all groups accordingly.
 
@@ -688,9 +676,9 @@ export default App;
 
 {% previewsample "page.domainurl/code-snippet/grid/group-cs7" %}
 
-### Expand or collapse selected grouped row
+### Expand or collapse a specific group
 
-The React Data Grid allows programmatic expand or collapse of specific grouped rows through the [expandCollapseRows](https://ej2.syncfusion.com/react/documentation/api/grid/group#expandcollapserows) method, which toggles the state of a targeted group caption row based on its current visibility.
+The Data Grid allows programmatic expand or collapse of specific grouped rows through the [expandCollapseRows](https://ej2.syncfusion.com/react/documentation/api/grid/group#expandcollapserows) method, which toggles the state of a targeted group caption row based on its current visibility.
 
 To implement this functionality, follow these steps:
 
@@ -816,11 +804,44 @@ export default App;
 
 {% previewsample "page.domainurl/code-snippet/grid/group-cs16" %}
 
+## Use grouping with paging
+
+The Data Grid component supports column grouping in combination with paging. When grouping is enabled, aggregated values and item counts are calculated based on the current page by default. As a result, group footers and caption summaries reflect only the visible page data. To include aggregate values and total item counts across all pages, set the [groupSettings.disablePageWiseAggregates](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#disablePageWiseAggregates) property to `false`.
+
+> When using remote data binding, enabling this option triggers two separate requests during grouping: 
+> * One to retrieve grouped data.
+> * Another to fetch aggregate values and total item counts.
+
+## Show grouped rows based on page size
+
+In the Data Grid, controlling the number of grouped rows per page is useful when working with grouped data and a fixed page size.
+
+By default, the [pageSize](https://ej2.syncfusion.com/react/documentation/api/grid/pageSettings#pagesize) setting applies to individual grid rows, not grouped rows. To show grouped column rows based on the `pageSize`, a custom implementation can be used.
+
+This can be achieved by customizing the `generateQuery` method of the "Data prototype", allowing the query logic to be modified for grouped row pagination. This can be achieved in the below example.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/group-cs11/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/group-cs11/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/group-cs11/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/group-cs11/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/group-cs11" %}
+
 ## Clear grouping 
 
-The React Data Grid provides a [clearGrouping](https://ej2.syncfusion.com/react/documentation/api/grid#cleargrouping) method to remove all grouped columns programmatically. This is useful for resetting the grid to an ungrouped state.
+The Data Grid provides a [clearGrouping](https://ej2.syncfusion.com/react/documentation/api/grid#cleargrouping) method to remove all grouped columns programmatically. This is useful for resetting the grid to an ungrouped state.
 
-The following example demonstrates how to execute `clearGrouping` through an external button click.
+The following example demonstrates executing `clearGrouping` through an external button click.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -841,7 +862,7 @@ The following example demonstrates how to execute `clearGrouping` through an ext
 
 ## Grouping events
 
-The React Data Grid provides two key events for handling grouping operations. These events enable the integration of custom logic before and after a grouping action:
+The Data Grid provides two key events for handling grouping operations. These events enable the integration of custom logic before and after a grouping action:
 
 - [actionBegin](https://ej2.syncfusion.com/react/documentation/api/grid#actionbegin): Triggered before a grouping action starts. It provides details such as the group field name and `requestType`, allowing conditional logic or cancellation.
 - [actionComplete](https://ej2.syncfusion.com/react/documentation/api/grid#actioncomplete): Triggered after a grouping action completes. It exposes the updated grid state for post-processing tasks like UI updates or data handling.
@@ -945,9 +966,9 @@ export default App;
 
 > The [args.requestType](https://ej2.syncfusion.com/react/documentation/api/grid/sortEventArgs#requesttype) property represents the name of the current action being performed. For instance, during grouping, the `args.requestType` value is "grouping".
 
-## Limitations
+## Grouping constraints
 
-Grouping is not compatible with the autofill feature.
+[AutoFill](https://ej2.syncfusion.com/react/documentation/api/grid#enableautofill) applies fill operations to records within the same group.
 
 ## See also
 

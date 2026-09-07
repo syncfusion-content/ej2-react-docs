@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Command Column Editing in React Data Grid
 
-The command column editing feature enables seamless CRUD (Create, Read, Update, Delete) action buttons in a column for performing operations on individual rows. This powerful feature is particularly useful when inline editing, deletion, or saving of row changes is required directly within the grid interface.
-
-> For basic editing setup and configuration, refer to the [Editing Feature Setup](../editing#set-up-editing).
+The command column feature provides built‑in action buttons within a dedicated column, enabling direct interaction with individual rows. These commands can be configured for editing, saving, and deleting records, as well as for custom operations such as viewing details or integrating external actions. This approach streamlines row‑level interactions and ensures a consistent experience within the grid interface.
 
 ## Enable command column editing
 
@@ -56,13 +54,15 @@ The available built-in command buttons are:
 
  {% previewsample "page.domainurl/code-snippet/grid/editing-cs6" %}
 
-## Custom command column
+> For basic editing setup and configuration, refer to the [Editing Feature Setup](../editing#set-up-editing).
 
-The custom command column feature extends the Grid component's capabilities by enabling custom command buttons in a column to perform specific actions on individual rows. This is particularly powerful when specialized functionality for editing, deletion, or custom operations is required beyond the built-in command set.
+## Custom command column button
 
-Custom command buttons utilize the [commands](https://ej2.syncfusion.com/react/documentation/api/grid/column#commands) property for definition. The [commandClick](https://ej2.syncfusion.com/react/documentation/api/grid#commandClick) event handles the custom button click actions, enabling any operation such as displaying grid details in a dialog or triggering custom workflows.
+Custom command columns provide additional row-level actions beyond the built-in command buttons. This is particularly powerful when specialized functionality for editing, deletion, or custom operations is required beyond the built-in command set.
 
-The following code demonstrates how to implement custom command buttons with the `commands` property and handle custom actions through the `commandClick` event to display grid details in a dialog:
+To define custom command buttons, use the [commands](https://ej2.syncfusion.com/react/documentation/api/grid/column#commands) property. Associate the desired actions with these buttons through the [commandClick](https://ej2.syncfusion.com/react/documentation/api/grid#commandClick) event, allowing custom logic to be executed on button click.
+
+The following example demonstrates custom command buttons using the `commands` property and custom click behavior through the `commandClick` event, which is used here to show row details in a dialog:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

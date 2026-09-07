@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Caption Template in React Data Grid
 
-The React Data Grid provides the [captionTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#captiontemplate) property to customize the text shown in group row titles.  This feature enhances the visual presentation of grouped data by allowing the display of grouped values, record counts, and custom HTML elements such as icons or images.
+The [Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides the [captionTemplate](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#captiontemplate) property to customize the content displayed in group caption rows. This capability enhances the presentation of grouped data by enabling the display of grouped values, record counts, and custom elements such as icons and images.
 
-The `captionTemplate` receives a data object with properties such as `field`, `headerText`, `key`, and `count`, which can be used to dynamically render informative group captions.
+The `captionTemplate` property supports dynamic content through the `data` parameter, which exposes properties such as `field`, `headerText`, `key`, and `count`. These values can be used to display grouped values, record counts, custom text, localized content, and custom UI elements within group caption rows.
 
-The following example illustrates how to display the `headerText`, `key`, and `count` within a customized group caption.
+The following example illustrates displaying the `headerText`, `key`, and `count` within a customized group caption.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -35,7 +35,7 @@ The following example illustrates how to display the `headerText`, `key`, and `c
 
 ## Adding custom text in group caption
 
-The Grid supports adding custom text to group captions through the `captionTemplate` property. This feature makes group captions more informative by including grouped values, record counts, or descriptive text, and can also display custom HTML elements such as icons or image.
+The Data Grid supports adding custom text to group captions through the `captionTemplate` property. This feature makes group captions more informative by including grouped values, record counts, or descriptive text, and the template can also display custom HTML elements such as icons or images.
 
 In the example below, the data parameter is used to display the `key`, `count`, and `headerText` of the grouped column, along with custom text within the caption.
 
@@ -58,9 +58,9 @@ In the example below, the data parameter is used to display the `key`, `count`, 
 
 ## Customize group caption text using locale
 
-The Grid supports localization of group caption text based on the locale. This enables the display of translated or region-specific content within group captions.
+The Data Grid supports localization of group caption text, enabling the display of translated or region-specific content within group captions.
 
-Localization can be achieved using the `L10n.load()` and `setCulture()` methods from the `@syncfusion/ej2-base package`. The `L10n.load()` method defines localized strings, while `setCulture()` applies the desired locale to the Grid. The following example demonstrates customizing group caption text for the "ar" (Arabic) locale.
+Localization can be achieved using the `L10n.load()` and `setCulture()` methods from the `@syncfusion/ej2-base` package. The `L10n.load()` method defines localized strings, while `setCulture()` applies the desired locale to the Data Grid. The following example demonstrates customizing group caption text for the "ar" (Arabic) locale.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -79,9 +79,9 @@ Localization can be achieved using the `L10n.load()` and `setCulture()` methods 
 
 {% previewsample "page.domainurl/code-snippet/grid/group-cs18" %}
 
-## Render custom component in group caption
+## Render custom components in group captions
 
-The Grid supports rendering custom components within group captions using the `captionTemplate` property. This functionality enables the integration of interactive UI elements such as buttons, icons, or dropdowns directly within the group caption row, enhancing both functionality and presentation.
+The Data Grid supports rendering custom components within group captions using the `captionTemplate` property. This functionality enables the integration of interactive UI elements, such as buttons, icons, or dropdowns, directly within the group caption row, enhancing both functionality and presentation.
 
 In the example below, the [Chips](https://ej2.syncfusion.com/react/documentation/chips/getting-started) component is rendered through the caption template, with its text value dynamically assigned based on the group key.
 
@@ -105,3 +105,4 @@ In the example below, the [Chips](https://ej2.syncfusion.com/react/documentation
 ## See also
 - [Grouping overview](./grouping)
 - [GroupSettings API](https://ej2.syncfusion.com/react/documentation/api/grid/groupSettings#captiontemplate)
+- [Style group captions](../style-and-appearance/grouping#customize-the-group-caption-row)
