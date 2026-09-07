@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Local Data Binding in React Data Grid
 
-The React Data Grid provides a straightforward way to bind local data, such as arrays or JSON objects, to the grid component. This feature allows data to be displayed and manipulated within the grid without the need for external server calls, making it particularly useful for scenarios involving static or locally stored data.
+The [Data Grid](https://www.syncfusion.com/react-components/react-data-grid) provides a straightforward way to bind local data, such as arrays or JSON objects, to the grid component. This feature allows data to be displayed and manipulated within the grid without the need for external server calls, making it particularly useful for scenarios involving static or locally stored data.
 
-Assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property. Optionally, provide the local data source using an instance of the `DataManager`.
+Assign an array of JavaScript objects to the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property.
 
-The following example demonstrates the local data binding feature in the React Grid component:
+The following example demonstrates the local data binding feature in the Data Grid component:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -35,7 +35,13 @@ The following example demonstrates the local data binding feature in the React G
 
 ## Binding data from Excel files
 
-The React Data Grid supports importing data from Excel files for display and manipulation within the grid. This streamlines transferring Excel data into a web-based environment. Use the [Uploader](https://ej2.syncfusion.com/react/documentation/uploader/getting-started) component's [change](https://ej2.syncfusion.com/react/documentation/api/uploader#change) event to handle the import.
+The Data Grid supports importing data from Excel files for display and manipulation within the grid. This streamlines transferring Excel data into a web-based environment. Use the [Uploader](https://ej2.syncfusion.com/react/documentation/uploader/getting-started) component's [change](https://ej2.syncfusion.com/react/documentation/api/uploader#change) event to handle the import.
+
+Install the `XLSX` library using the following command:
+
+```bash
+npm install xlsx
+```
 
 To import Excel data into the grid, follow these steps:
 
@@ -62,11 +68,11 @@ The following example demonstrates importing Excel data into the grid by utilizi
 
  {% previewsample "page.domainurl/code-snippet/grid/imported-data" %}
 
-## Binding data and performing CRUD actions via Fetch requests
+## CRUD operations using Fetch requests
 
-The React Data Grid provides a seamless way to bind data from external sources using Fetch requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and for asynchronously retrieving data without refreshing the entire web page.
+The Data Grid provides a seamless way to bind data from external sources using Fetch requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and for asynchronously retrieving data without refreshing the entire web page.
 
-To achieve data binding and perform CRUD actions using Ajax requests in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, follow these steps:
+To achieve data binding and perform CRUD actions using Fetch requests in the grid, follow these steps:
 
 **Step 1:** Include the React Data Grid in the HTML file with the necessary configurations:
 
@@ -84,7 +90,7 @@ To achieve data binding and perform CRUD actions using Ajax requests in the Sync
     </div>
 ```
 
-**Step 2:** To bind data from an external Fetch request, utilize the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property of the Grid. Fetch data from the server and provide it to the `dataSource` property using the `onSuccess` event of the Fetch request.
+**Step 2:** To bind data from an external Fetch request, utilize the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property of the Grid. Fetch data from the server and provide it to the `dataSource` property using the fetch API:
 
 ```ts
 const click = () => {
@@ -326,11 +332,11 @@ The following screenshot represents loading data when the button is clicked and 
 
 ### Display the loading indicator with local data
 
-The React Data Grid allows the display of a loading indicator while loading local data. This is useful when data loading from a local source is delayed and a visual indication is required to show that data is being fetched.
+The Data Grid allows displaying a loading indicator while loading local data. This is useful when data loading from a local source is delayed and a visual indication is required to show that data is being fetched.
 
-To display the loading indicator when using local data, set the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#showspinner) property to `true`. This property controls the visibility of the loading indicator.
+To display the loading indicator when using local data, invoke the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#showspinner) property to `true`. This property controls the visibility of the loading indicator.
 
-The following example demonstrates displaying the loading indicator in the React Data Grid using the [load](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#load) and [created](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#created) events:
+The following example demonstrates displaying the loading indicator in the grid using the [load](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#load) and [created](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#created) events:
 
 ```typescript
 
@@ -361,11 +367,12 @@ function App() {
 export default App;
 
 ```
-## Binding data and performing CRUD actions via AJAX request
 
-The React Data Grid provides a seamless way to bind data from external sources using AJAX requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and asynchronously retrieving data without refreshing the entire web page.
+## CRUD Operations using AJAX requests
 
-To achieve data binding and perform CRUD actions using Ajax requests in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid, follow these steps:
+The Data Grid provides a seamless way to bind data from external sources using AJAX requests, facilitating CRUD (Create, Read, Update, Delete) operations with data retrieved from a server. This feature is particularly valuable for sending data to a server for database updates and asynchronously retrieving data without refreshing the entire web page.
+
+To achieve data binding and perform CRUD actions using Ajax requests in the Data Grid, follow these steps:
 
 **Step 1:** Include the React Data Grid in the HTML file with the necessary configurations:
 
@@ -679,9 +686,9 @@ export default App;
 
 ## Managing spinner visibility during data loading
 
-Showing a spinner during data loading in the React Data Grid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
+Showing a spinner during data loading in the Data Grid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
 
-To show or hide a spinner during data loading in the grid, the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#showspinner) and [hideSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#hidespinner) methods provided by the Grid component.
+To show or hide a spinner during data loading in the grid, use the [showSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#showspinner) and [hideSpinner](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#hidespinner) methods provided by the Data Grid component.
 
 The following example demonstrates showing and hiding the spinner during data loading using external buttons in a grid:
 
@@ -780,9 +787,9 @@ export default App;
 
 {% previewsample "page.domainurl/code-snippet/grid/show-hide-spinner-cs1" %}
 
-## Immutable mode  
+## Immutable mode 
 
-Immutable mode in the React Data Grid is designed to optimize re-rendering performance by utilizing the object reference and deep compare concept. This mode ensures that when performing Grid actions, only the modified or newly added rows are re-rendered, preventing unnecessary re-rendering of unchanged rows. 
+Immutable mode in the Data Grid is designed to optimize re-rendering performance by utilizing the object reference and deep compare concept. This mode ensures that when performing grid actions, only the modified or newly added rows are re-rendered, preventing unnecessary re-rendering of unchanged rows. 
 
 Enable immutable mode by setting [enableImmutableMode](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#enableimmutablemode) to `true`.
 
@@ -811,25 +818,6 @@ The following example demonstrates enabling immutable mode in an React component
 
  {% previewsample "page.domainurl/code-snippet/grid/immutable-mode-cs1" %}
 
-### Limitations
+### Immutable mode constraints
 
-The following features are not supported in the immutable mode:
-
-* Frozen rows and columns
-* Grouping
-* Row Template 
-* Detail Template
-* Hierarchy Grid
-* Scrolling 
-* Virtual scroll
-* Infinite scroll
-* Column reorder
-* Rows, column spanning
-* PDF export, Excel export, Print
-* Column Resize
-* Drag and drop
-* Column template
-* Column chooser
-* Clipboard
-* AutoFit
-* Filtering
+Immutable mode updates only the rows whose data has changed to improve rendering performance. As a result, features that rely on complex layouts, advanced rendering scenarios, data processing operations, or interactive grid behaviors may not function as expected.

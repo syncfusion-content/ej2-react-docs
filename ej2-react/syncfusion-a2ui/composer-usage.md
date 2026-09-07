@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Composer Playground — Design A2UI Surfaces | Syncfusion
+title: Composer Playground, Design A2UI Surfaces | Syncfusion
 description: Use Syncfusion A2UI Composer to design UIs, generate A2UI v0.9 JSON, and integrate layouts with React agents.
 control: Composer Playground
 platform: ej2-react
@@ -8,18 +8,18 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Composer Playground — Design A2UI Surfaces
+# Composer Playground, Design A2UI Surfaces
 
 ## Overview
 
-**Syncfusion<sup style="font-size:70%">&reg;</sup> Composer Playground** is an AI-powered web-based designer for creating **A2UI JSON** — a declarative UI format for building Syncfusion React applications without writing code.
+**Syncfusion<sup style="font-size:70%">&reg;</sup> Composer Playground** is an AI-powered web-based designer for creating A2UI JSON, a declarative UI format for building Syncfusion React applications without writing code.
 
 The Composer enables you to:
-- **Generate surfaces from natural language prompts** — Describe the interface you want, and AI generates the A2UI JSON
-- **Choose from production-ready templates** — Start with curated examples (Operations Dashboard, CRM Overview, Finance Summary, Inventory Tracker)
-- **Refine in the Workspace** — Edit JSON directly, chat with the AI Assistant, and preview changes in real time
-- **Copy JSON and integrate** — Copy the JSON from Composer and use it directly in your React app or save as a template for your agent
-- **Explore the catalog** — Browse the 50+ Syncfusion EJ2 adapters (58 components in total, including A2UI layout primitives) with live demos and documentation
+- **Generate surfaces from natural language prompts**: Describe the interface you want, and AI generates the A2UI JSON
+- **Choose from production-ready templates**: Start with curated examples (Operations Dashboard, CRM Overview, Finance Summary, Inventory Tracker)
+- **Refine in the Workspace**: Edit JSON directly, chat with the AI Assistant, and preview changes in real time
+- **Copy JSON and integrate**: Copy the JSON from Composer and use it directly in your React app or save as a template for your agent
+- **Explore the catalog**: Browse the 50+ Syncfusion EJ2 adapters (58 components in total, including A2UI layout primitives) with live demos and documentation
 
 This guide walks you through opening the Composer, creating your first surface, refining it in the Workspace, copying the JSON, and integrating it into your React application or Syncfusion A2UI Agent.
 
@@ -49,10 +49,10 @@ You have three options to begin creating a surface:
 
    | Template | Data domain | Primary components |
    |---|---|---|
-   | **Operations Dashboard** | Order pipeline, revenue trends, priority queue | `SyncfusionChart` (revenue trend), `SyncfusionDataGrid` (orders), priority `Message` (alerts) |
-   | **CRM Overview** | Customer accounts, contacts, opportunities, recent activity | `SyncfusionDataGrid` (accounts), `SyncfusionScheduler` (follow-ups), `Card` (KPI tiles) |
-   | **Finance Summary** | Income / expense / cash flow, budget vs actual, categories | `SyncfusionChart` (multi-series), `Card` (totals), `SyncfusionDataGrid` (line items) |
-   | **Inventory Tracker** | Stock on hand, low-stock alerts, supplier list | `SyncfusionDataGrid` (inventory), `SyncfusionNumericTextBox` (reorder qty), `Message` (low-stock warnings) |
+   | Operations Dashboard | Order pipeline, revenue trends, priority queue | `SyncfusionChart` (revenue trend), `SyncfusionDataGrid` (orders), priority `Message` (alerts) |
+   | CRM Overview | Customer accounts, contacts, opportunities, recent activity | `SyncfusionDataGrid` (accounts), `SyncfusionScheduler` (follow-ups), `Card` (KPI tiles) |
+   | Finance Summary | Income / expense / cash flow, budget vs actual, categories | `SyncfusionChart` (multi-series), `Card` (totals), `SyncfusionDataGrid` (line items) |
+   | Inventory Tracker | Stock on hand, low-stock alerts, supplier list | `SyncfusionDataGrid` (inventory), `SyncfusionNumericTextBox` (reorder qty), `Message` (low-stock warnings) |
 
 2. The Composer pre-loads the chosen template into the Workspace. Use it as a starting point, then refine with the AI Assistant or the JSON editor.
 
@@ -68,10 +68,10 @@ If you entered a prompt description:
 
 The **Workspace** page provides an authoring environment with the following layout:
 
-- **Top toolbar** — A breadcrumb showing the current page and the generation target (for example, `WORKSPACE · GENERATE BOOKED DETAILS FORM`), a **Load example…** dropdown that lets you start from a curated design, and a **Reset** button to start over.
+- **Top toolbar**: A breadcrumb showing the current page and the generation target (for example, `WORKSPACE · GENERATE BOOKED DETAILS FORM`), a **Load example…** dropdown that lets you start from a curated design, and a **Reset** button to start over.
 - **Left Panel:** A two-tab sidebar.
-  - **AI Assistant tab** — Chat with the AI assistant to refine your surface. Use the prompt field at the bottom of the panel and click **Send**. Each assistant message has a **View details** toggle that shows the underlying changes.
-  - **JSON tab** — A dark JSON editor for inspecting or modifying the generated A2UI directly.
+  - **AI Assistant tab**: Chat with the AI assistant to refine your surface. Use the prompt field at the bottom of the panel and click **Send**. Each assistant message has a **View details** toggle that shows the underlying changes.
+  - **JSON tab**: A dark JSON editor for inspecting or modifying the generated A2UI directly.
 - **Right Panel:** The live preview of your surface, with a `SURFACE` header (for example, `SURFACE: //WORKSPACE`) and the rendered Syncfusion components.
 
 To refine your surface:
@@ -79,14 +79,14 @@ To refine your surface:
 1. In the **AI Assistant** tab, ask for changes (*“Make the booking field read-only”*, *“Add a badge for status”*, etc.). The assistant returns an updated JSON and explanation; you can click **View details** to see what changed.
 2. Alternatively, switch to the **JSON** tab and edit the envelope directly.
 3. The right-panel preview updates in real time as either the assistant or you change the JSON.
-4. The **`SURFACE:`** label in the preview header mirrors the `surfaceId` field from your design — change it via the JSON tab if you need to.
+4. The **`SURFACE:`** label in the preview header mirrors the `surfaceId` field from your design, change it via the JSON tab if you need to.
 
 ### Step 5: Copy the JSON
 
 Once satisfied with your surface:
 
 1. Select **Copy JSON** to copy the complete A2UI v0.9 JSON to your clipboard
-2. The JSON contains the entire surface structure (the four A2UI v0.9 operations — see [Understanding A2UI v0.9 JSON Structure](#understanding-a2ui-v09-json-structure) below)
+2. The JSON contains the entire surface structure (the four A2UI v0.9 operations, see [Understanding A2UI v0.9 JSON Structure](#understanding-a2ui-v09-json-structure) below)
 
 ### Step 6: Use in Your Application
 
@@ -98,8 +98,8 @@ You have two options for using the copied JSON:
 
 **Option B: Bind to an Agent via `set_design()` (Recommended)**
 - Save the copied JSON as a file under `examples/designs/` (or anywhere in your project)
-- Call **`agent.set_design(path)`** in your agent's `__init__` — one method, any input shape
-- The agent treats the file as an **authoritative design contract** and echoes its structure verbatim on every request, only filling in data values from the user's prompt
+- Call **`agent.set_design(path)`** in your agent's `__init__`, one method, any input shape
+- The agent treats the file as an authoritative design contract and echoes its structure verbatim on every request, only filling in data values from the user's prompt
 - Ensures consistent, reproducible UI responses every time
 
 ---
@@ -110,14 +110,14 @@ The copied JSON uses four main operations to construct a surface:
 
 | Operation | Purpose |
 |-----------|---------|
-| **createSurface** | Initialize a new screen with a unique `surfaceId` and `catalogId`. The renderer mounts the surface on this op. |
-| **updateComponents** | Add, modify, or arrange components within the surface. The structure of every component (children, props, ids) lives here. |
-| **updateDataModel** | Supply the data values (grid rows, dropdown items, label text bound by `path`) that the component tree displays. |
-| **deleteSurface** | Tear down a screen (used when the user navigates away or the surface is no longer needed). |
+| createSurface | Initialize a new screen with a unique `surfaceId` and `catalogId`. The renderer mounts the surface on this op. |
+| updateComponents | Add, modify, or arrange components within the surface. The structure of every component (children, props, ids) lives here. |
+| updateDataModel | Supply the data values (grid rows, dropdown items, label text bound by `path`) that the component tree displays. |
+| deleteSurface | Tear down a screen (used when the user navigates away or the surface is no longer needed). |
 
 ## Real-World Example: Flight Booking Application
 
-The **SkyBook** flight-booking application demonstrates a complete A2UI workflow organised as **three stages**. Each stage is one surface, copied from Composer as its own JSON file:
+The **SkyBook** flight-booking application demonstrates a complete A2UI workflow organised as three stages. Each stage is one surface, copied from Composer as its own JSON file:
 
 <table>
   <thead>
@@ -146,7 +146,7 @@ The **SkyBook** flight-booking application demonstrates a complete A2UI workflow
   </tbody>
 </table>
 
-After copying, drop each result into `examples/designs/` with the matching filename, then bind them with `agent.set_design("examples/designs/")` — see [Integrating Copied JSON with Your Agent](#integrating-copied-json-with-your-agent) below.
+After copying, drop each result into `examples/designs/` with the matching filename, then bind them with `agent.set_design("examples/designs/")`, see [Integrating Copied JSON with Your Agent](#integrating-copied-json-with-your-agent) below.
 
 | Screen | Purpose | Composer Prompt | Template File |
 |--------|---------|------------------|---------------|
@@ -163,7 +163,7 @@ Once you copy JSON from Composer Playground, integrate it with your Syncfusion A
 - Pass a parsed design (`dict` / `list`)
 - Pass a JSON string
 - Pass a file path (e.g. `"designs/booking_form.json"`)
-- Pass a **directory** (`"designs/"`) — every `*.json` in the directory is treated as a page in a multi-page catalog, and the LLM picks the right page per request
+- Pass a directory (`"designs/"`), every `*.json` in the directory is treated as a page in a multi-page catalog, and the LLM picks the right page per request
 - Pass a list of any of the above
 
 The agent embeds every design into the system prompt under a **"UI Surface Design Contract"** template that tells the LLM to echo the design's structure verbatim and only vary data values derived from the user's prompt.
@@ -192,7 +192,7 @@ class BookingFormAgent(SyncfusionAgent):
         self.set_design("examples/designs/stage1-flight-search.json")
 ```
 
-That's it. Every user prompt returns the same Booking Form structure — only the data values (passenger details, payment fields) change.
+That's it. Every user prompt returns the same Booking Form structure, only the data values (passenger details, payment fields) change.
 
 ### Multi-design integration (multi-page apps)
 
@@ -203,9 +203,9 @@ Use this pattern when your app has multiple screens and you want the LLM to rout
 ```text
 examples/
 └── designs/
-    ├── stage1-flight-search.json        # stage 1 — Search flight (collect passenger details)
-    ├── stage2-flight-results.json       # stage 2 — Flight results (review + confirm)
-    └── stage3-booking-confirmation.json # stage 3 — Booking confirmed (receipt + reference)
+    ├── stage1-flight-search.json        # stage 1
+    ├── stage2-flight-results.json       # stage 2
+    └── stage3-booking-confirmation.json # stage 3
 ```
 
 **Step 2 (multi-design).** Point `set_design()` at the directory:
@@ -325,13 +325,13 @@ python examples/flight_booking_agent.py --serve
 
 ## Build the SkyBook Flight Booking App
 
-This section walks through the **SkyBook** React app — a flight-booking experience that pairs a chat assistant with a live A2UI surface. The flow is:
+This section walks through the SkyBook React app, a flight-booking experience that pairs a chat assistant with a live A2UI surface. The flow is:
 
-1. The user lands on a **welcome** view with three stage cards (**Search Flights**, **Flight Results**, **Booking & Confirmation**) and a free-form prompt input. Clicking a stage — or typing any flight request — switches the app to the **chat** view.
-2. In the **chat** view, the user types a message into a `TextBoxComponent` and clicks the `Send` `ButtonComponent`. The browser POSTs a JSON-RPC `message/send` request to the agent.
+1. The user lands on a welcome view with three stage cards (**Search Flights**, **Flight Results**, **Booking & Confirmation**) and a free-form prompt input. Clicking a stage, or typing any flight request, switches the app to the chat view.
+2. In the chat view, the user types a message into a `TextBoxComponent` and clicks the `Send` `ButtonComponent`. The browser POSTs a JSON-RPC `message/send` request to the agent.
 3. The agent replies with a `result.artifacts[0].parts[0].data.a2uiEnvelope` array.
-4. That array is fed to a `MessageProcessor`, which builds a `SurfaceModel` and renders it in the right-hand **surface** pane via `<SyncfusionA2UIProvider surface={surface} />`.
-5. When the user clicks a button inside the rendered surface, the same processor invokes a single action callback that re-posts to the agent as another `message/send` request — the same loop, just driven by a button instead of the prompt input.
+4. That array is fed to a `MessageProcessor`, which builds a `SurfaceModel` and renders it in the right-hand surface pane via `<SyncfusionA2UIProvider surface={surface} />`.
+5. When the user clicks a button inside the rendered surface, the same processor invokes a single action callback that re-posts to the agent as another `message/send` request, the same loop, just driven by a button instead of the prompt input.
 
 ### Step 1: Create the React app
 
@@ -341,7 +341,7 @@ cd skybook
 npm install @syncfusion/ej2-react-a2ui @syncfusion/ej2-react-inputs @syncfusion/ej2-react-buttons @syncfusion/ej2-base --save
 ```
 
-> For the full prerequisite list (Node.js version, React 19, theme selection), see the [Getting Started guide](./getting-started).
+N> For the full prerequisite list (Node.js version, React 19, theme selection), see the [Getting Started guide](./getting-started).
 
 ### Step 2: Build the app
 
@@ -364,7 +364,11 @@ Start the Vite dev server:
 npm run dev
 ```
 
-Open the URL it prints (typically `http://localhost:5173/`). The SkyBook welcome view opens with the three stage cards. Click **Search Flights**, **Flight Results**, or **Booking & Confirmation** to send the corresponding starter prompt to the agent — the chosen A2UI surface (search form, results grid, or booking confirmation) renders in the right-hand pane. You can also type any free-form flight request into the prompt box; the agent's `a2uiEnvelope` reply is fed to the `MessageProcessor`, which builds a `SurfaceModel` that `<SyncfusionA2UIProvider>` renders next to the chat. Clicking any button inside the rendered surface sends the action back to the agent as a JSON text message — and the next reply replaces the current surface.
+Open the URL it prints (typically `http://localhost:5173/`).
+
+![Flight booking sample](./../appearance/images/a2ui-filght-booking.png)
+
+ The SkyBook welcome view opens with the three stage cards. Click **Search Flights**, **Flight Results**, or **Booking & Confirmation** to send the corresponding starter prompt to the agent, the chosen A2UI surface (search form, results grid, or booking confirmation) renders in the right-hand pane. You can also type any free-form flight request into the prompt box; the agent's `a2uiEnvelope` reply is fed to the `MessageProcessor`, which builds a `SurfaceModel` that `<SyncfusionA2UIProvider>` renders next to the chat. Clicking any button inside the rendered surface sends the action back to the agent as a JSON text message, and the next reply replaces the current surface.
 
 That's the whole loop:
 
@@ -379,7 +383,7 @@ That's the whole loop:
 
 ### Step 4: Pair the app with the agent you created above
 
-For the SkyBook app to do anything useful, the agent at `AGENT_URL` must be an A2A v0.9 server that returns `a2uiEnvelope` in its reply. Use the **`FlightBookingAgent`** you created in the [Multi-design integration](#multi-design-integration-multi-page-apps) section above — it is already wired with `agent.set_design("examples/designs/")` and the SkyWave persona, so it serves all three SkyBook pages (Search Flight, Flight Results, Booking & Confirmed) from one running process.
+For the SkyBook app to do anything useful, the agent at `AGENT_URL` must be an A2A v0.9 server that returns `a2uiEnvelope` in its reply. Use the **`FlightBookingAgent`** you created in the [Multi-design integration](#multi-design-integration-multi-page-apps) section above, it is already wired with `agent.set_design("examples/designs/")` and the SkyWave persona, so it serves all three SkyBook pages (Search Flight, Flight Results, Booking & Confirmed) from one running process.
 
 ```bash
 # 1. Clone the agent repo
@@ -401,7 +405,7 @@ cp examples/.env.example examples/.env
 python examples/flight_booking_agent.py
 ```
 
-> The agent binds to `127.0.0.1:10006` by default. The SkyBook app reads its agent URL from `VITE_AGENT_URL` (default `http://localhost:10005`), so set `VITE_AGENT_URL=http://127.0.0.1:10006` in your React app's `.env` to point at the agent, or start the agent on port `10005`.
+N> The agent binds to `127.0.0.1:10006` by default. The SkyBook app reads its agent URL from `VITE_AGENT_URL` (default `http://localhost:10005`), so set `VITE_AGENT_URL=http://127.0.0.1:10006` in your React app's `.env` to point at the agent, or start the agent on port `10005`.
 
 The agent treats every `*.json` in `examples/designs/` as a page in a multi-page catalog and picks the right one per request. See [Integrating Copied JSON with Your Agent](#integrating-copied-json-with-your-agent) above for the full pattern.
 
@@ -411,4 +415,4 @@ The agent treats every `*.json` in `examples/designs/` as a page in a multi-page
 * [Overview](./overview)
 * [Getting Started with A2UI for React](./getting-started)
 * [AI Integration with Syncfusion A2UI for React](./ai-integration)
-* [A2UI v0.9 Protocol](https://a2ui.org/)
+* [A2UI v0.9 Protocol](https://a2ui.org/specification/v0.9.1-a2ui/)

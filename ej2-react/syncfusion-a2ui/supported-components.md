@@ -10,9 +10,11 @@ domainurl: ##DomainURL##
 
 # Supported Syncfusion A2UI Components
 
-The [`@syncfusion/ej2-react-a2ui`](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package ships a catalog of **50+ Syncfusion EJ2 React adapters** — **58 components in total** when the A2UI layout primitives from `basicCatalog` are included. Every adapter implements the A2UI v0.9 component contract, so an agent can stream any of them as part of a `createSurface` or `updateComponents` message and have it rendered by `<SyncfusionA2UIProvider/>` with no extra wiring.
+The [Syncfusion React A2UI](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package ships a catalog of **50+ Syncfusion EJ2 React adapters**, **58 components in total** when the A2UI layout primitives from `basicCatalog` are included. Every adapter implements the A2UI v0.9 component contract, so an agent can stream any of them as part of a `createSurface` or `updateComponents` message and have it rendered by `<SyncfusionA2UIProvider/>` with no extra wiring.
 
-The table below groups the components by category and lists the **A2UI catalog id** (the string used inside an A2UI `component` payload) and a short description of what each one does. Use the id column when you are writing A2UI JSON by hand; use the description column to decide which component to ask the agent for.
+Currently, the package supports 58 components. Support for the remaining Syncfusion EJ2 React components is planned and will be added in upcoming releases.
+
+The table below groups the components by category and lists the A2UI catalog id (the string used inside an A2UI `component` payload) and a short description of what each one does. Use the id column when you are writing A2UI JSON by hand; use the description column to decide which component to ask the agent for.
 
 ## Data Grid & Trees
 

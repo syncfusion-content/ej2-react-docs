@@ -53,7 +53,7 @@ The Data Grid integrates with major relational databases to provide seamless dat
 
 **API and service integration**
 
-API and service integration enables the Data Grid to connect seamlessly with GraphQL, Web API, OData, URL, and custom services for flexible backend data access.
+Integrate the Data Grid with GraphQL, Web API, OData, RESTful APIs, and custom services to retrieve, manage, and display remote data efficiently.
 
 | Integration approach | Best suited for | Key benefit |
 |-----------------------|------------------|-------------|
@@ -137,11 +137,12 @@ The Data Grid is fully accessible and compliant with Web Content Accessibility G
 
 - **[WCAG compliance](./accessibility)** - Level AA accessibility standards.
 - **[Keyboard shortcuts](./accessibility#keyboard-interaction)** - Complete grid operation via keyboard.
-  - Tab/Shift+Tab - Navigate between cells.
-  - Arrow Keys - Move between rows and columns.
-  - Enter - Update cells, confirm changes.
-  - Escape - Cancel editing.
-  - Ctrl+A - Select all rows.
+  - <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd> - Navigate between cells.
+  - <kbd>→</kbd> | <kbd>←</kbd>  -  Navigate header and content cells across columns or rows using the left or right arrow keys.
+  - <kbd>↑</kbd> | <kbd>↓</kbd>  -  Navigate header and content cells across columns or rows using the up or down arrow keys.
+  - <kbd>Enter</kbd> - Update cells, confirm changes.
+  - <kbd>Escape</kbd> - Cancel editing.
+  - <kbd>Ctrl</kbd> + <kbd>A</kbd> - Select all rows.
 - **[Screen reader support](./accessibility)** - Full compatibility with assistive technologies.
 - **[Semantic HTML](./accessibility)** - Proper ARIA labels and semantic markup.
 
@@ -160,7 +161,7 @@ The React Data Grid provides comprehensive export and reporting capabilities, en
 
 The React Data Grid includes sophisticated capabilities designed for complex enterprise data scenarios. These advanced features enable developers to build powerful, scalable data management solutions that handle demanding business requirements.
   
-- **[Master-detail grids](./hierarchy-grid)** - Implement maste-detail relationships to display complex parent-child data structures.  
+- **[Master-detail grids](./hierarchy-grid)** - Implement master-detail relationships to display complex parent-child data structures.  
 - **[Row spanning](./row-spanning)** - Extend cells vertically across rows to create specialized layouts.  
 - **[Detail templates](./detail-template)** - Add expandable row sections for drill-down exploration and richer data views.
 - **[Foreign key columns](./columns/foreign-key-column)** - Automatically look up related data to show meaningful relationships.  

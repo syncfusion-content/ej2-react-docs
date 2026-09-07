@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion A2UI
 
-This section walks through creating a simple React app that renders a Syncfusion EJ2 React component from a list of [A2UI v0.9](https://a2ui.org/) messages using the [`@syncfusion/ej2-react-a2ui`](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package. The example below uses a `DataGrid` for illustration, but the same pattern — define an A2UI v0.9 message list, feed it to a `MessageProcessor` configured with `syncfusionCatalog`, and render the result with `<SyncfusionA2UIProvider/>` — works for every component in the catalog (`Chart`, `Scheduler`, `Calendar`, `RichTextEditor`, `Diagram`, `Spreadsheet` and more).
+This section walks through creating a simple React app that renders a Syncfusion EJ2 React component from a list of [A2UI v0.9](https://a2ui.org/) messages using the [Syncfusion React A2UI](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package. The example below uses a `DataGrid` for illustration, but the same pattern, define an A2UI v0.9 message list, feed it to a `MessageProcessor` configured with `syncfusionCatalog`, and render the result with `<SyncfusionA2UIProvider/>`, works for every component in the catalog (`Chart`, `Scheduler`, `Calendar`, `RichTextEditor`, `Diagram`, `Spreadsheet` and more).
 
 ## Prerequisites
 
@@ -64,7 +64,7 @@ Verify the Vite dev server starts (the terminal prints a `http://localhost:5173/
 
 ## Install the Syncfusion A2UI React package
 
-The [`@syncfusion/ej2-react-a2ui`](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package is published to the npm registry. It bundles the A2UI v0.9 runtime, all Syncfusion EJ2 React adapters, and `Zod` as regular dependencies, so a single install line is enough:
+The [Syncfusion React A2UI](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package is published to the npm registry. It bundles the A2UI v0.9 runtime, all Syncfusion EJ2 React adapters, and `Zod` as regular dependencies, so a single install line is enough:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -88,11 +88,7 @@ npm install @syncfusion/ej2-tailwind3-theme --save
 {% endhighlight %}
 {% endtabs %}
 
-> **Note**: Replace `@syncfusion/ej2-tailwind3-theme` with the theme package that matches your design system: 
-> * `@syncfusion/ej2-material-theme` (Material), 
-> * `@syncfusion/ej2-fluent2-theme` (Fluent 2), 
-> * `@syncfusion/ej2-material3-theme` (Material 3), or
-> * `@syncfusion/ej2-bootstrap5-theme` (Bootstrap 5).
+N> Replace `@syncfusion/ej2-tailwind3-theme` with the theme package that matches your design system.
 
 ### Clear Vite's default styles
 
@@ -126,7 +122,7 @@ What the snippet does, in order:
 2. Declares a static `MESSAGES` array with three A2UI v0.9 messages: a `createSurface`, an `updateComponents` that adds a `Column` containing a `SyncfusionDataGrid`, and an `updateDataModel` that supplies the grid's rows.
 3. Creates the `MessageProcessor` once inside `useRef` so it survives re-renders, and registers `syncfusionCatalog` as the catalog it should resolve components against.
 4. In the `useEffect`, subscribes to `onSurfaceCreated` (so the latest `SurfaceModel` lands in component state) and immediately calls `processor.processMessages(MESSAGES)` to render the surface.
-5. Renders the surface with `<SyncfusionA2UIProvider surface={surface} />`. The provider is generic — swap `SyncfusionDataGrid` for any other component in the catalog (`SyncfusionChart`, `SyncfusionScheduler`, `SyncfusionCalendar`, `SyncfusionTextBox`, …) and the same pipeline renders it.
+5. Renders the surface with `<SyncfusionA2UIProvider surface={surface} />`. The provider is generic, swap `SyncfusionDataGrid` for any other component in the catalog (`SyncfusionChart`, `SyncfusionScheduler`, `SyncfusionCalendar`, `SyncfusionTextBox`, …) and the same pipeline renders it.
 
 ## Run the application
 
@@ -135,10 +131,11 @@ Run the application using the following command:
 ```bash
 npm run dev
 ```
+Click the `Render Employee Grid` button and the sample Grid shown as follows:
 
 ![Syncfusion a2ui getting started output](./../appearance/images/a2ui-getting-started.png)
 
-Open the generated local URL (for example, `http://localhost:5173/`) in the browser. The application displays a Syncfusion EJ2 `DataGrid` with the two employee rows, paging, and sorting enabled — rendered entirely from the static A2UI v0.9 message list above.
+Open the generated local URL (for example, `http://localhost:5173/`) in the browser. The application displays a Syncfusion EJ2 `DataGrid` with the two employee rows, paging, and sorting enabled, rendered entirely from the static A2UI v0.9 message list above.
 
 ## Register the Syncfusion license key
 
@@ -152,4 +149,4 @@ For instructions on generating and registering a license key, see:
 ## See also
 
 * [Overview](./overview)
-* [A2UI v0.9 protocol](https://a2ui.org/)
+* [A2UI v0.9 protocol](https://a2ui.org/specification/v0.9.1-a2ui/)

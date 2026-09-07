@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React Grid Redux Service | Syncfusion
+title: Redux Integration in React Data Grid | Syncfusion
 description: Learn how to integrate Redux with React Data Grid using actions, reducers, state synchronization, and CRUD operations for centralized state management.
 control: Redux service 
 platform: ej2-react
@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redux Service in React Data Grid
+# Redux Integration in React Data Grid
 
-The [React Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides support for integrating data from a Redux service using the [observable binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/data-binding#custom-binding) feature. This allows the grid component to connect to the [Redux](https://react-redux.js.org/introduction/getting-started) store and perform various data operations such as sorting, filtering, paging, and CRUD actions. This section explains the process of enabling and integrating the Redux service with the Syncfusion<sup style="font-size:70%">&reg;</sup> React Grid.
+The [Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component provides support for integrating data from a Redux service using the [observable binding](https://ej2.syncfusion.com/react/documentation/grid/data-binding/data-binding#custom-binding) feature. This allows the grid component to connect to the [Redux](https://react-redux.js.org/introduction/getting-started) store and perform various data operations such as sorting, filtering, paging, and CRUD actions. This section explains the process of enabling and integrating the Redux service with the grid.
 
 ## Steps to create a Redux service.
 
-**Step 1: Install Dependencies**
+**Step 1: Install dependencies**
 
 In a terminal, navigate to the project directory and run the following command to install the required packages:
 
@@ -23,7 +23,7 @@ npm install --save redux react-redux
 ```
 The above command installs the redux package, which is the core Redux library, and the react-redux package, which provides integration between Redux and React.
 
-**Step 2: Set Up Redux Store**
+**Step 2: Create the Redux store**
 
 Once the dependencies are installed, set up a Redux [store](https://redux.js.org/api/store) in the application. Add the following code to the **store.tsx** file.
 
@@ -64,7 +64,7 @@ To make the Redux `store` available to React components, wrap the application wi
     document.getElementById('root'));
     ```
 
-**Step 4: Create a Actions**
+**Step 4: Create Redux Actions**
 
 According to Redux documentation, the Redux [actions](https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers#designing-actions) are plain JavaScript objects that describe changes to be made to the application's state. These actions are dispatched to the Redux `store`, and `reducers` handle them to update the state accordingly.
 
@@ -103,10 +103,10 @@ const initialState: any = {
 const reducer = (state = initialState, action) => {
   const dataSource = [...initialState.data];
   const gridData = new DataManager(dataSource);
-  // we execute the Data Grid action and perform CRUD by using the DataManager. 
+  // Execute the Data Grid action and perform CRUD operations using DataManager.
   switch(action.type) {
     case Grid_Sorting: {
-      // we have executed grid query using DataManager.
+      // Execute the grid query using DataManager.
       const sortData = gridData.executeLocal(action.gridQuery);
       //Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(sortData).executeLocal(new Query().skip(action.payload.skip).take(action.payload.take));
@@ -127,13 +127,13 @@ export default reducer;
 ```
 > The grid expects an object as `result` and `count` format.
 
-**Step 6: Create a Dispatch**
+**Step 6: Dispatch grid actions**
 
 According to Redux documentation, the [dispatch](https://redux.js.org/api/store#dispatchaction) function is a method provided by the Redux `store`. It is used to send actions to the `store`, triggering the state update process. Dispatching an action is the primary way to update state in a Redux application.
 
-When performing actions such as adding, updating, or deleting a row in the Grid, the corresponding actions are dispatched to modify the data in the `store` and trigger updates to the Grid component.
+When performing actions such as adding, updating, or deleting a row in the grid, the corresponding actions are dispatched to modify the data in the `store` and trigger updates to the Data Grid component.
 
-When the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) and [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) events occur, the `dispatch` method is called according to the Grid actions.
+When the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) and [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) events occur, the `dispatch` method is called according to the grid actions.
 
 Add the following code to **App.tsx** file.
 
@@ -153,7 +153,7 @@ Add the following code to **App.tsx** file.
   }
 ```
 
-**Step 7: Fetching Grid Data using useEffect**
+**Step 7: Fetching grid Data using useEffect**
 
 To fetch grid data and populate the [dataSource](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasource) property of the grid, the [useEffect](https://react.dev/reference/react/useEffect) hook in React can be used. The `useEffect` hook allows side effects, such as fetching data, to be performed after the component has rendered. The following example demonstrates fetching grid data using useEffect:
 
@@ -167,9 +167,9 @@ Add the following code to the **App.tsx** file.
   }) 
 ```
 
-## Handling Paging, Filtering, and Sorting
+## Handling paging, filtering, and sorting
 
-The [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) event is triggered when performing Grid actions such as sorting, paging, or grouping. The query associated with the Grid action can be obtained in the `dataStateChange` event. The following example shows Redux `action` and `reducer` code for handling data operations. Add the following code to **App.tsx** file.
+The [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) event is triggered when performing grid actions such as sorting, paging, or grouping. The query associated with the grid action can be obtained in the `dataStateChange` event. The following example shows Redux `action` and `reducer` code for handling data operations. Add the following code to **App.tsx** file.
 
 ```ts
   const dataStateChange = (args: DataStateChangeEventArgs) => {
@@ -192,13 +192,13 @@ The [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/in
   }
 ```
 
-The action takes the necessary parameters for the Grid operation and returns an action object with the properties - `type`, `payload`, and `gridQuery`.
+The action takes the necessary parameters for the grid operation and returns an action object with the properties - `type`, `payload`, and `gridQuery`.
 
-The `type` property is set to the corresponding Grid action type constant defined earlier. 
+The `type` property is set to the corresponding grid action type constant defined earlier. 
 
-The `payload` property contains the Grid data associated with the action, such as data to be created, updated, or deleted.
+The `payload` property contains the grid data associated with the action, such as data to be created, updated, or deleted.
 
-The `gridQuery` property is sent along with the data request for each Grid action.
+The `gridQuery` property is sent along with the data request for each grid action.
 
 Add the following code to **action.tsx** file. 
 
@@ -227,15 +227,11 @@ export const pageRow = (state: any , query: any) => ({
 });
 ```
 
-In this demo, execute the Grid action and perform paging, filtering, and sorting operations using the `DataManager`.
+In this demo, execute the grid action and perform paging, filtering, and sorting operations using the `DataManager`.
 
-The `executeLocal` method executes a local query on the "gridData" object and `store` the response to this query.
+The `executeLocal` method executes a local query on the "gridData" object and `store` the response to this query. Then, create a new instance of `DataManager` with the "gridData" array as its data source and execute a local query on the "currentPageData" object using `executeLocal` method.
 
-Then, create a new instance of `DataManager` with the "gridData" array as its data source and execute a local query on the "currentPageData" object using `executeLocal` method.
-
-The default value for the Grid's `pageSize` parameter (skip: 0, take: 12) is used to set the `skip` and `take` values. 
-
-Fetch the current page records and the total number of records from the `dataSource` using the properties `result` and `count`. 
+The default value for the grid's `pageSize` parameter (skip: 0, take: 12) is used to set the `skip` and `take` values. Fetch the current page records and the total number of records from the `dataSource` using the properties `result` and `count`. 
 
 Add the following code to **reducer.tsx** file. 
 
@@ -259,11 +255,11 @@ const reducer = (state = initialState, action: any) => {
   }
   switch(action.type) {
     case Grid_Filtering: {
-      // Here, we have executed the grid query by using the DataManager.
+      // Execute the grid query using DataManager.
       const filterData = gridData.executeLocal(action.gridQuery);
       // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(filterData).executeLocal(new Query().skip(action.payload.skip).take(action.payload.take))
-      // We need to return the Grid data as result and count with object type.
+      // Return the Grid data in the { result, count } format.
       return ({
         data: { result: currentPageData, count: filterData.length }
       })
@@ -273,25 +269,25 @@ const reducer = (state = initialState, action: any) => {
       const sortData = gridData.executeLocal(action.gridQuery);
       // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(sortData).executeLocal(new Query().skip(action.payload.skip).take(action.payload.take));
-      // We need to return the Grid data as result and count with object type.
+      // Return the grid data in the { result, count } format.
       return ({
         data: { result: currentPageData, count: sortData.length }
       })
     }
     case Grid_Paging: {
-      // we have executed the grid query by using DataManager.
+      // Execute the grid query using DataManager.
       const pageData = gridData.executeLocal(new Query());
       // Execute the grid query except pagination....
       const result = action.gridQuery !== undefined ? new DataManager(pageData).executeLocal(action.gridQuery) : pageData;
       // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.skip).take(action.payload.take));
-      // We need to return the Grid data as result and count with object type.
+      // Return the Grid data in the { result, count } format.
       return ({
         data: { result: currentPageData, count: filter.length ? result.length : pageData.length }
       })
     }         
     default: {
-      // We need to return the Grid data as result and count with object type.
+      // Return the grid data in the { result, count } format.
       const defaultCount = state.data.length;
       const defaultData = { data: { result: state.data.slice(initialPage.skip, initialPage.take), count: defaultCount } }
       return defaultData;
@@ -303,13 +299,13 @@ export default reducer;
 
 ## Performing CRUD operations
 
-To perform CRUD (Create, Read, Update, Delete) operations in the React Data Grid component, utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) event. This event is triggered when a CRUD action is performed in the Grid, allowing capture of the changes and updating of the Redux `store` or performing other necessary operations.
+To perform CRUD (Create, Read, Update, Delete) operations in the Data Grid component, utilize the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) event. This event is triggered when a CRUD action is performed in the grid, allowing capture of the changes and updating of the Redux `store` or performing other necessary operations.
 
 The following example shows Redux `action` and `reducer` code for handling CRUD operations. Add the following code to **App.tsx** file.
 
 ```ts
   const dataSourceChanged = (state: DataSourceChangedEventArgs) => {
-    // This event will be triggered when we perform a CRUD action.
+    // This event is triggered when a CRUD action is performed.
     const query = gridInstance.getDataModule().generateQuery(true);  
     if (state.requestType === "save") {
       // Dispatch the adding action.
@@ -381,7 +377,7 @@ const reducer = (state = initialState, action: any) => {
   }
   switch(action.type) {      
     case Grid_Add: {
-      // Here, we will perform the insert action using the DataManager.
+      // Insert the record using DataManager.
       gridData.insert(action.payload.data, '', undefined, 0);
       const addedData = gridData.executeLocal(new Query());
       // Update the original state.
@@ -390,13 +386,13 @@ const reducer = (state = initialState, action: any) => {
       const result = new DataManager(addedData).executeLocal(action.gridQuery);
       // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
-      // We need to return the grid data as result and count with object type.
+      // Return the grid data in the { result, count } format.
       return ({
         data: { result: currentPageData, count: filter.length ? result.length : count },
       })
     }
     case Grid_Editing: {
-      // Here, we are going to perform update action by using the DataManager.
+      // Update the record using DataManager.
       gridData.update('OrderID', action.payload.data);
       const updatedData = gridData.executeLocal(new Query());
       initialState.data = [...updatedData];
@@ -404,13 +400,13 @@ const reducer = (state = initialState, action: any) => {
       const result = new DataManager(updatedData).executeLocal(action.gridQuery);
       // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
-      // We need to return the grid data as result and count with object type.
+      // Return the grid data in the { result, count } format.
       return ({
         data: { result: currentPageData, count: filter.length ? result.length : count }
       })
     }
     case Grid_Delete: {
-      // Here, we will perform the delete action by using DataManager.
+      // Delete the record using DataManager.
       gridData.remove('OrderID', { OrderID: action.payload.data[0]['OrderID'] });
       const updatedData = gridData.executeLocal(new Query());
       initialState.data = [...updatedData];
@@ -418,13 +414,13 @@ const reducer = (state = initialState, action: any) => {
       const result = new DataManager(updatedData).executeLocal(action.gridQuery);
       // Execute the grid page query based on the configured skip and take values.
       const currentPageData = new DataManager(result).executeLocal(new Query().skip(action.payload.state.skip).take(action.payload.state.take));
-      // We need to return the grid data as result and count with object type.
+      // Return the grid data in the { result, count } format.
       return ({
         data: { result: currentPageData, count: filter.length ? result.length : count }
       })
     }
     default: {     
-      // We need to return the grid data as result and count with object type.
+      // Return the grid data in the { result, count } format.
       const defaultCount = state.data.length;
       const defaultData = { data: { result: state.data.slice(initialPage.skip, initialPage.take), count: defaultCount } }
       return defaultData;
@@ -454,4 +450,4 @@ root.render(
 );
 ```
 
-> A sample demonstrating the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid with Redux [here](https://github.com/SyncfusionExamples/DataGrid-React-Redux/).
+> A complete Redux integration sample is available on [GitHub](https://github.com/SyncfusionExamples/DataGrid-React-Redux/).

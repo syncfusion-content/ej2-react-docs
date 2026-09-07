@@ -38,7 +38,7 @@ function App() {
         },
     ];
     return (<div>
-            <div id='container'>
+            <div id='container' style="width: 500px;">
                 <DashboardLayoutComponent id='defaultLayout' columns={5} cellSpacing={cellSpacing} panels={panels} mediaQuery={mediaQuery}/>
             </div>
         </div>);
