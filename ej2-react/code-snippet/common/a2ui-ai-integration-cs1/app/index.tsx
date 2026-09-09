@@ -6,7 +6,7 @@ import {
 import { MessageProcessor } from '@a2ui/web_core/v0_9';
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import './../index.css';
+import './App.css';
 
 const AGENT_URL = 'http://localhost:10004';
 

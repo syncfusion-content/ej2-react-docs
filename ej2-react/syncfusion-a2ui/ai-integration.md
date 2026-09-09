@@ -10,42 +10,52 @@ domainurl: ##DomainURL##
 
 # AI Integration with Syncfusion A2UI
 
-This page shows the production wiring between a Syncfusion A2UI React host and a remote A2UI v0.9 agent that speaks [JSON-RPC 2.0](https://www.jsonrpc.org/specification) over HTTP. The [Getting Started](./getting-started) page showed how to render a Syncfusion surface from a **static** A2UI v0.9 message list. This page shows the next step: connecting your React app to a **remote, A2UI-compatible agent** so the agent's responses drive the surface in real time, and the user's interactions inside the surface are forwarded back to the agent.
+This page shows the production wiring between a Syncfusion A2UI React host and a remote [A2UI v0.9](https://a2ui.org/specification/v0.9-a2ui/) agent that speaks [JSON-RPC 2.0](https://www.jsonrpc.org/specification) over HTTP. The [Getting Started](./getting-started) page showed how to render a Syncfusion surface from a static A2UI v0.9 message list. This page covers the next step: connecting your React app to a remote, A2UI-compatible agent so the agent's responses drive the surface in real time, and the user's interactions inside the surface are forwarded back to the agent.
 
-N> The package is currently published as a **preview (beta)** on npm. The A2UI v0.9 wire format is stable, but the package API, catalog id, and Zod schemas may evolve before the first stable release. See the [Overview](./overview) for the full preview terms.
+N> Syncfusion A2UI for React is currently in **preview (beta)** and is published on npm. The A2UI v0.9 wire format is stable, but the package API, catalog id, and Zod schemas may evolve before the first stable release. See the [Overview](./overview) for the full preview terms.
 
 ## Prerequisites
 
+The following tools and runtime are required to build and run an A2UI-integrated Syncfusion React application.
+
 | Tool | Version |
 |------|---------|
-| React | 15.5.4 or higher |
-| Node.js (optional) | 14.0.0 or above |
+| Node.js | 18 LTS or higher |
 
 ### React supported versions
 
-| React version | Minimum @syncfusion/ej2-react-* version |
-|---------------|----------------------------------------|
+| React version | Minimum `@syncfusion/ej2-react-*` version |
+|---------------|------------------------------------|
 | [React v19](https://react.dev/blog/2024/12/05/react-19) | 29.1.33 and above |
 | [React v18](https://react.dev/blog/2022/03/29/react-v18) | 20.2.36 and above |
 | [React v17](https://legacy.reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
 
 You also need:
 
-* A working app that already uses [Syncfusion React A2UI](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) and renders a static surface as described in the [Getting Started](./getting-started) page.
-* A running A2UI v0.9-compatible agent exposed over HTTP that accepts [JSON-RPC 2.0](https://www.jsonrpc.org/specification) `message/send` requests. The reference implementation is the syncfusion-a2ui-agent ADK, which ships ready-to-run example agents you can launch locally. The example below targets the bundled Contoso Dynamics demo at `http://localhost:10004`; replace it with the URL of your own agent.
+- An existing React app that already uses [Syncfusion A2UI for React package](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) and renders a static surface as described in the [Getting Started](./getting-started) page.
+- A running A2UI v0.9-compatible agent exposed over HTTP that accepts [JSON-RPC 2.0](https://www.jsonrpc.org/specification) `message/send` requests. The reference implementation is the `syncfusion-a2ui-agent` ADK, which ships ready-to-run example agents you can launch locally. The example below targets the bundled Contoso Dynamics demo at `http://localhost:10004`; replace it with the URL of your own agent.
+- A registered Syncfusion license key. See [License key generation](../licensing/license-key-generation) and [License key registration](../licensing/license-key-registration).
 
 ## What "AI integration" means here
 
-The [Syncfusion React A2UI](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) is the **rendering** half of an A2UI flow. The **agent** half (the LLM, the tool-calling loop, the JSON-RPC server) is a separate concern. To wire the two together, your host app needs to:
+The [Syncfusion A2UI for React package](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) is the rendering half of an A2UI flow. The agent half (the LLM, the tool-calling loop, the JSON-RPC server) is a separate concern. To wire the two together, your host app needs to:
 
 1. **Send the user's prompt** to the agent as a JSON-RPC `message/send` request whose `params.message.parts[0]` is `{ text: query }`.
 2. **Receive the agent's response** as a JSON-RPC envelope whose `result.artifacts[0].parts[0].data.a2uiEnvelope` is an array of A2UI v0.9 messages (`createSurface`, `updateComponents`, `updateDataModel`, …).
 3. **Pass that array** to `processor.processMessages(messages)`. The processor validates each message, builds a `SurfaceModel`, and emits it on `onSurfaceCreated`.
 4. **Forward component interactions** to the agent. The `MessageProcessor` takes an `actionHandler` as the second constructor argument; whenever the user clicks a button, sorts a grid, picks a date, or selects a row, the adapter calls your handler with the action payload. Forward that payload to the agent as a new `message/send` request whose `params.message.parts[0]` is `{ data: action }`, and the cycle repeats.
 
+## How it works
+
+![A2UI message processing workflow](../appearance/images/a2ui-flowchart.png)
+
+*Figure: End-to-end A2UI message processing workflow.*
+
+The diagram from the [Overview](./overview) applies here too, with one extra back arrow: every component action flows back to the agent as a `message/send` request whose `params.message.parts[0]` is `{ data: action }`. The agent decides what to do next, update the same surface (`updateComponents` / `updateDataModel`) or replace it (`createSurface` on a different `surfaceId`), and returns a new `a2uiEnvelope`. The cycle repeats for as long as the surface is active.
+
 ## Connect to a remote A2UI agent
 
-Replace the contents of `src/App.tsx` with the snippet below. It builds on the Getting Started example and adds a small chat input, a JSON-RPC `message/send` request, and the round-trip back to the agent on every user interaction inside the surface.
+Replace the contents of `src/App.tsx` and `src/App.css` with the snippets below. They build on the Getting Started example and add a small chat input, a JSON-RPC `message/send` request, and the round-trip back to the agent on every user interaction inside the surface.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -56,38 +66,23 @@ Replace the contents of `src/App.tsx` with the snippet below. It builds on the G
 {% endhighlight %}
 {% endtabs %}
 
-### EJ2 Widget Stylesheets
+### Import the component styles
 
-Syncfusion EJ2 components require their respective component CSS bundles in addition to the theme package already imported on the [Getting Started](https://helpstaging.syncfusion.com/ej2-react/syncfusion-a2ui/getting-started) page.
+The stylesheets imported on the [Getting Started](./getting-started) page cover the components used in the static example. For an agent-driven app, add an `@import` line in `src/App.css` for every Syncfusion component family the agent might generate; A2UI surfaces are dynamic, so missing stylesheets turn into poor widgets at runtime.
 
-For example, if your A2UI application uses `TextBoxComponent` and `ButtonComponent`, add the following imports to `src/App.css`:
+For example, if your chat often surfaces text inputs and buttons, append to `src/App.css`:
 
 ```css
+@import "@syncfusion/ej2-tailwind3-theme/styles/inputs/index.css";
 @import "@syncfusion/ej2-tailwind3-theme/styles/textbox/index.css";
 @import "@syncfusion/ej2-tailwind3-theme/styles/buttons/index.css";
 ```
 
-Since A2UI can dynamically generate and render different Syncfusion components based on the AI-generated UI definition, **make sure to include the stylesheet for every Syncfusion component that your application supports or expects A2UI to generate**.
-
-For example:
-
-```css
-/* Input components */
-@import "@syncfusion/ej2-tailwind3-theme/styles/inputs/index.css";
-
-/* Buttons */
-@import "@syncfusion/ej2-tailwind3-theme/styles/buttons/index.css";
-
-/* Add the styles for other EJ2 components used by your A2UI application */
-```
-
-Refer to the Syncfusion EJ2 theme package and import the corresponding component styles for all components that can be rendered through A2UI. This ensures that dynamically generated components are displayed correctly with the expected Syncfusion theme and styling.
-
-If you are using a different theme, such as `@syncfusion/ej2-material-theme`, `@syncfusion/ej2-fluent2-theme`, `@syncfusion/ej2-material3-theme`, or `@syncfusion/ej2-bootstrap5-theme`, replace `tailwind3` with the corresponding theme package name.
+If you are using a different theme (`@syncfusion/ej2-material-theme`, `@syncfusion/ej2-fluent2-theme`, `@syncfusion/ej2-material3-theme`, `@syncfusion/ej2-bootstrap5-theme`), replace `tailwind3` with the matching package name. See the Syncfusion EJ2 theme package and import the stylesheets for every component the agent can render.
 
 ## How the round-trip works
 
-1. **Initial prompt.** The user types a query (`“Show me last quarter's sales by region”`) and clicks **Send**. `sendQuery()` POSTs a JSON-RPC `message/send` request whose `params.message.parts[0]` is `{ text: query }` to `AGENT_URL`.
+1. **Initial prompt.** The user types a query ("Show me last quarter's sales by region") and clicks **Send**. `sendQuery()` POSTs a JSON-RPC `message/send` request whose `params.message.parts[0]` is `{ text: query }` to `AGENT_URL`.
 2. **Agent response.** The agent runs the LLM, decides which A2UI components to render, and returns a JSON-RPC envelope whose `result.artifacts[0].parts[0].data.a2uiEnvelope` is an array of A2UI v0.9 messages (typically `createSurface` → `updateComponents` → `updateDataModel`).
 3. **Process the messages.** `processor.processMessages(messages)` validates each message against the bundled Zod schemas, builds a `SurfaceModel`, and fires `onSurfaceCreated`. `<SyncfusionA2UIProvider/>` renders the surface.
 4. **User interacts.** When the user clicks a button, sorts the grid, picks a date, or selects a row, the matching Syncfusion adapter calls the `actionHandler` passed to the `MessageProcessor` constructor with the action payload.
@@ -95,19 +90,20 @@ If you are using a different theme, such as `@syncfusion/ej2-material-theme`, `@
 
 ## Things to customize
 
-* **Agent URL.** The example uses the default `http://localhost:10004` (the Contoso Dynamics demo's default port from agent). Replace it with the URL of your own agent, or read it from an environment variable such as `import.meta.env.VITE_AGENT_URL`. Add the URL to a `.env` file:
+- **Agent URL.** The example uses the default `http://localhost:10004` (the Contoso Dynamics demo's default port). Replace it with the URL of your own agent, or read it from an environment variable such as `import.meta.env.VITE_AGENT_URL`. Add the URL to a `.env` file:
   ```bash
   # .env
   VITE_AGENT_URL=http://localhost:10004
   ```
-* **Authentication.** Most production agents require a bearer token, an API key, or a session cookie. Add an `Authorization` header (or whatever your agent expects) to both `fetch` calls before deploying.
-* **Error handling.** The example swallows fetch errors. In production, wrap both `fetch` calls in `try/catch` blocks, surface the error to the user (for example with a `<SyncfusionMessage severity="Error" />`), and clear `loading` even when the request fails.
-* **Styling.** The example uses a small `.a2ui-chat` class in `App.css` for the input and button. Move any production styling into your own design system or theme.
-* **Multiple surfaces.** A single `MessageProcessor` can hold many surfaces at once (one per `surfaceId`). Subscribe to `onSurfaceCreated` with a `Map<surfaceId, SurfaceModel>` if your agent emits more than one surface in the same response.
+- **Authentication.** Most production agents require a bearer token, an API key, or a session cookie. Add an **Authorization** header (or whatever your agent expects) to both fetch calls before deploying.
+- **Error handling.** The example does not include comprehensive error handling. In production, wrap both fetch calls in `try/catch` blocks, surface the error to the user (for example with a `<SyncfusionMessage severity="Error" />`), and clear loading even when the request fails.
+- **Pre-locked designs.** If you want the agent to always echo the same surface structure, paste the Composer's A2UI v0.9 JSON into `examples/designs/` and bind it with `agent.set_design(...)`. See [Build the SkyBook Sample](./a2ui-composer/skybook-sample) for the full pattern.
+- **Styling.** The example uses a small `.a2ui-chat` class in `App.css` for the input and button. Move any production styling into your own design system or theme.
+- **Multiple surfaces.** A single `MessageProcessor` can hold many surfaces at once (one per `surfaceId`). Subscribe to `onSurfaceCreated` with a `Map<surfaceId, SurfaceModel>` if your agent emits more than one surface in the same response.
 
 ## Run the agent
 
-The example agent referenced above is the **Contoso Dynamics** demo that ships in the syncfusion-a2ui-agent repository. To run it locally:
+The example agent referenced above is the Contoso Dynamics demo that ships in the `syncfusion-a2ui-agent` repository. To run it locally:
 
 ```bash
 # 1. Clone the agent repo
@@ -134,7 +130,7 @@ python examples/generic_demo_agent.py --serve
 | Example | Port | Use it for |
 | --- | --- | --- |
 | `python examples/generic_demo_agent.py --serve` | `10004` | Contoso Dynamics enterprise dashboards, grounded on `demo_examples.json` (employees, sales, inventory, calendar events). The default choice for the snippet above. |
-| `python examples/flight_booking_agent.py --serve` | `10006` | SkyWave Airlines three-stage flight booking workflow (search → results → booking & confirmation). |
+| `python examples/flight_booking_agent.py --serve` | `10006` | SkyWave Airlines three-stage flight booking workflow (search → results → booking & confirmation). See [Build the SkyBook Sample](./a2ui-composer/skybook-sample) for the end-to-end walkthrough. |
 
 The snippet above targets port `10004` (Contoso). If you switch to the SkyWave example, change `AGENT_URL` to `http://localhost:10006`.
 
@@ -142,18 +138,48 @@ The agent boots an HTTP server that speaks [JSON-RPC 2.0](https://www.jsonrpc.or
 
 ## Run the application
 
-In the project where the [Syncfusion React A2UI](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) package is installed, start the React app:
+In the project where the [Syncfusion A2UI for React package](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) is installed, start the React app:
 
 ```bash
 npm run dev
 ```
 
-![AI intergration chat](./../appearance/images/a2ui-ai-integration.png)
+Open the generated local URL (typically, `http://localhost:5173/`) in the browser.
 
-Open the generated local URL (for example, `http://localhost:5173/`) in the browser. Type a query such as `“Show me last quarter's sales by region”` and press **Send**. The agent's response renders as a working Syncfusion surface inside the page; any interaction you perform in that surface (clicks, sorts, row selections) is sent back to the agent in real time.
+![AI integration chat sample](./../appearance/images/a2ui-ai-integration.png)
+
+Type a query such as "Show me last quarter's sales by region" and press **Send**. The agent's response renders as a working Syncfusion surface inside the page; any interaction you perform in that surface (clicks, sorts, row selections) is sent back to the agent in real time.
+
+## Verify the integration
+
+Confirm the React app, the agent, and the JSON-RPC round-trip are wired up end-to-end:
+
+1. The agent terminal prints the listening URL (default `http://localhost:10004`). The browser console shows no errors when the React app loads.
+2. Type a query such as "Show me last quarter's sales by region" and click **Send**. The Network tab shows a `POST` to `AGENT_URL` with a JSON-RPC body whose `params.message.parts[0]` is `{ text: query }`, and a `200 OK` response whose `result.artifacts[0].parts[0].data.a2uiEnvelope` is an array.
+3. The matching Syncfusion widget (chart, grid, KPI tile, etc.) renders in the page within a few seconds. No Zod-validation error in the console.
+4. Click a button or sort a column inside the surface. The **Network** tab shows a second `POST` to `AGENT_URL`, this time with `params.message.parts[0]` shaped as `{ data: { ... } }`, and the surface updates (or is replaced with a new one) based on the agent's reply.
+5. Stop the agent process (**Ctrl+C**). Repeat the same query; the fetch should reject with a network error and the surface should not silently freeze — your`try/catch` handler should surface the error to the user.
+
+If any step fails, check both terminals for stack traces. Common causes at this point: wrong `AGENT_URL`, agent process not running, missing stylesheet for the generated component, or the message handler missing the `actionHandler` arg to `MessageProcessor`.
+
+## Need help?
+
+Two support channels are available while you integrate Syncfusion A2UI for React:
+
+- [Syncfusion Direct-Trac support](https://www.syncfusion.com/support/directtrac/incidents)
+- [Syncfusion community forum](https://www.syncfusion.com/forums/)
+
+## Common questions
+
+Most errors and edge cases are covered in [A2UI Composer Common Questions](./a2ui-composer/common-questions). Quick picks for this page:
+
+- *Why am I seeing "No root component found"?* — every surface must include `{ "id": "root", "component": "Column", ... }`.
+- *Why does the same prompt produce a different layout each time?* — bind a design file via `agent.set_design(...)` so the structure is locked across requests.
+- *Why does the SkyBook app in my shell not connect to the agent?* — confirm `VITE_AGENT_URL` matches the port the agent is listening on.
 
 ## See also
 
-* [Getting Started](./getting-started)
-* [Overview](./overview)
-* [A2UI v0.9 protocol](https://a2ui.org/specification/v0.9.1-a2ui/)
+- [Overview](./overview)
+- [Getting Started](./getting-started)
+- [Supported Components](./supported-components)
+- [A2UI v0.9 protocol](https://a2ui.org/specification/v0.9-a2ui/)
