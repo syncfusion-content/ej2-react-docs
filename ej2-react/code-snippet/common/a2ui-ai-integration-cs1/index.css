@@ -1,0 +1,10 @@
+.a2ui-chat {
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+    align-items: end;
+}
+
+.a2ui-chat .e-input-group {
+    flex: 1;
+}
