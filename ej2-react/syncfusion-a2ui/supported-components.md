@@ -16,12 +16,16 @@ This page is the reference. Use it when you need to know the exact adapter id to
 
 ## Data Grid & Trees
 
+Tabular grid components for displaying, editing, and navigating structured row data.
+
 | Component | Description |
 | --- | --- |
 | `SyncfusionDataGrid` | Paged, sortable, filterable, editable, virtualised data grid. |
 | `SyncfusionTreeGrid` | Hierarchical grid with parent/child mapping. |
 
 ## Charts & Visualization
+
+Charting, mapping, and diagram components for rendering quantitative, geographic, and node-link visuals.
 
 | Component | Description |
 | --- | --- |
@@ -33,12 +37,16 @@ This page is the reference. Use it when you need to know the exact adapter id to
 
 ## Scheduling & Planning
 
+Components for visualizing appointments and tasks across calendar and timeline views.
+
 | Component | Description |
 | --- | --- |
 | `SyncfusionScheduler` | Day, week, work-week, month, and agenda views with appointments, resources, and recurrence. |
 | `SyncfusionGanttChart` | Gantt view with tasks, dependencies, baselines, and resource scheduling. |
 
 ## Navigation
+
+Components that help users move through an app's sections, views, and pages.
 
 | Component | Description |
 | --- | --- |
@@ -52,6 +60,8 @@ This page is the reference. Use it when you need to know the exact adapter id to
 
 ## Text Inputs
 
+Single-line and constrained-format input controls for capturing short text and numeric values.
+
 | Component | Description |
 | --- | --- |
 | `SyncfusionTextBox` | Single-line text input with validation, icons, and floating label. |
@@ -64,6 +74,8 @@ This page is the reference. Use it when you need to know the exact adapter id to
 
 ## Date & Time
 
+Date and time picker components for selecting single values, ranges, or times in standard formats.
+
 | Component | Description |
 | --- | --- |
 | `SyncfusionCalendar` | Month, year, and decade view for picking a single date. |
@@ -73,6 +85,8 @@ This page is the reference. Use it when you need to know the exact adapter id to
 | `SyncfusionTimePicker` | Time-only picker with hour, minute, second, and format options. |
 
 ## Buttons & Action Triggers
+
+Clickable and action-triggering button components for invoking commands, menu, or asynchronous operations.
 
 | Component | Description |
 | --- | --- |
@@ -84,6 +98,8 @@ This page is the reference. Use it when you need to know the exact adapter id to
 
 ## Feedback & Overlay
 
+Inline messaging and overlay components for surfacing loading, status, notifications, and contextual counts.
+
 | Component | Description |
 | --- | --- |
 | `SyncfusionMessage` | Inline informational, warning, error, or success banner. |
@@ -94,6 +110,8 @@ This page is the reference. Use it when you need to know the exact adapter id to
 
 ## Editors
 
+Rich-content and inline editors for authoring formatted text, blocks, and quick field updates.
+
 | Component | Description |
 | --- | --- |
 | `SyncfusionRichTextEditor` | WYSIWYG rich-text editor with toolbar, formatting, and paste-from-Word. |
@@ -102,12 +120,16 @@ This page is the reference. Use it when you need to know the exact adapter id to
 
 ## Document Authoring & Review
 
+Components for composing, viewing, and reviewing full documents and PDFs in the browser.
+
 | Component | Description |
 | --- | --- |
 | `SyncfusionDocumentEditorContainer` | Full-featured Word-compatible document editor with ribbon, comments, track changes, and layout. |
 | `SyncfusionPdfViewer` | PDF viewer with paging, search, zoom, and form filling. |
 
 ## Dropdowns & Pickers
+
+Selection controls for picking one or many values from lists with search, grouping, and tagging support.
 
 | Component | Description |
 | --- | --- |
@@ -116,6 +138,8 @@ This page is the reference. Use it when you need to know the exact adapter id to
 | `SyncfusionMultiSelect` | Multi-value selection with chips, tagging, and search. |
 
 ## File & Barcode
+
+Generators for QR, Data Matrix, and 1D barcodes used for identification, tracking, and scanning workflows.
 
 | Component | Description |
 | --- | --- |
@@ -126,6 +150,8 @@ This page is the reference. Use it when you need to know the exact adapter id to
 ## Selection, Layout & Other Components
 
 The following components do not fit into the preceding categories. They are grouped together to keep the page from breaking "every component has its own H2".
+
+Miscellaneous selection, layout, container, and utility controls that complement the categories above.
 
 | Component | Description |
 | --- | --- |
@@ -145,4 +171,3 @@ The following components do not fit into the preceding categories. They are grou
 - [Getting Started](./getting-started)
 - [AI Integration](./ai-integration)
 - [A2UI v0.9 protocol](https://a2ui.org/specification/v0.9-a2ui/)
-
