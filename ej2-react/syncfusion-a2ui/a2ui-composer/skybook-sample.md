@@ -86,7 +86,7 @@ syncfusion-a2ui-agent/
 
 The directory becomes a multi-page catalog. When the agent is asked for a flight, it picks the right page based on the request; when the user clicks a button in a surface, the action loops back to the agent and the next surface replaces it.
 
-## Step 3 — Bind the designs to the agent with `set_design()`
+## Step 3 — Bind the designs to the agent with set design`
 
 The reference agent, `FlightBookingAgent`, lives in `examples/flight_booking_agent.py`. It calls `agent.set_design(...)` once in its constructor and locks the three designs into the system prompt.
 

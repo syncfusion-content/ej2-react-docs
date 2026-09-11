@@ -162,13 +162,6 @@ Confirm the React app, the agent, and the JSON-RPC round-trip are wired up end-t
 
 If any step fails, check both terminals for stack traces. Common causes at this point: wrong `AGENT_URL`, agent process not running, missing stylesheet for the generated component, or the message handler missing the `actionHandler` arg to `MessageProcessor`.
 
-## Need help?
-
-Two support channels are available while you integrate Syncfusion A2UI for React:
-
-- [Syncfusion Direct-Trac support](https://www.syncfusion.com/support/directtrac/incidents)
-- [Syncfusion community forum](https://www.syncfusion.com/forums/)
-
 ## Common questions
 
 Most errors and edge cases are covered in [A2UI Composer Common Questions](./a2ui-composer/common-questions). Quick picks for this page:
