@@ -16,16 +16,6 @@ In short, the package converts chat-based agent responses into fully functional 
 
 N> Syncfusion A2UI for React is currently in **preview (beta)** and is published on npm. The package is feature-complete for the listed components, but the API, catalog ID, and Zod schemas may evolve before the first stable release. The **A2UI v0.9 wire format** is stable; minor additive changes (new components, new properties) are expected.
 
-## Prerequisites
-
-Before installing Syncfusion A2UI for React, ensure you have:
-
-- An existing React application that uses Syncfusion EJ2 React components.
-- An [A2UI v0.9-compatible agent](https://a2ui.org/specification/v0.9-a2ui/)
-- A registered Syncfusion license key.
-
-For exact React version support, Node.js requirements, and step-by-step setup, see [Getting Started](./getting-started).
-
 ## What problem does it solve?
 
 Modern AI agents are expected to do more than return text. A user who asks *“Show me last quarter's sales by region”* expects an interactive chart, not a markdown table. A user who asks *“Schedule a meeting with the design team next Tuesday”* expects a calendar picker, not a confirmation string.
@@ -87,7 +77,7 @@ Because every adapter renders a real Syncfusion EJ2 React component, the generat
 
 ## When to use it and when not to use it
 
-**Use [Syncfusion A2UI for React]((https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui)) when:**
+**Use [Syncfusion A2UI for React](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) when:**
 
 - You are building (or already have) a React app that uses Syncfusion EJ2 components and want a chat or agent surface in front of it.
 - You want the agent to emit *interactive* Syncfusion widgets (grids, charts, schedulers) that the user can manipulate, not just static screenshots or pre-rendered HTML.
