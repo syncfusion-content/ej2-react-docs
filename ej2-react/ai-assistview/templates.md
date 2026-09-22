@@ -74,6 +74,24 @@ The [responseItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai
 
 {% previewsample "page.domainurl/code-snippet/ai-assistview/template/response-item-template" %}
 
+## Response animation template
+
+The [responseAnimationTemplate](../api/ai-assistview#responseanimationtemplate) property allows a custom loading indicator or animation to be shown while the AI AssistView is generating a response. The animation template is shown in place of the response and removed once the response is added.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/ai-assistview/template/response-animation/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/ai-assistview/template/response-animation/app/index.tsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.css" %}
+{% include code-snippet/ai-assistview/template/response-animation/index.css %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/ai-assistview/template/response-animation" %}
+
 ## Prompt suggestion item template
 
 For customizing the prompt suggestion items, the [promptSuggestionItemTemplate](https://ej2.syncfusion.com/react/documentation/api/ai-assistview#promptsuggestionitemtemplate) property can be implemented. The context for this template includes :
