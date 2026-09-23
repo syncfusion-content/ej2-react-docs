@@ -165,6 +165,29 @@ The following example demonstrates dynamically changing the height of the rows u
 >* The `rowHeight` property can only be used to set the height of the entire grid row, not individual cells within a row.
 >* The `rowHeight` property applies the height to all rows in the grid, including the header and footer rows.
 
+### Customize header and footer row heights
+
+The height of the header and footer rows can be customized to provide additional space for header and footer elements when needed. Use the [headerRowHeight] property to set the height of the header row and the [footerRowHeight] property to set the height of the footer row.
+
+In the following example, the row height is configured to 100px using the `rowHeight` property, and the header and footer row heights are configured to 50px using the `headerRowHeight` and `footerRowHeight` properties.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/custom-header-footer-height-cs1/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/custom-header-footer-height-cs1/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/custom-header-footer-height-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/custom-header-footer-height-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/custom-header-footer-height-cs1" %}
+
 ### Customize row height for a specific row
 
 The row height for a particular row can be customized when displaying more content in a particular row, reducing the height of a row to fit content, or making a specific row stand out from the other rows in the grid. This can be achieved by using the [rowHeight](https://ej2.syncfusion.com/react/documentation/api/grid#rowheight) property of the Grid component along with the [rowDataBound](https://ej2.syncfusion.com/react/documentation/api/grid#rowdatabound) event. This event triggers every time a request is made to access row information, element, or data, and before the row element is appended to the Grid element.
