@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Grouping in React ListView component
 
-ListView supports wrapping nested elements into groups based on categories.
+React ListView supports wrapping nested elements into groups based on categories.
 
-The category of each list item can be mapped using the [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettingsModel/#groupby) field in the data table, which also supports single-level navigation.
+The category of each list item can be mapped using the [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldsettingsmodel#groupby) field in the data table, which also supports single-level navigation.
 
 In the sample below, cars are grouped based on their categories using the `groupBy` field.
 
@@ -35,6 +35,6 @@ In the sample below, cars are grouped based on their categories using the `group
 
 ## Customization
 
-The grouping header can be customized using the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/#grouptemplate) property for both inline and fixed group headers. The complete customization description and explanation, along with an example, are given in the following link.
+The grouping header can be customized using the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/index-default#grouptemplate) property for both inline and fixed group headers. The complete customization description and explanation, along with an example, are given in the following link.
 
 [`Group Template`](https://ej2.syncfusion.com/react/documentation/listview/customizing-templates#group-template)

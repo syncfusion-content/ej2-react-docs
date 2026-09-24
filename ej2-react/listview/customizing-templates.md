@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Customizing templates in React ListView component
 
-The ListView component allows customization of list items, group titles, and header titles through various template options.
+The React ListView component allows customization of list items, group titles, and header titles through various template options.
 
 ## Header template
 
-The ListView header can be customized with the help of [`headerTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/#headertemplate) property.
+The React ListView header can be customized with the help of [`headerTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/index-default#headertemplate) property.
 
-To customize header template in your application, Declare custom React elements within the function which returns `JSX.Element` and assign it to `headerTemplate` property along with [`showHeader`](https://ej2.syncfusion.com/react/documentation/api/list-view/#showheader) property as `true` to display the ListView header.
+To customize header template in your application, Declare custom React elements within the function which returns `JSX.Element` and assign it to `headerTemplate` property along with [`showHeader`](https://ej2.syncfusion.com/react/documentation/api/list-view/index-default#showheader) property as `true` to display the React ListView header.
 
 
 
@@ -50,7 +50,7 @@ return (<ListViewComponent id='list' dataSource={listData} headerTemplate={heade
     </ListViewComponent>);
 ```
 
-In the below example, we have rendered ListView with customized header which contains search, add and sort buttons.
+In the below example, we have rendered React ListView with customized header which contains search, add and sort buttons.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -71,7 +71,7 @@ In the below example, we have rendered ListView with customized header which con
 
 ## Template
 
-The ListView items can be customized with the help of [`template`](https://ej2.syncfusion.com/react/documentation/api/list-view/#template) property.
+The React ListView items can be customized with the help of [`template`](https://ej2.syncfusion.com/react/documentation/api/list-view/index-default#template) property.
 
 To customize list items in your application, Declare custom React elements within the function which returns `JSX.Element` and assign it to `template` property.
 
@@ -145,7 +145,7 @@ In the below example, we have customized list items like `Contact` app with our 
 
 ## Group template
 
-The ListView group header can be customized with the help of [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/#grouptemplate) property.
+The React ListView group header can be customized with the help of [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-view/index-default#grouptemplate) property.
 
 To customize the group template in your application, Declare custom React elements within the function which returns `JSX.Element` and assign it to `groupTemplate` property.
 
@@ -182,7 +182,7 @@ return (<ListViewComponent id='list' dataSource={listData} groupTemplate={groupT
     </ListViewComponent>);
 ```
 
-In the below example, we have grouped ListView based on the category. The category of each list item should be mapped with [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettingsModel/#groupby) field of the data. We have also displayed grouped list items count in the group list header.
+In the below example, we have grouped React ListView based on the category. The category of each list item should be mapped with [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldsettingsmodel#groupby) field of the data. We have also displayed grouped list items count in the group list header.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
