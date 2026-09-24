@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Header and Content in React Dashboard Layout
 
-The Dashboard Layout component is designed for data monitoring and process management applications. Panel content—including data visualizations, HTML templates, or interactive components—is defined using the [`content`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#content) property. Also, a word or phrase that summarizes the panel's content can be added as the header on the top of each panel using the [`header`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#header) property of the panel.
+The React Dashboard Layout component is designed for data monitoring and process management applications. Panel content—including data visualizations, HTML templates, or interactive components—is defined using the [`content`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#content) property. Also, a word or phrase that summarizes the panel's content can be added as the header on the top of each panel using the [`header`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#header) property of the panel.
 
 The following example demonstrates how to add content for each panel using the header and content properties of the panels.
 
@@ -39,9 +39,9 @@ The following example demonstrates how to add content for each panel using the h
 
 ## Integrating Syncfusion components as panel content
 
-Dashboards commonly use components like charts, grids, maps, gauges, and more can be used to present complex data. Such components can be embedded as panel content by assigning the corresponding component element to the [`content`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#content) of the panel.
+React Dashboard Layout's commonly use components like charts, grids, maps, gauges, and more can be used to present complex data. Such components can be embedded as panel content by assigning the corresponding component element to the [`content`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#content) of the panel.
 
-The following example demonstrates integrating Chart components as the `content` for each panel in the dashboard layout component.
+The following example demonstrates integrating Chart components as the `content` for each panel in the React Dashboard Layout component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

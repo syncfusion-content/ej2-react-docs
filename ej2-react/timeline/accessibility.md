@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Timeline
 
-The Timeline component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
+The React Timeline component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Timeline component is outlined below.
+The accessibility compliance for the React Timeline component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,7 +38,7 @@ The accessibility compliance for the Timeline component is outlined below.
 
 ## WAI-ARIA attributes
 
-The following ARIA attributes are used in the Timeline component to ensure proper accessibility for users with assistive technologies:
+The following ARIA attributes are used in the React Timeline component to ensure proper accessibility for users with assistive technologies:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -47,7 +47,7 @@ The following ARIA attributes are used in the Timeline component to ensure prope
 
 ## Ensuring accessibility
 
-The Timeline component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Timeline component's accessibility is validated using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 ## See also
 

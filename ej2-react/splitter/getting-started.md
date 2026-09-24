@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Splitter
 
-The following section explains the steps required to build the Splitter component with a step-by-step procedure.
+The following section explains the steps required to build the React Splitter component with a step-by-step procedure.
 
 ## Dependencies
 
-The following dependencies are required to use the Splitter component in the application:
+The following dependencies are required to use the React Splitter component in the application:
 
 ```js
 |-- @syncfusion/ej2-layouts
@@ -92,7 +92,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the Splitter component are imported in the **src/App.css** file:
+The required styles for the React Splitter component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -104,9 +104,9 @@ The required styles for the Splitter component are imported in the **src/App.css
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the Splitter component
+## Add the React Splitter component
 
-Now, you can add the React Splitter component to your **src/App.jsx** file by importing and defining it within your application. Initialize the Splitter using the `<SplitterComponent>` directive with `<PanesDirective>` and `<PaneDirective>` children. Use the following code:
+Now, you can add the React Splitter component to your **src/App.jsx** file by importing and defining it within your application. Initialize the React Splitter using the `<SplitterComponent>` directive with `<PanesDirective>` and `<PaneDirective>` children. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -116,7 +116,7 @@ import './App.css';
 
 function App() {
     return (
-        // specifies the tag for rendering the Splitter component
+        // specifies the tag for rendering the React Splitter component
         <div className="App">
           <SplitterComponent id="splitter" height="250px" width="600px">
             <PanesDirective>
@@ -155,4 +155,4 @@ The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/splitter/getting-started-cs4" %}
 
-> Refer to the [React Splitter](https://www.syncfusion.com/react-components/react-splitter) feature tour page for its groundbreaking feature representations. You can also explore our [React Splitter component example](http://ej2.syncfusion.com/react/demos/#/tailwind3/splitter/default) that shows how to render the Splitter in React.
+> Refer to the [React Splitter](https://www.syncfusion.com/react-components/react-splitter) feature tour page for its groundbreaking feature representations. You can also explore our [React Splitter component example](http://ej2.syncfusion.com/react/demos/#/tailwind3/splitter/default) that shows how to render the React Splitter.

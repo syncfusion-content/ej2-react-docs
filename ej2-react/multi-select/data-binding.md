@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data Binding in React MultiSelect Dropdown
 
-The MultiSelect loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/multi-select/#datasource) property. The `dataSource` accepts either a local `array` of values or a [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/data-manager/) instance that handles remote data services.
+The React MultiSelect loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/multi-select/#datasource) property. The `dataSource` accepts either a local `array` of values or a [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/data-manager/) instance that handles remote data services.
 
 The `DataManager` provides configuration options such as the `url`, `adaptor`, and `crossDomain` properties to connect to remote services. It supports various data services including OData, OData V4, and Web API, with support for XML, JSON, and JSONP formats through `DataManager` adaptors. For the full list of available adaptors and configuration options, see the [DataManager documentation](https://ej2.syncfusion.com/react/documentation/data/data-manager/).
 
@@ -21,7 +21,7 @@ The `DataManager` provides configuration options such as the `url`, `adaptor`, a
 | groupBy | `string` | Specifies the category under which the list item has to be grouped. |
 | iconCss | `string` | Specifies the icon class of each list item. |
 
-> When binding complex data to the MultiSelect, fields should be mapped correctly. Otherwise, the selected item remains undefined.
+> When binding complex data to the React MultiSelect, fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
 ## Binding local data
 
@@ -29,7 +29,7 @@ Local data can be represented in three ways as described below.
 
 ### 1. Array of strings
 
-The MultiSelect supports loading arrays of primitive data such as strings and numbers. In this case, the value and text fields represent the same data.
+The React MultiSelect supports loading arrays of primitive data such as strings and numbers. In this case, the value and text fields represent the same data.
 
 `[Class-component]`
 
@@ -59,7 +59,7 @@ The MultiSelect supports loading arrays of primitive data such as strings and nu
 
 ### 2. Array of objects
 
-The MultiSelect generates list items from arrays of objects. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/multi-select/#fields) property.
+The React MultiSelect generates list items from arrays of objects. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/multi-select/#fields) property.
 
 In the following example, the `id` column is mapped to the `value` field and the `sports` column is mapped to the `text` field.
 
@@ -91,7 +91,7 @@ In the following example, the `id` column is mapped to the `value` field and the
 
 ### 3. Array of complex objects
 
-The MultiSelect generates list items from arrays of complex objects by mapping nested properties to the [fields](https://ej2.syncfusion.com/react/documentation/api/multi-select/#fields) property.
+The React MultiSelect generates list items from arrays of complex objects by mapping nested properties to the [fields](https://ej2.syncfusion.com/react/documentation/api/multi-select/#fields) property.
 
 In the following example, `Code.Id` is mapped to the `value` field and `Country.Name` is mapped to the `text` field.
 
@@ -123,9 +123,9 @@ In the following example, `Code.Id` is mapped to the `value` field and `Country.
 
 ## Binding remote data
 
-The MultiSelect supports retrieval of data from remote data services using the `DataManager` component. The [Query](https://ej2.syncfusion.com/react/documentation/api/multi-select/#query) property is used to fetch data from the database and bind it to the MultiSelect.
+The React MultiSelect supports retrieval of data from remote data services using the `DataManager` component. The [Query](https://ej2.syncfusion.com/react/documentation/api/multi-select/#query) property is used to fetch data from the database and bind it to the React MultiSelect.
 
-To bind remote data, import the `DataManager` and `Query` classes from the `@syncfusion/ej2-data` package, then bind a `DataManager` instance to the `dataSource` property and a `Query` instance to the `query` property of the MultiSelect.
+To bind remote data, import the `DataManager` and `Query` classes from the `@syncfusion/ej2-data` package, then bind a `DataManager` instance to the `dataSource` property and a `Query` instance to the `query` property of the React MultiSelect.
 
 ```javascript
 import { DataManager, Query } from '@syncfusion/ej2-data';

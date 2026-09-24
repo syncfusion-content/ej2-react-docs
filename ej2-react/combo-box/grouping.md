@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Grouping in React ComboBox
 
-The ComboBox supports grouping nested elements based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content updates dynamically as you scroll through the popup list, displaying the category value for each group.
+The React ComboBox supports grouping nested elements based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content updates dynamically as you scroll through the popup list, displaying the category value for each group.
 
 In the following example, vegetables are grouped according to their category using the `groupBy` field.
 
@@ -42,8 +42,8 @@ In the following example, vegetables are grouped according to their category usi
 
 ## Customization
 
-The grouping header can be customized using the `groupTemplate` property. This allows you to design custom headers for both inline and fixed group display modes. Refer to [Group Template support to ComboBox](https://ej2.syncfusion.com/react/documentation/combo-box/templates#group-template) for detailed implementation.
+The grouping header can be customized using the `groupTemplate` property. This allows you to design custom headers for both inline and fixed group display modes. Refer to [Group Template support to React ComboBox](https://ej2.syncfusion.com/react/documentation/combo-box/templates#group-template) for detailed implementation.
 
 ## See Also
 
-* [Group Template support to ComboBox](https://ej2.syncfusion.com/react/documentation/combo-box/templates#group-template).
+* [Group Template support to React ComboBox](https://ej2.syncfusion.com/react/documentation/combo-box/templates#group-template).

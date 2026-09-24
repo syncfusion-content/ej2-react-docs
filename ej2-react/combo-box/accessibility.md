@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Accessibility in React ComboBox
 
-The ComboBox component is built according to `WAI-ARIA` specifications, incorporating WAI-ARIA roles, states, properties, and comprehensive keyboard support. The component provides complete keyboard navigation and ARIA accessibility, enabling users of assistive technologies and keyboard-only users to interact effectively.
+The React ComboBox component is built according to `WAI-ARIA` specifications, incorporating WAI-ARIA roles, states, properties, and comprehensive keyboard support. The component provides complete keyboard navigation and ARIA accessibility, enabling users of assistive technologies and keyboard-only users to interact effectively.
 
-The ComboBox component adheres to established accessibility standards and guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles).
+The React ComboBox component adheres to established accessibility standards and guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the ComboBox component is outlined below.
+The accessibility compliance for the React ComboBox component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,26 +42,26 @@ The accessibility compliance for the ComboBox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The ComboBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/) patterns to meet the accessibility. The following ARIA attributes are used in the ComboBox component:
+The React ComboBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/) patterns to meet the accessibility. The following ARIA attributes are used in the React ComboBox component:
 
 | **Properties** | **Functionalities** |
 | --- | --- |
-| <kbd>aria-haspopup</kbd> | Indicates whether the ComboBox input element has a popup list or not. |
+| <kbd>aria-haspopup</kbd> | Indicates whether the React ComboBox input element has a popup list or not. |
 | aria-expanded | Indicates whether the popup list has expanded or not. |
 | aria-selected | Indicates the selected option. |
-| aria-readonly | Indicates the readonly state of the ComboBox element. |
-| aria-disabled | Indicates whether the ComboBox component is in a disabled state or not. |
+| aria-readonly | Indicates the readonly state of the React ComboBox element. |
+| aria-disabled | Indicates whether the React ComboBox component is in a disabled state or not. |
 | aria-activedescendent | This attribute holds the ID of the active list item  to focus its descendant child element. |
 | aria-owns | This attribute contains the ID of the popup list to indicate popup as a child element. |
 | aria-autocomplete | This attribute contains the ‘both’ to a list of options shows and the currently selected suggestion also shows inline. |
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the ComboBox without interruptions.
+You can use the following key shortcuts to access the React ComboBox without interruptions.
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Arrow Down</kbd> | Selects the first item in the ComboBox when no item selected. Otherwise, selects the item next to the currently selected item. |
+| <kbd>Arrow Down</kbd> | Selects the first item in the React ComboBox when no item selected. Otherwise, selects the item next to the currently selected item. |
 | <kbd>Arrow Up</kbd> | Selects the item previous to the currently selected one. |
 | <kbd>Page Down</kbd> | Scrolls down to the next page and selects the first item when popup list opens. |
 | <kbd>Page Up</kbd> | Scrolls up to the previous page and selects the first item when popup list opens. |
@@ -74,7 +74,7 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 | <kbd>Home</kbd> | Cursor moves to before of first character in input |
 | <kbd>End</kbd> | Cursor moves to next of last character in input  |
 
-> In the below sample, <kbd>alt+t</kbd> keys are used to focus the ComboBox component.
+> In the below sample, <kbd>alt+t</kbd> keys are used to focus the React ComboBox component.
 
 `[Class-component]`
 
@@ -104,9 +104,9 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 
 ## Ensuring accessibility
 
-The ComboBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React ComboBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the ComboBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/combo-box.html) in a new window to evaluate the accessibility of the ComboBox component with accessibility tools.
+The accessibility compliance of the React ComboBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/combo-box.html) in a new window to evaluate the accessibility of the React ComboBox component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/combo-box.html" %}
 

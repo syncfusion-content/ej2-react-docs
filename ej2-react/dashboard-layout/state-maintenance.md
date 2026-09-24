@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # State Maintenance in React Dashboard Layout
 
-The Dashboard Layout component provides the ability to save the current layout configuration and restore it later, enabling users to persist preferred panel arrangements across sessions or create reusable dashboard templates.
+The React Dashboard Layout component provides the ability to save the current layout configuration and restore it later, enabling users to persist preferred panel arrangements across sessions or create reusable React Dashboard templates.
 
 ## Save Layout State
 
-The current layout structure of the Dashboard Layout component can be obtained and saved using the [`serialize`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#serialize) public method of the component. This method returns the component's current panel settings, which can be stored and later used to reconstruct a dashboard with the same layout configuration.
+The current layout structure of the React Dashboard Layout component can be obtained and saved using the [`serialize`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#serialize) public method of the component. This method returns the component's current panel settings, which can be stored and later used to reconstruct a React Dashboard with the same layout configuration.
 
 ## Implementation Example
 

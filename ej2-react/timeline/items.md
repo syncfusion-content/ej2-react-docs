@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Items in React Timeline
 
-The Timeline items can be configured using the `ItemDirective` tag. Each item supports multiple configuration options including `content`, `oppositeContent`, `dotCss`, `disabled`, and `cssClass` properties to create rich, interactive timeline experiences.
+The React Timeline items can be configured using the `ItemDirective` tag. Each item supports multiple configuration options including `content`, `oppositeContent`, `dotCss`, `disabled`, and `cssClass` properties to create rich, interactive timeline experiences.
 
 ## Adding content
 
-Define the primary content for Timeline items using the [content](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#content) property. This property supports both string values and templated content to allow flexible content presentation.
+Define the primary content for React Timeline items using the [content](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#content) property. This property supports both string values and templated content to allow flexible content presentation.
 
 ### String content
 
-Define simple text content for Timeline items using string values.
+Define simple text content for React Timeline items using string values.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -39,7 +39,7 @@ Define simple text content for Timeline items using string values.
 
 ### Templated content
 
-Create rich, dynamic content for Timeline items by specifying template selectors that reference HTML elements with custom markup and styling.
+Create rich, dynamic content for React Timeline items by specifying template selectors that reference HTML elements with custom markup and styling.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -60,7 +60,7 @@ Create rich, dynamic content for Timeline items by specifying template selectors
 
 ## Adding opposite content
 
-Enhance Timeline items with supplementary information using the [oppositeContent](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#oppositecontent) property. This content appears on the opposite side of the timeline from the main content and is ideal for dates, metadata, or secondary details. Like the content property, oppositeContent accepts both string and template values.
+Enhance React Timeline items with supplementary information using the [oppositeContent](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#oppositecontent) property. This content appears on the opposite side of the timeline from the main content and is ideal for dates, metadata, or secondary details. Like the content property, oppositeContent accepts both string and template values.
 
 ### String opposite content
 
@@ -85,7 +85,7 @@ Define simple text as opposite content using string values.
 
 ### Templated opposite content
 
-Create rich, dynamic opposite content for Timeline items using templates to display structured information such as time labels and category tags.
+Create rich, dynamic opposite content for React Timeline items using templates to display structured information such as time labels and category tags.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -106,7 +106,7 @@ Create rich, dynamic opposite content for Timeline items using templates to disp
 
 ## Customizing dot appearance
 
-Personalize the visual appearance of Timeline item dots using the [dotCss](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#dotcss) property. This property accepts CSS class names that enable custom styling including icons, background images, colors, and text content.
+Personalize the visual appearance of React Timeline item dots using the [dotCss](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#dotcss) property. This property accepts CSS class names that enable custom styling including icons, background images, colors, and text content.
 
 ### Adding icons
 
@@ -160,7 +160,7 @@ Control item interactivity using the [disabled](https://ej2.syncfusion.com/react
 
 ## CSS class customization
 
-Apply custom styling to individual Timeline items using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#cssclass) property. This property accepts CSS class names that enable comprehensive visual customization including colors, fonts, spacing, and layout modifications.
+Apply custom styling to individual React Timeline items using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineItem#cssclass) property. This property accepts CSS class names that enable comprehensive visual customization including colors, fonts, spacing, and layout modifications.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

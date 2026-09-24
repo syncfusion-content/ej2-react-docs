@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Accessibility in React ListView component
 
-The ListView component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The React ListView component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the ListView component is outlined below.
+The accessibility compliance for the React ListView component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,21 +40,21 @@ The accessibility compliance for the ListView component is outlined below.
 
 ## WAI-ARIA attributes
 
-The ListView component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) patterns to meet the accessibility. The following ARIA attributes are used in the ListView component:
+The React ListView component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) patterns to meet the accessibility. The following ARIA attributes are used in the React ListView component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `role=list` | Specifies the non selectable list container. |
-| `role=listitem`| Specifies the role of each item in a selectable ListView and its containment within the list. |
+| `role=listitem`| Specifies the role of each item in a selectable React ListView and its containment within the list. |
 | `role=presentation` | Specifies the role of non selectable list element. |
 | `role=checkbox` | Indicates checkbox component along with listitem element. |
 | `aria-checked` | Indicates the current checked state of checkbox. |
-| `aria-label` | Provides an accessible name for the ListView Checkbox. |
+| `aria-label` | Provides an accessible name for the React ListView Checkbox. |
 | `aria-disabled` | Indicates element is perceivable but disabled. |
 
 ## Keyboard interaction
 
-The ListView component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the ListView component.
+The React ListView component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the React ListView component.
 
 | Keyboard shortcuts | Actions |
 |------------|-------------------|
@@ -67,9 +67,9 @@ The ListView component follows the [keyboard interaction](https://www.w3.org/WAI
 
 ## Ensuring accessibility
 
-The ListView component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React ListView component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the ListView component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/list-view.html) in a new window to evaluate the accessibility of the ListView component with accessibility tools.
+The accessibility compliance of the React ListView component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/list-view.html) in a new window to evaluate the accessibility of the React ListView component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/list-view.html" %}
 

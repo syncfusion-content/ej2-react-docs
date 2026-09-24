@@ -14,7 +14,7 @@ This section explains split pane behavior and shows examples for common layouts 
 
 ## Horizontal layout
 
-By default, the Splitter renders in horizontal orientation, dividing the container into panes with a vertical separator.
+By default, the React Splitter renders in horizontal orientation, dividing the container into panes with a vertical separator.
 
 `[Class-component]`
 
@@ -44,7 +44,7 @@ By default, the Splitter renders in horizontal orientation, dividing the contain
 
 ## Vertical layout
 
-Set the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter#orientation) property to `Vertical` to render the Splitter in vertical orientation, dividing the container into panes with a horizontal separator.
+Set the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter#orientation) property to `Vertical` to render the React Splitter in vertical orientation, dividing the container into panes with a horizontal separator.
 
 `[Class-component]`
 
@@ -135,11 +135,11 @@ By default, the pane separator is rendered with a `1px` width/height. You can cu
 
  {% previewsample "page.domainurl/code-snippet/splitter/separator-cs2" %}
 
-## Nested Splitter
+## Nested React Splitter
 
-Splitter supports nested panes for complex layouts. You can use the same `<div>` element for both the parent pane and the nested Splitter.
+React Splitter supports nested panes for complex layouts. You can use the same `<div>` element for both the parent pane and the nested Splitter.
 
-> Nested splitter can be rendered using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
+> Nested React Splitter can be rendered using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
 
 `[Class-component]`
 

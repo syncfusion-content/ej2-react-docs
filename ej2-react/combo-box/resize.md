@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resizing in React ComboBox
 
-Enable popup resizing in the ComboBox component using the [AllowResize](https://ej2.syncfusion.com/react/documentation/api/combo-box#allowresize) property. When enabled, users can dynamically adjust the popup size to improve visibility. Resized dimensions persist across sessions, providing a consistent user experience.
+Enable popup resizing in the React ComboBox component using the [AllowResize](https://ej2.syncfusion.com/react/documentation/api/combo-box#allowresize) property. When enabled, users can dynamically adjust the popup size to improve visibility. Resized dimensions persist across sessions, providing a consistent user experience.
 
 
 `[Class-component]`
@@ -38,4 +38,4 @@ Enable popup resizing in the ComboBox component using the [AllowResize](https://
 
 
 
-![Resizing in ComboBox Component](../images/combobox-resize.gif)
+![Resizing in React ComboBox Component](../images/combobox-resize.gif)

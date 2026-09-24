@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Migration from Essential JS 1 in React Splitter
 
-This article describes the API migration process for the Splitter component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
+This article describes the API migration process for the React Splitter component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
 ## Common
 

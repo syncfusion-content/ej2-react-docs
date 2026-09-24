@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in React Mention
 
-## Show or hide mention character
+## Show or hide React Mention character
 
 By default, the `showMentionChar` property is disabled and does not display the mention character with the selected text. Enable the [showMentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/#showmentionchar) property to display the configured [mentionChar](https://ej2.syncfusion.com/react/documentation/api/mention/#mentionchar) along with the selected text content.
 
@@ -42,7 +42,7 @@ By default, the `showMentionChar` property is disabled and does not display the 
 
 ## Adding the suffix character after selection
 
-The Mention has provided support to specify the custom suffix to append alongside the mentioned selected item while inserting. You can append space or new line character as [suffixText](https://ej2.syncfusion.com/react/documentation/api/mention/#suffixtext).
+The React Mention has provided support to specify the custom suffix to append alongside the mentioned selected item while inserting. You can append space or new line character as [suffixText](https://ej2.syncfusion.com/react/documentation/api/mention/#suffixtext).
 
 `[Class-component]`
 

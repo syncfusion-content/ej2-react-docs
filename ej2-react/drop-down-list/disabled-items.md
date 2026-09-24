@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Disabled Items in React Dropdown List
 
-The DropDownList supports enabling or disabling individual items as needed. Map the [disabled](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#fields) field from your data source to control item availability. Disabled items cannot be selected. Configure the disabled state mapping using the `fields.disabled` property.
+The React Dropdown List supports enabling or disabling individual items as needed. Map the [disabled](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#fields) field from your data source to control item availability. Disabled items cannot be selected. Configure the disabled state mapping using the `fields.disabled` property.
 
 The following example demonstrates disabling specific items using the `disabled` field.
 
@@ -54,4 +54,4 @@ Use the [disableItem](https://ej2.syncfusion.com/react/documentation/api/drop-do
 
 To disable the entire component, set the [enabled](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#enabled) property to **false**.
 
-![Disabled DropDownList Component](../images/dropdownlist-disable.png)
+![Disabled React Dropdown List Component](../images/dropdownlist-disable.png)

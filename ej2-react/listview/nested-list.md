@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Nested list in React ListView component
 
-The ListView component supports Nested lists. To implement this, define the [`child`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldSettingsModel/#child) property for the nested list in an array of JSON objects.
+The React ListView component supports Nested lists. To implement this, define the [`child`](https://ej2.syncfusion.com/react/documentation/api/list-view/fieldsettingsmodel#child) property for the nested list in an array of JSON objects.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

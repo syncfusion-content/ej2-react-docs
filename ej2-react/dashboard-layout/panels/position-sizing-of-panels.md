@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Size and Position in React Dashboard Layout
 
-Panels serve as the fundamental building blocks of the Dashboard Layout component, functioning as containers for data visualization and content presentation. The component provides comprehensive control over panel positioning and sizing through a flexible grid-based system that enables precise layout management and responsive design implementation.
+Panels serve as the fundamental building blocks of the React Dashboard Layout component, functioning as containers for data visualization and content presentation. The component provides comprehensive control over panel positioning and sizing through a flexible grid-based system that enables precise layout management and responsive design implementation.
 
 The following table details all available panel properties and their specific functions in layout management:
 
@@ -33,7 +33,7 @@ The following table details all available panel properties and their specific fu
 
 Panels within the layout are positioned using the [`row`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#row) and [`col`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#col) properties of the panels. Positioning panels is beneficial for representing data in any desired order.
 
-The following sample demonstrates the positioning of panels within the dashboard layout using the row and column properties of the panels.
+The following sample demonstrates the positioning of panels within the React Dashboard Layout using the row and column properties of the panels.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -60,9 +60,9 @@ The following sample demonstrates the positioning of panels within the dashboard
 
 ## Sizing of panels
 
-Panel dimensions are controlled using the [`sizeX`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#sizex) and [`sizeY`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#sizey) properties. The `sizeX` property defines the width and the `sizeY` property defines height of a panel in cells count. These properties are helpful in designing a dashboard, where the content of each panel may vary in size.
+Panel dimensions are controlled using the [`sizeX`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#sizex) and [`sizeY`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#sizey) properties. The `sizeX` property defines the width and the `sizeY` property defines height of a panel in cells count. These properties are helpful in designing a React Dashboard, where the content of each panel may vary in size.
 
-The following sample demonstrates panel sizing within the dashboard layout using the sizeX and sizeY properties.
+The following sample demonstrates panel sizing within the React Dashboard Layout using the sizeX and sizeY properties.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

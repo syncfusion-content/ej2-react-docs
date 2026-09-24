@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Checkbox in React MultiSelect Dropdown
 
-The MultiSelect includes built-in checkbox support to select multiple values. To enable this feature, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#mode) property to `CheckBox`.
+The React MultiSelect includes built-in checkbox support to select multiple values. To enable this feature, set the [`mode`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#mode) property to `CheckBox`.
 
-When using checkbox mode, inject the `CheckBoxSelection` module into the MultiSelect. This injection is required specifically when the `mode` property is set to `CheckBox`; it is not required for the default mode.
+When using checkbox mode, inject the `CheckBoxSelection` module into the React MultiSelect. This injection is required specifically when the `mode` property is set to `CheckBox`; it is not required for the default mode.
 
 `[Class-component]`
 
@@ -42,7 +42,7 @@ When using checkbox mode, inject the `CheckBoxSelection` module into the MultiSe
 
 ## Select All
 
-The MultiSelect component includes a `Select All` option in the header to select all list items at once.
+The React MultiSelect component includes a `Select All` option in the header to select all list items at once.
 
 By default, the [`showSelectAll`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#showselectall) property is set to **false**. When set to **true**, the Select All option is displayed in the popup header. Customize the Select All label text using the [`selectAllText`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#selectalltext) property.
 
@@ -139,9 +139,9 @@ Set the [`enableSelectionOrder`](https://ej2.syncfusion.com/react/documentation/
 
 * [How to bind the data](./data-binding)
 * [How to filter the bound data](./filtering)
-* [How to add custom value to the MultiSelect](./custom-value)
+* [How to add custom value to the React MultiSelect](./custom-value)
 * [How to render grouping with checkbox](./grouping#grouping-with-checkbox)
 
 ## Troubleshooting
 
-If checkboxes do not render in the popup, verify that the `CheckBoxSelection` module is injected into the MultiSelect component via the `Inject` directive and that the `mode` property is set to `CheckBox`. For initial setup and prerequisites, see the [getting started](./getting-started) topic.
+If checkboxes do not render in the popup, verify that the `CheckBoxSelection` module is injected into the React MultiSelect component via the `Inject` directive and that the `mode` property is set to `CheckBox`. For initial setup and prerequisites, see the [getting started](./getting-started) topic.

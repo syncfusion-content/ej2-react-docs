@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Orientations in React Timeline
 
-The Timeline component supports two layout directions via the [orientation](https://ej2.syncfusion.com/react/documentation/api/timeline#orientation) property: `Vertical` and `Horizontal`. Choose the orientation that best fits the available space and the visual flow of the application.
+The React Timeline component supports two layout directions via the [orientation](https://ej2.syncfusion.com/react/documentation/api/timeline#orientation) property: `Vertical` and `Horizontal`. Choose the orientation that best fits the available space and the visual flow of the application.
 
 ## Vertical
 
-Display timeline items vertically in a top-to-bottom sequence by setting the [orientation](https://ej2.syncfusion.com/react/documentation/api/timeline#orientation) property to `Vertical`. The vertical layout is the default and works well for lists and stacked event flows.
+Display React Timeline items vertically in a top-to-bottom sequence by setting the [orientation](https://ej2.syncfusion.com/react/documentation/api/timeline#orientation) property to `Vertical`. The vertical layout is the default and works well for lists and stacked event flows.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -35,7 +35,7 @@ Display timeline items vertically in a top-to-bottom sequence by setting the [or
 
 ## Horizontal
 
-Display timeline items horizontally in a left-to-right sequence by setting the [orientation](https://ej2.syncfusion.com/react/documentation/api/timeline#orientation) property to `Horizontal`. The horizontal layout works particularly well on desktop screens and wide containers.
+Display React Timeline items horizontally in a left-to-right sequence by setting the [orientation](https://ej2.syncfusion.com/react/documentation/api/timeline#orientation) property to `Horizontal`. The horizontal layout works particularly well on desktop screens and wide containers.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

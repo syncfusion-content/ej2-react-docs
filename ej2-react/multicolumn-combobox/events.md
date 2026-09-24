@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Events in React MultiColumn ComboBox
 
-This section describes the events triggered during appropriate actions on the MultiColumn ComboBox component. The following events are available:
+This section describes the events triggered during appropriate actions on the React MultiColumn ComboBox component. The following events are available:
 
 ## actionBegin
 

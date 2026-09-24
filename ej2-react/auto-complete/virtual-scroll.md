@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Virtualization in React AutoComplete
 
-AutoComplete virtualization is a technique used to efficiently render extensive lists of items while minimizing the performance impact. This method is particularly advantageous when dealing with large datasets because it ensures that only a fixed number of DOM (Document Object Model) elements are created. When scrolling through the list, existing DOM elements are reused to display relevant data instead of generating new elements for each item. This recycling process is managed internally.
+React AutoComplete virtualization is a technique used to efficiently render extensive lists of items while minimizing the performance impact. This method is particularly advantageous when dealing with large datasets because it ensures that only a fixed number of DOM (Document Object Model) elements are created. When scrolling through the list, existing DOM elements are reused to display relevant data instead of generating new elements for each item. This recycling process is managed internally.
 
 During virtual scrolling, the data retrieved from the data source depends on the popup height and the calculation of the list item height. Set [`enableVirtualization`](../api/auto-complete#enablevirtualization) to `true` to activate virtualization. In addition, import the `VirtualScroll` module and register it using `<Inject services={[VirtualScroll]} />` inside the component; virtualization only works when both `enableVirtualization` and the injected `VirtualScroll` service are present.
 
@@ -20,7 +20,7 @@ When the `enableVirtualization` property is enabled, the `skip` and `take` prope
 
 ## Binding local data
 
-The AutoComplete can generate its list items through an array of complex objects. For this, the appropriate data fields should be mapped to the [`fields`](../api/auto-complete#fields) property. For background on field mapping, see [Field mapping](./data-binding#field-mapping). When using virtual scrolling, the list updates based on the scroll offset value, triggering a request to fetch more data from the server. As the data is being fetched, the `actionBegin` event occurs before the data retrieval starts. Once the data retrieval is successful, the `actionComplete` event is triggered, indicating that the data fetch process is complete.
+The React AutoComplete can generate its list items through an array of complex objects. For this, the appropriate data fields should be mapped to the [`fields`](../api/auto-complete#fields) property. For background on field mapping, see [Field mapping](./data-binding#field-mapping). When using virtual scrolling, the list updates based on the scroll offset value, triggering a request to fetch more data from the server. As the data is being fetched, the `actionBegin` event occurs before the data retrieval starts. Once the data retrieval is successful, the `actionComplete` event is triggered, indicating that the data fetch process is complete.
 
 In the following example, the `text` field is mapped to the `value` field.
 
@@ -40,7 +40,7 @@ In the following example, the `text` field is mapped to the `value` field.
 
 ## Binding remote data
 
-The AutoComplete supports retrieving data from remote data services with the help of the `DataManager` component, which triggers the `actionBegin` and `actionComplete` events and then updates the list data. During virtual scrolling, additional data is retrieved from the server, triggering the `actionBegin` and `actionComplete` events at that time as well. The following sample uses the `WebApiAdaptor` to fetch data from the remote endpoint.
+The React AutoComplete supports retrieving data from remote data services with the help of the `DataManager` component, which triggers the `actionBegin` and `actionComplete` events and then updates the list data. During virtual scrolling, additional data is retrieved from the server, triggering the `actionBegin` and `actionComplete` events at that time as well. The following sample uses the `WebApiAdaptor` to fetch data from the remote endpoint.
 
 The following sample displays the OrderID from the `Orders` data service.
 
@@ -80,7 +80,7 @@ The following sample demonstrates customizing the items count in virtualization.
 
 ## Grouping
 
-The AutoComplete component supports grouping with virtualization. It allows you to organize list items into groups based on different categories. Each item in the list can be classified using the [`groupBy`](../api/auto-complete#fields) field in the data source. After grouping, virtualization works similarly to local data binding. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding virtualization.
+The React AutoComplete component supports grouping with virtualization. It allows you to organize list items into groups based on different categories. Each item in the list can be classified using the [`groupBy`](../api/auto-complete#fields) field in the data source. After grouping, virtualization works similarly to local data binding. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding virtualization.
 
 The following sample demonstrates grouping with virtualization.
 

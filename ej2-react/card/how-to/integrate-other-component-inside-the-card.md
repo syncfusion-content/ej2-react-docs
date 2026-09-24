@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to integrate other components in the card in React Card
 
-The Card component provides a flexible container that can host any other component within its content area, enabling the creation of rich, interactive interfaces. By combining the structured layout benefits of cards with the functionality of other components. Here, the ListView component is integrated inside the card to create an organized To-Do list interface, illustrating how cards can enhance content presentation and user experience.
+The React Card component provides a flexible container that can host any other component within its content area, enabling the creation of rich, interactive interfaces. By combining the structured layout benefits of React Card with the functionality of other components. Here, the ListView component is integrated inside the React Card to create an organized To-Do list interface, illustrating how cards can enhance content presentation and user experience.
 
 `[Class-component]`
 

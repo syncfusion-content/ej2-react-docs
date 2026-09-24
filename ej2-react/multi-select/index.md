@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Index in React Multi select component | Syncfusion
-description: Learn here all about Index in Syncfusion React Multi select component of Syncfusion Essential JS 2 and more.
+title: Index in React Multiselect Dropdown | Syncfusion
+description: Learn here all about Index in Syncfusion React Multiselect Dropdown component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-react
 documentation: ug
@@ -10,8 +10,8 @@ domainurl: ##DomainURL##
 
 # Index in React Multi select component
 
-The MultiSelect component contains a list of predefined values from which a multiple value can be chosen. The functionality
-of MultiSelect resembles the SELECT form element of HTML.
+The React MultiSelect Dropdown component contains a list of predefined values from which a multiple value can be chosen. The functionality
+of React MultiSelect Dropdown resembles the SELECT form element of HTML.
 
 ## Key features
 

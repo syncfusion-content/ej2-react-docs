@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Drag and Drop in React ListBox
 
-The ListBox supports dragging individual items or groups of selected items within the same list box or between multiple list boxes.
+The React ListBox supports dragging individual items or groups of selected items within the same React ListBox or between multiple React ListBoxes.
 
 Customize drag and drop behavior using the following events:
 
@@ -22,9 +22,9 @@ Customize drag and drop behavior using the following events:
 
 ## Single listbox
 
-Enable drag and drop within a single list box by setting the [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/list-box/#allowdraganddrop) property to `true`.
+Enable drag and drop within a single React ListBox by setting the [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/list-box/#allowdraganddrop) property to `true`.
 
-The following example demonstrates dragging and dropping items within the same list box:
+The following example demonstrates dragging and dropping items within the same React ListBox:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -39,9 +39,9 @@ The following example demonstrates dragging and dropping items within the same l
 
 ## Multiple listbox
 
-Enable drag and drop between list boxes by setting the `allowDragAndDrop` property to `true` and configuring the same [`scope`](https://ej2.syncfusion.com/react/documentation/api/list-box/#scope) value for both list boxes.
+Enable drag and drop between React ListBoxes by setting the `allowDragAndDrop` property to `true` and configuring the same [`scope`](https://ej2.syncfusion.com/react/documentation/api/list-box/#scope) value for both React ListBoxes.
 
-In the following example, `allowDragAndDrop` is set to `true` and `scope` is set to `combined-list` to enable drag and drop between both list boxes:
+In the following example, `allowDragAndDrop` is set to `true` and `scope` is set to `combined-list` to enable drag and drop between both React ListBoxes:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -56,7 +56,7 @@ In the following example, `allowDragAndDrop` is set to `true` and `scope` is set
 
 ## Dual ListBox with drag and drop
 
-Enable toolbar and drag and drop actions between two list boxes by assigning a unique ID to each list box and setting the same [`scope`](https://ej2.syncfusion.com/react/documentation/api/list-box/#scope) property value:
+Enable toolbar and drag and drop actions between two React ListBoxes by assigning a unique ID to each React ListBox and setting the same [`scope`](https://ej2.syncfusion.com/react/documentation/api/list-box/#scope) property value:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

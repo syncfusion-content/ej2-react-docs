@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in React AutoComplete
 
-The following content lists the CSS classes you can override to customize the AutoComplete's appearance. The class names are shared across the Syncfusion themes (Material, Fabric, Bootstrap, Tailwind, Fluent, and high-contrast); the same selectors apply to all theme variants. When your overrides do not take effect, increase the selector specificity or move the rule after the theme stylesheet is loaded. For theme-specific setup, see the [theme documentation](https://ej2.syncfusion.com/react/documentation/appearance).
+The following content lists the CSS classes you can override to customize the React AutoComplete's appearance. The class names are shared across the Syncfusion themes (Material, Fabric, Bootstrap, Tailwind, Fluent, and high-contrast); the same selectors apply to all theme variants. When your overrides do not take effect, increase the selector specificity or move the rule after the theme stylesheet is loaded. For theme-specific setup, see the [theme documentation](https://ej2.syncfusion.com/react/documentation/appearance).
 
 ## Customizing the appearance of the wrapper element
 

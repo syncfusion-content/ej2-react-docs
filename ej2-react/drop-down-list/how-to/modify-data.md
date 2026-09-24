@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to modify remote data before binding in React Dropdown List
 
-When binding a remote data source, use the [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#actioncomplete) event to modify the result data before passing it to the DropDownList.
+When binding a remote data source, use the [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#actioncomplete) event to modify the result data before passing it to the React Dropdown List.
 
 The following example demonstrates how to modify the result data:
 

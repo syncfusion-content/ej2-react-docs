@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Icons
 
-Add icons to list box items by setting the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/list-box/fieldSettingsModel/#iconcss) property with the `e-icons` class and required icon CSS. Icons are positioned on the left side of the list by default.
+Add icons to React ListBox items by setting the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/list-box/fieldSettingsModel/#iconcss) property with the `e-icons` class and required icon CSS. Icons are positioned on the left side of the list by default.
 
 In the following sample, icon classes are mapped with `iconCss` field.
 
@@ -29,9 +29,9 @@ In the following sample, icon classes are mapped with `iconCss` field.
 
 ## Templates
 
-Customize ListBox items using the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-box/#itemtemplate) property to display items according to your requirements.
+Customize React ListBox items using the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/list-box/#itemtemplate) property to display items according to your requirements.
 
-In the following example, cart items are displayed using a ListBox template:
+In the following example, cart items are displayed using a React ListBox template:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

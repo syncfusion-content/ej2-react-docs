@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to show a tooltip on each item in React Dropdown List
 
-Achieve this behavior using the `ej2-tooltip` component. When you hover the mouse over a DropDownList option, the tooltip displays details about that list item.
+Achieve this behavior using the `ej2-tooltip` component. When you hover the mouse over a React Dropdown List option, the tooltip displays details about that list item.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

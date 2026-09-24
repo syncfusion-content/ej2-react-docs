@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Floating Panels in React Dashboard Layout
 
-The floating functionality enables panels to move upward automatically to fill empty spaces in previous rows, maximizing space utilization within the dashboard layout. When floating is enabled, the layout automatically recalculates panel positions to eliminate gaps and maintain a compact arrangement.
+The floating functionality enables panels to move upward automatically to fill empty spaces in previous rows, maximizing space utilization within the React Dashboard Layout. When floating is enabled, the layout automatically recalculates panel positions to eliminate gaps and maintain a compact arrangement.
 
 This behavior can be controlled using the [`allowFloating`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#allowfloating) property, which accepts a boolean value (default: `true`).
 
@@ -27,7 +27,7 @@ When `allowFloating` is set to `false`:
 - Panels maintain their exact row and column positions
 
 
-The following sample demonstrates how to enable or disable the floating of panels in the Dashboard Layout component.
+The following sample demonstrates how to enable or disable the floating of panels in the React Dashboard Layout component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

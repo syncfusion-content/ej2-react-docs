@@ -110,7 +110,7 @@ The following example demonstrates `floatLabelType` with `Auto`:
 
 ## Adding html attributes
 
-Add HTML attributes to the MultiColumn ComboBox using the [htmlAttributes](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#htmlattributes) property.
+Add HTML attributes to the React MultiColumn ComboBox using the [htmlAttributes](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#htmlattributes) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -185,7 +185,7 @@ Use the [showClearButton](https://ej2.syncfusion.com/react/documentation/api/mul
 
 ## CssClass
 
-Customize the MultiColumn ComboBox component using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#cssclass) property.
+Customize the React MultiColumn ComboBox component using the [cssClass](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#cssclass) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -200,7 +200,7 @@ Customize the MultiColumn ComboBox component using the [cssClass](https://ej2.sy
 
 ## Disabled
 
-Use the [disabled](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#disabled) property to disable the MultiColumn ComboBox. The default value is `false`.
+Use the [disabled](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox#disabled) property to disable the React MultiColumn ComboBox. The default value is `false`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

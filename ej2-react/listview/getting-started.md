@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the ListView component are imported in the **src/App.css** file:
+The required styles for the React ListView component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,9 +94,9 @@ The required styles for the ListView component are imported in the **src/App.css
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the ListView component
+## Add the React ListView component
 
-Now, you can add the React ListView component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the ListView with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/list-view/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
+Now, you can add the React ListView component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the React ListView with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/list-view/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -115,7 +115,7 @@ function App() {
         { text: 'Oil Painting', id: '06' }
     ];
     return (
-    // specifies the tag to render the ListView component
+    // specifies the tag to render the React ListView component
     <ListViewComponent id="list" dataSource={arts}/>);
 }
 export default App;

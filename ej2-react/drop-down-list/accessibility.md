@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Dropdown List
 
-The DropDownList component is built according to WAI-ARIA specifications, incorporating the appropriate roles, states, properties, and comprehensive keyboard support. It provides complete keyboard navigation and ARIA accessibility, enabling users of assistive technologies and keyboard-only users to interact effectively.
+The React Dropdown List component is built according to WAI-ARIA specifications, incorporating the appropriate roles, states, properties, and comprehensive keyboard support. It provides complete keyboard navigation and ARIA accessibility, enabling users of assistive technologies and keyboard-only users to interact effectively.
 
-The DropDownList component adheres to established accessibility standards and guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). See the [WAI-ARIA](https://www.w3.org/TR/wai-aria/#roles) roles section below for details on the specific pattern used.
+The React Dropdown List component adheres to established accessibility standards and guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). See the [WAI-ARIA](https://www.w3.org/TR/wai-aria/#roles) roles section below for details on the specific pattern used.
 
-The accessibility compliance for the DropDownList component is outlined below.
+The accessibility compliance for the React Dropdown List component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -42,25 +42,25 @@ The accessibility compliance for the DropDownList component is outlined below.
 
 ## WAI-ARIA attributes
 
-The DropDownList component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only) patterns to meet the accessibility requirements. The following ARIA attributes are used in the DropDownList component:
+The React Dropdown List component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only) patterns to meet the accessibility requirements. The following ARIA attributes are used in the React Dropdown List component:
 
 | **Properties** | **Functionalities** |
 | --- | --- |
-| aria-haspopup | Indicates whether the DropDownList input element has the popup or not. |
+| aria-haspopup | Indicates whether the React Dropdown List input element has the popup or not. |
 | aria-expanded | Indicates whether the popup has expanded or not. |
 | aria-selected | Indicates the selected option. |
-| aria-readonly | Indicates the readonly state of the DropDownList element. |
-| aria-disabled | Indicates whether the DropDownList component is in a disabled state or not. |
+| aria-readonly | Indicates the readonly state of the React Dropdown List element. |
+| aria-disabled | Indicates whether the React Dropdown List component is in a disabled state or not. |
 | aria-activedescendant | This attribute holds the ID of the active list item to focus that element's descendant child element. |
 | aria-owns | This attribute contains the ID of the popup to indicate the popup as a child element. |
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the DropDownList without interruptions.
+You can use the following key shortcuts to access the React Dropdown List without interruptions.
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Arrow Down</kbd> | Selects the first item in the DropDownList when no item is selected. Otherwise, selects the item next to the currently selected item. |
+| <kbd>Arrow Down</kbd> | Selects the first item in the React Dropdown List when no item is selected. Otherwise, selects the item next to the currently selected item. |
 | <kbd>Arrow Up</kbd> | Selects the item previous to the currently selected one. |
 | <kbd>Page Down</kbd> | Scrolls down to the next page and selects the first item of the new page when the popup opens. |
 | <kbd>Page Up</kbd> | Scrolls up to the previous page and selects the first item of the new page when the popup opens. |
@@ -73,7 +73,7 @@ You can use the following key shortcuts to access the DropDownList without inter
 | <kbd>Home</kbd> | Selects the first item. |
 | <kbd>End</kbd> | Selects the last item. |
 
-> In the following sample, press <kbd>Alt + t</kbd> to focus the DropDownList component.
+> In the following sample, press <kbd>Alt + t</kbd> to focus the React Dropdown List component.
 
 `[Class-component]`
 
@@ -103,9 +103,9 @@ You can use the following key shortcuts to access the DropDownList without inter
 
 ## Ensuring accessibility
 
-The DropDownList component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The React Dropdown List component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the DropDownList component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-list.html) in a new window to evaluate the accessibility of the DropDownList component with accessibility tools.
+The accessibility compliance of the React Dropdown List component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-list.html) in a new window to evaluate the accessibility of the React Dropdown List component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/drop-down-list.html" %}
 

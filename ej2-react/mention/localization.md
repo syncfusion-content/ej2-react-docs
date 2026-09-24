@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in React Mention
 
-The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#norecordstemplate) &nbsp;properties according to the culture currently assigned to the Mention.
+The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#norecordstemplate) &nbsp;properties according to the culture currently assigned to the React Mention.
 
 | Locale key | en-US (default)  |
 |------|------|
@@ -20,7 +20,7 @@ The Localization library allows you to localize static text content of the [noRe
 
 Load translation objects into your application using the load function of the **L10n** class.
 
-In the following example, the Mention component is configured for French culture with no data loaded. The [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#norecordstemplate) displays text in French culture initially:
+In the following example, the React Mention component is configured for French culture with no data loaded. The [noRecordsTemplate](https://ej2.syncfusion.com/react/documentation/api/mention/#norecordstemplate) displays text in French culture initially:
 
 `[Class-component]`
 
@@ -51,4 +51,4 @@ In the following example, the Mention component is configured for French culture
 ## See Also
 
 * [Accessibility](./accessibility)
-* [How to bind the data to the mention](./data-binding)
+* [How to bind the data to the React Mention](./data-binding)

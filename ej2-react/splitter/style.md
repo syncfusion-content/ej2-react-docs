@@ -112,7 +112,7 @@ Modify the appearance of the navigation arrows displayed on the split bar.
 }
 ```
 
-## To hide the resize handle in Splitter
+## To hide the resize handle in React Splitter
 
 To remove the resize handle from the split bar, apply the following CSS:
 

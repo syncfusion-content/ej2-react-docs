@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Templates in React Dropdown List
 
-The DropDownList provides several options to customize list items, group titles, selected values, headers, and footer elements.
+The React Dropdown List provides several options to customize list items, group titles, selected values, headers, and footer elements.
 
-To get started with React DropDownList templates, you can watch this video:
+To get started with React Dropdown List templates, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=nhtzCMJZqqc" %}
 
@@ -50,7 +50,7 @@ In the following example, each list item is divided into two columns to display 
 
 ## Value template
 
-Customize the currently selected value displayed in the DropDownList input element using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#valuetemplate) property.
+Customize the currently selected value displayed in the React Dropdown List input element using the [valueTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#valuetemplate) property.
 
 In the following example, the selected value displays combined text from the `FirstName` and `City` fields, separated by a hyphen.
 
@@ -148,7 +148,7 @@ In the following example, list items and headers are displayed as two columns si
 
 Display a footer element at the bottom of the popup list using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#footertemplate) property to place custom content.
 
-In the following example, the footer displays the total number of list items in the DropDownList.
+In the following example, the footer displays the total number of list items in the React Dropdown List.
 
 `[Class-component]`
 
@@ -212,7 +212,7 @@ In the following example, the popup displays a notification when no data is avai
 
 Customize the popup list content when a data fetch request fails at the remote server using the [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#actionfailuretemplate) property.
 
-In the following example, the DropDownList displays a notification when the data fetch request fails.
+In the following example, the React Dropdown List displays a notification when the data fetch request fails.
 
 `[Class-component]`
 

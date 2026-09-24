@@ -40,7 +40,7 @@ The React Splitter component adheres to major accessibility standards including 
 
 ## Keyboard interaction
 
-Use the following keyboard shortcuts to navigate and interact with the Splitter component:
+Use the following keyboard shortcuts to navigate and interact with the React Splitter component:
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
@@ -54,7 +54,7 @@ Use the following keyboard shortcuts to navigate and interact with the Splitter 
 
 ## Ensuring accessibility
 
-The Splitter component's accessibility is validated using automated tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) during testing.
+The React Splitter component's accessibility is validated using automated tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) during testing.
 
 Evaluate the component's accessibility using the following sample: open the [sample](https://ej2.syncfusion.com/accessibility/splitter.html) in a new window and run accessibility tools against it.
 

@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the AutoComplete component are imported in the **src/App.css** file:
+The required styles for the React AutoComplete component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -98,9 +98,9 @@ The required styles for the AutoComplete component are imported in the **src/App
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the AutoComplete component
+## Add the React AutoComplete component
 
-Now, you can add the React AutoComplete component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the AutoComplete with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/auto-complete/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
+Now, you can add the React AutoComplete component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the React AutoComplete with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/auto-complete/index-default#datasource) property, which accepts an array of string values to display as suggestions. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -112,7 +112,7 @@ function App() {
     // define the array of data
     const sportsData = ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby', 'Snooker', 'Tennis'];
     return (
-        // specifies the tag for rendering the AutoComplete component
+        // specifies the tag for rendering the React AutoComplete component
         <AutoCompleteComponent id="atcelement" dataSource={sportsData} placeholder="Find a game" />
     );
 }
@@ -143,7 +143,7 @@ The output will appear as follows:
 
 {% previewsample "page.domainurl/code-snippet/dropdownlist/basic-cs4" %}
 
-> You can also explore our [React AutoComplete component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/auto-complete/default) that shows how to render the AutoComplete in React.
+> You can also explore our [React AutoComplete component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/auto-complete/default) that shows how to render the React AutoComplete in React.
 
 ## See Also
 

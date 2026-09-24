@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to configure cascading in React Dropdown List
 
-A cascading DropDownList is a series of interdependent DropDownLists where the value of one DropDownList depends on the selection in another. Configure this behavior using the [`change`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the parent DropDownList. In the change event handler, load data into the child DropDownList based on the parent's selected value.
+A cascading React Dropdown List is a series of interdependent React Dropdown Lists where the value of one React Dropdown List depends on the selection in another. Configure this behavior using the [`change`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#change) event of the parent React Dropdown List. In the change event handler, load data into the child React Dropdown List based on the parent's selected value.
 
-The following example demonstrates cascading behavior using country, state, and city DropDownLists. The `dataBind` method immediately reflects property changes in the DropDownList.
+The following example demonstrates cascading behavior using country, state, and city React Dropdown Lists. The `dataBind` method immediately reflects property changes in the React Dropdown List.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data Binding in React ComboBox
 
-The ComboBox loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/combo-box#datasource) property. It supports both `array` and `DataManager` data types.
+The React ComboBox loads data from local sources or remote services using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/combo-box#datasource) property. It supports both `array` and `DataManager` data types.
 
 The component also supports various data services including OData, OData V4, and Web API, with support for XML, JSON, and JSONP formats through `DataManager` adaptors.
 
@@ -21,7 +21,7 @@ The component also supports various data services including OData, OData V4, and
 | groupBy |  `string` | Specifies the category under which the list item needs to be grouped. |
 | iconCss |  `string` | Specifies the icon class of each list item. |
 
-> When binding complex data to the ComboBox, fields should be mapped correctly. Otherwise, the selected item remains undefined.
+> When binding complex data to the React ComboBox, fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
 ## Binding local data
 
@@ -29,7 +29,7 @@ Local data can be represented in two ways as described below.
 
 ### 1. Array of simple data
 
-The ComboBox supports loading arrays of primitive data such as strings and numbers. In this case, the value and text fields represent the same data.
+The React ComboBox supports loading arrays of primitive data such as strings and numbers. In this case, the value and text fields represent the same data.
 
 `[Class-component]`
 
@@ -59,7 +59,7 @@ The ComboBox supports loading arrays of primitive data such as strings and numbe
 
 ### 2. Array of JSON data
 
-The ComboBox generates list items from arrays of objects. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) property.
+The React ComboBox generates list items from arrays of objects. Map the appropriate columns to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) property.
 
 In the following example, the `Id` column is mapped to the `value` field and the `Game` column is mapped to the `text` field.
 
@@ -91,7 +91,7 @@ In the following example, the `Id` column is mapped to the `value` field and the
 
 ### 3. Array of Complex data
 
-The ComboBox generates list items from arrays of complex objects by mapping nested properties to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) property.
+The React ComboBox generates list items from arrays of complex objects by mapping nested properties to the [fields](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) property.
 
 In the following example, `Code.Id` is mapped to the `value` field and `Country.Name` is mapped to the `text` field.
 
@@ -123,7 +123,7 @@ In the following example, `Code.Id` is mapped to the `value` field and `Country.
 
 ## Binding remote data
 
-The ComboBox supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](https://ej2.syncfusion.com/react/documentation/api/combo-box#query) property is used to fetch data from the database and bind it to the ComboBox.
+The React ComboBox supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](https://ej2.syncfusion.com/react/documentation/api/combo-box#query) property is used to fetch data from the database and bind it to the React ComboBox.
 
 The following sample displays the first 6 contacts from “Customers” table of the `Northwind` Data Service.
 

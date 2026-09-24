@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filtering Data in React Mention
 
-The Mention component has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the mention element.
+The React Mention component has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the mention element.
 
 ## Limit the minimum filter character
 
@@ -82,7 +82,7 @@ While filtering, you can change the filter type to `Contains`, `StartsWith`, or 
 
 Enable spaces within mention text by setting the [allowSpaces](https://ej2.syncfusion.com/react/documentation/api/mention/#allowspaces) property. When disabled, pressing space closes the popup if the text doesn't match the data source. The default value is `false`.
 
-> By default, the `allowSpaces` property is disabled, and space terminates the mention search.
+> By default, the `allowSpaces` property is disabled, and space terminates the React Mention search.
 
 `[Class-component]`
 

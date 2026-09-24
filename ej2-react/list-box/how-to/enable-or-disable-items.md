@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Enable or Disable Items in React ListBox
 
-Use the [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/list-box/#enableitems) method to enable or disable items in the ListBox. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items are disabled by default. Click the `Enable Items` button to enable the disabled items:
+Use the [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/list-box/#enableitems) method to enable or disable items in the React ListBox. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items are disabled by default. Click the `Enable Items` button to enable the disabled items:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

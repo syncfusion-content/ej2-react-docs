@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Mobile Panel Height in React Dashboard Layout
 
-The Dashboard Layout component supports responsive mobile layout through the [`mediaQuery`](../../api/dashboard-layout#mediaquery) property. However, in mobile view, all panels use a uniform height calculation based on the [`sizeY`](../../api/dashboard-layout/panelModel#sizey) property. The [`mobilePanelHeight`](../../api/dashboard-layout/panelModel#mobilepanelheight) property allows specifying a custom height for individual panels in mobile view, enabling better optimization of responsive layouts.
+The React Dashboard Layout component supports responsive mobile layout through the [`mediaQuery`](../../api/dashboard-layout#mediaquery) property. However, in mobile view, all panels use a uniform height calculation based on the [`sizeY`](../../api/dashboard-layout/panelModel#sizey) property. The [`mobilePanelHeight`](../../api/dashboard-layout/panelModel#mobilepanelheight) property allows specifying a custom height for individual panels in mobile view, enabling better optimization of responsive layouts.
 
 The table below lists the new panel property and its functionality.
 

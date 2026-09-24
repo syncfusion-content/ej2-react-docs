@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Templates in React MultiSelect Dropdown
 
-The MultiSelect provides comprehensive template support to customize list items, group titles, selected values, headers, and footer elements.
+The React MultiSelect provides comprehensive template support to customize list items, group titles, selected values, headers, and footer elements.
 
 ## Item template
 
@@ -142,9 +142,9 @@ In the following example, the header displays column titles in a two-column layo
 
 ## Footer template
 
-The MultiSelect has options to show a footer element at the bottom of the popup list. Here, you can place any custom element as a footer using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#footertemplate) property.
+The React MultiSelect has options to show a footer element at the bottom of the popup list. Here, you can place any custom element as a footer using the [footerTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#footertemplate) property.
 
-In the following sample, the footer element displays the total number of list items present in the MultiSelect.
+In the following sample, the footer element displays the total number of list items present in the React MultiSelect.
 
 `[Class-component]`
 
@@ -208,7 +208,7 @@ In the following sample, the popup shows a no-data-available notification.
 
 You can also customize the popup content when a data fetch request fails at the remote server using the [actionFailureTemplate](https://ej2.syncfusion.com/react/documentation/api/multi-select/index-default#actionfailuretemplate) property.
 
-In the following sample, when the data fetch request fails, the MultiSelect displays a failure notification.
+In the following sample, when the data fetch request fails, the React MultiSelect displays a failure notification.
 
 `[Class-component]`
 
@@ -287,4 +287,4 @@ In the following sample, the Summary Tag Template displays the count of selected
 
 * [How to bind the data](./data-binding)
 * [How to group the data using header](./grouping)
-* [How to customize chips in MultiSelect](./chip-customization)
+* [How to customize chips in React MultiSelect](./chip-customization)

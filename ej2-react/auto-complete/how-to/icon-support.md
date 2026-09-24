@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to show list items with icons in React AutoComplete
 
-You can add **icons** to the list items by mapping the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) field. The `iconCss` field renders a span with the mapped class name in each list item for styling. Set the `iconCss` field within the `fields` mapping, where the value is the data field that holds the icon CSS class for each item. The mapped class must be defined in your application's CSS (for example, in `index.css` or `App.css`) with the appropriate icon styles, such as a font-icon or a background image, so the span renders the intended icon.
+You can add **icons** to the list items by mapping the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) field. The `iconCss` field renders a span with the mapped class name in each list item for styling. For example, set the `iconCss` field within the `fields` mapping, such as `fields={{ iconCss: 'icon' }}`, where `icon` is the data field that holds the icon CSS class for each item. The mapped class must be defined in your application's CSS (for example, in `index.css` or `App.css`) with the appropriate icon styles, such as a font-icon or a background image, so the span renders the intended icon.
 
 In the following sample, icon classes are mapped using the `iconCss` field.
 

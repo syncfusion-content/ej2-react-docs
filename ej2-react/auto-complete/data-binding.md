@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Data Binding in React AutoComplete
 
-The AutoComplete component loads data from local sources or remote services using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#datasource) property. It supports an array of JSON objects or a `DataManager` instance (which can wrap arrays or remote endpoints such as OData, OData V4, and Web API services), and can parse data formats such as XML, JSON, and JSONP through DataManager adaptors.
+The React AutoComplete component loads data from local sources or remote services using the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#datasource) property. It supports an array of JSON objects or a `DataManager` instance (which can wrap arrays or remote endpoints such as OData, OData V4, and Web API services), and can parse data formats such as XML, JSON, and JSONP through DataManager adaptors.
 
-The AutoComplete also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of DataManager adaptors.
+The React AutoComplete also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of DataManager adaptors.
 
 ## Field mapping
 
-When binding data to the AutoComplete, map the appropriate data fields to the component's fields to ensure proper display and functionality. The following table describes the available field properties:
+When binding data to the React AutoComplete, map the appropriate data fields to the component's fields to ensure proper display and functionality. The following table describes the available field properties:
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -25,7 +25,7 @@ When binding data to the AutoComplete, map the appropriate data fields to the co
 | groupBy | `string` | Specifies the category under which the list item has to be grouped. |
 | iconCss | `string` | Specifies the icon class of each list item. |
 
-> When binding complex data to the AutoComplete, fields should be mapped correctly. Otherwise, the selected item remains undefined. For examples of `groupBy` and `iconCss` usage, see the [grouping](./grouping) and [templates](./templates) topics.
+> When binding complex data to the React AutoComplete, fields should be mapped correctly. Otherwise, the selected item remains undefined. For examples of `groupBy` and `iconCss` usage, see the [grouping](./grouping) and [templates](./templates) topics.
 
 ## Binding local data
 
@@ -33,7 +33,7 @@ Local data can be represented in three ways as described below.
 
 ### Array of strings
 
-The AutoComplete has support to load array of primitive data such as strings and numbers.
+The React AutoComplete has support to load array of primitive data such as strings and numbers.
 
 `[Class Component]`
 
@@ -63,7 +63,7 @@ The AutoComplete has support to load array of primitive data such as strings and
 
 ### Array of objects
 
-The AutoComplete can generate its list items through an array of flat data. For this, the appropriate data fields should be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) property. When only `value` is mapped, the same field is used for both display and the selected item value.
+The React AutoComplete can generate its list items through an array of flat data. For this, the appropriate data fields should be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) property. When only `value` is mapped, the same field is used for both display and the selected item value.
 
 In the following example, the `game` field from flat data is mapped to the `value` field.
 
@@ -95,7 +95,7 @@ In the following example, the `game` field from flat data is mapped to the `valu
 
 ### Array of complex objects
 
-The AutoComplete can render list items from an array of nested data. For this, the appropriate data fields should be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) property using dotted notation.
+The React AutoComplete can render list items from an array of nested data. For this, the appropriate data fields should be mapped to the [`fields`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#fields) property using dotted notation.
 
 In the following example, the `Country.Name` field from nested data is mapped to the `value` field.
 
@@ -127,7 +127,7 @@ In the following example, the `Country.Name` field from nested data is mapped to
 
 ## Binding remote data
 
-The AutoComplete supports retrieving data from remote services with the help of the `DataManager` component. The [`Query`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#query) property is used to fetch data from the database and bind it to the AutoComplete.
+The React AutoComplete supports retrieving data from remote services with the help of the `DataManager` component. The [`Query`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#query) property is used to fetch data from the database and bind it to the React AutoComplete.
 
 The below sample uses the OData V4 service endpoint and the `ODataV4Adaptor` to fetch the first 6 customers from the `Customers` table of the `Northwind` data service.
 

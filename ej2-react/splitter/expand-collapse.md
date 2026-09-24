@@ -44,7 +44,7 @@ The following example demonstrates how to enable collapsible behavior:
 
 ## Programmatically control the expand and collapse action
 
-You can also control pane visibility programmatically using the Splitter’s public methods: [expand](https://ej2.syncfusion.com/react/documentation/api/splitter#expand) and [collapse](https://ej2.syncfusion.com/react/documentation/api/splitter#collapse). These methods let applications toggle panes based on logic or user actions.
+You can also control pane visibility programmatically using the React Splitter’s public methods: [expand](https://ej2.syncfusion.com/react/documentation/api/splitter#expand) and [collapse](https://ej2.syncfusion.com/react/documentation/api/splitter#collapse). These methods let applications toggle panes based on logic or user actions.
 
 Here’s an example of using these methods:
 

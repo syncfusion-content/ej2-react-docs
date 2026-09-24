@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Grouping in React Dropdown List
 
-The DropDownList supports grouping nested elements based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content updates dynamically as you scroll through the popup list, displaying the category value for each group.
+The React Dropdown List supports grouping nested elements based on different categories. The category of each list item can be mapped through the [groupBy](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#fields) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content updates dynamically as you scroll through the popup list, displaying the category value for each group.
 
 In the following example, vegetables are grouped according to their category using the `groupBy` field.
 
@@ -42,13 +42,13 @@ In the following example, vegetables are grouped according to their category usi
 
 ## Customization
 
-The grouping header can be customized using the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#grouptemplate) property. This allows you to design custom headers for both inline and fixed group display modes. Refer to [Group Template support to DropDownList](./templates#group-template) for detailed implementation.
+The grouping header can be customized using the [`groupTemplate`](https://ej2.syncfusion.com/react/documentation/api/drop-down-list#grouptemplate) property. This allows you to design custom headers for both inline and fixed group display modes. Refer to [Group Template support to React Dropdown List](./templates#group-template) for detailed implementation.
 
-To get started with grouping, grouping templates and adding icons in React DropDownList, you can watch this video:
+To get started with grouping, grouping templates and adding icons in React Dropdown List, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=BNLFOnUTko4" %}
 
 ## See Also
 
-* [Group Template support to DropDownList](./templates#group-template)
+* [Group Template support to React Dropdown List](./templates#group-template)
 * [How to disable the fixed group header](./how-to/group-header)

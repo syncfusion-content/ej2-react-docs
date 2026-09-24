@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Add Items in React ListBox
 
-Use the [`addItems`](https://ej2.syncfusion.com/react/documentation/api/list-box/#additems) method to add one or multiple items to the ListBox. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items are added when you click the `Add Items` button:
+Use the [`addItems`](https://ej2.syncfusion.com/react/documentation/api/list-box/#additems) method to add one or multiple items to the React ListBox. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items are added when you click the `Add Items` button:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

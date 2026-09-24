@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Grouping in React MultiColumn ComboBox
 
-The MultiColumn ComboBox supports grouping nested elements by category using the [groupBy](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/fieldSettingsModel/#groupby) property. Map the category for each list item using the groupBy field in the data table. Group headers display as fixed headers and update dynamically as you scroll through the popup list.
+The React MultiColumn ComboBox supports grouping nested elements by category using the [groupBy](https://ej2.syncfusion.com/react/documentation/api/multicolumn-combobox/fieldSettingsModel/#groupby) property. Map the category for each list item using the groupBy field in the data table. Group headers display as fixed headers and update dynamically as you scroll through the popup list.
 
 ## Group By
 

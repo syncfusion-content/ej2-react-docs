@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to integrate Avatar into Badge in React Avatar
 
-The Badge component can be integrated with the Avatar to create notification avatars. This combination presents user profiles alongside status indicators, message counts, or alert notifications.
+The Badge component can be integrated with the React Avatar to create notification avatars. This combination presents user profiles alongside status indicators, message counts, or alert notifications.
 
 ## Implementation
 The default Avatar (`e-avatar`) and circle Avatar (`e-avatar-circle`) classes work seamlessly with the notification badge class (`e-badge-notification`) to create these enhanced interface elements.

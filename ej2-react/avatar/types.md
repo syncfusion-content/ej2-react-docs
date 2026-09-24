@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The React Avatar component provides different sizes and visual styles to suit various design requirements. This section covers the available avatar sizes and shape types that can be customized using CSS classes.
 
-## Avatar size
+## React Avatar size
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Avatar component offers five predefined sizes that can be applied using CSS classes with the base `.e-avatar` class to control the avatar's dimensions.
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 React Avatar component offers five predefined sizes that can be applied using CSS classes with the base `.e-avatar` class to control the avatar's dimensions.
 
 | Class Name         | Description
 | :-------------     |:-------------
@@ -41,9 +41,9 @@ The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Avatar component offers
 
  {% previewsample "page.domainurl/code-snippet/avatar/size-cs1" %}
 
-## Avatar types
+## React Avatar types
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Avatar component supports two distinct shape styles to accommodate different design preferences:
+The Essential<sup style="font-size:70%">&reg;</sup> JS 2 React Avatar component supports two distinct shape styles to accommodate different design preferences:
 
 * Default (rectangular  with rounded corners)
 * Circle

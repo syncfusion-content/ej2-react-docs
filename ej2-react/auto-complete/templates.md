@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Templates in React AutoComplete
 
-The AutoComplete provides several options to customize each list item, group header, header, and footer elements. Each template property accepts a JSX string or a function that receives the current item's `data` object (for example, `data.value`, `data.City`, `data.LastName`). The fields available on `data` depend on the bound `dataSource` and `fields` mapping.
+The React AutoComplete provides several options to customize each list item, group header, header, and footer elements. Each template property accepts a JSX string or a function that receives the current item's `data` object (for example, `data.value`, `data.City`, `data.LastName`). The fields available on `data` depend on the bound `dataSource` and `fields` mapping.
 
 To get started with React AutoComplete templates, watch the following video, which demonstrates how to configure item, group, header, and footer templates:
 
@@ -18,7 +18,7 @@ To get started with React AutoComplete templates, watch the following video, whi
 
 ## Item template
 
-The content of each list item within the AutoComplete can be customized with the help of the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#itemtemplate) property.
+The content of each list item within the React AutoComplete can be customized with the help of the [`itemTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#itemtemplate) property.
 
 In the following sample, each list item is split into two columns to showcase the employee's first name and city.
 
@@ -82,7 +82,7 @@ In the following sample, employees are grouped by city. The data is fetched from
 
 ## Header template
 
-The header element is shown statically at the top of the suggestion list items within the AutoComplete, and any custom element can be placed as a header element using the [`headerTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#headertemplate) property.
+The header element is shown statically at the top of the suggestion list items within the React AutoComplete, and any custom element can be placed as a header element using the [`headerTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#headertemplate) property.
 
 In the following sample, the list items and their headers are displayed in two columns similar to a grid layout.
 
@@ -114,9 +114,9 @@ In the following sample, the list items and their headers are displayed in two c
 
 ## Footer template
 
-The AutoComplete has options to show a footer element at the bottom of the list items in the suggestion list. You can place any custom element as the footer using the [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#footertemplate) property.
+The React AutoComplete has options to show a footer element at the bottom of the list items in the suggestion list. You can place any custom element as the footer using the [`footerTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#footertemplate) property.
 
-In the following sample, the footer element displays the total number of list items present in the AutoComplete.
+In the following sample, the footer element displays the total number of list items present in the React AutoComplete.
 
 `[Class Component]`
 
@@ -146,7 +146,7 @@ In the following sample, the footer element displays the total number of list it
 
 ## No records template
 
-The AutoComplete is provided with support to customize the content shown when no records match the search, with the help of the [`noRecordsTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#norecordstemplate) property. The default text is "No Records Found".
+The React AutoComplete is provided with support to customize the content shown when no records match the search, with the help of the [`noRecordsTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#norecordstemplate) property. The default text is "No Records Found".
 
 In the following sample, the popup list content displays a notification that no data is available.
 
@@ -180,7 +180,7 @@ In the following sample, the popup list content displays a notification that no 
 
 You can customize the content shown when a remote data fetch fails, using the [`actionFailureTemplate`](https://ej2.syncfusion.com/react/documentation/api/auto-complete#actionfailuretemplate) property. The default text is "The Request Failed".
 
-In the following sample, when the data fetch request fails, the AutoComplete displays the notification.
+In the following sample, when the data fetch request fails, the React AutoComplete displays the notification.
 
 `[Class Component]`
 

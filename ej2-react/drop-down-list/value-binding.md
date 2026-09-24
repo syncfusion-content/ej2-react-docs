@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Value Binding in React Dropdown List
 
-Value binding in the DropDown List control allows you to associate data values with each list item. This facilitates managing and retrieving selected values efficiently. The DropDown List component provides flexibility in binding both primitive data types and complex objects.
+Value binding in the React Dropdown List control allows you to associate data values with each list item. This facilitates managing and retrieving selected values efficiently. The React Dropdown List component provides flexibility in binding both primitive data types and complex objects.
 
 ## Primitive Data Types
 
-The DropDown List control provides flexible binding for primitive data types such as strings and numbers. Bind local primitive data arrays, remote data sources, or custom data to the [value](../api/drop-down-list#value) property of the DropDown List.
+The React Dropdown List control provides flexible binding for primitive data types such as strings and numbers. Bind local primitive data arrays, remote data sources, or custom data to the [value](../api/drop-down-list#value) property of the React Dropdown List.
 
 Supported primitive data types include:
 
@@ -43,7 +43,7 @@ The following example demonstrates preselecting values for primitive data types:
 
 ## Object Data Types
 
-Object binding in the DropDown List control enables you to bind datasets of objects. When [`allowObjectBinding`](../api/drop-down-list#allowobjectbinding) is enabled, the control's value is an object of the same type as the selected item in the [value](../api/drop-down-list#value) property. Bind local object arrays, remote endpoints, or custom data sources.
+Object binding in the React Dropdown List control enables you to bind datasets of objects. When [`allowObjectBinding`](../api/drop-down-list#allowobjectbinding) is enabled, the control's value is an object of the same type as the selected item in the [value](../api/drop-down-list#value) property. Bind local object arrays, remote endpoints, or custom data sources.
 
 The following example demonstrates preselecting values for object data types:
 

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to enable autofill in React ComboBox
 
-The ComboBox supports autofill functionality through the [autofill](https://ej2.syncfusion.com/react/documentation/api/combo-box#autofill) property. As you type, the ComboBox automatically completes your input by matching typed characters against available options. If no matches are found, the ComboBox does not suggest any item.
+The React ComboBox supports autofill functionality through the [autofill](https://ej2.syncfusion.com/react/documentation/api/combo-box#autofill) property. As you type, the React ComboBox automatically completes your input by matching typed characters against available options. If no matches are found, the React ComboBox does not suggest any item.
 
-The following examples demonstrate how autofill works with the ComboBox.
+The following examples demonstrate how autofill works with the React ComboBox.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

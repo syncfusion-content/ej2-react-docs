@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Sorting
 
-The ListBox supports sorting list items in alphabetical order, either ascending or descending. Configure sorting using the [`sortOrder`](https://ej2.syncfusion.com/react/documentation/api/list-box/#sortorder) property with values: `None`, `Ascending`, or `Descending`.
+The React ListBox supports sorting list items in alphabetical order, either ascending or descending. Configure sorting using the [`sortOrder`](https://ej2.syncfusion.com/react/documentation/api/list-box/#sortorder) property with values: `None`, `Ascending`, or `Descending`.
 
 In the following example, `SortOrder` is set to `Ascending`:
 
@@ -29,7 +29,7 @@ In the following example, `SortOrder` is set to `Ascending`:
 
 ## Grouping
 
-The ListBox groups nested elements based on category. Map the category for each list item using the [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-box/fieldSettingsModel/#groupby) field in the data table.
+The React ListBox groups nested elements based on category. Map the category for each list item using the [`groupBy`](https://ej2.syncfusion.com/react/documentation/api/list-box/fieldSettingsModel/#groupby) field in the data table.
 
 In the following example, vegetables are grouped by category:
 

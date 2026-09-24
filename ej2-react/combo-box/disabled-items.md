@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Disabled Items in React ComboBox
 
-The ComboBox supports enabling or disabling individual items as needed. Map the [disabled](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) field from your data source to control item availability. Disabled items cannot be selected. Configure the disabled state mapping using the `fields.disabled` property.
+The React ComboBox supports enabling or disabling individual items as needed. Map the [disabled](https://ej2.syncfusion.com/react/documentation/api/combo-box#fields) field from your data source to control item availability. Disabled items cannot be selected. Configure the disabled state mapping using the `fields.disabled` property.
 
 The following example demonstrates disabling specific states using the `disabled` field.
 
@@ -54,4 +54,4 @@ Use the [disableItem](https://ej2.syncfusion.com/react/documentation/api/combo-b
 
 To disable the entire component, set the [enabled](https://ej2.syncfusion.com/react/documentation/api/combo-box#enabled) property to **false**.
 
-![Disabled ComboBox Component](../images/combobox-disable.png)
+![Disabled React ComboBox Component](../images/combobox-disable.png)

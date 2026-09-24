@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filtering in React MultiColumn ComboBox
 
-The MultiColumn ComboBox includes built-in filtering support, enabling users to filter items based on their input. Filter operations start automatically when typing characters in the component. Disable filtering by setting the [allowFiltering](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox#allowfiltering) property to `false`. By default, the value is `true`.
+The React MultiColumn ComboBox includes built-in filtering support, enabling users to filter items based on their input. Filter operations start automatically when typing characters in the component. Disable filtering by setting the [allowFiltering](https://j2.syncfusion.com/react/documentation/api/multicolumn-combobox#allowfiltering) property to `false`. By default, the value is `true`.
 
 ## Change the filter type
 

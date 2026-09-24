@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Splitter Functional
 
-The following section explains the steps required to build the Splitter component with a step-by-step procedure.
+The following section explains the steps required to build the React Splitter component with a step-by-step procedure.
 
 ## Dependencies
 
-The following dependencies are required to use the Splitter component in your application:
+The following dependencies are required to use the React Splitter component in your application:
 
 ```js
 |-- @syncfusion/ej2-layouts
@@ -49,7 +49,7 @@ Start a new project using create-react-app command as follows
       ```
          </div>
 
-Install the below required dependency package in order to use the `Splitter` component in your application.
+Install the below required dependency package in order to use the `React Splitter` component in your application.
 
          ```bash
            npm install @syncfusion/ej2-react-layouts --save
@@ -88,9 +88,9 @@ The required styles for the component are imported in the **src/App.css** file:
 
 > To refer **App.css** in the application then import it in the **src/App.tsx** file.
 
-## Adding Splitter to the project
+## Adding React Splitter to the project
 
-Initialize the Splitter through `<SplitterComponent>` tag-directive with `<PanesDirective>` and `<PaneDirective>` as child elements respectively.
+Initialize the React Splitter through `<SplitterComponent>` tag-directive with `<PanesDirective>` and `<PaneDirective>` as child elements respectively.
 
 Please refer the below code snippet,
 
@@ -120,7 +120,7 @@ export default App;
 
 
 
-After completing the configurations to render the Splitter, use the following command to display the output in your default browser.
+After completing the configurations to render the React Splitter, use the following command to display the output in your default browser.
 
          ```
           npm start
@@ -141,7 +141,7 @@ Output will be as follows:
 
 ## Orientation
 
-Splitter supports both `Horizontal` and `Vertical` pane layouts. By default, it renders in `Horizontal` orientation. Change it using the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter#orientation) property.
+React Splitter supports both `Horizontal` and `Vertical` pane layouts. By default, it renders in `Horizontal` orientation. Change it using the [orientation](https://ej2.syncfusion.com/react/documentation/api/splitter#orientation) property.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -173,4 +173,4 @@ For detailed information, refer to the [Pane Content](./pane-content) section.
 
 ## See Also
 
-* [Construct different layouts using Splitter](different-layouts)
+* [Construct different layouts using React Splitter](different-layouts)

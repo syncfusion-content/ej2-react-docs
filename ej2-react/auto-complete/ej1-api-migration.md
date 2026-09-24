@@ -10,8 +10,8 @@ domainurl: ##DomainURL##
 
 # Migration in React AutoComplete
 
-This article describes the API migration process of  AutoComplete component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
-> MultiSelect concept is not present in EJ2-AutoComplete.  If you want to use multiselection support in autocomplete, we suggest you to use MultiSelect component.
+This article describes the API migration process of React AutoComplete component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
+> MultiSelect concept is not present in EJ2-AutoComplete.  If you want to use multiselection support in React AutoComplete, we suggest you to use MultiSelect component.
 
 ## DataBinding
 

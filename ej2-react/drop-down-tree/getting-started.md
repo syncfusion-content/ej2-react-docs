@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Dropdown Tree
 
-This section explains how to create a simple Dropdown Tree component and demonstrate its basic usage.
+This section explains how to create a simple React Dropdown Tree component and demonstrate its basic usage.
 
 ## Prerequisites
 
@@ -80,7 +80,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the Dropdown Tree component are imported in the **src/App.css** file:
+The required styles for the React Dropdown Tree component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -92,9 +92,9 @@ The required styles for the Dropdown Tree component are imported in the **src/Ap
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the Dropdown Tree component
+## Add the React Dropdown Tree component
 
-Now, you can add the React Dropdown Tree component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the Dropdown Tree component with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/fieldsmodel#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/fields) property. Use the following code:
+Now, you can add the React Dropdown Tree component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the React Dropdown Tree component with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/fieldsmodel#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/react/documentation/api/drop-down-tree/fields) property. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -131,7 +131,7 @@ function App() {
     ];
     let fields = { dataSource: data, value: 'nodeId', text: 'nodeText', child: 'nodeChild' };
     return (
-        // specifies the tag for rendering the Dropdown Tree component
+        // specifies the tag for rendering the React Dropdown Tree component
         <DropDownTreeComponent id="dropdowntree" fields={fields} />
     );
 }
@@ -163,4 +163,4 @@ npm run dev
 
 {% previewsample "page.domainurl/code-snippet/dropdowntree/basic-cs1" %}
 
-> Refer to the [React Dropdown Tree](https://www.syncfusion.com/react-components/react-dropdown-tree) feature tour page for its groundbreaking feature representations. You can also explore our [React Dropdown Tree component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/drop-down-tree/default) that shows how to render the Dropdown Tree in React.
+> Refer to the [React Dropdown Tree](https://www.syncfusion.com/react-components/react-dropdown-tree) feature tour page for its groundbreaking feature representations. You can also explore our [React Dropdown Tree component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/drop-down-tree/default) that shows how to render the React Dropdown Tree.

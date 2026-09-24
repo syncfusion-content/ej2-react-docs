@@ -82,7 +82,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the ListBox component are imported in the **src/App.css** file:
+The required styles for the React ListBox component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -94,9 +94,9 @@ The required styles for the ListBox component are imported in the **src/App.css*
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the ListBox component
+## Add the React ListBox component
 
-Now, you can add the React ListBox component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the ListBox with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/list-box/index-default#datasource) property. Here, an array of objects is passed to the ListBox component. Use the following code:
+Now, you can add the React ListBox component to your **src/App.jsx** file by importing and defining it within your application. Then, populate the React ListBox with data using the [dataSource](https://ej2.syncfusion.com/react/documentation/api/list-box/index-default#datasource) property. Here, an array of objects is passed to the React ListBox component. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -119,7 +119,7 @@ function App() {
         { text: 'Ferrari LaFerrari', id: 'list-10' },
     ];
     return (
-        // specifies the tag for rendering the ListBox component
+        // specifies the tag for rendering the React ListBox component
         <ListBoxComponent dataSource={data} />
     );
 }
@@ -150,4 +150,4 @@ The output appears as follows.
 
 {% previewsample "page.domainurl/code-snippet/listbox/basic-cs7" %}
 
-> Refer to the [React ListBox](https://www.syncfusion.com/react-components/react-listbox) feature tour page for its groundbreaking feature representations. You can also explore our [React ListBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/list-box/default) that shows how to render the ListBox in React.
+> Refer to the [React ListBox](https://www.syncfusion.com/react-components/react-listbox) feature tour page for its groundbreaking feature representations. You can also explore our [React ListBox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/list-box/default) that shows how to render the React ListBox.
