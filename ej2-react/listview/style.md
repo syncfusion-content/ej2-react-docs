@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on  user preference.
 
-## Customizing ListView
+## Customizing React ListView
 
-Use the following CSS to customize the ListView.
+Use the following CSS to customize the React ListView.
 
 ```css
 
@@ -65,11 +65,11 @@ Use the following CSS to customize the category of the group items.
 
 ```
 
-## Customizing the hover state of ListView component
+## Customizing the hover state of React ListView component
 
 Use the following CSS to customize the list item when hovering.
 
-### Customizing ListView hover state with the checkbox checked
+### Customizing React ListView hover state with the checkbox checked
 
 ```css
 
@@ -91,7 +91,7 @@ Use the following CSS to customize the list item when hovering.
 
 ```
 
-## Customizing selected item of ListView component
+## Customizing selected item of React ListView component
 
 Use the following CSS to customize the selected list item.
 
@@ -106,7 +106,7 @@ Use the following CSS to customize the selected list item.
 
 ```
 
-### Customizing ListView's selected item
+### Customizing React ListView's selected item
 
 ```css
 
