@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Loading React Diagram from PostgreSQL database | Syncfusion®
-description: Learn how to fetch organizational data from PostgreSQL and bind it to the Syncfusion React Diagram using DataManager and a Node.js/Express backend.
+title: PostgreSQL Server in React Diagram | Syncfusion®
+description: Bind the React Diagram to PostgreSQL via a Node.js and Express REST API to render an organizational chart from relational data.
 control: Data binding 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Loading React Diagram from PostgreSQL database
+# PostgreSQL Server in React Diagram
 
 The Syncfusion® React Diagram component allows visualization of organizational chart layout using data from a PostgreSQL database through a REST API. This guide explains how to set up the PostgreSQL database, create a Node.js backend service, and link the data to the React Diagram component to display an organizational chart layout.
 
