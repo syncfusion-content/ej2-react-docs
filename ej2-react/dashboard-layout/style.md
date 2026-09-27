@@ -14,7 +14,7 @@ The React Dashboard Layout component provides extensive styling capabilities thr
 
 ## Panel Header Customization
 
-Use the following CSS to customize the dashboard layout panel header.
+Use the following CSS to customize the React Dashboard Layout panel header.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-header {
@@ -26,7 +26,7 @@ Use the following CSS to customize the dashboard layout panel header.
 
 ## Panel Content Customization
 
-Use the following CSS to customize the dashboard layout panel content.
+Use the following CSS to customize the React Dashboard Layout panel content.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-content {
@@ -37,7 +37,7 @@ Use the following CSS to customize the dashboard layout panel content.
 
 ## Resize Handle Customization
 
-Use the following CSS to customize the dashboard layout resize icon.
+Use the following CSS to customize the React Dashboard Layout resize icon.
 
 ```css
 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-resize.e-double{
@@ -48,9 +48,9 @@ Use the following CSS to customize the dashboard layout resize icon.
 }
 ```
 
-## Dashboard Layout Background Customization
+## React Dashboard Layout Background Customization
 
-Use the following CSS to customize the dashboard layout panel background.
+Use the following CSS to customize the React Dashboard Layout panel background.
 
 ```css
 .e-dashboardlayout.e-control.e-responsive {

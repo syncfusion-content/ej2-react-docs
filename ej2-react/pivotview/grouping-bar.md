@@ -639,4 +639,4 @@ When this event is triggered, users can refer to the information in these parame
 
 * [Change load limited data in member editor](./how-to/change-load-limited-data-in-member-editor) — Configure how many member records load in the filter/member editor dialog.
 * [Customize the icons for pivot table](./how-to/customize-the-icons-for-pivot-table) — Replace default icons in the grouping bar with custom ones.
-* [How to apply custom styles to grouping bar buttons in a Pivot Table in React?](https://support.syncfusion.com/kb/article/14639/how-to-apply-custom-styles-to-grouping-bar-buttons-in-a-pivot-table-in-react) (last verified: August 2026)
+* [How to apply custom styles to grouping bar buttons in a Pivot Table in React?](https://support.syncfusion.com/kb/article/14639/how-to-apply-custom-styles-to-grouping-bar-buttons-in-a-pivot-table-in-react)

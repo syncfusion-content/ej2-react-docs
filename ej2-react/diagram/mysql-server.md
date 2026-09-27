@@ -3,7 +3,7 @@ layout: post
 title: MySQL Server in React Diagram | Syncfusion
 description: Bind the React Diagram to MySQL via LINQ2DB and an ASP.NET Core Web API to render an organizational chart from relational data.
 platform: ej2-react
-control: diagram
+control: Diagram
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -44,10 +44,10 @@ To store and manage diagram data, MySQL Server must be installed and configured 
 
 ### Installing MySQL Server
 
-MySQL Server provides the relational database engine used to store organizational chart data required by the diagram component.
+MySQL Server provides the relational database engine used to store organizational chart data required by the React Diagram component.
 
 1. Download MySQL Installer version 8.0.46 from [mysql.com](https://dev.mysql.com/downloads/windows/installer/8.0.html).
-   ![MySQL Installer](images/mysql-installer.png)
+![MySQL Installer](images/mysql-installer.png)
 2. Run the installer and follow the setup wizard.
    - Choose setup type as **Server only**.
    ![MySQL Setup Type](images/mysql-setup-type.png)
@@ -62,7 +62,7 @@ MySQL Server provides the relational database engine used to store organizationa
    ![MySQL Apply Config](images/mysql-apply-config.png)
 4. Click **Finish** to complete the installation.
 
-N> The MySQL installer automatically configures and starts the MySQL Server as a Windows service (e.g., **MySQL80**) during setup. To verify or start it manually, press <kbd>Win</kbd> + <kbd>R</kbd>, run `services.msc`, locate the **MySQL80** service, and ensure its status is **Running**.
+N> The MySQL installer automatically configures and starts the MySQL Server as a Windows service (e.g., **MySQL80**) during setup. To verify or start it manually, press **Win+R**, run `services.msc`, locate the **MySQL80** service, and ensure its status is **Running**.
 
 ### Installing MySQL Workbench
 
@@ -79,7 +79,7 @@ After installing MySQL Workbench, create a connection to the MySQL Server instan
 
 1. Launch **MySQL Workbench**.
 2. Click **+** to create a new connection.
-   ![Create New Connection](images/create-new-mysql.png)
+![Create New Connection](images/create-new-mysql.png)
 3. Configure the connection settings:
    - **Connection Name**: **Local MySQL**
    - **Hostname**: **localhost**
@@ -101,13 +101,12 @@ The database required for the application can be created using one of the follow
 
 Use MySQL Workbench to create the required database and table for storing organizational chart data.
 
-1. Open **MySQL Workbench**.
-2. On the home screen, click your **MySQL connection** (for example: **Local MySQL**).
-3. The **SQL Editor** opens. This editor is used to write and execute SQL statements for the selected connection.
-4. Paste the following SQL script into the SQL Editor:
+1.  Open **MySQL Workbench**.
+2.  On the home screen, click your **MySQL connection** (for example: **Local MySQL**).
+3.  The **SQL Editor** opens. This editor is used to write and execute SQL statements for the selected connection.
+4.  Paste the following SQL script into the SQL Editor:
 
-{% tabs %}
-{% highlight sql tabtitle="SQL" %}
+```
 -- Create database with UTF-8 support
 CREATE DATABASE IF NOT EXISTS diagramdb
   CHARACTER SET utf8mb4
@@ -136,31 +135,30 @@ VALUES
 ('Developer 2', 4),
 ('Sales Rep 1', 5),
 ('Sales Rep 2', 5);
-{% endhighlight %}
-{% endtabs %}
-5. Click the **Execute** button (or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd>) to run the script.
-6. The Output window at the bottom displays status messages and any errors related to the SQL actions.
+```
 
-#### Verify the database and table
+5.  Click the **Execute** button (or press **Ctrl + Shift + Enter**) to run the script.
+6.  The Output window at the bottom displays status messages and any errors related to the SQL actions.
+
+#### Verify the database and table:
 
 To confirm that the database and table were created successfully:
 
-1. In the **Navigator → SCHEMAS** panel on the left side, click the **Refresh icon**.
-2. **Expand**: diagramdb - Tables - employees.
-3. Click the **Output Grid** icon to view the table data in grid view.
-   ![Describe-MySQL-Table](images/describe-mysql-table.png)
+1.  In the **Navigator → SCHEMAS** panel on the left side, click the **Refresh icon**.
+2.  **Expand**: diagramdb - Tables - employees.
+3.  Click the **Output Grid** icon to view the table data in grid view.
+  ![Describe-MySQL-Table](images/describe-mysql-table.png)
 
 ### Creating a database via MySQL Command Line Client
 
 The database can also be created using the MySQL Command Line Client.
 
-1. Open **MySQL Command Line Client**.
-2. Enter your MySQL **root password** when prompted.
-3. Paste the same SQL script used in the [MySQL Workbench section](#creating-a-database-using-mysql-workbench) and press <kbd>Enter</kbd>.
-4. Run the query **SELECT * FROM employees;** to verify the inserted data.
+1.  Open **MySQL Command Line Client**.
+2.  Enter your MySQL **root password** when prompted.
+3.  Paste the same SQL script used in [MySQL Workbench](#creating-a-database-using-mysql-workbench) and press **Enter**.
+4.  Run the query **SELECT * FROM employees;** to verify the inserted data.
 
 **Expected output**:
-
 | Id | Name | ParentId |
 | --- | --- | --- |
 | 1 | CEO | NULL |
@@ -180,7 +178,6 @@ This section explains how to create an ASP.NET Core Web API project that connect
 
 ### Creating the Web API project using Visual Studio
 
-**Instructions:**
 1. Open **Visual Studio**.
 2. Click **Create a new project**.
 3. Search for **"ASP.NET Core Web API"** and select it.
@@ -202,17 +199,14 @@ Visual Studio creates a new ASP.NET Core Web API project with default files such
 
 Alternatively, the project can be created using the .NET CLI, which is commonly used with Visual Studio Code.
 
-**Instructions:**
 1. Open a terminal or command prompt.
 2. Navigate to the directory where the server application should be created.
 3. Run the following commands:
 
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
+```
 dotnet new webapi -n Diagram_MySQL.Server
 cd Diagram_MySQL.Server
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Installing NuGet packages
 
@@ -223,29 +217,25 @@ The Web API requires additional NuGet packages for LINQ2DB, MySQL connectivity, 
 1. In Visual Studio, go to **Tools → NuGet Package Manager → Package Manager Console**.
 2. Run the following commands sequentially:
 
-{% tabs %}
-{% highlight powershell tabtitle="Package Manager Console" %}
+```
 Install-Package linq2db -Version 6.1.0
 Install-Package linq2db.MySql -Version 6.1.0
 Install-Package linq2db.AspNet -Version 5.4.1.9
 Install-Package MySqlConnector -Version 2.5.0
 Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson -Version 8.0.0
-{% endhighlight %}
-{% endtabs %}
+```
 
 #### Method 2: Using .NET CLI / Integrated Terminal (Visual Studio Code)
 
 Alternatively, the packages can be installed using the .NET CLI from the project directory.
 
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
+```
 dotnet add package linq2db --version 6.1.0
 dotnet add package linq2db.MySql --version 6.1.0
 dotnet add package linq2db.AspNet --version 5.4.1.9
 dotnet add package MySqlConnector --version 2.5.0
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 8.0.0
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Create the data model
 
@@ -256,8 +246,7 @@ A data model represents a database table as a C# class and maps table columns to
 2. Inside the **Models** folder, create a new file named **Employee.cs**.
 3. Define the `Employee` class with the following code:
 
-{% tabs %}
-{% highlight csharp tabtitle="Models/Employee.cs" %}
+```
 using LinqToDB.Mapping;
 
 namespace Diagram_MySQL.Server.Models
@@ -277,8 +266,7 @@ namespace Diagram_MySQL.Server.Models
         public int? ParentId { get; set; }
     }
 }
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Configuring the connection string
 
@@ -288,8 +276,7 @@ The connection string defines how the application connects to the MySQL server.
 1. Open **appsettings.json**.
 2. Add or update the `ConnectionStrings` section with the MySQL connection details:
 
-{% tabs %}
-{% highlight json tabtitle="appsettings.json" %}
+```
 {
   "ConnectionStrings": {
     "MySqlConn": "Server=localhost;Port=3306;Database=diagramdb;User Id=root;Password=YOUR_PASSWORD_HERE;"
@@ -302,9 +289,7 @@ The connection string defines how the application connects to the MySQL server.
   },
   "AllowedHosts": "*"
 }
-{% endhighlight %}
-{% endtabs %}
-
+```
 N> Storing plain-text passwords in `appsettings.json` is not recommended for production. For development, use [Secret Manager](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-10.0&tabs=windows%2Cpowershell) (User Secrets) or environment variables so credentials aren't committed to source control.
 
 ### Configuring the LINQ2DB data connection
@@ -318,8 +303,7 @@ A data connection class is required for **LINQ2DB** to communicate with MySQL.
 
 N> Setting `InlineParameters = true` embeds parameter values directly into the generated SQL instead of passing them as separate DbParameters. This can improve performance by reducing round-trip parameter handling in LINQ2DB.
 
-{% tabs %}
-{% highlight csharp tabtitle="Data/AppDataConnection.cs" %}
+```
 using Diagram_MySQL.Server.Models;
 using LinqToDB;
 using LinqToDB.Data;
@@ -341,8 +325,8 @@ namespace Diagram_MySQL.Server.Data
         public ITable<Employee> Employees => this.GetTable<Employee>();
     }
 }
-{% endhighlight %}
-{% endtabs %}
+
+```
 
 ### Creating the Diagram API controller
 
@@ -353,8 +337,7 @@ The API controller retrieves employee records and exposes them as an HTTP endpoi
 2. Inside the **Controllers** folder, create a new file named **DiagramController.cs**.
 3. Add the following code:
 
-{% tabs %}
-{% highlight csharp tabtitle="Controllers/DiagramController.cs" %}
+```
 using Diagram_MySQL.Server.Data;
 using Diagram_MySQL.Server.Models;
 using LinqToDB;
@@ -378,19 +361,18 @@ namespace Diagram_MySQL.Server.Controllers
         }
     }
 }
-{% endhighlight %}
-{% endtabs %}
+
+```
 
 ### Registering services in Program.cs
 
-The **Program.cs** file is where we configure all backend services and middleware.
+The **Program.cs** file is where we configure all backend services and middle ware.
 
 **Instructions:**
 1. Open **Program.cs** in the project root.
 2. Add the following code.
 
-{% tabs %}
-{% highlight csharp tabtitle="Program.cs" %}
+```
 using Diagram_MySQL.Server.Data;
 using LinqToDB;
 using LinqToDB.AspNet;
@@ -435,8 +417,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-{% endhighlight %}
-{% endtabs %}
+```
 
 **Explanation:**
 - `AddControllers()`: Registers MVC controllers for HTTP routing.
@@ -456,13 +437,13 @@ The following steps describe how to render the Diagram and connect it to the MyS
 
 Create the React client application using the following commands in a Visual Studio Code terminal or command prompt:
 
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
+```
 npm create vite@latest diagram_mysql.client -- --template react-ts
+```
+```
 cd diagram_mysql.client
 npm install
-{% endhighlight %}
-{% endtabs %}
+```
 
 This command scaffolds a new React application using Vite. Run `npm install` to install the scaffolded project dependencies before proceeding.
 
@@ -470,32 +451,27 @@ This command scaffolds a new React application using Vite. Run `npm install` to 
 
 Install the required Syncfusion® packages by running the following commands:
 
-{% tabs %}
-{% highlight bash tabtitle="npm" %}
+```
 npm install @syncfusion/ej2-react-diagrams --save
-{% endhighlight %}
-{% endtabs %}
+```
 
 After installation, the necessary CSS files are available in the **node_modules** directory.
-Add the required CSS references to the **src/index.css** file to apply styling to the Diagram component.
+Add the required CSS references to the **src/index.css** file to apply styling to the React Diagram component.
 
-{% tabs %}
-{% highlight css tabtitle="src/index.css" %}
+```
 @import "../node_modules/@syncfusion/ej2-react-diagrams/styles/bootstrap5.3.css";
 @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.3.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.3.css";
-{% endhighlight %}
-{% endtabs %}
+```
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion® React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.
 
 ### Step 3: Add Syncfusion® React Diagram
 
-Create a basic Diagram component in **src/App.tsx**:
+Create a basic React Diagram component in **src/App.tsx**:
 
-{% tabs %}
-{% highlight tsx tabtitle="src/App.tsx" %}
+```
 import {
   DiagramComponent,
   Inject,
@@ -518,8 +494,7 @@ export default function App() {
     </div>
   );
 }
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Step 4: Configure remote data binding
 
@@ -533,8 +508,8 @@ Replace the entire contents of **src/App.tsx** with the following code.
 - Applies default node and connector styling.
 - Registers `DataBinding` and `HierarchicalTree` through `<Inject>`.
 
-{% tabs %}
-{% highlight tsx tabtitle="src/App.tsx" %}
+{% raw %}
+```
 import {
   DiagramComponent,
   Inject,
@@ -609,8 +584,8 @@ export default function App() {
     </div>
   );
 }
-{% endhighlight %}
-{% endtabs %}
+```
+{% endraw %}
 
 ## Running the complete application
 
@@ -618,37 +593,29 @@ export default function App() {
 
 Open a terminal and navigate to the backend project:
 
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-cd Diagram_MySQL.Server
-{% endhighlight %}
-{% endtabs %}
+```
+cd Diagram_MySQL.Server 
+```
 
 Start the backend server:
 
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
+```
 dotnet run
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Starting the React frontend
 
 Open a **new terminal** and navigate to the frontend project:
 
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
+```
 cd diagram_mysql.client
-{% endhighlight %}
-{% endtabs %}
+```
 
 Start the React development server:
 
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
+```
 npm run dev
-{% endhighlight %}
-{% endtabs %}
+```
 
 ![Organizational-Hierarchy](images/mysql-output.png)
 
@@ -657,14 +624,11 @@ npm run dev
 ### Blank page in browser tab
 
 1. Verify services and processes
-    - Verify the Windows service is running: press <kbd>Win</kbd> + <kbd>R</kbd>, run `services.msc`, and confirm **MySQL80** (or your service name) is running.
+    - Verify the Windows service is running: press **Win+R**, run **services.msc**, and confirm **MySQL80** (or your service name) is running.
     - Ensure the ASP.NET backend is running. If not, run:
-
-      {% tabs %}
-      {% highlight bash tabtitle="CMD" %}
+      ```
       dotnet run
-      {% endhighlight %}
-      {% endtabs %}
+      ```
 
 2. Verify backend binding and endpoint
    - Verify the MySQL connection string in **appsettings.json**: `Server`, `Port`, `Database`, `User Id`, and `Password` must match your MySQL setup.
@@ -690,13 +654,10 @@ npm run dev
    - Confirm the DataManager/service URL uses the correct HTTP port, e.g.: **http://localhost:5296/api/diagram/items**
 
 ### Application shows the diagram twice
-  - Stop the React client dev server (press <kbd>Ctrl</kbd> + <kbd>C</kbd> in the terminal where it's running) and then restart it:
-
-    {% tabs %}
-    {% highlight bash tabtitle="CMD" %}
+  - Stop the React client dev server (press **Ctrl+C** in the terminal where it's running) and then restart it:
+    ```
     npm run dev
-    {% endhighlight %}
-    {% endtabs %}
+    ```
 
 ## Complete sample repository
 

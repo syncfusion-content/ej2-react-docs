@@ -87,7 +87,7 @@ N> A Syncfusion® license key is not required for local development. However, a 
 
 ## Step 3: Add the required styles
 
-The Diagram component needs Syncfusion® theme styles to display correctly. Install the Tailwind 3 theme package using the following command:
+The React Diagram component needs Syncfusion® theme styles to display correctly. Install the Tailwind 3 theme package using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -112,7 +112,7 @@ For the list of available themes, refer to the [Themes](https://ej2.syncfusion.c
 
 N> Syncfusion® provides multiple built-in themes. If the application uses a different theme, replace the `@syncfusion/ej2-tailwind3-theme/styles/diagram/index.css` reference with the corresponding theme path, such as `@syncfusion/ej2-material3-theme/styles/diagram/index.css`.
 
-## Step 4: Add the Diagram component
+## Step 4: Add the React Diagram component
 
 Import `DiagramComponent` from `@syncfusion/ej2-react-diagrams` and add it to the Preact component.
 
@@ -136,9 +136,9 @@ export function App() {
 render(<App />, document.getElementById('app'));
 ```
 
-At this stage, the Diagram component renders an empty canvas. The next step replaces this code with a complete flowchart example.
+At this stage, the React Diagram component renders an empty canvas. The next step replaces this code with a complete flowchart example.
 
-N> The Diagram component must have a valid height. If the height is not set, the Diagram canvas may not be visible.
+N> The React Diagram component must have a valid height. If the height is not set, the Diagram canvas may not be visible.
 
 ## Step 5: Create your first Diagram with nodes and connectors
 
@@ -283,7 +283,7 @@ N> To create a production build, run `npm run build` (or `yarn build`). The gene
 
 ## Next steps
 
-To explore the Diagram component in more depth, refer to the following topics:
+To explore the React Diagram component in more depth, refer to the following topics:
 
 * [Nodes](https://ej2.syncfusion.com/react/documentation/diagram/nodes)
 * [Connectors](https://ej2.syncfusion.com/react/documentation/diagram/connectors)

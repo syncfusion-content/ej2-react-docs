@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Download offline installer - Syncfusion
+title: Download React Offline Installer | Syncfusion
 description: Learn how to download the Syncfusion React (JavaScript - EJ2) offline installer for trial and licensed versions.
 control: Download
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download Syncfusion React offline installer
+# Download Syncfusion® React Offline Installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) offline installer is available from the [Syncfusion](https://www.syncfusion.com/) website. Depending on the license type, download either the trial installer or the licensed installer. Offline installers are provided in the following format:
 
@@ -47,7 +47,7 @@ The 30-day trial is available in two ways:
 
 5. Before the trial expires, download the trial installer at any time from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page in your account.
 
-    ![Trials and Downloads dashboard](images/dashboard.png)
+    ![Trials & Downloads dashboard](images/dashboard.png)
 
 6. Click the **More Download Options** button (labeled 2 in the screenshot above) to access the JavaScript - EJ2 offline trial installer, available in this format:
    * **Windows**: EXE and ZIP

@@ -187,21 +187,22 @@ function D3GroupedBar({ data, title }: D3GroupedBarProps) {
   }, [data, title]);
 
   if (data.length === 0) {
-    return (
-      <p className="chart-empty" aria-live="polite">
-        Preparing the visualization...
-      </p>
+    return React.createElement(
+      'p',
+      { className: 'chart-empty', 'aria-live': 'polite' },
+      'Preparing the visualization...'
     );
   }
 
-  return (
-    <svg
-      ref={svgRef}
-      className="d3-chart"
-      role="img"
-      aria-label={title}
-      tabIndex={0}
-    />
+  return React.createElement(
+    'svg',
+    {
+      ref: svgRef,
+      className: 'd3-chart',
+      role: 'img',
+      'aria-label': title,
+      tabIndex: 0
+    }
   );
 }
 

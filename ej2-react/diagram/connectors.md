@@ -302,7 +302,7 @@ root.render(<App />);
 
 ## Automatic Line Routing
 
-Diagram provides additional flexibility to re-route diagram connectors automatically. A connector will frequently re-route itself when a shape moves next to it. Routing adjusts the geometry of connectors to prevent them from overlapping with any nearby nodes in their path. This feature can be activated by adding the LineRouting constraints property to the diagram.
+React Diagram provides additional flexibility to re-route diagram connectors automatically. A connector will frequently re-route itself when a shape moves next to it. Routing adjusts the geometry of connectors to prevent them from overlapping with any nearby nodes in their path. This feature can be activated by adding the LineRouting constraints property to the diagram.
 
 The LineRouting module should be injected to the application as shown in the following code snippet.
 
@@ -319,7 +319,7 @@ The line routing constraints must be included in the default diagram constraints
 
   ```ts
     /**
-    *  Initialize the Diagram
+    *  Initialize the React Diagram
     */
       <DiagramComponent constraints={DiagramConstraints.Default | DiagramConstraints.LineRouting} />
   ```
@@ -383,7 +383,7 @@ To enable this feature, inject the `AvoidLineOverlapping` module and add its con
   ```ts
 
   /**
-  *  Initialize the Diagram
+  *  Initialize the React Diagram
   */
   <DiagramComponent constraints={DiagramConstraints.Default | DiagramConstraints.LineRouting | DiagramConstraints.AvoidLineOverlapping} />
 

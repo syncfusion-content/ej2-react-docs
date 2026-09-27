@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD010 -->
 
-The commands in diagram control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
+The commands in React Diagram control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
 
 * Alignment commands
 * Distribute commands
@@ -37,14 +37,14 @@ The alignment command enables you to align selected or defined objects, such as 
 
 The [`Alignment Options`](https://ej2.syncfusion.com/react/documentation/api/diagram/alignmentOptions#AlignmentOptions) defines the alignment position of objects to be aligned.
 
-| Alignment | Description |
+|Alignment|Description|
 |----|----|
-| Left | Aligns all the selected objects at the left of the selection boundary |
-| Right | Aligns all the selected objects at the right of the selection boundary |
-| Center | Aligns all the selected objects at the center of the selection boundary |
-| Top | Aligns all the selected objects at the top of the selection boundary |
-| Bottom | Aligns all the selected objects at the bottom of the selection boundary |
-| Middle | Aligns all the selected objects at the middle of the selection boundary |
+|Left| Aligns all the selected objects at the left of the selection boundary|
+|Right| Aligns all the selected objects at the right of the selection boundary|
+|Center| Aligns all the selected objects at the center of the selection boundary|
+|Top| Aligns all the selected objects at the top of the selection boundary|
+|Bottom| Aligns all the selected objects at the bottom of the selection boundary|
+|Middle| Aligns all the selected objects at the middle of the selection boundary|
 
 <!-- markdownlint-disable MD033 -->
 
@@ -285,9 +285,10 @@ The [`sendBackward`](https://ej2.syncfusion.com/react/documentation/api/diagram#
 
 {% previewsample "page.domainurl/code-snippet/diagram/commands/es5sendbackward-cs1" %}
 
+ 
 The Z-order commands can also be performed using keyboard shortcuts. For more information, refer to the [`keyboard commands`](./interaction#keyboard).
 
-## Zoom Commands
+## Zoom
 
 The [`zoom`](https://ej2.syncfusion.com/react/documentation/api/diagram#zoom) command is used to zoom-in and zoom-out the diagram view.
 
@@ -300,7 +301,7 @@ import {
     DiagramComponent,
 } from "@syncfusion/ej2-react-diagrams";
 let diagramInstance: DiagramComponent;
-//Initializes the Diagram component
+//Initializes the React Diagram component
 function App() {
   return (
     <DiagramComponent
@@ -324,7 +325,6 @@ const root = ReactDOM.createRoot(document.getElementById('diagram'));
 root.render(<App />);
 
 ```
-
 For more information about zoom refer to the [zoom](./scroll-settings#update-zoom-at-runtime).
 
 ## Nudge Command
@@ -439,7 +439,7 @@ The following code illustrates how to execute `FitToPage` command.
 
 ## Command Manager
 
-The Diagram provides support for mapping or binding command execution to specific key gestures. It includes built-in commands and allows for the definition of custom commands through the [`CommandManager`](https://ej2.syncfusion.com/react/documentation/api/diagram/commandManager#commandManager). Custom commands are executed when the specified key gesture is recognized.
+The React Diagram provides support for mapping or binding command execution to specific key gestures. It includes built-in commands and allows for the definition of custom commands through the [`CommandManager`](https://ej2.syncfusion.com/react/documentation/api/React Diagram/commandManager#commandManager). Custom commands are executed when the specified key gesture is recognized.
 
 ### Custom Command
 

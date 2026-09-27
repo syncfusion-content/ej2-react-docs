@@ -14,7 +14,7 @@ Using the React Splitter component, create complex layouts with multiple and nes
 
 ## Code editor style layout
 
-Create an element with two child panes to render the outer Splitter. Then create an inner Splitter inside the first pane of the vertical Splitter.
+Create an element with two child panes to render the outer Splitter. Then create an inner Splitter inside the first pane of the vertical React Splitter.
 
 `[Class-component]`
 

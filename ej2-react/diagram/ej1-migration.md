@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migration from EJ1 in React Diagram | Syncfusion®
-description: Migrate EJ1 diagram JSON into the React EJ2 Diagram by injecting the EJ1 serialization module to preserve backward-compatible data structures.
+description: Migrate EJ1 React Diagram JSON into the EJ2 React Diagram by injecting the EJ1 serialization module to preserve backward-compatible data structures.
 control: EJ1 Migration 
 platform: ej2-react
 documentation: ug
@@ -57,4 +57,4 @@ Render the `App` component in your application entry point using `createRoot` fr
 
 N> If the EJ1 JSON is not rendered, ensure you have passed `true` as the second argument to `loadDiagram`; otherwise it is treated as EJ2 JSON and migration is skipped.
 
-N> Predefined EJ1 data such as nodes/connectors without EJ1-specific properties are preserved, but features not supported by the EJ2 Diagram (for example, deprecated EJ1 node shapes or legacy connector behaviors) may require manual adjustment after loading.
+N> Predefined EJ1 data such as nodes/connectors without EJ1-specific properties are preserved, but features not supported by the EJ2 React Diagram (for example, deprecated EJ1 node shapes or legacy connector behaviors) may require manual adjustment after loading.

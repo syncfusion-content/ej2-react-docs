@@ -55,9 +55,9 @@ The following table lists the built-in toolbar options and their actions:
 
 ## Show specific chart types in the dropdown menu
 
-By default, the dropdown menu in the toolbar displays all available chart types. However, you may want to show only specific chart types in the dropdown menu based on your application’s needs. To do this, use the [`chartTypes`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#charttypes) property. This property allows you to define a list of chart types that will appear in the dropdown menu, ensuring users see only the options you select.
+By default, the dropdown menu in the toolbar displays all available chart types. However, you may want to show only specific chart types in the dropdown menu based on your application’s needs. To do this, use the [`chartTypes`](https://ej2.syncfusion.com/react/documentation/api/pivotview#charttypes) property. This property allows you to define a list of chart types that will appear in the dropdown menu, ensuring users see only the options you select.
 
-For example, if you want the dropdown menu to show only the Column, Bar, Line, and Area chart types, you can set the [`chartTypes`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#charttypes) property to include these specific options. This makes the pivot chart easier to use by limiting the choices to those most relevant for your data.
+For example, if you want the dropdown menu to show only the Column, Bar, Line, and Area chart types, you can set the [`chartTypes`](https://ej2.syncfusion.com/react/documentation/api/pivotview#charttypes) property to include these specific options. This makes the pivot chart easier to use by limiting the choices to those most relevant for your data.
 
 To learn more about the supported chart types, see the [Pivot Chart documentation](https://ej2.syncfusion.com/react/documentation/pivotview/pivot-chart#chart-types).
 
@@ -96,7 +96,7 @@ In the pivot chart, you can show or hide the legend dynamically using an option 
 
 ## Adding a custom option to the toolbar
 
-You can add new items to the toolbar in the React Pivot Table component beyond the built-in options. This is done using the [`toolbarRender`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbarrender) event. Within this event, you can define the new toolbar item and specify what action it performs when clicked. The `customToolbar` parameter exposes the existing toolbar items; you can use the `splice` method to insert your custom item at a specific position.
+You can add new items to the toolbar in the React Pivot Table component beyond the built-in options. This is done using the [`toolbarRender`](https://ej2.syncfusion.com/react/documentation/api/pivotview#toolbarrender) event. Within this event, you can define the new toolbar item and specify what action it performs when clicked. The `customToolbar` parameter exposes the existing toolbar items; you can use the `splice` method to insert your custom item at a specific position.
 
 Here’s an example of how to add a custom toolbar item:
 
@@ -119,7 +119,7 @@ Here’s an example of how to add a custom toolbar item:
 
 ### Toolbar template
 
-You can customize the entire toolbar panel by using the [`toolbarTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbartemplate) property. This allows you to design the toolbar with HTML elements and include any custom control, such as buttons or dropdowns, as toolbar items. The HTML structure for the toolbar is defined separately and linked to the Pivot Table by setting the `id` of the HTML element in the [`toolbarTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbartemplate) property. The `toolbarClick` event fires when any toolbar item (built-in or custom) is clicked, and `args.item.id` identifies the source element so you can dispatch actions accordingly.
+You can customize the entire toolbar panel by using the [`toolbarTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview#toolbartemplate) property. This allows you to design the toolbar with HTML elements and include any custom control, such as buttons or dropdowns, as toolbar items. The HTML structure for the toolbar is defined separately and linked to the Pivot Table by setting the `id` of the HTML element in the [`toolbarTemplate`](https://ej2.syncfusion.com/react/documentation/api/pivotview#toolbartemplate) property. The `toolbarClick` event fires when any toolbar item (built-in or custom) is clicked, and `args.item.id` identifies the source element so you can dispatch actions accordingly.
 
 Below is an example of a custom toolbar with buttons to expand or collapse all rows in the Pivot Table:
 
@@ -159,13 +159,13 @@ Another option allows framing a custom toolbar item using HTML elements and incl
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs298" %}
 
-> Note: For both options, the actions for the toolbar template items can be defined in the [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbarclick) event. Additionally, if the toolbar item is a custom control, its built-in events can also be accessed.
+> Note: For both options, the actions for the toolbar template items can be defined in the [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/pivotview#toolbarclick) event. Additionally, if the toolbar item is a custom control, its built-in events can also be accessed.
 
 ## Save and load report as a JSON file
 
 You can save the current Pivot Table report as a JSON file and load it back into the Pivot Table whenever needed. This allows you to store your report settings, such as row, column, and value configurations, and reuse them later.
 
-To save a report, use the [`getPersistData`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#getpersistdata) method to retrieve the current Pivot Table settings. These settings are then converted to a JSON file and downloaded to your chosen location. To load a report, select a JSON file containing the saved settings, and the Pivot Table will update to reflect those settings using the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) property.
+To save a report, use the [`getPersistData`](https://ej2.syncfusion.com/react/documentation/api/pivotview#getpersistdata) method to retrieve the current Pivot Table settings. These settings are then converted to a JSON file and downloaded to your chosen location. To load a report, select a JSON file containing the saved settings, and the Pivot Table will update to reflect those settings using the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) property.
 
 The following code example shows how to save and load a Pivot Table report as a JSON file. By clicking an external "Save" button, the `saveData` method is triggered to save the current report settings as a JSON file. Similarly, clicking an external "Load" button triggers the `readBlob` method to load a JSON file and restore the report settings.
 
@@ -398,7 +398,7 @@ Further, let us explore more on how to save, load, rename, delete, and add repor
 
 #### Saving a report
 
-When you select the **"Save a report"** option from the toolbar, the [saveReport](https://ej2.syncfusion.com/react/documentation/api/pivotview/#savereport) event is triggered. In this event, an AJAX request is made to the Web API controller's **SaveReport** method, passing the name of the current report and the current report, which you can use to check and save in the SQL database.
+When you select the **"Save a report"** option from the toolbar, the [saveReport](https://ej2.syncfusion.com/react/documentation/api/pivotview#savereport) event is triggered. In this event, an AJAX request is made to the Web API controller's **SaveReport** method, passing the name of the current report and the current report, which you can use to check and save in the SQL database.
 
 For example, the report shown in the following code snippet will be passed to the **SaveReport** method along with the report name **"Sample Report"** and saved in the SQL database.
 
@@ -516,13 +516,13 @@ namespace MyWebApp.Controllers
 
 ![The current report has been saved in the SQL database](images/output_save_report.png)
 
-In the meantime, you can save a duplicate of the current report to the SQL Server database with a different name by selecting **"Save as current report"** from the toolbar. The [saveReport](https://ej2.syncfusion.com/react/documentation/api/pivotview/#savereport) event will then be triggered with the new report name **"Sample Report 1"** and the current report. You can save them to the SQL Server database after passing them to the Web API service, as mentioned above.
+In the meantime, you can save a duplicate of the current report to the SQL Server database with a different name by selecting **"Save as current report"** from the toolbar. The [saveReport](https://ej2.syncfusion.com/react/documentation/api/pivotview#savereport) event will then be triggered with the new report name **"Sample Report 1"** and the current report. You can save them to the SQL Server database after passing them to the Web API service, as mentioned above.
 
 ![Copy of the current report has been saved in the SQL database](images/output_save_as_report.png)
 
 #### Loading a report
 
-When you select the dropdown menu item from the toolbar, the [loadReport](https://ej2.syncfusion.com/react/documentation/api/pivotview/#loadreport) event is triggered. In this event, an AJAX request is made to the **LoadReport** method of the Web API controller, passing the name of the selected report. The method uses this information to search for the report in the SQL database, fetch it, and load it into the pivot table.
+When you select the dropdown menu item from the toolbar, the [loadReport](https://ej2.syncfusion.com/react/documentation/api/pivotview#loadreport) event is triggered. In this event, an AJAX request is made to the **LoadReport** method of the Web API controller, passing the name of the selected report. The method uses this information to search for the report in the SQL database, fetch it, and load it into the pivot table.
 
 For example, if the report name **"Sample Report 1"** is selected from a dropdown menu and passed, the **LoadReport** method will use that name to search for the report in the SQL database, retrieve it, and then load it into the pivot table.
 
@@ -643,7 +643,7 @@ namespace MyWebApp.Controllers
 
 #### Renaming a report
 
-When you select the **"Rename a current report"** option from the toolbar, the [renameReport](https://ej2.syncfusion.com/react/documentation/api/pivotview/#renamereport) event is triggered. In this event, an AJAX request is made to the **RenameReport** method of the Web API controller, passing the current and new report names, where you can use the current report name to identify the report and resave it with the new report name in the SQL database.
+When you select the **"Rename a current report"** option from the toolbar, the [renameReport](https://ej2.syncfusion.com/react/documentation/api/pivotview#renamereport) event is triggered. In this event, an AJAX request is made to the **RenameReport** method of the Web API controller, passing the current and new report names, where you can use the current report name to identify the report and resave it with the new report name in the SQL database.
 
 For example, if we rename the current report from **"Sample Report 1"** to **"Sample Report 2"**, both **"Sample Report 1"** and **"Sample Report 2"** will be passed to the **RenameReport** method, which will rename the current report with the new report name **"Sample Report 2"** in the SQL database.
 
@@ -779,7 +779,7 @@ namespace MyWebApp.Controllers
 
 #### Deleting a report
 
-When you select the **"Delete a current report"** option from the toolbar, the [removeReport](https://ej2.syncfusion.com/react/documentation/api/pivotview/#removereport) event is triggered. In this event, an AJAX request is made to the **RemoveReport** method of the Web API controller, passing the current report name to identify and delete the appropriate report from the SQL database.
+When you select the **"Delete a current report"** option from the toolbar, the [removeReport](https://ej2.syncfusion.com/react/documentation/api/pivotview#removereport) event is triggered. In this event, an AJAX request is made to the **RemoveReport** method of the Web API controller, passing the current report name to identify and delete the appropriate report from the SQL database.
 
 N> * If the current report **n** from the pivot table is deleted, the pivot table will automatically load the last report from the report list.
 N> * When a report is removed from a pivot table with only one report, the SQL database refreshes; however, the pivot table will continue to show the removed report until a new report is added to the pivot table.
@@ -898,7 +898,7 @@ namespace MyWebApp.Controllers
 
 #### Adding a report
 
-When you select the **"Create a new report"** option from the toolbar, the [newReport](https://ej2.syncfusion.com/react/documentation/api/pivotview/#newreport) event is triggered, followed by the [saveReport](https://ej2.syncfusion.com/react/documentation/api/pivotview/#savereport) event. To save this new report to the SQL database, use the [saveReport](https://ej2.syncfusion.com/react/documentation/api/pivotview/#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
+When you select the **"Create a new report"** option from the toolbar, the [newReport](https://ej2.syncfusion.com/react/documentation/api/pivotview#newreport) event is triggered, followed by the [saveReport](https://ej2.syncfusion.com/react/documentation/api/pivotview#savereport) event. To save this new report to the SQL database, use the [saveReport](https://ej2.syncfusion.com/react/documentation/api/pivotview#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
 
 ![Adding a report in the SQL database](images/output_new_report.png)
 
@@ -916,31 +916,31 @@ The following points apply when saving reports to a SQL Server database:
 
 ### FetchReport
 
-The [`fetchReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#fetchreport) event is triggered when a user clicks the dropdown list in the toolbar to retrieve saved reports. It includes the [`reportName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fetchReportArgs/#reportname) parameter, which holds the name of the selected report. This event allows users to fetch report names from local storage and populate the dropdown list for easy selection.
+The [`fetchReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview#fetchreport) event is triggered when a user clicks the dropdown list in the toolbar to retrieve saved reports. It includes the [`reportName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fetchReportArgs#reportname) parameter, which holds the name of the selected report. This event allows users to fetch report names from local storage and populate the dropdown list for easy selection.
 
 ### LoadReport
 
-The [`loadReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#loadreport) event occurs when a user selects a report from the dropdown list in the toolbar of the Pivot Table. This event allows the user to load the chosen report into the Pivot Table for viewing or analysis. It includes two parameters: [`report`](https://ej2.syncfusion.com/react/documentation/api/pivotview/loadReportArgs/#report), which contains the details of the selected report, and [`reportName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/loadReportArgs/#reportname), which specifies the name of the report. These parameters allow the user to load the selected report into the Pivot Table, updating the displayed data based on the chosen report.
+The [`loadReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview#loadreport) event occurs when a user selects a report from the dropdown list in the toolbar of the Pivot Table. This event allows the user to load the chosen report into the Pivot Table for viewing or analysis. It includes two parameters: [`report`](https://ej2.syncfusion.com/react/documentation/api/pivotview/loadReportArgs#report), which contains the details of the selected report, and [`reportName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/loadReportArgs#reportname), which specifies the name of the report. These parameters allow the user to load the selected report into the Pivot Table, updating the displayed data based on the chosen report.
 
 ### NewReport
 
-The [`newReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#newreport) event is triggered when a user clicks the **New Report** icon in the toolbar. This event allows the user to create a new report and add it to the report list. The event provides a parameter, [`report`](https://ej2.syncfusion.com/react/documentation/api/pivotview/newReportArgs/#report), which contains details about the new report. By using this event, users can easily start fresh with a new set of data configurations in the Pivot Table, managed through the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) property.
+The [`newReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview#newreport) event is triggered when a user clicks the **New Report** icon in the toolbar. This event allows the user to create a new report and add it to the report list. The event provides a parameter, [`report`](https://ej2.syncfusion.com/react/documentation/api/pivotview/newReportArgs#report), which contains details about the new report. By using this event, users can easily start fresh with a new set of data configurations in the Pivot Table, managed through the [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#datasourcesettings) property.
 
 ### RenameReport
 
-The [`renameReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#renamereport) event is triggered when a user clicks the rename report icon in the toolbar. This event allows users to change the name of a selected report from the report list. It includes the following parameters: [`rename`](https://ej2.syncfusion.com/react/documentation/api/pivotview/renameReportArgs/#rename), which holds the new report name entered by the user; [`report`](https://ej2.syncfusion.com/react/documentation/api/pivotview/renameReportArgs/#report), which contains the details of the current report; and [`reportName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/renameReportArgs/#reportname), which stores the original name of the report.
+The [`renameReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview#renamereport) event is triggered when a user clicks the rename report icon in the toolbar. This event allows users to change the name of a selected report from the report list. It includes the following parameters: [`rename`](https://ej2.syncfusion.com/react/documentation/api/pivotview/renameReportArgs#rename), which holds the new report name entered by the user; [`report`](https://ej2.syncfusion.com/react/documentation/api/pivotview/renameReportArgs#report), which contains the details of the current report; and [`reportName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/renameReportArgs#reportname), which stores the original name of the report.
 
 ### RemoveReport
 
-The [`removeReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#removereport) event is triggered when a user clicks the remove report icon in the toolbar. It includes two parameters: [`report`](https://ej2.syncfusion.com/react/documentation/api/pivotview/removeReportArgs/#report) and [`reportName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/removeReportArgs/#reportname). These parameters allow the user to identify and remove a selected report from the report list in the Pivot Table.
+The [`removeReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview#removereport) event is triggered when a user clicks the remove report icon in the toolbar. It includes two parameters: [`report`](https://ej2.syncfusion.com/react/documentation/api/pivotview/removeReportArgs#report) and [`reportName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/removeReportArgs#reportname). These parameters allow the user to identify and remove a selected report from the report list in the Pivot Table.
 
 ### SaveReport
 
-The [`saveReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#savereport) event triggers when a user clicks the save report icon in the toolbar. It allows the user to save changes made to the current report. The event includes two parameters: [`report`](https://ej2.syncfusion.com/react/documentation/api/pivotview/saveReportArgs/#report), which contains the report details, and [`reportName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/saveReportArgs/#reportname), which specifies the name of the saved report.
+The [`saveReport`](https://ej2.syncfusion.com/react/documentation/api/pivotview#savereport) event triggers when a user clicks the save report icon in the toolbar. It allows the user to save changes made to the current report. The event includes two parameters: [`report`](https://ej2.syncfusion.com/react/documentation/api/pivotview/saveReportArgs#report), which contains the report details, and [`reportName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/saveReportArgs#reportname), which specifies the name of the saved report.
 
 ### ToolbarRender
 
-The [`toolbarRender`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbarrender) event triggers when the toolbar is displayed in the Pivot Table. It includes the [`customToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/toolbarArgs/#customtoolbar) parameter, which allows users to modify existing toolbar items or [add new toolbar items](https://ej2.syncfusion.com/react/documentation/pivotview/tool-bar#adding-custom-option-to-the-toolbar).
+The [`toolbarRender`](https://ej2.syncfusion.com/react/documentation/api/pivotview#toolbarrender) event triggers when the toolbar is displayed in the Pivot Table. It includes the [`customToolbar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/toolbarArgs#customtoolbar) parameter, which allows users to modify existing toolbar items or [add new toolbar items](https://ej2.syncfusion.com/react/documentation/pivotview/tool-bar#adding-custom-option-to-the-toolbar).
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -961,7 +961,7 @@ The [`toolbarRender`](https://ej2.syncfusion.com/react/documentation/api/pivotvi
 
 ### BeforeExport
 
-The Pivot Table component allows users to export data as PDF, Excel, or CSV files using the toolbar options. The [`beforeExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#beforeexport) event lets users customize settings for the exported document before the export process begins. For instance, users can add a header or footer to a PDF document by setting the [`header`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#header) and [`footer`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/#footer) properties in the [`pdfExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties/) object within this event. Similarly, for Excel exports, users can define headers using the [`excelExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties/) object.
+The Pivot Table component allows users to export data as PDF, Excel, or CSV files using the toolbar options. The [`beforeExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview#beforeexport) event lets users customize settings for the exported document before the export process begins. For instance, users can add a header or footer to a PDF document by setting the [`header`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#header) and [`footer`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties#footer) properties in the [`pdfExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/pdfExportProperties) object within this event. Similarly, for Excel exports, users can define headers using the [`excelExportProperties`](https://ej2.syncfusion.com/react/documentation/api/grid/excelExportProperties) object.
 
 Here’s an example of how to use the `beforeExport` event to customize headers and footers for both PDF and Excel exports:
 

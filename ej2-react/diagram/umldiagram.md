@@ -2,7 +2,7 @@
 layout: post
 title: UML Diagram in React Diagram | Syncfusion®
 description: Model software in the React Diagram with UML Class and Activity diagram shapes — class attributes, methods, lifelines, and decisions — for object-oriented design.
-control: Umldiagram
+control: Umldiagram 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -45,7 +45,7 @@ The UML class diagram shapes are explained as follows.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5class-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5class-cs1" %}
 
 ### Interface
 
@@ -70,7 +70,7 @@ The following code example illustrates how to create an interface:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5interface-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5interface-cs1" %}
 
 ### Enumeration
 
@@ -95,7 +95,7 @@ The following code example illustrates how to create an enumeration.
 
 A class may be involved in one or more relationships with other classes. The relationship types available are as follows:
 
-| Shape | Image |
+| Shape       | Image                                |
 | ----------- | ------------------------------------ |
 | Association | ![Association relationship directional arrow connecting two classes](images/Association.png) |
 | Aggregation | ![Aggregation relationship hollow diamond at the whole-class end pointing to the part class](images/Aggregation.png)  |
@@ -121,7 +121,7 @@ The association property allows you to define the type of association. The defau
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5association-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5association-cs1" %}
 
 ### Aggregation
 
@@ -138,7 +138,7 @@ The following code example illustrates how to create an aggregation.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5aggregation-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5aggregation-cs1" %}
 
 ### Composition
 
@@ -155,7 +155,7 @@ The following code example illustrates how to create a composition.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5composition-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5composition-cs1" %}
 
 ### Inheritance
 
@@ -174,7 +174,7 @@ The following code example illustrates how to create an inheritance.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5inheritance-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5inheritance-cs1" %}
 
 ### Dependency
 
@@ -191,7 +191,9 @@ The following code example illustrates how to create a dependency.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5dependency-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5dependency-cs1" %}
+
+
 
 ### Multiplicity
 
@@ -223,7 +225,7 @@ The following code example illustrates how to customize the multiplicity.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5multiplicity-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5multiplicity-cs1" %}
 
 ## How to Add UML Child at Runtime
 
@@ -262,7 +264,7 @@ The following code example illustrates how to add members, methods and attribute
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5Method-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5Method-cs1" %}
 
 ### Adding UML Child Through User Interaction
 
@@ -285,7 +287,7 @@ The following code example showcases the rendering of UML built-in shapes in a s
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5preview-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5preview-cs4" %}
 
 ## Editing in UML Nodes
 
@@ -301,29 +303,31 @@ An Activity diagram functions as a visual flowchart, illustrating the progressio
 
 The purpose of an activity diagram can be described as follows.
 
-1. Draw the activity flow of a system.
-2. Describe the sequence from one activity to another.
-3. Describe the parallel, branched, and concurrent flow of the system.
+    1. Draw the activity flow of a system.
 
+    2. Describe the sequence from one activity to another.
+
+    3. Describe the parallel, branched, and concurrent flow of the system.
+    
 ### UML Activity Diagram Shapes
 
 To create a UmlActivity, define the `type` as "UmlActivity" and set the list of built-in shapes in the `shape` property as demonstrated below.
 
-| Shape          | Image                                       |
-| -------------- | ------------------------------------------- |
-| Action         | ![Action](images/Action.png)                |
-| Decision       | ![Decision](images/Decision.png)            |
-| MergeNode      | ![MergeNode](images/MergeNode.png)          |
-| InitialNode    | ![InitialNode](images/InitialNode.png)      |
-| FinalNode      | ![FinalNode](images/FinalNode.png)          |
-| ForkNode       | ![ForkNode](images/ForkNode.png)            |
-| JoinNode       | ![JoinNode](images/JoinNode.png)            |
-| TimeEvent      | ![TimeEvent](images/TimeEvent.png)          |
-| AcceptingEvent | ![AcceptingEvent](images/AcceptingEvent.png)|
-| SendSignal     | ![SendSignal](images/SendSignal.png)        |
+| Shape          | Image                                    |
+| -------------- | ---------------------------------------- |
+| Action         | ![Action](images/Action.png)          |
+| Decision       | ![Decision](images/Decision.png)         |
+| MergeNode      | ![MergeNode](images/MergeNode.png)       |
+| InitialNode    | ![InitialNode](images/InitialNode.png)       |
+| FinalNode      | ![FinalNode](images/FinalNode.png)      |
+| ForkNode       | ![ForkNode](images/ForkNode.png)       |
+| JoinNode       | ![JoinNode](images/JoinNode.png)       |
+| TimeEvent      | ![TimeEvent](images/TimeEvent.png)      |
+| AcceptingEvent | ![AcceptingEvent](images/AcceptingEvent.png) |
+| SendSignal     | ![SendSignal](images/SendSignal.png)     |
 | ReceiveSignal  | ![ReceiveSignal](images/ReceiveSignal.png)  |
-| StructuredNode | ![StructuredNode](images/StructuredNode.png)|
-| Note           | ![Note](images/Note.png)                    |
+| StructuredNode | ![StructuredNode](images/StructuredNode.png) |
+| Note           | ![Note](images/Note.png)           |
 
 The following code illustrates how to create a UmlActivity shapes.
 
@@ -336,7 +340,7 @@ The following code illustrates how to create a UmlActivity shapes.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5UmlActivity-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5UmlActivity-cs1" %}
 
 ### UML Activity Connector
 
@@ -353,7 +357,7 @@ The following code illustrates how to create a UmlActivity connector.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5UmlActivityConnector-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/es5UmlActivityConnector-cs1" %}
 
 ## Troubleshooting
 

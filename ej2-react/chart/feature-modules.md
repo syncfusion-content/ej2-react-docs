@@ -105,7 +105,7 @@ The available chart modules are listed below.
 | [`Selection`](https://ej2.syncfusion.com/react/documentation/api/chart/selection) | Inject this module to use the selection feature. |
 | [`Highlight`](https://ej2.syncfusion.com/react/documentation/api/chart/highlight) | Inject this module to use the highlight feature. |
 | [`Export`](https://ej2.syncfusion.com/react/documentation/api/chart/export) | Inject this module to use the export feature. |
-| [`MultiLevelLabel`](https://ej2.syncfusion.com/react/documentation/api/chart/index-default#multilevellabelmodule) | Inject this module to use the multi-level label feature. |
+| [`MultiLevelLabel`](https://ej2.syncfusion.com/react/documentation/api/chart/multilevellabel) | Inject this module to use the multi-level label feature. |
 
 ## See also
 

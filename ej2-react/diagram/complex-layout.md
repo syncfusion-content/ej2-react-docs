@@ -16,7 +16,6 @@ Complex hierarchical tree layout arranges nodes in a tree-like structure where c
 To create a complex hierarchical tree, set the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#type) property of layout to **ComplexHierarchicalTree**.
 
 N> To render the complex hierarchical tree layout, you must inject the `ComplexHierarchicalTree` module into the `DiagramComponent` by adding `<Inject services={[ComplexHierarchicalTree]} />` inside the component.
-
 ## Complex Hierarchical Tree Layout with Nodes and Connectors
 
 This example demonstrates how to create a complex hierarchical tree layout by manually defining nodes and connectors. The layout automatically positions nodes based on their hierarchical relationships while handling multiple parent-child connections.
@@ -119,6 +118,7 @@ The following code illustrates how to allow a linear arrangement in diagram layo
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/complexhiertree-cs4" %}
+
 
 
 ## Enable Routing for Layout

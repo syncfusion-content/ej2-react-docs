@@ -1,0 +1,75 @@
+#container {
+    visibility: hidden;
+    margin: 20px auto;
+}
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+.integration-speechtotext-section {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.speech-events-container {
+    margin-bottom: 10px;
+}
+
+.speech-info-panel {
+    margin-bottom: 10px;
+}
+
+.speech-status {
+    margin-bottom: 4px;
+}
+
+.speech-status label,
+.transcript-section label {
+    font-weight: normal;
+}
+
+.status-indicator {
+    display: inline;
+}
+
+.transcript-section label {
+    display: block;
+}
+
+.transcript-display {
+    min-height: 22px;
+}
+
+.transcript-display:empty::before {
+    content: "Waiting for speech input...";
+}
+
+.error-section {
+    margin-top: 4px;
+}
+
+.error-text {
+    color: #c62828;
+}
+
+#editableText {
+    width: 100%;
+    min-height: 120px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+@media only screen and (max-width: 700px) {
+    .integration-speechtotext-section {
+        width: 100%;
+    }
+}

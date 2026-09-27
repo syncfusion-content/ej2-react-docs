@@ -177,7 +177,7 @@ From individual component styles:
 
 ## Refer themes through CDN reference
 
-Instead of hosting files locally, you can reference themes directly from the Syncfusion CDN. Always ensure the version number in the URL matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> React package installed in your project (e.g., 32.1.19 for the latest major release as of December 2025).
+Instead of hosting files locally, you can reference themes directly from the Syncfusion CDN. Always ensure the version number in the URL matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> React package installed in your project (e.g., 34.2.2 for the latest major release as of December 2025).
 
 ```html
 <head>
@@ -193,30 +193,30 @@ Optimized (lite) version:
 </head>
 ```
 
-| Theme Name            | CDN Reference (example – replace <version> with 32.1.19 or your installed version) |
+| Theme Name            | CDN Reference (example – replace <version> with 34.2.2 or your installed version) |
 |-----------------------|------------------------------------------------------------------------------------|
-| Tailwind 3.4          | https://cdn.syncfusion.com/ej2/32.1.19/tailwind3.css                               |
-| Tailwind 3.4 Dark     | https://cdn.syncfusion.com/ej2/32.1.19/tailwind3-dark.css                          |
-| Bootstrap 5.3         | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5.3.css                            |
-| Bootstrap 5.3 Dark    | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5.3-dark.css                       |
-| Fluent 2              | https://cdn.syncfusion.com/ej2/32.1.19/fluent2.css                                 |
-| Fluent 2 Dark         | https://cdn.syncfusion.com/ej2/32.1.19/fluent2-dark.css                            |
-| Material 3            | https://cdn.syncfusion.com/ej2/32.1.19/material3.css                               |
-| Material 3 Dark       | https://cdn.syncfusion.com/ej2/32.1.19/material3-dark.css                          |
-| Fluent                | https://cdn.syncfusion.com/ej2/32.1.19/fluent.css                                  |
-| Fluent Dark           | https://cdn.syncfusion.com/ej2/32.1.19/fluent-dark.css                             |
-| Bootstrap 5           | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5.css                              |
-| Bootstrap 5 Dark      | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5-dark.css                         |
-| Bootstrap 4           | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap4.css                              |
-| Bootstrap 3           | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap.css                               |
-| Bootstrap 3 Dark      | https://cdn.syncfusion.com/ej2/32.1.19/bootstrap-dark.css                          |
-| Material              | https://cdn.syncfusion.com/ej2/32.1.19/material.css                                |
-| Material Dark         | https://cdn.syncfusion.com/ej2/32.1.19/material-dark.css                           |
-| Tailwind CSS          | https://cdn.syncfusion.com/ej2/32.1.19/tailwind.css                                |
-| Tailwind CSS Dark     | https://cdn.syncfusion.com/ej2/32.1.19/tailwind-dark.css                           |
-| Microsoft Office Fabric  | https://cdn.syncfusion.com/ej2/32.1.19/fabric.css                               |
-| Microsoft Office Fabric Dark | https://cdn.syncfusion.com/ej2/32.1.19/fabric-dark.css                       |
-| High Contrast         | https://cdn.syncfusion.com/ej2/32.1.19/highcontrast.css                            |
+| Tailwind 3.4          | https://cdn.syncfusion.com/ej2/34.2.2/tailwind3.css                               |
+| Tailwind 3.4 Dark     | https://cdn.syncfusion.com/ej2/34.2.2/tailwind3-dark.css                          |
+| Bootstrap 5.3         | https://cdn.syncfusion.com/ej2/34.2.2/bootstrap5.3.css                            |
+| Bootstrap 5.3 Dark    | https://cdn.syncfusion.com/ej2/34.2.2/bootstrap5.3-dark.css                       |
+| Fluent 2              | https://cdn.syncfusion.com/ej2/34.2.2/fluent2.css                                 |
+| Fluent 2 Dark         | https://cdn.syncfusion.com/ej2/34.2.2/fluent2-dark.css                            |
+| Material 3            | https://cdn.syncfusion.com/ej2/34.2.2/material3.css                               |
+| Material 3 Dark       | https://cdn.syncfusion.com/ej2/34.2.2/material3-dark.css                          |
+| Fluent                | https://cdn.syncfusion.com/ej2/34.2.2/fluent.css                                  |
+| Fluent Dark           | https://cdn.syncfusion.com/ej2/34.2.2/fluent-dark.css                             |
+| Bootstrap 5           | https://cdn.syncfusion.com/ej2/34.2.2/bootstrap5.css                              |
+| Bootstrap 5 Dark      | https://cdn.syncfusion.com/ej2/34.2.2/bootstrap5-dark.css                         |
+| Bootstrap 4           | https://cdn.syncfusion.com/ej2/34.2.2/bootstrap4.css                              |
+| Bootstrap 3           | https://cdn.syncfusion.com/ej2/34.2.2/bootstrap.css                               |
+| Bootstrap 3 Dark      | https://cdn.syncfusion.com/ej2/34.2.2/bootstrap-dark.css                          |
+| Material              | https://cdn.syncfusion.com/ej2/34.2.2/material.css                                |
+| Material Dark         | https://cdn.syncfusion.com/ej2/34.2.2/material-dark.css                           |
+| Tailwind CSS          | https://cdn.syncfusion.com/ej2/34.2.2/tailwind.css                                |
+| Tailwind CSS Dark     | https://cdn.syncfusion.com/ej2/34.2.2/tailwind-dark.css                           |
+| Microsoft Office Fabric  | https://cdn.syncfusion.com/ej2/34.2.2/fabric.css                               |
+| Microsoft Office Fabric Dark | https://cdn.syncfusion.com/ej2/34.2.2/fabric-dark.css                       |
+| High Contrast         | https://cdn.syncfusion.com/ej2/34.2.2/highcontrast.css                            |
 
 ## Common variables
 

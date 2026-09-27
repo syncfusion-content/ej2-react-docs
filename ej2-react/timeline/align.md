@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Alignment in React Timeline
 
-The Timeline component allows you to control the positioning of content using the [align](https://ej2.syncfusion.com/react/documentation/api/timeline#align) property, which accepts values `Before`, `After`, `Alternate`, or `AlternateReverse`. When both content and oppositeContent are configured for an item `ItemDirective`, the oppositeContent will be displayed parallel to the main content, creating a balanced layout on opposite sides of the timeline.
+The React Timeline component allows you to control the positioning of content using the [align](https://ej2.syncfusion.com/react/documentation/api/timeline#align) property, which accepts values `Before`, `After`, `Alternate`, or `AlternateReverse`. When both content and oppositeContent are configured for an item `ItemDirective`, the oppositeContent will be displayed parallel to the main content, creating a balanced layout on opposite sides of the timeline.
 
 ## Before
 
@@ -56,7 +56,7 @@ The [After](https://ej2.syncfusion.com/react/documentation/api/timeline/timeline
 
 ## Alternate
 
-The [Alternate](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineAlign) alignment creates a dynamic zigzag pattern where timeline items switch positions alternately. This arrangement provides visual variety and works effectively for showcasing parallel events or comparisons, regardless of whether the Timeline orientation is horizontal or vertical.
+The [Alternate](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineAlign) alignment creates a dynamic zigzag pattern where timeline items switch positions alternately. This arrangement provides visual variety and works effectively for showcasing parallel events or comparisons, regardless of whether the React Timeline orientation is horizontal or vertical.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -77,7 +77,7 @@ The [Alternate](https://ej2.syncfusion.com/react/documentation/api/timeline/time
 
 ## Alternate Reverse
 
-The [AlternateReverse](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineAlign) alignment creates the opposite pattern of Alternate alignment, where timeline items are arranged in reverse alternating order. This provides another visual variation for displaying data with an inverted alternating pattern, maintaining effectiveness across both Timeline orientations.
+The [AlternateReverse](https://ej2.syncfusion.com/react/documentation/api/timeline/timelineAlign) alignment creates the opposite pattern of Alternate alignment, where timeline items are arranged in reverse alternating order. This provides another visual variation for displaying data with an inverted alternating pattern, maintaining effectiveness across both React Timeline orientations.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

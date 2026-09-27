@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 ## Header
 
-The Card component can be created with header title, subtitle, and images. To add a header, create a `div` element with the class `e-card-header`.
+The React Card component can be created with header title, subtitle, and images. To add a header, create a `div` element with the class `e-card-header`.
 
-The Card provides the following elements and class definitions for header content:
+The React Card provides the following elements and class definitions for header content:
 
 Elements   | Description
 ------------ | -------------
@@ -31,7 +31,7 @@ Class   | Description
 
 ### Adding Title and Subtitle
 
-To add a header to the Card component, create a wrapper `div` element with the `e-card-header-caption` class.
+To add a header to the React Card component, create a wrapper `div` element with the `e-card-header-caption` class.
 
 * Place a `div` element with the `e-card-header-title` class inside the header caption for the main title.
 
@@ -39,7 +39,7 @@ To add a header to the Card component, create a wrapper `div` element with the `
 
 ### Header Image
 
-The Card header supports adding images within the header section. Images are positioned either before or after the header caption based on the HTML element's position in the header structure.
+The React Card header supports adding images within the header section. Images are positioned either before or after the header caption based on the HTML element's position in the header structure.
 
 * Add a header image by creating a `div` element with the `e-card-header-image` class, which can be placed before or after the header caption wrapper element.
 
@@ -77,10 +77,10 @@ The Card header supports adding images within the header section. Images are pos
 
 ## Content
 
-Following the header, the content section holds the main body of the card, including text, images, links, and any HTML elements. The content section provides flexibility for various content types and can be positioned within the Card root element or inside other Card inner elements.
+Following the header, the content section holds the main body of the card, including text, images, links, and any HTML elements. The content section provides flexibility for various content types and can be positioned within the React Card root element or inside other Card inner elements.
 
 * Create a `div` element with the class `e-card-content`.
-* Place the content `div` element within the Card root element or inside any Card inner elements.
+* Place the content `div` element within the React Card root element or inside any Card inner elements.
 
 `[Class-component]`
 

@@ -7,7 +7,6 @@ import {
 import * as React from 'react';
 import D3GroupedBar from './D3GroupedBar';
 import { pivotData } from './datasource';
-import './App.css';
 
 const dataSourceSettings = {
   dataSource: pivotData,

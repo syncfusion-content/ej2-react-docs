@@ -247,4 +247,4 @@ In the example below, when a hyperlink cell is clicked, a custom attribute (**da
 ## See Also
 
 * [Apply condition-based hyperlink for specific row or column](./how-to/apply-condition-based-hyper-link-for-specific-row-or-column) — Recipe that shows a real-world `conditionalSettings` configuration for highlighting cells in a specific row or column.
-* [Drill-through in React Pivot Table](./drill-through) — Compare hyperlinks with drill-through as alternative ways to navigate from a cell to underlying data. (last verified: August 2026)
+* [Drill-through in React Pivot Table](./drill-through) — Compare hyperlinks with drill-through as alternative ways to navigate from a cell to underlying data.

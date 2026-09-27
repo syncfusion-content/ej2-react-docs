@@ -14,7 +14,7 @@ The React Diagram component provides a comprehensive set of interactive tools th
 
 ## Overview
 
-The diagram control offers three primary tool categories:
+The React Diagram control offers three primary tool categories:
 
 - **Select**: Choose and manipulate specific elements within the diagram.
 - **Pan**: Navigate the diagram view to different areas without modifying elements.
@@ -91,7 +91,7 @@ Connectors are drawn by defining the connector configuration in the `drawingObje
 
 ### Polygon Shapes
 
-The diagram supports interactive polygon creation through point-and-click interaction. Users can define custom shapes with multiple sides by specifying vertices directly on the diagram canvas. To enable polygon drawing, set the `drawingObject` type as **Polygon**:
+The React Diagram supports interactive polygon creation through point-and-click interaction. Users can define custom shapes with multiple sides by specifying vertices directly on the diagram canvas. To enable polygon drawing, set the `drawingObject` type as **Polygon**:
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -129,7 +129,7 @@ N> To make the segment thumb visible, inject the [`ConnectorEditing`](https://ej
 
 ### Freehand Drawing
 
-The diagram supports free-hand drawing, allowing users to create a freehand-drawn connector path on the diagram page. Free-hand drawing is enabled by setting the type of the `drawingObject` property to '`Freehand`'.
+The React Diagram supports free-hand drawing, allowing users to create a freehand-drawn connector path on the diagram page. Free-hand drawing is enabled by setting the type of the `drawingObject` property to '`Freehand`'.
 
 The following code illustrates how to perform freehand drawing:
 
@@ -150,7 +150,7 @@ The segments of a freehand connector can be adjusted at runtime by dragging the 
 
 ## Tool Selection and Precedence
 
-The diagram supports multiple tool configurations that can be combined for different interaction scenarios. When multiple tools are enabled simultaneously, the system follows a specific precedence order to determine which tool takes priority:
+The React Diagram supports multiple tool configurations that can be combined for different interaction scenarios. When multiple tools are enabled simultaneously, the system follows a specific precedence order to determine which tool takes priority:
 
 ### Tool Precedence Hierarchy
 

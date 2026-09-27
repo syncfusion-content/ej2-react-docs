@@ -119,6 +119,12 @@ Follow these steps to install Syncfusion<sup style="font-size:70%">&reg;</sup> R
 2. Open the Syncfusion Control Panel from the desktop or Start Menu shortcut to view the installed version and license status.
 3. To run a sample, navigate to a sample folder under `Samples`, run `npm install` to restore dependencies, and then run `npm start`.
 
+## Verify the installation
+
+1. Open the installation directory (default: `C:\Program Files (x86)\Syncfusion\Essential Studio\JavaScript - EJ2\<version>`) and confirm the `Samples`, `Packages`, and `Build` folders are present.
+2. Open the Syncfusion Control Panel from the desktop or Start Menu shortcut to view the installed version and license status.
+3. To run a sample, navigate to a sample folder under `Samples`, run `npm install` to restore dependencies, and then run `npm start`.
+
 ## Uninstallation
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Web Installer supports two uninstallation methods:

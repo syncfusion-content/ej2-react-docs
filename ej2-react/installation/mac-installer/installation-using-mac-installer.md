@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Install Mac installer - Syncfusion
-description: Guide to installing Syncfusion React (JavaScript - EJ2) macOS DMG installer, handling security warnings, and registering the license.
+title: Install React Mac Installer | Syncfusion
+description: Step-by-step guide to installing the Syncfusion React (JavaScript - EJ2) macOS DMG installer, handling Catalina security warnings, and registering the license key.
 control: Installation using mac installer
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Installation steps for Syncfusion React Mac
+# Install Syncfusion® React Mac Installer
 
 The Mac distribution is provided as a `.dmg` disk image. Installation consists of mounting the DMG and dragging the Syncfusion application into the **Applications** folder.
 

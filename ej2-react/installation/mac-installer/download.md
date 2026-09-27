@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Download Mac installer - Syncfusion
+title: Download React Mac Installer | Syncfusion
 description: Learn how to download the Syncfusion React (JavaScript) Mac installer for trial and licensed versions.
 control: Download
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download Syncfusion React Mac installer
+# Download Syncfusion® React Mac Installer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> React (JavaScript - EJ2) Mac installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. Depending on the license type, download either the trial installer or the licensed installer.
 
@@ -37,17 +37,17 @@ The 30-day trial can be obtained in two ways:
 
 2. After completing the form or logging in with your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, download the JavaScript - EJ2 trial installer from the confirmation page.
 
-   ![Trial download confirmation - confirmation and download link](images/trial-confirmation.png)
+   ![Trial download confirmation — confirmation and download link](images/trial-confirmation.png)
 
 3. Trial licenses provide access only to the latest trial installer version.
 4. Unlock the trial installer either with a trial unlock key or with registered Syncfusion<sup style="font-size:70%">&reg;</sup> account credentials. For details on generating an unlock key, see [this article](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products).
 5. Before the trial expires, download the trial installer at any time from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page in the registered account.
 
-   ![Manage Trials and Downloads - download trial installer](images/trial-download.png)
+   ![Manage Trials and Downloads — download trial installer](images/trial-download.png)
 
 6. Click the **More Download Options** button (labeled 2 in the screenshot above) to access the Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 offline trial installer in DMG format.
 
-   ![Mac installer download option - DMG available](images/mac-installer.png)
+   ![Mac installer download option — DMG available](images/mac-installer.png)
 
 ### Start trial for NPM users
 
@@ -55,7 +55,7 @@ If components were installed via [NPM](https://www.npmjs.com/~syncfusionorg), st
 
 1. Start the 30-day trial for JavaScript - EJ2 from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page in the account.
 
-   ![Start trial page - select product to begin trial](images/start-trial-download.png)
+   ![Start trial page — select product to begin trial](images/start-trial-download.png)
 
 2. Log in with the registered Syncfusion<sup style="font-size:70%">&reg;</sup> account to access the page.
 3. Begin the trial by selecting the **JavaScript - EJ2 product**.
@@ -64,7 +64,7 @@ If components were installed via [NPM](https://www.npmjs.com/~syncfusionorg), st
 
 4. After starting the trial, visit the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to download the latest trial installer. Generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and the [license key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration) from this page before the trial expires.
 
-   ![Trial installer download - select DMG from Trials and Downloads](images/start-trial-download-installer.png)
+   ![Trial installer download — select DMG from Trials & Downloads](images/start-trial-download-installer.png)
 
 5. Active trial products are listed on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 
@@ -74,11 +74,11 @@ If components were installed via [NPM](https://www.npmjs.com/~syncfusionorg), st
 2. This page lists all licenses (active and expired) associated with the account.
 3. To download the JavaScript - EJ2 Mac licensed installer, click **More Download Options** (labeled 3 in the screenshot below).
 
-   ![Licensed downloads page - access More Download Options](images/license-download.png)
+   ![Licensed downloads page — access More Download Options](images/license-download.png)
 
 4. An unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript - EJ2 Mac licensed installer.
 5. For macOS, the installer is available in DMG format.
 
-   ![Mac installer download option - DMG available](images/mac-installer.png)
+   ![Mac installer download option — DMG available](images/mac-installer.png)
 
 Refer to the [**JavaScript - EJ2 Mac installer**](https://ej2.syncfusion.com/react/documentation/installation/mac-installer/installation-using-mac-installer) guide for step-by-step installation instructions.

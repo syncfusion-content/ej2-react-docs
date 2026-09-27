@@ -217,6 +217,6 @@ Apply a radial gradient to a technical indicator by adding `radialGradient` insi
 
 * [Series linearGradient API](https://ej2.syncfusion.com/react/documentation/api/chart/series#lineargradient)
 * [Series radialGradient API](https://ej2.syncfusion.com/react/documentation/api/chart/series#radialgradient)
-* [Trendlines](https://ej2.syncfusion.com/react/documentation/chart/trend-lines)
+* [Trendlines](https://ej2.syncfusion.com/react/documentation/chart/trendlines)
 * [Technical indicators](https://ej2.syncfusion.com/react/documentation/chart/technical-indicators)
 * [Chart series](https://ej2.syncfusion.com/react/documentation/chart/chart-series)

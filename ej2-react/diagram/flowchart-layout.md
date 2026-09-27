@@ -7,7 +7,6 @@ platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
-
 # Flowchart Layout in React Diagram
 
 The flowchart layout provides a visual representation of processes, workflows, systems, or algorithms in a diagrammatic format. It uses various symbols to depict different actions, with arrows connecting these symbols to indicate the flow or direction of the process. Flowcharts are essential tools for illustrating step-by-step sequences, making complex processes easier to understand and communicate.
@@ -62,9 +61,11 @@ To render a flowchart layout, set the layout [`type`](https://ej2.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs1" %}
+
 
 ![EJ2 Flowchart layout diagram](./images/flowchart-images/Flowchart_Layout.png)
+
 
 ## Configuring Data Source with Appearance Settings
 
@@ -98,6 +99,7 @@ In the flowchart layout, you can define the desired shape, style, and label for 
 
 ```
 
+
 ### Data Source Field Definitions
 
 **Node fields:**
@@ -115,9 +117,11 @@ In the flowchart layout, you can define the desired shape, style, and label for 
 
 This structure enables comprehensive customization of the flowchart's visual elements based on the provided data source.
 
+
 ## Render Flowchart Layout with Nodes and Connectors
 
 The following example demonstrates how to render a flowchart layout using nodes and connectors. To achieve this, you need to define the [`nodes`](https://ej2.syncfusion.com/react/documentation/api/diagram/nodeModel) and [`connectors`](https://ej2.syncfusion.com/react/documentation/api/diagram/connectormodel) collections and assign them to the diagram. Additionally, you need to set the layout [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#type) to **Flowchart**.
+
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -128,11 +132,13 @@ The following example demonstrates how to render a flowchart layout using nodes 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs2" %}
+
 
 ## Customize Flowchart Layout Orientation
 
 Customize the flow direction of the flowchart using the [orientation](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#orientation) property of the layout class. The flowchart can flow either vertically from top to bottom or horizontally from left to right. The default orientation is **TopToBottom**.
+
 
 ### TopToBottom Orientation
 
@@ -169,7 +175,9 @@ function App() {
 export default App;
 ```
 
+
 ![Flowchart layout with top to bottom orientation](./images/flowchart-images/Flowchart_Layout.png)
+
 
 ### LeftToRight Orientation
 
@@ -206,7 +214,9 @@ function App() {
 export default App;
 ```
 
+
 ![Flowchart layout with left to right orientation](./images/flowchart-images/Flowchart_LeftToRight.png)
+
 
 ## Customize the Decision Output Directions
 
@@ -214,9 +224,9 @@ The decision symbol in a flowchart represents a question or condition that leads
 
 ### Branch Direction Options
 
-- **`LeftInFlow`**: Arranges the Yes/No branch to the left of the decision symbol.
-- **`RightInFlow`**: Arranges the Yes/No branch to the right of the decision symbol.
-- **`SameAsFlow`**: Aligns the Yes/No branch in the same direction as the flow of the decision symbol.
+- **`LeftInFlow`** - Arranges the Yes/No branch to the left of the decision symbol.
+- **`RightInFlow`** - Arranges the Yes/No branch to the right of the decision symbol.
+- **`SameAsFlow`** - Aligns the Yes/No branch in the same direction as the flow of the decision symbol.
 
 The following example shows a flowchart layout with `yesBranchDirection` set to `SameAsFlow` and `noBranchDirection` set to `LeftInFlow`.
 
@@ -229,21 +239,23 @@ The following example shows a flowchart layout with `yesBranchDirection` set to 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs3" %}
+
 
 The following table illustrates the visual behavior of different branch direction combinations:
 
-| YesBranchDirection | NoBranchDirection | TopToBottom | LeftToRight |
-| --- | --- | --- | --- |
-| LeftInFlow | RightInFlow | ![Decision output with left yes and right no branches in vertical layout](./images/flowchart-images/Flowchart_VerticalLeftAndRightBranches.png) | ![Decision output with left yes and right no branches in horizontal layout](./images/flowchart-images/Flowchart_HorizontalLeftAndRightBranches.png) |
-| RightInFlow | LeftInFlow | ![Decision output with right yes and left no branches in vertical layout](./images/flowchart-images/Flowchart_VerticalRightAndLeftBranches.png) | ![Decision output with right yes and left no branches in horizontal layout](./images/flowchart-images/Flowchart_HorizontalRightAndLeftBranches.png) |
-| SameAsFlow | RightInFlow | ![Decision output with same flow yes and right no branches in vertical layout](./images/flowchart-images/Flowchart_VerticalSameAndRightBranches.png) | ![Decision output with same flow yes and right no branches in horizontal layout](./images/flowchart-images/Flowchart_HorizontalSameAndRightBranches.png) |
-| SameAsFlow | LeftInFlow | ![Decision output with same flow yes and left no branches in vertical layout](./images/flowchart-images/Flowchart_YesSame_NoLeft.png) | ![Decision output with same flow yes and left no branches in horizontal layout](./images/flowchart-images/Flowchart_YesSame_NoLeft_LTR.png) |
-| RightInFlow | SameAsFlow | ![Decision output with right yes and same flow no branches in vertical layout](./images/flowchart-images/Flowchart_VerticalRightAndSameBranches.png) | ![Decision output with right yes and same flow no branches in horizontal layout](./images/flowchart-images/Flowchart_HorizontalRightAndSameBranches.png) |
-| LeftInFlow | SameAsFlow | ![Decision output with left yes and same flow no branches in vertical layout](./images/flowchart-images/Flowchart_YesLeft_NoSame.png) | ![Decision output with left yes and same flow no branches in horizontal layout](./images/flowchart-images/Flowchart_YesLeft_NoSame_LTR.png) |
-| SameAsFlow | SameAsFlow | ![Decision output with both branches in same flow direction in vertical layout](./images/flowchart-images/Flowchart_VerticalSameBranches.png) | ![Decision output with both branches in same flow direction in horizontal layout](./images/flowchart-images/Flowchart_HorizontalSameBranches.png) |
+|YesBranchDirection| NoBranchDirection | TopToBottom | LeftToRight |
+|---|---|---|---|
+| LeftInFlow |RightInFlow|![Decision output with left yes and right no branches in vertical layout](./images/flowchart-images/Flowchart_VerticalLeftAndRightBranches.png)|![Decision output with left yes and right no branches in horizontal layout](./images/flowchart-images/Flowchart_HorizontalLeftAndRightBranches.png)|
+| RightInFlow |LeftInFlow |![Decision output with right yes and left no branches in vertical layout](./images/flowchart-images/Flowchart_VerticalRightAndLeftBranches.png)|![Decision output with right yes and left no branches in horizontal layout](./images/flowchart-images/Flowchart_HorizontalRightAndLeftBranches.png) |
+| SameAsFlow |RightInFlow |![Decision output with same flow yes and right no branches in vertical layout](./images/flowchart-images/Flowchart_VerticalSameAndRightBranches.png)|![Decision output with same flow yes and right no branches in horizontal layout](./images/flowchart-images/Flowchart_HorizontalSameAndRightBranches.png) |
+| SameAsFlow |LeftInFlow |![Decision output with same flow yes and left no branches in vertical layout](./images/flowchart-images/Flowchart_YesSame_NoLeft.png)|![Decision output with same flow yes and left no branches in horizontal layout](./images/flowchart-images/Flowchart_YesSame_NoLeft_LTR.png) |
+| RightInFlow | SameAsFlow |![Decision output with right yes and same flow no branches in vertical layout](./images/flowchart-images/Flowchart_VerticalRightAndSameBranches.png)|![Decision output with right yes and same flow no branches in horizontal layout](./images/flowchart-images/Flowchart_HorizontalRightAndSameBranches.png) |
+| LeftInFlow | SameAsFlow |![Decision output with left yes and same flow no branches in vertical layout](./images/flowchart-images/Flowchart_YesLeft_NoSame.png)|![Decision output with left yes and same flow no branches in horizontal layout](./images/flowchart-images/Flowchart_YesLeft_NoSame_LTR.png) |
+|SameAsFlow |SameAsFlow|![Decision output with both branches in same flow direction in vertical layout](./images/flowchart-images/Flowchart_VerticalSameBranches.png)|![Decision output with both branches in same flow direction in horizontal layout](./images/flowchart-images/Flowchart_HorizontalSameBranches.png)|
 
 N> When both branch directions are set to the same value, the **Yes** branch takes priority in positioning.
+
 
 ## Custom Yes and No Branch Values
 
@@ -268,6 +280,7 @@ The following example demonstrates how to set custom text values for yes and no 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/flowchart-cs4" %}
+
 
 ![Flowchart layout with custom yes and no branch values](./images/flowchart-images/Flowchart_CustomYesOrNoBranches.png)

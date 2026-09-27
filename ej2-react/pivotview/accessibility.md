@@ -268,4 +268,4 @@ The following sample demonstrates the accessibility compliance of the Pivot Tabl
 ## See Also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility) — Cross-component accessibility guidance that applies to all Syncfusion React controls.
-* [Globalization and localization in React Pivot Table](./globalization-and-localization) — Configure RTL, culture, and localization settings, which affect accessibility for non-English users. (last verified: August 2026)
+* [Globalization and localization in React Pivot Table](./globalization-and-localization) — Configure RTL, culture, and localization settings, which affect accessibility for non-English users.

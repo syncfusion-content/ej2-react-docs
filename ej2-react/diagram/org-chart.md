@@ -17,7 +17,7 @@ An organizational chart is a diagram that displays the hierarchical structure of
 
 This approach is ideal when working with dynamic data from databases, APIs, or when the organizational structure changes frequently. The component automatically generates nodes and connectors based on the provided data structure.
 
-N> When using organizational chart layout with the data source, both HierarchicalTree and DataBinding modules must be injected into the diagram component.
+N> When using organizational chart layout with the data source, both HierarchicalTree and DataBinding modules must be injected into the React Diagram component.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -68,28 +68,28 @@ The following table illustrates the properties that the "options" argument takes
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
-| options.assistants | By default, the collection is empty. When any of the child nodes have to be set as **Assistant**, you can remove from children collection and have to insert into assistants collection. | Empty array |
-| options.orientation | Gets or sets the organizational chart orientation. | [`SubTreeOrientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/subTreeOrientation).Vertical |
-| options.type | Gets or sets the chart organizational chart type. | For horizontal chart orientation:[`SubTreeAlignments`](https://ej2.syncfusion.com/react/documentation/api/diagram/subtreealignments).Center and for vertical chart orientation:[`SubTreeAlignments`](https://ej2.syncfusion.com/react/documentation/api/diagram/subtreealignments).Alternate |
-| options.offset | Offset is the horizontal space to be left between parent and child nodes. Accepts a number value in pixels. | 20 pixels, applicable only for vertical chart orientations. |
-| options.hasSubTree | Gets whether the node contains subtrees. | Boolean |
-| options.level | Gets the depth of the node from layout root. | Number |
-| options.enableRouting | By default, connections are routed based on the chart type and orientations. This property gets or sets whether default routing is to be enabled or disabled. | true |
-| options.rows | Sets the number of rows on which the child nodes will be arranged. Applicable only for the Balanced horizontal orientation. | Number |
+|options.assistants|By default, the collection is empty. When any of the child nodes have to be set as **Assistant**, you can remove from children collection and have to insert into assistants collection.|Empty array|
+|options.orientation|Gets or sets the organizational chart orientation.|[`SubTreeOrientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/subTreeOrientation).Vertical|
+|options.type|Gets or sets the chart organizational chart type.|For horizontal chart orientation:[`SubTreeAlignments`](https://ej2.syncfusion.com/react/documentation/api/diagram/subtreealignments).Center and for vertical chart orientation:[`SubTreeAlignments`](https://ej2.syncfusion.com/react/documentation/api/diagram/subtreealignments).Alternate|
+|options.offset|Offset is the horizontal space to be left between parent and child nodes. Accepts a number value in pixels.|20 pixels, applicable only for vertical chart orientations.|
+|options.hasSubTree|Gets whether the node contains subtrees.|Boolean|
+|options.level|Gets the depth of the node from layout root.|Number|
+|options.enableRouting|By default, connections are routed based on the chart type and orientations. This property gets or sets whether default routing is to be enabled or disabled.|true|
+|options.rows|Sets the number of rows on which the child nodes will be arranged. Applicable only for the Balanced horizontal orientation.|Number|
 
 ### Orientation and Alignment Options
 
 The following table describes the available chart orientations and their corresponding alignment types:
 
-| Orientation | Type | Description | Example |
-| -------- | ----------- | ------------- | ------ |
-| Horizontal | Left | Arranges the child nodes horizontally at the left side of the parent. | ![Horizontal Left](images/hleft.JPG) |
-|  | Right | Arranges the child nodes horizontally at the right side of the parent. | ![Horizontal Right](images/hright.JPG) |
-|  | Center | Arranges the child nodes horizontally, centered beneath the parent node. | ![Horizontal Center](images/hcenter.JPG) |
-|  | Balanced | Arranges the leaf level child nodes in multiple rows. | ![Horizontal Balanced](images/hbalanced.JPG) |
-| Vertical | Left | Arranges the children vertically at the left side of the parent. | ![Vertical Left](images/vleft.JPG) |
-|  | Right | Arranges the children vertically at the right side of the parent. | ![Vertical Right](images/vright.JPG) |
-|  | Alternate | Arranges the children vertically at both left and right sides of the parent. | ![Vertical Alternate](images/vAlternate.JPG) |
+|Orientation|Type|Description|Example|
+| -------- | ----------- | ------------- |------|
+|Horizontal|Left|Arranges the child nodes horizontally at the left side of the parent.|![Horizontal Left](images/hleft.JPG)|
+||Right|Arranges the child nodes horizontally at the right side of the parent.|![Horizontal Right](images/hright.JPG)|
+||Center|Arranges the child nodes horizontally, centered beneath the parent node.|![Horizontal Center](images/hcenter.JPG)|
+||Balanced|Arranges the leaf level child nodes in multiple rows.|![Horizontal Balanced](images/hbalanced.JPG)|
+|Vertical|Left|Arranges the children vertically at the left side of the parent.|![Vertical Left](images/vleft.JPG)|
+||Right|Arranges the children vertically at the right side of the parent.|![Vertical Right](images/vright.JPG)|
+||Alternate|Arranges the children vertically at both left and right sides of the parent.|![Vertical Alternate](images/vAlternate.JPG)|
 
 
 ### Horizontal Subtree Orientation Example
@@ -107,7 +107,6 @@ The following example demonstrates customizing subtree alignment for horizontal 
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/organizationalchart-cs3" %}
-
 
 ### Vertical Subtree Orientation Example
 

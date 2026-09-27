@@ -193,7 +193,7 @@ let node: NodeModel[] = [{
     width: 100,
     height: 100,
 }];
-// initialize Diagram component
+// initialize React Diagram component
 function App() {
   return (
     <DiagramComponent
@@ -238,7 +238,7 @@ The node's rotation angle is based on [`pivot`](https://ej2.syncfusion.com/react
 The following table illustrates how pivot relates to offset values with node boundaries:
 
 | Pivot | Offset |
-| -------- | -------- |
+|-------- | -------- |
 | (0.5, 0.5) | offsetX and offsetY values are considered as the node’s center point. |
 | (0, 0) | offsetX and offsetY values are considered as the top-left corner of the node. |
 | (1, 1) | offsetX and offsetY values are considered as the bottom-right corner of the node. |
@@ -246,11 +246,11 @@ The following table illustrates how pivot relates to offset values with node bou
 | (1, 0) | offsetX and offsetY values are considered as the top-right corner of the node. |
 
 N> The pivot values range between 0 and 1, where 0 represents the top/left edge, 0.5 represents the center, and 1 represents the bottom/right edge of the node.
-
+ 
 The following code illustrates how to change the `pivot` value.
 
 N> For more details on pivot points and node positioning, refer to the [Positioning a Node](./nodes-positioning#position) topic.
-
+ 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/nodes/nPositioning-cs1/app/index.jsx %}

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The EJ2 React Diagram component supports localization functionality, allowing developers to adapt the user interface to different languages and regions. The diagram's symbol palette search box and context menu items can be localized based on the selected culture. Use the locale property of the diagram to specify the desired culture for localization.
 
-## Localize Diagram Context Menu
+## Localize React Diagram Context Menu
 
 To localize the diagram context menu, we need to define the [`locale`](https://ej2.syncfusion.com/react/documentation/api/diagram/index-default#locale) property of the diagram with our preferred culture. In the example below, we use **'de-DE'**, which is the locale code for German as used in Germany.
 

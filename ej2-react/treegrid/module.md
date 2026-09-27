@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Modules in React TreeGrid
 
-Syncfusion React Tree Grid modules help optimize your application's bundle size by including only the features you need. To enable a specific Tree Grid feature, import and inject the corresponding Feature Module into your Tree Grid configuration. The available Tree Grid Feature Modules include:
-
+Syncfusion React TreeGrid modules help optimize your application's bundle size by including only the features you need. To enable a specific TreeGrid feature, import and inject the corresponding Feature Module into your TreeGrid configuration. The available TreeGrid Feature Modules include:
 
 | Feature | Module | Description |
 |--------|--------|-------------|
@@ -35,13 +34,9 @@ Syncfusion React Tree Grid modules help optimize your application's bundle size 
 | [Excel Export](./excel-export/excel-export) | `ExcelExport` | Inject this module to use excel export feature. |
 | [PDF Export](./pdf-export/pdf-export) | `PdfExport` | Inject this module to use PDF export feature. |
 
-Inject these modules into the Tree Grid using the `Inject` directive to enable these functionalities.
-
-> [`React Tree Grid`](https://www.syncfusion.com/react-ui-components/react-tree-grid) feature tour page for its groundbreaking feature representations. [`React Tree Grid example`](https://ej2.syncfusion.com/react/demos/#/material/treegrid/treegrid-overview) to understand data presentation and interaction within a structured hierarchical grid.
-
 ## Enabling basic features
 
-The following example demonstrates how to enable basic features such as Paging, Sorting, Filtering, Toolbar and Editing by importing required modules from `@syncfusion/ej2-react-treegrid` and injecting them into the Tree Grid component.
+The following example demonstrates how to enable basic features such as Paging, Sorting, Filtering, Toolbar and Editing by importing required modules from `@syncfusion/ej2-react-treegrid` and injecting them into the treegrid component.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

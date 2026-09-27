@@ -225,7 +225,7 @@ The following example demonstrates loading a mind map diagram from Mermaid synta
 
  {% previewsample "page.domainurl/code-snippet/diagram/serialization/serialization-cs3" %}
  
-#### Loading UML Sequence Diagram
+#### Loading UML Sequence React Diagram
 
 The following example demonstrates loading a UML Sequence diagram from Mermaid syntax:
 

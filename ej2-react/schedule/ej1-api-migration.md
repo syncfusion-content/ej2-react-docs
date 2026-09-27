@@ -193,5 +193,10 @@ This topic shows the API equivalents for Essential<sup style="font-size:70%">&re
 | Fires on rendering of every scheduler elements | **Event:** *queryCellInfo*<br/><br/> `<EJ.Schedule queryCellInfo={onQueryCellInfo}>`<br> `</EJ.Schedule>` <br> `function onQueryCellInfo (args){}` | **Event:** *renderCell* <br/><br/> `<ScheduleComponent renderCell ={onRenderCell}>` <br>`</ScheduleComponent>`<br>`function onRenderCell (args){}` |
 | Fires before the event rendering on UI | Not applicable |  **Event:** *eventRendered* <br/><br/>  `<ScheduleComponent eventRendered ={onEventRendered}>` <br>`</ScheduleComponent>`<br>`function onEventRendered (args){}` |
 
-> You can refer to our [React Scheduler](https://www.syncfusion.com/react-ui-components/react-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [React Scheduler example](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview) to knows how to present and manipulate data.
+## See also
+
+* [Syncfusion React Scheduler API Reference](https://ej2.syncfusion.com/react/documentation/api/schedule)
+* [React Scheduler Feature Tour](https://www.syncfusion.com/react-ui-components/react-scheduler)
+* [React Scheduler Live Examples](https://ej2.syncfusion.com/react/demos/#/tailwind3/schedule/overview)
+* [Getting Started with React Scheduler](./getting-started.md)
 

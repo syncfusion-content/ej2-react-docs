@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Quick Info Template in React Scheduler
 
-This demo showcases the quick popups for cells and appointments using customized templates.
+This demo shows how to customize the quick info popups for cells and appointments using templates.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to customize Avatar in React Avatar
 
-The Syncfusion React Avatar component provides a wide range of customization options, including color, size, and support for various media formats. This section explains how to tailor the Avatar's appearance to meet specific design requirements and integrate different content types.
+The Syncfusion React Avatar component provides a wide range of customization options, including color, size, and support for various media formats. This section explains how to tailor the React Avatar's appearance to meet specific design requirements and integrate different content types.
 
 ## Color customization
 
-By default, the Avatar displays with a Grey background color. To apply a custom color, add a custom CSS class or directly target the avatar class in your stylesheet.
+By default, the React Avatar displays with a Grey background color. To apply a custom color, add a custom CSS class or directly target the React Avatar class in your stylesheet.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -33,9 +33,9 @@ By default, the Avatar displays with a Grey background color. To apply a custom 
 
  {% previewsample "page.domainurl/code-snippet/avatar/color-cs1" %}
 
-## Customize Avatar sizes
+## Customize React Avatar sizes
 
-The Avatar provides five predefined sizes., sometimes these are not sufficient. So, the Avatar is designed in such a way that the width and height will be relative to font-size. By changing `font-size` updates both dimensions automatically.
+The React Avatar provides five predefined sizes., sometimes these are not sufficient. So, the React Avatar is designed in such a way that the width and height will be relative to font-size. By changing `font-size` updates both dimensions automatically.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -56,7 +56,7 @@ The Avatar provides five predefined sizes., sometimes these are not sufficient. 
 
 ## Using various media formats
 
-Avatars can be used with a wide variety of media formats like SVG, font-icons, images, letters, words, etc. Some of them are given below.
+React Avatars can be used with a wide variety of media formats like SVG, font-icons, images, letters, words, etc. Some of them are given below.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -75,9 +75,9 @@ Avatars can be used with a wide variety of media formats like SVG, font-icons, i
 
  {% previewsample "page.domainurl/code-snippet/avatar/media-formats-cs1" %}
 
-## Dynamic Avatar rendering from data source
+## Dynamic React Avatar rendering from data source
 
-Render the Avatar component dynamically from a data-source. In this sample we have rendered the Avatar component using a data-source which contains the image source in different sizes dynamically. This is applicable also for data-source from the server or remote data or AJAX. We have also rendered the Avatar using `CSS` property `background-image` and using image tag.
+Render the React Avatar component dynamically from a data-source. In this sample we have rendered the React Avatar component using a data-source which contains the image source in different sizes dynamically. This is applicable also for data-source from the server or remote data or AJAX. We have also rendered the React Avatar using `CSS` property `background-image` and using image tag.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

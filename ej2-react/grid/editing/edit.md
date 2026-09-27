@@ -440,7 +440,7 @@ To perform CRUD operations externally, use the following methods:
 | [addRecord](https://ej2.syncfusion.com/react/documentation/api/grid#addrecord) | Add a new record (shows edit form if no data provided) |
 | [startEdit](https://ej2.syncfusion.com/react/documentation/api/grid#startedit) | Begin editing the selected row |
 | [deleteRecord](https://ej2.syncfusion.com/react/documentation/api/grid#deleterecord) | Delete the selected row |
-| [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid#endedit) | Save changes when grid is in edit state |
+| [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#endedit) | Save changes when grid is in edit state |
 | [closeEdit](https://ej2.syncfusion.com/react/documentation/api/grid#closeedit) | Cancel editing without saving |
 
 The following example demonstrates external CRUD operations with a custom toolbar.

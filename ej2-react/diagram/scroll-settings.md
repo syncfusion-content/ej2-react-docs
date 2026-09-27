@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Scroll Settings in React Diagram
 
-The diagram component provides comprehensive scrolling capabilities through both vertical and horizontal scrollbars, as well as mouse wheel navigation. The diagram's [`scrollSettings`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel) enable developers to monitor the current scroll status, viewport dimensions, zoom levels, and programmatically control diagram navigation. These settings are essential for managing large diagrams and providing smooth user interaction experiences.
+The React Diagram component provides comprehensive scrolling capabilities through both vertical and horizontal scrollbars, as well as mouse wheel navigation. The diagram's [`scrollSettings`](https://helpej2.syncfusion.com/react/documentation/api/React Diagram/scrollSettingsModel) enable developers to monitor the current scroll status, viewport dimensions, zoom levels, and programmatically control diagram navigation. These settings are essential for managing large diagrams and providing smooth user interaction experiences.
 
 ## Access and Customize Scroll Settings
 
@@ -140,7 +140,7 @@ N> To use auto-scroll the scrollLimit should be set as 'Infinity'
 
 ### Controlling Auto-scroll Speed
 
-The frequency of automatic scrolling in the Diagram component during auto-scroll behavior can be precisely controlled. The scrolling frequency can be adjusted from slow and smooth to quick and rapid to suit different requirements. Configure this by setting a value in milliseconds to the [`autoScrollFrequency`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel#autoscrollfrequency) property within the scrollSettings, allowing precise control over auto-scroll timing.
+The frequency of automatic scrolling in the React Diagram component during auto-scroll behavior can be precisely controlled. The scrolling frequency can be adjusted from slow and smooth to quick and rapid to suit different requirements. Configure this by setting a value in milliseconds to the [`autoScrollFrequency`](https://helpej2.syncfusion.com/react/documentation/api/diagram/scrollSettingsModel#autoscrollfrequency) property within the scrollSettings, allowing precise control over auto-scroll timing.
 
 The default value of `autoScrollFrequency` is `15` milliseconds. Lower values produce faster, smoother scrolling; higher values produce slower scrolling.
 

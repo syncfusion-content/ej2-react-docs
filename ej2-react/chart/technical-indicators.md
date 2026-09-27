@@ -1,7 +1,7 @@
  ---
 layout: post
 title: Technical indicators in React Chart | Syncfusion
-description: Learn how to overlay technical indicators on Syncfusion React Chart to enhance financial analysis, visualize trends, and support informed decisions.
+description: Learn how to overlay technical indicators on Syncfusion React Chart for financial analysis.
 control: Technical indicators
 platform: ej2-react
 documentation: ug

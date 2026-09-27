@@ -33,7 +33,7 @@ N> The **HierarchicalTree** module must be injected into the diagram using the `
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs1" %}
 
 ## Hierarchical Layout with DataSource
 
@@ -50,7 +50,8 @@ N> When using a DataSource, configure `dataSourceSettings` with the `id` and `pa
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/hierarchicallayout-cs2" %}
+
 
 N> When using DataSource for layout generation, both DataBinding and HierarchicalTree modules must be injected into the diagram.
 

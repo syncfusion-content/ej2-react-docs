@@ -16,9 +16,9 @@ Chart provides support for internationalization for the following elements:
 - Axis label
 - Tooltip
 
-For more information about number and date formatting, see the internationalization guide: [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization).
+For more information about number and date formatting, see the internationalization guide: [`internationalization`](https://ej2.syncfusion.com/react/documentation/common/internationalization).
 
-> Note: The `en-US` locale and `USD` currency code are set as defaults. To use another culture, call `loadCldr` (and optionally `setCulture`) before the Chart renders. The currency used by the `'c'` format is set via [`setCurrencyCode`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#changing-culture-and-currency-code).
+> Note: The `en-US` locale and `USD` currency code are set as defaults. To use another culture, call `loadCldr` (and optionally `setCulture`) before the Chart renders. The currency used by the `'c'` format is set via [`setCurrencyCode`](https://ej2.syncfusion.com/react/documentation/api/base/internationalization#setcurrencycode).
 
 ## Globalization
 
@@ -26,7 +26,7 @@ Globalization is the process of designing and developing a component that works 
 
 ## Numeric Format
 
-The example below globalize axis, point, and tooltip labels to the EUR currency format. To use a culture other than `en-US`, install [`@syncfusion/ej2-cldr-data`](https://www.npmjs.com/package/@syncfusion/ej2-cldr-data) and call `loadCldr` with the required JSON data before the Chart renders.
+The example below globalizes axis, point, and tooltip labels to the EUR currency format. To use a culture other than `en-US`, install [`@syncfusion/ej2-cldr-data`](https://www.npmjs.com/package/@syncfusion/ej2-cldr-data) and call `loadCldr` with the required JSON data before the Chart renders.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

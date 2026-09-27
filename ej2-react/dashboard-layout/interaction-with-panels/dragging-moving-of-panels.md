@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Drag and Drop in React Dashboard Layout
 
-The Dashboard Layout component provides dragging functionality to reorder panels within the layout. While dragging a panel, a highlighted holder appears beneath it, providing a visual preview of where the panel will be placed upon release. This visual feedback helps determine whether to drop the panel in the new position or return it to its original location without disrupting the layout.
+The React Dashboard Layout component provides dragging functionality to reorder panels within the layout. While dragging a panel, a highlighted holder appears beneath it, providing a visual preview of where the panel will be placed upon release. This visual feedback helps determine whether to drop the panel in the new position or return it to its original location without disrupting the layout.
 
-When panels collide during dragging, the Dashboard Layout automatically pushes the colliding panels in available directions—left, right, top, or bottom. These position adjustments update dynamically during the drag operation, providing real-time feedback about the final layout configuration before dropping the panel.
+When panels collide during dragging, the React Dashboard Layout automatically pushes the colliding panels in available directions—left, right, top, or bottom. These position adjustments update dynamically during the drag operation, providing real-time feedback about the final layout configuration before dropping the panel.
 
-While dragging a panel in Dashboard layout, the following dragging events will be triggered:
+While dragging a panel in React Dashboard layout, the following dragging events will be triggered:
 * [dragStart](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#dragstart) - Triggered when panel dragging begins
 * [drag](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#drag) - Triggered continuously while panel is being dragged
 * [dragStop](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#dragstop) - Triggered when panel dragging ends
@@ -75,9 +75,9 @@ The following sample demonstrates customizing the dragging handler of the panels
 
 ## Disabling Panel Dragging
 
-Panel dragging is enabled by default in the Dashboard Layout. Disable this functionality using the  [allowDragging](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#allowdragging) API. Setting [allowDragging](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#allowdragging) to false disables the dragging functionality in Dashboard Layout.
+Panel dragging is enabled by default in the React Dashboard Layout. Disable this functionality using the  [allowDragging](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#allowdragging) API. Setting [allowDragging](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#allowdragging) to false disables the dragging functionality in React Dashboard Layout.
 
-The following sample demonstrates Dashboard Layout with dragging support disabled.
+The following sample demonstrates React Dashboard Layout with dragging support disabled.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

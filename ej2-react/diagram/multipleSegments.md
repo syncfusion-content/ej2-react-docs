@@ -16,7 +16,6 @@ A connector segment represents a portion of the connector's path. By combining m
 
 ## Create multiple segments
 Multiple segments can be defined sequentially to form a complete connector path. To create a connector with multiple segments, define and add the segments to the [`segments`](https://ej2.syncfusion.com/react/documentation/api/diagram/connector#segments) collection.
-
 The following example demonstrates how to create a connector with multiple segments that forms a custom routing path:
 
 {% tabs %}
@@ -32,7 +31,7 @@ The following example demonstrates how to create a connector with multiple segme
 
 ## Undo/Redo support for connector segments
 
-The Diagram control provides comprehensive undo and redo functionality for all connector segment operations. You can revert or reapply changes programmatically using the [`undo`](https://ej2.syncfusion.com/react/documentation/api/diagram#undo) and [`redo`](https://ej2.syncfusion.com/react/documentation/api/diagram#redo) methods. This includes reversible actions such as dragging, resizing, and rotating source or target nodes, as well as modifying segment points and endpoints.
+The React Diagram control provides comprehensive undo and redo functionality for all connector segment operations. You can revert or reapply changes programmatically using the [`undo`](https://ej2.syncfusion.com/react/documentation/api/diagram#undo) and [`redo`](https://ej2.syncfusion.com/react/documentation/api/diagram#redo) methods. This includes reversible actions such as dragging, resizing, and rotating source or target nodes, as well as modifying segment points and endpoints.
 
 Key undo/redo capabilities include:
 
@@ -44,6 +43,7 @@ Key undo/redo capabilities include:
 This functionality ensures consistent editing behavior across all connector types and interactions, enabling users to experiment with complex routing configurations while retaining the ability to revert changes.
 
 The following example demonstrates undo and redo functionality for connector segments:
+
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

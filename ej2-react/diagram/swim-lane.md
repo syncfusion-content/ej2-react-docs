@@ -109,7 +109,7 @@ Headers can be modified programmatically during runtime to respond to user inter
 
 ### Header Editing
 
-The Diagram component supports editing swimlane headers at runtime. Double-click the header label to edit it. The following image illustrates swimlane header editing.
+The React Diagram component supports editing swimlane headers at runtime. Double-click the header label to edit it. The following image illustrates swimlane header editing.
 
 ![Header Editing](images/swimlane-header-edit.gif)
 

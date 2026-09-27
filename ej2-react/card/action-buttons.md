@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Action Buttons in React Card
 
-Action buttons can be included within the Card and customize them. Action buttons are contained within a `div` element with the `e-card-actions` class, which holds button or anchor elements within the card root element.
+Action buttons can be included within the React Card and customize them. Action buttons are contained within a `div` element with the `e-card-actions` class, which holds button or anchor elements within the card root element.
 
-* To add action buttons, create button or anchor tag elements with the`e-card-btn` class inside the card action container element.
+* To add action buttons, create button or anchor tag elements with the`e-card-btn` class inside the React Card action container element.
 
 ```
     <div className = "e-card">
         <div className="e-card-actions">
             <button className="e-card-btn"></button>
-            <a href="#"></a>
+            <a href="#" aria-label="learn more about card action"></a>
         </div>
     </div>
 ```
@@ -31,7 +31,7 @@ By default, action buttons are positioned horizontally, and they can also be ali
     <div className = "e-card">
         <div className="e-card-actions e-card-vertical">
             <button className="e-card-btn">More</button>
-            <a href="#">Share</a>
+            <a href="#" aria-label="share the card">Share</a>
         </div>
     </div>
 ```

@@ -14,7 +14,7 @@ The React Dashboard Layout component includes built-in responsive behavior that 
 
 ## Adaptive Layout Behavior
 
-The dashboard layout automatically transforms into a stacked layout when the viewport width decreases. In a stacked layout, all panels are arranged vertically in a single column to ensure optimal viewing on smaller screens. By default, this transformation occurs at or below 600px viewport width.
+The React Dashboard Layout automatically transforms into a stacked layout when the viewport width decreases. In a stacked layout, all panels are arranged vertically in a single column to ensure optimal viewing on smaller screens. By default, this transformation occurs at or below 600px viewport width.
 
 ## Customizing Responsive Breakpoints
 

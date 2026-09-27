@@ -127,7 +127,7 @@ In accumulation charts, you can use the drill down and drill up options to explo
 - **Collapse**: Drill up to view higher-level, summarized information for that series, returning to the top level as needed.
 - **Exit**: Close the context menu without making any changes.
 
-The drill operation can also be triggered programmatically using the [`drillDown`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#drilldown) and [`drillUp`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#drillup) methods on the Pivot Table instance.
+The drill operation can also be triggered programmatically using the [`drillDown`](https://ej2.syncfusion.com/react/documentation/api/pivotview#drilldown) and [`drillUp`](https://ej2.syncfusion.com/react/documentation/api/pivotview#drillup) methods on the Pivot Table instance.
 
 > You can use the drill operation for row headers only in accumulation charts.
 
@@ -318,7 +318,7 @@ The sample below demonstrates the field list shown in `Popup` mode within the pi
 
 ## Grouping Bar
 
-You can display the grouping bar in the Pivot Chart by setting the [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#showgroupingbar) property to **true**. When enabled, the grouping bar in the pivot chart shows a drop-down list on the value axis. This drop-down lets users select from the value fields defined in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings). Users can switch between these fields to update the chart based on the selected value field. This method of selection is the default behavior in the Pivot Chart component. For more details about how the grouping bar works, refer to the [grouping bar](./grouping-bar) documentation.
+You can display the grouping bar in the Pivot Chart by setting the [`showGroupingBar`](https://ej2.syncfusion.com/react/documentation/api/pivotview#showgroupingbar) property to **true**. When enabled, the grouping bar in the pivot chart shows a drop-down list on the value axis. This drop-down lets users select from the value fields defined in [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings). Users can switch between these fields to update the chart based on the selected value field. This method of selection is the default behavior in the Pivot Chart component. For more details about how the grouping bar works, refer to the [grouping bar](./grouping-bar) documentation.
 
 > When there are multiple axes, buttons appear on the value axis instead of the drop-down list.
 

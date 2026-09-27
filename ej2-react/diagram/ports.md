@@ -16,7 +16,7 @@ Ports are specialized connection points on nodes that provide precise control ov
 
 ## Types of Connections
 
-The Diagram component supports two distinct connection methods, each serving different use cases depending on the level of connection control required.
+The React Diagram component supports two distinct connection methods, each serving different use cases depending on the level of connection control required.
 
 ### Node to Node Connection
 
@@ -36,7 +36,7 @@ For details on how to create ports, see [Create Port](#create-port).
 
 ## Create Port
 
-Before adding ports, ensure the Diagram component is rendered and the required modules are injected. For setup details, see [Getting Started](./getting-started.md) and [Module Injection](./module-injection.md).
+Before adding ports, ensure the React Diagram component is rendered and the required modules are injected. For setup details, see [Getting Started](./getting-started.md) and [Module Injection](./module-injection.md).
 
 Ports are defined as objects within a node's [`ports`](https://ej2.syncfusion.com/react/documentation/api/diagram/pointPortModel) collection. The [`offset`](https://ej2.syncfusion.com/react/documentation/api/diagram/pointModel) property accepts fractional values (0 to 1) that determine the port's position relative to the node's bounds, where (0,0) represents the top-left corner and (1,1) represents the bottom-right corner.
 

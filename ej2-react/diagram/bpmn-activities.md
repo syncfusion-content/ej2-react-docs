@@ -55,7 +55,7 @@ The various types of BPMN tasks are tabulated as follows.
 | Send | ![Send Task BPMN Shape](images/Send.png) |
 | Receive | ![Receive Task BPMN Shape](images/Receive.png) |
 | Instantiating Receive | ![Instantiating Receive Task BPMN Shape](images/InsService.png) |
-| Manual | ![Manual Task BPMN Shape](images/Manual.png) |
+| Manual |![Manual Task BPMN Shape](images/Manual.png) |
 | Business Rule | ![Business Rule Task BPMN Shape](images/Bussiness.png) |
 | User | ![User Task BPMN Shape](images/User.png) |
 | Script | ![Script Task BPMN Shape](images/Script.png) |
@@ -63,7 +63,6 @@ The various types of BPMN tasks are tabulated as follows.
 #### Compensation
 
 [`Compensation`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnTask#compensation) indicates that an activity can undo or compensate for work performed by another activity. This becomes relevant when a process fails after partial completion and requires cleanup activities. Enable compensation using the compensation property of the BPMN activity. The default value is **false**.
-
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/bpmnShapes/es5Compensation-cs1/app/index.jsx %}
@@ -131,9 +130,9 @@ A [`Collapsed Sub-Process`](https://ej2.syncfusion.com/react/documentation/api/d
 The following table shows the available loop types for both tasks and subprocesses:
 
 | Loops | Task | Subprocess |
-| -------- | -------- | -------- |
-| Standard | ![Standard Task BPMN Shape](images/Standard1.png) | ![Standard Subprocess BPMN Shape](images/Standard2.png) |
-| SequenceMultiInstance | ![Sequence MultiInstance Task BPMN Shape](images/Sequence1.png) | ![SequenceMultiInstance Subprocess BPMN Shape](images/Sequence2.png) |
+| -------- | -------- | --------|
+| Standard | ![Standard Task BPMN Shape](images/Standard1.png)  | ![Standard Subprocess BPMN Shape](images/Standard2.png) |
+| SequenceMultiInstance | ![Sequence MultiInstance Task BPMN Shape](images/Sequence1.png) |  ![SequenceMultiInstance Subprocess BPMN Shape](images/Sequence2.png)|
 | ParallelMultiInstance | ![ParallelMultiInstance Task BPMN Shape](images/PMultiInstance1.png) | ![ParallelMultiInstance Subprocess BPMN Shape](images/PMultiInstance2.png) |
 
 #### Ad-hoc
@@ -154,7 +153,6 @@ An [`adhoc`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubP
 #### Boundary Types
 
 The [`boundary`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#boundary) property defines the visual boundary style of a subprocess, indicating different subprocess characteristics. The default value is **default**.
-
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/bpmnShapes/es5Boundary-cs1/app/index.jsx %}
@@ -200,7 +198,7 @@ Configure an event subprocess using the [`event`](https://ej2.syncfusion.com/rea
 
 ##### Transaction Subprocess
 
-A [`transaction`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#transaction) is a set of activities that logically belong together, in which all contained activities must complete their parts of the transaction; otherwise the process is undone. The execution result of a transaction is one of Successful Completion, Unsuccessful Completion (Cancel), and Hazard (Exception). The `events` property allows representation of these results as events attached to the transaction subprocess. Configure event properties as follows:
+* [`transaction`](https://ej2.syncfusion.com/react/documentation/api/diagram/bpmnSubProcess#transaction) is a set of activities that logically belong together, in which all contained activities must complete their parts of the transaction; otherwise the process is undone. The execution result of a transaction is one of Successful Completion, Unsuccessful Completion (Cancel), and Hazard (Exception). The `events` property allows representation of these results as events attached to the transaction subprocess. Configure event properties as follows:
 
 * **Event type**: Defines the triggering event type for the subprocess.
 * **Event name**: Identifies the event during runtime.

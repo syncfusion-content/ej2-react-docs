@@ -11,7 +11,6 @@ import { DataSourceSettingsModel } from '@syncfusion/ej2-pivotview/src/model/dat
 import * as React from 'react';
 import D3GroupedBar from './D3GroupedBar';
 import { pivotData } from './datasource';
-import './App.css';
 
 interface ChartDatum {
   row: string;

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Ruler in React Diagram
 
-The ruler provides horizontal and vertical guides for measuring in the diagram control. It can be used to measure diagram objects, indicate positions, and align diagram elements, making it especially useful for creating scale models. The ruler also includes a position indicator that displays the precise location of the mouse cursor on the diagram canvas, with the default color of the position indicator marker being red.
+The ruler provides horizontal and vertical guides for measuring in the React Diagram control. It can be used to measure React Diagram objects, indicate positions, and align diagram elements, making it especially useful for creating scale models. The ruler also includes a position indicator that displays the precise location of the mouse cursor on the diagram canvas, with the default color of the position indicator marker being red.
 
 The diagram ruler consists of two components: a horizontal ruler displayed along the top edge and a vertical ruler along the left edge of the diagram canvas. Both rulers work together to provide comprehensive positioning and measurement capabilities.
 
 ## Define Rulers
 
-The [`rulerSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulerSettings) property of diagram controls the visibility and appearance of the ruler in the diagram.
+The [`rulerSettings`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulerSettings) property of React Diagram controls the visibility and appearance of the ruler in the diagram.
 The [`showRulers`](https://ej2.syncfusion.com/react/documentation/api/diagram/rulerSettings#showrulers) property shows or hides the rulers in the diagram.
 
 The following code shows how to add a ruler to the diagram.

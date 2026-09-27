@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set Default Value for Event Fields in React Scheduler
 
-Event window default fields name like Title, Location, etc.. can be customized and default value can be set to Subject field using [`default`](https://ej2.syncfusion.com/react/documentation/api/schedule/fieldOptions#default) property which will be added if an appointment is created with empty subject.
+You can customize the default field names in the event window, such as Title and Location. You can also set a default value for the `Subject` field by using the [`default`](https://ej2.syncfusion.com/react/documentation/api/schedule/fieldOptions#default) property. This value is applied when an appointment is created without a subject.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

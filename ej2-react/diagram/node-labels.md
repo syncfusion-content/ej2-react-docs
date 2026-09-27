@@ -2,7 +2,7 @@
 layout: post
 title: Node Labels in React Diagram | Syncfusion®
 description: Position React Diagram node annotations precisely with fractional offset, alignment, and margin for exact placement inside node bounds.
-control: Node Labels
+control: Node Labels 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -68,16 +68,16 @@ N> Call `dataBind()` after property changes to reflect updates instantly.
 The following table demonstrates annotation positioning with different offset values:
 
 | Offset | Image |
-| -------- | -------- |
-| Top Left {x:0,y:0} | ![TopLeft](images/diagram-annotation-in-lefttop-position.png) |
-| Middle left {x:0,y:0.5} | ![MiddleLeft](images/diagram-annotation-in-leftcenter-position.png) |
-| Bottom left {x:0,y:1} | ![BottomLeft](images/diagram-annotation-in-leftbottom-position.png) |
-| Middle Top {x:0.5,y:0} | ![MiddleTop](images/diagram-annotation-in-centertop-position.png) |
-| Center {x:0.5,y:0.5} | ![Center](images/diagram-annotation-in-center-position.png) |
-| Middle Bottom {x:0.5,y:1} | ![MiddleBottom](images/diagram-annotation-in-centerbottom-position.png) |
-| Top right {x:1,y:0} | ![TopRight](images/diagram-annotation-in-topright-position.png) |
-| Middle right {x:1,y:0.5} | ![MiddleRight](images/diagram-annotation-in-rightcenter-position.png) |
-| Bottom right {x:1,y:1} | ![BottomRight](images/diagram-annotation-in-rightbottom-position.png) |
+|-----|-----|
+|Top Left {x:0,y:0} |![TopLeft](images/diagram-annotation-in-lefttop-position.png)|
+|Middle left {x:0,y:0.5}|![MiddleLeft](images/diagram-annotation-in-leftcenter-position.png)|
+|Bottom left {x:0,y:1}|![BottomLeft](images/diagram-annotation-in-leftbottom-position.png)|
+|Middle Top {x:0.5,y:0}|![MiddleTop](images/diagram-annotation-in-centertop-position.png)|
+|Center {x:0.5,y:0.5}|![Center](images/diagram-annotation-in-center-position.png)|
+|Middle Bottom {x:0.5,y:1}|![MiddleBottom](images/diagram-annotation-in-centerbottom-position.png)|
+|Top right {x:1,y:0}|![TopRight](images/diagram-annotation-in-topright-position.png)|
+|Middle right {x:1,y:0.5}|![MiddleRight](images/diagram-annotation-in-rightcenter-position.png)|
+|Bottom right {x:1,y:1}|![BottomRight](images/diagram-annotation-in-rightbottom-position.png)|
 
 ## Annotation alignment
 

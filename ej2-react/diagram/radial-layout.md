@@ -35,7 +35,7 @@ Creating a radial tree layout with a data source provides automatic node generat
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/radiallayout-cs1" %}
 
 
-N> When converting a data source into a radial layout, inject both DataBinding and RadialTree modules in the diagram component.
+N> When converting a data source into a radial layout, inject both DataBinding and RadialTree modules in the React Diagram component.
 
 
 ## Radial Tree with Nodes and Connectors
@@ -55,4 +55,4 @@ For scenarios requiring manual control over node creation and positioning, the r
  {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/radiallayout-cs2" %}
  
 
-N> To use radial tree layout functionality, inject the RadialTree module in the diagram component.
+N> To use radial tree layout functionality, inject the RadialTree module in the React Diagram component.

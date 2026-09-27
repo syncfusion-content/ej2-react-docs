@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Customization in React Timeline
 
-The Timeline component offers extensive customization options for visual styling including dot appearance, connector lines, borders, spacing, and color schemes. This section demonstrates various approaches to customize Timeline items and create visually distinctive event displays.
+The React Timeline component offers extensive customization options for visual styling including dot appearance, connector lines, borders, spacing, and color schemes. This section demonstrates various approaches to customize React Timeline items and create visually distinctive event displays.
 
 ## Connector styling
 ### Common styling
 
-Define styles that apply uniformly to all Timeline item connectors to maintain consistent visual presentation throughout the Timeline.
+Define styles that apply uniformly to all React Timeline item connectors to maintain consistent visual presentation throughout the Timeline.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -36,7 +36,7 @@ Define styles that apply uniformly to all Timeline item connectors to maintain c
 
 ### Individual styling
 
-Apply unique styles to individual connectors to visually differentiate a particular Timeline sequence.
+Apply unique styles to individual connectors to visually differentiate a particular React Timeline sequence.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -58,7 +58,7 @@ Apply unique styles to individual connectors to visually differentiate a particu
 ## Dot styling
 ### Dot color
 
-Modify the color of Timeline dots to highlight specific items or differentiate event types.
+Modify the color of React Timeline dots to highlight specific items or differentiate event types.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,7 +79,7 @@ Modify the color of Timeline dots to highlight specific items or differentiate e
 
 ### Dot size
 
-Adjust dot dimensions using the `--dot-size` CSS custom property to create visual emphasis, indicate importance levels, or maintain design consistency across different Timeline layouts and orientations.
+Adjust dot dimensions using the `--dot-size` CSS custom property to create visual emphasis, indicate importance levels, or maintain design consistency across different React Timeline layouts and orientations.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -100,7 +100,7 @@ Adjust dot dimensions using the `--dot-size` CSS custom property to create visua
 
 ### Dot shadow
 
-Create visually engaging Timeline dots by adding shadow effects using the `--dot-outer-space` and `--dot-border` CSS custom properties. These properties control the outer spacing and border appearance of Timeline dots.
+Create visually engaging React Timeline dots by adding shadow effects using the `--dot-outer-space` and `--dot-border` CSS custom properties. These properties control the outer spacing and border appearance of Timeline dots.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -121,7 +121,7 @@ Create visually engaging Timeline dots by adding shadow effects using the `--dot
 
 ### Dot variant
 
-Create different dot appearances by customizing border, outline, and background color properties of Timeline dots. This enables distinct visual styles for different types of events.
+Create different dot appearances by customizing border, outline, and background color properties of React Timeline dots. This enables distinct visual styles for different types of events.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -142,7 +142,7 @@ Create different dot appearances by customizing border, outline, and background 
 
 ### Dot outline
 
-Apply the `e-outline` class to the Timeline [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/timeline#cssclass) property to render dots with an outline state.
+Apply the `e-outline` class to the React Timeline [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/timeline#cssclass) property to render dots with an outline state.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

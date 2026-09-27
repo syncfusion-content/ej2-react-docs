@@ -53,7 +53,9 @@ The following code example illustrates how to define a lane header.
 ### Customizing Lane and Lane Header
 
 * The size of lane can be controlled by using [`width`](https://ej2.syncfusion.com/react/documentation/api/diagram/laneModel#width) and [`height`](https://ej2.syncfusion.com/react/documentation/api/diagram/laneModel#height) properties of lane.
+
 * The appearance of lane can be set by using the [`style`](https://ej2.syncfusion.com/react/documentation/api/diagram/laneModel#style) properties.
+
 * The appearance of header annotation can be customized by using the `style` property of header annotation.
 
 The following code example illustrates how to customize the lane header.
@@ -224,7 +226,7 @@ These interactions trigger events such as [`sizeChange`](https://ej2.syncfusion.
 The following image illustrates children interaction in lanes.
 
 ![Lane Children Interaction](images/child-interaction.gif)
-
+  
 #### Lane Header Editing
 
 The diagram provides support to edit lane headers at runtime. Header editing is achieved through the [`doubleClick`](https://ej2.syncfusion.com/react/documentation/api/diagram#doubleclick) event. Double-clicking the header label enables editing of that header.

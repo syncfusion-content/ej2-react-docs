@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Template in React Timeline
 
-The Timeline component provides comprehensive template customization through the [template](https://ej2.syncfusion.com/react/documentation/api/timeline#template) property. Templates allow complete control over the rendered structure and appearance of timeline items, including dot indicators, content areas, styling, and layout, enabling designs that match application-specific UI requirements.
+The React Timeline component provides comprehensive template customization through the [template](https://ej2.syncfusion.com/react/documentation/api/timeline#template) property. Templates allow complete control over the rendered structure and appearance of timeline items, including dot indicators, content areas, styling, and layout, enabling designs that match application-specific UI requirements.
 
 The `template` context exposes the following values for each timeline item:
 
 | Type | Purpose |
 | --- | --- |
-| `item` | Indicates the current data of the Timeline item. |
-| `itemIndex` | Indicates the current index of the Timeline item. |
+| `item` | Indicates the current data of the React Timeline item. |
+| `itemIndex` | Indicates the current index of the React Timeline item. |
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

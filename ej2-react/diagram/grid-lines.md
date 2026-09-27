@@ -2,7 +2,7 @@
 layout: post
 title: Grid Lines in React Diagram | Syncfusion®
 description: Enable gridlines and snapping in the React Diagram so nodes and connectors align precisely to the visible grid through snap settings configuration.
-control: Grid lines
+control: Grid lines 
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,7 +14,7 @@ Gridlines are crisscross lines drawn in diagram pages like the lines on traditio
 
 ## Prerequisites
 
-To use gridlines and snapping functionality, ensure that the snapping module is injected into the diagram component.
+To use gridlines and snapping functionality, ensure that the snapping module is injected into the React Diagram component.
 
 The [`snapSettings`](https://helpej2.syncfusion.com/react/documentation/api/diagram#snapsettings) property is used to customize the gridlines and control the snapping behavior in the diagram.
 
@@ -31,7 +31,7 @@ The [`snapConstraints`](https://helpej2.syncfusion.com/react/documentation/api/d
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5grildLines-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5grildLines-cs1" %}
 
 N>If you want to enable snapping, then inject snapping module into the diagram.
 
@@ -58,9 +58,9 @@ The following code example illustrates how to customize the appearance of gridli
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5gridlineAppearance-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5gridlineAppearance-cs1" %}
 
-![Line appearance](./images/line-appearance.png)
+ ![Line appearance](./images/line-appearance.png)
 
 ## Line Intervals
 
@@ -77,9 +77,9 @@ The following code example illustrates how to customize the thickness of lines a
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5LineIntervals-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5LineIntervals-cs1" %}
 
-![Line interval](./images/line-interval.png)
+ ![Line interval](./images/line-interval.png)
 
 ## Dot Grid Patterns
 
@@ -102,7 +102,7 @@ The following code illustrates how to render grid patterns as dots.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5DotGrid-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5DotGrid-cs1" %}
 
 ![Dot Grid](./images/grid-dots.png)
 
@@ -125,7 +125,7 @@ Snapping to gridlines can be enabled or disabled using the `snapConstraints` pro
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapToLines-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapToLines-cs1" %}
 
 ![Snap to lines](./images/snapToLines.gif)
 
@@ -144,7 +144,7 @@ The [`snapObjectDistance`](https://helpej2.syncfusion.com/react/documentation/ap
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapToObject-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapToObject-cs1" %}
 
 ![Snap to object](./images/snapToObject.gif)
 
@@ -165,7 +165,7 @@ The following code example demonstrates how to set the `snapAngle` property and 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapAngle-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapAngle-cs1" %}
 
 ![Snap Angle](./images/snapAngle.gif)
 
@@ -186,7 +186,7 @@ The following code example demonstrates how to set the `snapLineColor` property 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapColor-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapColor-cs1" %}
 
 ## Customization of Snap Intervals
 
@@ -201,7 +201,7 @@ By default, objects snap toward the nearest gridline. The gridline or position t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapInterval-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/gridLines/es5SnapInterval-cs1" %}
 
 ## Snap Constraints
 

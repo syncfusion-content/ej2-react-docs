@@ -52,8 +52,11 @@ function App() {
     else if (args.target.id === 'updaterow') {
       (grid as GridComponent).updateRow(0, { OrderID: 10248, CustomerID: 'RTER', ShipCity: 'America', ShipName: 'Hanari' });
     }
-    else {
+    else if (args.target.id === 'updatecell') {
       (grid as GridComponent).setCellValue(((grid as GridComponent).currentViewData[0] as GridComponent).OrderID, 'CustomerID', 'Value Changed');
+    }
+    else {
+      (grid as GridComponent).saveBulkChanges({ShipName: 'Island Trading', ShipCity: 'Tokyo'}, (grid as GridComponent).getCurrentViewRecords().slice(0,3), () => { (grid as GridComponent).refresh(); });
     }
   }
   return (<div> <ButtonComponent id='edit' onClick={clickEvents}>Edit</ButtonComponent>
@@ -61,6 +64,7 @@ function App() {
     <ButtonComponent id='delete' onClick={clickEvents}>Delete</ButtonComponent>
     <ButtonComponent id='updaterow' onClick={clickEvents}>Update Row</ButtonComponent>
     <ButtonComponent id='updatecell' onClick={clickEvents}>Update Cell</ButtonComponent>
+    <ButtonComponent id='save' onClick={clickEvents}>Save Bulk Changes</ButtonComponent>
     <GridComponent dataSource={data} editSettings={editOptions} height={300} ref={g => grid = g}>
       <ColumnsDirective>
         <ColumnDirective field='OrderID' width='100' textAlign="Right" isPrimaryKey={true} validationRules={orderIDRules} />

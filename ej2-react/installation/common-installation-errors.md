@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Common installation errors - Syncfusion
+title: Common Installation Errors for React Components | Syncfusion
 description: Learn about common installation errors when installing Syncfusion React (JavaScript - EJ2) components, including causes and solutions.
 control: common
 platform: ej2-react

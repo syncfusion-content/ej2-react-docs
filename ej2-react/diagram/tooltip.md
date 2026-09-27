@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD010 -->
 
-In Graphical User Interface (GUI), a tooltip is a message that appears when the mouse hovers over an element. Tooltips enhance user experience by providing contextual information, guidance, and feedback without cluttering the interface. The diagram component provides comprehensive tooltip support while dragging, resizing, rotating nodes, and when the mouse hovers over any diagram element.
+In Graphical User Interface (GUI), a tooltip is a message that appears when the mouse hovers over an element. Tooltips enhance user experience by providing contextual information, guidance, and feedback without cluttering the interface. The React Diagram component provides comprehensive tooltip support while dragging, resizing, rotating nodes, and when the mouse hovers over any diagram element.
 
 ## Default Tooltip
 
@@ -60,7 +60,7 @@ The tooltip can be customized for each node and connector. Remove the **InheritT
 
 ## Inherit Diagram Tooltip
 
-The diagram supports inheriting the diagram tooltip when the mouse hovers over any node or connector. To show a tooltip on mouse over, set the diagram's [`tooltip`](https://helpej2.syncfusion.com/react/documentation/api/diagram#tooltip) property with the tooltip [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#content) and [`position`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#position). Ensure that the nodes and connectors have their constraints set to **InheritTooltip**, as shown in the following example.
+The React Diagram supports inheriting the diagram tooltip when the mouse hovers over any node or connector. To show a tooltip on mouse over, set the diagram's [`tooltip`](https://helpej2.syncfusion.com/react/documentation/api/diagram#tooltip) property with the tooltip [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#content) and [`position`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#position). Ensure that the nodes and connectors have their constraints set to **InheritTooltip**, as shown in the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -79,7 +79,7 @@ The tooltip on mouse over can be disabled by assigning the diagram's `tooltip` p
 
 ```
 
-//Initializes the diagram component
+//Initializes the React Diagram component
   <DiagramComponent id="container" width={'650px'} height={'350px'}
     //Defines nodes
     nodes={node} connectors={connector}
@@ -91,7 +91,7 @@ The tooltip on mouse over can be disabled by assigning the diagram's `tooltip` p
 
 ## Tooltip for Ports
 
-The diagram supports tooltips for ports, displaying information or descriptions when the mouse hovers over them.
+The React Diagram supports tooltips for ports, displaying information or descriptions when the mouse hovers over them.
 
 To display tooltips on mouse over, set the desired tooltip [`content`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#content) by utilizing the `tooltip` property.
 
@@ -158,7 +158,7 @@ The following code example illustrates how to add formatted HTML content to the 
 
 ### Tooltip Relative to Object
 
-The diagram provides support to show tooltip around the node/connector that is hovered by the mouse. The tooltip can be aligned by using the [`position`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#position) property. The [`relativeMode`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#relativemode) property of the tooltip defines whether the tooltip has to be displayed around the object or at the mouse position.
+The React Diagram provides support to show tooltip around the node/connector that is hovered by the mouse. The tooltip can be aligned by using the [`position`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#position) property. The [`relativeMode`](https://helpej2.syncfusion.com/react/documentation/api/diagram/diagramTooltip#relativemode) property of the tooltip defines whether the tooltip has to be displayed around the object or at the mouse position.
 
 N> Valid `position` values include `TopLeft`, `TopCenter`, `TopRight`, `MiddleLeft`, `Center`, `MiddleRight`, `BottomLeft`, `BottomCenter`, and `BottomRight`.
 

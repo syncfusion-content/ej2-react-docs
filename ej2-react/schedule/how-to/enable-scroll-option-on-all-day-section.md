@@ -10,9 +10,11 @@ domainurl: ##DomainURL##
 
 # Enable Scroll Option on All-Day Section in React Scheduler
 
-When you have a large number of appointments in the all-day row, it can be difficult to view them properly. In this case, you can enable an individual scroller for the all-day row by setting the [`enableAllDayScroll`](https://ej2.syncfusion.com/react/documentation/api/schedule#enablealldayscroll) property to `true`, whereas its default value is `false`. When set to `true`, the all-day row displays a scroller when expanded beyond its maximum height.
+When you have many appointments in the all-day row, they can be difficult to view properly. You can enable an individual scroller for the all-day row by setting the [`enableAllDayScroll`](https://ej2.syncfusion.com/react/documentation/api/schedule#enablealldayscroll) property to `true`.
 
-> Note: This property is not applicable for Scheduler with height `auto`.
+When set to `true`, the all-day row displays a scroller when it expands beyond its maximum height. The default value is `false`.
+
+> **Note:** This property is not applicable when the Scheduler height is set to `auto`.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

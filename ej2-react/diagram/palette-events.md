@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Symbol Palette Events in React Diagram
 
-The Symbol Palette and Diagram interaction process exposes several events that trigger during user interactions such as dragging symbols, expanding palettes, and changing selections. These events enable developers to customize behavior, provide visual feedback, and implement custom logic during symbol palette operations.
+The Symbol Palette and React Diagram interaction process exposes several events that trigger during user interactions such as dragging symbols, expanding palettes, and changing selections. These events enable developers to customize behavior, provide visual feedback, and implement custom logic during symbol palette operations.
 
-Before working with these events, set up a Symbol Palette and Diagram as described in the [Symbol Palette getting-started](./symbol-palette) topic.
+Before working with these events, set up a Symbol Palette and React Diagram as described in the [Symbol Palette getting-started](./symbol-palette) topic.
 
 ## DragEnter Event
 

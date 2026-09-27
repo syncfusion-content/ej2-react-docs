@@ -26,7 +26,7 @@ The following properties control the expand and collapse behavior of nodes:
 
 N> Icons are only created when the node has outgoing edges (outEdges).
 
-For detailed API information, refer to [`expandIcon`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#expandicon) and [`collapseIcon`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#collapseicon).
+For detailed API information, refer to [`expandIcon`](https://ej2.syncfusion.com/react/documentation/api/diagram/node#expandicon) and [`collapseIcon`] (https://ej2.syncfusion.com/react/documentation/api/diagram/node#collapseicon).
 
 ## Customizing expand and collapse icons
 

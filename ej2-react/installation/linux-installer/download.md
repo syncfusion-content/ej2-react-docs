@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Download Linux installer - Syncfusion
+title: Download Linux Installer for React Components | Syncfusion
 description: Download the Syncfusion React Linux Installer from the Syncfusion website for both trial and licensed versions, depending on your license type.
 control: Download 
 platform: ej2-react
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download Syncfusion React Linux installer
+# Download Syncfusion® React Linux Installer
 
 Download the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript/React Linux installer from the [Syncfusion](https://www.syncfusion.com/) website. Depending on the license type, download either the trial installer or the licensed installer.
 

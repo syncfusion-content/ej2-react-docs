@@ -14,13 +14,13 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Pivot Table component allow
 
 ## Customizing the Toolbar
 
-To enable the export and import functionality, customize the Pivot Table's toolbar using the [toolbarTemplate](https://ej2.syncfusion.com/react/documentation/api/pivotview/#toolbartemplate) property. Add **Save** and **Open** buttons as described below. The sample also requires the `Toolbar` service, which must be injected into the `PivotViewComponent` via `<Inject services={[Toolbar]} />`.
+To enable the export and import functionality, customize the Pivot Table's toolbar using the [toolbarTemplate](https://ej2.syncfusion.com/react/documentation/api/pivotview#toolbartemplate) property. Add **Save** and **Open** buttons as described below. The sample also requires the `Toolbar` service, which must be injected into the `PivotViewComponent` via `<Inject services={[Toolbar]} />`.
 
 > The template referenced by `toolbarTemplate` (for example, `#template`) must be a `div` that is a sibling of the `PivotViewComponent` in the DOM. The sample below places the `<div id="template">` immediately after the component.
 
 ### Save Button
 
-The **Save** button is rendered as an anchor element. When clicked, the current report settings are retrieved using the [`getPersistData`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#getpersistdata) method, converted into a base64-encoded JSON string, and assigned to the anchor's `href` attribute so the browser downloads a file named `pivot.JSON`. The downloaded file contains the full `dataSourceSettings`, including rows, columns, values, and filters.
+The **Save** button is rendered as an anchor element. When clicked, the current report settings are retrieved using the [`getPersistData`](https://ej2.syncfusion.com/react/documentation/api/pivotview#getpersistdata) method, converted into a base64-encoded JSON string, and assigned to the anchor's `href` attribute so the browser downloads a file named `pivot.JSON`. The downloaded file contains the full `dataSourceSettings`, including rows, columns, values, and filters.
 
 ### Open Button
 

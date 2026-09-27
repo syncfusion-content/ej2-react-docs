@@ -15,7 +15,7 @@ The Syncfusion® React Diagram component provides comprehensive support for crea
 
 ## UML Sequence Diagram Elements
 
-A sequence diagram includes several key elements, such as participants, messages, activation boxes, and fragments. The sections below demonstrate how to define and configure these components using the Diagram control.
+A sequence diagram includes several key elements, such as participants, messages, activation boxes, and fragments. The sections below demonstrate how to define and configure these components using the React Diagram control.
 
 ### Participants
 

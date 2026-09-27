@@ -20,6 +20,7 @@ Syncfusion React Grid modules help optimize your application’s bundle size by 
 | [Grouping](./grouping/grouping) | `Group` | Inject this module to use grouping feature. |
 | [Lazy Load Grouping](./grouping/lazy-load-grouping) | `LazyLoadGroup` | Inject this module to use lazy load grouping feature. |
 | [Editing](./editing/edit) | `Edit` | Inject this module to use editing feature. |
+| [Formula](./formula/formula) | `Formula` | Inject this module to use formula feature. |
 | [Aggregates](./aggregates/aggregates) | `Aggregate` | Inject this module to use aggregate feature. |
 | [Column Chooser](./columns/column-chooser) | `ColumnChooser` | Inject this module to use column chooser feature. |
 | [Column Menu](./columns/column-menu) | `ColumnMenu` | Inject this module to use column menu feature. |

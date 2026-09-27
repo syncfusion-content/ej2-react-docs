@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Resizing Panels in React Dashboard Layout
 
-The Dashboard Layout component provides resizing functionality that can be enabled using the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#allowresizing) property. This functionality allows users to dynamically resize panels using resizing handles that control panel dimensions in various directions. The Dashboard Layout automatically handles collisions when resizing—if a panel expands into occupied space, adjacent panels are pushed to available positions.
+The React Dashboard Layout component provides resizing functionality that can be enabled using the [`allowResizing`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#allowresizing) property. This functionality allows users to dynamically resize panels using resizing handles that control panel dimensions in various directions. The React Dashboard Layout automatically handles collisions when resizing—if a panel expands into occupied space, adjacent panels are pushed to available positions.
 
 By default, panels can be resized only in the south-east direction. However, panels can also be resized in east, west, north, south, and south-west directions by specifying the required directions with the [`resizableHandles`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#resizablehandles) property.
 
 ## Resize events
 
-When resizing a panel in the Dashboard Layout, the following events are triggered in sequence:
+When resizing a panel in the React Dashboard Layout, the following events are triggered in sequence:
 
 
 | API Reference | Description | Use Case |
@@ -26,7 +26,7 @@ When resizing a panel in the Dashboard Layout, the following events are triggere
 |[resizeStop](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#resizestop) | Triggers when panel resize completes | Perfect for saving final panel state |
 
 
-The following sample demonstrates how to enable and disable panel resizing in the Dashboard Layout component with different directional handles:
+The following sample demonstrates how to enable and disable panel resizing in the React Dashboard Layout component with different directional handles:
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/dashboard-layout/resizing-cs1/app/App.jsx %}
@@ -52,7 +52,7 @@ The following sample demonstrates how to enable and disable panel resizing in th
 
 ## Programmatic panel resizing
 
-Dashboard Layout panels can be resized programmatically using the [resizePanel](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#resizepanel) method. The method is invoked as follows,
+React Dashboard Layout panels can be resized programmatically using the [resizePanel](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#resizepanel) method. The method is invoked as follows,
 
 ### Method signature
 

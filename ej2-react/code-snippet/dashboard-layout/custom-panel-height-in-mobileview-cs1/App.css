@@ -1,0 +1,42 @@
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-dropdowns/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-react-layouts/styles/tailwind3.css";
+
+#container {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.e-panel-container .content {
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  line-height: 45px;
+}
+
+td{
+  padding: 5px;
+}
+
+div#properties {
+  width: 205px;
+  margin-left: 15px;
+  border: 1px solid black;
+  padding: 15px;
+  position: absolute;
+}
+
+.inline {
+  display: inline-block;
+}
+
+div#control {
+  width: 500px;
+}
+
+#resize {
+  margin-left: 40%;
+}

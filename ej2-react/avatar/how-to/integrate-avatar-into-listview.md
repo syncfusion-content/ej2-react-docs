@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to integrate Avatar into ListView in React Avatar
 
-The Avatar component integrates with ListView to display profile images, initials, or icons alongside list item content. This approach is particularly effective in contact lists, team directories, chat applications, and user management interfaces where visual identification enhances usability and provides immediate context about each list item.
+The React Avatar component integrates with ListView to display profile images, initials, or icons alongside list item content. This approach is particularly effective in contact lists, team directories, chat applications, and user management interfaces where visual identification enhances usability and provides immediate context about each list item.
 
 The `xsmall` Avatar size provides the ideal balance between visual impact and space efficiency within ListView items. This sizing ensures consistent alignment with text content and maintains the overall list structure without overwhelming the interface.
 

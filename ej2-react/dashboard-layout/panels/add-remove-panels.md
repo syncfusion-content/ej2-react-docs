@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Adding or Removing Panels in React Dashboard Layout
 
-Dashboard applications frequently require updating displayed data, including dynamically dynamically adding or removing widgets for scenarios such as user customization, real-time data monitoring, or role-based content display. The Dashboard Layout component supports these scenarios through the [`addPanel`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#addpanel) and [`removePanel`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#removepanel) public methods of the component.
+React Dashboard applications frequently require updating displayed data, including dynamically dynamically adding or removing widgets for scenarios such as user customization, real-time data monitoring, or role-based content display. The React Dashboard Layout component supports these scenarios through the [`addPanel`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#addpanel) and [`removePanel`](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#removepanel) public methods of the component.
 
 ## Adding and Removing Panels Dynamically
 
@@ -22,13 +22,13 @@ Panels can be removed dynamically using the[`removePanel`](https://ej2.syncfusio
 
 ### Removing All Panels
 
-It is also possible to remove all the panels in a Dashboard Layout by calling the [removeAll](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#removeall) method.
+It is also possible to remove all the panels in a React Dashboard Layout by calling the [removeAll](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#removeall) method.
 
 ```js
 dashboard.removeAll();
 ```
 
-The following sample demonstrates how to add and remove panels dynamically in the Dashboard Layout component. Panels can be added at any desired position with specified dimensions by entering values in the numeric inputs and clicking the add button. Panels can be removed by selecting their ID from the dropdown.
+The following sample demonstrates how to add and remove panels dynamically in the React Dashboard Layout component. Panels can be added at any desired position with specified dimensions by entering values in the numeric inputs and clicking the add button. Panels can be removed by selecting their ID from the dropdown.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

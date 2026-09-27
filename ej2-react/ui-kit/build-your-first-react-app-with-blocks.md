@@ -102,13 +102,13 @@ If you choose **Tailwind CSS** theme, follow these steps to configure it.
     - For **light mode**:
 
     ```css
-    @import url('https://cdn.syncfusion.com/ej2/27.2.5/tailwind.css');
+    @import url('https://cdn.syncfusion.com/ej2/34.2.2/tailwind.css');
     ```
 
     - For **dark mode**:
 
     ```css
-    @import url('https://cdn.syncfusion.com/ej2/27.2.5/tailwind-dark.css');
+    @import url('https://cdn.syncfusion.com/ej2/34.2.2/tailwind-dark.css');
     ```
 
     ![Syncfusion Components - Tailwind CSS Theme](images/syncfusion-components-tailwind-theme.PNG)
@@ -150,13 +150,13 @@ If you choose **Bootstrap 5.3** theme, follow these steps to configure it.
     - For **light mode**:
 
     ```html
-    <link href="https://cdn.syncfusion.com/ej2/27.2.5/bootstrap5.3.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/34.2.2/bootstrap5.3.css" rel="stylesheet">
     ```
 
     - For **dark mode**:
 
     ```html
-    <link href="https://cdn.syncfusion.com/ej2/27.2.5/bootstrap5.3-dark.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/34.2.2/bootstrap5.3-dark.css" rel="stylesheet" />
     ```
 
 4. **OPTIONAL**: If you wish to use our font icons prepared for **Bootstrap 5.3**, you can include the following CDN link:

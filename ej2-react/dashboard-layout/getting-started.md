@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with React Dashboard Layout
 
-This section explains how to create a simple **Dashboard Layout** component and demonstrates its basic usage.
+This section explains how to create a simple **React Dashboard Layout** component and demonstrates its basic usage.
 
 ## Dependencies
 
-The following packages are required to use the Dashboard Layout component in your application:
+The following packages are required to use the React Dashboard Layout component in your application:
 
 ```js
 |-- @syncfusion/ej2-react-layouts
@@ -91,7 +91,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the Dashboard Layout component are imported in the **src/App.css** file:
+The required styles for the React Dashboard Layout component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -103,21 +103,21 @@ The required styles for the Dashboard Layout component are imported in the **src
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add Dashboard Layout to the application
+## Add React Dashboard Layout to the application
 
-You can render the Dashboard Layout component in either of the following ways:
+You can render the React Dashboard Layout component in either of the following ways:
 
 * Define `panels` directly in the markup using HTML elements with the `e-panel` class.
 * Configure `panels` using the `panels` property.
 
 ### Defining `panels` using HTML attributes
 
-You can add the React Dashboard Layout component to your **src/App.jsx** file by importing and defining it within your application. In the following example, a basic Dashboard Layout is rendered by defining panel configurations directly in the markup using HTML attributes and elements with the `e-panel` class. Use the following code:
+You can add the React Dashboard Layout component to your **src/App.jsx** file by importing and defining it within your application. In the following example, a basic React Dashboard Layout is rendered by defining panel configurations directly in the markup using HTML attributes and elements with the `e-panel` class. Use the following code:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 
-// import the DashboardLayout component
+// import the React Dashboard Layout component
 import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
 import './App.css';
 
@@ -237,7 +237,7 @@ yarn dev
 
 ## Sample output
 
-The following example shows a basic Dashboard Layout by adding panel definitions directly via HTML attributes.
+The following example shows a basic React Dashboard Layout by adding panel definitions directly via HTML attributes.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

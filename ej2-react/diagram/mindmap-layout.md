@@ -12,6 +12,7 @@ domainurl: ##DomainURL##
 
 A mind map is a powerful visualization technique that organizes information around a central concept, with related topics branching outward in a tree-like structure. This layout is particularly useful for brainstorming, knowledge mapping, and hierarchical data representation. The React Diagram component supports mind map layouts through the [`type`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#type) property, which should be set to **MindMap**.
 
+
 ## Mind Map Orientation
 
 The [`Orientation`](https://ej2.syncfusion.com/react/documentation/api/diagram/layout#orientation) property determines how the mind map tree structure is arranged spatially. By default, the orientation is set to **Horizontal**, positioning the root node centrally with branches extending left and right.
@@ -30,16 +31,18 @@ The following code example demonstrates how to create a mind map layout:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/mindMap-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/mindMap-cs1" %}
+
 
 The following table outlines the various orientation types available:
 
-| Orientation Type | Description |
+|Orientation Type |Description|
 | -------- | ----------- |
-| Horizontal <br> *(Default)* | Arranges the mind map with the root node centered, branches extending horizontally left and right. |
-| Vertical | Arranges the mind map with the root node at the top or center, branches extending vertically up and down. |
+|Horizontal <br> *(Default)*|Arranges the mind map with the root node centered, branches extending horizontally left and right.|
+|Vertical|Arranges the mind map with the root node at the top or center, branches extending vertically up and down.|
 
 ![Mind map layout showing a branched structure with nodes arranged around a central concept](images/mindmap.png)
+
 
 ## Mind Map Branch
 
@@ -57,12 +60,11 @@ The `getBranch` method receives a node object as a parameter and should return a
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/mindMap-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout/mindMap-cs2" %}
 
 ## Common Use Cases
 
 Mind map layouts are ideal for:
-
 - **Brainstorming sessions**: Visualizing ideas and their relationships.
 - **Knowledge mapping**: Organizing complex information hierarchically.
 - **Decision trees**: Mapping out decision processes and outcomes.
@@ -81,8 +83,8 @@ Follow these practices to build clear and readable mind maps:
 
 ## Troubleshooting
 
-| Issue | Cause | Resolution |
+|Issue |Cause |Resolution|
 | -------- | ----------- | ----------- |
-| Layout does not apply and no nodes render | `MindMap` module is not injected into the Diagram | Inject the MindMap module into the DiagramComponent using the Inject component. |
-| Branches overlap or appear too close together | Insufficient `horizontalSpacing` / `verticalSpacing` in the layout | Increase the spacing properties on the `Layout` configuration |
-| All branches render on one side only | `getBranch` always returns the same branch value | Verify the `getBranch` logic returns context-appropriate values per node |
+|Layout does not apply and no nodes render|`MindMap` module is not injected into the Diagram|Inject the MindMap module into the DiagramComponent using the Inject component.|
+|Branches overlap or appear too close together|Insufficient `horizontalSpacing` / `verticalSpacing` in the layout|Increase the spacing properties on the `Layout` configuration|
+|All branches render on one side only|`getBranch` always returns the same branch value|Verify the `getBranch` logic returns context-appropriate values per node|

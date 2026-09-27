@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Accessibility in React Dashboard Layout
 
-The Dashboard Layout component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) and WAI-ARIA patterns that are commonly used to evaluate accessibility.
+The React Dashboard Layout component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov), [Section 508](https://www.section508.gov), [WCAG 2.2](https://www.w3.org/TR/WCAG22) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) and WAI-ARIA patterns that are commonly used to evaluate accessibility.
 
-The Dashboard Layout component provides an accessible interface for organizing and managing dashboard panels, ensuring that users with disabilities can interact with and navigate the layout structure.
+The Dashboard Layout component provides an accessible interface for organizing and managing React Dashboard panels, ensuring that users with disabilities can interact with and navigate the layout structure.
 
 ## Accessibility compliance
 
-The accessibility compliance for the Dashboard Layout component is outlined below.
+The accessibility compliance for the React Dashboard Layout component is outlined below.
 
 <style>
     .post .post-content img {
@@ -45,22 +45,22 @@ The accessibility compliance for the Dashboard Layout component is outlined belo
 
 ## WAI-ARIA attributes
 
-The Dashboard Layout component applies [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg) attributes to ensure proper communication with assistive technologies. The following attributes are applied to dashboard elements:
+The React Dashboard Layout component applies [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg) attributes to ensure proper communication with assistive technologies. The following attributes are applied to React Dashboard elements:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
-| `role=list` | Indicates the role as a list for the Dashboard Layout element. |
-| `role=listitem` | Indicates the role as a listitem for the Dashboard panels. |
+| `role=list` | Indicates the role as a list for the React Dashboard Layout element. |
+| `role=listitem` | Indicates the role as a listitem for the React Dashboard panels. |
 | `role=presentation` | Indicates the role as a presentation for the table when the `showGridLines` property is enabled. |
 | `aria-grabbed` | When the panel is chosen for dragging, the aria-grabbed attribute is set to "true". If it's set to "false", the element can be grabbed for drag-and-drop, but it won't be actively held. |
 
 ## Keyboard interaction
 
-Keyboard support is not applicable for the Dashboard Layout.
+Keyboard support is not applicable for the React Dashboard Layout.
 
 ## Accessibility testing
 
-Accessibility levels for the Dashboard Layout component are validated using automated tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core).
+Accessibility levels for the React Dashboard Layout component are validated using automated tools such as [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core).
 
 Evaluate the component's accessibility using the following sample: open the [sample](https://ej2.syncfusion.com/accessibility/dashboard-layout.html) in a new window and run accessibility tools against it.
 

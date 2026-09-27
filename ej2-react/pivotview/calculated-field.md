@@ -10,29 +10,34 @@ domainurl: ##DomainURL##
 
 # Calculated field in React Pivot Table
 
-The calculated field feature enables users to create custom value fields using mathematical formulas and existing fields from their data source. Users can perform complex calculations with basic arithmetic operators and seamlessly integrate these custom fields into their pivot table for enhanced data visualization and reporting.
+A calculated field creates a new **value field** from a formula that combines existing fields and standard operators or functions. The result appears in the pivot table like any other measure, which enables derived metrics such as margins, ratios, or totals that the raw data does not provide directly.
+
+Calculated fields can be:
+
+- **Created at runtime** through the built-in calculated field dialog in the Field List.
+- **Pre-configured in code** with the [`calculatedFieldSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#calculatedfieldsettings) property, and then created, edited, renamed, or reused at runtime from the UI.
+
+For example, the formula `"Sum(Amount)"-"Sum(Sold)"` displays the difference between two existing measures as a single calculated value field.
 
 ## Creating calculated fields
 
-Users can create calculated fields in two convenient ways:
-- **Interactive Method**: Using the built-in dialog accessible from the Field List UI.
-- **Code-Based Method**: Configuring fields programmatically using the [`calculatedFieldSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#calculatedfieldsettings) property.
+Calculated fields can be created through the built-in calculated field dialog or pre-configured in code with the [`calculatedFieldSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#calculatedfieldsettings) property.
 
-To enable the calculated field functionality, set the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#allowcalculatedfield) property to **true**. Once enabled, a "CALCULATED FIELD" button appears in the Field List UI. Clicking this button opens the calculated field dialog, where users can create and manage custom fields using an intuitive interface.
+To make the dialog available, set the [`allowCalculatedField`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#allowcalculatedfield) property to **true**. This adds the **CALCULATED FIELD** button to the Field List; clicking the button opens the calculated field dialog, where fields are created and managed.
 
 ### Defining calculated fields programmatically
 
-You can define calculated fields programmatically using the [`calculatedFieldSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#calculatedfieldsettings) property. This approach is ideal for pre-configuring specific calculations. The following properties are essential for creating a calculated field:
+Calculated fields are defined as an array of field configurations in the [`calculatedFieldSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#calculatedfieldsettings) property, which is suitable for pre-configuring calculations before the pivot table is rendered. Each configuration uses the following properties:
 
 - [`name`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedfieldsettingsmodel#name): Specifies a unique name for the calculated field.
-- [`formula`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedfieldsettingsmodel#formula): Defines the mathematical expression using existing field names and arithmetic operators.
-- [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings): Configures the number format for displaying calculated results.
+- [`formula`](https://ej2.syncfusion.com/react/documentation/api/pivotview/calculatedfieldsettingsmodel#formula): Defines the mathematical expression using existing fields, arithmetic operators, and functions. Field references must include an aggregation type and be enclosed in double quotes, such as `"Sum(Amount)"`, as described in [Formula syntax](#formula-syntax).
 
-To use the calculated field feature, you must inject the `CalculatedField` module into the pivot table. In the `App.tsx` file, include `Inject services={[CalculatedField, ...]}` inside the `PivotViewComponent` (see the code sample below for the full setup).
+To display a formatted result, add the calculated field to the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) property of the data source settings, as shown in the code sample below.
+
+The `CalculatedField` module must be injected for the calculated field feature to work. In `App.tsx`, the module is added through `Inject services={[CalculatedField, ...]}` inside `PivotViewComponent` (see the code sample below for the full setup).
 
 N>
 - The calculated field feature applies only to value fields. By default, calculated fields created programmatically are added to the field list and calculated field dialog UI. To display a calculated field in the pivot table UI, it must be added to the [`values`](https://ej2.syncfusion.com/react/documentation/api/pivotview/datasourcesettings#values) property, as shown in the code below.
-- The following advanced aggregation types are not supported within calculated field formulas: `Index`, `RunningTotals`, `PercentageOfRunningTotals`, `PercentageOfGrandTotal`, `PercentageOfColumnTotal`, `PercentageOfRowTotal`, `PercentageOfParentColumnTotal`, `PercentageOfParentRowTotal`, `DifferenceFrom`, `PercentageOfDifferenceFrom`, and `PercentageOfParentTotal`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -53,7 +58,7 @@ N>
 
 ## Opening the calculated field dialog programmatically
 
-You can display the calculated field dialog by calling the [`createCalculatedFieldDialog`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#createcalculatedfielddialog) method when an external button is clicked. This provides additional flexibility for accessing the calculated field functionality.
+The calculated field dialog can also be opened by code instead of through the Field List button. The [`createCalculatedFieldDialog`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#createcalculatedfielddialog) method is invoked from an external button handler, which keeps the dialog available without reserving a Field List button.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -72,11 +77,11 @@ You can display the calculated field dialog by calling the [`createCalculatedFie
 
 {% previewsample "page.domainurl/code-snippet/pivot-table/default-cs10" %}
 
-## Editing through the field list and grouping bar
+## Editing a calculated field
 
-You can easily modify existing calculated fields using the built-in edit option available in both the field list and grouping bar. This feature allows you to update formulas, change field names, or adjust formatting without recreating the entire calculated field.
+Existing calculated fields can be updated at runtime — field name, formula, or format — without recreating the field. All edits happen in the calculated field dialog, which can be opened from two places.
 
-To edit an existing calculated field:
+### From the field list or grouping bar
 
 1. Locate the calculated field button in either the field list or the grouping bar.
 2. Click the **Edit** icon next to the calculated field name.
@@ -89,54 +94,36 @@ To edit an existing calculated field:
 
 ![Editing the calculated field formula](images/calculatdfield-grouping-edit2.png)
 
-## Renaming an existing calculated field
+### From the calculated field dialog
 
-You can rename any existing calculated field directly through the user interface at runtime. This option helps you maintain clear and meaningful names for your calculated fields as your analysis requirements evolve.
-
-To rename a calculated field:
-
-1. Locate the calculated field button in either the field list or the grouping bar.
-2. Click the **Edit** icon next to the calculated field name.
-3. The calculated field dialog opens, displaying the current field name in the text box at the top.
-4. Replace the existing name with your preferred name.
-5. Click **OK** to save the new name.
+1. Open the calculated field dialog (create or edit entry).
+2. Select the calculated field from the tree view list.
+3. The existing formula appears in a multiline text box at the bottom of the dialog.
+4. Update the name in the text box at the top, the formula, or the format setting.
+5. Click **OK** to save the changes.
 
 ![Renaming the calculated field - dialog open](images/calculatdfield-renaming1.png)
 <br/>
-
-![Renaming the calculated field - saved](images/calculatdfield-renaming2.png)
-
-## Editing an existing calculated field formula
-
-This option allows you to modify the formulas of existing calculated fields directly through the user interface, ensuring your calculations remain accurate and up to date with changing requirements.
-
-To edit an existing calculated field formula:
-
-1. Open the calculated field dialog.
-2. Select the calculated field you want to edit from the list.
-3. Click the **Edit** icon next to the selected field.
-4. The existing formula appears in a multiline text box at the bottom of the dialog.
-5. Update the formula according to your requirements.
-6. Click **OK** to save your changes.
-
-The pivot table will automatically refresh to reflect the updated calculations.
 
 ![Editing a calculated field - dialog open](images/calculatdfield-field-edit1.png)
 <br/>
 
 ![Editing a calculated field - formula updated](images/calculatdfield-field-edit2.png)
+<br/>
+
+![Renaming the calculated field - saved](images/calculatdfield-renaming2.png)
 
 ## Reusing an existing formula in a new calculated field
 
-This option enables you to quickly create new calculated fields by reusing formulas from existing fields, saving time and ensuring consistency across your calculations.
+A new calculated field can be created from the formula of an existing one, which keeps calculations consistent and saves re-entry.
 
 To reuse an existing formula:
 
 1. Open the calculated field dialog to create a new field.
-2. Locate the existing calculated field whose formula you want to reuse.
+2. Locate the existing calculated field whose formula is to be reused.
 3. Drag the existing calculated field from the tree view.
 4. Drop it into the **Formula** section.
-5. The formula from the existing field is automatically added to your new calculated field.
+5. The formula from the existing field is automatically added to the new calculated field.
 6. Modify the formula further if needed, or use it as is.
 7. Click **OK** to create the new calculated field.
 
@@ -150,18 +137,18 @@ To reuse an existing formula:
 
 ## Applying formatting to calculated field values
 
-Formatting calculated field values enhances the readability and insight of your data in the pivot table. You can apply different formats using the calculated field dialog in the UI or programmatically through code.
+Calculated field values can be formatted in the calculated field dialog or in code, which keeps numeric output readable and consistent with the rest of the table.
 
-To format calculated field values in your code, use the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) property. For more information about supported number formats, refer to the documentation [here](https://ej2.syncfusion.com/react/documentation/pivotview/number-formatting).
+In code, formatting is set through the [`formatSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/formatsettings) property. The full list of supported number formats is described in [Number formatting](./number-formatting).
 
 ### Formatting through the user interface
 
-To apply formatting to calculated field values via the user interface, use the built-in "Format" dropdown available in the calculated field dialog. This dropdown provides the following predefined format options:
+The calculated field dialog provides a built-in **Format** dropdown with the following predefined options:
 
 * **Standard** - Displays numbers using the default numeric format (equivalent to the `N` format).
 * **Currency** - Displays numbers as currency values.
 * **Percent** - Displays numbers as percentage values.
-* **Custom** - Allows you to specify a custom format pattern.
+* **Custom** - Accepts a custom format pattern.
 * **None** - Applies no formatting to the values.
 
 > **Note:** By default, **None** is selected in the dropdown.
@@ -170,11 +157,22 @@ To apply formatting to calculated field values via the user interface, use the b
 
 ### Applying custom formatting
 
-For specific formatting requirements, select the **Custom** option from the "Format" dropdown. This allows you to enter custom format patterns that meet your exact display needs.
+The **Custom** option in the **Format** dropdown accepts any custom format pattern, which is useful for display requirements beyond the predefined options.
 
 ![Applying custom format through calculated field dialog UI](images/calculatdfield-applyFormate.png)
 
 ## Supported operators and functions for the calculated field formula
+
+### Formula syntax
+
+A calculated field formula is a string expression. Follow these rules when writing it:
+
+- Field references must include an aggregation type, such as `Sum(Amount)`, `Count(Sold)`, or `Average(Quantity)`. Bare field names without an aggregation type are not supported in formulas.
+- Field references must be enclosed in double quotes: `"Sum(Amount)"`.
+- Operators combine two field references: `"Sum(Amount)"+"Sum(Sold)"`.
+- Functions and [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) methods take quoted field references as arguments: `abs("Sum(Amount)")`, `Math.round("Sum(Amount)")`.
+
+> **Note**: The following advanced aggregation types are not supported within calculated field formulas: `Index`, `RunningTotals`, `PercentageOfRunningTotals`, `PercentageOfGrandTotal`, `PercentageOfColumnTotal`, `PercentageOfRowTotal`, `PercentageOfParentColumnTotal`, `PercentageOfParentRowTotal`, `DifferenceFrom`, `PercentageOfDifferenceFrom`, and `PercentageOfParentTotal`.
 
 Below is a list of operators and functions that can be used in the formula to create the calculated fields.
 
@@ -292,7 +290,7 @@ Below is a list of operators and functions that can be used in the formula to cr
      Syntax: max(number1, number2)
     ```
 
- > Also, you can use JavaScript [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) object properties and methods directly to the formula.
+ > The JavaScript [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) object properties and methods can also be used directly in the formula.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -313,11 +311,18 @@ Below is a list of operators and functions that can be used in the formula to cr
 
 ## Event
 
-The Pivot Table provides the following events to monitor calculated field operations. Each event lets you track, validate, or intercept a specific stage of the user interaction lifecycle.
+The Pivot Table provides the following events to monitor calculated field operations. Each event exposes a specific stage of the operation lifecycle, which can be tracked, validated, or intercepted. Calculated field actions carry the following `actionName` values, which are consistent across the `actionBegin`, `actionComplete`, and `actionFailure` events:
+
+| User Action | `actionBegin` / `actionFailure` Action Name | `actionComplete` Action Name |
+|-------------|---------------------------------------------|------------------------------|
+| [Clicking the calculated field button](./calculated-field#creating-calculated-fields) | Open calculated field dialog | — |
+| [Creating a calculated field](./calculated-field#creating-calculated-fields) | — | Calculated field applied |
+| [Clicking the edit icon for a calculated field](./calculated-field#editing-a-calculated-field) | Edit calculated field | Calculated field edited |
+| [Context menu in the calculated field dialog tree view](./calculated-field#creating-calculated-fields) | Calculated field context menu | — |
 
 ### CalculatedFieldCreate
 
-The [`calculatedFieldCreate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#calculatedfieldcreate) event enables you to validate and manage calculated field details before they are applied to the pivot table. This ensures data accuracy and prevents invalid configurations. The event is triggered when the "OK" button is clicked to close the calculated field dialog, allowing you to modify or validate the calculated field information before it is saved.
+The [`calculatedFieldCreate`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#calculatedfieldcreate) event is triggered when the **OK** button is clicked in the calculated field dialog, before the entered details are applied to the pivot table. The event allows the calculated field information to be validated or modified before it is saved, which prevents invalid configurations from being applied.
 
 **Event Parameters:**
 
@@ -335,7 +340,7 @@ The event provides the following parameters to facilitate interaction with calcu
 
 **Example:**
 
-The following example shows how to prevent users from creating calculated fields without setting a format:
+The following example prevents calculated fields from being created without a set format:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -356,36 +361,28 @@ The following example shows how to prevent users from creating calculated fields
 
 ### ActionBegin
 
-The [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event allows you to control and monitor calculated field operations before they are executed, enabling you to validate or restrict user actions as needed.
+The [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event fires before a calculated field operation is executed, which allows the action to be validated or restricted.
 
-This event is triggered when users interact with calculated field functionality in the following ways:
+This event is triggered by the following interactions with calculated field functionality:
 - Clicking the calculated field button
 - Clicking the edit icon for an existing calculated field
 - Using the context menu in the tree view within the calculated field dialog
 
-The event provides the following parameters to help you handle these interactions:
+The event provides the following parameters:
 
 **Event Parameters:**
 
 - [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionbegineventargs#datasourcesettings): Contains the current data source configuration, including input data, rows, columns, values, filters, format settings, and other pivot table settings.
 
-- [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionbegineventargs#actionname): Identifies the specific action the user is attempting to perform. The table below lists the available actions and their corresponding names:
+- [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionbegineventargs#actionname): Identifies the specific action being attempted. The available action names are listed in the [action name table](#event) above this section.
 
-| User Action | Action Name |
-|-------------|-------------|
-| [Calculated field button click](./calculated-field#creating-calculated-fields) | Open calculated field dialog |
-| [Edit icon click for calculated field](./calculated-field#editing-through-the-field-list-and-grouping-bar) | Edit calculated field |
-| [Context menu in calculated field dialog tree view](./calculated-field#creating-calculated-fields) | Calculated field context menu |
+- [`fieldInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionbegineventargs#fieldinfo): Provides information about the selected field when the action involves a specific field. This parameter is available only when the action involves a specific field, such as filtering, sorting, removing a field from the grouping bar, editing, or changing the aggregation type.
 
-- [`fieldInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionbegineventargs#fieldinfo): Provides information about the selected field when the action involves a specific field.
-
-> **Note**: This parameter is available only when the action involves a specific field, such as filtering, sorting, removing a field from the grouping bar, editing, or changing the aggregation type.
-
-- [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionbegineventargs#cancel): A boolean property that allows you to prevent the current action from completing. Set this to **true** to stop the action from proceeding.
+- [`cancel`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionbegineventargs#cancel): A boolean property that prevents the current action from completing when set to **true**.
 
 **Example:**
 
-The example below illustrates how to prevent access to the calculated field dialog by canceling the action triggered when a user clicks the calculated field button. This is achieved by setting the **args.cancel** property to **true** within the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event:
+The following example prevents access to the calculated field dialog by setting the **args.cancel** property to **true** in the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event when the calculated field button is clicked:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -406,24 +403,17 @@ The example below illustrates how to prevent access to the calculated field dial
 
 ### ActionComplete
 
-The [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actioncomplete) event enables you to track when calculated field operations are successfully completed in the Pivot Table. This event is useful for performing additional actions or logging activities after users create or modify calculated fields.
+The [`actionComplete`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actioncomplete) event fires after a calculated field operation completes successfully. It is useful for performing follow-up actions or logging activity after fields are created or modified.
 
-The event provides the following parameters to help you handle completed operations:
+The event provides the following parameters:
 
 **Event Parameters:**
 
 - [`dataSourceSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactioncompleteeventargs#datasourcesettings): Contains the updated data source configuration, including input data, rows, columns, values, filters, format settings, and other pivot table settings after the operation is completed.
 
-- [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactioncompleteeventargs#actionname): Identifies the specific action completed by the user. The table below lists the available actions and their corresponding names:
+- [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactioncompleteeventargs#actionname): Identifies the specific action that completed. The available action names are listed in the [action name table](#event) above this section.
 
-| User Action | Action Name |
-|-------------|-------------|
-| [Creating calculated field](./calculated-field#creating-calculated-fields) | Calculated field applied |
-| [Editing calculated field](./calculated-field#editing-through-the-field-list-and-grouping-bar) | Calculated field edited |
-
-- [`fieldInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactioncompleteeventargs#fieldinfo): Provides information about the selected field when the action involves a specific field.
-
-> **Note**: This parameter is available only when the action involves a specific field, such as filtering, sorting, removing a field from the grouping bar, editing, or changing the aggregation type.
+- [`fieldInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactioncompleteeventargs#fieldinfo): Provides information about the selected field when the action involves a specific field, as described for the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionbegin) event.
 
 - [`actionInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactioncompleteeventargs#actioninfo): Contains detailed information about the completed action. For calculated field operations, this includes the complete calculated field information, its formula, and the field name.
 
@@ -452,13 +442,7 @@ The example below demonstrates how to use the [`actionComplete`](https://ej2.syn
 
 The [`actionFailure`](https://ej2.syncfusion.com/react/documentation/api/pivotview/index-default#actionfailure) event is triggered when a UI action fails to produce the expected result. This event provides detailed information about the failure through the following parameters:
 
-* [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionfailureeventargs#actionname): It holds the name of the current action that failed. The following are the UI actions and their names:
-
-   | Action | Action Name |
-   |------|-------------|
-   | [`Calculated field button`](./calculated-field#creating-calculated-fields)| Open calculated field dialog|
-   | [`Edit icon in calculated field`](./calculated-field#editing-through-the-field-list-and-grouping-bar)| Edit calculated field|
-   | [`Context menu in the tree view inside the calculated field dialog`](./calculated-field#creating-calculated-fields)| Calculated field context menu|
+* [`actionName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionfailureeventargs#actionname): It holds the name of the current action that failed. The available action names are listed in the [action name table](#event) above this section.
 
 * [`errorInfo`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotactionfailureeventargs#errorinfo): It holds the error information of the current UI action.
 

@@ -104,7 +104,7 @@ When no explicit size is provided, panes automatically adjust to available space
 
 ## Fixed pane
 
-Panes can be configured with fixed sizes in both horizontal and vertical orientations. Even when all panes have fixed sizes, the Splitter treats the last pane as flexible to preserve layout adaptability. Ensure at least one pane remains flexible to accommodate container size changes.
+Panes can be configured with fixed sizes in both horizontal and vertical orientations. Even when all panes have fixed sizes, the React Splitter treats the last pane as flexible to preserve layout adaptability. Ensure at least one pane remains flexible to accommodate container size changes.
 
 `[Class-component]`
 

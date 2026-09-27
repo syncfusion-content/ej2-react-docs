@@ -1,12 +1,8 @@
-html,
-body {
-  min-height: 100%;
-  margin: 0;
-}
-
-body {
-  box-sizing: border-box;
-  padding: 16px;
-  background: #f6f8fb;
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
 }

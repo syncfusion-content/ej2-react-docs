@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on user preference.
 
-## Customizing the card
+## Customizing the React Card
 
-Use the following CSS to customize the card appearance.
+Use the following CSS to customize the React Card appearance.
 
 ```css
 .e-card {
@@ -35,9 +35,9 @@ Use the following CSS to customize the header element appearance.
 }
 ```
 
-## Customizing the card content
+## Customizing the React Card content
 
-Use the following CSS to customize the card content appearance.
+Use the following CSS to customize the React Card content appearance.
 
 ```css
 .e-card .e-card-content {
@@ -57,9 +57,9 @@ Use the following CSS to customize the divider used to separate elements inside 
 }
 ```
 
-## Including image within card element
+## Including image within React Card element
 
-Use the following CSS to include image within card element.
+Use the following CSS to include image within React Card element.
 
 ```css
 .e-card .e-card-image {
@@ -124,9 +124,9 @@ Use the following CSS to include action buttons or anchor tags.
 }
 ```
 
-## Aligning card elements horizontally
+## Aligning React Card elements horizontally
 
-Use the following CSS to align card elements horizontally.
+Use the following CSS to align React Card elements horizontally.
 
 ```css
 .e-card .e-card-horizontal  {

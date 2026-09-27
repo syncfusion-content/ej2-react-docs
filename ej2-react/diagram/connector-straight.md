@@ -58,7 +58,7 @@ Straight segments can be removed by clicking the segment end point while holding
 
 ### Programmatic Editing
 
-You can also add or remove segments programmatically using the [`editSegment`](https://helpej2.syncfusion.com/react/documentation/api/diagram#editsegment) method of the diagram component. This provides API-level control over connector segment manipulation.
+You can also add or remove segments programmatically using the [`editSegment`](https://helpej2.syncfusion.com/react/documentation/api/diagram#editsegment) method of the React Diagram component. This provides API-level control over connector segment manipulation.
 
 The following example demonstrates how to add segments to a straight connector programmatically.
 

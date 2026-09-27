@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Perform CRUD Actions Dynamically in React Scheduler
 
-CRUD actions can be manually performed on appointments using the [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#addevent), [`saveEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#saveevent), and [`deleteEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#deleteevent) methods in the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler), as shown below.
+You can perform CRUD actions on appointments manually by using the [`addEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#addevent), [`saveEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#saveevent), and [`deleteEvent`](https://ej2.syncfusion.com/react/documentation/api/schedule#deleteevent) methods in the [React Scheduler](https://www.syncfusion.com/react-components/react-scheduler), as shown below.
 
 ## Normal events
 
@@ -44,4 +44,10 @@ CRUD actions can be manually performed on appointments using the [`addEvent`](ht
         
 {% previewsample "page.domainurl/code-snippet/schedule/app-crud-cs7" %}
 
-> When a single occurrence of the recurrence appointment is edited, `recurrenceID` field will be added which holds the `id` value of its parent recurrence appointment. It is applicable only for the edited occurrence appointments. Therefore the collection passing to the `saveEvent` with action as **EditOccurrence** should have `RecurrenceID` field as shown above.
+> **Note:** When a single occurrence of a recurring appointment is edited, the `RecurrenceID` field is added and holds the `Id` value of its parent recurring appointment. This applies only to the edited occurrence. Therefore, the collection passed to the `saveEvent` method with the action **EditOccurrence** must include the `RecurrenceID` field, as shown above.
+
+## See also
+
+* [CRUD actions in Scheduler](../crud-actions)
+* [Recurring events](../recurrence-editor)
+* [Scheduler events](../events)

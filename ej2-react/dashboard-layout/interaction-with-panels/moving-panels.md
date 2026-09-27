@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Moving Panels in React Dashboard Layout
 
-In addition to drag and drop, it is possible to move panels in the Dashboard Layout programmatically. This can be achieved using [movePanel](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#movepanel) method. The method is invoked as follows,
+In addition to drag and drop, it is possible to move panels in the React Dashboard Layout programmatically. This can be achieved using [movePanel](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#movepanel) method. The method is invoked as follows,
 
 ```js
 movePanel(id, row, col)
@@ -21,9 +21,9 @@ Where,
 * [**row**](https://helpej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#row) - New row position for the panel.
 * [**col**](https://helpej2.syncfusion.com/react/documentation/api/dashboard-layout/panelModel#col) - New column position for the panel.
 
-Each time a panel's position is changed (either programmatically or through UI interaction), the Dashboard Layout's [change](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#change) event is triggered.
+Each time a panel's position is changed (either programmatically or through UI interaction), the React Dashboard Layout's [change](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#change) event is triggered.
 
-The following sample demonstrates programmatically moving a panel to a new position in the Dashboard Layout's [created](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#created) event.
+The following sample demonstrates programmatically moving a panel to a new position in the React Dashboard Layout's [created](https://ej2.syncfusion.com/react/documentation/api/dashboard-layout#created) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

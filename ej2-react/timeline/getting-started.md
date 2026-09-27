@@ -86,7 +86,7 @@ yarn add @syncfusion/ej2-tailwind3-theme
 
 By default, Vite projects include a `src/index.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/index.css` file to prevent style conflicts.
 
-The required styles for the Timeline component are imported in the **src/App.css** file:
+The required styles for the React Timeline component are imported in the **src/App.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
@@ -98,9 +98,9 @@ The required styles for the Timeline component are imported in the **src/App.css
 
 > You can also refer to the combined CSS file for all Syncfusion components in your application. For more information, see the documentation on [referring themes through npm packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#refer-themes-through-npm-packages).
 
-## Add the Timeline component
+## Add the React Timeline component
 
-To include the Timeline component in your application, import the `TimelineComponent` from the `ej2-react-layouts` package into the `App.tsx` file.
+To include the React Timeline component in your application, import the `TimelineComponent` from the `ej2-react-layouts` package into the `App.tsx` file.
 
 Each Timeline item is defined using the `ItemDirective`, which must be placed inside the `ItemsDirective`. The `ItemsDirective` acts as a container for managing multiple Timeline items, and each `ItemDirective` represents an individual entry in the Timeline.
 

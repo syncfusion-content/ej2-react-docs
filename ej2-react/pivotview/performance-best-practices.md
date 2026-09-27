@@ -24,7 +24,7 @@ Virtual scrolling improves the performance of the Pivot Table when working with 
 
 Paging helps you display large datasets efficiently by breaking them into smaller, manageable pages instead of loading all data at once. When the browser's maximum pixel height prevents you from using the Pivot Table with virtual scrolling, the paging option provides a reliable alternative. This approach significantly improves loading performance and ensures smooth navigation through your data.
 
-To enable paging in your Pivot Table, set the [`enablePaging`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#enablepaging) property to **true** and configure the [`pageSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview/#pagesettings) to control the number of records displayed per page. Don't forget to inject the `Pager` module via `<Inject services={[Pager]} />`. For implementation details, refer to the [paging](./paging) topic.
+To enable paging in your Pivot Table, set the [`enablePaging`](https://ej2.syncfusion.com/react/documentation/api/pivotview#enablepaging) property to **true** and configure the [`pageSettings`](https://ej2.syncfusion.com/react/documentation/api/pivotview#pagesettings) to control the number of records displayed per page. Don't forget to inject the `Pager` module via `<Inject services={[Pager]} />`. For implementation details, refer to the [paging](./paging) topic.
 
 ### Server-side engine
 
@@ -130,9 +130,9 @@ By default, the Pivot Table with virtual scrolling renders not only the current 
 
 ### Limiting the component size
 
-Displaying too many rows and columns in a Pivot Table at once can slow performance and increase memory usage. To keep the Pivot Table responsive, set a specific [height](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#height) and [width](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#width) for the Pivot Table, such as 600px by 1000px. This limits the number of rows and columns loaded in the current view. When setting these values, render only the Pivot Table, excluding the grouping bar, toolbar, and other additional UI elements.
+Displaying too many rows and columns in a Pivot Table at once can slow performance and increase memory usage. To keep the Pivot Table responsive, set a specific [height](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel#height) and [width](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel#width) for the Pivot Table, such as 600px by 1000px. This limits the number of rows and columns loaded in the current view. When setting these values, render only the Pivot Table, excluding the grouping bar, toolbar, and other additional UI elements.
 
-You can also use the [`minWidth`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#minwidth) and [`maxWidth`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel/#maxwidth) properties to bound the table width when the parent container resizes.
+You can also use the [`minWidth`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel#minwidth) and [`maxWidth`](https://ej2.syncfusion.com/react/documentation/api/pivotview/pivotViewModel#maxwidth) properties to bound the table width when the parent container resizes.
 
 N> Normally, pixel units are preferred, ensuring more accurate page calculations compared to using percentage units, which involve additional computations for determining page as well as row and column sizes.
 
