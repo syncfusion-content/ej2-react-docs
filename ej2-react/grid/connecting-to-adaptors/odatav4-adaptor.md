@@ -49,20 +49,7 @@ npm install @syncfusion/ej2-data --save
 Navigate to the **src** folder and open (or create) the stylesheet such as **styles.css** or **App.css**, then add the required CSS import statements to apply the Grid's styling.
 
 ```css
-/* Base styles - Required for all Syncfusion components */
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-
-/* Component-specific styles */
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
-
-/* Grid component styles - Required */
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/material3.css';
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
 ```
 
 Import the **App.css** in the application entry point(**App.jsx**).

@@ -95,16 +95,7 @@ After installation, the necessary CSS files are available in the (**../node_modu
 ```css
   [global.css]
 
-  @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';  
-  @import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';  
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';  
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';  
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
-  @import "../node_modules/@syncfusion/ej2-react-grids/styles/material3.css";
-  @import "../node_modules/@syncfusion/ej2-icons/styles/material3.css";
+@import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
 ```
 
 For this project, the "Material 3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
