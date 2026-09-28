@@ -80,7 +80,9 @@ The **Layout** category contains containers that group other components. Layout 
 
 The **Templates** tab (available in Developer mode only) displays a flat list of pre-built form templates that you can drag and drop onto the canvas. These templates provide ready-made form layouts to help you quickly get started or add common scenarios to your form. You can also customize the available templates using the `formTemplates` property.
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+
 import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
 
 const formTemplates = [
@@ -163,7 +165,95 @@ export default function App() {
 		</div>
 	);
 }
-```
+
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
+
+const formTemplates = [
+	{
+		id: 'login form',
+		title: 'login',
+		schema: {
+			"version": "0.1.0",
+			"properties": {
+				"emailAddress": {
+					"id": "textbox_1785491685456_167",
+					"name": "emailAddress",
+					"type": "string",
+					"label": "Email Address",
+					"textboxType": "email",
+					"placeholder": "Enter your email",
+					"required": true,
+					"widget": "textbox"
+				},
+				"password": {
+					"id": "textbox_1785491685456_537",
+					"name": "password",
+					"type": "string",
+					"label": "Password",
+					"textboxType": "password",
+					"placeholder": "Enter your Password",
+					"required": true,
+					"minLength": 6,
+					"widget": "textbox"
+				},
+				"rememberMe": {
+					"id": "checkbox_1785491685456_262",
+					"name": "rememberMe",
+					"type": "boolean",
+					"label": "Remember Me",
+					"widget": "checkbox"
+				},
+				"submit": {
+					"id": "submit_button_initial",
+					"name": "defaultFormsubmit",
+					"type": "button",
+					"label": "Submit",
+					"buttonType": "submit",
+					"widget": "button",
+					"style": "primary",
+					"disabled": false
+				}
+			},
+			"layout": [
+				{
+					"type": "field",
+					"propertyId": "emailAddress"
+				},
+				{
+					"type": "field",
+					"propertyId": "password"
+				},
+				{
+					"type": "field",
+					"propertyId": "rememberMe"
+				},
+				{
+					"type": "field",
+					"propertyId": "submit"
+				}
+			],
+			"settings": {
+				"name": "Untitled Form"
+			}
+		}
+	}
+];
+
+export default function App() {
+	return (
+		<div id="formbuilder">
+			<FormBuilderComponent
+				formTemplates={formTemplates}
+			/>
+		</div>
+	);
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 Dragging a template onto the canvas inserts the entire set of components defined by the template's schema. Submit buttons within templates are filtered out to prevent duplicate submit buttons.
 
@@ -175,7 +265,9 @@ The output will appear as follows:
 
 The form fields in the toolbox can be customized using the `toolboxCategories` property. 
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+
 import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
 import { ComponentCategory, FormWidgetType } from '@syncfusion/ej2-form-builder';
 
@@ -204,7 +296,39 @@ export default function App() {
 	);
 }
 
-```
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
+import { ComponentCategory, FormWidgetType } from '@syncfusion/ej2-form-builder';
+
+const toolboxCategories = [
+	{
+		category: ComponentCategory.Basic,
+		items: [FormWidgetType.Textbox, FormWidgetType.Textarea]
+	},
+	{
+		category: ComponentCategory.Advanced,
+		items: [FormWidgetType.Date, FormWidgetType.DateRange]
+	},
+	{
+		category: ComponentCategory.Layout,
+		items: [FormWidgetType.Panel, FormWidgetType.Card]
+	}
+];
+
+export default function App() {
+	return (
+		<div id="formbuilder">
+			<FormBuilderComponent
+				toolboxCategories={toolboxCategories}
+			/>
+		</div>
+	);
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Customizing toolbox items](./images/form-builder-toolbox-categories.png)
 

@@ -22,9 +22,18 @@ You can switch to the **Preview** tab to see a live preview of the form. This vi
 
 The preview option can be disabling by setting the `enablePreview` property to `false`. The default value is `true`.
 
-```tsx
-    <FormBuilderComponent enablePreview={false} />
-```
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+
+<FormBuilderComponent enablePreview={false} />
+
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+<FormBuilderComponent enablePreview={false} />
+
+{% endhighlight %}
+{% endtabs %}
 
 The output will appear as follows:
 

@@ -22,9 +22,18 @@ You can use the exported schema in the Form Renderer control to render the same 
 
 Exporting can be disabled in the Form Builder component by setting the `allowExport` property to `false`. The default value of the property is `true`.
 
-```tsx
-    <FormBuilderComponent allowExport={false} />
-```
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+
+<FormBuilderComponent allowExport={false} />
+
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+<FormBuilderComponent allowExport={false} />
+
+{% endhighlight %}
+{% endtabs %}
 
 The output will appear as follows:
 
@@ -36,7 +45,9 @@ To import a form, assign the exported schema to the `schema` property of the For
 
 The following example shows how to use the same schema for both export and import scenarios.
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+
 import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
 
 const formSchema = {
@@ -113,6 +124,88 @@ export default function App() {
 		</div>
 	);
 }
-```
+
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
+
+const formSchema = {
+	"version": "0.1.0",
+	"properties": {
+		"emailAddress": {
+			"id": "textbox_1785491685456_167",
+			"name": "emailAddress",
+			"type": "string",
+			"label": "Email Address",
+			"textboxType": "email",
+			"placeholder": "Enter your email",
+			"required": true,
+			"widget": "textbox"
+		},
+		"password": {
+			"id": "textbox_1785491685456_537",
+			"name": "password",
+			"type": "string",
+			"label": "Password",
+			"textboxType": "password",
+			"placeholder": "Enter your Password",
+			"required": true,
+			"minLength": 6,
+			"widget": "textbox"
+		},
+		"rememberMe": {
+			"id": "checkbox_1785491685456_262",
+			"name": "rememberMe",
+			"type": "boolean",
+			"label": "Remember Me",
+			"widget": "checkbox"
+		},
+		"submit": {
+			"id": "submit_button_initial",
+			"name": "defaultFormsubmit",
+			"type": "button",
+			"label": "Submit",
+			"buttonType": "submit",
+			"widget": "button",
+			"style": "primary",
+			"disabled": false
+		}
+	},
+	"layout": [
+		{
+			"type": "field",
+			"propertyId": "emailAddress"
+		},
+		{
+			"type": "field",
+			"propertyId": "password"
+		},
+		{
+			"type": "field",
+			"propertyId": "rememberMe"
+		},
+		{
+			"type": "field",
+			"propertyId": "submit"
+		}
+	],
+	"settings": {
+		"name": "Untitled Form"
+	}
+}
+
+export default function App() {
+	return (
+		<div>
+			<FormBuilderComponent
+				schema={formSchema}
+			/>
+		</div>
+	);
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Import from schema](./images/form-builder-import-schema.png)

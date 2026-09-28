@@ -535,16 +535,7 @@ Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages 
 After installation, the necessary CSS files are available in the (**../node_modules/@syncfusion**) directory. Add the required CSS references to the (**src/index.css**) file to ensure proper styling of the Grid component.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.3.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/bootstrap5.3.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/bootstrap5.3.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/bootstrap5.3.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap5.3.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/bootstrap5.3.css';
-@import '../node_modules/@syncfusion/ej2-react-grids/styles/bootstrap5.3.css';
+@import "../node_modules/@syncfusion/ej2-bootstrap5.3-theme/styles/grid/index.css";
 ```
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.

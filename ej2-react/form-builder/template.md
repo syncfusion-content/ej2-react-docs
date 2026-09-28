@@ -22,7 +22,8 @@ Templates can be added to the Form Builder by configuring the third-party contro
 
 After you drag and drop the form field onto the central design canvas, the third-party component is rendered automatically.
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
 
 import { useRef } from 'react';
 import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
@@ -130,7 +131,117 @@ export default function App() {
 	);
 }
 
-```
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+import { useRef } from 'react';
+import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
+import { FormWidgetType } from '@syncfusion/ej2-form-builder';
+
+const formSchema = {
+	"version": "0.1.0",
+	"properties": {
+		"emailAddress": {
+			"id": "textbox_1785491685456_167",
+			"name": "emailAddress",
+			"type": "string",
+			"label": "Email Address",
+			"textboxType": "email",
+			"required": true,
+			"placeholder": "Enter your email",
+			"widget": "textbox",
+		},
+		"password": {
+			"id": "textbox_1785491685456_537",
+			"name": "password",
+			"type": "string",
+			"label": "Password",
+			"textboxType": "password",
+			"required": true,
+			"minLength": 6,
+			"placeholder": "Enter your password",
+			"widget": "textbox"
+		},
+		"rememberMe": {
+			"id": "checkbox_1785491685456_262",
+			"name": "rememberMe",
+			"type": "boolean",
+			"label": "Remember Me",
+			"widget": "checkbox"
+		},
+		"submit": {
+			"id": "submit_button_initial",
+			"name": "defaultFormsubmit",
+			"type": "button",
+			"label": "Submit",
+			"buttonType": "submit",
+			"widget": "button",
+			"style": "primary",
+			"disabled": false
+		}
+	},
+	"layout": [
+		{
+			"type": "field",
+			"propertyId": "emailAddress"
+		},
+		{
+			"type": "field",
+			"propertyId": "password"
+		},
+		{
+			"type": "field",
+			"propertyId": "rememberMe"
+		},
+		{
+			"type": "field",
+			"propertyId": "submit"
+		}
+	],
+	"settings": {
+		"name": "Untitled Form"
+	}
+};
+
+export default function App() {
+	const formBuilderRef = useRef(null);
+
+	function inputTemplate(data) {
+		const { fieldData } = data;
+
+		return (
+			<input
+				type={fieldData.textboxType ?? 'text'}
+				id={fieldData.id}
+				name={fieldData.name}
+				placeholder={fieldData.placeholder}
+				className="custom-input e-input"
+				onChange={(event) => {
+					formBuilderRef.current?.setFieldValue(fieldData.id, event.target.value);
+				}}
+				onBlur={(event) => {
+					formBuilderRef.current?.setFieldValue(fieldData.id, event.target.value);
+				}}
+			/>
+		);
+	}
+
+	return (
+		<div id="formbuilder">
+			<FormBuilderComponent
+				ref={formBuilderRef}
+				schema={formSchema}
+				allowExport={false}
+				toolboxItems={[
+					{ type: FormWidgetType.Textbox, template: inputTemplate }
+				]}
+			/>
+		</div>
+	);
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 In the Preview tab, the templates are displayed so that you can validate the created form.
 

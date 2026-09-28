@@ -41,7 +41,9 @@ The property panel automatically saves your changes as you make them. There is n
 ## Adding a new property in the property panel
 Properties of the built-in Syncfusion controls, or properties related to the [template](./template), can be added dynamically to the property panel using the `setProperty` method in the Form Builder.
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+
 import { useEffect, useRef } from 'react';
 import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
 import { FormWidgetType } from '@syncfusion/ej2-form-builder';
@@ -67,14 +69,45 @@ export default function App() {
 	);
 }
 
-```
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+import { useEffect, useRef } from 'react';
+import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
+import { FormWidgetType } from '@syncfusion/ej2-form-builder';
+
+export default function App() {
+	const formBuilderRef = useRef(null);
+
+	useEffect(() => {
+		formBuilderRef.current?.setProperty(FormWidgetType.Textarea, {
+			key: 'enableRtl',
+			label: 'Enable RTL',
+			type: 'boolean',
+			default: false
+		});
+	}, []);
+
+	return (
+		<div id="formbuilder">
+			<FormBuilderComponent
+				ref={formBuilderRef}
+			/>
+		</div>
+	);
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Adding new Property in property panel](./images/from-builder-setproperty.png)
 
 ## Hiding a property from the property panel
 An existing property in the property panel can be hidden by getting the property details using the `getProperty` method of the Form Builder and setting the `visible` property to **false**.
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+
 import { useEffect, useRef } from 'react';
 import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
 import { FormWidgetType } from '@syncfusion/ej2-form-builder';
@@ -99,6 +132,34 @@ export default function App() {
 	);
 }
 
-```
+{% endhighlight %}
+{% highlight js tabtitle="App.jsx" %}
+
+import { useEffect, useRef } from 'react';
+import { FormBuilderComponent } from '@syncfusion/ej2-react-form-builder';
+import { FormWidgetType } from '@syncfusion/ej2-form-builder';
+
+export default function App() {
+	const formBuilderRef = useRef(null);
+
+	useEffect(() => {
+		const labelProperty = formBuilderRef.current?.getProperty(FormWidgetType.Textarea, 'label');
+		if (labelProperty) {
+			labelProperty.visible = false;
+			formBuilderRef.current?.refresh();
+		}
+	}, []);
+
+	return (
+		<div id="formbuilder">
+			<FormBuilderComponent
+				ref={formBuilderRef}
+			/>
+		</div>
+	);
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Hiding a property from property panel](./images/form-builder-hiding-property.png)
