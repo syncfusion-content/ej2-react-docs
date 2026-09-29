@@ -150,6 +150,7 @@ Open your terminal in the project's client folder and install the required Syncf
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-material3-theme --save
 ```
 
 **Step 2: Adding CSS reference**
@@ -159,7 +160,7 @@ Include the necessary CSS files in your `styles.css` file to style the Syncfusio
 {% tabs %}
 {% highlight css tabtitle="styles.css" %}
 
-    @import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
+    @import '../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css';
 
 {% endhighlight %}
 {% endtabs %}

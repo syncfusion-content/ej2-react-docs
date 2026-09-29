@@ -358,6 +358,22 @@ export default App;
 
 > The `getRowInfo` method can only be used in the `rowDataBound` event. Attempting to use it elsewhere will result in an error.
 
+## Empty record mode
+
+The `emptyRecordMode` property determines how the empty record row is displayed when the Grid has no records. It supports two modes: `Sticky`, which keeps the empty record row visible during scrolling, and `Normal`, which allows the empty record row to scroll along with the Grid content.
+
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/empty-record-mode/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/empty-record-mode/app/App.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "page.domainurl/code-snippet/grid/empty-record-mode" %}
+
 ## Row pinning (frozen) in React Grid
 
 The React Data Grid allows freezing rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.

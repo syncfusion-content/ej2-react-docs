@@ -27,6 +27,7 @@ Right‑click the **ODataV4Adaptor.client** folder in **Solution Explorer** and 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-material3-theme --save
 ```
 
 ### Step 2: Add CSS styles
@@ -34,7 +35,7 @@ npm install @syncfusion/ej2-data --save
 Navigate to the **src** folder and open the **index.css** stylesheet file. Add the required CSS import statements to include the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid styles.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
+@import '../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css';
 ```
 
 Import the stylesheet in the **main.jsx** application entry point:

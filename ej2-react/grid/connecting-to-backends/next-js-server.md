@@ -88,6 +88,7 @@ Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-material3-theme --save
 ```
 
 After installation, the necessary CSS files are available in the (**../node_modules/@syncfusion**) directory. Add the required CSS references to the **global.css** file to ensure proper styling of the Grid component.
@@ -95,7 +96,7 @@ After installation, the necessary CSS files are available in the (**../node_modu
 ```css
   [global.css]
 
-@import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
+@import '../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css';
 ```
 
 For this project, the "Material 3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.

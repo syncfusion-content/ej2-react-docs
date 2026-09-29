@@ -463,17 +463,7 @@ npm install @syncfusion/ej2-react-pivotview --save
 Add the required Syncfusion CSS styles to the **src/App.css** file. These styles ensure the Pivot Table component displays correctly:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-pivotview/styles/tailwind3.css';
+@import "../ej2-tailwind3-theme/styles/pivotview/index.css";
 ```
 
 The "tailwind3" theme is applied for reference. For other theme options or customization, refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.

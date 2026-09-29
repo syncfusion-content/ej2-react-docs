@@ -81,6 +81,7 @@ Run the following commands to install the grid and grid-chart packages.
 
 npm install @syncfusion/ej2-react-grids
 npm install @syncfusion/ej2-grid-chart
+npm install @syncfusion/ej2-material3-theme --save
 
 {% endhighlight %}
 {% endtabs %}

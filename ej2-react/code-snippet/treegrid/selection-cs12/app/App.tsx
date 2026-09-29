@@ -10,9 +10,9 @@ import {
   TreeGridComponent
 } from '@syncfusion/ej2-react-treegrid';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import type { ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
-import type { QueryCellInfoEventArgs } from '@syncfusion/ej2-grids';
-import { showCheckBoxData } from './data';
+import { ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
+import { QueryCellInfoEventArgs } from '@syncfusion/ej2-grids';
+import { showCheckBoxData } from './datasource';
 
 
 
@@ -33,8 +33,8 @@ interface TaskData {
   priority: string;
   status: string;
   progress: string;
-  expanded?: boolean;
-  subTasks?: TaskData[];
+  expanded: boolean;
+  subTasks: TaskData[];
 }
 const SAMPLE_CSS: string = `
 .checkboxprop {
@@ -148,7 +148,7 @@ function App() {
     args: QueryCellInfoEventArgs
   ): void => {
     if (
-      args.column?.field !== 'status' ||
+      args.column && args.column.field !== 'status' ||
       !args.cell
     ) {
       return;

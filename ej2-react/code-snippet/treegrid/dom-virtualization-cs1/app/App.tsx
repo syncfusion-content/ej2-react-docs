@@ -7,13 +7,65 @@ import {
     ColumnsDirective,
     ColumnDirective,
     Inject,
-    Sort,
     DomVirtualization
 } from '@syncfusion/ej2-react-treegrid';
 import { domVirtualizationData, domVirtualizationDataSource } from './datasource';
 
-import './dom-virtualization.css';
 
+const STYLES = `
+.rg-badge {
+  display: inline-block;
+  min-width: 100px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2;
+  text-align: center;
+}
+
+.rg-badge-stock-available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.rg-badge-stock-low {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.rg-badge-stock-out {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.rg-badge-stock-discontinued {
+  background: #e5e7eb;
+  color: #374151;
+}
+.rg-region {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rg-region-flag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 14px;
+    overflow: hidden;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.rg-region-flag svg {
+    display: block;
+    width: 20px;
+    height: 14px;
+}
+`;
 function App() {
     const statusTemplate = (args: any) => {
         const status: string = (args.StockStatus || '').toLowerCase();
@@ -235,7 +287,7 @@ function App() {
     return (
         <div className='control-pane'>
             <div className='control-section'>
-
+                <style>{STYLES}</style>
                 <TreeGridComponent
                     dataSource={domVirtualizationData}
                     idMapping='ItemID'
@@ -306,7 +358,7 @@ function App() {
 
                     </ColumnsDirective>
 
-                    <Inject services={[DomVirtualization, Sort]} />
+                    <Inject services={[DomVirtualization]} />
 
                 </TreeGridComponent>
 
