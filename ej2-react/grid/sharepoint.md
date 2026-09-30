@@ -161,7 +161,7 @@ const ReactGridComponent: React.FC<IReactGridComponentProps> = (props) => {
         <div>
           <h3>Welcome to React Data Grid component in the SharePoint Framework!</h3>
         </div>
-          <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/ej2/material3.css" />
+          <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/35.1.37/ej2/material3.css" />
           {/* Assigns the dataset to the Data Grid component */}
           <GridComponent id='grid' dataSource={data} >
           {/* Define the columns to be displayed */}

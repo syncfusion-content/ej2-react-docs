@@ -720,6 +720,11 @@ Design based on bootstrap 3 theme.
             <td><span class="circle-color-indicator" style="background: #fff"></span> #fff</td>
         </tr>
         <tr>
+            <td>$secondary-bg-color</td>
+            <td><span class="circle-color-indicator" style="background: #292929"></span> #292929</td>
+            <td><span class="circle-color-indicator" style="background: #292929"></span> #292929</td>
+        </tr>
+        <tr>
             <td>$grey-white</td>
             <td><span class="circle-color-indicator" style="background: #fff"></span> #fff</td>
             <td><span class="circle-color-indicator" style="background: #fff"></span> #fff</td>
