@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Value Binding in React MultiSelect Dropdown | Syncfusion
-description: Bind the React MultiSelect Dropdown to primitive values such as strings, numbers, or booleans, or to complex objects via the value property and allowObjectBinding.
+description: Bind React MultiSelect to primitive values like strings and numbers, or to complex objects using the value property and allowObjectBinding option.
 control: Value binding 
 platform: ej2-react
 documentation: ug
@@ -14,14 +14,7 @@ Value binding in the React MultiSelect control associates data values with each 
 
 ## Primitive data types
 
-The React MultiSelect provides flexible binding for primitive data types such as strings and numbers. Bind local arrays, remote data sources, or customize binding to meet specific requirements. Set the value of primitive data using the [value](https://ej2.syncfusion.com/react/documentation/api/multi-select/#value) property. The `value` property always accepts an array even when binding a single primitive value; the `fields` prop is optional for primitive binding.
-
-```tsx
-<MultiSelectComponent
-  dataSource={['apple', 'banana', 'orange']}
-  value={['apple', 'banana']}
-/>
-```
+The React MultiSelect provides flexible binding for primitive data types such as strings and numbers. Bind local arrays, remote data sources, or customize binding to meet specific requirements. Set the value of primitive data using the [value](https://ej2.syncfusion.com/react/documentation/api/multi-select#value) property. The `value` property always accepts an array even when binding a single primitive value; the `fields` prop is optional for primitive binding.
 
 Supported primitive data types:
 
@@ -47,7 +40,7 @@ The following example demonstrates preselecting values with primitive data types
 
 ## Object data types
 
-Object binding in the React MultiSelect allows you to bind a dataset of objects. When [`allowObjectBinding`](https://ej2.syncfusion.com/react/documentation/api/multi-select/#allowobjectbinding) is enabled, the `value` is an array of objects matching the selected items. This seamlessly binds object arrays from local sources, remote endpoints, or custom implementations.
+Object binding in the React MultiSelect allows you to bind a dataset of objects. When [`allowObjectBinding`](https://ej2.syncfusion.com/react/documentation/api/multi-select#allowobjectbinding) is enabled, the `value` is an array of objects matching the selected items. This seamlessly binds object arrays from local sources, remote endpoints, or custom implementations.
 
 The following example demonstrates preselecting values with object data types.
 

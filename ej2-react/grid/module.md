@@ -17,6 +17,7 @@ Syncfusion React Grid modules help optimize your application’s bundle size by 
 | [Paging](./paging) | `Page` | Inject this module to use paging feature. |
 | [Sorting](./sorting) | `Sort` | Inject this module to use sorting feature. |
 | [Filtering](./filtering/filtering) | `Filter` | Inject this module to use filtering feature. |
+| [Advanced Filtering](./filtering/advanced-filter) | `AdvancedFilter` | Inject this module to use advanced filtering feature. |
 | [Grouping](./grouping/grouping) | `Group` | Inject this module to use grouping feature. |
 | [Lazy Load Grouping](./grouping/lazy-load-grouping) | `LazyLoadGroup` | Inject this module to use lazy load grouping feature. |
 | [Editing](./editing/edit) | `Edit` | Inject this module to use editing feature. |

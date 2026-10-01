@@ -55,7 +55,9 @@ This article describes the API migration process of the Chart component from Ess
 |crosshair| **Property:** *crosshair Label visible* <br/><br/>var crosshair={ visible: true };<br/>`<EJ.Chart`<br/>`crosshair={crosshair}>` <br/>`</EJ.Chart>`|**Property:** *crosshair enable* <br/><br/>`<ChartComponent id='charts' crosshair={{ enable: true }}>`<br/>`</ChartComponent>`|
 |trackballTooltipSettings| **Property:** *trackballTooltipSettings* <br/><br/>var crosshair={ type: 'trackball' };<br/>`<EJ.Chart`<br/>`crosshair={crosshair}>` <br/>`</EJ.Chart>`|Not applicable
 |marker| **Property:** *marker* <br/><br/>var series = [{ marker: { shape: 'Diamond', visible: true }}];<br/>`<EJ.Chart`<br/>`series={series}>` <br/>`</EJ.Chart>`|**Property:** *marker* <br/><br/>`<ChartComponent id='charts'>`<br/>`<SeriesDirective marker={{ visible: true }}>`<br/>`</SeriesDirective>`<br/>`</ChartComponent>`|
+{% raw %}
 |crosshair line style| **Property:** *line* <br/><br/>var crosshair={ line: { color: 'gray', width: 2 } };<br/>`<EJ.Chart`<br/>`crosshair={crosshair}>` <br/>`</EJ.Chart>`|**Property:** *line* <br/><br/>`<ChartComponent id='charts' crosshair={{ line: { width: 2, color: 'green' } }}>`<br/>`</ChartComponent>`|
+{% endraw %}
 |type| **Property:** *type* <br/><br/>var crosshair={ type: 'trackball' };<br/>`<EJ.Chart`<br/>`crosshair={crosshair}>` <br/>`</EJ.Chart>`|Not applicable|
 
 ## 3D chart
