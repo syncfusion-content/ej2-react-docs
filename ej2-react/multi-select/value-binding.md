@@ -16,7 +16,7 @@ Value binding in the React MultiSelect control associates data values with each 
 
 The React MultiSelect provides flexible binding for primitive data types such as strings and numbers. Bind local arrays, remote data sources, or customize binding to meet specific requirements. Set the value of primitive data using the [value](https://ej2.syncfusion.com/react/documentation/api/multi-select/#value) property. The `value` property always accepts an array even when binding a single primitive value; the `fields` prop is optional for primitive binding.
 
-```tsx
+```ts
 <MultiSelectComponent
   dataSource={['apple', 'banana', 'orange']}
   value={['apple', 'banana']}

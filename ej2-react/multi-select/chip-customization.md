@@ -52,7 +52,7 @@ The following sample demonstrates chip customization with the React MultiSelect 
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/chip-customization-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/chip-customization-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +65,7 @@ The following sample demonstrates chip customization with the React MultiSelect 
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/chip-customization-cs2/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/chip-customization-cs2/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

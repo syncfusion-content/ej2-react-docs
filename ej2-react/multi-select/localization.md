@@ -23,7 +23,7 @@ For full culture localization (date and number formatting), load the required CL
 
 Use the **L10n** class's load function to register translation objects in your application before the MultiSelect renders.
 
-```tsx
+```ts
 import { L10n } from '@syncfusion/ej2-base';
 
 L10n.load({

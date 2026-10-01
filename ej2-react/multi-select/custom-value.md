@@ -53,7 +53,7 @@ onCustomValueSelection = (e) => {
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/basic-cs3/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/basic-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +66,7 @@ onCustomValueSelection = (e) => {
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/basic-cs4/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/basic-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}

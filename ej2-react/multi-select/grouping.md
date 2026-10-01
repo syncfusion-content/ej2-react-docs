@@ -14,12 +14,14 @@ The React MultiSelect supports wrapping nested elements into a group based on di
 
 Map the `groupBy` field through the `fields` prop to define which property of the data source represents the group category:
 
-```tsx
+{% raw %}
+```ts
 <MultiSelectComponent
   dataSource={vegetableData}
   fields={{ text: 'Vegetable', value: 'Id', groupBy: 'Category' }}
 />
 ```
+{% endraw %}
 
 In the following sample, vegetables are grouped according to their category using the `groupBy` field.
 
@@ -57,7 +59,7 @@ The grouping header can be customized using the [groupTemplate](https://ej2.sync
 
 The React MultiSelect now supports rendering checkboxes in group headers, allowing you to select all items within a group in a single action. Inject the `CheckBoxSelection` module in the React MultiSelect to use checkbox selection.
 
-```tsx
+```ts
 import { CheckBoxSelection } from '@syncfusion/ej2-react-dropdowns';
 
 MultiSelectComponent.Inject(CheckBoxSelection);

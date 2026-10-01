@@ -26,7 +26,7 @@ The following example demonstrates disabling specific items using the `disabled`
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/basic-cs34/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/basic-cs34/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +39,7 @@ The following example demonstrates disabling specific items using the `disabled`
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/multiselect/basic-cs35/app/index.jsx %}
 {% endhighlight %}
-{% highlight tsx tabtitle="index.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/multiselect/basic-cs35/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
