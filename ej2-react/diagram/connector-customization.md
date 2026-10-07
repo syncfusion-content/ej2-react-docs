@@ -119,7 +119,6 @@ Padding creates visual separation between connector endpoints and the nodes they
 ### Line Bridging for Intersection Handling
 
 Line bridging creates visual bridges where connectors intersect, helping users distinguish between different connection paths in complex diagrams. By default, [`bridgeDirection`](https://helpej2.syncfusion.com/react/documentation/api/diagram#bridgedirection) is set to top, with the bridge appearing based on the specified direction.
-
 Bridging can be enabled or disabled using either **connector.constraints** or **diagram.constraints**. The following code example illustrates how to enable line bridging.
 
 {% tabs %}

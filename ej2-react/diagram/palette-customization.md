@@ -81,7 +81,7 @@ The following example demonstrates how text wrapping and text overflow are appli
  {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/symbol-textWrp" %}
 
 ### Appearance of Symbol Description
-The appearance of a symbol description in the palette can be customized by changing its [`color`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#color) , [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#fill), [`fontSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#fontsize) , [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#fontfamily), [`bold`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#bold), [`italic`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#italic), [`textDecoration`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#textdecoration)  and [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#margin)
+The appearance of a symbol description in the palette can be customized by changing its [`color`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#color) , [`fill`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#fill), [`fontSize`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#fontsize) , [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#fontfamily), [`bold`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#bold) [`italic`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#italic), [`textDecoration`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#textdecoration)  and [`margin`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolDescription#margin)
 
 The following code example shows how to customize the symbol description.
 
@@ -204,7 +204,7 @@ The code provided below demonstrates how to define tooltip content for symbols w
 
 {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/custompalette/symbol-desc" %}
 
-### Enable or Disable the Default Tooltip for Shapes in the Symbol Palette
+### How to enable or disable the default tooltip for shapes in the symbol palette
 
 By default, the symbol ID is displayed as a tooltip when hovering over a symbol in the Symbol Palette. To disable this default tooltip, you can use the [`showTooltip`](https://ej2.syncfusion.com/react/documentation/api/diagram/symbolInfo#showTooltip) property within the [`getSymbolInfo`](https://ej2.syncfusion.com/react/documentation/api/symbol-palette#getsymbolinfo) method. The `showTooltip` property is set to **true** by default, which enables the tooltip. This property is effective only when tooltip constraints are disabled for the symbol palette element.
 

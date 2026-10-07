@@ -42,6 +42,7 @@ Right‑click the **Webapiadaptor.client** folder in **Solution Explorer** and s
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-material3-theme --save
 ```
 
 ### Step 2: Add CSS styles
@@ -49,7 +50,7 @@ npm install @syncfusion/ej2-data --save
 Syncfusion Grid requires CSS for proper rendering. Add these imports to **index.css** or **App.css**:
 
 ```css
-@import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
+@import '../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css';
 ```
 
 Import the **App.css** in the application entry point(**App.jsx**).

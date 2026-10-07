@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { ColumnDirective, ColumnsDirective, Filter, Inject, Toolbar, Edit, TreeGridComponent } from '@syncfusion/ej2-react-treegrid';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import { showCheckBoxData } from './data';
+import { showCheckBoxData } from './datasource';
 const SAMPLE_CSS = `
 .checkboxprop {
 padding-bottom: 8px;
@@ -106,7 +106,7 @@ function App() {
         }
     };
     const queryCellInfo = (args) => {
-        if (args.column?.field !== 'status' ||
+        if (args.column && args.column.field !== 'status' ||
             !args.cell) {
             return;
         }

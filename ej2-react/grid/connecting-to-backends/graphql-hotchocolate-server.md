@@ -853,12 +853,14 @@ cd reactapp1.client
 
 ```bash
 npm install @syncfusion/ej2-react-grids @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-tailwind3-theme --save
 ```
 
 **Package descriptions:**
 
 - `@syncfusion/ej2-react-grids`: Provides the Grid component with all features including editing, filtering, sorting, and paging.
 - `@syncfusion/ej2-data`: Provides data management utilities and adaptors including `GraphQLAdaptor`.
+- `@syncfusion/ej2-tailwind3-theme` - required to apply the Tailwind 3 theme styles to the Data Grid component.
 
 ### Step 2: Add Syncfusion CSS references
 
@@ -875,7 +877,7 @@ import './index.css'
 import App from './App.jsx'
 
 // Add Syncfusion CSS
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/grid-chart/index.css";
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/grid/index.css';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

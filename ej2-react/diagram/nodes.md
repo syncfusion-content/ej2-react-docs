@@ -48,7 +48,7 @@ To create a node, define the [`node`](https://ej2.syncfusion.com/react/documenta
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs1" %}
 
 N> Node IDs must begin with a letter and be unique across all shapes and connectors.
 
@@ -64,7 +64,7 @@ Nodes can be generated automatically using the [`dataSource`](https://ej2.syncfu
 {% include code-snippet/diagram/nodes/nodes-cs5/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
+          
 {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs5" %}
 
 ### Add Nodes from Symbol Palette
@@ -79,8 +79,9 @@ Nodes can be predefined in a symbol palette and dragged into the diagram as need
 {% include code-snippet/diagram/nodes/nodes-cs4/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
+          
 {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs4" %}
+
 
 ### Draw Nodes Interactively
 
@@ -98,7 +99,7 @@ N> The `drawingObject` and `tool` properties must be set within the `created` ev
 {% include code-snippet/diagram/nodes/nodes-cs6/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
+          
 {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs6" %}
 
 ## Runtime Node Operations
@@ -118,7 +119,7 @@ The following code illustrates how to add a node and remove an existing node at 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs2" %}
 
 ### Add Multiple Nodes Simultaneously
 
@@ -134,8 +135,11 @@ The following code illustrates how to add nodes collection at run time.
 {% include code-snippet/diagram/nodes/nodes-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
+          
 {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs3" %}
+
+
+
 
 ### Update Node Properties
 
@@ -149,7 +153,7 @@ Node properties can be modified at runtime with immediate visual updates. Change
 {% include code-snippet/diagram/nodes/nodes-cs7/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
+          
 {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs7" %}
 
 N> Call the [`dataBind`](https://ej2.syncfusion.com/react/documentation/api/diagram#databind) method after property updates to ensure immediate reflection of changes.
@@ -168,7 +172,7 @@ The following code example illustrates how to clone a node at runtime.
 {% include code-snippet/diagram/nodes/nodes-cs8/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
+          
 {% previewsample "page.domainurl/code-snippet/diagram/nodes/nodes-cs8" %}
 
 ## Advanced Node Integration
@@ -179,9 +183,9 @@ Custom [`dragEnter`](https://ej2.syncfusion.com/react/documentation/api/diagram#
 
 ## See Also
 
-- [How to add annotations to the node.](./labels)
-- [How to add ports to the node.](./ports)
-- [How to enable/disable the behavior of the node.](./constraints)
-- [How to add nodes to the symbol palette.](./symbol-palette)
-- [How to edit the node visual interface.](./interaction#selection)
-- [How to create diagram nodes using drawing tools.](./tools)
+* [How to add annotations to the node.](./labels)
+* [How to add ports to the node.](./ports)
+* [How to enable/disable the behavior of the node.](./constraints)
+* [How to add nodes to the symbol palette.](./symbol-palette)
+* [How to edit the node visual interface.](./interaction#selection)
+* [How to create diagram nodes using drawing tools.](./tools)

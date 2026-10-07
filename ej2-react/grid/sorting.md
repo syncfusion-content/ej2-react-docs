@@ -444,7 +444,7 @@ export default App;
 
 ### Remove sort columns
 
-External removal of sort columns is accomplished using the `removeSortColumn` method provided by the grid component. This method removes the sorting applied to a specific column.
+External removal of sort columns is accomplished using the `removeSortColumn` method provided by the Grid component. This method removes the sorting applied to a specific column.
 
 The following example demonstrates removing sort columns. The `DropDownList` component selects the column. When an external button is clicked, the `removeSortColumn` method removes the selected sort column.
 
@@ -689,4 +689,4 @@ The following sample demonstrates a grid rendered with a customized sort icon.
 
 ## See also
 
-[How to change loading indicator in React Data Grid](./data-binding/data-binding#loading-animation)
+[How to change loading indicator in React Grid](./data-binding/data-binding#loading-animation)

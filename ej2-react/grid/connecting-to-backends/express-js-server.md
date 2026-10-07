@@ -525,6 +525,7 @@ Install the React Data Grid and DataManager packages using npm.
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-material3-theme --save
 ```
 
 ### Step 3: Include Syncfusion styles
@@ -533,7 +534,7 @@ Once dependencies are installed, include the required CSS files in the **src/ind
 
 ```css
 
-@import "../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css";
+@import '../node_modules/@syncfusion/ej2-material3-theme/styles/grid/index.css';
 ```
 
 For this project, the "Material 3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.

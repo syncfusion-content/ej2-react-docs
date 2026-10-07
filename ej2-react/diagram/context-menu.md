@@ -32,8 +32,6 @@ The React Diagram component provides default context menu items for frequently u
 
 The default context menu includes commands such as Cut, Copy, Paste, Undo, Redo, Select All, Delete, and Group/Ungroup.
 
-The default context menu includes commands such as Cut, Copy, Paste, Undo, Redo, Select All, Delete, and Group/Ungroup.
-
 The following code demonstrates how to enable the default context menu items:
 
 {% tabs %}

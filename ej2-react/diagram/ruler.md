@@ -64,6 +64,7 @@ The following code shows how the diagram ruler can be customized.
 
 {% previewsample "page.domainurl/code-snippet/diagram/ruler/customRuler-cs1" %}
 
+
 ### Arrange Tick
 
 The [`arrangeTick`](https://ej2.syncfusion.com/react/documentation/api/diagram/diagramRuler#arrangetick) function allows customization of ruler tick appearance for both horizontal and vertical rulers. This function is called during the rendering of each tick mark, providing control over tick properties such as length and style.

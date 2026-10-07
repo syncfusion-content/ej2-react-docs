@@ -34,7 +34,6 @@ Nodes can be selected at runtime by using the [`select`](https://ej2.syncfusion.
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/diagram/nodes/nInteraction-cs1" %}
-
 ### Selection Methods Reference
 
 |Method | Parameter | Description|
