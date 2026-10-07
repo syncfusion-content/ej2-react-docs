@@ -472,12 +472,13 @@ Install the necessary Syncfusion<sup style="font-size:70%">&reg;</sup> packages 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 npm install @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-bootstrap5.3-theme --save
 ```
 
 After installation, the necessary CSS files are available in the (**../node_modules/@syncfusion**) directory. Add the required CSS references to the (**src/index.css**) file to ensure proper styling of the Grid component.
 
 ```css
-@import "../node_modules/@syncfusion/ej2-bootstrap5.3-theme/styles/grid/index.css";
+@import '../node_modules/@syncfusion/ej2-bootstrap5.3-theme/styles/grid/index.css';
 
 ```
 

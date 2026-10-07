@@ -18,8 +18,6 @@ The React Diagram component supports adding both swimlane containers and individ
 
 The following example shows how to add preconfigured swimlane and phase shapes to the symbol palette.
 
-The following example shows how to add preconfigured swimlane and phase shapes to the symbol palette.
-
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/diagram/swimlane/es5Palette-cs1/app/index.jsx %}

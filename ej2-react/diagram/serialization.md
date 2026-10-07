@@ -174,7 +174,7 @@ The [`Diagram`](https://ej2.syncfusion.com/react/documentation/api/diagram/index
 
 This functionality supports:
 - Mind maps
-- Flowcharts
+- Flowcharts  
 - UML sequence diagrams
 
 For supported Mermaid syntax, refer to the [Mermaid documentation](https://mermaid.js.org/intro/). Only a subset of syntax is supported for Flowchart, Mind map, and UML Sequence layouts.

@@ -18,10 +18,6 @@ Data binding in the React Diagram component works by mapping data source fields 
 
 The data binding feature requires the `DataBinding` module to be registered via the `Inject` component inside the `DiagramComponent`, as shown in the examples throughout this guide.
 
-## Prerequisites
-
-The data binding feature requires the `DataBinding` module to be registered via the `Inject` component inside the `DiagramComponent`, as shown in the examples throughout this guide.
-
 ## Key Data Binding Properties
 
 The React Diagram component exposes several data-related properties that control how data is mapped to diagram elements:
@@ -93,7 +89,7 @@ The diagram can simultaneously read from two data sources: one for nodes and ano
 
 *  Set the [`dataSource`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#datasource) property to define the node data collection
 
-* Use the [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#id) property to specify the unique identifier field
+*Use the [`id`](https://ej2.syncfusion.com/react/documentation/api/diagram/dataSourceModel#id) property to specify the unique identifier field
 
 **Connector Data Source Configuration:**
 

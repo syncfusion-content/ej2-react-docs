@@ -728,6 +728,7 @@ After completing the initial setup, install the Syncfusion<sup style="font-size:
 
 ```bash
 npm install @syncfusion/ej2-react-grids @syncfusion/ej2-data --save
+npm install @syncfusion/ej2-bootstrap5.3-theme --save
 ```
 
 The client application is now prepared to reference the Grid component and the data layer.
@@ -740,7 +741,7 @@ Open (**client/src/index.css**) file and import the "Bootstrap 5.3" theme along 
 
 
 ```css
-@import "../node_modules/@syncfusion/ej2-bootstrap5.3-theme/styles/grid/index.css";
+@import '../node_modules/@syncfusion/ej2-bootstrap5.3-theme/styles/grid/index.css';
 ```
 
 For this project, the "Bootstrap 5.3" theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation to learn more about theming and customization options.

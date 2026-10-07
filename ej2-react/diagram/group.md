@@ -136,7 +136,6 @@ The following code illustrates how a child node can be added to a group node at 
 diagram.addChildToGroup(groupNode, childNode); 
 
 ```
-
 ### Remove Children from Group at Runtime
 
 A specific child from a group node can be removed at runtime by utilizing the diagram method [`diagram.removeChildFromGroup`](https://ej2.syncfusion.com/react/documentation/api/diagram#removechildfromgroup). This functionality requires passing the group and its child node as arguments to the method.
@@ -205,7 +204,6 @@ The following example shows how to apply flip transformations to group nodes:
 The [`flipMode`](https://ej2.syncfusion.com/react/documentation/api/diagram/flipMode) property of a group node behaves similarly to that of normal nodes. However, when a flip mode is applied to a group node, it takes precedence over any flip mode set on its child nodes, overriding their individual settings.
 
 **Example of flip mode precedence:**
-
 In the code below, the `flipMode` for the child node `Node1` is set to `LabelText`, while the `flipMode` for the group node is set to `Label`. The effective `flipMode` for both the child node and the group node will be `Label`, as the group node's `flipMode` overrides the child's setting.
 
 {% tabs %}

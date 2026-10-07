@@ -74,11 +74,11 @@ For scenarios where you need to embed images directly without external dependenc
 
  {% previewsample "page.domainurl/code-snippet/diagram/shapes/es5Image-cs2" %}
 
-> When deploying applications with image nodes, ensure your HTML files are served from a web server. Local file access restrictions in Chrome and Firefox may prevent image export functionality due to security policies. For more information, refer to browser-specific documentation on local image handling.
->
->**Link 1:** http://asked.online/draw-images-on-canvas-locally-using-chrome/2546077/
->
->**Link 2:** http://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome
+N> When deploying applications with image nodes, ensure your HTML files are served from a web server. Local file access restrictions in Chrome and Firefox may prevent image export functionality due to security policies. For more information, refer to browser-specific documentation on local image handling.
+
+**Link 1:** http://asked.online/draw-images-on-canvas-locally-using-chrome/2546077/
+
+**Link 2:** http://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome
 
 ### Image Alignment and Scaling
 
