@@ -167,9 +167,9 @@ The following example demonstrates dynamically changing the height of the rows u
 
 ### Customize header and footer row heights
 
-The height of the header and footer rows can be customized to provide additional space for header and footer elements when needed. Use the [headerRowHeight] property to set the height of the header row and the [footerRowHeight] property to set the height of the footer row.
+The height of the header and footer rows can be customized to provide additional space for header and footer elements when needed. Use the [headerRowHeight](https://ej2.syncfusion.com/react/documentation/api/grid#headerrowheight) property to set the height of the header row and the [footerRowHeight](https://ej2.syncfusion.com/react/documentation/api/grid#footerrowheight) property to set the height of the footer row.
 
-In the following example, the row height is configured to 100px using the `rowHeight` property, and the header and footer row heights are configured to 50px using the `headerRowHeight` and `footerRowHeight` properties.
+In the following example, the row height is configured to "100px" using the `rowHeight` property, and the header and footer row heights are configured to "50px" using the `headerRowHeight` and `footerRowHeight` properties.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -373,6 +373,31 @@ The `emptyRecordMode` property determines how the empty record row is displayed 
 {% endtabs %}
 
  {% previewsample "page.domainurl/code-snippet/grid/empty-record-mode" %}
+
+## Row Number in Data Grid
+
+The React Data Grid provides built-in support for displaying row numbers through a dedicated row number column. This column displays the position of each record in the current view and is automatically maintained by the Grid.
+
+To display row numbers, set the [columns->type](https://ej2.syncfusion.com/react/documentation/api/grid/column#type) property to `RowNumber`. This creates a read-only column for displaying row numbers, eliminating the need to include a separate row number field in the data source.
+
+The Grid automatically updates row numbers when operations such as paging, sorting, filtering, and grouping are performed. This ensures that the displayed row numbers always reflect the current view and order of the records.
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% include code-snippet/grid/rownumber/app/App.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% include code-snippet/grid/rownumber/app/App.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/grid/rownumber/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/grid/rownumber/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/rownumber" %}
 
 ## Row pinning (frozen) in React Grid
 
