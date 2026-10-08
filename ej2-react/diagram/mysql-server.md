@@ -459,10 +459,7 @@ After installation, the necessary CSS files are available in the **node_modules*
 Add the required CSS references to the **src/index.css** file to apply styling to the React Diagram component.
 
 ```
-@import "../node_modules/@syncfusion/ej2-react-diagrams/styles/bootstrap5.3.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.3.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.3.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.3.css";
+@import '../node_modules/@syncfusion/ej2-bootstrap5.3-theme/styles/bootstrap5.3.css';
 ```
 
 For this project, the "Bootstrap 5.3" theme is applied. Other themes can be selected, or the existing theme can be customized to meet specific project requirements. For detailed guidance on theming and customization, refer to the [Syncfusion® React Components Appearance](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio) documentation.

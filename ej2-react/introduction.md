@@ -126,6 +126,8 @@ td { border:0 !important; vertical-align: top; }
   <div><p class="controlcategory">FORMS</p></div>
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/form-validator/validation-rules/">Form Validator</a></div>
   <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/query-builder/getting-started/">Query Builder</a></div>
+  <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/form-builder/getting-started/">Form Builder</a></div>
+  <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/react/documentation/form-renderer/getting-started/">Form Renderer</a></div>
 </td>
 <td>
   <div><p class="controlcategory">DROPDOWNS</p></div>

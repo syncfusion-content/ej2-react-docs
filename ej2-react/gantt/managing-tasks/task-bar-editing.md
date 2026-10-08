@@ -48,6 +48,28 @@ Prevent taskbar editing for specific tasks using the [taskbarEditing](https://ej
         
 {% previewsample "page.domainurl/code-snippet/gantt/preventtaskbaredit-cs1" %}
 
+## Enable taskbar drawing
+
+The Gantt Chart control supports creating new tasks by dragging directly on the timeline. This feature is enabled via the [allowTaskbarDraw](https://ej2.syncfusion.com/react/documentation/api/gantt/editSettingsModel#allowtaskbardraw) property in the [editSettings](https://ej2.syncfusion.com/react/documentation/api/gantt#editsettings) configuration. Taskbar drawing is intended for scheduling unscheduled tasks and requires [allowUnscheduledTasks](https://ej2.syncfusion.com/react/documentation/api/gantt#allowunscheduledtasks) to be enabled.
+
+Dragging across the timeline schedules an unscheduled task by defining its timeline range. The resulting task duration is calculated based on the configured scheduling settings.
+
+The following example demonstrates how to enable taskbar drawing:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/enabletaskbardraw-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/enabletaskbardraw-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/enabletaskbardraw-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/gantt/enabletaskbardraw-cs1" %}
+
 ## See also
 - [How to configure task editing?](https://ej2.syncfusion.com/react/documentation/gantt/editing)
 - [How to manage task dependencies?](https://ej2.syncfusion.com/react/documentation/gantt/task-dependency)

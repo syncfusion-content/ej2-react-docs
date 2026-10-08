@@ -24,10 +24,7 @@ The following tools and runtime are required to build and run a Syncfusion A2UI 
 
 | React version | Minimum `@syncfusion/ej2-react-*` version |
 |---------------|----------------------------------------|
-| [React v19](https://react.dev/blog/2024/12/05/react-19) | 29.1.33 and above |
-| [React v18](https://react.dev/blog/2022/03/29/react-v18) | 20.2.36 and above |
-| [React v17](https://legacy.reactjs.org/blog/2020/10/20/react-v17.html) | 18.3.50 and above |
-
+| [React v19](https://react.dev/blog/2024/12/05/react-19) | 35.1.37 and above |
 
 ## Set up a development environment
 
