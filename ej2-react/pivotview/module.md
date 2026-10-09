@@ -46,7 +46,7 @@ Some modules can be used independently, while others are commonly combined:
 
 The following import contains the complete set of injectable Pivot Table modules. In an application, retain only the modules used by that Pivot Table instance and pass those modules to `Inject`.
 
-```tsx
+```ts
 import {
   CalculatedField,
   ConditionalFormatting,

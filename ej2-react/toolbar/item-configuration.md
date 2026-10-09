@@ -149,7 +149,7 @@ To use the [`tabIndex`](https://ej2.syncfusion.com/react/documentation/api/toolb
 
 **Scenario 1 - Positive `tabIndex` values:** To enable tab key navigation for two React Toolbar items with a specific order, you can use the following code:
 
-```tsx
+```typescript
 import { ItemDirective, ItemsDirective, ToolbarComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
