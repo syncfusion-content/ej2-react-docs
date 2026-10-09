@@ -35,7 +35,7 @@ Follow these steps to apply a custom CSS class to each chip:
 
 The following inline example shows the `tagging` handler that applies the color name as a CSS class to each chip:
 
-```jsx
+```javascript
 onTagging = (e) => {
     // set the current selected item text as class to chip element.
     e.setClass(e.itemData[this.fields.text].toLowerCase());
