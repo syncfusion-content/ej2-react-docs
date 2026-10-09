@@ -17,7 +17,7 @@ The React MultiSelect enables users to add new custom options that are not prese
 
 To enable custom values, set the `allowCustomValue` property to `true` on the React MultiSelect component:
 
-```jsx
+```javascript
 <MultiSelectComponent allowCustomValue={true} />
 ```
 
@@ -34,14 +34,14 @@ When a custom value is added, the component raises the `customValueSelection` ev
 
 The following inline example shows how to bind the `customValueSelection` event to handle the new value:
 
-```jsx
+```javascript
 onCustomValueSelection = (e) => {
     // Handle the added custom value here.
     console.log('New custom value added:', e.itemData);
 };
 ```
 
-```jsx
+```javascript
 <MultiSelectComponent allowCustomValue={true} customValueSelection={this.onCustomValueSelection} />
 ```
 

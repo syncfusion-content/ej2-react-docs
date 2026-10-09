@@ -14,7 +14,7 @@ The React Toolbar supports customizing the scrolling distance when you click the
 
 1. Using the React Toolbar's `scrollStep` property, pass the required value to customize the scroll step.
 
-```jsx
+```javascript
   <ToolbarComponent scrollStep={50} />
 ```
 

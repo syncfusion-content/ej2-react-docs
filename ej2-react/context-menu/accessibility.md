@@ -74,7 +74,7 @@ The React Context Menu component renders the ARIA roles and attributes listed ab
 
 The React Context Menu component supports right-to-left (RTL) rendering for languages such as Arabic and Hebrew. Enable RTL by setting the `enableRtl` property to `true`.
 
-```tsx
+```typescript
 import { enableRtl, L10n } from '@syncfusion/ej2-base';
 import { ContextMenuComponent } from '@syncfusion/ej2-react-navigations';
 

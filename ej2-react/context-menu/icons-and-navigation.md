@@ -48,7 +48,7 @@ The React Context Menu component enables navigation to external web pages or int
 
 The `MenuItemModel` does not expose a `target` property directly. To open links in a new tab, set the `target` attribute to `_blank` on the rendered anchor element using the [`beforeItemRender`](https://ej2.syncfusion.com/react/documentation/api/context-menu/index-default#beforeitemrender) event. The event handler receives a `MenuEventArgs` argument whose `element` field is the rendered DOM node for the item.
 
-```tsx
+```typescript
 import { ContextMenuComponent, MenuEventArgs } from '@syncfusion/ej2-react-navigations';
 
 function onBeforeItemRender(args: MenuEventArgs) {
