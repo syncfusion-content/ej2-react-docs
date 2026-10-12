@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Supported Syncfusion A2UI Components
+# Supported Syncfusion React A2UI Components
 
 The [Syncfusion A2UI for React package](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui) ships a catalog of **50+ Syncfusion EJ2 React adapters** when the A2UI layout primitives from `basicCatalog` are included. Every adapter implements the A2UI v0.9 component contract, so an agent can stream any of them as part of a `createSurface` or `updateComponents` message and have it rendered by `<SyncfusionA2UIProvider/>` with no extra wiring. Support for the rest of the Syncfusion EJ2 React library will be available in upcoming releases.
 

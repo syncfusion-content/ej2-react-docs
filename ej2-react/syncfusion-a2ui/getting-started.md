@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion A2UI
+# Getting Started with Syncfusion React A2UI
 
 This section walks through creating a simple React app that renders a Syncfusion EJ2 React component from a list of [A2UI v0.9](https://a2ui.org/specification/v0.9-a2ui/) messages using the [Syncfusion A2UI for React package](https://www.npmjs.com/package/@syncfusion/ej2-react-a2ui). The example below uses a **DataGrid** for illustration, but the same pattern — define an A2UI v0.9 message list, feed it to a `MessageProcessor` configured with `syncfusionCatalog`, and render the result with `<SyncfusionA2UIProvider/>` — works for every component in the catalog (**Chart**, **Scheduler**, **Calendar**, **RichTextEditor**, **Diagram**, **Spreadsheet** and more).
 
