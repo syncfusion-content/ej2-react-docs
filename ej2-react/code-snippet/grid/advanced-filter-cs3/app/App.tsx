@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
     GridComponent, ColumnsDirective, ColumnDirective, Inject, Sort, Toolbar, VirtualScroll, AdvancedFilter,
-    type LoadEventArgs
+    LoadEventArgs
 } from '@syncfusion/ej2-react-grids';
 import { ticketdata } from './datasource';
 

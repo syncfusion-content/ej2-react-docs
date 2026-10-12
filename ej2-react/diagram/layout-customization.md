@@ -200,6 +200,7 @@ Animation provides visual continuity and helps users track changes in the layout
 
 The `LayoutAnimation` module must be injected into the diagram to enable layout animation. The following snippet shows how to import the module and inject it via the `Inject` component:
 
+{% raw %}
 ```
 import { DiagramComponent, Inject, HierarchicalTree, DataBinding, LayoutAnimation } from '@syncfusion/ej2-react-diagrams';
 
@@ -207,6 +208,7 @@ import { DiagramComponent, Inject, HierarchicalTree, DataBinding, LayoutAnimatio
   <Inject services={[DataBinding, HierarchicalTree, LayoutAnimation]} />
 </DiagramComponent>
 ```
+{% endraw %}
 
 The following example demonstrates how layout animation enhances the visual experience during expand and collapse operations:
 
