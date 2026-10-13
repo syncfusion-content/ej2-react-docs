@@ -231,15 +231,15 @@ For more information on obtaining and registering a license key, see [How to Reg
 }
 ```
 
-{% endtabcontent %}
-
-{% endtabcontents %}
-
 ## Run the application
 
 Once you have completed all the setup steps, click the **Run** button (▶) at the top of the Replit workspace. The React Grid application will be built and rendered in the preview pane.
 
 ![Syncfusion Grid rendered in Replit](./images/replit-grid-preview.png)
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Key features to explore
 
