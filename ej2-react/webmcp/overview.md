@@ -61,7 +61,9 @@ Create a React Vite application and integrate the Syncfusion® React Spreadsheet
 
 Import the WebMCP module and inject it into the component to make WebMCP functionality available.
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+
 import { SpreadsheetComponent, Spreadsheet, WebMcpSpreadsheet } from '@syncfusion/ej2-react-spreadsheet';
 
 Spreadsheet.Inject(WebMcpSpreadsheet);
@@ -76,7 +78,9 @@ function App() {
 }
 
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 3: Register component tools
 
@@ -92,7 +96,9 @@ For example, a Spreadsheet component may expose tools such as:
 
 An AI assistant can discover these tools and invoke them based on user prompts.
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+
 import { SpreadsheetComponent, Spreadsheet, WebMcpSpreadsheet } from '@syncfusion/ej2-react-spreadsheet';
 
 Spreadsheet.Inject(WebMcpSpreadsheet);
@@ -107,7 +113,9 @@ function App() {
 }
 
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 4: Customize tool registration
 
@@ -120,7 +128,9 @@ Use the `webMcpSettings` property to customize how WebMCP tools are exposed to A
 | `exposeTo` | List of trusted domains that are allowed to interact with the component through WebMCP. |
 
 {% raw %}
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+
 import { SpreadsheetComponent, Spreadsheet, WebMcpSpreadsheet } from '@syncfusion/ej2-react-spreadsheet';
 
 Spreadsheet.Inject(WebMcpSpreadsheet);
@@ -140,7 +150,9 @@ function App() {
 }
 
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
 {% endraw %}
 
 > Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your component tools.
@@ -157,7 +169,9 @@ The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This
 > AI-generated requests should always be validated before executing write operations. Restrict access using `exposeTo` and perform additional authorization checks within `beforeWebMcpToolExecute` when modifying application data.
 
 {% raw %}
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+
 import { SpreadsheetComponent, Spreadsheet, WebMcpSpreadsheet } from '@syncfusion/ej2-react-spreadsheet';
 
 Spreadsheet.Inject(WebMcpSpreadsheet);
@@ -189,7 +203,9 @@ function App() {
 }
 
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
 {% endraw %}
 
 ## Best practices
