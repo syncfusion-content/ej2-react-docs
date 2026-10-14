@@ -172,7 +172,7 @@ With the above code, the user can switch between the two React Toolbar items usi
 
 **Scenario 2 - `tabIndex` set to 0:** If you set the [`tabIndex`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#tabindex) value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the [`tabIndex`](https://ej2.syncfusion.com/react/documentation/api/toolbar/item#tabindex) values. For example:
 
-```tsx
+```ts
 import { ItemDirective, ItemsDirective, ToolbarComponent } from '@syncfusion/ej2-react-navigations';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
