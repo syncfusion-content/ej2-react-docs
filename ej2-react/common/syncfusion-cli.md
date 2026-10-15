@@ -10,9 +10,11 @@ domainurl: ##DomainURL##
 
 # Syncfusion® CLI in React
 
-The **Syncfusion<sup style="font-size:70%">&reg;</sup> CLI** is a command-line tool that helps developers create, configure, and manage React projects with Syncfusion<sup style="font-size:70%">&reg;</sup> React components. It simplifies project setup by enabling developers to scaffold React applications, add ready-to-use Syncfusion<sup style="font-size:70%">&reg;</sup> React components, configure themes, set up Syncfusion<sup style="font-size:70%">&reg;</sup> MCP assistants, and install Syncfusion<sup style="font-size:70%">&reg;</sup> component skills.
+The **Syncfusion<sup style="font-size:70%">&reg;</sup> CLI** is a command-line tool that helps developers create, configure, and manage React projects with Syncfusion<sup style="font-size:70%">&reg;</sup> React components. It simplifies project setup by enabling developers to scaffold React applications, add ready-to-use Syncfusion<sup style="font-size:70%">&reg;</sup> React components, configure themes, set up Syncfusion<sup style="font-size:70%">&reg;</sup> MCP assistants, install Syncfusion<sup style="font-size:70%">&reg;</sup> component skills, manage Syncfusion accounts and licenses, and check for CLI updates.
 
 For React development, the Syncfusion<sup style="font-size:70%">&reg;</sup> CLI supports project creation with **Vite** and **Next.js**. By using the Syncfusion<sup style="font-size:70%">&reg;</sup> CLI, developers can reduce manual configuration effort and quickly start building React projects with a recommended project structure, predefined templates, and the required component setup.
+
+> The `@syncfusion/syncfusion-cli` package has been deprecated to follow the standard package naming convention. Please use the latest `@syncfusion/cli` package instead. Future updates and new features will be available only in `@syncfusion/cli`. Uninstall the older package and upgrade to the latest package.
 
 ## Prerequisites
 
@@ -26,6 +28,7 @@ For React development, the Syncfusion<sup style="font-size:70%">&reg;</sup> CLI 
 - **Theme and Styling Configuration** - Easily apply built-in themes such as `Material 3`, `Fluent 2`, `Bootstrap 5.3`, and `Tailwind 3` with CSS or SCSS support.
 - **AI Assistant Integration** - Configure MCP assistants and install Syncfusion<sup style="font-size:70%">&reg;</sup> components Skills to improve AI-assisted React development.
 - **Project information**: View environment and project details, review installed Syncfusion package information.
+- **Account and license management** - Sign in to Syncfusion, download and activate license keys, and view installed licenses.
 
 ## Installation
 
@@ -33,7 +36,7 @@ Install the Syncfusion<sup style="font-size:70%">&reg;</sup> CLI globally from n
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
-npm install -g @syncfusion/syncfusion-cli
+npm install -g @syncfusion/cli
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,6 +49,8 @@ or
 sf -v
 {% endhighlight %}
 {% endtabs %}
+
+> If you have the previous `@syncfusion/syncfusion-cli` package installed, use this `npm uninstall -g @syncfusion/syncfusion-cli` command to uninstall it before installing `@syncfusion/cli` to avoid installation failures.
 
 ## Interactive Mode
 
@@ -78,8 +83,12 @@ The interactive menu displays the available CLI actions grouped by category.
        Setup Model Context Protocol (MCP)                sf mcp init
        Add component skills to AI Agent                  sf skills install
 
+  🔑 LICENSE MANAGEMENT
+       Manage Syncfusion account and licenses            sf license
+
   ℹ️ HELP & EXIT
        View help                                         sf --help
+       Check for CLI updates                             sf upgrade
        Exit                                              Ctrl + C
 ```
 
@@ -117,6 +126,11 @@ The following options are available in interactive mode:
 <td>sf skills install</td>
 </tr>
 <tr>
+<td>Manage Syncfusion account and licenses</td>
+<td>Manages your Syncfusion account and licenses.</td>
+<td>sf license</td>
+</tr>
+<tr>
 <td>Show Project info</td>
 <td>Displays environment and project information.</td>
 <td>sf info</td>
@@ -127,9 +141,51 @@ The following options are available in interactive mode:
 <td>sf --help</td>
 </tr>
 <tr>
+<td>Check for CLI updates</td>
+<td>Checks the installed and latest available Syncfusion CLI versions.</td>
+<td>sf upgrade</td>
+</tr>
+<tr>
 <td>Exit</td>
 <td>Exits interactive mode.</td>
 <td>Ctrl + C</td>
+</tr>
+</table>
+
+### License management commands
+
+Run `sf license` to open the license management menu. The menu provides the following account and license actions:
+
+<table>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Command</th>
+</tr>
+<tr>
+<td>Sign in to Syncfusion</td>
+<td>Authenticates your Syncfusion account and enables access to your license and subscriptions.</td>
+<td><code>sf login</code></td>
+</tr>
+<tr>
+<td>Sign out</td>
+<td>Signs out of the currently authenticated Syncfusion account.</td>
+<td><code>sf logout</code></td>
+</tr>
+<tr>
+<td>Download license key</td>
+<td>Use this command in your project to download the license key for the currently installed package version associated with your Syncfusion account. The downloaded license key is available in the <code>syncfusion-license.txt</code> file in your current project.</td>
+<td><code>sf license download</code></td>
+</tr>
+<tr>
+<td>View installed licenses</td>
+<td>Use this command in your project to view the license keys downloaded for the current project.</td>
+<td><code>sf license view</code></td>
+</tr>
+<tr>
+<td>Activate license</td>
+<td>Activates the license key for the current project using the downloaded license in the <code>syncfusion-license.txt</code> file.</td>
+<td><code>sf license activate</code></td>
 </tr>
 </table>
 
@@ -157,11 +213,11 @@ sf new my-app --framework react --template grid
 
 ## Syncfusion CLI commands
   
-The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI provides commands to create projects, add Syncfusion<sup style="font-size:70%">&reg;</sup> components, configure the MCP server, and install skills, manage themes and inspect project information.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI provides commands to create projects, add Syncfusion<sup style="font-size:70%">&reg;</sup> components, configure the MCP server, install skills, manage themes and licenses, and inspect project information.
 
 ### Project Creation Command
 
-Create a new Syncfusion<sup style="font-size:70%">®</sup> project with the desired framework, build tool, templates, themes, and other configuration options. The project creation commands help you quickly set up a development environment and start building applications with Syncfusion components.
+Create a new Syncfusion<sup style="font-size:70%">®</sup> project with the desired framework, project type, templates, themes, and other configuration options. The project creation commands help you quickly set up a development environment and start building applications with Syncfusion components.
 
 #### `new` command
   
@@ -171,7 +227,7 @@ The `new` command creates a React project with Syncfusion<sup style="font-size:7
   
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
-sf new <project-name> --framework <framework> --build-tool <buildTool> --type <type> --template <component> --theme <theme> --styling <styling> --mcp <editor> --skills
+sf new <project-name> --framework <framework> --project-type <projecttype> --type <type> --template <component> --theme <theme> --styling <styling> --mcp <editor> --skills
 {% endhighlight %}
 {% endtabs %}
 
@@ -181,7 +237,7 @@ The following command creates a React application using Vite with JavaScript, Gr
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
-sf new my-app --framework react --build-tool vite --template grid --mcp code-studio --skills
+sf new my-app --framework react --project-type vite --template grid --mcp code-studio --skills
 {% endhighlight %}
 {% endtabs %}
 
@@ -201,8 +257,8 @@ The `new` command supports options for configuring the project during creation.
 <td><code>react</code>, <code>angular</code>, <code>vue</code></td>
 </tr>
 <tr>
-<td><code>--build-tool</code></td>
-<td>Specifies the React build tool used to create the application.</td>
+<td><code>--project-type</code></td>
+<td>Specifies the React project type used to create the application.</td>
 <td><code>vite</code>, <code>nextjs</code></td>
 </tr>
 <tr>
@@ -237,7 +293,7 @@ The `new` command supports options for configuring the project during creation.
 </tr>
 </table>
 
-> **Note:** For React applications, the `--build-tool` option supports `vite` and `nextjs`.
+> **Note:** For React applications, the `--project-type` option supports `vite` and `nextjs`.
 
 ### Project-Specific Commands
   
@@ -326,7 +382,7 @@ When values are not provided, the Syncfusion CLI uses default values where appli
 <td>react</td>
 </tr>
 <tr>
-<td>React build tool</td>
+<td>React project type</td>
 <td>vite</td>
 </tr>
 <tr>
@@ -355,6 +411,24 @@ When values are not provided, the Syncfusion CLI uses default values where appli
 </tr>
 </table>
 
+## Check for CLI updates
+
+Use the `upgrade` command to check the installed and latest available Syncfusion CLI versions.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+sf upgrade
+{% endhighlight %}
+{% endtabs %}
+
+If the installed CLI version is outdated, the command displays the following command to upgrade to the latest version:
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+npm i -g @syncfusion/cli
+{% endhighlight %}
+{% endtabs %}
+
 ## Help
   
 The `--help` option displays the list of available Syncfusion CLI commands, arguments, and options.
@@ -370,7 +444,7 @@ sf --help
 **Which frameworks are supported?**  
 The Syncfusion CLI supports React, Angular, and Vue applications.
 
-**Which build tools are supported for React?**  
+**Which project types are supported for React?**  
 React applications support Vite and Next.js.
 
 **Can I create a project without interactive prompts?**  
@@ -384,4 +458,3 @@ Yes. Use the `sf theme switch <themeName>` command to switch themes.
 
 **Does the Syncfusion CLI support Syncfusion<sup style="font-size:70%">&reg;</sup> MCP and Skills?**  
 Yes. The CLI supports Syncfusion<sup style="font-size:70%">&reg;</sup> MCP assistant configuration and Syncfusion<sup style="font-size:70%">&reg;</sup> Components Skills installation.
-
