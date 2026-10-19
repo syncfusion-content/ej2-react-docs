@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Columns in React Gantt Chart Component
+# Configuring and Customizing Columns in React Gantt Chart
 
 The [React Gantt Chart](https://www.syncfusion.com/react-components/react-gantt-chart) component displays task data in a tabular format using columns. Columns help organize data efficiently and support user interaction within the Gantt chart.
 
@@ -20,11 +20,11 @@ The React Gantt Chart component supports specifying the data type for each colum
 
 **Gantt supports the following column types:**
 
-- **string**: Default type for text data.  
-- **number**: For numeric values with formatting.  
-- **boolean**: Displays checkboxes for true/false values.  
-- **date**: For date values.  
-- **datetime**: For date and time values.  
+- **string**: Default type for text data.
+- **number**: For numeric values with formatting.
+- **boolean**: Displays checkboxes for true/false values.
+- **date**: For date values.
+- **datetime**: For date and time values.
 - **checkbox**: Displays a checkbox column.
 
 {% tabs %}
@@ -44,7 +44,7 @@ The React Gantt Chart component supports specifying the data type for each colum
 > * If `type` is not defined, it is auto-detected from the first record of the data source.
 > * If the first record has a null or blank value, define the `type` explicitly to ensure correct filter dialog behavior.
 
-### Difference between boolean type and checkbox type column 
+### Difference between boolean type and checkbox type column
 
 - Use **boolean** type to bind and edit true/false values from the data source.
 - Use **checkbox** type to enable row selection or deselection in the UI.
@@ -52,6 +52,30 @@ The React Gantt Chart component supports specifying the data type for each colum
 - If multiple **checkbox** columns exist, selecting one auto-selects others in the same row.
 
 > To learn more about how to render boolean values as checkboxes in a Syncfusion<sup style="font-size:70%">&reg;</sup> GanttColumn, please refer to the [Render Boolean Values as Checkbox](https://ej2.syncfusion.com/react/documentation/gantt/columns/columns#render-boolean-value-as-checkbox) section.
+
+## Serial number column
+
+The **Serial Number** feature automatically generates sequential row numbers for records displayed in the Gantt Chart. To enable this feature, set the [enableSerialNumber](https://ej2.syncfusion.com/react/documentation/api/gantt#enableserialnumber) property to **true**. Additionally, you need to define a dedicated column in the [columns](https://ej2.syncfusion.com/react/documentation/api/gantt#columns) configuration with its [field](https://ej2.syncfusion.com/react/documentation/api/gantt/column#field) property set as **SerialNumber** to display the generated serial numbers. When enabled, serial numbers are assigned based on the current visible row order without requiring a dedicated field in the data source.
+
+Serial numbers are automatically recalculated whenever the visible row sequence changes. This includes operations such as filtering, searching, sorting, expanding or collapsing parent tasks, indenting or outdenting tasks, adding, editing, or deleting records, row drag-and-drop, and data refresh. As a result, the serial number column always reflects the latest row order currently displayed in the Gantt Chart.
+
+The feature works consistently with hierarchical data and updates the numbering across all visible records, ensuring that users can easily identify and reference rows regardless of changes made to the task hierarchy or displayed data set.
+
+The following example demonstrates how to enable the auto-generated Serial Number column in the Gantt Chart:
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/gantt/serialnumber-cs1/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/gantt/serialnumber-cs1/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/gantt/serialnumber-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/serialnumber-cs1" %}
 
 ## Column width
 
@@ -66,7 +90,7 @@ In Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt for React, column widt
 
 > To learn more about resizing, you can refer to the resizing section [here](https://ej2.syncfusion.com/react/documentation/gantt/columns/column-resizing)
 
-#### Supported types for column width
+### Supported types for column width
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt supports the following three types of column width:
 
@@ -334,7 +358,7 @@ The following sample hides the checkbox for the row with `ariaRowIndex` set to 3
 
 The Gantt Chart component for React supports automatic column width adjustment based on content. Double-clicking the column header resizer adjusts the width to fit the maximum content, ensuring clear data visibility without wrapping.
 
-To enable this feature, set [allowResizing](https://ej2.syncfusion.com/react/documentation/api/gantt#allowresizing) to **true** and inject `Resize` in the Gantt Chart component. 
+To enable this feature, set [allowResizing](https://ej2.syncfusion.com/react/documentation/api/gantt#allowresizing) to **true** and inject `Resize` in the Gantt Chart component.
 
 The following screenshot represents the resizing the column using resizer symbol.
 
@@ -384,7 +408,7 @@ The React Gantt Chart component allows dynamic control over column visibility us
 
 ### Using property
 
-You can control the visibility of columns in the React Gantt Chart component by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/gantt/column#visible) property of each column to **true** or **false**. 
+You can control the visibility of columns in the React Gantt Chart component by setting the [visible](https://ej2.syncfusion.com/react/documentation/api/gantt/column#visible) property of each column to **true** or **false**.
 
 The following example illustrates how to dynamically toggle the visibility of the **Duration** column. Initially, the column is set with the `visible` property as **false**. When the switch component triggers a `change` event, the `getColumnByField` method retrieves the column, its `visible` property is updated based on the switch state, and `refreshColumns` is called to apply the changes to the UI.
 
@@ -412,7 +436,7 @@ You can also show or hide columns in the React Gantt Chart component using the [
 
 **Based on header text:**
 
-You can dynamically show or hide columns by passing either a single header text or an array of header texts as the first parameter, and specifying `headerText` as the second parameter.  This enables dynamic control over column visibility based on the displayed header.
+You can dynamically show or hide columns by passing either a single header text or an array of header texts as the first parameter, and specifying `headerText` as the second parameter. This enables dynamic control over column visibility based on the displayed header.
 
 You can use the `getGanttColumns` method to retrieve all defined columns, and the `getVisibleColumns` method to get only the visible columns.
 
@@ -456,11 +480,11 @@ The following sample demonstrates how to hide and show columns using button clic
 
 You can manage actions like filtering, sorting, resizing, reordering, editing, and searching for specific columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> React Gantt using the following options:
 
-* [allowEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#allowediting): Enables or disables editing for a column.
-* [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#allowfiltering): Enables or disables filtering for a column.
-* [allowSorting](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#allowsorting): Enables or disables sorting for a column.
-* [allowReordering](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#allowreordering): Enables or disables reordering for a column.
-* [allowResizing](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#allowresizing): Enables or disables resizing for a column.
+- [allowEditing](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#allowediting): Enables or disables editing for a column.
+- [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#allowfiltering): Enables or disables filtering for a column.
+- [allowSorting](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#allowsorting): Enables or disables sorting for a column.
+- [allowReordering](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#allowreordering): Enables or disables reordering for a column.
+- [allowResizing](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#allowresizing): Enables or disables resizing for a column.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -484,7 +508,7 @@ For more information check on this [documentation](https://ej2.syncfusion.com/re
 
 ## Updating column definitions
 
-To update column definitions in React Gantt Chart component, modify the [columns](https://helpej2.syncfusion.com/react/documentation/api/gantt/column) property to adjust column appearance and behavior by changing attributes like [headerText](https://ej2.syncfusion.com/react/documentation/api/gantt/column#headertext), [width](https://ej2.syncfusion.com/react/documentation/api/gantt/column#width), or [visible](https://ej2.syncfusion.com/react/documentation/api/gantt/column#visible). After making the required updates, use the `refreshColumns` method from the `treeGrid` object to apply and reflect the changes in the Gantt chart.
+To update column definitions in React Gantt Chart component, modify the [columns](https://ej2.syncfusion.com/react/documentation/api/gantt/column) property to adjust column appearance and behavior by changing attributes like [headerText](https://ej2.syncfusion.com/react/documentation/api/gantt/column#headertext), [width](https://ej2.syncfusion.com/react/documentation/api/gantt/column#width), or [visible](https://ej2.syncfusion.com/react/documentation/api/gantt/column#visible). After making the required updates, use the `refreshColumns` method from the `treeGrid` object to apply and reflect the changes in the Gantt chart.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -502,7 +526,7 @@ To update column definitions in React Gantt Chart component, modify the [columns
 
 ## Adding/removing columns
 
-You can add or remove columns in the React Gantt by updating the [columns](https://helpej2.syncfusion.com/react/documentation/api/gantt/column) option in the Gantt instance. To add a column, **push** a new column object into the `columns` array. To remove a column, use **pop** to delete the last item or `splice` to remove a specific one from the array.
+You can add or remove columns in the React Gantt by updating the [columns](https://ej2.syncfusion.com/react/documentation/api/gantt/column) option in the Gantt instance. To add a column, **push** a new column object into the `columns` array. To remove a column, use **pop** to delete the last item or `splice` to remove a specific one from the array.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -540,7 +564,7 @@ The following example demonstrates a Gantt chart where the **Task Name** column 
 
 ## Clip mode
 
-The clip mode provides options to display overflow cell content using the [columns.clipMode](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#clipmode) property.  The following are three types of `clipMode`:
+The clip mode provides options to display overflow cell content using the [columns.clipMode](https://ej2.syncfusion.com/react/documentation/api/gantt/columnModel#clipmode) property. The following are three types of `clipMode`:
 
 - **Clip**: Truncates content that exceeds the cell width.
 - **Ellipsis**: Displays ellipsis when content exceeds the cell area.

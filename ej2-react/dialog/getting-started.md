@@ -91,7 +91,7 @@ The required styles for the React Dialog component are imported in the **src/App
 {% tabs %}
 {% highlight css tabtitle="App.css" %}
  
-@import "@syncfusion/ej2-tailwind3-theme/styles/React Dialog/index.css";
+@import "@syncfusion/ej2-tailwind3-theme/styles/dialog/index.css";
  
 {% endhighlight %}
 {% endtabs %}
