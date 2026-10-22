@@ -25,14 +25,15 @@ Before getting started, ensure the following:
 
 ## Create a project in Replit
 
-1. Sign in to [Replit](https://replit.com/).
-2. Click **New** and select **Empty project**.
+1.Sign in to [Replit](https://replit.com/).
+
+2.Click **New** and select **Empty project**.
 
 Replit creates an empty project with a default generated name.
 
 ![Empty Project in Replit](./images/replit-empty-project.png)
 
-3. To rename the project, click the project name dropdown located at the top of the Replit workspace, select **Edit project details**, and enter a name such as `react-grid-app`.
+3.To rename the project, click the project name dropdown located at the top of the Replit workspace, select **Edit project details**, and enter a name such as `react-grid-app`.
 
 ![Edit project details in Replit](./images/replit-edit-project.png)
 
@@ -98,31 +99,31 @@ Create the React application manually using the Vite CLI and add the Syncfusion�
 
 ## Create a Vite React project
 
-1. In the Shell tab, run the following command to create a Vite React project:
+1.In the Shell tab, run the following command to create a Vite React project:
 
 ```bash
 npm create vite@latest . -- --template react
 ```
 
-2. Install the project dependencies:
+2.Install the project dependencies:
 
 ```bash
 npm install
 ```
 
-3. Install the Syncfusion® React Grid package and the Fluent2 theme:
+3.Install the Syncfusion® React Grid package and the Fluent2 theme:
 
 ```bash
 npm install @syncfusion/ej2-react-grids @syncfusion/ej2-fluent2-theme
 ```
 
-4. Open the `src/index.css` file, remove the default Vite template styles to avoid conflicts with the Syncfusion® theme, and add the following import statement:
+4.Open the `src/index.css` file, remove the default Vite template styles to avoid conflicts with the Syncfusion® theme, and add the following import statement:
 
 ```css
 @import "@syncfusion/ej2-fluent2-theme/styles/fluent2.css";
 ```
 
-5. Open the `index.html` file and update the `<title>`. No other changes are required, since the default Vite template already includes the `<div id="root"></div>` element that React renders into:
+5.Open the `index.html` file and update the `<title>`. No other changes are required, since the default Vite template already includes the `<div id="root"></div>` element that React renders into:
 
 ```html
 <!DOCTYPE html>
@@ -140,7 +141,7 @@ npm install @syncfusion/ej2-react-grids @syncfusion/ej2-fluent2-theme
 </html>
 ```
 
-6. Open the `src/main.jsx` file and replace its contents with:
+6.Open the `src/main.jsx` file and replace its contents with:
 
 ```jsx
 import React from 'react'
@@ -155,7 +156,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 ```
 
-7. Open the `src/App.jsx` file and replace its contents with:
+7.Open the `src/App.jsx` file and replace its contents with:
 
 ```jsx
 import { registerLicense } from '@syncfusion/ej2-base';
@@ -217,7 +218,7 @@ export default function App() {
 
 For more information on obtaining and registering a license key, see [How to Register a Syncfusion® License Key](../../licensing/license-key-registration).
 
-8. Open the `src/App.css` file and add basic styling:
+8.Open the `src/App.css` file and add basic styling:
 
 ```css
 .App {
