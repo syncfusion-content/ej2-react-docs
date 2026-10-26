@@ -13,17 +13,22 @@ domainurl: ##DomainURL##
 This guide outlines the system requirements to use Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components effectively.
 
 - **React:** Use React version 15.5.4 or higher.
-- **Node.js:** Use Node.js version 14.0.0 or above. The compatible npm version is installed with Node.js. To verify your Node.js installation, run:
+- **Node.js and npm**
 
-```bash
-node --version
-```
+  Node.js is required for React development, providing the runtime for the React CLI and package management tools. Syncfusion<sup style="font-size:70%">&reg;</sup> React components require an [active Long-Term Support (LTS) or Maintenance LTS version](https://nodejs.org/en/about/previous-releases) of Node.js.
+
+  **Recommended:** Use the latest LTS version of Node.js for optimal stability and security. Download Node.js from [nodejs.org](https://nodejs.org/en), which includes npm (Node Package Manager). After installation, verify the versions:
+
+  ```bash
+  node --version
+  npm --version
+  ```
 
 - **Yarn (optional):** If using Yarn, ensure Yarn version >= 0.25.
 
 ## Browser support
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components are supported in modern browsers. Refer to the [browser compatibility](./browser/) section for details.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components are supported in modern browsers. Refer to the [browser compatibility](./browser) section for details.
 
 ## React supported versions
 
