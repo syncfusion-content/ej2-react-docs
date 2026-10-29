@@ -1,28 +1,79 @@
 ---
 layout: post
 title: React Grid - Custom Binding | Syncfusion
-description: React Grid custom binding explains managing external data processing, handling grid actions via dataStateChange event, and binding custom API data to the Grid.
+description: React Grid custom binding explains server-side data processing, handling grid actions via dataStateChange event, and binding custom API data to the Grid.
 control: Custom Binding
 platform: ej2-react
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom Binding in React Grid component
+# Custom Binding with Server-Side Row Model in React Grid component
 
-The custom binding feature in the Data Grid enables managing a custom API for handling data processing externally and then binding the resulting data to the Grid. When using custom binding, the Data Grid expects the result to be an object with `result` (array of records to display) and `count` (total number of records) properties.
+The custom binding feature in the Data Grid enables managing a custom API for handling data processing externally and then binding the resulting data to the grid. When using custom binding, the Data Grid expects the result to be an object with `result` (array of records to display) and `count` (total number of records) properties.
 
 The [Data Grid](https://www.syncfusion.com/react-components/react-data-grid) component offers a range of powerful features such as **paging**, **grouping**, **sorting**, and **filtering**. These actions trigger the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) event. CRUD actions such as **Create**, **Read**, **Update**, and **Delete** trigger the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged) event. These events provide an opportunity to manage and manipulate data according to user interactions.
 
-**Using the `dataStateChange` event**
+## Client-side vs server-side data processing
 
-The `dataStateChange` event triggers whenever actions modify the grid's data state, such as changing pages, applying sorting, or grouping. This event provides detailed information about the performed action and current grid state, including parameters like page number, sorting details, and filtering criteria.
+Data Grid applications can process data using either a client-side or server-side approach.
+
+In a client-side model, the complete dataset is loaded into the browser and all data operations, such as paging, sorting, filtering, grouping, searching, and aggregation, are performed on the client.
+
+![Client side data rendering](../images/client-side-rendering.jpg)
+
+In a Server-Side Row Model (SSRM), the complete dataset remains on the server. The Grid requests only the records required for the current view and processes data operations to the server. This approach reduces browser memory usage and improves performance when working with large datasets.
+
+![Server side data rendering](../images/server-side-rendering.jpg)
+
+The following workflow illustrates the SSRM process:
+
+1. The Grid requests data based on its current state.
+2. The current state is sent through the `dataStateChange` event and includes information such as paging, sorting, filtering, searching, grouping, and aggregation.
+3. The server processes the request against the complete dataset.
+4. The server returns only the required records along with the total record count.
+5. The Grid renders the returned records and uses the total count to maintain paging and data navigation.
+
+A typical server response contains the following properties:
+
+```ts
+{
+  result: [...],
+  count: 100000
+}
+```
+
+* `result` contains the records required for the current view.
+* `count` represents the total number of records available after applying the requested data operations and enables the grid to maintain paging, virtualization, and navigation accurately.
+
+## Server-side data processing with custom binding
+
+Custom binding implements the Server-Side Row Model (SSRM) workflow by using the `dataStateChange` event to send the current grid state to the server and bind the returned `result` and `count` values to the grid.
+
+The following table compares client-side processing and server-side processing in the grid.
+
+| Aspect | Client-side processing | Server-side processing (custom binding) |
+|--------|------------------------|-----------------------------------------|
+| Data loaded in browser | Complete dataset | Current page or block only |
+| Data ownership | Browser | Server |
+| Data operations | Executed in the browser | Executed on the server |
+| Suitable data size | Small to medium | Large (hundreds of thousands to millions of records) |
+| Browser memory usage | Increases as data size grows | Lower and predictable |
+| Network request | Single request on initial load | Request for each grid action |
+
+> Custom binding is suitable when data requests must be fully controlled by the application, such as with Redux or an external API. When the server follows a standard protocol, use the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started) with a built-in adaptor such as [UrlAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/url-adaptor), [WebApiAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/webapi-adaptor), [ODataV4Adaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/odatav4-adaptor), or [GraphQLAdaptor](https://ej2.syncfusion.com/react/documentation/grid/connecting-to-adaptors/graphql-adaptor), which sends grid actions to the server automatically without handling the `dataStateChange` and `dataSourceChanged` events.
+
+### Handle the dataStateChange event
+
+In the SSRM workflow, the `dataStateChange` event acts as the communication point between the Grid and the server. This event triggers whenever actions modify the grid's data state, such as changing pages, applying sorting, or grouping. This event provides detailed information about the performed action and current grid state, including parameters like page number, sorting details, and filtering criteria.
 
 To implement the `dataStateChange` event effectively:
 
 1. **Subscribe to the event:** In the component code, subscribe to the `dataStateChange` event using the appropriate event handler function. This function is executed whenever the grid is interacted with.
 
-2. **Handle data state:** Inside the event handler function, the event arguments can be accessed to determine the specific actions and intentions. The action property of the event arguments indicates the type of action performed (e.g., paging, sorting, grouping).
+2. **Handle data state:** Inside the event handler function, the event arguments can be accessed to determine the specific actions and intentions. The `action` property of the event arguments indicates the type of action performed (e.g., paging, sorting, grouping).
+
+3. **Return the result:** Assign the processed `result` and `count` to the grid's `dataSource` property to render the requested records.
 
 > The `dataStateChange` event is not triggered during the initial rendering of the Grid. To load and display records when the Grid is first initialized, perform the data operation inside the `useEffect` hook.
 
@@ -89,7 +140,7 @@ When filtering multiple values, the predicates are provided as arguments in the 
 
 ### Handling searching
 
-When performing a search operation in the grid, the `dataStateChange` event is triggered, allowing access to the following referenced arguments within the event
+When performing a search operation in the grid, the `dataStateChange` event is triggered, allowing access to the following referenced arguments within the event.
 
 ![Searching](../images/custom-binding-searching.png)
 
@@ -137,7 +188,7 @@ When a sorting operation is performed in the grid, the `dataStateChange` event i
 
 ![Sorting](../images/custom-binding-sorting.png)
 
-When performing multi‑column sorting, the following referenced arguments are available in the `dataStateChange` event
+When performing multi‑column sorting, the following referenced arguments are available in the `dataStateChange` event.
 
 ![Multi Sorting](../images/custom-binding-multi-sorting.png)
 
@@ -195,7 +246,7 @@ const applyPaging = (query, page) => {
     const pageTake = page.take;
     query.page(pageSkip, pageTake);
   }
-  // If if only 'take' is available and 'skip' is 0, apply paging for the first page.
+  // If only 'take' is available and 'skip' is 0, apply paging for the first page.
   else if (page.skip === 0 && page.take) {
     query.page(1, page.take);
   }
@@ -272,7 +323,7 @@ const reducer = (state = initialState, action) => {
 
 **Lazy load grouping**
 
-In React, lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy load grouping enables efficient loading and display of grouped data by fetching only the required data on demand.
+Lazy load grouping extends the SSRM pattern by retrieving group child records only when a group is expanded. Instead of loading all records for every group during the initial request, the Grid requests the child records for a specific group on demand. This reduces initial data transfer and improves performance when working with large grouped datasets.
 
 To enable this feature, the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/react/documentation/api/grid/groupsettings#enableLazyLoading) property must be set to `true`. In addition, the state must be managed based on the initial grid action as follows.
 
@@ -321,7 +372,7 @@ const reducer = (state = initialState, action) => {
       if (!isNullOrUndefined(action.payload.group)) {
           applyGrouping(query, action.payload.group);
       }
-      // lazy load goruping
+      // lazy load grouping
       applyLazyLoad(query, action.payload);
       // To get the count of the data
       query.isCountRequired = true;
@@ -341,7 +392,7 @@ const reducer = (state = initialState, action) => {
 
 > Further information can be accessed in the respective documentation for [lazy load grouping](https://ej2.syncfusion.com/react/documentation/grid/grouping/lazy-load-grouping).
 
-The complete example is available in the [handling CRUD operations topic](#perform-crud-operations).
+The complete example is available in the [create a Redux service for custom binding](#create-a-redux-service-for-custom-binding) topic.
 
 ### Handling CRUD
 
@@ -355,9 +406,11 @@ To implement CRUD operations using Syncfusion<sup style="font-size:70%">&reg;</s
 
 2. **Handle data state changes:** Utilize the [dataStateChange](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datastatechange) event to respond to changes in the grid's data state. This event is triggered whenever the grid is interacted with, such as during paging or sorting.
 
-3. **Execute CRUD operations:** Within the event handler for [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged), implement logic to handle various CRUD actions based on the action or requestType property of the event arguments.
+3. **Execute CRUD operations:** Within the event handler for [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#datasourcechanged), implement logic to handle various CRUD actions based on the `action` or `requestType` property of the event arguments.
 
 4. **Call endEdit method:** After performing CRUD operations (adding, editing, or deleting), call the [endEdit](https://ej2.syncfusion.com/react/documentation/api/grid/index-default#endedit) method to signal the completion of the operation and update the grid accordingly.
+
+> After the `endEdit` method is called, the grid triggers the `dataStateChange` event to request the updated data for the current view from the server.
 
 **Insert operation**
 
@@ -443,7 +496,9 @@ const reducer = (state = initialState, action) => {
 }
 ```
 
-## The steps below to create a Redux service.
+## Create a Redux service for custom binding
+
+The following steps explain the process of creating a Redux service to handle custom binding.
 
 **Step 1 : Install Dependencies**
 
@@ -502,7 +557,7 @@ According to Redux documentation, the Redux [actions](https://redux.js.org/tutor
 
 The action type defines the name of the action that will be performed from the application. Each action type is a string that describes the specific operation being executed.
 
-The following example demonstrates a Redux action definition for a sort operation. This code can be added to the **action.tsx** file:
+The following example demonstrates a Redux action definition for a data fetch operation. This code can be added to the **action.tsx** file:
 
 ```ts
 export const Grid_FetchData = "Grid_FetchData";
@@ -518,7 +573,7 @@ export const fetchData = (state: any, query: Query) => ({
 
 According to the Redux documentation, the Redux [reducers](https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers#writing-reducers) are functions responsible for handling actions and updating the state of the application. Reducers specify the way the state should change in response to different actions dispatched to the Redux store.
 
-Here is an example of a Redux reducer definition for sorting operations. The reducer code can be added to the **reducer.tsx** file.
+Here is an example of a Redux reducer definition for paging operations. The reducer code can be added to the **reducer.tsx** file.
 
 ```ts
 const initialState = {
@@ -566,7 +621,7 @@ const reducer = (state = initialState, action) => {
 export default reducer;
 ```
 
-> The grid expects an object as result and count format.
+> The grid expects an object with `result` and `count` properties.
 
 **Step 6: Create a Dispatch**
 
@@ -574,7 +629,7 @@ According the Redux documentation, the [dispatch](https://redux.js.org/api/store
 
 When performing actions such as adding, updating, or deleting a row in the grid, it dispatches the corresponding actions to modify the data in the store and trigger updates to the grid component.
 
-When the `dataSourceChanged` and `dataStateChange` event occur, the dispatch method is called according to their grid actions.
+When the `dataSourceChanged` and `dataStateChange` events occur, the dispatch method is called according to their grid actions.
 
 Add the following code to the **App.tsx** file.
 
@@ -606,7 +661,7 @@ Add the following code to the **App.tsx** file.
   },[state.data]) 
 ```
 
-The following example demonstrates the process of binding custom data to handle grid actions and CRUD operations. 
+The following example demonstrates the process of binding custom data to handle grid actions and CRUD operations.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -819,7 +874,7 @@ export default App;
 
 ## Fetch result from the DataManager query using external button
 
-By default, Syncfusion Data Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). However, in some scenarios, it may be necessary to fetch data dynamically from the server using a query triggered by an external button. This approach allows greater control over when and how data loads into the grid.
+By default, Data Grid automatically binds a remote data source using the [DataManager](https://ej2.syncfusion.com/react/documentation/data/getting-started). However, in some scenarios, it may be necessary to fetch data dynamically from the server using a query triggered by an external button. This approach allows greater control over when and how data loads into the grid.
 
 To achieve this, use the `executeQuery` method of `DataManager` with a query object. This method enables running a custom query and retrieving results dynamically.
 
