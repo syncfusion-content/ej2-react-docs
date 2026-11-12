@@ -23,4 +23,4 @@ The following example demonstrates how to implement repeat React Button function
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/repeat-button-cs1" %}
+ {% previewsample "page.domainurl/samples/button/repeat-button-cs1" %}

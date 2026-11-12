@@ -32,4 +32,4 @@ Set the React Checkbox to an indeterminate state using the [`indeterminate`](htt
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/check-box/label-and-size-cs3" %}
+ {% previewsample "page.domainurl/samples/check-box/label-and-size-cs3" %}

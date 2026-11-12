@@ -23,4 +23,4 @@ The following example demonstrates how to add rounded corners to a React Dropdow
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/rounded-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/rounded-cs1" %}

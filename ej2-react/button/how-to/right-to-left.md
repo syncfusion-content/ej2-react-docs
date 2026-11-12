@@ -23,4 +23,4 @@ The following example demonstrates how to enable RTL support in the Button compo
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/default-cs3" %}
+ {% previewsample "page.domainurl/samples/button/default-cs3" %}

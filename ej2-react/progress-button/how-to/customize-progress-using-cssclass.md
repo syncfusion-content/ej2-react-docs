@@ -26,4 +26,4 @@ You can also create a reverse progress effect (right-to-left fill) by adding a c
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs4" %}
+ {% previewsample "page.domainurl/samples/progress-button/getting-started-cs4" %}

@@ -25,7 +25,7 @@ The following example demonstrates React Dropdown Menus with default and `Top` i
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/icon-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/icon-cs1" %}
 
 ### Icon-only React Dropdown Menu
 
@@ -40,7 +40,7 @@ Create an icon-only React Dropdown Menu by using the [`iconCss`](https://ej2.syn
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/icon-only-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/icon-only-cs1" %}
 
 ### React Dropdown Menu with sprite image
 
@@ -55,7 +55,7 @@ Use sprite images as button icons by applying the [`iconCss`](https://ej2.syncfu
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/sprite-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/sprite-cs1" %}
 
 > Syncfusion provides a set of icons available through the `e-icons` class. You can also integrate third-party icons using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconcss) property.
 
@@ -72,7 +72,7 @@ Create a vertical React Dropdown Menu layout by adding the `e-vertical` class us
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/vertical-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/vertical-cs1" %}
 
 > The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the React Dropdown Menu using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/drop-down-button/#iconcss) property.
 

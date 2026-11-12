@@ -37,7 +37,7 @@ The available Linear directions are:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/radial-cs1" %}
+ {% previewsample "page.domainurl/samples/speed-dial/radial-cs1" %}
 
 ## Radial display mode (Radial Menu)
 

@@ -70,4 +70,4 @@ Below example demonstrates the click event of the React Floating Action Button.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/floating-action-button/events-cs1" %}
+ {% previewsample "page.domainurl/samples/floating-action-button/events-cs1" %}

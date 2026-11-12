@@ -23,4 +23,4 @@ In the following example, USB and Wi-Fi Switches are in the checked state, while
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/switch/form-cs1" %}
+ {% previewsample "page.domainurl/samples/switch/form-cs1" %}

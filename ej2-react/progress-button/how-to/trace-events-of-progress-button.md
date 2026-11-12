@@ -28,4 +28,4 @@ The following events are available in the React Progress Button component:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs7" %}
+ {% previewsample "page.domainurl/samples/progress-button/getting-started-cs7" %}

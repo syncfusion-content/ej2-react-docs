@@ -23,4 +23,4 @@ Create semantic style variants (primary, success, warning, danger, info) by defi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/radio-button/howto-cs1" %}
+ {% previewsample "page.domainurl/samples/radio-button/howto-cs1" %}

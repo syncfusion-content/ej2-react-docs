@@ -23,4 +23,4 @@ The following example demonstrates how to reposition the popup by modifying its 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/position-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/position-cs1" %}

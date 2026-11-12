@@ -23,4 +23,4 @@ In the example below, the payment method "Credit / Debit Card" is in the checked
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/radio-button/form-cs1" %}
+ {% previewsample "page.domainurl/samples/radio-button/form-cs1" %}

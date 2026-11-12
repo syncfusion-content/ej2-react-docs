@@ -23,4 +23,4 @@ The following example demonstrates how to add a tooltip to a React Button:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/howto-cs2" %}
+ {% previewsample "page.domainurl/samples/button/howto-cs2" %}

@@ -38,7 +38,7 @@ The following example demonstrates how to create input React Chips:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chips/default-cs3" %}
+ {% previewsample "page.domainurl/samples/chips/default-cs3" %}
 
 ## Choice chip
 
@@ -61,7 +61,7 @@ The following example demonstrates single selection with choice React Chips:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chips/default-cs4" %}
+ {% previewsample "page.domainurl/samples/chips/default-cs4" %}
 
 ## Filter chip
 
@@ -84,7 +84,7 @@ The following example demonstrates multiple selection with filter React Chips:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chips/default-cs5" %}
+ {% previewsample "page.domainurl/samples/chips/default-cs5" %}
 
 ## Action chip
 
@@ -105,7 +105,7 @@ Action React Chips trigger specific events or actions when interacted with. Unli
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chips/default-cs6" %}
+ {% previewsample "page.domainurl/samples/chips/default-cs6" %}
 
 ### Deletable chip
 
@@ -128,4 +128,4 @@ The following example demonstrates deletable React Chips:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/chips/default-cs7" %}
+ {% previewsample "page.domainurl/samples/chips/default-cs7" %}

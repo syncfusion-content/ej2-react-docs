@@ -23,4 +23,4 @@ The following example demonstrates React Button in the disabled state:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/default-cs4" %}
+ {% previewsample "page.domainurl/samples/button/default-cs4" %}

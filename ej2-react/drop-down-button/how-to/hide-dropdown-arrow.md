@@ -21,4 +21,4 @@ Remove the dropdown caret icon from the React Dropdown Menu by adding the `e-car
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/hide-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/hide-cs1" %}

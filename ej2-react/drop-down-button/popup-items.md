@@ -28,7 +28,7 @@ added using the iconCss property.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/popup-icon-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/popup-icon-cs1" %}
 
 ## Navigations
 
@@ -43,7 +43,7 @@ Actions in React Dropdown Menu is usage to navigate to the other web page when a
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/action-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/action-cs1" %}
 
 ## Template
 
@@ -60,7 +60,7 @@ Popup items can be customized by using the [`beforeItemRender`](https://ej2.sync
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/template-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/template-cs1" %}
 
 ### Popup Templating
 
@@ -78,7 +78,7 @@ using `target` property.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/popup-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/popup-cs1" %}
 
 ## Separator
 
@@ -95,7 +95,7 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/accessibility-cs2" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/accessibility-cs2" %}
 
 ## See Also
 

@@ -21,4 +21,4 @@ The [itemTemplate](https://ej2.syncfusion.com/react/documentation/api/drop-down-
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/drop-down-button/item-template-cs1" %}
+{% previewsample "page.domainurl/samples/drop-down-button/item-template-cs1" %}

@@ -28,7 +28,7 @@ Customize the appearance and content of individual action items using the [`item
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/template-cs1" %}
+ {% previewsample "page.domainurl/samples/speed-dial/template-cs1" %}
 
 ## Popup template
 
@@ -46,4 +46,4 @@ Customize the entire popup container using the [`popupTemplate`](https://ej2.syn
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/template-cs2" %}
+ {% previewsample "page.domainurl/samples/speed-dial/template-cs2" %}

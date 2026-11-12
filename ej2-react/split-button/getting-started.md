@@ -135,7 +135,7 @@ The output will appear as follows:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/split-button/getting-started-cs1" %}
+{% previewsample "page.domainurl/samples/split-button/getting-started-cs1" %}
 
 > Refer to the [React Split Button](https://www.syncfusion.com/react-components/react-split-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Split Button component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/split-button) that shows how to render the React Split Button in React.
 

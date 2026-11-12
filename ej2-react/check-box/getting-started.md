@@ -132,6 +132,6 @@ yarn run dev
 
 The output appears as follows.
 
- {% previewsample "page.domainurl/code-snippet/check-box/getting-started-cs1" %}
+ {% previewsample "page.domainurl/samples/check-box/getting-started-cs1" %}
 
 > Refer to the [React Checkbox](https://www.syncfusion.com/react-components/react-checkbox) feature tour page for its groundbreaking feature representations. You can also explore our [React Checkbox component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/checkbox) that shows how to render the React Checkbox in React.

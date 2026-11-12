@@ -23,4 +23,4 @@ The following example demonstrates how to set the disabled state in the React Sp
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/split-button/disabled-cs1" %}
+ {% previewsample "page.domainurl/samples/split-button/disabled-cs1" %}

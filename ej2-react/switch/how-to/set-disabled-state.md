@@ -23,4 +23,4 @@ The following example demonstrates how to disable the React Toggle Switch Button
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/switch/getting-started-cs4" %}
+ {% previewsample "page.domainurl/samples/switch/getting-started-cs4" %}

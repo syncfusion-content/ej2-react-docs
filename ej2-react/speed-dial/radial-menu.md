@@ -28,7 +28,7 @@ Control the direction in which items are arranged around the button by setting t
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/radial-cs3" %}
+ {% previewsample "page.domainurl/samples/speed-dial/radial-cs3" %}
 
 ## Radial menu start and end angle
 
@@ -46,7 +46,7 @@ Control the angular span of the radial menu by setting the [`startAngle`](https:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/radial-cs4" %}
+ {% previewsample "page.domainurl/samples/speed-dial/radial-cs4" %}
 
 ## Offset
 
@@ -64,7 +64,7 @@ Control the distance between action items and the React Speed Dial button using 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/radial-cs5" %}
+ {% previewsample "page.domainurl/samples/speed-dial/radial-cs5" %}
 
 Below example demonstrates the radial menu settings of the React Speed Dial.
 
@@ -77,4 +77,4 @@ Below example demonstrates the radial menu settings of the React Speed Dial.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/radial-cs2" %}
+ {% previewsample "page.domainurl/samples/speed-dial/radial-cs2" %}

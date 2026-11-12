@@ -25,4 +25,4 @@ Use the [`checked`](https://ej2.syncfusion.com/react/documentation/api/radio-but
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/radio-button/label-and-size-cs1" %}
+ {% previewsample "page.domainurl/samples/radio-button/label-and-size-cs1" %}

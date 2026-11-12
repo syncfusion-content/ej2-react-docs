@@ -21,4 +21,4 @@ Enable modal mode for the React Speed Dial component by setting the [`modal`](ht
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/modal-cs1" %}
+ {% previewsample "page.domainurl/samples/speed-dial/modal-cs1" %}

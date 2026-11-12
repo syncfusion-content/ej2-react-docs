@@ -25,7 +25,7 @@ Use the [`label`](https://ej2.syncfusion.com/react/documentation/api/radio-butto
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/radio-button/label-and-size-cs2" %}
+ {% previewsample "page.domainurl/samples/radio-button/label-and-size-cs2" %}
 
 ## Size
 
@@ -40,7 +40,7 @@ The React Radio Button component supports two size variants: default (standard s
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/radio-button/label-and-size-cs3" %}
+ {% previewsample "page.domainurl/samples/radio-button/label-and-size-cs3" %}
 
 ## See Also
 

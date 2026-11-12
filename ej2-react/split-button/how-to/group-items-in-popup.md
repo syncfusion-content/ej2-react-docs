@@ -25,4 +25,4 @@ The following example demonstrates how to create grouped popup items using the L
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/split-button/listview-cs1" %}
+ {% previewsample "page.domainurl/samples/split-button/listview-cs1" %}

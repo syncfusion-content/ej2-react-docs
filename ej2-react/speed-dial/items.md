@@ -37,7 +37,7 @@ Display only an icon in React Speed Dial items by setting the [`iconCss`](https:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/items-cs1" %}
+ {% previewsample "page.domainurl/samples/speed-dial/items-cs1" %}
 
 ### Text only
 
@@ -52,7 +52,7 @@ Display only text in React Speed Dial items by setting the [`text`](https://ej2.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/items-cs2" %}
+ {% previewsample "page.domainurl/samples/speed-dial/items-cs2" %}
 
 ### Icon with text
 
@@ -67,7 +67,7 @@ Display both icon and text in React Speed Dial items by setting both the [`iconC
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/items-cs3" %}
+ {% previewsample "page.domainurl/samples/speed-dial/items-cs3" %}
 
 ### Disabled
 
@@ -82,7 +82,7 @@ Disable React Speed Dial items by setting the [`disabled`](https://ej2.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/items-cs4" %}
+ {% previewsample "page.domainurl/samples/speed-dial/items-cs4" %}
 
 ## Animation
 
@@ -99,7 +99,7 @@ Below example demonstrates the React Speed Dial items with applied Zoom effect.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/items-cs5" %}
+ {% previewsample "page.domainurl/samples/speed-dial/items-cs5" %}
 
 ## Template
 

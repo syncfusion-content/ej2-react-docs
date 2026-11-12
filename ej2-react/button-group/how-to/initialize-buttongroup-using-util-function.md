@@ -39,6 +39,6 @@ The following example illustrates how to create React Button Group using `create
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button-group/util-cs2" %}
+ {% previewsample "page.domainurl/samples/button-group/util-cs2" %}
 
 > If null value is passed in button options, then that particular button will be skipped from processing in `createButtonGroup` util function.

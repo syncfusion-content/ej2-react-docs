@@ -18,4 +18,4 @@ Native HTML input and anchor elements can be styled using predefined Syncfusion 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/custom-cs1" %}
+ {% previewsample "page.domainurl/samples/button/custom-cs1" %}

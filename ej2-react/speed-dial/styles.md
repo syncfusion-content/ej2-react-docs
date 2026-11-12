@@ -38,7 +38,7 @@ Apply predefined semantic styles to the React Speed Dial button using the [`cssC
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/styles-cs4" %}
+ {% previewsample "page.domainurl/samples/speed-dial/styles-cs4" %}
 
 ## Visible
 
@@ -56,7 +56,7 @@ Control the visibility of the React Speed Dial button using the [`visible`](http
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/styles-cs9" %}
+ {% previewsample "page.domainurl/samples/speed-dial/styles-cs9" %}
 
 ## Customized icon
 
@@ -74,7 +74,7 @@ Create custom button appearances by using the [`cssClass`](https://ej2.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/speed-dial/styles-cs7" %}
+{% previewsample "page.domainurl/samples/speed-dial/styles-cs7" %}
 
 ---
 

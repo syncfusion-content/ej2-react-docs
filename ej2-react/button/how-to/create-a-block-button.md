@@ -21,4 +21,4 @@ A block React Button spans the entire width of its parent element. To create a b
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/block-cs1" %}
+ {% previewsample "page.domainurl/samples/button/block-cs1" %}

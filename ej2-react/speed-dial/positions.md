@@ -32,7 +32,7 @@ The available position values are:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs1" %}
+ {% previewsample "page.domainurl/samples/speed-dial/position-cs1" %}
 
 ## Opens items on hover
 
@@ -50,7 +50,7 @@ Auto-open the React Speed Dial action items when the user hovers over the button
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs4" %}
+ {% previewsample "page.domainurl/samples/speed-dial/position-cs4" %}
 
 ## Programmatically show/hide Speed Dial items
 
@@ -67,7 +67,7 @@ The following example demonstrates how to open and close the action items progra
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs2" %}
+ {% previewsample "page.domainurl/samples/speed-dial/position-cs2" %}
 
 ## Programmatically refresh the position
 
@@ -84,4 +84,4 @@ The following sample demonstrates how to refresh the React Speed Dial position w
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/speed-dial/position-cs3" %}
+ {% previewsample "page.domainurl/samples/speed-dial/position-cs3" %}

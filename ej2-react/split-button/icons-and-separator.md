@@ -25,7 +25,7 @@ The following example demonstrates how to add icons to the React Split Button co
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/split-button/icon-cs1" %}
+ {% previewsample "page.domainurl/samples/split-button/icon-cs1" %}
 
 > The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element.
 You can also use third party icons on the React Split Button using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/split-button#iconcss) property.
@@ -45,7 +45,7 @@ The following example demonstrates how to enable vertical button support in the 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/split-button/vertical-cs1" %}
+ {% previewsample "page.domainurl/samples/split-button/vertical-cs1" %}
 
 > The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element.
 You can also use third party icons on the React Split Button using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/split-button#iconcss) property.
@@ -65,7 +65,7 @@ The following example demonstrates how to enable separators in React Split Butto
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/split-button/separator-cs1" %}
+ {% previewsample "page.domainurl/samples/split-button/separator-cs1" %}
 
 ## See Also
 

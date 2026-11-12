@@ -23,4 +23,4 @@ The following example demonstrates form submission with React Checkbox values. C
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/check-box/form-cs1" %}
+ {% previewsample "page.domainurl/samples/check-box/form-cs1" %}

@@ -23,4 +23,4 @@ In the following example, the `C` character is underlined in the `Copy` item to 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/split-button/underline-cs1" %}
+ {% previewsample "page.domainurl/samples/split-button/underline-cs1" %}

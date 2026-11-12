@@ -137,7 +137,7 @@ The output will appear as follows:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/chips/default-cs2" %}
+{% previewsample "page.domainurl/samples/chips/default-cs2" %}
 
 ## See Also
 

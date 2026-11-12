@@ -34,7 +34,7 @@ The React Button component provides predefined styles through the [`cssClass`](h
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/button-style-cs1" %}
+ {% previewsample "page.domainurl/samples/button/button-style-cs1" %}
 
 > Predefined React Button styles provide visual indication only. Ensure React Button content clearly describes its purpose for users of assistive technologies such as screen readers.
 >
@@ -68,7 +68,7 @@ The basic React Button types are explained below.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/basic-types-cs1" %}
+ {% previewsample "page.domainurl/samples/button/basic-types-cs1" %}
 
 ### Flat Button
 
@@ -91,7 +91,7 @@ A round button is shaped like a circle and typically contains an icon representi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/button-type-cs1" %}
+ {% previewsample "page.domainurl/samples/button/button-type-cs1" %}
 
 ### Toggle Button
 
@@ -106,7 +106,7 @@ A toggle button changes between two states. The React Button is active in the to
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/toggle-button-cs1" %}
+ {% previewsample "page.domainurl/samples/button/toggle-button-cs1" %}
 
 ## Change React Button type
 
@@ -121,7 +121,7 @@ To change the default React Button to a flat button, set the [`cssClass`](https:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/default-cs5" %}
+ {% previewsample "page.domainurl/samples/button/default-cs5" %}
 
 ## Icons
 
@@ -139,7 +139,7 @@ using the [`iconPosition`](https://ej2.syncfusion.com/react/documentation/api/bu
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/icon-cs1" %}
+ {% previewsample "page.domainurl/samples/button/icon-cs1" %}
 
 ### React Button with SVG image
 
@@ -156,7 +156,7 @@ In the following example, SVG image is added using the iconCss class `e-search-i
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/svg-cs1" %}
+ {% previewsample "page.domainurl/samples/button/svg-cs1" %}
 
 > The Essential<sup style="font-size:70%">&reg;</sup> JS 2 provides a set of icons that can be loaded by applying `e-icons` class name to the element. You can also use third party icons on the React Button using the [`iconCss`](https://ej2.syncfusion.com/react/documentation/api/button#iconcss) property.
 
@@ -173,7 +173,7 @@ The two types of React Button sizes are default and small. To change the size of
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/size-cs1" %}
+ {% previewsample "page.domainurl/samples/button/size-cs1" %}
 
 ## See Also
 

@@ -23,4 +23,4 @@ The following example demonstrates how to add navigation functionality to a Reac
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/button/default-cs2" %}
+ {% previewsample "page.domainurl/samples/button/default-cs2" %}

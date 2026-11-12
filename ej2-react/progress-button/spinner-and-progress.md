@@ -38,7 +38,7 @@ The following sample demonstrates the above functionalities of the spinner.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs8" %}
+ {% previewsample "page.domainurl/samples/progress-button/getting-started-cs8" %}
 
 ## Progress
 
@@ -66,7 +66,7 @@ Available animation effects are:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs9" %}
+ {% previewsample "page.domainurl/samples/progress-button/getting-started-cs9" %}
 
 ### Change step of the React Progress Button
 
@@ -81,7 +81,7 @@ Control the granularity of progress visualization by modifying the [`step`](http
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs10" %}
+ {% previewsample "page.domainurl/samples/progress-button/getting-started-cs10" %}
 
 > The class `e-hide-spinner` hides the spinner in the React Progress Button, For more information, see [hide spinner](./how-to/hide-spinner) section.
 
@@ -98,7 +98,7 @@ Update the progress percentage in real-time by modifying the [`percent`](https:/
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs11" %}
+ {% previewsample "page.domainurl/samples/progress-button/getting-started-cs11" %}
 
 > The method [`dataBind`](https://ej2.syncfusion.com/react/documentation/api/progress-button/#databind) applies the property changes immediately to the component.
 
@@ -115,7 +115,7 @@ Control progress playback by invoking the [`start`](https://ej2.syncfusion.com/r
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs12" %}
+ {% previewsample "page.domainurl/samples/progress-button/getting-started-cs12" %}
 
 ## See Also
 

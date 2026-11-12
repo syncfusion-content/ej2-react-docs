@@ -137,7 +137,7 @@ The output will appear as follows:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/floating-action-button/events-cs2" %}
+{% previewsample "page.domainurl/samples/floating-action-button/events-cs2" %}
 
 ## See Also
 

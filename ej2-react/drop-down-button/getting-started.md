@@ -140,7 +140,7 @@ npm run dev
 
 The output will appear as follows:
 
- {% previewsample "page.domainurl/code-snippet/drop-down-button/getting-started-cs1" %}
+ {% previewsample "page.domainurl/samples/drop-down-button/getting-started-cs1" %}
 
 > Refer to the [React Dropdown Menu](https://www.syncfusion.com/react-components/react-dropdown-menu) feature tour page for its groundbreaking feature representations. The [React Dropdown Menu component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/dropdown-button) shows how to render the React Dropdown Menu in React.
 

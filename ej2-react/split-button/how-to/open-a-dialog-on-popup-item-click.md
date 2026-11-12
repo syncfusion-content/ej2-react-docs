@@ -23,4 +23,4 @@ In the following example, a dialog opens when selecting the `Update...` item.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/code-snippet/split-button/dialog-cs1" %}
+ {% previewsample "page.domainurl/samples/split-button/dialog-cs1" %}
