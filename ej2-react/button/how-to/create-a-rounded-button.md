@@ -21,4 +21,4 @@ A React Button with rounded corners can be created by adding a CSS class with th
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button/round-button-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/button/round-button-cs1" %}

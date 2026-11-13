@@ -50,7 +50,7 @@ Below example demonstrates different supported positions of React Floating Actio
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/floating-action-button/position-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/floating-action-button/position-cs1" %}
 
 ## Custom position
 
@@ -68,4 +68,4 @@ Define a custom position for the React Floating Action Button by overriding the 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/floating-action-button/position-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/floating-action-button/position-cs2" %}

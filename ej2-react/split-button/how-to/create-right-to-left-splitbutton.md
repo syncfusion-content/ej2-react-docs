@@ -23,4 +23,4 @@ The following example demonstrates how to implement RTL support in the React Spl
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/split-button/howto-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/split-button/howto-cs1" %}

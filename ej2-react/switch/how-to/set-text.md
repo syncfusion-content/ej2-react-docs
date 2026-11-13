@@ -23,6 +23,6 @@ In the following example, `onLabel` displays "ON" and `offLabel` displays "OFF".
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/switch/text-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/switch/text-cs1" %}
 
 > React Toggle Switch Button does not have text support for material themes, and does not support long custom text.

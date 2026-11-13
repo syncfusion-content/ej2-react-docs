@@ -29,7 +29,7 @@ The following example demonstrates how to create an outline React Button Group:
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/default-cs10" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/default-cs10" %}
 
 > The React Button Group component does not support `flat` and `round` button types. Use predefined styles for visual customization.
 
@@ -56,7 +56,7 @@ The following example demonstrates how to apply predefined styles to a React But
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/default-cs11" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/default-cs11" %}
 
 > Predefined React Button Group styles provide visual indication only. Ensure button content clearly describes the button's purpose for users of assistive technologies such as screen readers.
 

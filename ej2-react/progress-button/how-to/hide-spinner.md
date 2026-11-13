@@ -21,4 +21,4 @@ Remove the animated spinner icon from the React Progress Button by adding the `e
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/progress-button/getting-started-cs6" %}
+ {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs6" %}

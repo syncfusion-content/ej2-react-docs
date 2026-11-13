@@ -21,4 +21,4 @@ Customize the width and icon positioning of the Dropdown Menu by applying CSS cl
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/drop-down-button/custom-width-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/drop-down-button/custom-width-cs1" %}

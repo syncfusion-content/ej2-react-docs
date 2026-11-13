@@ -31,6 +31,6 @@ The following example demonstrates how to disable individual buttons and the ent
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/default-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/default-cs3" %}
 
 > To disable radio/checkbox type React Button Group, the `disabled` attribute should be added to the particular input element.

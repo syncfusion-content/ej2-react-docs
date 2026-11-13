@@ -77,4 +77,4 @@ Below example demonstrates a FAB with icon and text.
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/floating-action-button/icons-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/floating-action-button/icons-cs1" %}

@@ -37,7 +37,7 @@ Apply predefined styles to the React Floating Action Button using the [`cssClass
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/floating-action-button/styles-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/floating-action-button/styles-cs1" %}
 
 > Predefined styles are visual indicators only. Use the [`content`](https://ej2.syncfusion.com/react/documentation/api/floating-action-button/fab/#content) property to define semantic meaning for assistive technologies like screen readers, ensuring accessibility for all users.
 
@@ -81,7 +81,7 @@ The content will behave the same , when the `enableHtmlSanitizer` is enabled. Si
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/floating-action-button/styles-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/floating-action-button/styles-cs2" %}
 
 ## Outline customization
 
@@ -99,4 +99,4 @@ By using the [`cssClass`](https://ej2.syncfusion.com/react/documentation/api/flo
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/floating-action-button/styles-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/floating-action-button/styles-cs3" %}

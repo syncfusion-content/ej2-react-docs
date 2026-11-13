@@ -128,7 +128,7 @@ yarn run dev
 
 The output appears as follows.
 
- {% previewsample "page.domainurl/samples/switch/getting-started-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/switch/getting-started-cs1" %}
 
 > Refer to the [React Toggle Switch Button](https://www.syncfusion.com/react-components/react-toggle-switch-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Toggle Switch Button component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/switch) that shows how to render the React Toggle Switch Button in React.
 

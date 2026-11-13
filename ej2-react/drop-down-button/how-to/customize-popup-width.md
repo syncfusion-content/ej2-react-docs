@@ -21,4 +21,4 @@ The dropdown popup width can be customized using the [popupWidth](https://ej2.sy
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/drop-down-button/popup-width-cs1" %}
+{% previewsample "page.domainurl/code-snippet/drop-down-button/popup-width-cs1" %}

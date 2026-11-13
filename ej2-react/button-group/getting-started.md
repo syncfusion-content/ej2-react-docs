@@ -138,7 +138,7 @@ The output will appear as follows:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/button-group/default-cs1" %}
+{% previewsample "page.domainurl/code-snippet/button-group/default-cs1" %}
 
 > Refer to the [React Button Group](https://www.syncfusion.com/react-components/react-button-group) feature tour page for its groundbreaking feature representations. You can also explore our [React Button Group component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/button-group) that shows how to render the React Button Group in React.
 

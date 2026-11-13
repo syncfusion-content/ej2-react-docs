@@ -82,4 +82,4 @@ The following example demonstrates repeat-click functionality with configurable 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/button/repeat-button-cs2" %}
+{% previewsample "page.domainurl/code-snippet/button/repeat-button-cs2" %}

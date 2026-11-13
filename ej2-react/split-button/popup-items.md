@@ -25,7 +25,7 @@ In the following example, icons for Cut, Copy, and Paste menu items are configur
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/split-button/popup-icon-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/split-button/popup-icon-cs1" %}
 
 ## Template
 
@@ -42,7 +42,7 @@ Customize individual popup items using the [`beforeItemRender`](https://ej2.sync
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/split-button/template-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/split-button/template-cs1" %}
 
 ### Popup Templating
 
@@ -57,7 +57,7 @@ Fully customize the entire popup structure and content by leveraging the [`targe
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/split-button/popup-template-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/split-button/popup-template-cs1" %}
 
 ## See Also
 

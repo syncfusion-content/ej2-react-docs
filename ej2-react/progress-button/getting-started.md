@@ -134,7 +134,7 @@ The output will appear as follows:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/progress-button/getting-started-cs2" %}
+{% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs2" %}
 
 > Refer to the [React Progress Button](https://www.syncfusion.com/react-components/react-progress-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Progress Button component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/progress-button) that shows how to render the React Progress Button in React.
 

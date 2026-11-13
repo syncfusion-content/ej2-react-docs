@@ -21,4 +21,4 @@ React Toggle Switch Button components are available in two size variants: defaul
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/switch/size-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/switch/size-cs1" %}

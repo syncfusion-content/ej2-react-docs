@@ -135,7 +135,7 @@ The output will appear as follows:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/speed-dial/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/speed-dial/getting-started-cs1" %}
 
 ## See Also
 

@@ -138,7 +138,7 @@ The output will appear as follows:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/button/default-cs1" %}
+{% previewsample "page.domainurl/code-snippet/button/default-cs1" %}
 
 > Refer to the [React Button](https://www.syncfusion.com/react-components/react-button) feature tour page for its groundbreaking feature representations. You can also explore our [React Button component example](https://ej2.syncfusion.com/react/demos/#/tailwind3/button/default) that shows how to render the Button in React.
 

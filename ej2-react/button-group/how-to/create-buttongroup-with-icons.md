@@ -23,4 +23,4 @@ The following example demonstrates how to create a React Button Group with icons
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/icon-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/icon-cs1" %}

@@ -25,7 +25,7 @@ Define the React Checkbox caption using the [`label`](https://ej2.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/check-box/label-and-size-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/check-box/label-and-size-cs1" %}
 
 ## Size
 
@@ -40,7 +40,7 @@ The React Checkbox component offers two size options: default and small. Apply t
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/check-box/label-and-size-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/check-box/label-and-size-cs2" %}
 
 ## See Also
 

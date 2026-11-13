@@ -25,7 +25,7 @@ The following example demonstrates how to create React Checkbox variants by cust
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/check-box/howto-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/check-box/howto-cs1" %}
 
 ## Custom frame
 
@@ -40,7 +40,7 @@ Customize the React Checkbox frame by adding CSS rules to modify its shape and a
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/check-box/custom-frame-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/check-box/custom-frame-cs1" %}
 
 ## Custom check icon
 
@@ -55,4 +55,4 @@ Customize the React Checkbox check icon by adding CSS rules to modify the icon c
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/check-box/custom-frame-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/check-box/custom-frame-cs2" %}

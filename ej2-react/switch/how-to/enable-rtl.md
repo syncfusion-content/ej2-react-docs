@@ -23,4 +23,4 @@ The following example demonstrates how to implement RTL support in the React Tog
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/switch/getting-started-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/switch/getting-started-cs3" %}

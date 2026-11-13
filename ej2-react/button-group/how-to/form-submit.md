@@ -23,4 +23,4 @@ The following example demonstrates a radio type React Button Group with the "Mal
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/form-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/form-cs1" %}

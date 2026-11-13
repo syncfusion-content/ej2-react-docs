@@ -43,4 +43,4 @@ The following example demonstrates drag and drop functionality with the [allowDr
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/chips/draganddrop" %}
+ {% previewsample "page.domainurl/code-snippet/chips/draganddrop" %}

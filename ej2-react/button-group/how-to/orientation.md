@@ -26,6 +26,6 @@ The following example demonstrates how to create a React Button Group with verti
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/default-cs6" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/default-cs6" %}
 
 > React Button Group does not support SplitButton component nesting in a vertical orientation.

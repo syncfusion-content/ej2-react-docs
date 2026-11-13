@@ -39,7 +39,7 @@ Apply predefined styles to React Chips using the [cssClass](https://ej2.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/chips/default-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/chips/default-cs1" %}
 
 ## Leading icon
 
@@ -60,7 +60,7 @@ Add a leading icon to the left of chip text using the [leadingIconCss](https://e
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/chips/avatar-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/chips/avatar-cs2" %}
 
 ## Avatar
 
@@ -81,7 +81,7 @@ Display an avatar image on the chip using the [avatarIconCss](https://ej2.syncfu
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/chips/avatar-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/chips/avatar-cs3" %}
 
 ## Avatar text
 
@@ -102,7 +102,7 @@ Display text inside the avatar area using the [avatarText](https://ej2.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/chips/avatar-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/chips/avatar-cs4" %}
 
 ## Trailing icon
 
@@ -123,7 +123,7 @@ Add an icon to the right of chip text using the [trailingIconCss](https://ej2.sy
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/chips/avatar-cs5" %}
+ {% previewsample "page.domainurl/code-snippet/chips/avatar-cs5" %}
 
 ## Outline chip
 
@@ -144,7 +144,7 @@ Create a chip with a visible border and transparent background using the [cssCla
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/chips/avatar-cs6" %}
+ {% previewsample "page.domainurl/code-snippet/chips/avatar-cs6" %}
 
 ## Template
 
@@ -166,4 +166,4 @@ The [`template`](https://ej2.syncfusion.com/react/documentation/api/chips/#templ
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/chips/avatar-cs7" %}
+ {% previewsample "page.domainurl/code-snippet/chips/avatar-cs7" %}

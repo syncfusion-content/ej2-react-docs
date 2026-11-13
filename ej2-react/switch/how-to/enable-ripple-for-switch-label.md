@@ -23,6 +23,6 @@ The following example demonstrates how to add ripple effects to React Toggle Swi
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/React Toggle Switch Button/ripple-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/React Toggle Switch Button/ripple-cs1" %}
 
 > While accessing HTML Elements we got the exception 'object is possibly null' due to 'strictNullChecks' option. So you can disable it in 'tsconfig.json' file.

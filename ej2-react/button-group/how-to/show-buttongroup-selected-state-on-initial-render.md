@@ -23,4 +23,4 @@ The following example demonstrates how to set a selected state on initial render
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/default-cs7" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/default-cs7" %}

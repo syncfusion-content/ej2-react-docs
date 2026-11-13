@@ -23,4 +23,4 @@ The following example demonstrates how to enable RTL support in a React Dropdown
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/drop-down-button/disabled-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/drop-down-button/disabled-cs1" %}

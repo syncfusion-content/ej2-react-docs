@@ -21,4 +21,4 @@ Display a visual progress indicator within the React Progress Button by setting 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/progress-button/getting-started-cs5" %}
+ {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs5" %}

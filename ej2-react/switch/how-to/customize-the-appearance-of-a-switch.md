@@ -25,7 +25,7 @@ Reshape and restyle the React Toggle Switch Button track (bar) and thumb (handle
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/switch/customize-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/switch/customize-cs1" %}
 
 ## Color the React Toggle Switch Button
 
@@ -40,4 +40,4 @@ Customize React Toggle Switch Button colors by modifying the background and bord
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/switch/customize-color-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/switch/customize-color-cs1" %}

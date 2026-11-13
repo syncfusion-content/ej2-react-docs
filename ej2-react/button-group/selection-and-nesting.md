@@ -27,7 +27,7 @@ The following example demonstrates single selection behavior in a React Button G
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/default-cs8" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/default-cs8" %}
 
 ### Multiple selection
 
@@ -44,7 +44,7 @@ The following example demonstrates multiple selection behavior in a React Button
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/default-cs9" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/default-cs9" %}
 
 ## Nesting
 
@@ -69,7 +69,7 @@ The following example adds the DropDownButton component to the React Button Grou
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/nesting-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/nesting-cs1" %}
 
 ### SplitButton
 
@@ -86,7 +86,7 @@ The following example adds the SplitButton component to the React Button Group b
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/nesting-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/nesting-cs2" %}
 
 ## See Also
 

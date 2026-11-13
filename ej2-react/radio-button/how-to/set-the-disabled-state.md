@@ -23,4 +23,4 @@ The following example demonstrates how to disable a React Radio Button and displ
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/radio-button/getting-started-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/radio-button/getting-started-cs3" %}

@@ -21,6 +21,6 @@ Programmatically React Toggle Switch Button between on and off states using the 
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/switch/getting-started-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/switch/getting-started-cs2" %}
 
 > React Toggle Switch Button triggers [`change`](https://ej2.syncfusion.com/react/documentation/api/switch/#change) event on every state stage to perform custom operations.

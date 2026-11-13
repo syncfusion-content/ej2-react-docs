@@ -21,4 +21,4 @@ Update the React Progress Button's text content and visual appearance while prog
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/progress-button/getting-started-cs3" %}
+ {% previewsample "page.domainurl/code-snippet/progress-button/getting-started-cs3" %}

@@ -22,4 +22,4 @@ The [`beforeChange`](https://ej2.syncfusion.com/react/documentation/api/switch/#
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/switch/before-change-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/switch/before-change-cs1" %}

@@ -23,4 +23,4 @@ The following example demonstrates how to implement RTL support in the React Rad
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/radio-button/getting-started-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/radio-button/getting-started-cs2" %}

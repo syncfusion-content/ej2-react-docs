@@ -21,4 +21,4 @@ Disable the React Dropdown Menu component by setting the [`disabled`](https://ej
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/drop-down-button/disabled-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/drop-down-button/disabled-cs2" %}

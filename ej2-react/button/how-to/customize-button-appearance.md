@@ -21,4 +21,4 @@ Customize the React Button appearance using Cascading Style Sheets (CSS). Define
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button/howto-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/button/howto-cs1" %}

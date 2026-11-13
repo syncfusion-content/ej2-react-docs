@@ -32,4 +32,4 @@ The following example demonstrates three React Dropdown Menus, each with a diffe
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/samples/drop-down-button/animation-cs1" %}
+{% previewsample "page.domainurl/code-snippet/drop-down-button/animation-cs1" %}

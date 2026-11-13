@@ -23,4 +23,4 @@ The following example demonstrates how to enable the ripple effect for a React B
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/button-group/default-cs4" %}
+ {% previewsample "page.domainurl/code-snippet/button-group/default-cs4" %}

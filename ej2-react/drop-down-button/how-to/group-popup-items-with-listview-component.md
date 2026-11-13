@@ -23,4 +23,4 @@ The following example demonstrates how to create a grouped dropdown with item he
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/drop-down-button/header-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/drop-down-button/header-cs1" %}

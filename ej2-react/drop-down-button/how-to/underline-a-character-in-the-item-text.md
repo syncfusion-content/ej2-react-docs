@@ -23,4 +23,4 @@ The following example demonstrates how to underline the character `C` in the tex
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/drop-down-button/default-cs1" %}
+ {% previewsample "page.domainurl/code-snippet/drop-down-button/default-cs1" %}

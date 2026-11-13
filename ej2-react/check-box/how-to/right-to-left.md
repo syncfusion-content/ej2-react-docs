@@ -23,4 +23,4 @@ The following example demonstrates how to enable RTL support in the React Checkb
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "page.domainurl/samples/check-box/getting-started-cs2" %}
+ {% previewsample "page.domainurl/code-snippet/check-box/getting-started-cs2" %}
