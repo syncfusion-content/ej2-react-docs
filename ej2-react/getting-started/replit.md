@@ -256,7 +256,7 @@ Once your React Grid is running, you can enhance it with:
 
 ## Tips for working in Replit
 
-* Shell access: Use the Shell tab to run any npm commands, such as installing additional packages or starting or stopping the development server manually.
+* Shell access: Use the Shell tab to run any npm commands, such as installing additional packages or starting or stopping the dev server manually.
 * Persistent storage: Replit persists your project files automatically. Changes are saved as you type.
 * File management: Use the file browser to view and edit project files. You can also use the context menu to create, edit, and manage files.
 

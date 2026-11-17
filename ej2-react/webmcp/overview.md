@@ -142,7 +142,7 @@ function App() {
                 tools: ['getCellData', 'editCell', 'addSheet'],
                 exposeTo: ['https://www.syncfusion.com/']
             }}
-            openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' 
+            openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
             saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'>
         </SpreadsheetComponent>
     );
@@ -193,7 +193,7 @@ function App() {
                 exposeTo: ['https://www.syncfusion.com/']
             }}
             beforeWebMcpToolExecute={beforeWebMcpToolExecute}
-            openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' 
+            openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
             saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'>
         </SpreadsheetComponent>
     );
