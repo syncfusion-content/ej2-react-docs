@@ -1,6 +1,3 @@
-{% raw %}
-
-
 import { ProgressBarComponent } from '@syncfusion/ej2-react-progressbar';
 import {IProgressValueEventArgs} from '@syncfusion/ej2-progressbar';
 import * as React from "react";
@@ -23,6 +20,3 @@ function App() {
 };
 export default App;
 ReactDOM.render(<App />, document.getElementById("container"));
-
-
-{% endraw %}
