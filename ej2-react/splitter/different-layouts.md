@@ -426,13 +426,7 @@ Include the following dependent styles at the top of your App.css file.
 
 ```css
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import "@syncfusion/ej2-tailwind3-theme/styles/splitter/index.css";
 
 ```
 
