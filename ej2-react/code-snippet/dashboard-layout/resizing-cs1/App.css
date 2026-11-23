@@ -1,6 +1,3 @@
-@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-@import "../node_modules/@syncfusion/ej2-react-layouts/styles/tailwind3.css";
-
 #container {
     margin: 0 auto;
     width: 500px;
